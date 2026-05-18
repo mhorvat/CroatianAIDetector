@@ -3,4 +3,4 @@ This repository contains the complete codebase created for the research presente
 
 The developed application is available only for research and non-commercial use.
 
-For more information and instructions on how to use the appliation, contact the application's creator *Ariana Dobrostal* (ariana.dobrostal@proton.me).
+For more information and instructions on how to use the appliation, contact the application's creator **Ariana Dobrostal** (ariana.dobrostal@proton.me).
