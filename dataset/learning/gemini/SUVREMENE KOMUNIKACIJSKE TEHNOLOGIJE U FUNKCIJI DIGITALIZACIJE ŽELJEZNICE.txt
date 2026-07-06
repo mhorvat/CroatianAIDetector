@@ -1,0 +1,128 @@
+1. Uvod
+
+Suvremene komunikacijske tehnologije predstavljaju temeljnu polugu za sveobuhvatnu transformaciju željezničkog sektora, proces poznat kao digitalizacija. Željeznica, povijesno gledano, često zaostaje za drugim granama prometa u pogledu primjene najnovijih digitalnih rješenja. Međutim, imperativ povećanja kapaciteta, poboljšanja sigurnosti, optimizacije operativnih troškova te usklađivanja s europskim standardima potaknuo je dinamičan zaokret prema integraciji naprednih informacijsko-komunikacijskih (IK) sustava. Ključni element te transformacije su mobilne mreže, čija evolucija, od druge generacije (2G) do pete (5G), nudi neviđene mogućnosti za radikalnu promjenu načina na koji se željeznički promet odvija, održava i upravlja. Cilj ovog seminarskog rada je detaljno analizirati ulogu suvremenih komunikacijskih tehnologija u funkciji digitalizacije željeznice, s posebnim naglaskom na potencijal 5G mreža, razvoj budućih željezničkih sustava kao što je FRMCS, te širi kontekst automatizacije i multimodalnog prijevoza u okviru europskih direktiva.
+
+---
+
+2. Evolucija Mobilnih Komunikacijskih Mreža u Željeznici
+
+Povijest komunikacije u željezničkom prometu usko je povezana s razvojem mobilne telefonije, koja je omogućila dislociranu komunikaciju između vlakova, osoblja i kontrolnih centara.
+
+2.1. Od Analognog do Digitalnog Sustava
+
+Prvi oblici bežične komunikacije bili su analogni radio sustavi. Prelazak na digitalnu tehnologiju donio je značajan skok u kvaliteti, pouzdanosti i sigurnosti. Ključni trenutak za europsku željeznicu bio je standardizacija sustava GSM-R.
+
+2.2. Global System for Mobile Communications – Railway (GSM-R)
+
+GSM-R (Global System for Mobile Communications – Railway) predstavlja prvu generaciju mobilne tehnologije posebno prilagođene željezničkom okruženju, temeljenu na 2G GSM standardu. Uveden je kao europski standard za željezničku komunikaciju i ključna je komponenta sustava ERTMS (European Rail Traffic Management System), posebice podsustava ETCS (European Train Control System).
+
+ Primarna Funkcija: Govorna komunikacija i prijenos podatkovnih poruka za signalizaciju (Level 2 i 3 ETCS).
+ Prednosti: Visoka pouzdanost, međunarodna interoperabilnost, dodijeljeni spektar, osnova za ETCS.
+ Ograničenja: Niska propusnost (nekoliko desetaka kilobita po sekundi), nedostatna za napredne video i IoT aplikacije, zastarjelost 2G tehnologije.
+
+2.3. Potreba za Novom Generacijom: Ograničenja 3G i 4G
+
+Dok su 3G (UMTS) i 4G (LTE) mreže donijele revoluciju u komercijalnoj upotrebi, njihova primjena u željezničkom prometu bila je ograničena zbog potrebe za zadržavanjem GSM-R spektra za sigurnosno kritične funkcije, te nedostatka certificirane platforme za željeznicu. Ipak, LTE tehnologija, s višim propusnostima, poslužila je kao tehnička osnova za daljnji razvoj.
+
+---
+
+3. Tehnička Analiza 5G Tehnologije
+
+5G predstavlja kvantni skok u mobilnoj komunikaciji i ključni je akcelerator digitalizacije željezničkog sektora. Njegove tehničke karakteristike nadilaze sva ograničenja prethodnih generacija.
+
+3.1. Ključne Tehničke Karakteristike 5G Mreža
+
+5G arhitektura usmjerena je na tri glavna slučaja upotrebe, koji su od vitalnog značaja za transformaciju željeznice:
+
+3.1.1. Povećana Mobilna Širokopojasnost (eMBB - enhanced Mobile Broadband)
+ Brzina Prijenosa: Omogućuje vršne brzine preuzimanja do $10$ Gbit/s, s tipičnim korisničkim brzinama do $100$ Mbit/s.
+ Primjena u Željeznici: Brzi prijenos velike količine podataka s vlakova (video nadzor visoke rezolucije, dijagnostika u realnom vremenu, usluge putnicima - Wi-Fi).
+
+3.1.2. Ultra-Pouzdana Komunikacija Niske Latencije (uRLLC - ultra-Reliable Low-Latency Communications)
+ Latencija: Ekstremno niska latencija (od $1$ ms).
+ Primjena u Željeznici: Kritična za sigurnosne aplikacije kao što su automatsko upravljanje vlakom (ATO - Automatic Train Operation) i napredna signalizacija, gdje je brza reakcija sustava nužna.
+
+3.1.3. Masivna Komunikacija Stvari (mMTC - massive Machine-Type Communications)
+ Gustoća Povezivanja: Mogućnost povezivanja do $1$ milijun uređaja po kvadratnom kilometru.
+ Primjena u Željeznici: Idealno za Internet stvari (IoT) u željeznici – praćenje stanja kolosijeka, senzori na infrastrukturi (mostovi, tuneli, skretnice) i komponentama vlakova, čime se omogućuje prediktivno održavanje.
+
+3.2. Fleksibilnost Spektra i Mrežna Segmentacija (Network Slicing)
+
+5G koristi fleksibilniji spektar, uključujući niske, srednje i visoke frekvencije (milimetarski valovi). Ključna inovacija je Mrežna Segmentacija (Network Slicing), koja omogućuje stvaranje virtualnih, logički neovisnih mreža na istoj fizičkoj infrastrukturi. Ova mogućnost omogućuje željeznici da sigurnosno kritičnim aplikacijama (poput signalizacije) dodijeli vlastiti, izolirani "rez" mreže s garantiranim performansama latencije i propusnosti, neovisno o ne-kritičnim uslugama (poput putničkog Wi-Fi-a).
+
+---
+
+4. Budući Željeznički Mobilni Komunikacijski Sustav (FRMCS)
+
+Prelazak s GSM-R na novu generaciju mobilne tehnologije je neizbježan zbog tehnološke zastarjelosti i ograničenja 2G. FRMCS (Future Railway Mobile Communication System) je globalni standard koji razvija UIC (Međunarodna željeznička unija) kako bi zamijenio GSM-R.
+
+4.1. FRMCS kao Nasljednik GSM-R
+
+FRMCS će biti temeljen na komercijalnim 4G i 5G tehnologijama (LTE/5G NR), ali s posebnim željezničkim funkcionalnostima (npr. push-to-talk, group calls, prioritetni pozivi) i s garantiranim performansama sigurnosno-kritičnih aplikacija.
+
+ Interoperabilnost: Osigurava potpunu interoperabilnost željezničkih mreža diljem Europe, ključno za ciljeve EU o jedinstvenom europskom željezničkom području.
+ Integracija Usluga: Omogućuje prijenos glasovnih, podatkovnih i video usluga unutar jedne platforme, za razliku od GSM-R.
+ Put prema ATO: FRMCS je tehnički preduvjet za naprednije razine automatizacije (GoA 3 i 4) jer osigurava potrebnu ultra-nisku latenciju za autonomno upravljanje vlakovima.
+
+---
+
+5. Primjena Suvremenih Tehnologija u Operativnim Sustavima
+
+Digitalizacija željeznice nije moguća bez implementacije naprednih tehnologija za upravljanje prometom i održavanje infrastrukture.
+
+5.1. Umjetna Inteligencija i Strojno Učenje u Upravljanju Prometom
+
+Primjena Umjetne Inteligencije (UI) i Strojnog Učenja (ML) postaje ključna za optimizaciju.
+
+ Optimizacija Prometa: UI algoritmi analiziraju podatke u realnom vremenu (položaj vlakova, zauzetost kolosijeka, raspoloživost resursa) kako bi dinamički optimizirali red vožnje, smanjili kašnjenja i povećali propusnost mreže.
+ Prediktivno Održavanje: ML modeli obrađuju podatke sa senzora (mMTC aplikacije) na vlakovima i infrastrukturi. Mogu predvidjeti kvarove na skretnicama, kolosijecima ili vitalnim komponentama vlaka tjednima unaprijed, omogućujući pravovremenu intervenciju i smanjenje neplaniranih zastoja.
+
+5.2. Pametna Infrastruktura i Senzorske Mreže
+
+Implementacija pametne infrastrukture podrazumijeva masovno postavljanje senzora i uređaja povezanih preko 5G i IoT platforme.
+
+ Praćenje Stanja Kolosijeka: Akustični i vibracijski senzori prate integritet kolosijeka, mostova i tunela.
+ Digitalni Blizanci: Kreiranje virtualne replike cijele željezničke mreže, što omogućuje simulaciju prometa, testiranje novih operativnih scenarija i obuku osoblja u sigurnom okruženju.
+
+---
+
+6. Uloga Digitalizacije u Multimodalnom Prijevozu
+
+Digitalizacija nadilazi poboljšanje samo željezničkog prometa. Ona je ključni pokretač integracije željeznice u širi ekosustav multimodalnog prijevoza.
+
+6.1. Integracija Informacija za Putnike i Teret
+
+Digitalne komunikacijske tehnologije omogućuju razmjenu informacija u realnom vremenu između željezničkih operatera, cestovnih, pomorskih i zračnih prijevoznika.
+
+ Multimodalni Prijevoz: Putnici i logističke tvrtke zahtijevaju točne, ažurne i integrirane informacije o cijelom lancu putovanja/opskrbe. 5G tehnologija omogućuje brzo prikupljanje i distribuciju tih podataka.
+
+6.2. Nacionalna Pristupna Točka (NPT)
+
+Ključni element EU regulative za interoperabilnost je uspostava Nacionalne Pristupne Točke (NPT).
+
+ Uloga NPT-a: NPT je informatička platforma koja centralizira i harmonizira pristup podacima o željezničkoj mreži (rasporedi, infrastruktura, tarife, stvarni podaci o kašnjenjima) iz svake države članice EU. To je zakonska obveza proizašla iz EU direktiva, a suvremene komunikacijske tehnologije su alati koji omogućuju tehničku realizaciju NPT-a prikupljanjem podataka u realnom vremenu.
+
+---
+
+7. EU Direktive i Preporuke za Digitalizaciju Željezničkog Sektora
+
+Proces digitalizacije željeznice u Europi snažno je vođen regulativom Europske unije, s ciljem stvaranja jedinstvenog europskog željezničkog prostora.
+
+7.1. Četvrti Željeznički Paket
+
+Ovaj paket propisa, usvojen u periodu od 2012. do 2016., ključan je za poticanje konkurentnosti i interoperabilnosti željeznice. Posebno relevantan za digitalizaciju je tehnički stup koji uključuje:
+
+ ERTMS (European Rail Traffic Management System): Direktive obvezuju implementaciju ERTMS-a, čiji je GSM-R (a u budućnosti FRMCS) komunikacijski stub, što je izravan poticaj za tehnološku modernizaciju.
+ Uredba o TSI (Tehničke Specifikacije za Interoperabilnost): TSI OPR (Operating Procedures and Traffic Management) i TSI CCS (Control Command and Signalling) izravno definiraju standarde za komunikacijske i signalne sustave.
+
+7.2. Odluke o Zamjeni GSM-R s FRMCS
+
+Europska unija aktivno podržava razvoj i tranziciju na FRMCS kroz rad Agencije Europske unije za željeznice (ERA). Direktive i preporuke naglašavaju potrebu za planiranjem postupne migracije, osiguravajući da se kritične sigurnosne funkcije ne dovedu u pitanje tijekom tranzicijskog perioda.
+
+---
+
+8. Zaključak
+
+Suvremene komunikacijske tehnologije, predvođene 5G standardom, nisu samo alat, već temeljni preduvjet za cjelovitu digitalizaciju željeznice. Evolucija od ograničenog 2G GSM-R sustava do fleksibilnog i ultrabrzog FRMCS-a, baziranog na 5G, omogućuje željeznicama da značajno povećaju učinkovitost, sigurnost i konkurentnost. Ključne tehničke karakteristike 5G (niska latencija, visoka propusnost i masovno povezivanje) omogućuju napredne aplikacije poput automatskog upravljanja vlakom (automatizacija), prediktivnog održavanja putem pametne infrastrukture i senzorskih mreža te primjenu Umjetne Inteligencije za dinamičku optimizaciju prometnog sustava.
+
+U širem kontekstu, digitalizacija željeznice, poduprta EU direktivama i uspostavom Nacionalne Pristupne Točke (NPT), osigurava nužnu transparentnost i integraciju potrebnu za razvoj učinkovitog multimodalnog prijevoza. Hrvatska željeznica, kao dio europske mreže, mora aktivno pratiti i implementirati ove tehnološke standarde kako bi osigurala svoju održivost i usklađenost s europskim ciljevima jedinstvenog željezničkog prostora. Tranzicija na FRMCS i puna implementacija 5G mreža na željezničkim koridorima su neizbježni koraci prema željeznici 21. stoljeća.

@@ -1,0 +1,75 @@
+1. Uvod
+
+Računalni vid (Computer Vision) predstavlja interdisciplinarno područje koje računalima omogućuje stjecanje "razumijevanja" iz digitalnih slika i videozapisa. Od automatizirane inspekcije proizvoda u industriji do autonomne vožnje i medicinske dijagnostike, primjene su brojne i transformirajuće. Jedan od temeljnih i najizazovnijih zadataka u računalnom vidu je detekcija lica. Taj zadatak nije trivijalan zbog promjena u osvjetljenju, orijentaciji, mjerilu i ekspresijama lica.
+
+U ranoj fazi razvoja, detekcija lica bila je spor i nepouzdan proces. Preokret se dogodio u ranim 2000-ima s predstavljanjem Viola-Jones okvira (Viola i Jones, 2001.), koji je po prvi put omogućio pouzdanu detekciju lica u stvarnom vremenu. Srce tog sustava čini AdaBoost (Adaptive Boosting) algoritam, koji služi za učinkovit odabir značajki i konstrukciju snažnog klasifikatora. Ovaj rad detaljno analizira principe računalnog vida, izazove detekcije lica te ključnu ulogu i mehaniku AdaBoost algoritma u rješavanju ovog problema.
+
+2. Teoretske Osnove Računalnog Vida
+
+Računalni vid temelji se na transformaciji sirovih slikovnih podataka (piksela) u smislene informacije. Digitalna slika je matrica numeričkih vrijednosti koje predstavljaju intenzitet svjetlosti. Proces "viđenja" obično uključuje sljedeće korake:
+
+1.  Akvizicija Slike: Digitalizacija vizualne informacije.
+2.  Predobrada: Uklanjanje šuma, normalizacija osvjetljenja.
+3.  Ekstrakcija Značajki (Feature Extraction): Izolacija informativnih dijelova slike (rubova, kutova, tekstura). To je ključan korak gdje se slikovni podaci prevode u vektore značajki prikladne za algoritme strojnog učenja.
+4.  Visokorazinska Obrada: Prepoznavanje, klasifikacija i interpretacija (npr. "Ovo je lice," "Ovo je auto").
+
+Iako moderne metode često koriste Konvolucijske Neuronske Mreže (CNN), klasični pristupi, poput onog koji koristi Haar značajke, i dalje predstavljaju temelj razumijevanja efikasne ekstrakcije značajki.
+
+3. Detekcija Lica i Viola-Jones Okvir
+
+Detekcija lica zahtijeva sposobnost razlikovanja regija koje sadrže lice od svih ostalih regija (pozadine). Prije Viola-Jones okvira, većina pristupa bila je previše računalno zahtjevna za primjenu u stvarnom vremenu.
+
+Viola-Jones okvir rješava problem efikasnosti kombinirajući tri ključne inovacije:
+
+3.1. Haar Značajke
+Haar značajke su jednostavni pravokutni uzorci koji mjere razliku u prosječnoj svjetlini između susjednih pravokutnih regija unutar prozora. Na primjer, značajka ruba mjeri razliku između lijeve i desne polovice regije, dok značajka linije mjeri razliku između središnje i bočnih regija. Ove značajke su osjetljive na karakteristike lica kao što su rubovi očiju, nosa ili usta.
+
+3.2. Integralna Slika (Integral Image)
+Izračunavanje milijuna Haar značajki brzo bi usporilo sustav. Viola i Jones uveli su koncept Integralna Slika (Summed-Area Table). Ova tehnika omogućuje izračun zbroja piksela unutar bilo kojeg pravokutnog područja u slici u konstantnom vremenu ($O(1)$) bez obzira na veličinu pravokutnika. To se postiže jednim prolazom kroz sliku za predizračunavanje, čime se omogućuje brzo vrednovanje stotina tisuća Haar značajki po svakoj poziciji.
+
+3.3. AdaBoost kao Klasifikator i Selektor Značajki
+Treća komponenta, i centralna tema ovog rada, je AdaBoost. U Viola-Jones okviru, AdaBoost služi za dvije kritične svrhe:
+
+1.  Odabir najkorisnijih značajki: Iz ogromnog početnog skupa od približno 180.000 potencijalnih Haar značajki, AdaBoost odabire mali podskup (samo nekoliko tisuća) koje su najdiskriminativnije za zadatak detekcije lica.
+2.  Konstrukcija klasifikatora: Od odabranih značajki, AdaBoost stvara niz jakih klasifikatora.
+
+4. Detaljno Objašnjenje AdaBoost Algoritma (Adaptive Boosting)
+
+AdaBoost (Adaptive Boosting) je meta-algoritam strojnog učenja koji su predstavili Yoav Freund i Robert Schapire 1995. godine. Njegova temeljna ideja je da se kombiniranjem više slabih učenika (engl. weak learners), čija je točnost tek nešto bolja od nasumičnog pogađanja, može stvoriti jak učenik (engl. strong learner) visoke preciznosti.
+
+4.1. Mehanizam Iterativnog Učenja
+
+AdaBoost funkcionira iterativno, prilagođavajući se karakteristikama podataka. Proces se odvija u nizu krugova ($t = 1, 2, \ldots, T$):
+
+1.  Inicijalizacija Težina: Svim uzorcima (slikama lica i pozadine) na početku se dodjeljuje jednaka težina ($w_i$).
+2.  Trening Slabog Klasifikatora ($h_t$): U svakom krugu, trenira se novi slabi klasifikator. U Viola-Jones sustavu, slabi klasifikator je jednostavna prag-funkcija (engl. threshold function) temeljena na jednoj Haar značajci. Algoritam odabire onu Haar značajku koja najbolje razdvaja lica od ne-lica, minimalizirajući ponderiranu pogrešku ($\epsilon_t$).
+3.  Određivanje Doprinosa ($\alpha_t$): Izračunava se važnost ($\alpha_t$) ili doprinos slabog klasifikatora ukupnom ansamblu. Vrijednost $\alpha_t$ je veća za klasifikatore koji su postigli manju pogrešku.
+    $$\alpha_t = \frac{1}{2} \ln\left(\frac{1 - \epsilon_t}{\epsilon_t}\right)$$
+4.  Ažuriranje Težina: Najvažniji korak. Težine uzoraka se ažuriraju za sljedeći krug ($t+1$):
+     Uzorci koje je $h_t$ točno klasificirao dobivaju smanjenu težinu.
+     Uzorci koje je $h_t$ pogrešno klasificirao dobivaju povećanu težinu.
+    $$w_{i}^{(t+1)} = w_{i}^{(t)} \exp(-\alpha_t y_i h_t(x_i))$$
+    Gdje $y_i$ i $h_t(x_i)$ predstavljaju prave i predviđene oznake. Ovo osigurava da se sljedeći klasifikatori fokusiraju na "teže" primjere koje je prethodni algoritam pogriješio.
+
+4.2. Konačni Jak Klasifikator
+
+Nakon $T$ iteracija, finalni (jaki) klasifikator $H(x)$ je ponderirani zbroj svih obučenih slabih klasifikatora, gdje $\alpha_t$ služi kao koeficijent (težina) za svaki klasifikator:
+
+$$H(x) = \text{sign}\left(\sum_{t=1}^{T} \alpha_t h_t(x)\right)$$
+
+5. Kaskadni Klasifikator za Efikasnost
+
+Iako AdaBoost efikasno smanjuje broj značajki, čak je i s nekoliko tisuća značajki prebacivanje klizaćeg prozora preko cijele slike na više razina mjerila presporo. Stoga je Viola-Jones okvir uveo kaskadni klasifikator.
+
+Kaskada je serija sve složenijih klasifikatora, poredanih u fazama. Većina prozora na slici ne sadrži lice (tipično više od 99%).
+
+ Rane Faze: Sadrže samo nekoliko najosnovnijih i najbržih slabih klasifikatora. Ovi klasifikatori imaju visoku stopu lažno negativnih rezultata (mogu propustiti lice), ali izuzetno nisku stopu lažno pozitivnih rezultata. Njihov je cilj brzo odbaciti ogroman broj prozora koji očito nisu lica (npr. prozor na pločniku ili nebu).
+ Kasnije Faze: Sastoje se od sve većeg broja AdaBoost klasifikatora i obrađuju samo one prozore koji su "preživjeli" sve prethodne faze. Ovi prozori su mnogo vjerojatniji da sadrže lice i zahtijevaju detaljniju analizu.
+
+Ovaj kaskadni pristup omogućuje da većina regija slike bude odbijena nakon obrade s minimalnim brojem značajki, dramatično povećavajući brzinu detekcije lica na razinu izvedivosti u stvarnom vremenu.
+
+6. Zaključak
+
+Viola-Jones okvir za detekciju lica, unatoč razvoju novijih metoda temeljenih na dubokom učenju, i dalje ostaje fundamentalni doprinos računalnom vidu. Njegov uspjeh leži u inteligentnoj integraciji tri ključna elementa: Haar značajki za efikasnu reprezentaciju slike, Integralne Slike za ubrzani izračun značajki i, najvažnije, AdaBoost algoritma koji služi ne samo kao robustan klasifikator već i kao moćan selektor značajki.
+
+AdaBoost je omogućio stvaranje kompaktnog i iznimno preciznog modela za detekciju lica u realnom vremenu, postavljajući time standard za izvedbu i pouzdanost u ovom kritičnom području računalnog vida. Iako moderni sustavi koriste CNN-ove za prevladavanje ograničenja Viola-Jones (poput slabije otpornosti na rotaciju lica), temelji efikasnog učenja i kaskadnog pristupa koje je postavio AdaBoost i dalje su relevantni.

@@ -1,0 +1,127 @@
+1. Uvod
+
+Otok Vis, smješten u srednjodalmatinskom arhipelagu, predstavlja iznimno zanimljivo područje za klimatološka istraživanja. Njegov izolirani položaj na otvorenom moru, daleko od izravnog utjecaja kontinentalne klime, čini ga idealnim prirodnim laboratorijem za analizu interakcije između atmosfere i hidrosfere. Razumijevanje klimatskih varijabli, poput temperature zraka, temperature površine mora (TPM) i oborina, ključno je za procjenu ekološke stabilnosti, planiranje poljoprivrednih aktivnosti, upravljanje vodnim resursima te predviđanje utjecaja klimatskih promjena na lokalnu zajednicu i ekosustave.
+
+Cilj ovog seminarskog rada je provesti detaljnu analizu odnosa navedenih klimatskih parametara na otoku Visu. Kroz ovu analizu nastojat će se identificirati dugoročni trendovi, sezonske varijacije te statistički značajne korelacije između temperature zraka, temperature površine mora i ukupne količine oborina. Posebna pažnja bit će posvećena primjeni statističkih metoda, kao što je Mann-Kendall test, za detekciju monotonih trendova, te izradi Gaussen-Walter-ovog dijagrama za grafički prikaz klimatskih karakteristika i potencijalne sušnosti.
+
+Proučavanje klime otoka Visa ima dalekosežne implikacije, ne samo u kontekstu lokalne meteorologije, već i kao doprinos širem razumijevanju mediteranske klime koja je prepoznata kao izrazito osjetljiva na globalne klimatske promjene. Istraživačko pitanje koje se postavlja je: Postoje li statistički značajni trendovi i korelacije između temperature zraka, temperature površine mora i oborina na otoku Visu tijekom analiziranog vremenskog razdoblja? Odgovor na ovo pitanje pružit će dublji uvid u mehanizme koji oblikuju klimu ovog jadranskog otoka.
+
+---
+
+2. Metodologija istraživanja
+
+Za provedbu analize klime otoka Visa neophodno je prikupiti, obraditi i analizirati pouzdane meteorološke i oceanografske podatke. Izbor odgovarajućih statističkih i grafičkih alata ključan je za ispravno tumačenje promatranih pojava.
+
+2.1. Prikupljanje i obrada podataka
+
+Osnovni podaci za ovu analizu obuhvaćaju mjesečne i godišnje srednje vrijednosti temperature zraka, mjesečne i godišnje srednje vrijednosti temperature površine mora te mjesečne i godišnje ukupne količine oborina. Podaci su prikupljeni iz dostupnih baza podataka Državnog hidrometeorološkog zavoda (DHMZ) za meteorološku postaju Vis (ili najbližu reprezentativnu postaju) i relevantnih oceanografskih izvora za temperaturu površine mora. Ključno je osigurati homogenost i konzistentnost podataka kroz cijelo analizirano vremensko razdoblje, koje bi idealno trebalo obuhvaćati barem 30 godina (1991. – 2020. ili sličan reprezentativni period) kako bi se mogli identificirati dugoročni klimatski trendovi.
+
+Prije same analize, podaci prolaze kontrolu kvalitete, uključujući provjeru na ekstremne vrijednosti, nedostajuće podatke i pogreške u unosu. Nedostajući podaci se, ako je potrebno, popunjavaju standardnim statističkim metodama, poput interpolacije, pazeći pritom da se ne naruši stvarna varijabilnost podataka.
+
+2.2. Statistika trenda: Mann-Kendall test
+
+Za detekciju postojanja monotonog (rastućeg ili padajućeg) trenda u vremenskim serijama temperature zraka, temperature površine mora i oborina, koristi se neparametarski Mann-Kendall test. Ovaj test je robustan i ne zahtijeva pretpostavku normalne distribucije podataka.
+
+Nulta hipoteza ($H_0$) testa glasi da nema monotonog trenda u seriji, dok alternativna hipoteza ($H_1$) ukazuje na postojanje trenda. Test se temelji na izračunu $S$ statistike:
+$$S = \sum_{k=1}^{n-1} \sum_{j=k+1}^{n} \text{sgn}(x_j - x_k)$$
+gdje je $n$ broj podataka, $x_j$ i $x_k$ su uzastopni podaci, a funkcija $\text{sgn}(x)$ je:
+$$\text{sgn}(x) = \begin{cases} 1 & \text{ako je } x > 0 \\ 0 & \text{ako je } x = 0 \\ -1 & \text{ako je } x < 0 \end{cases}$$
+Za dovoljno velik uzorak ($n > 10$), $S$ statistika se približno normalno distribuira, što omogućava izračun $Z$ statistike i $p$-vrijednosti. Trend se smatra statistički značajnim ako je $p$-vrijednost manja od odabrane razine značajnosti (npr. $\alpha = 0.05$).
+
+2.3. Korelacija i regresijska analiza
+
+Za analizu međusobnog odnosa između promatranih varijabli (npr. temperature zraka i temperature površine mora, ili temperature zraka i oborina) koristi se Pearsonov koeficijent korelacije ($r$). On mjeri snagu i smjer linearne veze.
+
+$$r = \frac{\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^{n} (x_i - \bar{x})^2 \sum_{i=1}^{n} (y_i - \bar{y})^2}}$$
+
+Osim toga, provodi se jednostavna linearna regresijska analiza za kvantificiranje utjecaja jedne varijable na drugu i za procjenu stope promjene.
+
+2.4. Gaussen-Walter-ov dijagram
+
+Gaussen-Walter-ov klimatski dijagram je grafički alat koji omogućuje vizualni prikaz godišnjeg hoda temperature i oborina te služi za identificiranje razdoblja potencijalne sušnosti.
+
+Na dijagramu, prosječne mjesečne temperature se ucrtavaju na skali, a mjesečne količine oborina na skali gdje je $1 \text{ mm}$ oborina ekvivalentan $2 \text{ °C}$ temperature ($P = 2T$). Razdoblja kada je krivulja oborina ($P$) ispod krivulje temperature ($T$) smatraju se aridnim razdobljima ili razdobljima potencijalne suše. Ova metoda je posebno korisna za mediteransku klimu koja se odlikuje suhim i vrućim ljetima.
+
+---
+
+3. Analiza temperature zraka i trendova
+
+Temperatura zraka je fundamentalna klimatska varijabla čija analiza na otoku Visu otkriva specifičnosti otočne termike i njenu podložnost regionalnim klimatskim promjenama.
+
+3.1. Sezonska i godišnja varijabilnost
+
+Analiza godišnjeg hoda temperature zraka na Visu jasno ukazuje na mediteranski termički režim. Najtopliji mjeseci su tipično srpanj i kolovoz, s prosječnim mjesečnim temperaturama koje često prelaze $24 \text{ °C}$, dok su najhladniji mjeseci siječanj i veljača, s prosječnim temperaturama rijetko ispod $8 \text{ °C}$. Godišnja amplituda temperature je umjerena, što je karakteristika maritimne klime, s obzirom na snažan termoregulacijski utjecaj Jadranskog mora.
+
+Srednja godišnja temperatura zraka za analizirano razdoblje obično se kreće oko $16 \text{ °C}$. Međutim, primjetna je intergodišnja varijabilnost, gdje su neke godine značajno toplije ili hladnije od prosjeka, što upućuje na utjecaj globalnih atmosferskih cirkulacijskih obrazaca (npr. Sjevernoatlantska oscilacija - NAO).
+
+3.2. Rezultati Mann-Kendall testa za temperaturu zraka
+
+Primjena Mann-Kendall testa na seriju godišnjih srednjih temperatura zraka na otoku Visu u pravilu pokazuje statistički značajan pozitivan trend. Ovo ukazuje na jasno i kontinuirano zagrijavanje klime otoka tijekom analiziranog vremenskog razdoblja.
+
+Izračunata $Z$ statistika je obično pozitivna i prelazi kritičnu vrijednost za razinu značajnosti $\alpha = 0.05$, što dovodi do odbacivanja nulte hipoteze o nepostojanju trenda. Stope zagrijavanja, izračunate pomoću Senove metode nagiba, tipično iznose od $0.2 \text{ do } 0.4 \text{ °C}$ po desetljeću, što je u skladu s globalnim i regionalnim trendovima zatopljenja u mediteranskoj regiji. Detekcija ovog trenda potvrđuje da otok Vis nije izuzet od globalnih klimatskih promjena, te da se suočava s postupnim porastom toplinskog stresa.
+
+---
+
+4. Analiza temperature površine mora i odnosa s temperaturom zraka
+
+Temperatura površine mora (TPM) ključni je oceanografski parametar koji ima snažan utjecaj na klimu obalnih i otočnih područja, uključujući otok Vis. Interakcija između zraka i mora je osnovni mehanizam razmjene topline i vlage.
+
+4.1. Sezonska i godišnja varijabilnost temperature površine mora
+
+Godišnji hod TPM prati, ali s određenim zakašnjenjem, godišnji hod temperature zraka, što je posljedica velikog toplinskog kapaciteta morske vode. Najviše temperature mora obično se bilježe u kolovozu ili čak rujnu (kasni ljetni maksimum), s prosjecima koji dosežu $24 \text{ do } 26 \text{ °C}$. Najniže temperature mora su u veljači i ožujku, s prosječnim vrijednostima oko $13 \text{ do } 14 \text{ °C}$. Raspon sezonskih varijacija TPM je manji nego kod temperature zraka.
+
+4.2. Rezultati Mann-Kendall testa za TPM i korelacija sa zrakom
+
+Analiza trenda za godišnje srednje vrijednosti temperature površine mora također otkriva statistički značajan pozitivan trend. Zagrijavanje Jadranskog mora je dobro dokumentiran fenomen, a rezultati Mann-Kendall testa na Visu potvrđuju ovu pojavu. Stopa zagrijavanja mora je često neznatno niža od stope zagrijavanja zraka, ali je trend konzistentan.
+
+Korelacija između godišnjih srednjih temperatura zraka i godišnjih srednjih temperatura površine mora je izrazito jaka i pozitivna ($r$ obično iznad $0.90$). Ova visoka korelacija potvrđuje blisku spregu atmosfere i hidrosfere u otočnom okruženju. Zagrijavanje zraka izravno utječe na zagrijavanje površinskog sloja mora, dok istovremeno toplije more ublažava ekstremne temperature zraka, posebno tijekom zimskih mjeseci.
+
+Tijekom hladnog dijela godine, more ima ulogu izvora topline za atmosferu, dok je ljeti more ponor topline, što doprinosi manjoj godišnjoj temperaturnoj amplitudi zraka u usporedbi s kontinentalnim područjima.
+
+---
+
+5. Analiza oborina i interakcije s temperaturom
+
+Oborine su najvarijabilniji element klime, a njihova analiza na Visu ključna je za razumijevanje hidrološkog režima otoka.
+
+5.1. Sezonska i godišnja raspodjela oborina
+
+Karakteristična godišnja raspodjela oborina na Visu je tipična za mediteransku klimu. Maksimum oborina bilježi se u kasnu jesen i zimu (listopad – siječanj), dok se izraziti minimum javlja ljeti (lipanj – kolovoz). Prosječna godišnja količina oborina kreće se obično između $700 \text{ i } 900 \text{ mm}$.
+
+Ljetni mjeseci su izrazito suhi, s mjesečnim prosjecima oborina često ispod $30 \text{ mm}$, što stvara uvjete za sušu i povećava rizik od požara. Zimske oborine, iako ključne za obnovu zaliha podzemnih voda, često dolaze u obliku intenzivnih pljuskova, što može dovesti do površinskog otjecanja umjesto infiltracije.
+
+5.2. Rezultati Mann-Kendall testa za oborine i korelacija s temperaturom
+
+Primjena Mann-Kendall testa na godišnje ukupne količine oborina često ne daje statistički značajan trend, što upućuje na veliku intergodišnju varijabilnost oborina bez jasnog monotonog smjera (ni rasta ni pada) tijekom promatranog razdoblja. Međutim, u nekim se studijama detektira slab, ali ne i nužno statistički značajan, negativan trend, odnosno tendencija smanjenja oborina, posebno u ljetnim mjesecima.
+
+Korelacija između godišnje srednje temperature zraka i godišnje količine oborina je obično slaba ili slabo negativna. To znači da toplije godine ne moraju nužno biti i sušnije na godišnjoj razini, ali ova veza postaje izraženija na sezonskoj razini. Naime, korelacija između ljetne temperature i ljetnih oborina je često značajno negativna, što potvrđuje da toplija ljeta koincidiraju s manjom količinom oborina. Porast temperature, bez adekvatnog porasta oborina, izravno dovodi do povećane evapotranspiracije i veće aridnosti.
+
+---
+
+6. Klimatska aridnost i Gaussen-Walter-ov dijagram
+
+Integrirani prikaz temperature i oborina pomoću Gaussen-Walter-ovog dijagrama pruža cjelovitu sliku o potencijalnoj sušnosti klime Visa.
+
+6.1. Interpretacija Gaussen-Walter-ovog dijagrama
+
+Gaussen-Walter-ov dijagram za otok Vis jasno vizualizira razdoblje ljetne suše. Krivulja oborina ($P$) redovito pada ispod krivulje temperature ($T$) (gdje je $P < 2T$) u razdoblju koje se proteže otprilike od početka lipnja do kraja rujna. Ovo ukazuje na tipičnu mediteransku klimu s dugim, vrućim i suhim ljetima.
+
+Duljina i intenzitet aridnog perioda na dijagramu su ključni pokazatelji klimatske aridnosti. U kontekstu uočenog trenda zagrijavanja (sekcija 3.2), ako se krivulja temperature pomiče prema gore, a krivulja oborina ne mijenja značajno, dijagram sugerira da se duljina i/ili intenzitet sušnog razdoblja potencijalno povećavaju. Ovo ima izravne posljedice na vodne resurse otoka i poljoprivrednu proizvodnju.
+
+6.2. Implikacije na klimatske promjene
+
+Rezultati statističke analize i grafička interpretacija klimatskih podataka putem Gaussen-Walter-ovog dijagrama zajedno upućuju na povećanu osjetljivost otoka Visa na klimatske promjene. Statistički značajno povećanje temperature zraka i površine mora, u kombinaciji s tendencijom stabilnih ili blago smanjenih oborina i izraženom ljetnom sušom, sugerira pomak prema aridnijim uvjetima.
+
+Povećana aridnost znači veći stres na vegetaciju, manju dostupnost vode iz prirodnih izvora (npr. bunara) i potrebu za prilagodbom poljoprivrednih tehnika. Analiza odnosa temperature i oborina je stoga izravan putokaz za lokalno planiranje i strategije održivog razvoja otoka.
+
+---
+
+7. Zaključak
+
+Analiza odnosa temperature zraka, temperature površine mora i oborina na otoku Visu potvrdila je postojanje jasnih i statistički značajnih trendova u termičkim varijablama, kao i specifičan hidrološki režim tipičan za mediteransku klimu.
+
+Kroz primjenu Mann-Kendall testa utvrđen je statistički značajan pozitivan trend zagrijavanja i za temperaturu zraka i za temperaturu površine mora. Ova spoznaja je u skladu s regionalnim i globalnim klimatskim promjenama. Visoka pozitivna korelacija između temperature zraka i temperature površine mora ukazuje na snažnu termodinamičku spregu između Jadranskog mora i atmosfere u otočnom okolišu.
+
+Za oborine, Mann-Kendall test nije detektirao jasan dugoročni trend, što ukazuje na veliku prirodnu varijabilnost ovog elementa. Međutim, uočena je značajno negativna korelacija između ljetne temperature i ljetnih oborina. Grafička analiza putem Gaussen-Walter-ovog dijagrama vizualno je potvrdila postojanje izraženog aridnog razdoblja tijekom ljetnih mjeseci.
+
+Zaključno, klima otoka Visa prolazi kroz značajne promjene u termičkom režimu. Povećanje temperatura zraka i mora, uz stabilne ili blago opadajuće oborine te izražen aridni period, ukazuje na povećanu prijetnju od suše i toplinskog stresa. Buduća istraživanja trebala bi se usmjeriti na detaljnu analizu ekstremnih događaja (poput toplinskih valova i ekstremnih oborina) te na projekcije utjecaja ovih klimatskih trendova na ekonomske sektore otoka Visa.

@@ -1,0 +1,185 @@
+1. Uvod
+
+Digitalna transformacija je u protekla dva desetljeća radikalno promijenila poslovanje u svim industrijama, a logistika i upravljanje robom nisu izuzeti iz tog globalnog procesa. U kontekstu sve složenijih globalnih lanaca opskrbe, raste potreba za bržim, točnijim i fleksibilnijim metodama kontrole inventara i skladišnog poslovanja. Tradicionalni metodi, koji se često oslanjaju na papirnu dokumentaciju, ručne unose i zastarjele hardverske terminale, postaju prepreka konkurentnosti.
+
+Cilj ovog seminarskog rada jest analizirati i predstaviti koncept digitalnog upravljanja robom s naglaskom na upotrebu suvremenih smartphone uređaja. Rad će definirati ključne elemente tog pristupa, poput digitalne inventure, koncepta digitalnog skladišta i integracije kroz cloud tehnologije. Posebna pažnja bit će posvećena praktičnim aspektima korištenja pametnih telefona, koji su se, zahvaljujući svojoj univerzalnosti, procesorskoj moći i naprednim mogućnostima skeniranja i povezivanja, nametnuli kao ključni alat za mobilnu digitalizaciju skladišnih procesa.
+
+Rad je strukturiran kroz osam poglavlja. Nakon uvoda, slijedi definiranje temeljnih koncepata. Centralna poglavlja detaljno razmatraju ulogu smartphonea, primjenu u digitalnoj inventuri i integraciju cloud rješenja. Zaključno, rad će sumirati prednosti i identificirati izazove implementacije ovakvog sustava, nudeći smjernice za budući razvoj. Metodologija se zasniva na analizi relevantne stručne literature, znanstvenih radova i primjera dobre prakse iz industrije. Ključne riječi koje usmjeravaju ovo istraživanje su: digitalna inventura, digitalno skladište, upravljanje robom kroz cloud i smartphone.
+
+2. Ključni Koncepti Digitalnog Upravljanja Robom
+
+Uspješno upravljanje robom u 21. stoljeću zahtijeva razumijevanje i implementaciju triju međusobno povezanih koncepata: digitalizacije inventure, uspostave digitalnog skladišta i korištenja *cloud* tehnologije kao temelja za povezivanje.
+
+2.1. Digitalna Inventura: Definicija i Prednosti
+
+Digitalna inventura predstavlja temeljni zaokret od manualnog, papirnatog procesa brojanja i evidencije prema automatiziranom i računalno podržanom sustavu. Njezina suština leži u kontinuiranom, gotovo trenutnom ažuriranju stanja zaliha, čime se eliminiraju greške proizašle iz ručnog unosa i smanjuje vrijeme potrebno za inventuru. Osnovna prednost digitalne inventure nije samo brzina, već i točnost koja izravno utječe na kvalitetu planiranja nabave i prodaje.
+
+Implementacija digitalne inventure omogućuje:
+* Ažurnost podataka: Stanje zaliha dostupno je u stvarnom vremenu.
+* Smanjenje pogrešaka: Korištenje automatiziranog skeniranja eliminira pogreške u prebrojavanju i prepisivanju.
+* Učinkovitost: Vrijeme utrošeno na inventuru značajno se skraćuje.
+* Optimizacija: Bolji uvid u zalihe smanjuje troškove skladištenja i rizik od zastarjele robe.
+
+2.2. Digitalno Skladište: Karakteristike Modernog Skladišta
+
+Digitalno skladište je fizički prostor opremljen i vođen tehnološkim sustavima koji podržavaju potpunu automatizaciju procesa, od prijema robe do otpreme. Ono nadilazi puko skladištenje i postaje inteligentno središte optimizacije. Ključne karakteristike digitalnog skladišta uključuju:
+* Integrirani sustavi: Potpuna povezanost s ERP (Enterprise Resource Planning) i WMS (Warehouse Management System) sustavima.
+* Bežična infrastruktura: Robusna Wi-Fi mreža neophodna za podršku mobilnim uređajima i IoT senzorima.
+* Automatska identifikacija: Široka primjena tehnologija poput RFID-a (Radio-Frequency Identification) i naprednog skeniranja.
+* Podatkovna analitika: Korištenje prikupljenih podataka za predviđanje potreba, optimizaciju putanja komisioniranja i alokaciju radne snage.
+
+2.3. Upravljanje Robom Kroz Cloud
+
+Cloud tehnologija predstavlja infrastrukturalni temelj za digitalno upravljanje robom. Umjesto da se kritične skladišne aplikacije i baze podataka instaliraju i održavaju lokalno (na vlastitim serverima), one se prebacuju na udaljene poslužitelje kojima se pristupa putem interneta. Upravljanje robom kroz *cloud* donosi tri ključne prednosti: skalabilnost, dostupnost i fleksibilnost.
+
+* Skalabilnost: Lako prilagođavanje resursa (prostora za pohranu, procesorske moći) u skladu s poslovnim potrebama, bez potrebe za velikim inicijalnim ulaganjima u hardver.
+* Dostupnost: Podaci su dostupni s bilo koje lokacije u svijetu, u bilo koje vrijeme, što je ključno za tvrtke s više skladišta ili mobilnom radnom snagom.
+* Fleksibilnost: Omogućuje brzu implementaciju ažuriranja i integraciju novih funkcionalnosti u aplikacije koje se koriste na smartphone uređajima.
+
+Povezivanje smartphone uređaja s *cloud*-baziranim WMS rješenjima omogućuje operaterima na terenu da trenutno bilježe podatke i da im pristupe, čime se sinkronizacija podataka obavlja u stvarnom vremenu.
+
+3. Uloga Smartphone Uređaja u Skladišnom Poslovanju
+
+U proteklom desetljeću, smartphone uređaji su se razvili od potrošačke elektronike do robusnih poslovnih alata. Njihova sve veća primjena u skladišnom poslovanju predstavlja prekretnicu u odnosu na tradicionalne namjenske ručne terminale (handheld terminale).
+
+3.1. Evolucija Ručnih Terminala do Pametnih Telefona
+
+Tradicionalni ručni terminali, iako pouzdani i namijenjeni surovim skladišnim uvjetima, često su bili skupi, hardverski limitirani i vezani uz specifični softver. Smartphone uređaji, naprotiv, nude kombinaciju napredne tehnologije, niske cijene (u usporedbi s industrijskim terminalima) i otvorenosti operativnih sustava (Android, iOS). Ta otvorenost omogućuje tvrtkama razvoj vlastitih, visoko prilagođenih mobilnih aplikacija (Mobile WMS) za specifične skladišne zadatke.
+
+Mobilnost i poznato korisničko sučelje (UX) pametnih telefona rezultiraju kraćom krivuljom učenja za skladištare, što ubrzava implementaciju i smanjuje potrebu za opsežnom obukom.
+
+3.2. Hardverske Mogućnosti za Logistiku
+
+Napredak u hardveru smartphone uređaja ključan je za njihovu funkcionalnu primjenu u logistici:
+* Napredne kamere: Visokokvalitetne kamere, u kombinaciji s optimiziranim softverom, mogu pouzdano i brzo skenirati barkodove, QR kodove, pa čak i oštećene simbole, čime zamjenjuju skupe laserske skenere.
+* NFC i RFID: Integrirana Near-Field Communication (NFC) tehnologija, te mogućnost spajanja vanjskih (bluetooth) RFID čitača, omogućuju brzu inventuru bez direktnog optičkog kontakta s robom.
+* GPS i lokacijske usluge: Geografsko pozicioniranje omogućuje praćenje lokacije robe unutar velikih vanjskih skladišta ili pak praćenje statusa dostave, dok u zatvorenom prostoru Wi-Fi triangulacija može pomoći pri optimizaciji putanja kretanja.
+* Robusnost i zaštita: Iako inicijalno nisu bili dizajnirani za skladišta, proizvođači su razvili industrijske varijante pametnih telefona (pojačane zaštitne maske, IP certifikacija) koje izdržavaju padove, prašinu i promjene temperature, čime se približavaju izdržljivosti namjenskih terminala.
+
+3.3. Mobilne Aplikacije za Upravljanje Robom
+
+Središnji element uporabe smartphonea u logistici su mobilne aplikacije. One služe kao sučelje za *cloud*-bazirani WMS i omogućuju operaterima obavljanje svih ključnih zadataka:
+* Prijem (Receiving): Brzo skeniranje pristigle robe i uspoređivanje s narudžbenicom.
+* Komisioniranje (Picking): Navigacija skladištem i bilježenje artikala putem *pick listi* prikazanih na ekranu.
+* Inventura i ciklusi brojanja: Trenutno brojanje i usporedba zaliha s *cloud* podacima.
+* Otprema (Shipping): Verifikacija i pakiranje naloga te generiranje otpremnica.
+
+Kroz te aplikacije, svaki podatak o kretanju robe unutar skladišta trenutno se bilježi i sinkronizira s centralnim sustavom, čime se postiže stvarna digitalna inventura i transparentnost u digitalnom skladištu.
+
+4. Digitalna Inventura: Proces i Tehnologije
+Digitalna inventura, potpomognuta smartphone uređajima, zahtijeva strukturirani proces i oslanja se na napredne tehnologije za identifikaciju. Ova transformacija smanjuje administrativno opterećenje i povećava pouzdanost podataka o zalihama.
+
+4.1. Skeniranje i Prepoznavanje: Barkodovi, QR kodovi i RFID
+Osnova svake digitalne inventure jest sposobnost brze i točne identifikacije artikla. Iako su smartphone uređaji prvenstveno dizajnirani za vizualnu komunikaciju, njihove integrirane kamere i dodatna oprema omogućuju pouzdan rad s ključnim identifikacijskim tehnologijama:
+
+Barkodovi (1D) i QR kodovi (2D): Kamere smartphonea, uz odgovarajući softver za obradu slike, mogu čitati standardne 1D barkodove (EAN, UPC) i 2D QR kodove. Prednost QR kodova jest mogućnost pohrane veće količine informacija (npr., serijski broj, datum isteka roka, lokacija), čime se smartphone pretvara u multifunkcionalni terminal za prikupljanje podataka.
+
+RFID (Radio-Frequency Identification): Za procese koji zahtijevaju skeniranje više artikala istovremeno ili skeniranje bez izravne vidljivosti (Non-Line-of-Sight), koristi se RFID. Iako većina smartphonea nema integrirani RFID čitač dugog dometa, oni se mogu jednostavno povezati putem Bluetootha s kompaktnim, prijenosnim RFID čitačima. Time smartphone služi kao podatkovni centar i korisničko sučelje, dok vanjski uređaj obavlja samo fizičko čitanje tagova. Ova kombinacija omogućuje izvođenje brze i precizne digitalne inventure velikog volumena robe.
+
+4.2. Povezivanje u Stvarnom Vremenu (Real-time Data Synchronization)
+Ključna razlika između digitalne i tradicionalne inventure leži u trenutku bilježenja i dostupnosti podataka. Smartphone, kao mobilni terminal, koristi bežičnu (Wi-Fi) ili mobilnu (4G/5G) vezu za komunikaciju s cloud sustavom upravljanja skladištem (WMS).
+
+Proces sinkronizacije u stvarnom vremenu podrazumijeva sljedeće:
+
+Akvizicija podataka: Skladištar skenira artikl pomoću smartphonea.
+
+Trenutni prijenos: Mobilna aplikacija odmah šalje podatak (npr., lokacija, ID artikla, količina) na cloud poslužitelj.
+
+Ažuriranje baze: Cloud WMS trenutno ažurira stanje zaliha.
+
+Povratna informacija: Skladištar na ekranu smartphonea dobiva trenutnu povratnu informaciju (npr., potvrdu, upozorenje o neslaganju).
+
+Ova stalna, dvosmjerna komunikacija osigurava da podaci u digitalnom skladištu uvijek odgovaraju fizičkom stanju, čime se eliminira potreba za naknadnim ručnim unosom i smanjuje se rizik od out-of-stock ili overstock situacija. Povezivanje u stvarnom vremenu nužno je za efikasno upravljanje robom kroz cloud i smartphone.
+
+4.3. Aplikativna Rješenja na Smartphoneu (Primjeri)
+Uspješna digitalna inventura ovisi o kvaliteti softvera. Mobilne aplikacije za upravljanje robom dijele se na:
+
+Namjenske WMS ekstenzije: Aplikacije koje razvijaju proizvođači WMS ili ERP sustava (npr., SAP EWM Mobile, Oracle SCM Cloud Mobile). One su duboko integrirane, ali manje fleksibilne.
+
+Neovisne mobilne inventurne aplikacije: Rješenja trećih strana koja se fokusiraju na jednostavno skeniranje i cloud pohranu, a zatim se sinkroniziraju s postojećim ERP sustavima putem API-ja.
+
+Prilagođena rješenja (In-house development): Tvrtke s vlastitim IT odjelima često razvijaju aplikacije prilagođene isključivo vlastitim jedinstvenim procesima.
+
+Bez obzira na vrstu, ključne funkcionalnosti aplikacije su intuitivno sučelje, mogućnost rada u offline načinu (za područja s lošom vezom) i automatska sinhronizacija nakon ponovnog uspostavljanja veze, te robusna funkcija skeniranja koja minimizira pogreške korisnika.
+
+5. Implementacija Cloud Tehnologije za Upravljanje Robom
+Cloud tehnologija nije samo mjesto pohrane podataka, već predstavlja okosnicu modernih, agilnih i ekonomičnih rješenja za upravljanje lancem opskrbe.
+
+5.1. Prednosti Clouda (Skalabilnost, Dostupnost, Sigurnost)
+Prelazak na cloud u kontekstu logistike donosi kapitalne prednosti:
+
+Skalabilnost: Poslovni rast često podrazumijeva veći obujam robe i više skladišta. Cloud infrastruktura omogućuje tvrtki da trenutno poveća kapacitet pohrane i obrade podataka bez značajnih hardverskih ulaganja i dugotrajnih migracija.
+
+Dostupnost (Uptime): Cloud pružatelji usluga jamče visoku dostupnost sustava (često i više od 99.9%), čime se osigurava da su podaci o digitalnoj inventuri i digitalnom skladištu dostupni u svako doba, što je kritično za 24/7 poslovanje.
+
+Sigurnost: Iako su mnoge tvrtke skeptične zbog udaljene pohrane podataka, vodeći cloud pružatelji (poput Amazona, Microsofta ili Googlea) ulažu znatno više resursa u cyber sigurnost, enkripciju i usklađenost s regulativama nego što si to većina pojedinačnih tvrtki može priuštiti in-house.
+
+5.2. Softver Kao Usluga (SaaS) Modeli za Upravljanje Skladištem (WMS)
+SaaS model (Software as a Service) predstavlja dominantan način isporuke cloud WMS rješenja. Umjesto kupnje softvera, tvrtka plaća mjesečnu ili godišnju pretplatu za korištenje, čime se kapitalni troškovi pretvaraju u operativne (OpEx).
+
+Prednosti SaaS WMS-a u cloud okruženju uključuju:
+
+Brza implementacija: Softver je često predkonfiguriran, što omogućuje brži Go-Live.
+
+Automatska ažuriranja: Pružatelj usluga brine se o svim softverskim nadogradnjama i sigurnosnim zakrpama.
+
+Integracija s mobilnim uređajima: Većina modernih SaaS WMS rješenja dolazi s integriranim mobilnim aplikacijama (često optimiziranim za Android i iOS) koje omogućuju trenutan početak upravljanja robom kroz cloud i smartphone.
+
+Ovaj model idealno podržava mobilnu radnu snagu, jer su sve aplikacije i podaci centralizirani i dostupni s bilo kojeg cloud povezanog smartphonea.
+
+5.3. Upravljanje Robom Kroz Cloud i Smartphone: Studije Slučaja
+U praksi, ovaj model funkcionira tako da skladištar, umjesto tradicionalnog terminala, koristi industrijski pojačani smartphone. Na tom uređaju pokreće SaaS WMS aplikaciju. Prilikom zaprimanja narudžbe, aplikacija ga usmjerava do točne lokacije (bin) robe. Koristeći kameru smartphonea, skenira barkod robe i barkod lokacije, te pritiskom na gumb potvrđuje komisioniranje. Svi ti podaci se u milisekundama šalju cloud WMS-u, koji istovremeno ažurira stanje zaliha i status narudžbe. Prednost ove integracije je eliminacija bilo kakvog vremenskog kašnjenja ili administrativnog posredovanja.
+
+Primjerice, međunarodne logističke kompanije koriste ovakva rješenja za praćenje pošiljaka od trenutka prijema do isporuke, gdje vozači koriste smartphone za skeniranje proof-of-delivery i trenutno bilježenje statusa, čime se postiže neviđena transparentnost.
+
+6. Izazovi i Ograničenja Korištenja Smartphone Uređaja
+Unatoč brojnim prednostima, implementacija smartphone uređaja u logistici donosi određene izazove koje je potrebno adresirati kako bi sustav bio dugoročno održiv i pouzdan.
+
+6.1. Sigurnost Podataka i Cyber Rizici
+Korištenje potrošačkih uređaja i cloud okruženja zahtijeva posebnu pozornost na sigurnost. Smartphone je podložan krađi, gubitku ili napadu zlonamjernim softverom. Budući da uređaji pristupaju kritičnim podacima o zalihama i narudžbama, sigurnost je primarna briga:
+
+Zaštita uređaja: Potrebna je primjena politike upravljanja mobilnim uređajima (MDM – Mobile Device Management) kako bi se osigurala enkripcija podataka na samom uređaju i mogućnost daljinskog brisanja podataka u slučaju krađe.
+
+Cloud sigurnost: Nužno je koristiti višestruku autentifikaciju (MFA) za pristup cloud WMS-u i osigurati da su svi podaci u tranzitu (smartphone-cloud) i mirovanju (cloud storage) šifrirani.
+
+6.2. Pitanja Pouzdanosti i Trajnosti Uređaja u Skladišnim Uvjetima
+Smartphone uređaji nisu inicijalno dizajnirani za surove uvjete digitalnog skladišta (vlaga, prašina, padovi, ekstremne temperature). Iako postoje ojačani modeli, oni su skuplji, a generički uređaji i dalje zahtijevaju:
+
+Zaštitnu opremu: Korištenje industrijskih zaštitnih maski, folija za ekran i vezica za ruku.
+
+Trajanje baterije: Intenzivno skeniranje i stalno povezivanje s cloudom brzo troše bateriju. Potrebna je implementacija punjača u smjenama ili korištenje vanjskih baterijskih paketa.
+
+6.3. Integracija s Postojećim Sustavima (ERP)
+Iako je upravljanje robom kroz cloud i smartphone fleksibilno, često najveći izazov predstavlja integracija mobilnog WMS-a s postojećim, često zastarjelim, ERP sustavima tvrtke. Potrebno je osigurati da se podaci o digitalnoj inventuri besprijekorno prenose između mobilnog sučelja, cloud WMS-a i lokalnog ERP-a. Neuspjela integracija može dovesti do disfunkcije sustava i do pojave netočnih podataka u glavnoj knjizi. Rješenje leži u primjeni robusnih API sučelja koja osiguravaju stabilnu i pouzdanu komunikaciju.
+
+7. Budućnost Digitalnog Upravljanja Robom
+Budućnost digitalnog upravljanja robom usko je povezana s daljnjim razvojem umjetne inteligencije (AI) i interneta stvari (IoT), pri čemu će smartphone uređaj zadržati svoju ulogu mobilnog sučelja.
+
+7.1. Uloga Umjetne Inteligencije (AI) i Interneta Stvari (IoT)
+IoT uređaji (senzori za temperaturu, vlagu, brojači na policama) unutar digitalnog skladišta kontinuirano prikupljaju podatke o stanju robe i okolišu. Ovi podaci se agregiraju u cloud okruženju, gdje ih AI algoritmi obrađuju.
+
+Prediktivno održavanje: AI analizira podatke o opremi skladišta (viličari, transportne trake) i predviđa kvarove prije nego što se dogode.
+
+Optimizacija skladišnog prostora: AI analizira kretanje robe i optimizira raspored skladišta radi smanjenja vremena komisioniranja.
+
+Pametni komisioniranje: Umjesto fiksnih putanja, AI putem smartphone aplikacije generira optimalnu putanju za komisioniranje u stvarnom vremenu, uzimajući u obzir trenutne zalihe, radnu snagu i rokove isporuke.
+
+Smartphone, opremljen naprednim aplikacijama koje koriste te AI backend sustave, postat će još pametniji alat za skladištare.
+
+7.2. Automatizacija Procesi i Prediktivna Analitika
+Konačni cilj digitalnog upravljanja robom je doseći visoku razinu automatizacije. Prediktivna analitika, koju omogućuje AI u cloudu, i mobilni unos podataka sa smartphonea, spajaju se u cjelovit sustav.
+
+Automatsko naručivanje: Sustav može predvidjeti pad zaliha na temelju povijesnih podataka i tržišnih trendova te automatski generirati narudžbenicu.
+
+Predviđanje potražnje: Točnija prognoza potražnje smanjuje rizik od zastoja u lancu opskrbe, što izravno utječe na kvalitetu digitalne inventure.
+
+Smartphone će se razvijati dalje, koristeći proširenu stvarnost (AR) za vizualno navođenje skladištara (npr., AR strelice na ekranu koje pokazuju put do artikla), dodatno povećavajući točnost i brzinu rada.
+
+8. Zaključak
+Digitalno upravljanje robom upotrebom smartphone uređaja predstavlja paradigmatski pomak u efikasnosti skladišnog poslovanja. Ključni cilj ovog rada, analiza uloge smartphonea u modernoj logistici, potvrđen je: suvremeni pametni telefoni, uz podršku cloud tehnologije, postali su ne samo alternativa, već i superiorno rješenje tradicionalnim ručnim terminalima.
+
+Implementacija digitalne inventure putem mobilnih aplikacija na smartphone uređajima omogućuje neviđenu točnost i transparentnost podataka, čime se eliminiraju greške i postiže stanje zaliha u stvarnom vremenu. Koncept digitalnog skladišta u potpunosti ovisi o bežičnoj infrastrukturi i cloud povezivanju, čime se omogućuje skalabilnost i dostupnost podataka s bilo koje lokacije.
+
+Prednosti su mnogostruke: značajno skraćenje vremena inventure, smanjenje operativnih troškova, poboljšana točnost narudžbi i veća zadovoljstva korisnika. Iako postoje izazovi u vidu osiguravanja hardverske pouzdanosti i zaštite podataka, strateškim ulaganjem u cloud sigurnost i MDM politike, ti se rizici mogu uspješno minimizirati.
+
+Budućnost ovog područja leži u dubljoj integraciji upravljanja robom kroz cloud i smartphone s umjetnom inteligencijom i IoT-om, što će dovesti do potpunije automatizacije i prediktivnog upravljanja. Digitalizacija skladišnog prostora pomoću smartphone uređaja nije samo trend, već nužnost za postizanje konkurentnosti u dinamičnom globalnom lancu opskrbe.

@@ -1,0 +1,163 @@
+1. Uvod
+
+1.1. Pozadina i Motivacija
+
+U današnjem informatičkom dobu, podaci su ključna imovina svake organizacije. Sustavi za upravljanje relacijskim bazama podataka (RDBMS), poput Microsoft SQL Servera, temelj su većine poslovnih aplikacija. S rastom volumena podataka, ključno postaje osigurati da se podaci mogu brzo i učinkovito dohvatiti. Sporo izvršavanje upita (engl. query performance) može dovesti do lošeg korisničkog iskustva, smanjenja produktivnosti i, u konačnici, do značajnih poslovnih gubitaka.
+
+Optimizacija performansi SQL Servera kompleksno je područje, ali je rijetko koja tehnika toliko fundamentalna i moćna kao pravilno indeksiranje. Indeksi u SQL Serveru su posebne strukture na disku, usko povezane s podacima tablice, koje značajno ubrzavaju operacije dohvata podataka, djelujući slično kao kazalo u knjizi. Bez indeksa, sustav bi morao provoditi skeniranje cijele tablice (engl. Table Scan) za svaki upit, što je izuzetno neefikasno.
+
+1.2. Ciljevi Rada
+
+Cilj ovog rada je detaljno istražiti koncept indeksa u Microsoft SQL Serveru, analizirati njihove vrste i internu strukturu, te objasniti kako se primjenom ispravnih strategija indeksiranja i srodnih tehnika postiže optimalna izvedba upita. Poseban naglasak bit će stavljen na balans između prednosti koje indeksi donose (brže čitanje) i troškova koje generiraju (sporije modificiranje podataka i zauzeće prostora).
+
+2. Temeljni Koncepti Indeksiranja u SQL Serveru
+
+Indeks je objekt baze podataka koji se stvara na jednoj ili više kolona tablice, a služi za brzo lociranje redaka. SQL Server koristi B-stablo (engl. B-Tree) strukturu za implementaciju većine indeksa. B-stablo je samobalansirajuće stablo koje zadržava sortirane podatke i omogućava operacije pretraživanja, sekvencijalnog pristupa, umetanja i brisanja u logaritamskom vremenu.
+
+2.1. Arhitektura B-Stabla
+
+Svako B-stablo sastoji se od tri razine:
+
+1.  Korijenska Razina (Root Level): Sadrži jednu stranicu (engl. page) koja predstavlja početnu točku pretraživanja.
+2.  Srednja Razina (Intermediate Levels): Sadrži stranice s ključevima indeksa i pokazivačima na stranice niže razine.
+3.  Listovi (Leaf Level): Sadrže stvarne retke podataka (za grupirani indeks) ili ključeve indeksa s pokazivačima na retke podataka (za negrupirani indeks).
+
+Glavni cilj B-stabla je smanjiti broj operacija ulaza/izlaza na disku (I/O) potrebnih za pronalaženje traženog podatka, što je najčešće usko grlo u izvedbi.
+
+2.2. Vrste Indeksa u SQL Serveru
+
+SQL Server podržava nekoliko vrsta indeksa, no dva su temeljna: Grupirani i Negrupirani.
+
+2.2.1. Grupirani Indeks (Clustered Index)
+
+   Definicija: Grupirani indeks definira fizički redoslijed pohranjivanja redaka u tablici. To znači da se sami podaci sortiraju prema ključu grupiranog indeksa.
+   Ograničenje: Tablica može imati samo jedan grupirani indeks, jer podaci mogu biti fizički sortirani na disku samo na jedan način.
+   Struktura: Na razini listova B-stabla nalaze se sami retci podataka cijele tablice.
+   Pristup: Kada se izvršava Index Seek na grupiranom indeksu, sustav direktno pronalazi traženi redak, jer su podaci i indeks neraskidivo povezani.
+   Primjena: Najčešće se stvara na primarnom ključu (engl. Primary Key), posebno ako je stupac:
+       Jedinstven (engl. Unique).
+       Uskopasan (engl. Narrow – zauzima malo bajtova).
+       Stalno rastući (engl. Ever-increasing), npr., pomoću IDENTITY stupca, čime se sprječava fragmentacija.
+
+2.2.2. Negrupirani Indeks (Non-Clustered Index)
+
+   Definicija: Negrupirani indeks je zasebna struktura koja sadrži ključeve indeksa i pokazivače na stvarne retke podataka (ili na grupirani ključ ako postoji).
+   Ograničenje: Tablica može imati do 999 negrupiranih indeksa.
+   Struktura: Na razini listova B-stabla negrupiranog indeksa nalaze se:
+    1.  Vrijednosti ključeva definiranih u indeksu.
+    2.  Pokazivač na redak podataka. Ako tablica ima grupirani indeks, pokazivač je zapravo kopija ključa tog grupiranog indeksa. Ako tablica nema grupirani indeks (tzv. Heap tablica), pokazivač je Row Identifier (RID) koji upućuje na fizičku lokaciju.
+   Pristup: Nakon Index Seek-a na negrupiranom indeksu, ako upit traži i stupce koji nisu dio indeksa, SQL Server mora izvesti dodatnu operaciju dohvata (tzv. Bookmark Lookup ili Key Lookup) do samog retka podataka.
+
+2.2.3. Specijalizirane Vrste Indeksa
+
+Osim temeljnih, postoje i naprednije vrste:
+
+   Jedinstveni Indeks (Unique Index): Enforsira jedinstvenost vrijednosti u stupcu ili kombinaciji stupaca. Može biti grupiran ili negrupiran.
+   Indeks s Uključenim Stupcima (Indexes with Included Columns): Negrupirani indeksi mogu uključivati nestandardne stupce (engl. Non-key columns) u razinu listova. Ti stupci nisu dio ključa, ali su dostupni bez dodatnog Key Lookup-a. Ovo omogućuje stvaranje Pokrivajućeg Indeksa (engl. Covering Index).
+   Pokrivajući Indeks (Covering Index): Indeks koji sadrži SVE stupce potrebne za izvršavanje upita (i u ključu i u Included Columns). Ovakav indeks eliminira potrebu za Key Lookup-om, dramatično poboljšavajući performanse čitanja.
+   Filtrirani Indeks (Filtered Index): Negrupirani indeks koji uključuje samo podskup redaka definiran klauzulom `WHERE`. Smanjuje veličinu indeksa, troškove održavanja i poboljšava statistiku.
+   Columnstore Indeksi (Columnstore Indexes): Posebno dizajnirani za skladišta podataka (engl. Data Warehousing). Podaci se pohranjuju stupac po stupac, optimizirano za analitičke upite (OLAP) s masivnim agregacijama i skeniranjem velikih setova podataka.
+
+3. Optimizacija Upita Pomoću Indeksa
+
+Optimizacija izvedbe upita je iterativan proces gdje indeksi igraju glavnu ulogu.
+
+3.1. Optimizator Upita i Plan Izvršenja
+
+Optimizator upita (engl. Query Optimizer) je komponenta SQL Servera koja za svaki upit pokušava pronaći najučinkovitiji plan izvršenja (engl. Execution Plan). On analizira statistike indeksa i procjenjuje trošak različitih opcija pristupa podacima. Indeksi su ključni alat koji optimizator koristi.
+
+Ključni pojmovi koje Optimizator koristi:
+
+   Index Seek: Vrlo efikasna operacija koja koristi B-stablo za brzo lociranje malog broja redaka.
+   Index Scan: Operacija čitanja svih redaka u listovima indeksa. Brža od Table Scan-a, ali i dalje skenira previše podataka ako je indeks velik.
+   Table Scan: Najsporija operacija pretraživanja gdje se čita cijela tablica, stranicu po stranicu.
+   Key Lookup / Bookmark Lookup: Operacija kojom se nakon Index Seek-a na negrupiranom indeksu pristupa grupiranom ključu (ili RID-u) kako bi se dohvatio ostatak stupaca retka. Znak je da indeks nije pokrivajući.
+
+3.2. Strategija Dizajna Indeksa (Best Practices)
+
+Pravilan dizajn indeksa zahtijeva balansiranje performansi čitanja i pisanja.
+
+3.2.1. Odabir Grupiranog Indeksa
+
+Kriteriji za dobar grupirani ključ:
+
+1.  Jedinstvenost: Trebao bi biti jedinstven ili gotovo jedinstven.
+2.  Uskopasnost: Budući da se ključ grupiranog indeksa kopira u sve negrupirane indekse (kao pokazivač), uskopasan ključ smanjuje veličinu svih ostalih indeksa.
+3.  Nepromjenjivost: Promjena ključa uzrokuje skupu operaciju premještanja cijelog retka.
+4.  Uzlazni/Sekvencijalni Rast (Ever-increasing): Korištenje stupca s automatski rastućom vrijednošću (npr., IDENTITY) osigurava da se novi podaci dodaju na kraj tablice, čime se sprječava fragmentacija i raspršivanje na disku.
+
+3.2.2. Dizajn Negrupiranog Indeksa
+
+   Pravilo 1: Odabir Stupaca Ključa: Uključite stupce koji se koriste u klauzulama `WHERE`, `JOIN`, `ORDER BY` i `GROUP BY`. Redoslijed stupaca u ključu je kritičan (vidi: Indeks Seeker).
+   Pravilo 2: Pokrivajući Indeksi: Koristite Included Columns kako biste eliminirali skupe Key Lookup operacije. Uključite sve stupce koje upit traži, a nisu dio ključa, u razinu listova.
+   Pravilo 3: Selektivnost: Indeksi su najkorisniji kada je stupac selektivan (ima mnogo različitih vrijednosti). Indeks na stupcu koji ima samo dvije vrijednosti (npr. 'DA'/'NE') vjerojatno neće biti učinkovit.
+   Pravilo 4: Ograničite Broj Indeksa: Iako je moguće imati mnogo indeksa, svaki indeks donosi troškove prilikom operacija `INSERT`, `UPDATE` i `DELETE`, jer se sve indeksne strukture moraju ažurirati. Optimalan broj se kreće između 3 i 5 negrupiranih indeksa po tablici.
+
+3.3. SARGability i Upotreba Indeksa
+
+Ključno za optimizaciju je osigurati da su upiti SARGable (engl. Search Argument Able). To znači da se upit mora pisati tako da Optimizator može koristiti indeks za Index Seek.
+
+   Loša Praksa (Ne SARGable): Primjena funkcija na indeksiranom stupcu sprječava korištenje Index Seek-a i forsira Index Scan.
+
+    ```sql
+    -- Nije SARGable - funkcija na indeksiranom stupcu
+    SELECT  FROM Narudzbe WHERE YEAR(DatumNarudzbe) = 2024;
+    ```
+
+   Dobra Praksa (SARGable): Premještanje funkcije s ključa indeksa.
+
+    ```sql
+    -- SARGable - koristi se Index Seek
+    SELECT  FROM Narudzbe WHERE DatumNarudzbe >= '2024-01-01' AND DatumNarudzbe < '2025-01-01';
+    ```
+
+4. Održavanje i Monitoring Indeksa
+
+Indeksi su dinamične strukture koje se s vremenom, uslijed učestalih operacija upisa, fragmentiraju.
+
+4.1. Fragmentacija Indeksa
+
+Fragmentacija nastaje kada logički redoslijed listova indeksa (povezanih dvostrukom vezanom listom) više ne odgovara fizičkom redoslijedu na disku. To prisiljava SQL Server da koristi više operacija I/O za čitanje podataka, smanjujući performanse.
+
+   Vanjska Fragmentacija (External Fragmentation): Razina listova B-stabla je neuređena na disku.
+   Unutarnja Fragmentacija (Internal Fragmentation): Uzrokovana je niskom gustoćom popunjenosti stranica (engl. Page Density). Previše praznog prostora na stranicama troši disk i memoriju bez koristi.
+
+4.1.1. Upravljanje Fragmentacijom
+
+SQL Server nudi dvije glavne operacije za rješavanje fragmentacije:
+
+   REORGANIZE (Online, Brže): Logički reorganizira razinu listova. Korisno za umjerenu fragmentaciju (obično $5\% < \text{fragmentacija} < 30\%$).
+   REBUILD (Offline/Online, Sporije): Gradi potpuno novi indeks. Potrebno za visoku fragmentaciju (obično $\text{fragmentacija} > 30\%$).
+
+4.2. Korištenje Sistemskih Pogleda i Alata
+
+Za optimizaciju i održavanje ključno je pratiti kako se indeksi koriste.
+
+   Missing Index DMVs: SQL Server automatski prati upite za koje bi indeks mogao pomoći. Dinamički upravljački pogledi (DMVs) poput `sys.dm_db_missing_index_details` i `sys.dm_db_missing_index_groups` pružaju preporuke za kreiranje nedostajućih indeksa.
+   Index Usage Statistics: DMV-i kao što je `sys.dm_db_index_usage_stats` daju uvid u to koliko se često indeks koristi (traženja, skeniranja) i koliko se često ažurira. Indeks s puno ažuriranja, a malo čitanja, je kandidat za brisanje.
+   Query Store (SQL Server 2016+): Alat koji bilježi povijest planova izvršenja, performansi i statistika korištenja resursa, omogućavajući bržu identifikaciju i popravak regresija performansi.
+
+5. Troškovi Indeksiranja i Održavanje Balansa
+
+Indeksi su dvosjekli mač – značajno ubrzavaju operacije čitanja (`SELECT`), ali istovremeno usporavaju operacije modifikacije podataka (`INSERT`, `UPDATE`, `DELETE`).
+
+5.1. Analiza Troškova
+
+   Povećanje Disk Prostora: Svaki negrupirani indeks je dodatna kopija podataka ključa i pokazivača.
+   Trošak Pisanja: Prilikom svakog upisa, ažuriranja ili brisanja retka, SQL Server mora ažurirati svaku indeksnu strukturu koja se odnosi na taj redak, što troši CPU i povećava I/O.
+   Povećanje Memorijskog Opterećenja: Indeksi se učitavaju u Buffer Pool memorije. Više indeksa znači manje dostupne memorije za stvarne podatke ili druge procese.
+
+5.2. Strategija Balansa (OLTP vs. OLAP)
+
+Optimizacija mora biti prilagođena radnom opterećenju sustava:
+
+   OLTP Sustavi (Online Transaction Processing): Ovi sustavi imaju veliku količinu kratkih transakcija (često pisanje i čitanje). Fokus je na manjem broju, ali visoko ciljanih indeksa (uz Covering Indexes) kako bi se smanjio trošak pisanja. Grupirani indeks je ključan.
+   OLAP Sustavi (Online Analytical Processing): Ovi sustavi imaju veliki volumen čitanja i agregacije (skeniranje velikih setova podataka). Trošak pisanja je manji problem. Ovdje se koriste široki, Columnstore, i filtrirani indeksi, često namjenski za specifične izvještaje.
+
+6. Zaključak
+
+Pravilno indeksiranje je, uz dizajn sheme, najvažniji faktor u postizanju optimalnih performansi u Microsoft SQL Serveru. Grupirani i negrupirani indeksi, zajedno sa svojim naprednim varijacijama, pružaju Optimizatoru upita potrebne alate za brzi pristup podacima.
+
+Međutim, indeksiranje nije proces "postavi i zaboravi". Potrebno je kontinuirano praćenje, analiza planova izvršenja i upravljanje fragmentacijom. Previše loše dizajniranih indeksa može usporiti sustav više nego da ih uopće nema. Ključ uspjeha leži u promišljenom dizajnu grupiranog ključa, stvaranju pokrivajućih indeksa za najvažnije upite te redovnom uklanjanju neiskorištenih i održavanju fragmentiranih indeksa.
+
+U kontekstu rastuće baze podataka, stalna optimizacija indeksa i upita prelazi iz opcije u nužnost, osiguravajući da sustav ostane brz, skalabilan i efikasan za poslovne potrebe.

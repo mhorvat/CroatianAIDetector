@@ -1,0 +1,52 @@
+Uvod
+Umjetna inteligencija (UI), ili Artificial Intelligence (AI), predstavlja jedno od najznačajnijih i najbrže rastućih polja računarstva i znanosti u 21. stoljeću. Definira se kao sposobnost stroja da oponaša ljudske kognitivne funkcije kao što su učenje, zaključivanje, rješavanje problema, prepoznavanje uzoraka i donošenje odluka. Od svojih teorijskih začetaka sredinom 20. stoljeća do trenutne ere dubokog učenja (deep learning) i generativnih modela, UI je prošla dug put transformirajući se iz akademske discipline u pokretačku snagu globalne ekonomije i društvenog razvoja.
+Ovaj seminar ima za cilj pružiti detaljan pregled ključnih aspekata umjetne inteligencije. Započet ćemo definiranjem različitih tipova UI, a zatim ćemo se fokusirati na njezine temeljne arhitekture, prvenstveno strojno učenje i duboko učenje, koje čine okosnicu suvremenih dostignuća. Poseban naglasak bit će stavljen na najnovije inovacije u obradi prirodnog jezika (NLP) i računalnom vidu. Konačno, raspravit ćemo o širokom spektru primjena UI te neizbježnim etičkim dilemama i regulatornim izazovima koji prate njezin eksponencijalni razvoj, s ciljem razumijevanja njezine uloge u oblikovanju naše budućnosti.
+Razrada
+1. Definicija i Klasifikacija Umjetne Inteligencije
+Koncept UI se tradicionalno dijeli prema sposobnostima i funkcionalnosti:
+1.1. Tipovi UI Prema Sposobnosti (Opseg)
+Uska ili Slaba UI (Narrow/Weak AI): Dizajnirana i trenirana za obavljanje specifičnog, ograničenog zadatka. Većina UI koja se danas koristi, uključujući sustave za prepoznavanje lica, virtualne asistente i preporučiteljske sustave, spada u ovu kategoriju. Karakterizira ih visoka učinkovitost u uskom području.
+Opća ili Jaka UI (General/Strong AI): Hipotetska UI koja bi posjedovala sposobnost razumijevanja, učenja i primjene inteligencije na bilo koji zadatak koji bi mogao obaviti čovjek. Razvoj Opće UI je dugoročni cilj istraživanja, ali još uvijek nije postignut.
+Superinteligencija (Superintelligence): Koncept UI koja bi znatno nadmašila ljudsku inteligenciju u svakom pogledu, uključujući kreativnost, rješavanje problema i socijalne vještine. Predmet je spekulacija i etičkih rasprava o egzistencijalnom riziku.
+1.2. Tipovi UI Prema Funkcionalnosti
+Klasifikacija prema A. Kaplanu dijeli UI na reaktivne strojeve (koji samo reagiraju na trenutno stanje, bez memorije), ograničenu memoriju (koriste prošlo iskustvo, npr. autonomna vozila), Teoriju Uma (hipotetski, razumiju tuđe misli i osjećaje) i samosvjesnost (također hipotetski, imaju svijest o sebi).
+2. Temelji: Strojno Učenje i Duboko Učenje
+Moderna UI neodvojiva je od koncepta strojnog učenja (Machine Learning - ML), metode kojom strojevi uče iz podataka, a da nisu eksplicitno programirani.
+2.1. Metode Strojnog Učenja
+Strojno učenje obuhvaća tri glavna paradigmatska pristupa:
+Nadzirano Učenje (Supervised Learning): Model se trenira na označenim podacima, gdje je svaki ulaz povezan s ispravnim izlazom (npr. slike mačaka označene kao "mačka"). Koristi se za zadatke klasifikacije (predviđanje diskretne oznake) i regresije (predviđanje kontinuirane vrijednosti).
+Nenadzirano Učenje (Unsupervised Learning): Model radi s neoznačenim podacima, pokušavajući pronaći skrivene uzorke i strukture unutar skupa podataka. Koristi se za klasteriranje (grupisanje sličnih podataka) i smanjenje dimenzionalnosti.
+Potkrijepljeno Učenje (Reinforcement Learning - RL): Agent uči kroz interakciju s okolinom, primajući nagrade ili kazne za svoje akcije. Cilj je maksimizirati kumulativnu nagradu. Ova metoda je ključna za obuku UI za igranje igara (poput AlphaGo) i za autonomne sustave.
+2.2. Duboko Učenje i Neuralne Mreže
+Duboko učenje (Deep Learning - DL) je podskup strojnog učenja koji koristi umjetne neuronske mreže (ANN) s više slojeva (otuda "duboko"). Svaki sloj mreže obrađuje i transformira podatke, omogućujući sustavu da nauči apstraktne i hijerarhijske reprezentacije značajki direktno iz sirovih podataka. Ključni tipovi dubokih neuralnih mreža uključuju:
+Konvolucijske Neuralne Mreže (CNN): Izvrsne za obradu podataka s mrežnom strukturom, prvenstveno slika i video zapisa. Koriste konvolucijske filtre za ekstrakciju značajki.
+Rekurentne Neuralne Mreže (RNN) i LSTMi: Dizajnirane za obradu sekvencijalnih podataka (tekst, govor, vremenske serije). Imaju "petlje" koje im omogućuju pamćenje informacija iz prethodnih koraka.
+Transformatori (Transformers): Najnovija i najutjecajnija arhitektura, koja se temelji na mehanizmu pažnje (attention mechanism). Oni su revolucionirali NLP, omogućujući stvaranje iznimno sposobnih velikih jezičnih modela (LLM) poput GPT serije.
+3. Ključne Primjene i Tehnološke Prekretnice
+Suvremena UI ostvaruje najveći utjecaj u nekoliko ključnih domena:
+3.1. Obrada Prirodnog Jezika (NLP)
+NLP omogućuje strojevima razumijevanje, interpretaciju i generiranje ljudskog jezika. Tehnologija temeljena na transformatorima stvorila je generativnu UI, koja može:
+Generiranje teksta: Pisanje eseja, članaka, kodova i kreativne proze.
+Strojno prevođenje: Postizanje gotovo ljudske kvalitete prijevoda.
+Analiza sentimenta: Prepoznavanje stava ili emocije u tekstu.
+Generativni pre-trenirani transformatori (GPT) i slični modeli u osnovi su alati koji mijenjaju način na koji komuniciramo s računalima i stvaramo digitalni sadržaj.
+3.2. Računalni Vid (Computer Vision)
+Računalni vid omogućuje strojevima da "vide" i interpretiraju vizualni svijet. Ključne primjene uključuju:
+Prepoznavanje objekata i klasifikacija slika: Identifikacija sadržaja slika s visokom točnošću.
+Autonomna vozila: Obrada vizualnih podataka za navigaciju i detekciju prepreka.
+Medicinska dijagnostika: Analiza rendgenskih snimaka, CT-ova i MRI-a za pomoć pri dijagnozi bolesti, često s većom brzinom i točnošću od ljudi.
+3.3. Ostale Domene
+UI je duboko integrirana u: financije (algoritamsko trgovanje, detekcija prevara), zdravstvo (razvoj lijekova, personalizirana medicina), proizvodnju (optimizacija opskrbnih lanaca, prediktivno održavanje) i obrazovanje (prilagodljivo učenje).
+4. Etičke, Pravne i Društvene Implikacije
+Eksponencijalni rast sposobnosti UI postavlja niz izazova koji zahtijevaju pažljivo razmatranje i regulatornu intervenciju.
+4.1. Pristranost i Diskriminacija (Bias)
+UI sustavi uče iz podataka na kojima su trenirani. Ako su ti podaci pristrani, UI će reproducirati i često pojačati postojeće društvene predrasude (rasne, spolne, socioekonomske). To može dovesti do diskriminirajućih ishoda u kreditiranju, zapošljavanju ili policijskom radu. Rješavanje problema pristranosti algoritama i osiguravanje pravednosti (fairness) postalo je ključno područje istraživanja i regulacije.
+4.2. Transparentnost i Objašnjivost (Explainability)
+Mnogi kompleksni DL modeli funkcioniraju kao "crne kutije", gdje je ljudima teško razumjeti kako su došli do određenog zaključka. U domenama visokog rizika (medicina, pravo, vojska), potrebna je objašnjiva UI (Explainable AI - XAI) kako bi se osigurala odgovornost, povjerenje i mogućnost revizije odluka.
+4.3. Automatizacija i Tržište Rada
+Široka primjena UI neizbježno će dovesti do automatizacije rutinskih i kognitivnih poslova. Iako UI stvara nove poslove i povećava produktivnost, postoji stvarna zabrinutost zbog dislociranja radne snage, zahtijevajući značajne reforme u obrazovanju, prekvalifikaciji i socijalnoj politici.
+4.4. Kontrola i Sigurnost
+Rizik od zloupotrebe snažne generativne UI, stvaranje dubokih lažnjaka (deepfakes), širenje dezinformacija i autonomno oružje predstavljaju ozbiljne prijetnje. Potrebni su globalni napori za uspostavljanje sigurnosti UI (AI safety) i etičkih okvira (kao što je EU Akt o umjetnoj inteligenciji) kako bi se osiguralo da razvoj UI služi čovječanstvu.
+Zaključak
+Umjetna inteligencija, vođena probojima u strojnom i dubokom učenju, redefinira sposobnosti strojeva i fundamentalno mijenja globalnu tehnološku i društvenu panoramu. Od CNN-ova koji vide do transformatora koji razumiju i generiraju jezik, UI je postala neizostavan dio moderne infrastrukture, obećavajući rješenja za neke od najsloženijih problema čovječanstva, od klimatskih promjena do dijagnostike bolesti.
+Ipak, put prema Općoj UI i superinteligenciji opterećen je dubokim etičkim i društvenim izazovima. Pitanja o pristranosti, transparentnosti i utjecaju na radnu snagu zahtijevaju proaktivno djelovanje zakonodavaca, istraživača i industrije. Budućnost UI ne leži samo u njezinoj tehničkoj moći, već i u našoj sposobnosti da je odgovorno vodimo, osiguravajući da njezine koristi budu široko raspoređene i da rizici budu minimizirani. Razumijevanje arhitekture i ograničenja UI ključno je za svakoga tko želi sudjelovati u oblikovanju ere u kojoj je simbioza ljudske i umjetne inteligencije postala stvarnost.

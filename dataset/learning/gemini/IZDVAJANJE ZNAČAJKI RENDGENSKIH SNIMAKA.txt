@@ -1,0 +1,127 @@
+1. Uvod
+Digitalna obrada slike postala je neizostavan dio moderne medicine, a posebno radiologije. Rendgenske snimke, kao temeljni alat u dijagnostici širokog spektra bolesti i ozljeda, generiraju veliku količinu vizualnih podataka. Iz tih podataka, ljudsko oko radiologa mora izdvojiti relevantne informacije, odnosno značajke slike, koje ukazuju na patološke promjene. Međutim, ljudski faktor nosi sa sobom mogućnost subjektivnosti, umora i pogreške. Upravo zato, automatsko izdvajanje značajki iz rendgenskih snimaka, potpomognuto računalnim algoritmima, postaje ključno za poboljšanje točnosti, brzine i dosljednosti dijagnostičkog procesa.
+
+Cilj ovog seminarskog rada je detaljno istražiti metodologije i tehnike koje se koriste za izdvajanje značajki rendgenskih snimaka. Fokus će biti na razumijevanju različitih vrsta značajki – od onih baziranih na intenzitetu i teksturi, do geometrijskih i transformacijskih značajki. Rad će također naglasiti ulogu softverskih alata, posebno MATLAB-a, kao dominantne platforme za implementaciju i eksperimentalnu provjeru ovih algoritama. Konačno, istražit će se kako se izdvojene značajke koriste u računalno potpomognutoj dijagnostici (CAD), čime se direktno utječe na kvalitetu zdravstvene skrbi. Razumijevanje ovih tehnika esencijalno je za daljnji razvoj inteligentnih sustava u medicinskoj radiologiji.
+
+2. Digitalna rendgenska slika i njezine značajke
+Rendgenska snimka, nakon akvizicije, pretvara se u digitalni format – diskretnu matricu piksela, gdje svaki piksel nosi informaciju o intenzitetu, odnosno atenuaciji X-zraka kroz tkivo. Značajke slike su kvantitativne mjere izvedene iz ovih digitalnih podataka koje opisuju određeni aspekt slike ili njezinih dijelova, a ključne su za razlikovanje normalnog od patološkog tkiva.
+
+2.1. Prethodna obrada slike
+Prije samog izdvajanja značajki, slika se mora obraditi kako bi se smanjio šum, poboljšao kontrast i standardizirala dinamika. Uobičajene tehnike uključuju filtriranje (npr. medijan filtri za uklanjanje "soli i papra" šuma, Gaussovi filtri za zaglađivanje) i poboljšanje kontrasta (npr. izjednačavanje histograma). U MATLAB-u se ova faza izvodi pomoću funkcija iz Image Processing Toolboxa, čime se osigurava visoka kvaliteta ulaznih podataka za sljedeće faze.
+
+2.2. Vrste značajki rendgenskih snimaka
+Značajke se generalno mogu podijeliti u četiri glavne kategorije:
+
+2.2.1. Značajke bazirane na intenzitetu (Histogramske značajke)
+Ove značajke opisuju distribuciju vrijednosti piksela u slici ili regiji od interesa (ROI). One su jednostavne za računanje i često vrlo deskriptivne.
+
+Srednja vrijednost i standardna devijacija: Srednja vrijednost intenziteta daje informaciju o prosječnoj svjetlini, dok standardna devijacija mjeri raspršenost, odnosno kontrast unutar regije.
+
+Kosa asimetrija (Skewness) i spljoštenost (Kurtosis): Kosa asimetrija opisuje simetriju distribucije intenziteta, što može biti korisno za detekciju asimetričnih lezija. Spljoštenost mjeri "šiljatost" distribucije.
+
+2.2.2. Značajke bazirane na teksturi
+Tekstura se odnosi na ponavljajući ili neponavljajući obrazac varijacije intenziteta piksela. U medicini, tekstura često reflektira mikrostrukturu tkiva (npr. trabekularnu strukturu kosti ili konzistentnost tumora).
+
+Matrica sivih razina supojavljivanja (GLCM - Gray Level Co-occurrence Matrix): GLCM je najčešće korištena metoda za kvantifikaciju teksture. Ona mjeri koliko često se određeni parovi intenziteta piksela pojavljuju u određenom prostornom odnosu (udaljenost i kut). Iz GLCM-a se izvode značajke poput kontrasta, homogenosti, energije i korelacije. Visoki kontrast, niska homogenost i niska korelacija mogu ukazivati na patološku neorganiziranost tkiva.
+
+Lokalni binarni uzorci (LBP - Local Binary Patterns): LBP-ovi opisuju finu teksturu slike uspoređujući intenzitet središnjeg piksela s njegovim susjedima. Oni su invariantni na monotonu promjenu intenziteta, što ih čini robusnima na varijacije u osvjetljenju rendgenske snimke.
+
+2.2.3. Geometrijske i morfološke značajke
+Ove značajke opisuju oblik, veličinu i orijentaciju objekta od interesa. Ključne su za kvantifikaciju lezija.
+
+Površina i opseg: Izravne mjere veličine patologije.
+
+Kompaktnost i ekscentričnost: Kompaktnost mjeri koliko je oblik sličan krugu, dok ekscentričnost opisuje izduženost objekta. Nepravilni i nazubljeni rubovi, mjereni niskom kompaktnošću, često su pokazatelji maligniteta.
+
+Houghova transformacija: Koristi se za detekciju pravilnih geometrijskih oblika poput linija i krugova (npr. za automatsko lociranje kontura srca ili rebara).
+
+2.2.4. Transformacijske značajke
+Ove značajke dobivaju se primjenom različitih matematičkih transformacija na sliku.
+
+Fourierova transformacija (FT): Konvertira sliku iz prostorne domene u frekvencijsku domenu, gdje se mogu analizirati frekvencije teksture. Niske frekvencije predstavljaju opći izgled, a visoke frekvencije sitne detalje i oštre rubove.
+
+Valićna transformacija (Wavelet Transform): Pruža lokaliziranu informaciju i u prostornoj i u frekvencijskoj domeni. Koristi se za multirezolucijsku analizu, gdje se različite skale (rezolucije) slike analiziraju neovisno, što je iznimno korisno za detekciju promjena na različitim razinama detalja.
+
+3. Implementacija algoritama u softverskom okruženju MATLAB
+MATLAB (Matrix Laboratory) je zbog svoje moćne podrške za rad s matricama, ugrađenih funkcija za digitalnu obradu signala i slike, te dostupnosti specijaliziranih alata (Toolboxa), postao de facto standard u akademskom istraživanju i brzom prototipiranju algoritama za medicinsku dijagnostiku.
+
+3.1. Prednosti korištenja MATLAB-a
+Jednostavnost i brzina razvoja: Visokorazinski programski jezik omogućuje brzu implementaciju složenih matematičkih algoritama uz minimalan kod.
+
+Image Processing Toolbox: Obuhvaća sve ključne funkcije za rad s medicinskim slikama, uključujući uvoz/izvoz DICOM formata, filtriranje, segmentaciju i izdvajanje osnovnih značajki.
+
+Vectorizacija: MATLAB je optimiziran za matrične operacije, što rezultira bržim izvršavanjem algoritama na velikim slikama u usporedbi s konvencionalnim petljama u nekim drugim jezicima.
+
+Vizualizacija: Jednostavno kreiranje grafičkih prikaza i sučelja (GUI) za vizualizaciju rezultata izdvajanja značajki.
+
+3.2. Praktični primjeri izdvajanja značajki u MATLAB-u
+3.2.1. Segmentacija regije od interesa (ROI)
+Prije izdvajanja značajki, potrebno je izolirati patološku regiju. To se često radi tehnikama praga (thresholding) ili složenijim tehnikama rasta regije. U MATLAB-u, funkcije poput imbinarize ili interaktivni alati za ručnu segmentaciju koriste se za definiranje ROI-a.
+
+Matlab
+
+% Primjer segmentacije u MATLAB-u (pseudo-kod)
+img = imread('rendgen_pluca.png');
+thresh = graythresh(img); % Otsuova metoda za automatski prag
+binary_mask = imbinarize(img, thresh);
+ROI = img .* uint8(binary_mask);
+3.2.2. Izdvajanje GLCM teksturnih značajki
+Izdvajanje GLCM značajki je klasičan primjer kompleksne obrade u MATLAB-u.
+
+Matlab
+
+% Primjer GLCM ekstrakcije u MATLAB-u (pseudo-kod)
+glcms = graycomatrix(ROI, 'Offset', [0 1; -1 1; -1 0; -1 -1]);
+stats = graycoprops(glcms, {'contrast', 'energy', 'homogeneity'});
+kontrast_avg = mean(stats.Contrast);
+energija_avg = mean(stats.Energy);
+Ove se kvantitativne vrijednosti (npr. kontrast_avg) zatim koriste kao ulaz u klasifikacijski algoritam.
+
+3.2.3. Izdvajanje morfoloških značajki
+Nakon segmentacije, morfološke značajke se izravno izračunavaju na binarnoj maski ROI-a.
+
+Matlab
+
+% Primjer morfoloških značajki (pseudo-kod)
+props = regionprops(binary_mask, 'Area', 'Perimeter', 'Eccentricity');
+povrsina = [props.Area];
+kompaktnost = (4 * pi * povrsina) ./ ([props.Perimeter].^2);
+Vrijednost kompaktnosti daje objektivnu mjeru nepravilnosti lezije.
+
+4. Primjena izdvajanja značajki u računalno potpomognutoj dijagnostici
+Izdvojene kvantitativne značajke same po sebi nemaju dijagnostičku vrijednost dok se ne upotrijebe u klasifikacijskom modelu koji ih interpretira. Proces računalno potpomognute dijagnostike (CAD) koristi ove značajke za automatsko razlikovanje patoloških stanja.
+
+4.1. Faze CAD sustava
+CAD sustav obično slijedi tri glavne faze:
+
+Predobrada i segmentacija: (Opisano u poglavlju 2.1.)
+
+Izdvajanje značajki: (Opisano u poglavlju 2.2.)
+
+Klasifikacija: Korištenje algoritama strojnog učenja za donošenje odluke na temelju izdvojenih značajki.
+
+4.2. Primjeri dijagnostičkih primjena
+4.2.1. Detekcija kalcifikacija kod mamografije
+Kalcifikacije, posebno mikrokalcifikacije, mogu biti rani znak malignog tumora dojke. Korištenjem teksturnih i geometrijskih značajki visoke rezolucije, sustav može automatski detektirati klastere mikrokalcifikacija koji bi ljudskom oku mogli promaknuti. Značajke poput kontrastnog koeficijenta iz GLCM-a su ključne za kvantifikaciju gustoće i rasporeda ovih sitnih promjena.
+
+4.2.2. Dijagnostika nodula na plućnim rendgenskim snimkama
+Pojedinačni plućni noduli (SPN) mogu biti benigni ili maligni. Automatsko izdvajanje značajki oblika (okruglost, lobulacija, spekulacija) i teksture (homogenost, glatkoća) nodula ključno je za razlikovanje. Maligni noduli često pokazuju niske vrijednosti kompaktnosti i visoke vrijednosti varijance teksture na rubovima, što je idealno za kvantifikaciju pomoću LBP-a.
+
+4.2.3. Procjena osteoporoze
+Rendgenske snimke šake ili kralježnice koriste se za procjenu gustoće kostiju. U ovom slučaju, cilj je kvantificirati trabekularnu strukturu kosti. Teksturne značajke poput energije i korelacije iz GLCM-a, izračunate na ROI-u kosti, direktno koreliraju s gustoćom i organizacijom trabekula, pružajući objektivnu mjeru snage kosti.
+
+4.3. Odabir i redukcija značajki
+Nakon što se izračuna veliki broj značajki (tzv. vektor značajki), nije nužno da su sve informativne. Neke mogu biti redundantne ili čak smanjivati točnost modela.
+
+Odabir značajki (Feature Selection): Metode poput sekvencijalnog odabira (Sequential Forward/Backward Selection) ili filter metode (npr. ANOVA, t-test) koriste se za odabir optimalnog podskupa značajki koje maksimiziraju dijagnostičku točnost.
+
+Redukcija dimenzionalnosti (Dimensionality Reduction): Tehnike poput Analize glavnih komponenata (PCA - Principal Component Analysis) transformiraju originalni set značajki u manji set nekoreliranih varijabli (glavnih komponenata) koje zadržavaju većinu originalne informativnosti.
+
+Ovaj korak je ključan za optimizaciju CAD sustava, čineći ga bržim i robusnijim na nove, neviđene podatke.
+
+5. Zaključak
+Izdvajanje značajki rendgenskih snimaka predstavlja temeljnu etapu u razvoju inteligentnih sustava za medicinsku dijagnostiku. Kroz analizu intenziteta, teksture, oblika i transformacijskih koeficijenata, moguće je kvantitativno opisati složene vizualne informacije prisutne na snimci. Ove kvantitativne mjere – značajke slike – omogućuju objektivno razlikovanje normalnog od patološkog tkiva.
+
+MATLAB se potvrdio kao iznimno vrijedan alat u ovom području, nudeći moćno i fleksibilno okruženje za brzo prototipiranje i validaciju složenih algoritama za segmentaciju i izdvajanje značajki. Korištenjem alata kao što je Image Processing Toolbox, istraživači mogu efikasno implementirati napredne metode poput GLCM-a i valićne transformacije.
+
+Konačni cilj, poboljšanje dijagnostike, ostvaruje se integracijom izdvojenih značajki u CAD sustave temeljene na strojnom učenju. Ovakvi sustavi ne služe zamjeni radiologa, već kao "drugo mišljenje" koje povećava senzitivnost i specifičnost dijagnostičkog procesa, smanjujući varijabilnost i rizik od ljudske pogreške. Daljnja istraživanja usmjerena su na duboko učenje (Deep Learning) koje kombinira izdvajanje značajki i klasifikaciju u jednom koraku, ali tradicionalne metode temeljene na ručno izdvojenim značajkama i dalje zadržavaju svoju važnost, posebno u scenarijima s ograničenim skupom podataka. Budućnost rendgenske dijagnostike nedvojbeno leži u sinergiji stručnosti radiologa i preciznosti računalno potpomognute analize.

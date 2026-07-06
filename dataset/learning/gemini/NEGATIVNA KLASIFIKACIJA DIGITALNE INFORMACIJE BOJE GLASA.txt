@@ -1,0 +1,91 @@
+1. Uvod
+
+Digitalna obrada govora, kao interdisciplinarno područje koje spaja informatiku, akustiku i lingvistiku, predstavlja temelj za brojne suvremene tehnologije – od sustava za prepoznavanje govornika, preko sustava za sintezu glasa, pa sve do medicinske dijagnostike temeljene na analizi glasa [1]. Jezik i sadržaj poruke, iako ključni, čine samo dio bogatstva informacije koju glas nosi. Drugi, jednako važan aspekt, jest boja glasa (eng. timbre ili voice quality), koja služi kao jedinstveni biometrijski identifikator osobe. Boja glasa je zbroj akustičkih karakteristika nastalih jedinstvenim oblikom vokalnog trakta, načinom vibracije glasnica i osobitostima artikulacije [2].
+
+Fokus ovog seminara je na negativnoj klasifikaciji digitalne informacije boje glasa, što podrazumijeva proces automatskog odbijanja ili identificiranja da ulazna informacija (uzorak glasa) ne pripada određenoj poznatoj klasi ili skupu, ili da je čak namjerno modificirana ili lažirana (eng. spoofing). Konvencionalni sustavi za prepoznavanje govornika obično se usredotočuju na pozitivnu klasifikaciju – potvrđivanje identiteta. Negativna klasifikacija je, međutim, ključna za robusnost i sigurnost sustava, osobito u kontekstu provjere autentičnosti govornika (eng. speaker verification) i detekcije lažnog predstavljanja. Cilj je detaljno istražiti metodologije digitalne obrade signala i klasifikacijske tehnike koje se koriste za prepoznavanje anomalija i nepoznatih uzoraka u domeni boje glasa.
+
+---
+
+2. Digitalna Informacija Boje Glasa
+
+Govorni signal je, u svojoj fizičkoj formi, analogni akustički val. Za potrebe računalne obrade, taj val mora biti pretvoren u digitalni format, što se postiže uzorkovanjem i kvantizacijom [3]. Digitalna informacija boje glasa se stoga dobiva iz digitalnog uzorka govora ekstrakcijom skupa numeričkih parametara ili značajki koje učinkovito predstavljaju perceptivne karakteristike boje glasa. Ovaj proces ekstrakcije značajki ključan je jer omogućuje rad s manjom, reprezentativnijom količinom podataka.
+
+2.1. Ekstrakcija Karakteristične Značajke Boje Glasa
+
+Izvlačenje relevantnih značajki iz sirovog govornog signala temelj je za svaki sustav analize glasa. Za boju glasa, značajke se mogu podijeliti u tri glavne kategorije:
+
+1.  Spektralne značajke: Ovi parametri opisuju raspodjelu energije govornog signala po frekvencijama. Najčešće i najvažnije značajke su Mel-Frekvencijski Kepstralni Koeficijenti (MFCC) [4]. Oni oponašaju nelinearni način na koji ljudsko uho percipira frekvencije i pokazali su se vrlo uspješnima u prepoznavanju govornika. Ostale spektralne značajke uključuju Linearne Prediktivne Koeficijente (LPC), Kepstralne Koeficijente Izvedene iz LPC-a (LPCC) i spektralni centroid.
+2.  Prozodijske značajke: Iako primarno vezane uz ritam i intonaciju (sadržaj), osnovna frekvencija glasa ($F_0$) i njene derivacije (jitera i šimera) često se smatraju dijelom biometrijske informacije boje glasa jer su inherentne fiziologiji govornika [5].
+3.  Vremenske značajke: Relativno rjeđe, ali mogu uključivati kratkotrajnu energiju signala, trajanje bezvučnih segmenata i slično.
+
+Kombinacija ovih značajki tvori vektorski opis koji se naziva vektor značajki ili akustički otisak boje glasa.
+
+2.2. Uloga Walsh-Hadamard-ovih koeficijenata
+
+Pored konvencionalnih značajki, u kontekstu analize i kompresije signala, koriste se i transformacijske metode. Walsh-Hadamard-ovi koeficijenti (WHC) [6] dobivaju se primjenom Walsh-Hadamardove transformacije (WHT), koja je ortogonalna, nelinearna transformacija. Za razliku od Fourierove transformacije koja koristi sinusoide, WHT koristi Walsh-ove funkcije (pravokutne valove s vrijednostima $+1$ i $-1$).
+
+Glavne prednosti korištenja WHC-a u obradi govora uključuju:
+
+ Računska učinkovitost: WHT ne zahtijeva množenje, već samo zbrajanje i oduzimanje, što ju čini izuzetno brzom za implementaciju u digitalnim sustavima [7].
+ Energetska kompresija: Slično kao i kod diskretne kosinusne transformacije (DCT), energija signala često je koncentrirana u malom broju niskofrekventnih koeficijenata u Walsh-Hadamardovom spektru.
+ Robusnost: U nekim istraživanjima pokazalo se da WHC mogu biti robusniji na buku i smetnje u usporedbi s MFCC-ima, što je relevantno za negativnu klasifikaciju [8].
+
+U kontekstu negativne klasifikacije digitalne informacije boje glasa, WHC se mogu koristiti kao dodatne, diskriminativne značajke. Budući da WHC predstavljaju signal u drugačijoj domeni (ne-sinusoidnoj), oni mogu uhvatiti aspekte boje glasa koji su zanemareni spektralnom analizom temeljenom na Fourieru. Na primjer, anomalija u govoru nastala izobličenjem ili sintezom mogla bi proizvesti neuobičajene vrijednosti u višem redu Walsh-Hadamardovih koeficijenata, što bi se koristilo za detekciju anomalije.
+
+---
+
+3. Negativna Klasifikacija i Detekcija Anomalija
+
+Negativna klasifikacija u analizi boje glasa rješava dva ključna problema: detekciju upada i verifikaciju nepoznatog korisnika.
+
+3.1. Detekcija Lažnog Predstavljanja (Spoofing Detection)
+
+U ovom scenariju, negativna klasifikacija je najvažnija za prepoznavanje pokušaja obmane sustava provjere autentičnosti. Lažno predstavljanje može se postići na nekoliko načina [9]:
+
+ Ponavljanje snimke (Replay Attack): Snimka originalnog govornika reproducira se sustavu.
+ Sinus govora (Voice Synthesis): Glas se generira računalno, koristeći tehnologije poput Text-to-Speech (TTS) ili Generative Adversarial Networks (GANs).
+ Konverzija glasa (Voice Conversion - VC): Glas jednog govornika se modificira tako da zvuči kao glas drugog govornika.
+
+Sustavi negativne klasifikacije ovdje se nazivaju detektorima napada (eng. anti-spoofing systems). Karakteristična značajka boje glasa koja razlikuje pravi glas od lažnog često se nalazi u mikro-varijacijama i šumu, koji su prisutni u prirodnom govoru, ali ih je teško rekreirati u sintetičkim sustavima. Primjerice, kod reprodukcije snimke, sustav traži akustičke artefakte snimanja/reprodukcije, kao što su akustična povratna sprega, odjeci ili artefakti kompresije [10]. Za detekciju sintetičkog govora, traže se abnormalni obrasci u $F_0$ i spektru, uključujući prekomjernu glatkoću spektra koja ne postoji u prirodnom govoru.
+
+3.2. Metodologije Negativne Klasifikacije
+
+Negativna klasifikacija često koristi metode detekcije anomalija (eng. novelty detection ili outlier detection), pri čemu se glas autentičnog korisnika smatra "normalnom" klasom, a svi ostali uzorci anomalijama.
+
+ Modeliranje Jedne Klase (One-Class Classification): U ovom pristupu trenira se model (npr. One-Class Support Vector Machine - OCSVM [11] ili Gaussian Mixture Model - GMM [12]) samo na uzorcima glasa poznate/autentične osobe. Ulazni uzorak se tada klasificira kao anomalija (negativna klasa) ako odstupa izvan definiranog praga vjerojatnosti ili granice odlučivanja modela.
+ Kvantifikacija Nepodudarnosti (Mismatched Score Quantification): Kod sustava verifikacije govornika, model se trenira na podatcima autentičnog govornika. Za negativnu klasifikaciju, izračunava se vjerojatnost da ulazni uzorak pripada ovom modelu. Ako je ta vjerojatnost izuzetno niska (ispod postavljenog praga), uzorak se odbija kao lažni pokušaj ili nepoznati govornik [13].
+ Modeliranje Pozadinske Klase (Background/Universal Background Model - UBM): UBM je generički model treniran na velikom broju govornika. Kod negativne klasifikacije, uspoređuje se podudarnost ulaznog uzorka s modelom autentičnog govornika i s UBM-om. Ako je podudarnost s autentičnim modelom niska, a s UBM-om visoka (što implicira da je uzorak prirodan, ali pripada drugom govorniku), uzorak se odbija kao nepoznati upad [14].
+
+---
+
+4. Primjena Walsh-Hadamard-ovih Koeficijenata u Negativnoj Klasifikaciji
+
+Kao što je spomenuto, Walsh-Hadamard-ovi koeficijenti (WHC) nude jedinstvenu perspektivu na digitalnu informaciju boje glasa. Njihova upotreba u negativnoj klasifikaciji može značajno poboljšati detekciju suptilnih, umjetno uvedenih anomalija.
+
+Kada se glas digitalno sintetizira ili konvertira (VC), često dolazi do promjena u faznim odnosima i u strukturi šuma signala. Istraživanja pokazuju da su transformacije koje koriste Walsh-Hadamard-ove funkcije posebno osjetljive na takve nagle promjene i blok-artefakte koji se mogu pojaviti u sintetiziranom govoru, dok su MFCC-i, fokusirani na spektralnu ovojnicu, manje osjetljivi na fazne promjene [15].
+
+Metodološki prijedlog:
+
+1.  Ekstrakcija Hibridnih Značajki: Umjesto korištenja samo MFCC-a, koristi se prošireni vektor značajki koji uključuje i podskup normaliziranih Walsh-Hadamard-ovih koeficijenata [16]. Cilj je iskoristiti komplementarnost: MFCC za robustno predstavljanje spektralne ovojnice, a WHC za osjetljivost na diskretne signale i mikro-strukturu.
+2.  Dimenzionalna Redukcija: Zbog povećanog broja značajki, može se koristiti Principal Component Analysis (PCA) za optimizaciju vektora.
+3.  Modeliranje Anomalija: Trenira se OCSVM ili GMM model na autentičnim uzorcima. Ključno je postaviti rigorozan prag odbijanja koji je u stanju prepoznati uzorke koji se nalaze blizu granice autentične klase, ali pokazuju neobičan omjer MFCC/WHC značajki.
+
+Iskorištavanjem WHC-a u detekciji spoofinga, pokazalo se da se može postići veća Diskriminativnost između prirodnih varijacija u boji glasa i artefakata digitalne manipulacije. Konkretno, istraživanja su ukazala na to da koeficijenti visokog reda u WHC-u, koji odgovaraju visokofrekventnim ili brzim promjenama, mogu biti izuzetno visoki u sintetičkim uzorcima u usporedbi s prirodnim govorom, čak i kada spektralna ovojnica (MFCC) izgleda uvjerljivo [17].
+
+---
+
+5. Izazovi i Budući Pravci
+
+Unatoč napretku, negativna klasifikacija digitalne informacije boje glasa suočava se s ozbiljnim izazovima.
+
+1.  Varijabilnost Intrakategorije: Boja glasa autentičnog govornika može se prirodno mijenjati ovisno o emocijama, zdravstvenom stanju, uvjetima snimanja i starosti. Sustav mora biti dovoljno tolerantan na ove prirodne promjene (izbjegavajući False Rejection Rate – FRR) dok istodobno mora biti dovoljno strog za detekciju lažnih uzoraka (izbjegavajući False Acceptance Rate – FAR) [18].
+2.  Sve Sofisticiraniji Napadi: Razvoj deep learning tehnika za sintezu glasa (npr. Tacotron 2, WaveNet) rezultira sve realističnijim lažnim glasovima koje je ljudskom uhu, a i strojnom sustavu, sve teže razlikovati od autentičnog govora [19]. Potrebne su nove, robusnije karakteristične značajke boje glasa.
+3.  Ograničena Dostupnost Podataka: Za treniranje robustnih sustava detekcije lažnog predstavljanja potrebne su velike baze podataka koje sadrže i autentične uzorke i različite tipove lažnih uzoraka. Skupovi podataka poput ASVspoof pomažu, ali je uvijek izazov obuhvatiti nove, nepoznate metode napada [20].
+
+Budući pravci istraživanja uključuju dublje istraživanje Walsh-Hadamard-ovih koeficijenata i srodnih transformacija (npr. Haar transformacije) kao komplementarnih značajki, primjenu dubokog učenja (npr. Autoenkoderi za rekonstrukciju ili Konvolucijske Neuronske Mreže za spektralnu analizu slike) za učenje diskriminativnih značajki izravno iz sirovog govornog signala te razvoj multimodalnih sustava koji koriste i akustičke i druge značajke (npr. detekcija lica ili pokreta usana) za verifikaciju.
+
+---
+
+6. Zaključak
+
+Negativna klasifikacija digitalne informacije boje glasa esencijalna je komponenta sigurnosti i pouzdanosti sustava za provjeru autentičnosti govornika. Ona je odmak od jednostavne pozitivne identifikacije i usmjerava se na robustnu detekciju anomalija i lažnog predstavljanja. Proces započinje ekstrakcijom karakteristične značajke boje glasa, gdje standardne spektralne značajke poput MFCC-a predstavljaju temelj. Međutim, integracija komplementarnih alata kao što su Walsh-Hadamard-ovi koeficijenti nudi put prema razvoju sustava koji su osjetljiviji na suptilne digitalne artefakte lažiranog govora. Kontinuirana borba protiv sve sofisticiranijih napada sintezom glasa zahtijeva daljnji rad na razvoju novih, diskriminativnih značajki i adaptivnih klasifikacijskih modela.

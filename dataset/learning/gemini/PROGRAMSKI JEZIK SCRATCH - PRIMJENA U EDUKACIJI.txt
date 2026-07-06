@@ -1,0 +1,72 @@
+1. Uvod
+
+Programiranje je u 21. stoljeću postalo temeljna vještina, jednako važna kao čitanje, pisanje i matematika. Uvođenje programerske pismenosti u rane faze obrazovanja ključno je za razvoj logičkog razmišljanja i sposobnosti rješavanja problema. U tom kontekstu, vizualno programiranje se nameće kao idealan most između apstraktnih koncepata i dječjeg, zaigranog uma.
+
+Ovaj seminarski rad bavi se analizom i primjenom programskog jezika Scratch u obrazovnom sustavu, primarno u okruženju osnovnih škola. Scratch, razvijen na MIT-u, omogućuje korisnicima slaganje programskih blokova poput LEGO kockica, čineći učenje sintakse nepotrebnim na početku, a fokus prebacuje na algoritme i strukturu. Cilj je istražiti metodološki pristup primjene Scratcha, dokazati njegovu ulogu u poticanju kreativnosti, razvoju apstraktnog mišljenja te kritički analizirati njegove prednosti i nedostatke kao edukativnog alata.
+
+Ključne riječi: Scratch, vizualno programiranje, edukacija djece, logičko razmišljanje, algoritmi, osnovne škole, kreativnost, razvoj apstraktnog mišljenja.
+
+2. Programski jezik Scratch: Nastanak i Osnovne Značajke
+
+2.1. Povijesni kontekst i MIT Media Lab
+
+Scratch je nastao 2007. godine u Lifelong Kindergarten grupi na MIT Media Labu, pod vodstvom Mitchella Resnicka. Inspiracija je proizašla iz ideje da učenje programiranja treba biti slično učenju sviranja instrumenta ili slikanja – kreativno, društveno i zabavno. Resnickov pristup temelji se na pedagogijskoj teoriji konstruktivizma Seymoura Paperta (učitelj i mentor), koji je zagovarao učenje kroz izradu ('learning by making'). Papert je to nazvao "kontekstualnim učenjem" (Constructionism).
+
+2.2. Arhitektura vizualnog programiranja
+
+Scratch koristi "blok-bazirano" ili vizualno programiranje (Block-based programming). Umjesto pisanja tekstualnog koda, korisnici povlače i spajaju grafičke blokove koji predstavljaju naredbe (npr., `pomakni se za 10 koraka`, `ako je dodirnut rub, odbij se`). Blokovi su kategorizirani po funkciji (kretanje, izgled, zvuk, događaji, kontrola, senzori, operatori, varijable). Ovaj pristup dramatično smanjuje frustraciju početnika zbog sintaksičkih grešaka.
+
+2.3. Osnovni elementi Scratch okruženja
+
+Radno okruženje Scratcha uključuje:
+ Pozornica (Stage): Mjesto gdje se odvija projekt (igra, animacija).
+ Likovi (Sprites): Objekti kojima se upravlja. Svaki lik ima svoj skup blokova.
+ Skripte (Scripts Area): Područje gdje se slažu blokovi za programiranje likova.
+
+3. Metodološki pristup primjene Scratcha u nastavi
+
+3.1. Razvoj logičkog i apstraktnog mišljenja
+
+Primarni cilj primjene Scratcha je razvijanje logičkog razmišljanja. Učenici moraju dekomponirati složene zadatke u niz manjih, rješivih koraka (dekompozicija). Kroz osmišljavanje složenijih projekata, gdje se koriste petlje, uvjetne naredbe (`ako...onda...`), i varijable, učenici prirodno usvajaju temeljne koncepte algoritama i apstraktnog mišljenja.
+
+> Konkretan primjer: Izrada igre "Uhvati mačku". Učenik mora osmisliti algoritam:
+> 1.  Mačka čeka pritisak tipke. (Događaj)
+> 2.  Mačka se pomiče u smjeru pokazivača miša. (Petlja, kretanje)
+> 3.  Ako igrač uhvati mačku (lik se dodirne), zbroj se povećava za 1. (Uvjetna naredba, varijabla)
+
+3.2. Poticanje kreativnosti i međupredmetne korelacije
+
+Scratch služi kao platforma za kreativnost. Umjesto da pasivno konzumiraju softver, učenici postaju aktivni stvaratelji. Kroz izradu animiranih priča, interaktivnih čestitki, glazbenih instrumenata ili simulacija fizikalnih pojava, Scratch olakšava međupredmetnu korelaciju.
+
+ Matematika: Prikaz geometrijskih likova (korištenje koordinatnog sustava).
+ Likovna kultura: Crtanje i dizajn likova i pozadina.
+ Hrvatski jezik: Izrada interaktivnih priča i stripova.
+
+3.3. Pristup "Spiralnog učenja"
+
+Programiranje u Scratchu prati Papertov konstruktivistički pristup i Brunerov koncept spiralnog učenja. Učenici kreću od jednostavnih projekata (npr. animacija hodajućeg lika), a zatim se vraćaju istim konceptima (petlje, uvjeti), ali u složenijem kontekstu (npr. izrada labirinta ili složene simulacije). Svaki povratak produbljuje razumijevanje i razvoj apstraktnog mišljenja.
+
+4. Kritička analiza: Prednosti i Nedostaci
+
+4.1. Prednosti vizualnog programiranja u edukaciji
+
+| Prednost | Objašnjenje |
+| :--- | :--- |
+| Nizak prag ulaska | Vizualni blokovi uklanjaju potrebu za učenjem složene sintakse, omogućujući djeci da se odmah fokusiraju na logiku. |
+| Trenutna povratna informacija | Promjene koda rezultiraju trenutačnim učinkom na pozornici, što olakšava uočavanje i ispravljanje grešaka (debugging). |
+| Razvoj kreativnosti | Snažan naglasak na multimediji (zvuk, grafika) potiče učenike na izražavanje. |
+| Zajednica i dijeljenje | Globalna Scratch zajednica omogućuje učenicima dijeljenje projekata, učenje iz tuđeg koda i suradnju. |
+
+4.2. Nedostaci i izazovi u primjeni
+
+Unatoč brojnim prednostima, postoje i izazovi.
+
+ Prijelaz na tekstualno programiranje: Neki kritičari tvrde da vizualni kod može stvoriti "udobnu zonu" iz koje je teško prijeći na tekstualne jezike poput Pythona ili Jave, gdje je sintaksa ključna.
+ Hardverska ograničenja: U slabije opremljenim osnovnim školama izvođenje složenih projekata može biti usporeno.
+ Složenost naprednih algoritama: Iako je Scratch odličan za učenje temeljnih algoritama, za vrlo složene matematičke operacije i strukture podataka može biti ograničavajući.
+
+5. Zaključak
+
+Programski jezik Scratch pokazao se kao izuzetno vrijedan pedagoški alat za uvođenje digitalne pismenosti i logičkog razmišljanja u osnovne škole. Njegov pristup vizualnog programiranja, utemeljen na konstruktivističkim pedagogijskim teorijama (Papert, Resnick), omogućuje djeci da kroz igru i kreativnost usvoje temeljne koncepte algoritama i apstraktnog mišljenja.
+
+Kritička analiza potvrđuje da je Scratch idealan za rane faze učenja. Iako postavlja izazove pri prelasku na tekstualne jezike, njegova moć u poticanju rješavanja problema, dekompozicije i suradnje čini ga nezamjenjivim elementom suvremenog kurikuluma. Uspješna primjena zahtijeva od nastavnika ne samo poznavanje alata, već i usvajanje konstruktivističke metodologije koja učenika stavlja u ulogu aktivnog stvaratelja.

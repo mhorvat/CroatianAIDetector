@@ -1,0 +1,102 @@
+Uvod
+
+Robotika, interdisciplinarna znanstvena grana koja objedinjuje mehaniku, elektroniku i računarstvo, transformirala je industriju i svakodnevni život. Pojam robot potječe iz češke riječi robota (što znači težak, prisilan rad), a popularizirao ga je 1920. godine pisac Karel Čapek u svojoj drami R.U.R. Suvremena robotika, definirana kao proučavanje, dizajn, konstrukcija, operacija i primjena robota, svoj je pravi uspon doživjela tek sredinom 20. stoljeća. Središnji element svakog robota, bilo da se radi o manipulacijskoj ruci u tvornici ili autonomnom vozilu na Marsu, jest njegova sposobnost kretanja – tema analize kinematike.
+
+Robotiku danas primarno dijelimo na tri glavne grane: industrijsku robotiku, koja se bavi manipulacijskim sustavima za automatizaciju proizvodnje; servisnu robotiku, koja obuhvaća robote za osobnu ili profesionalnu upotrebu izvan proizvodnih pogona (npr. kirurški roboti, roboti za čišćenje); i mobilnu robotiku, koja se fokusira na sposobnost autonomnog kretanja u složenim okruženjima. Ključna razlika između robota i drugih strojeva leži u njihovoj fleksibilnosti i programabilnosti, a primarna funkcija koja to omogućuje je upravo kretanje. Analiza kretanja, odnosno kinematika, temeljna je znanost koja opisuje gibanje tijela bez razmatranja sila koje to gibanje uzrokuju. U robotici, ona pruža matematički okvir za razumijevanje kako se zglobne koordinate prevode u prostorni položaj i orijentaciju vrha robota, tzv. efektora.
+
+Osnovni pojmovi kinematike
+
+Kinematika robota bavi se matematičkim opisom položaja i orijentacije robota u prostoru, kao i opisom brzina i ubrzanja njegovih dijelova. To je ključno za programiranje i upravljanje kretanjem. Postoje dva temeljna problema u kinematike: izravna i inverzna kinematika.
+
+Izravna (Direktna) Kinematika
+
+Izravna kinematika (engl. forward kinematics) je proces određivanja položaja i orijentacije krajnjeg efektora robota u odnosu na bazni koordinatni sustav, kada su poznate vrijednosti svih zglobnih koordinata (kutovi obrtanja ili pomaci po duljini). Za serijski spojene manipulacijske robote (robotske ruke), ovaj se problem rješava sekvencijalnom primjenom transformacija koordinatnih sustava. Svaki zglob i segment (karika) između zglobova modelira se kao homogena transformacijska matrica. Ako imamo $N$ zglobova, konačna transformacija $T$ koja opisuje položaj efektora u baznom sustavu definira se kao umnožak pojedinih transformacija:
+
+$$T = T_{0}^{1}(q_1) T_{1}^{2}(q_2) \cdots T_{N-1}^{N}(q_N)$$
+
+gdje je $T_{i-1}^{i}$ homogena transformacijska matrica od karike $i-1$ do karike $i$, ovisna o zglobnoj varijabli $q_i$.
+
+Za sustavnu primjenu ovog pristupa koristi se Denavit-Hartenberg (D-H) konvencija. D-H konvencija nudi standardizirani pristup definiranju koordinatnih sustava na karikama robota, koristeći samo četiri D-H parametra ($\alpha_i$, $a_i$, $d_i$, $\theta_i$) za definiranje transformacije između susjednih karika. Ova standardizacija je kritična za modeliranje složenih robotskih struktura.
+
+Inverzna (Obrnuta) Kinematika
+
+Inverzna kinematika (engl. inverse kinematics), za razliku od izravne, rješava problem određivanja zglobnih koordinata (npr. $q_1, q_2, \dots, q_N$) koje su potrebne da bi krajnji efektor zauzeo željeni položaj i orijentaciju u radnom prostoru. Ovo je daleko kompleksniji problem od izravne kinematike, jer često ne postoji jedinstveno rješenje. Za robote s redundantnim stupnjevima slobode (više DoF nego što je potrebno za definiranje položaja u 3D prostoru) postoji beskonačno mnogo rješenja, dok za neke konfiguracije možda ne postoji ni jedno realno rješenje (ako je željena točka izvan radnog prostora robota).
+
+Rješavanje inverzne kinematike može biti analitičko (zatvoreni oblik), što je brže i preciznije, ali je moguće samo za jednostavne konfiguracije s manje od šest stupnjeva slobode ili za one gdje se osi susjednih zglobova sijeku. Za općenite ili složene strukture, primjenjuju se numeričke (iterativne) metode, koje su fleksibilnije, ali sporije i zahtijevaju početnu pretpostavku, te ne garantiraju pronalazak globalno optimalnog rješenja.
+
+Klasifikacija i Mehanizmi Kretanja Industrijskih (Manipulacijskih) Robota
+
+Industrijski roboti su primarno stacionarni i fokusirani na manipulaciju objektima unutar definiranog radnog prostora. Njihova struktura se sastoji od karika povezanih različitim tipovima zglobova.
+
+Tipovi Zglobova i Stupnjevi Slobode
+
+Dva osnovna tipa zglobova u robotici su:
+1.  Revolutni (rotacijski) zglob ($R$): Omogućuje relativnu rotaciju dviju karika oko jedne osi (jedan stupanj slobode rotacije, $\theta$).
+2.  Prizmatični (linearni) zglob ($P$): Omogućuje relativni translacijski pomak dviju karika duž jedne osi (jedan stupanj slobode translacije, $d$).
+
+Broj stupnjeva slobode (DoF) definira neovisan broj parametara potrebnih za potpun opis položaja i orijentacije robota. Za manipulacijske zadatke, često je potrebno šest DoF: tri za poziciju ($x, y, z$) i tri za orijentaciju (npr. Eulerovi kutovi $\phi, \psi, \theta$).
+
+Osnovne Konfiguracije Manipulatora
+
+Konfiguracija robota određena je redoslijedom i tipom zglobova, što izravno utječe na radni prostor, brzinu i nosivost robota. Glavne konfiguracije uključuju:
+
+ Kartezijanski (LLL): Sastoji se od tri prizmatična zgloba. Radni prostor je u obliku kocke ili kvadra. Izravna i inverzna kinematika su izuzetno jednostavne. Primjenjuje se kod CNC strojeva, 3D pisača i montažnih robota.
+ Cilindrični (RPL): Sastoji se od jednog revolutnog zgloba (rotacija oko $z$ osi) i dva prizmatična zgloba (jedan vertikalno, jedan radijalno). Radni prostor je cilindričan. Omogućuje veći doseg od kartezijanskog, koristan za rukovanje strojevima.
+ Sferni (RRL): Sastoji se od dva revolutna zgloba i jednog prizmatičnog zgloba. Omogućuje manipulaciju po sferi.
+ Zglobni (Artikulacijski / RRR): Najčešća konfiguracija, oponaša ljudsku ruku (rame, lakat, zglob). Sastoji se od tri ili više revolutnih zglobova. Ima najveći i najfleksibilniji radni prostor. Koristi se za zavarivanje, bojanje i složenu montažu.
+ SCARA (Selective Compliance Assembly Robot Arm / RRP): Dva revolutna zgloba u horizontalnoj ravnini i jedan prizmatični vertikalni zglob. Izvrstan za brze zadatke "umetni i postavi" (pick-and-place), jer nudi visoku krutost u vertikalnom smjeru (compliant u horizontalnom).
+
+Osim serijskih manipulatora, sve se više koriste paralelni roboti (npr. Delta robot ili Stewart platforma) gdje se efektor oslanja na više neovisnih lanaca zglobova. Ovi roboti nude izuzetnu krutost, veliku brzinu i nosivost, ali imaju ograničen radni prostor i izuzetno složenu inverznu kinematiku.
+
+Klasifikacija i Mehanizmi Kretanja Mobilnih Robota
+
+Mobilni roboti su dizajnirani za navigaciju i kretanje u dinamičnom okruženju. Njihova kinematika mora uzeti u obzir interakciju s tlom, terenom ili tekućinom.
+
+Roboti s Kotačima (Wheeled Mobile Robots - WMR)
+
+WMR su najčešći oblik mobilnih robota. Njihovo kretanje je jednostavno za modeliranje na ravnim površinama, ali se kinematika komplicira zbog neholonomnih ograničenja. Neholonomni sustav je onaj čiji se smjer i brzina ne mogu mijenjati proizvoljno u svim smjerovima istovremeno, obično zbog ograničenja kotrljanja bez proklizavanja (npr. automobil se ne može bočno kretati).
+
+Konfiguracije kotača:
+ Standardni (Fixed Standard Wheel): Kotači fiksirani na osi, slični automobilu. Izazivaju neholonomno ograničenje: robot ne može translirati bočno.
+ Kaster kotači (Caster Wheels): Pasivni kotači, slobodno se orijentiraju u smjeru kretanja (poput kolica za kupovinu). Koriste se za potporu.
+ Omnidirekcijski kotači (Omni-directional Wheels): Sastoje se od niza manjih, pasivnih valjaka oko opsega glavnog kotača. Omogućuju robotu kretanje u bilo kojem smjeru (uključujući bočno) u svakom trenutku. Robot s ovim kotačima je holonomni (broj kontroliranih DoF jednak je broju stupnjeva slobode u konfiguracijskom prostoru).
+ Mehanum kotači (Mecanum Wheels): Slični omnidirekcijskim, ali su valjci postavljeni pod kutom od $45^\circ$ u odnosu na os rotacije. Također omogućuju holonomno kretanje.
+
+Najčešća kinematička shema je diferencijalni pogon (Differential Drive). Robot ima dva pogonska kotača na zajedničkoj osi i jedan kaster kotač za potporu. Kretanje se kontrolira neovisnom kontrolom brzine svakog pogonskog kotača. Ako su brzine jednake ($v_L = v_R$), robot se kreće ravno. Ako su suprotne ($v_L = -v_R$), robot se rotira oko svoje centralne osi. Ako su nejednake, kreće se po luku. Ovo je neholonomni sustav.
+
+Roboti s Gusjenicama (Tracked Robots)
+
+Roboti s gusjenicama (ili tračnicama) koriste se prvenstveno na neravnom ili mekanom terenu (pijesak, snijeg) gdje kotači imaju poteškoća s vučom ili trakcijom. Gusjenice osiguravaju veću kontaktnu površinu s tlom, smanjujući pritisak po jedinici površine, te pružaju izvrsnu stabilnost. Kinematičko modeliranje je kompleksnije jer uključuje proklizavanje i trenje s podlogom, što se često zanemaruje u osnovnom kinematičkom modelu WMR-a. Ovi roboti se često koriste u vojnim, istraživačkim i spasilačkim misijama.
+
+Roboti s Nogama (Legged Robots)
+
+Roboti s nogama (dvonožni, četveronožni, šesteronožni, itd.) su bioinspirirani mehanizmi koji oponašaju pokret bioloških organizama. Iako kinematički najkompleksniji, nude najveću fleksibilnost za kretanje po vrlo neravnom terenu (prelaženje prepreka, penjanje stepenicama) gdje se roboti s kotačima ili gusjenicama zaglave.
+
+Ključni kinematički i dinamički koncepti su:
+
+ Statička stabilnost: Robot je statički stabilan ako projekcija njegovog težišta (CoM) uvijek pada unutar poligona potpore (površina definirana kontaktnim točkama nogu s tlom). Ovo je tipično za robote s više od tri noge u kontaktu s tlom (npr. hodanje insekata).
+ Dinamička stabilnost: Za dvonožne robote ili brže pokrete, mora se koristiti dinamička stabilnost. Koncept Točke nultog momenta (Zero Moment Point - ZMP) je ključan. ZMP je točka na tlu gdje je rezultanta svih vanjskih sila i inercijalnih sila jednaka nuli. Da bi robot bio stabilan, ZMP mora ostati unutar granica oslonca. Kontrola dvonožnog kretanja (hodanje, trčanje) zahtijeva složeno rješavanje dinamičkih jednadžbi i neprekidno planiranje ZMP trajektorije.
+
+Leteći i Plivajući Roboti (UAV, AUV)
+
+Kinematika zračnih (UAV - Unmanned Aerial Vehicles) i podvodnih (AUV - Autonomous Underwater Vehicles) robota modelira se u 3D prostoru i često su to holonomni sustavi (mogu se kretati i orijentirati u svim osima). Kretanje je kontrolirano propulzijskim sustavima (propelerima, krilima) i podložno je aerodinamičkim ili hidrodinamičkim silama, što zahtijeva integraciju s dinamikom (za razliku od čiste kinematike).
+
+Upravljanje Kretanjem i Navigacija
+
+Da bi robot bio autonoman, mora moći planirati putanju i locirati se u prostoru.
+
+Lokacija i Mapiranje
+
+SLAM (Simultaneous Localization and Mapping) je temeljni problem mobilne robotike. Robot istovremeno stvara kartu nepoznatog okruženja i prati vlastitu lokaciju unutar te karte.
+ Lokalizacija: Određivanje gdje se robot nalazi. Koriste se senzori poput LIDAR-a (za precizno mjerenje udaljenosti i stvaranje 3D oblaka točaka), kamera (za vizualnu odometriju), enkodera (za mjerenje rotacije kotača) i IMU-a (Inercijalna mjerna jedinica, koja mjeri akceleraciju i kutnu brzinu). Kombinacija ovih podataka, često pomoću Kalmanovog filtra ili čestičnog filtra, daje pouzdanu procjenu položaja.
+ Mapiranje: Stvaranje modela okruženja (grid-mapa, topoloških mapa, ili 3D modela).
+
+Planiranje putanje i Kontrola
+
+Globalno planiranje putanje određuje optimalni put od početne do ciljne točke na temelju poznate mape (npr. korištenjem A algoritma). Lokalno planiranje (izbjegavanje prepreka) je dinamičan proces koji koristi podatke senzora u stvarnom vremenu kako bi se robot izbjegao prepreke koje se nisu nalazile na originalnoj mapi.
+
+Kontrola kretanja osigurava da robot slijedi planiranu putanju. Najčešći kontroler je PID (Proporcionalno-Integralno-Derivacijski) kontroler, koji generira kontrolni signal (npr. moment motora) na temelju pogreške između željenog i stvarnog stanja. Napredniji sustavi koriste prediktivne modele (Model Predictive Control) ili adaptivne kontrole za bolje snalaženje u dinamičnim situacijama.
+
+Zaključak
+
+Kinematika je matematička okosnica robotike, neophodna za razumijevanje i kontrolu kretanja, neovisno o tome je li riječ o preciznom zavarivanju industrijskog manipulatora ili autonomnoj navigaciji mobilnog sustava. Industrijski roboti koriste dobro definirane kinematičke lance (R, P) za precizno pozicioniranje, dok mobilni roboti rješavaju izazove neholonomije, stabilnosti (ZMP) i složenosti terena. Budući razvoj robotike nezaustavljivo vodi prema većoj autonomiji i snalaženju u nepoznatim okruženjima, što zahtijeva sve složenije kinematičke i dinematičke modele, te sve sofisticiranije algoritme planiranja putanje i SLAM-a.

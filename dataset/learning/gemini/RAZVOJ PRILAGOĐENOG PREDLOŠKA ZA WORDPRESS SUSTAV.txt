@@ -1,0 +1,163 @@
+Uvod
+
+U današnjem digitalnom okruženju, prisutnost na internetu ključna je za uspjeh organizacija, tvrtki i pojedinaca. Web stranice služe kao digitalni izlog, pružajući informacije, olakšavajući komunikaciju i podržavajući poslovanje. U tom kontekstu, sustavi za upravljanje sadržajem (CMS - Content Management System) postali su temelj za efikasno stvaranje, uređivanje i održavanje web sadržaja. Među brojnim CMS rješenjima, WordPress se ističe kao dominantan igrač, pokrećući više od trećine svih web stranica na globalnoj razini. Njegova popularnost proizlazi iz kombinacije fleksibilnosti, velike zajednice, jednostavnosti korištenja i bogatstva dostupnih dodataka (plugins) i predložaka (themes).
+
+Standardni predlošci nude brza i često estetski privlačna rješenja, no često dolaze s ograničenjima u pogledu personalizacije, funkcionalnosti i optimizacije performansi. Da bi se postigao jedinstveni vizualni identitet, implementirale specifične funkcionalnosti i osiguralo user-friendly sučelje prilagođeno točnim potrebama klijenta ili projekta, neophodan je razvoj prilagođenog predloška. Prilagođeni predložak omogućuje potpunu kontrolu nad dizajnom i strukturom web stranice, oslobađajući je od suvišnog koda i značajki koje su svojstvene generičkim predlošcima.
+
+Ovaj seminar istražit će proces razvoja prilagođenog predloška za WordPress sustav, s naglaskom na web tehnologije koje se koriste, arhitektonsku strukturu predloška, najbolje prakse u kodiranju i implementaciju funkcionalnosti koje podržavaju efikasno upravljanje sadržajem i visoku razinu personalizacije. Ključne riječi koje definiraju fokus ovog rada su: WordPress, CMS, prilagođeni predložak, web stranica, upravljanje sadržajem, personalizacija, web tehnologije i user-friendly sučelje. Cilj je predstaviti sveobuhvatni vodič za izradu predloška koji je ne samo vizualno privlačan, već i robustan, siguran i optimiziran za današnje zahtjeve digitalnog tržišta.
+
+-----
+
+1. Arhitektura WordPress Predloška i Potrebne Web Tehnologije
+
+WordPress predložak funkcionira kao prezentacijski sloj CMS-a, određujući kako se podaci iz baze podataka prikazuju krajnjem korisniku. Za razumijevanje i uspješan razvoj prilagođenog predloška ključno je poznavanje njegove arhitekture i seta web tehnologija koje se koriste.
+
+1.1. Osnovna Struktura Predloška
+
+Svaki WordPress predložak mora sadržavati minimalno dvije datoteke: `style.css` i `index.php`.
+
+   `style.css`: Sadrži stilove za vizualni prikaz te obavezne komentare na početku koji WordPressu govore o imenu predloška, autoru, verziji i licenca.
+   `index.php`: Glavni predložak koji se koristi za prikaz sadržaja kada specifičniji predložak nije dostupan.
+
+Međutim, funkcionalan prilagođeni predložak obično sadrži složeniju strukturu datoteka baziranu na hijerarhiji predložaka (Template Hierarchy), koja uključuje:
+
+   `header.php`: Definira gornji dio stranice, uključujući HTML oznake `<head>` i početak `<body>`, navigaciju i logotip.
+   `footer.php`: Definira donji dio stranice, uključujući podnožje, zatvaranje HTML oznaka i skripte.
+   `functions.php`: Srce prilagođenog predloška. Ova datoteka služi za registraciju stilova i skripti, definiranje prilagođenih tipova objava (Custom Post Types), dodavanje podrške za WordPress značajke (theme support), te definiranje svih specifičnih funkcionalnosti.
+   `sidebar.php`: Sadrži strukturu bočne trake i widget područja.
+   Predlošci za specifične prikaze: `single.php` (za pojedinačnu objavu), `page.php` (za statične stranice), `archive.php` (za arhive kategorijatagova) i `front-page.php` (za početnu stranicu).
+
+1.2. Korištene Web Tehnologije
+
+Razvoj prilagođenog predloška zahtijeva sinergiju tri ključne tehnologije klijentske strane, uz implementaciju PHP-a i WordPress funkcija:
+
+   HTML5 (HyperText Markup Language 5): Pruža semantičku strukturu sadržaja web stranice. Ključan je za ispravnu pristupačnost i SEO (optimizaciju za tražilice).
+   CSS3 (Cascading Style Sheets 3): Određuje vizualni izgled (boje, fontove, raspored). Moderni razvoj uključuje korištenje preprocesora poput SASS-a ili LESS-a za bolju organizaciju stilova te implementaciju CSS frameworka (npr. Bootstrap, Tailwind CSS) radi ubrzanja razvoja i osiguravanja prilagodljivog dizajna (responsive design).
+   JavaScript (JS): Dodaje interaktivnost i dinamičke elemente (animacije, validacija forme, AJAX funkcionalnosti). Korištenje jQuery biblioteke je još uvijek često, no sve više se prelazi na Vanilla JS ili moderne frameworke poput ReactaVuea (iako njihova integracija zahtijeva složeniji build proces).
+   PHP (Hypertext Preprocessor): Osnovni programski jezik na kojem je izgrađen WordPress. PHP se koristi za dohvaćanje podataka iz baze, implementaciju WordPress Loop-a za prikaz sadržaja i definiranje svih serverskih funkcionalnosti kroz `functions.php`.
+
+Kroz integraciju ovih tehnologija, prilagođeni predložak omogućuje potpunu personalizaciju i specifičan dizajn, zaobilazeći ograničenja generičkih rješenja.
+
+-----
+
+2. Razvojno Okruženje i Inicijalna Postavka
+
+Prije samog kodiranja, neophodno je postaviti stabilno razvojno okruženje i provesti inicijalne korake koji osiguravaju efikasan tijek rada.
+
+2.1. Postavljanje Lokalnog Razvojnog Okruženja
+
+Preporučuje se rad u lokalnom razvojnom okruženju kako bi se izbjegli problemi na produkcijskom poslužitelju. Alati poput XAMPP, MAMP, Local by Flywheel ili Laragon omogućuju jednostavno postavljanje web servera (ApacheNginx), baze podataka (MySQL) i PHP okruženja. Rad s virtualnim poslužiteljima (npr. Vagrant, Docker) nudi još veću kontrolu nad okruženjem i bolju replikaciju produkcijskog servera.
+
+2.2. Implementacija Početnog Predloška (Starter Theme)
+
+Razvoj od potpune nule je moguć, ali je često neefikasan. Korištenje "početnog predloška" (Starter Theme) poput Underscores (_s) ili Sage pruža čistu strukturu datoteka i već implementirane mnoge osnovne funkcije (kao što su registracija navigacija, sidebara, osnovni loop i sigurnosne mjere) bez bloat-a standardnih predložaka.
+
+1.  Stvaranje mape predloška: Unutar `wp-contentthemes` kreira se nova mapa s jedinstvenim imenom.
+
+2.  Definiranje `style.css`: Dodavanje obaveznih informacija za registraciju predloška:
+
+    ```css
+    
+    Theme Name: Ime Prilagođenog Predloška
+    Theme URI: http:primjer.com
+    Author: Ime Autora
+    Author URI: http:primjer.comautor
+    Description: Prilagođeni predložak za specifičan projekt.
+    Version: 1.0.0
+    License: GNU General Public License v2 or later
+    License URI: http:www.gnu.orglicensesgpl-2.0.html
+    Text Domain: moj_predlozak
+    
+    ```
+
+3.  Postavljanje `functions.php`: Inicijalna datoteka za registraciju osnovnih WordPress značajki. Ključno je koristiti akcije (`add_action`) i filtere (`add_filter`) za integraciju koda, a ne direktno mijenjanje izvornog koda WordPressa ili dodataka. Primjer: registracija skripti.
+
+    ```php
+    <?php
+    function moj_predlozak_scripts() {
+        wp_enqueue_style( 'moj_predlozak_style', get_stylesheet_uri() );
+        wp_enqueue_script( 'moj_predlozak_script', get_template_directory_uri() . 'jscustom.js', array('jquery'), '1.0.0', true );
+    }
+    add_action( 'wp_enqueue_scripts', 'moj_predlozak_scripts' );
+    ?>
+    ```
+
+2.3. Alati za Efikasan Razvoj
+
+Za moderni razvoj neophodno je koristiti alate za automatizaciju zadataka (task runners) poput Gulp-a ili Webpack-a. Ovi alati služe za:
+
+   Kompilaciju SASSLESS u čisti CSS.
+   Minifikaciju CSS i JavaScript datoteka.
+   Automatsko osvježavanje preglednika (Live Reload) pri promjenama koda.
+   Optimizaciju slika.
+
+Korištenje sustava za kontrolu verzija, primarno Git-a, ključno je za timski rad i praćenje promjena, osiguravajući stabilnost i mogućnost povratka na prethodne verzije koda.
+
+-----
+
+3. Implementacija Specifičnih Funkcionalnosti i Upravljanje Sadržajem
+
+Ključna prednost prilagođenog predloška leži u mogućnosti implementacije točno onih funkcionalnosti koje su potrebne za efikasno upravljanje sadržajem i postizanje željene personalizacije bez pretrpavanja sustava.
+
+3.1. Prilagođeni Tipovi Objava i Taksonomije (Custom Post Types & Taxonomies)
+
+Za strukturirano upravljanje sadržajem koji se razlikuje od standardnih "Objava" (Post) i "Stranica" (Page), neophodno je koristiti prilagođene tipove objava (CPT). Na primjer, za web stranicu restorana, CPT-ovi mogu biti "Jelovnik", "Lokacije" ili "Događaji".
+
+   Definiranje CPT-a: CPT-ovi se registriraju pomoću funkcije `register_post_type()` unutar `functions.php`.
+
+Prilagođene taksonomije (Custom Taxonomies) omogućuju grupiranje CPT-ova na specifičan način. Npr., za CPT "Jelovnik", taksonomije mogu biti "Predjela", "Glavna jela", "Deserti".
+
+Ova struktura osigurava da urednici mogu unijeti sadržaj na logičan i intuitivan način, što izravno poboljšava user-friendly sučelje administrativnog dijela.
+
+3.2. Prilagođena Polja (Custom Fields) i Napredna Personalizacija
+
+Standardni WordPress editor često nije dovoljan za unos specifičnih podataka. Prilagođena polja omogućuju dodavanje dodatnih, strukturiranih podataka (npr. cijena, URL, slika, datum) određenim objavama ili stranicama.
+
+   ACF (Advanced Custom Fields): Najpopularniji dodatak za grafičko kreiranje prilagođenih polja. Omogućuje brzo postavljanje fleksibilnih i ponovljivih grupa polja (Repeater Fields).
+   Integracija s predloškom: Nakon definiranja polja, njihove se vrijednosti dohvaćaju u datotekama predloška (npr. `single-jelovnik.php`) pomoću funkcija poput `the_field()` ili `get_field()`, čime se postiže visoka razina personalizacije prikaza.
+
+3.3. User-Friendly Sučelje za Urednike
+
+Dizajn prilagođenog predloška mora uzeti u obzir i administrativno sučelje. Fokus bi trebao biti na:
+
+   Blokovi (Gutenberg): Razvoj prilagođenih Gutenberg blokova pomoću Reacta ili ACF Blocks omogućuje urednicima vizualno slaganje složenog rasporeda stranica bez potrebe za poznavanjem koda.
+   Clear Labeling: Korištenje jasnih i opisnih naziva za CPT-ove, taksonomije i prilagođena polja.
+   Tema Customizer: Korištenje `Theme Customizer API` za omogućavanje promjene osnovnih elemenata dizajna (boje, fontovi, logotip) u realnom vremenu, što olakšava upravljanje sadržajem i vizualni branding.
+
+-----
+
+4. Optimizacija Performansi, Sigurnost i Najbolje Prakse
+
+Razvoj prilagođenog predloška pruža jedinstvenu priliku za optimizaciju performansi i sigurnosti, što je često teže postići s generičkim, preopterećenim predlošcima.
+
+4.1. Optimizacija Brzine i Performansi
+
+Brzina učitavanja stranice ključna je za korisničko iskustvo (UX) i SEO. Prilagođeni predložak to omogućuje:
+
+   Uklanjanje suvišnog koda: Predložak sadrži samo onaj HTML, CSS i JavaScript koji je striktno potreban, čime se izbjegava bloat.
+   Pravilno enqueuanje skripti: Skripte i stilovi se učitavaju samo na onim stranicama gdje su potrebni.
+   Minifikacija i Konkatenacija: Korištenje alata (GulpWebpack) za spajanje i kompresiju (minifikaciju) koda.
+   Lazy Loading: Implementacija Lazy Loading za slike kako bi se poboljšalo početno učitavanje.
+   Optimizacija upita baze: Korištenje Caching dodataka i, u kompleksnim slučajevima, optimizacija PHP koda za smanjenje broja upita bazi podataka.
+
+4.2. Sigurnosne Preporuke
+
+   Sanitizacija i Validacija: Svi podaci dobiveni od korisnika (npr. iz formi) moraju biti validirani prije obrade i sanitizirani prije spremanja u bazu podataka, pomoću ugrađenih WordPress funkcija (`sanitize_text_field()`, `wp_kses()`, itd.).
+   Noncing: Korištenje nonces (jednokratnih tokena) u AJAX pozivima i formama za sprječavanje CSRF napada (Cross-Site Request Forgery).
+   Izbjegavanje direktnog unosa koda: Nikada se ne smije dopustiti direktni unos koda od strane korisnika bez stroge provjere.
+
+4.3. Najbolje Prakse u Kodiranju
+
+   WordPress Coding Standards: Poštivanje službenih WordPress standarda za PHP, HTML, CSS i JavaScript osigurava čitljiv, održiv i kompatibilan kod.
+   Korištenje Dječjih Predložaka (Child Themes): Ako se kodiraju izmjene na postojećem predlošku treće strane (iako je cilj ovdje razvijati prilagođeni od nule, to je opća praksa), koristi se Dječji predložak. Time se osigurava da ažuriranja roditeljskog predloška ne prebrišu prilagođene promjene.
+   Internacionalizacija: Korištenje funkcija za prevođenje (`__()`, `_e()`) u svim tekstualnim nizovima kako bi predložak bio spreman za višejezične implementacije, podržavajući visoku razinu personalizacije.
+
+-----
+
+Zaključak
+
+Razvoj prilagođenog predloška za WordPress sustav predstavlja složen, ali izuzetno nagrađujući proces koji nadilazi ograničenja gotovih rješenja. Kroz pažljivo planiranje arhitekture, implementaciju modernih web tehnologija (HTML5, CSS3, JavaScript, PHP) i pridržavanje najboljih praksi, moguće je stvoriti web stranicu koja je u potpunosti prilagođena specifičnim funkcionalnim i vizualnim zahtjevima projekta.
+
+Ovaj seminar je pokazao da prilagođeni predložak nije samo stvar estetike; on je temelj za postizanje personalizacije, robusne optimizacije performansi i efikasnog upravljanja sadržajem. Korištenjem prilagođenih tipova objava i polja, postiže se intuitivno i user-friendly sučelje za administratore, čime se značajno smanjuje krivulja učenja i vrijeme potrebno za ažuriranje sadržaja. Nadalje, fokus na sigurnost, validaciju i sanitizaciju koda osigurava stabilnost i pouzdanost cijelog CMS rješenja.
+
+U konačnici, ulaganje u razvoj prilagođenog predloška ključno je za organizacije koje traže jedinstven digitalni identitet, vrhunske performanse i potpunu kontrolu nad svojom online prisutnošću. Prilagođeni predložak transformira WordPress iz generičke platforme u moćan i savršeno skrojen alat za ostvarivanje digitalnih ciljeva.

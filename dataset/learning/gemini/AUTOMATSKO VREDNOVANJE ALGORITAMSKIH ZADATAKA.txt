@@ -1,0 +1,123 @@
+1. Uvod
+
+Automatsko vrednovanje algoritamskih zadataka predstavlja jedan od najznačajnijih tehnoloških iskoraka u području računalne edukacije. S porastom broja studenata upisanih na kolegije programiranja, klasičan model ručnog pregledavanja i ocjenjivanja predanih programskih rješenja postao je neodrživ. Programerski zadaci, osobito oni algoritamski, zahtijevaju preciznu provjeru ne samo sintakse i funkcionalnosti, već i efikasnosti, robustnosti te usklađenosti s postavljenim specifikacijama. Tradicionalno, ovaj proces oduzima značajnu količinu vremena nastavnicima i asistentima, odgađa povratnu informaciju studentima i često dovodi do subjektivnosti u ocjenjivanju.
+
+U tom kontekstu, sustavi za automatsko vrednovanje (engl. Automatic Assessment Systems ili Auto-Grading Systems) pojavljuju se kao nužno rješenje. Njihova osnovna svrha je simulirati i, u nekim aspektima, nadmašiti ljudsko ocjenjivanje testiranjem predanog koda na nizu unaprijed definiranih testnih primjera (engl. test cases). Ovi sustavi omogućuju trenutnu povratnu informaciju studentima, potiču pravednost i objektivnost, te oslobađaju akademsko osoblje za fokusiranje na kompleksnije zadatke, poput razvoja kurikuluma i individualnog mentorstva.
+
+Ovaj seminarski rad bavi se analizom principa, arhitekture i primjene sustava za automatsko vrednovanje s posebnim naglaskom na algoritamske zadatke. Kroz rad će biti predstavljeni ključni koncepti, prednosti i izazovi, te će se detaljnije obraditi primjeri specifičnih platformi koje su se etablirale u edukacijskom okruženju, kao što su Virtual Programming Lab (VPL) i Autogradr. Cilj je pružiti sveobuhvatan pregled trenutačnog stanja i budućih smjerova razvoja u ovom ključnom području računalne didaktike.
+
+---
+
+2. Principi automatskog vrednovanja algoritamskih zadataka
+
+Automatsko vrednovanje nije samo zamjena ljudskog rada strojem, već je riječ o implementaciji strukturiranog i formalnog procesa provjere koji je usmjeren na ključne aspekte programskog rješenja. Algoritam je srž svakog programskog zadatka, a njegovo vrednovanje mora obuhvatiti više dimenzija kvalitete.
+
+2.1. Funkcionalna korektnost
+
+Temelj automatskog vrednovanja je provjera funkcionalne korektnosti. Ovo se postiže izvođenjem predanog programskog koda s nizom ulaznih podataka (testnih primjera) i uspoređivanjem dobivenog izlaza s očekivanim izlazom.
+
+ Testni primjeri: Svaki zadatak popraćen je skupom testnih primjera, podijeljenih u javne (vidljive studentima) i skrivene (za konačnu provjeru). Skriveni testni primjeri su ključni za sprječavanje "hardkodiranja" rješenja i osiguravanje da se student doista pridržavao općeg rješenja, odnosno ispravnog algoritma.
+ Usporedba izlaza: Sustav koristi precizne algoritme za uspoređivanje izlaza. U jednostavnim slučajevima, to je usporedba znak po znak, dok u složenijima uključuje toleranciju za numeričke pogreške, provjeru formatiranja ili čak usporedbu struktura podataka.
+
+2.2. Vrednovanje efikasnosti
+
+Za algoritamske zadatke, funkcionalnost nije dovoljna; ključna je i efikasnost. Algoritamski zadatak koji radi, ali mu je potrebno previše vremena ili memorije, smatra se neispravnim rješenjem za veće skupove podataka.
+
+ Mjerenje vremena izvršavanja: Sustav mjeri vrijeme potrebno za izvršavanje koda za svaki testni primjer. Ako vrijeme prekorači zadanu granicu (engl. Time Limit Exceeded - TLE), rješenje se ocjenjuje neispravnim, što izravno penalizira algoritme s lošom asimptotskom složenošću (npr. $O(N^2)$ tamo gdje se očekuje $O(N \log N)$).
+ Mjerenje memorije: Slično, prati se i potrošnja memorije (engl. Memory Limit Exceeded - MLE). Ovo osigurava da student koristi optimalne podatkovne strukture i izbjegava nepotrebno zauzimanje resursa.
+
+2.3. Vrednovanje stila i strukture koda
+
+Iako je primarno fokus na izvršavanju, moderni sustavi sve više uključuju i provjeru stila i strukture, što je presudno za razvijanje dobrih programerskih navika.
+
+ Linteri i analizatori: Koriste se automatizirani alati (poput lintersa) koji provjeravaju dosljednost imenovanja varijabli, uvlačenje koda, komentiranje i općenito čitljivost koda.
+ Zabrana funkcija: Sustav može provjeriti i da li student koristi zabranjene funkcije (npr. izbjegavanje ugrađenih funkcija za sortiranje ako je cilj zadatka implementirati vlastiti algoritam sortiranja).
+
+---
+
+3. Arhitektura sustava za automatsko vrednovanje
+
+Sustavi za automatsko vrednovanje su kompleksni softverski alati koji moraju osigurati sigurnost, skalabilnost i preciznost. Njihova arhitektura se obično sastoji od tri glavne komponente.
+
+3.1. Sučelje za studente i nastavnike
+
+Ova komponenta je front-end sustava, platforma s kojom korisnici izravno interaktiraju.
+
+ Predaja zadataka: Studentima mora biti omogućeno jednostavno slanje izvornog koda, obično unutar web-preglednika ili integrirano u neki sustav za upravljanje učenjem (LMS) kao što je Moodle.
+ Prikaz povratne informacije: Nakon obrade, student odmah dobiva izvješće o izvršavanju. Ono uključuje status (Passed, Failed, TLE, MLE, Runtime Error), detalje o prolasku/padu pojedinih testnih primjera (ako su javni), te postignuti rezultat.
+ Administracija zadataka: Nastavnici kreiraju zadatke, postavljaju specifikacije, definiraju ulazne/izlazne datoteke, vremenska i memorijska ograničenja, te dodjeljuju bodove.
+
+3.2. Okruženje za izvršavanje (Sandbox)
+
+Ovo je kritična komponenta koja jamči sigurnost i izolaciju. Programi studenata se izvršavaju u ograničenom okruženju (sandboxu) kako bi se spriječilo zlonamjerno ponašanje.
+
+ Izolacija resursa: Sandbox osigurava da studentski kod ne može pristupiti sistemskim datotekama, mrežnim resursima ili pokretati proizvoljne komande.
+ Kontrola resursa: Omogućuje precizno nametanje vremenskog i memorijskog ograničenja, čime se sprječava da neispravan kod (npr. beskonačna petlja) paralizira cijeli sustav.
+
+3.3. Mehanizam za ocjenjivanje
+
+Ova back-end komponenta orkestrira cijeli proces.
+
+ Kompilacija/Interpretacija: Prvo se predani kod kompajlira (za jezike poput C++, Jave) ili interpretira (za Python, PHP).
+ Izvršavanje i testiranje: Kompilirani program se pokreće protiv niza testnih primjera u sandboxu. Sustav za ocjenjivanje brine se o prosljeđivanju ulaznih podataka, snimanju izlaza i praćenju resursa.
+ Analiza rezultata: Uspoređuje se dobiveni izlaz s očekivanim izlazom i određuje konačna ocjena, uz generiranje povratne informacije.
+
+---
+
+4. Primjeri platformi za automatsko vrednovanje
+
+Na tržištu i u akademskoj zajednici postoji velik broj rješenja, od komercijalnih platformi do otvorenog koda. Dva istaknuta primjera s različitim pristupima integraciji su Virtual Programming Lab i Autogradr.
+
+4.1. Virtual Programming Lab (VPL)
+
+Virtual Programming Lab (VPL) je aktivnost učenja unutar Moodle sustava (LMS). Njegova glavna prednost je integracija unutar jednog od najpopularnijih sustava za učenje, čineći ga lako dostupnim i jednostavnim za implementaciju u postojećim e-learning okruženjima.
+
+ Integracija s Moodleom: VPL je Moodle dodatak, što omogućuje jednostavno upravljanje korisnicima i sinkronizaciju ocjena s glavnom ocjenom kolegija.
+ Ugrađeni editor: Studenti mogu pisati i modificirati kod izravno u pregledniku, unutar Moodle sučelja, što eliminira potrebu za lokalnom instalacijom razvojnog okruženja.
+ Automatsko testiranje: VPL koristi skripte za testiranje koje nastavnik definira za svaki zadatak. Omogućuje kompajliranje, izvršavanje i testiranje na temelju ulaznih/izlaznih datoteka. U suštini, VPL se oslanja na snagu Moodle okruženja za distribuciju i praćenje, a za samo izvršavanje koristi vlastiti mehanizam.
+
+4.2. Autogradr
+
+Autogradr je primjer samostalnog ili lako integrabilnog sustava koji je često razvijen s fokusom na napredne značajke i natjecateljsko programiranje. Iako manje vezan uz standardne LMS sustave od VPL-a, nudi veću fleksibilnost i moć u rukovanju kompleksnim scenarijima.
+
+ Napredna testiranja: Autogradr i slični sustavi često podržavaju kompleksnije metode testiranja, kao što su testiranja s 'interaktorima' (za zadatke koji zahtijevaju interaktivnu komunikaciju s programom studenta) ili 'graderima' (specijalizirani programi za ocjenjivanje koji se koriste za zadaće s nejedinstvenim rješenjem).
+ Analiza koda: Ovi sustavi često imaju ugrađene alate za analizu stila, plagiranja i drugih metrika kvalitete koda koje nadilaze puku funkcionalnost.
+ Samostalna arhitektura: Često se implementira kao neovisna platforma temeljena na kontejnerizaciji (npr. Docker), što osigurava iznimnu izolaciju i skalabilnost, ključnu za testiranje velikog broja programskih rješenja u kratkom vremenskom roku.
+
+---
+
+5. Izazovi i budućnost automatskog vrednovanja
+
+Iako je automatsko vrednovanje donijelo revoluciju u edukaciji programiranja, suočava se s nizom značajnih izazova.
+
+5.1. Problem plagiranja i varanja
+
+Kada studenti znaju testne primjere, postoji rizik da će pokušati "prevariti" sustav, što se manifestira kroz tri glavne taktike:
+
+ Hardkodiranje: Ručno upisivanje rješenja za poznate testne primjere. Ublažava se korištenjem velikog broja složenih i nepredvidivih skrivenih testnih primjera.
+ Dijeljenje koda: Izravna razmjena rješenja između studenata. Rješava se upotrebom naprednih alata za detekciju plagiranja koji uspoređuju apstraktna sintaksna stabla (AST) koda, a ne samo tekstualne sličnosti.
+ Automatska generacija koda: U budućnosti će se sve više javljati izazov korištenja alata za generiranje koda temeljenih na umjetnoj inteligenciji, što zahtijeva razvoj novih, inteligentnijih metoda provjere.
+
+5.2. Ograničenja vrednovanja kvalitete dizajna
+
+Trenutačni sustavi su izvrsni u provjeri funkcionalnosti i efikasnosti, ali se bore s objektivnim vrednovanjem kvalitete dizajna koda (npr. ispravna objektno-orijentirana hijerarhija, ispravna primjena uzoraka dizajna).
+
+ Ručna inspekcija: Za sada je za složene zadatke često nužno da nastavnik ručno pregleda barem dio koda kako bi procijenio apstraktne koncepte dizajna.
+ Analiza metrika: Razvijaju se alati za automatsko mjerenje metrika koda (npr. ciklomatska složenost, kohezija, kuplovanje) koje mogu objektivno kvantificirati kvalitetu dizajna.
+
+5.3. Budući smjerovi: AI i personalizacija
+
+Budućnost automatskog vrednovanja leži u integraciji umjetne inteligencije za poboljšanje procesa učenja.
+
+ Inteligentna povratna informacija: Umjesto samo "krivo/točno", AI sustavi bi mogli analizirati strukturu studentove pogreške i predložiti specifične algoritamske koncepte koje treba revidirati (npr. "Greška je u rubnom slučaju, razmislite o sortiranom ulazu").
+ Generiranje testnih primjera: AI bi mogao automatski generirati nove, teže testne primjere specifične za predani kod, s ciljem "probijanja" rješenja i otkrivanja slabosti u algoritmu.
+
+---
+
+6. Zaključak
+
+Automatsko vrednovanje algoritamskih zadataka predstavlja nezaobilazan alat u modernom računalnom obrazovanju. Implementacija sustava poput Virtual Programming Lab (VPL) i Autogradr drastično je povećala efikasnost procesa učenja i ocjenjivanja.
+
+Kroz analizu temeljnih principa, vidjeli smo da se proces ocjenjivanja ne svodi samo na provjeru funkcionalnosti, već uključuje i rigoroznu provjeru algoritamske efikasnosti, mjerenjem vremena i memorije. Arhitektura sustava, s naglaskom na sigurno okruženje za izvršavanje (sandbox), osigurava pravednost i objektivnost, ključne atribute svakog obrazovnog procesa.
+
+Ipak, izazovi ostaju, pogotovo u borbi protiv sofisticiranih metoda varanja i u objektivnom vrednovanju nematerijalnih aspekata koda, poput stila i dizajna. Budućnost leži u inteligentnim sustavima koji će koristiti snagu umjetne inteligencije za pružanje personalizirane i dublje povratne informacije, pretvarajući automatski "grader" u automatskog "mentora". Korištenje tehnologije za optimizaciju procesa učenja i razvijanje ključnih vještina rješavanja problema s kojima se studenti suočavaju u svijetu algoritama i programiranja nastavit će biti centralna tema u računalnoj edukaciji.

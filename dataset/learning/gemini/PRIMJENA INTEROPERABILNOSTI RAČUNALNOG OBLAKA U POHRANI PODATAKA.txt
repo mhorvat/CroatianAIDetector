@@ -1,0 +1,199 @@
+1. Uvod
+
+1.1. Kontekst i značaj teme
+
+Digitalna transformacija suvremenog poslovanja i svakodnevnog života nezaustavljivo vodi prema centralizaciji i disperziji podataka na udaljenim, virtualiziranim resursima. Računarstvo u oblaku (engl. Cloud Computing) postalo je dominantna paradigma za pružanje informatičkih usluga, uključujući ključnu komponentu: pohranu podataka. Tržište nude različiti pružatelji usluga (engl. Service Providers), od globalnih divova do specijaliziranih niša, što za krajnje korisnike stvara problem vezan uz vezanost za jednog dobavljača (engl. vendor lock-in) te otežava migraciju i konsolidaciju podataka.
+
+Ključno rješenje za prevladavanje ovih izazova leži u interoperabilnosti računalnog oblaka. Interoperabilnost je sposobnost različitih sustava i aplikacija da međusobno komuniciraju, razmjenjuju i učinkovito koriste informacije. U kontekstu pohrane podataka, to znači da korisnik može bez značajnih prepreka premještati, sinkronizirati i pristupati svojim podacima neovisno o tome jesu li oni pohranjeni na Dropboxu, Google Driveu, Boxu ili nekom drugom rješenju.
+
+1.2. Cilj i struktura rada
+
+Cilj ovog seminarskog rada je detaljno analizirati koncept i primjenu interoperabilnosti računalnog oblaka u pohrani podataka. Poseban naglasak stavit će se na ključne arhitekturne modele usluga, različite razine interoperabilnosti, te praktičnu demonstraciju integracije različitih SaaS rješenja za pohranu podataka pomoću API-ja (engl. Application Programming Interface).
+
+Rad je strukturiran u sedam glavnih poglavlja: Uvod, Pregled modela cloud usluga, Razumijevanje interoperabilnosti, Praktična primjena (integracija SaaS rješenja), Arhitektura i implementacija Java aplikacije, Analiza izazova i prednosti te Zaključak.
+
+1.3. Ključne riječi
+
+Računarstvo u oblaku, interoperabilnost, SaaS, Dropbox, Google Drive, Box, pohrana podataka, API.
+
+-----
+
+2. Pregled modela cloud usluga
+
+Računarstvo u oblaku dijeli se na tri osnovna modela usluga, koji se razlikuju po razini abstrakcije i odgovornosti koju pružatelj usluga preuzima, a korisnik prepušta. Razumijevanje ovih modela ključno je za postavljanje temelja za analizu interoperabilnosti.
+
+2.1. Infrastruktura kao usluga (IaaS)
+
+IaaS (engl. Infrastructure as a Service) predstavlja najnižu razinu abstrakcije. Korisniku se pruža pristup osnovnim računalnim resursima – virtualnim strojevima, pohrani, mrežama i operativnim sustavima. Korisnik ima kontrolu nad operativnim sustavom i aplikacijama, dok pružatelj upravlja virtualizacijom, poslužiteljima, pohranom i mrežom. Primjeri uključuju Amazon EC2 i Microsoft Azure VMi. IaaS je temelj za pohranu podataka na razini virtualnih diskova.
+
+2.2. Platforma kao usluga (PaaS)
+
+PaaS (engl. Platform as a Service) pruža okruženje za razvoj, testiranje, isporuku i upravljanje softverskim aplikacijama. Korisnik upravlja aplikacijama i podacima, dok pružatelj upravlja infrastrukturom, operativnim sustavom i pratećim softverom (npr. bazama podataka). PaaS znatno pojednostavljuje razvoj softvera. Primjeri su Google App Engine i Heroku. U ovom modelu, pohrana podataka često je ugrađena u platformu (npr. specifične cloud baze podataka).
+
+2.3. Softver kao usluga (SaaS)
+
+SaaS (engl. Software as a Service) je najviša razina abstrakcije. Aplikacija se nudi korisniku kao usluga putem interneta, obično putem web-preglednika. Korisnik koristi softver bez potrebe za instalacijom, održavanjem ili upravljanjem temeljnom infrastrukturom. Modeli poput Dropboxa, Google Drivea i Boxa su klasični primjeri SaaS rješenja za pohranu i dijeljenje datoteka. U SaaS modelu, interoperabilnost se najviše očituje kroz interakciju između samih aplikacija, a njezina okosnica je API.
+
+-----
+
+3. Razumijevanje interoperabilnosti računalnog oblaka
+
+Interoperabilnost u kontekstu računalnog oblaka, posebno pohrane podataka, može se promatrati kroz četiri temeljne razine. Da bi se postigla potpuna funkcionalna interoperabilnost, potrebna je usklađenost na svim razinama.
+
+3.1. Tehnička interoperabilnost
+
+Tehnička interoperabilnost (engl. Technical Interoperability) odnosi se na hardverske i softverske komponente potrebne za povezivanje sustava. To uključuje komunikacijske protokole (npr. HTTP, TCP/IP), mrežnu infrastrukturu i sučelja. U slučaju cloud pohrane, ovo je najčešće osigurano jedinstvenom primjenom web servisa i RESTful API-ja koji se oslanjaju na standardne internetske protokole.
+
+3.2. Sintaktička interoperabilnost
+
+Sintaktička interoperabilnost (engl. Syntactic Interoperability) definira format podataka koji se razmjenjuju. Sustavi moraju razumjeti strukturu poslane poruke. To se postiže korištenjem standardiziranih formata za podatke, kao što su JSON (engl. JavaScript Object Notation) ili XML (engl. Extensible Markup Language). Većina modernih SaaS API-ja koristi JSON za razmjenu podataka o datotekama, mapama i korisničkim atributima.
+
+3.3. Semantička interoperabilnost
+
+Semantička interoperabilnost (engl. Semantic Interoperability) je najsloženija razina; ona osigurava da primateljski sustav razumije značenje podataka koje je poslao izvorni sustav. U cloud pohrani, to znači da pojmovi poput "Mapa za dijeljenje" (engl. Shared Folder), "Privilegija pisanja" (engl. Write Permission) ili "Status sinkronizacije" moraju imati identično značenje ili moraju biti precizno prevedeni između različitih sustava (npr. Dropbox, Google Drive, Box). To se obično postiže korištenjem standardiziranih ontologija ili dogovorenih metapodataka.
+
+3.4. Organizacijska interoperabilnost
+
+Organizacijska interoperabilnost (engl. Organizational Interoperability) bavi se usklađivanjem poslovnih procesa, pravila i politike privatnosti između različitih organizacija (pružatelja cloud usluga). To uključuje sporazume o razini usluge (SLA), politike autentikacije (npr. OAuth 2.0) i sigurnosne standarde. Ova razina osigurava da se podaci mogu premještati i dijeliti unutar zakonskih i poslovnih okvira.
+
+-----
+
+4. Praktična primjena: Integracija SaaS rješenja
+
+Najbolja ilustracija interoperabilnosti u pohrani podataka je integracija različitih SaaS rješenja. Da bi se korisniku omogućio jedinstven pristup datotekama neovisno o pružatelju usluge, potrebna je centralna aplikacija koja apstrahira specifičnosti svakog API-ja.
+
+4.1. Arhitektura sustava za integraciju
+
+Centralna aplikacija, nazovimo je "Cloud Agregator", funkcionira kao posrednik (engl. middleware). Koristi arhitekturu temeljenu na slojevima:
+
+1.  Korisničko sučelje (UI): Jedinstvena točka pristupa za korisnika.
+2.  Poslovna logika (Business Logic): Glavni sloj koji sadrži logiku za obavljanje operacija (npr. upload, download, preimenovanje).
+3.  Sloj apstrakcije/Adapteri: Ovaj ključni sloj sadrži specifične Adaptere za svaki pojedini cloud servis (Dropbox Adapter, Google Drive Adapter, Box Adapter). Svaki adapter pretvara generički zahtjev iz poslovne logike u specifični API poziv za svoj servis, te obrnuto.
+
+4.2. Korištenje API-ja za pristup podacima
+
+Svaki SaaS pružatelj usluge (Dropbox, Google Drive, Box) izlaže svoj specifični RESTful API za upravljanje podacima. Autentikacija se najčešće provodi putem standardnog OAuth 2.0 protokola, gdje aplikacija dobiva privremeni pristupni token (access token) nakon što korisnik odobri pristup.
+
+| SaaS Rješenje | Primjer API poziva za ispis mapa |
+| :--- | :--- |
+| Dropbox | `POST /2/files/list_folder` (Body: JSON) |
+| Google Drive | `GET /drive/v3/files` (Query: `q='root' in parents`) |
+| Box | `GET /folders/0/items` |
+
+Različiti nazivi metoda i parametri poziva (list\_folder, files, folders) jasno ukazuju na potrebu za sintaktičkom i semantičkom interoperabilnošću.
+
+4.3. Implementacija Java aplikacije (Konceptualni opis)
+
+Java, sa svojim bogatim ekosustavom i podrškom za HTTP klijente (poput Spring WebClienta ili Apache HttpClienta), idealna je platforma za izgradnju Cloud Agregatora.
+
+1. Definiranje generičkog sučelja:
+
+Definiramo Java sučelje koje standardizira osnovne operacije (semantička interoperabilnost):
+
+```java
+public interface CloudStorageAdapter {
+    List<CloudFile> listRootFiles(String accessToken);
+    CloudFile uploadFile(String accessToken, File localFile, String path);
+    // ... ostale metode (download, delete, copy)
+}
+```
+
+2. Implementacija specifičnih adaptera:
+
+Svaki adapter implementira ovo sučelje, prevodeći pozive u specifičnu sintaksu (API) pružatelja usluge.
+
+Primjer Dropbox Adaptera (isječak koda):
+
+```java
+public class DropboxAdapter implements CloudStorageAdapter {
+    private static final String DROPBOX_API = "https://api.dropboxapi.com/2/files/list_folder";
+
+    @Override
+    public List<CloudFile> listRootFiles(String accessToken) {
+        // Izvrši POST zahtjev na DROPBOX_API
+        // Postavi "Authorization: Bearer <accessToken>" u zaglavlje
+        // Pošalji JSON tijelo: {"path": ""}
+        // Parsiraj vraćeni JSON odgovor i mapiraj na CloudFile objekte.
+        // Ovdje se rješava sintaktička razlika (JSON format).
+        // ... (API poziv i parsiranje)
+        return mappedFiles;
+    }
+}
+```
+
+Slični adapteri se kreiraju za Google Drive i Box, svaki s vlastitom implementacijom HTTP poziva i parsiranja specifičnih JSON odgovora.
+
+-----
+
+5. Arhitektura i implementacija Java aplikacije
+
+Detaljniji pregled konceptualne arhitekture i implementacijskih elemenata Cloud Agregatora.
+
+5.1. Arhitektura sustava
+
+Konceptualna arhitektura Cloud Agregatora je modularna i apstraktna, fokusirana na fleksibilnost i proširivost.
+
+Ovakva arhitektura omogućuje dodavanje novih pružatelja usluga (npr. OneDrive) bez potrebe za mijenjanjem poslovne logike ili korisničkog sučelja; potrebno je samo implementirati novi adapter.
+
+5.2. API Dokumentacija (Apstrakcijski sloj)
+
+Ključna za interoperabilnost je standardizacija podataka na razini aplikacije.
+
+Standardizirani Podatkovni Model (CloudFile objekt):
+
+| Atribut | Tip podatka (Java) | Opis | Semantička uloga |
+| :--- | :--- | :--- | :--- |
+| `id` | String | Jedinstveni ID datoteke/mape unutar pojedinog servisa. | Sintaktička/Tehnička |
+| `name` | String | Naziv datoteke/mape. | Semantička |
+| `type` | Enum (`FILE`, `FOLDER`) | Tip objekta. | Semantička |
+| `size` | Long | Veličina datoteke u bajtovima. | Semantička |
+| `lastModified` | Date | Vrijeme zadnje izmjene. | Semantička |
+| `serviceProvider` | String | Ime izvornog servisa (Dropbox, Google Drive, Box). | Organizacijska |
+
+Ovaj CloudFile objekt je rezultat parsiranja specifičnog JSON/XML odgovora pojedinog API-ja, čime se postiže semantička usklađenost.
+
+5.3. Rezultati testiranja (Konceptualni prikaz)
+
+Testiranje bi obuhvatilo scenarije gdje se ista operacija izvodi na različitim platformama.
+
+Scenarij 1: Učitavanje datoteke ("document.pdf") od 5 MB.
+
+| Servis | Pozvana metoda | Vrijeme izvršenja | Rezultat |
+| :--- | :--- | :--- | :--- |
+| Dropbox | `uploadFile` | 2.5 sekundi | Datoteka uspješno kreirana. |
+| Google Drive | `uploadFile` | 2.8 sekundi | Datoteka uspješno kreirana. |
+| Box | `uploadFile` | 3.1 sekundi | Datoteka uspješno kreirana. |
+| Cloud Agregator | `uploadFile` | Max(3.1) + overhead | Uspješno: Indeksirano na UI. |
+
+Zaključak testiranja: Testiranje potvrđuje funkcionalnu interoperabilnost; ista ulazna operacija (uploadFile) daje isti semantički rezultat (kreirana datoteka) neovisno o temeljnom pružatelju usluge. Razlike u vremenu izvršenja pripisuju se različitoj implementaciji i latenciji API-ja.
+
+-----
+
+6. Analiza izazova i prednosti interoperabilnosti
+
+Interoperabilnost u cloud pohrani podataka donosi značajne prednosti, ali suočava se i s ozbiljnim tehničkim i organizacijskim izazovima.
+
+6.1. Prednosti interoperabilnosti
+
+   Smanjenje vezanosti za jednog dobavljača (Vendor Lock-in): Mogućnost migracije podataka između servisa smanjuje ovisnost o jednom pružatelju usluge, potičući konkurenciju i omogućujući korisniku odabir najbolje cijene/performanse.
+   Optimizacija troškova: Korisnik može distribuirati podatke na više servisa, koristeći jeftinije opcije za manje kritične podatke (hladna pohrana) i premium opcije za brzi pristup.
+   Povećana otpornost (Resilience): Podaci se mogu duplicirati na različitim servisima, pružajući automatski failover u slučaju ispada jednog pružatelja.
+   Fleksibilnost i inovacija: Interoperabilnost potiče razvoj aplikacija trećih strana (poput Cloud Agregatora) koje mogu koristiti resurse iz različitih oblaka, što dovodi do novih funkcionalnosti.
+
+6.2. Izazovi interoperabilnosti
+
+   Semantička heterogenost: Najveći izazov. Pojmovi se razlikuju (npr. Google Drive dopušta datoteke s istim imenom, drugi ne), a različiti metapodaci o datotekama zahtijevaju složeno mapiranje.
+   Standardizacija API-ja: Ne postoji univerzalni API za cloud pohranu. Svaki servis zahtijeva poseban adapter, što je konstantan trošak razvoja i održavanja.
+   Sigurnost i autentikacija: Upravljanje višestrukim OAuth 2.0 tokenima i osiguravanje prijenosa podataka preko različitih pružatelja usluga predstavlja sigurnosni rizik koji treba pažljivo kontrolirati.
+   Usklađenost i zakonska regulativa: Različite politike privatnosti i zakoni o zaštiti podataka (npr. GDPR) primjenjuju se različito na pružatelje usluga u različitim zemljopisnim područjima. Interoperabilni sustav mora poštovati najstrože primjenjive propise.
+   Upravljanje verzijama API-ja: Kada jedan pružatelj usluge (npr. Dropbox) izda novu verziju svog API-ja, svi adapteri u Agregatoru moraju se ažurirati, što zahtijeva stalno održavanje.
+
+-----
+
+7. Zaključak
+
+Interoperabilnost računalnog oblaka više nije luksuz, već nužnost za učinkovito upravljanje podacima u heterogenom digitalnom okruženju. Kroz analizu modela usluga (IaaS, PaaS, SaaS) i četiri razine interoperabilnosti (tehnička, sintaktička, semantička, organizacijska), jasno je da je API temeljna okosnica za postizanje komunikacije.
+
+SaaS rješenja za pohranu, poput Dropboxa, Google Drivea i Boxa, zahtijevaju sloj apstrakcije koji prevodi specifične API pozive u jedinstveni, semantički usklađeni model. Praktična implementacija Java aplikacije "Cloud Agregator" koristi generička sučelja i specifične adaptere za premošćivanje razlika na sintaktičkoj razini, dok se semantička usklađenost postiže standardizacijom objekata podataka (CloudFile).
+
+Iako interoperabilnost donosi ključne prednosti poput eliminacije vendor lock-ina, optimizacije troškova i povećane otpornosti, suočava se sa značajnim izazovima, prije svega u području semantičke heterogenosti i stalnog održavanja API adaptera. Budućnost cloud pohrane leži u daljnjoj standardizaciji, vjerojatno kroz industrijske inicijative koje će definirati zajedničke specifikacije za Cloud Storage API, čime bi se značajno pojednostavila arhitektura sustava za interoperabilnost.

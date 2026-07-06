@@ -1,0 +1,116 @@
+Uvod
+
+Suvremena tehnologija neprestano pronalazi nove načine za poboljšanje kvalitete života, s posebnim naglaskom na područje zdravstva. U tom kontekstu, pametna odjeća ili inteligentna odjeća predstavlja revolucionarni korak naprijed, transformirajući tradicionalnu tekstilnu industriju u sektor visoke tehnologije. Ova odjeća integrira elektroničke sklopove, minijaturne senzore i mikrokontrolere izravno u tkaninu, pretvarajući je u funkcionalan, nosiv uređaj. Sposobnost prikupljanja biometrijskih i fizioloških podataka u stvarnom vremenu čini je idealnom za medicinsku primjenu, osobito za kontinuirano praćenje bolesnika i rekonvalescenata.
+
+Konvencionalni pristupi praćenju pacijenata često zahtijevaju invazivne ili nepokretne uređaje, što može biti neugodno i ograničavajuće. Pametna odjeća nudi neinvazivnu, diskretnu i udobnu alternativu. Ključne riječi poput nosiva tehnologija, senzori i zdravstvo su neraskidivo povezane s konceptom inteligentne odjeće. Glavna svrha ovoga seminarskog rada je detaljno analizirati tehnološke aspekte, medicinsku primjenu i buduće potencijale pametne odjeće za praćenje, dijagnostiku i rehabilitaciju pacijenata, stavljajući naglasak na specifične funkcije kao što su praćenje vitalnih znakova i termoregulacija.
+
+---
+
+1. Temelji pametne odjeće: Tehnologija i integracija
+
+Pametna odjeća predstavlja fuziju tekstilne znanosti, elektronike i informacijskih tehnologija. Ključ njezine funkcionalnosti leži u integraciji senzora i elektroničkih sklopova u fleksibilnu tekstilnu platformu.
+
+1.1. Senzori i njihova uloga
+
+Srce pametne odjeće čine senzori koji se diskretno ugrađuju u tkaninu. Ovi senzilački elementi mogu biti različitih vrsta, ovisno o primjeni:
+
+ Tekstilni elektrokardiografski (EKG) senzori: Provodljive niti ugrađene u tkaninu (često srebrene ili ugljične) služe kao suhe elektrode za kontinuirano praćenje srčane aktivnosti. Njihova prednost je udobnost i mogućnost dugotrajnog nošenja bez iritacije kože, za razliku od standardnih gel-elektroda.
+ Senzori disanja: Mogu se temeljiti na promjeni električnog otpora ili kapaciteta tkanine uslijed istezanja tijekom udisaja i izdisaja (tzv. pleteni piezorezistivni senzori). Time se omogućuje praćenje frekvencije i dubine disanja.
+ Temperaturni senzori: Termistori ili termoelementi ugrađeni u odjeću omogućuju precizno mjerenje površinske temperature tijela, ključno za praćenje febrilnih stanja ili procjenu termoregulacije.
+ Akcelerometri i žiroskopi: Ovi MEMS (Micro-Electro-Mechanical Systems) uređaji mjere pokret i orijentaciju, što je esencijalno za praćenje aktivnosti, detekciju pada kod starijih osoba ili analizu hoda tijekom rehabilitacije.
+
+Integracija ovih senzora mora biti izdržljiva, periva i ne smije narušavati udobnost nošenja, što su ključni izazovi za nosivu tehnologiju.
+
+1.2. Elektronički sklopovi i prijenos podataka
+
+Prikupljeni analogni signali iz senzora moraju se obraditi i digitalizirati. To se postiže minijaturnim, fleksibilnim elektroničkim sklopovima – mikrokontrolerima koji su obično smješteni u malom, lako odvojivom modulu (npr. na rubu majice).
+
+ Akumulacija i obrada podataka: Modul sadrži analogno-digitalne pretvarače (ADC) i procesor za filtriranje šuma i pretvaranje sirovih podataka u mjerljive fiziološke parametre.
+ Komunikacija: Prijenos podataka do vanjskog uređaja (pametni telefon, tablet, bolnički sustav) najčešće se obavlja bežično, putem Bluetooth Low Energy (BLE) protokola. Ovaj bežični prijenos osigurava mobilnost i neprekidno praćenje.
+ Napajanje: Napajanje je kritičan segment. Uobičajeno se koriste male, punjive litij-ionske baterije, no istraživanja su usmjerena prema fleksibilnim baterijama, solarnim ćelijama u tkanini, pa čak i tehnikama "energy harvestinga" (prikupljanje energije iz tjelesnih pokreta ili topline).
+
+---
+
+2. Medicinska primjena pametne odjeće u praćenju vitalnih znakova
+
+Primarna i najvažnija primjena inteligentne odjeće je u kontinuiranom i udaljenom praćenju zdravstvenog stanja. Ova metoda omogućuje rano otkrivanje pogoršanja stanja i prilagodbu terapije.
+
+2.1. Kardiovaskularno praćenje
+
+Kontinuirano praćenje srčane funkcije je od vitalnog značaja. Pametna odjeća to omogućuje integracijom tekstilnih EKG senzora.
+
+ EKG i ritam srca: Odjeća može snimati EKG signal niske rezolucije, dovoljan za precizno određivanje srčane frekvencije, detekciju aritmija (poput atrijalne fibrilacije) i promjena u ST segmentu.
+ Praćenje krvnog tlaka: Iako je neizravno mjerenje tlaka složenije, neki sustavi procjenjuju krvni tlak na temelju vremena tranzita pulsa (Pulse Transit Time - PTT) iz EKG i fotopletizmografskih (PPG) senzora.
+ Praćenje bolesnika s kroničnim bolestima: Pacijenti s kroničnim zatajenjem srca mogu nositi ovakvu odjeću kod kuće, omogućujući liječnicima uvid u dinamiku njihovog stanja, smanjujući potrebu za čestim bolničkim posjetima.
+
+2.2. Respiratorno praćenje i dijagnostika
+
+Odjeća opremljena senzorskim pojasima oko prsnog koša i abdomena pruža uvid u mehaničku funkciju disanja.
+
+ Praćenje apneje i hipopneje: Kontinuirano mjerenje disajne frekvencije i volumena pomaže u dijagnostici i praćenju sindroma apneje u snu. Pacijent može spavati u "pametnoj" pidžami umjesto s glomaznim uređajima.
+ Praćenje astme i KOPB-a: Promjene u disajnom uzorku, kao što su plitko ili ubrzano disanje, mogu signalizirati akutno pogoršanje astme ili kronične opstruktivne plućne bolesti (KOPB), omogućujući brzu intervenciju.
+
+---
+
+3. Termoregulacija i medicinska primjena u rekonvalescenciji
+
+Funkcija termoregulacije u inteligentnoj odjeći nadilazi pasivnu izolaciju; odnosi se na aktivnu kontrolu temperature okoline uz kožu pacijenta.
+
+3.1. Pasivna i aktivna termoregulacija
+
+ Pasivna: Koriste se materijali koji optimalno upravljaju vlagom i paropropusnošću (npr. fazni materijali - PCM) kako bi stabilizirali mikroklimu uz kožu.
+ Aktivna: Neki napredni prototipovi uključuju integrirane tanke grijače ili Peltierove elemente koji mogu aktivno grijati ili hladiti određene dijelove tijela. Ovo je osobito važno kod pacijenata s poremećenom centralnom termoregulacijom (npr. kod ozljede kralježnične moždine) ili za lokalno hlađenje upaljenih područja.
+
+3.2. Praćenje temperature i febrilnih stanja
+
+Precizno i kontinuirano mjerenje temperature ključno je za rano prepoznavanje infekcija ili sepse, osobito kod imunokompromitiranih rekonvalescenata (npr. nakon kemoterapije ili transplantacije).
+
+ Dugotrajno praćenje: Pametna odjeća omogućuje bilježenje temperaturnih trendova tijekom 24 sata, što je važnije od jednokratnog mjerenja. Značajne su i minimalne, ali postojane, promjene u bazalnoj temperaturi.
+ Praćenje novorođenčadi: U neonatologiji, praćenje temperature i disanja kod nedonoščadi i novorođenčadi je od ključne važnosti. Pametne "pelene" i kombinezoni nude sigurnu alternativu tradicionalnim monitorima.
+
+---
+
+4. Primjena pametne odjeće u rehabilitaciji i rekonvalescenciji
+
+Nosiva tehnologija ima značajnu ulogu u fazi rekonvalescencije, pomažući pacijentima da povrate funkcionalnost i samostalnost.
+
+4.1. Praćenje aktivnosti i kvalitete sna
+
+Za rekonvalescente je praćenje razine fizičke aktivnosti (broj koraka, potrošene kalorije) ključan indikator oporavka. Odjeća s akcelerometrima može kvantificirati pokret.
+
+ Analiza sna: Kvaliteta i trajanje sna su kritični za oporavak. Odjeća može pratiti srčani ritam, disanje i pokrete tijekom spavanja kako bi procijenila faze i učinkovitost sna.
+ Detekcija specifičnih pokreta: U neurologiji, odjeća može pratiti drhtanje ili nevoljne pokrete kod pacijenata s Parkinsonovom bolešću ili pacijenata nakon moždanog udara.
+
+4.2. Biološka povratna sprega (Biofeedback) i neurorehabilitacija
+
+ Trening snage i opsega pokreta: Odjeća opremljena rastezljivim senzorskim nitima može mjeriti opseg pokreta zglobova. Pacijenti mogu dobiti povratnu informaciju u stvarnom vremenu putem mobilne aplikacije (biofeedback) o tome jesu li pravilno izveli vježbu.
+ Potpora za pravilno držanje: Ugrađeni senzori pritiska ili savijanja mogu upozoriti pacijenta na nepravilno držanje ili sjedenje, što je korisno u fizikalnoj terapiji za probleme s leđima.
+
+---
+
+5. Izazovi i budućnost pametne odjeće u zdravstvu
+
+Unatoč golemom potencijalu, pametna odjeća se suočava s nekoliko značajnih prepreka prije nego što postane standardna praksa u zdravstvu.
+
+5.1. Tehnički i regulatorni izazovi
+
+ Izdržljivost i pranje: Elektronički sklopovi i senzori moraju izdržati opetovano pranje bez gubitka performansi. To zahtijeva robustne i vodootporne metode inkapsulacije.
+ Točnost i kalibracija: Klinička validacija je nužna. Medicinski uređaji moraju zadovoljiti stroge standarde točnosti, a kalibracija senzora u tekstilu može biti teška jer se njihove karakteristike mogu mijenjati uslijed istezanja i pranja.
+ Regulacija i certifikacija: Za primjenu u medicini, odjeća mora dobiti regulatorno odobrenje (npr. CE oznaka u EU), što je dugotrajan i strog proces.
+
+5.2. Privatnost, sigurnost i etički aspekti
+
+ Zaštita podataka: Prikupljanje osjetljivih biometrijskih podataka zahtijeva najviše standarde kibernetičke sigurnosti i zaštite privatnosti, u skladu s propisima poput GDPR-a.
+ Klinička interpretacija: Stvaranje algoritama umjetne inteligencije (UI) koji mogu automatski analizirati goleme količine podataka i generirati klinički relevantna upozorenja je ključno.
+
+Budućnost pametne odjeće leži u minijaturizaciji, fleksibilnoj i rastezljivoj elektronici, te u razvoju novih senzora koji mogu mjeriti biokemijske parametre (npr. znoj za razinu glukoze). Inteligentna odjeća će postati temelj personalizirane medicine i udaljenog praćenja, transformirajući bolničku skrb u kućnu njegu.
+
+---
+
+Zaključak
+
+Pametna odjeća predstavlja paradigmu promjene u praćenju bolesnika i rekonvalescenata, obećavajući integraciju tehnologije u svakodnevni život bez narušavanja udobnosti. Kroz kombinaciju senzora, naprednih elektroničkih sklopova i tekstilne znanosti, ova nosiva tehnologija omogućuje kontinuirano mjerenje vitalnih znakova, od EKG-a do praćenja termoregulacije. Njezina medicinska primjena obuhvaća dijagnostiku, daljinsko praćenje kroničnih bolesnika i potporu u rehabilitaciji.
+
+Iako postoje izazovi u pogledu izdržljivosti, točnosti i regulatorne certifikacije, stalan napredak u fleksibilnoj elektronici i razvoju pametnih tekstila osigurava da će inteligentna odjeća igrati sve važniju ulogu u budućnosti zdravstva. Povezivanjem pacijenta s kliničkim timom putem diskretnih, neinvazivnih senzora, ova tehnologija doprinosi ranijoj intervenciji, boljim ishodima i višem standardu kvalitete života.
+
+ Ključne riječi: Pametna odjeća, inteligentna odjeća, senzori, zdravstvo, termoregulacija, elektronički sklopovi, nosiva tehnologija, medicinska primjena.

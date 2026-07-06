@@ -1,0 +1,87 @@
+Uvod: Digitalna Transformacija i Izazovi Nastave Programiranja
+Globalna pandemija COVID-19 drastično je preoblikovala visoko obrazovanje, prisiljavajući fakultete na brzi prelazak na nastavu na daljinu (engl. remote learning). Iako se digitalizacija procesa učenja i poučavanja na mnogim visokoškolskim ustanovama provodila već godinama, pandemija je izložila ključne ranjivosti, posebno u praktičnim disciplinama poput programiranja. Nastava programiranja suočava se s jedinstvenim izazovima u online okruženju: potreba za individualnom povratnom informacijom, učinkovitim vrednovanjem programskih rješenja i sprječavanjem akademskog nepoštenja (plagiranja) bez izravnog nadzora.
+
+Tradicionalni model ručnog ocjenjivanja programskih zadataka postao je neodrživ zbog velikog broja studenata i povećanog opterećenja nastavnika. U tom kontekstu, verifikatori, odnosno sustavi za automatsku provjeru i vrednovanje programskih rješenja (poznati i kao Automatic Programming Assessment Systems - APAS), postali su ne samo pomoćni alat, već nužni element digitalne didaktike programiranja.
+
+Cilj ovog seminara je istražiti i analizirati ulogu, primjenu, prednosti i nedostatke verifikatora u fakultetskoj nastavi programiranja tijekom razdoblja pandemije, fokusirajući se na didaktičke, tehničke i etičke aspekte njihove integracije u obrazovni proces.
+
+1. Verifikatori i Automatsko Vrednovanje Programskih Rješenja
+1.1. Definicija i Funkcionalnost Verifikatora
+Verifikator je softverski sustav dizajniran za automatsko testiranje i ocjenjivanje programskih zadataka koje su studenti predali. Ključne funkcije verifikatora uključuju:
+
+Provjera ispravnosti (funkcionalnosti): Pokretanje studentskog koda na unaprijed definiranim skupovima ulaznih podataka (test caseovima) i uspoređivanje dobivenih izlaza s očekivanim rezultatima.
+
+Stilistička analiza: Vrednovanje kvalitete koda, uključujući čitljivost, formatiranje, korištenje komentara i pridržavanje kodnih konvencija.
+
+Provjera učinkovitosti: Mjerenje vremenske i memorijske složenosti predanog rješenja (npr. Big O notacija), što je ključno u naprednijim tečajevima.
+
+Generiranje povratne informacije: Pružanje studentima trenutne i detaljne povratne informacije o greškama, testovima koje nisu prošli i dobivenim bodovima.
+
+1.2. Didaktička Uloga Verifikatora u Online Nastavi
+U uvjetima nastave na daljinu, didaktička vrijednost verifikatora se višestruko povećala:
+
+Trenutna povratna informacija: Studenti odmah dobivaju informaciju o uspješnosti svog koda, što omogućuje brži ciklus učenja i ispravljanja grešaka. To simulira radno okruženje i potiče aktivno učenje.
+
+Samostalno učenje: Omogućuju studentima da vježbaju vlastitim tempom, izvan rasporeda predavanja i konzultacija, što je ključno za individualizaciju učenja u heterogenim online grupama.
+
+Skalabilnost: Automatizirano ocjenjivanje omogućuje nastavnicima zadavanje većeg broja zadataka, što je neophodno za stjecanje praktičnih programerskih vještina.
+
+2. Izazovi Pandemije i Potreba za Verifikatorima
+Prelazak na online nastavu tijekom pandemije naglasio je dva glavna problema koja su verifikatori pomogli riješiti: opeterećenje nastavnika i akademsko nepoštenje.
+
+2.1. Administracija i Opterećenje Nastavnog Osoblja
+Masovno ocjenjivanje kodova ručno je izuzetno vremenski zahtjevno. Pandemija je zahtijevala da nastavnici ulože vrijeme u prilagodbu materijala, snimanje predavanja i organizaciju online ispita, dodatno smanjujući vrijeme za individualno ocjenjivanje. Verifikatori su preuzeli najveći dio rutinskog posla, oslobađajući nastavnike za kompleksnije zadatke, poput:
+
+Dizajniranje izazovnih zadataka i test caseova.
+
+Individualne konzultacije o složenijim konceptima koda, a ne samo sintaktičkim pogreškama.
+
+Analiza stilskih pogrešaka koje automatski alati teže detektiraju.
+
+2.2. Sprječavanje Akademskog Nepoštenja (Plagiranja)
+U virtualnom okruženju, rizik od plagiranja i prepisivanja značajno raste. Studenti imaju lakši pristup rješenjima na internetu (npr. Stack Overflow, GitHub) ili međusobno. Verifikatori su razvili specifične mehanizme za borbu protiv nepoštenja:
+
+Analiza sličnosti koda (Plagiarism Detection): Sofisticirani alati (poput MOSS ili vlastitih implementacija) uspoređuju predane kodove radi pronalaska sličnosti, čak i kada studenti mijenjaju imena varijabli, uvlačenje ili redoslijed naredbi.
+
+Primjer: Istraživanja su pokazala da su verifikatori omogućili identifikaciju modifikacije koda gdje student prepisano rješenje namjerno mijenja kako bi izgledalo originalno (promjena identifikatora, stila, poretka instrukcija), što je ključno uočeno tijekom pandemije.
+
+Ograničavanje vremena i resursa: Neki verifikatori (kao što je spomenuto u stručnoj literaturi) uključuju funkcije za ograničavanje vremena za rješavanje zadatka i bilježenje metapodataka o vremenu predaje, kao i tehnike za sprječavanje kopiranja koda iz vanjskih izvora unutar njihovog sučelja.
+
+3. Tehnička Implementacija i Primjeri Dobre Prakse
+U hrvatskom visokom obrazovanju, primjenjuju se različiti pristupi implementaciji verifikatora, od vlastitih rješenja do integracije postojećih komercijalnih ili open-source sustava.
+
+3.1. Prilagodba Okruženja i Alata
+Nastava na daljinu zahtijevala je integraciju verifikatora s postojećim sustavima za e-učenje (npr. Moodle, Loomen) ili razvoj web-baziranih rješenja. Ključni alati uključuju:
+
+Judge Sustavi (npr. Judge0, Codeforces, HackerRank): Pružaju robustno okruženje za izvršavanje i testiranje koda u izoliranom okruženju (sandboxing), što je bitno za sigurnost i objektivnost ocjenjivanja.
+
+Integracija s LMS-om (Learning Management System): Korištenje alata unutar platformi kao što su Loomen ili Moodle za lakšu administraciju i evidenciju ocjena.
+
+3.2. Izazov Dizajniranja Testova
+Snaga verifikatora leži u kvaliteti test caseova. U pandemijskim uvjetima, nastavnici su se morali fokusirati na dizajniranje sveobuhvatnih setova testova koji pokrivaju:
+
+Rubne slučajeve (Edge Cases): Testiranje ekstremnih ulaznih vrijednosti.
+
+Slučajeve pogreške (Error Handling): Provjera kako program reagira na neispravan unos.
+
+Performanse: Mjerenje izvršavanja za vrlo velike skupove podataka.
+
+Dizajn test caseova ključan je za sprječavanje "hakiranja" verifikatora, gdje studenti pokušavaju otkriti strukturu testova kako bi svoj kod prilagodili samo njima.
+
+4. Etičke i Didaktičke Implikacije Primjene
+Iako verifikatori nude značajne prednosti, njihova primjena nosi i određene didaktičke i etičke dileme.
+
+4.1. Fokus na Rezultat, a Ne na Proces
+Jedan od glavnih didaktičkih prigovora je da automatsko vrednovanje često naglašava ispravan izlaz (rezultat) na uštrb kvalitete i razumijevanja procesa (elegancije koda, dizajna algoritma, arhitekture). Studenti se mogu fokusirati na to da "ugode" verifikatoru, umjesto da napišu najbolji mogući kod. U pandemiji je ovo posebno izraženo jer je izostao izravni nastavnički nadzor nad procesom.
+
+Rješenje: Nastavnici su trebali kombinirati automatsko testiranje funkcionalnosti s ručnom evaluacijom stila i strukture koda za završne projekte i ispite, kao i uvesti Peer Review sesije.
+
+4.2. Pristup i Digitalna Pismenost
+U pandemiji, nejednakost u pristupu internetu i računalnoj opremi (digitalni jaz) postala je izraženija. Verifikatori zahtijevaju stabilnu vezu i određeno programsko sučelje. Fakulteti su morali osigurati dosljednost sučelja (kao što je slučaj s razvijenim, specifičnim Verifikatorom) kako bi smanjili vrijeme prilagodbe studenta, posebno za one s manje IKT kompetencija.
+
+Zaključak: Budućnost Nastave Programiranja s Verifikatorima
+Primjena verifikatora u nastavi programiranja tijekom COVID-19 pandemije pokazala se ključnom za održavanje kvalitete i skalabilnosti obrazovnog procesa. Verifikatori su uspješno odgovorili na izazove masovnog vrednovanja, potrebe za brzim povratnim informacijama i borbe protiv plagiranja u online okruženju.
+
+Dok su verifikatori olakšali administrativni teret i osigurali objektivnost provjere funkcionalnosti, uočeno je da ne smiju biti jedino sredstvo vrednovanja. Budućnost nastave programiranja na fakultetima leži u hibridnom modelu koji integrira snagu verifikatora (trenutna povratna informacija, skalabilnost, detekcija plagiranja) s ključnom ulogom nastavnika u procjeni kvalitete dizajna koda, mentorstvu i razvoju apstraktnog mišljenja.
+
+Pandemija je ubrzala usvajanje ovih tehnologija, potvrđujući da su verifikatori trajni i esencijalni dio modernog fakultetskog kurikuluma programiranja, čime se visoko obrazovanje učinkovito prilagođava izazovima digitalnog doba.

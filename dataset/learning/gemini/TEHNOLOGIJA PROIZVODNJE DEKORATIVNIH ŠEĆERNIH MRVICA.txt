@@ -1,0 +1,57 @@
+1. Uvod
+
+Šećerne mrvice, poznate i kao šareni posipi (engl. _sprinkles_ ili _nonpareils_), predstavljaju esencijalni dodatak u slastičarstvu i pekarskoj industriji. Njihova primarna funkcija je estetska – daju boju, teksturu i vizualnu privlačnost sladoledima, tortama, krafnama i desertima. Iako se naizgled radi o jednostavnom proizvodu, njihova je proizvodnja sofisticirani tehnološki proces koji zahtijeva preciznu kontrolu sirovina i uvjeta obrade kako bi se postigla željena stabilnost, sjaj i ujednačenost boje. U ovom seminarskom radu analizirat ćemo ključne sirovine, tehnološke metode proizvodnje te standarde kontrole kvalitete koji su nužni za dobivanje visokokvalitetnih šećernih mrvica.
+
+2. Sirovine i formulacija
+
+Formulacija šećernih mrvica relativno je jednostavna, ali omjeri i kvaliteta sirovina presudni su za konačnu teksturu i trajnost.
+
+2.1. Glavne komponente
+
+ Šećer (Saharoza): Temeljna sirovina. Obično se koristi sitni kristalni šećer. Često se koristi i glukozni sirup ili dekstroza za kontrolu kristalizacije i postizanje glatke, sjajne površine.
+ Veziva i Stabilizatori: Najvažniji sastojak za formiranje tijela mrvice je škrob (najčešće kukuruzni ili pšenični) ili hidrokosoloidi kao što su maltodekstrin ili arapska guma ($E414$). Ovi sastojci osiguravaju da mrvice zadrže oblik i da se ne tope prilikom kontakta s vlagom ili masnoćama.
+ Boje i Arome: Koriste se prehrambene boje, koje mogu biti prirodne (npr. kurkumin $E100$, karmin $E120$, betanin $E162$) ili sintetske (azo-boje) – izbor ovisi o zakonodavstvu tržišta i zahtjevima kupca. Arome (npr. vanilija) dodaju se za poboljšanje okusa.
+ Glazura (Sjaj): Za postizanje karakterističnog sjaja koriste se masnoće (npr. palmino ulje ili kokosovo ulje) i tvari za glaziranje poput šelaka ($E904$) ili karnauba voska ($E903$). Oni štite mrvice od vlage i sprječavaju njihovo lijepljenje.
+
+3. Tehnološki proces proizvodnje
+
+Postoje dvije glavne metode proizvodnje, ovisno o željenom obliku i veličini mrvica: ekstruzija (za ravne štapićaste mrvice) i pan-glaziranje (za kuglaste mrvice – nonpareils).
+
+3.1. Metoda ekstruzije (Najčešća metoda)
+
+Ovaj proces imitira proizvodnju tjestenine i najčešći je za izradu tipičnih štapićastih mrvica.
+
+1.  Priprema smjese: Šećer u prahu, škrob (ili drugo vezivo), voda, boje i arome miješaju se u planetarnoj miješalici dok se ne dobije gusta, plastična masa – tijesto.
+2.  Ekstruzija: Dobiveno tijesto se stavlja u ekstruder. Pod pritiskom, masa se potiskuje kroz matrice (ploče s precizno kalibriranim rupicama) željenog oblika i promjera.
+3.  Rezanje: Duge, meke niti koje izlaze iz matrice se automatski režu rotirajućim noževima na željenu duljinu (obično $2-5 \text{ mm}$).
+4.  Sušenje: Svježe rezane mrvice imaju visok sadržaj vlage i moraju se sušiti u kontinuiranim trakama ili sušilicama s fluidiziranim slojem. Kontrola temperature ($40-60^\circ \text{C}$) i vremena ključna je za sprječavanje karamelizacije i pucanja.
+5.  Glaziranje: Potpuno osušene mrvice prebacuju se u bubanj za glaziranje (dražeiranje). Tamo se raspršuje tanki sloj masnoće ili voska (npr. šelak) pomiješan s alkoholnim otapalom. Ovo stvara sjaj i zaštitni premaz.
+6.  Hlađenje i pakiranje: Nakon završnog sušenja i glaziranja, mrvice se hlade i pakiraju.
+
+3.2. Metoda pan-glaziranja (Nonpareils)
+
+Ova se metoda koristi za izradu savršeno okruglih i sitnih kuglica.
+
+1.  Inicijalna jezgra: Male, okrugle jezgre (često od sitnog kristalnog šećera ili škroba) stavljaju se u rotirajući bubanj za dražeiranje.
+2.  Aplikacija sirupa: Postupno se aplicira zasićena otopina šećera i boje (sirup). Bubanj rotira, a kuglice se valjaju, stvarajući ravnomjeran sloj sirupa.
+3.  Sušenje i rast: Postupak se ponavlja, a između aplikacija sirupa dodaje se zrak za sušenje sloja. Sloj po sloj, kuglice rastu do željene veličine uz savršeno okrugli oblik.
+4.  Završno glaziranje: Kao i kod ekstrudiranih mrvica, slijedi glaziranje za sjaj i zaštitu.
+
+4. Kontrola kvalitete
+
+Kvaliteta šećernih mrvica je definirana senzornim, fizikalnim i mikrobiološkim parametrima.
+
+4.1. Fizikalna i Senzorna Kontrola
+
+ Veličina i Oblik: Kontrola s pomoću kalibara ili automatskim vizualnim sustavima radi osiguravanja ujednačenosti. Odstupanje u veličini može utjecati na daljnju primjenu.
+ Sadržaj Vlage: Ključan parametar. Mora biti nizak (obično ispod $1.5\%$) kako bi se spriječilo lijepljenje, mikrobiološki rast i gubitak hrskavosti.
+ Boja i Sjaj: Mjerenje kolormetrom i vizualna kontrola osiguravaju konzistenciju boja. Sjaj se kontrolira sastavom i nanošenjem glazure.
+ Konzistencija: Mrvice moraju biti čvrste, a ne lomljive, te se ne smiju lako topiti pri sobnoj temperaturi.
+
+4.2. Zdravstvena Kontrola
+
+Osiguravanje da su prehrambene boje unutar zakonski dopuštenih granica, te kontrola mikrobiološke čistoće, uključujući odsutnost patogenih bakterija (npr. _Salmonella_) i kvasaca. Zbog visokog sadržaja šećera, kontaminacija je rjeđa, ali nije isključena, posebno nakon procesa sušenja i pakiranja.
+
+5. Zaključak
+
+Proizvodnja šećernih mrvica je kemijsko-tehnološki proces koji spaja precizno miješanje sirovina (šećer, veziva, bojila) s mehaničkim procesima ekstruzije ili dražeiranja. Ključ uspjeha leži u kontroli reoloških svojstava tijesta prije ekstruzije i kontroli procesa sušenja i glaziranja kako bi se postigla konačna stabilnost, sjaj i dugotrajnost proizvoda. Uz strogo pridržavanje standarda kvalitete i sigurnosti hrane, industrijska proizvodnja šećernih mrvica nastavlja davati ključni estetski doprinos modernom slastičarstvu.

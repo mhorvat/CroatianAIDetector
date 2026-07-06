@@ -1,0 +1,148 @@
+1. Uvod
+
+1.1. Kontekst i značaj problematike
+
+Uzdužna povezanost (longitudinalna konektivnost) vodotoka predstavlja ključni ekološki preduvjet za održavanje zdravih i biološki raznolikih riječnih ekosustava. Prekid ove povezanosti, najčešće uzrokovan poprečnim preprekama kao što su brane, ustave i manji pragovi, ima dalekosežne negativne posljedice na migraciju riba, osobito anadromnih (mrijeste se u slatkoj vodi, žive u moru) i katadromnih (mrijeste se u moru, žive u slatkoj vodi) vrsta, ali i rezidentnih vrsta koje obavljaju migracije unutar riječnog sustava. Migracije su neophodne za reprodukciju, traženje hrane i izbjegavanje nepovoljnih uvjeta. U Hrvatskoj, s bogatom mrežom krških rijeka i nizinskih vodotoka, problem prekinute uzdužne povezanosti uslijed brojnih malih pragova i derivacija postaje izuzetno aktualan.
+
+Za ublažavanje ovih negativnih utjecaja, u praksi se koriste tehničke riblje staze (Ribe staze – RT) ili riblji prolazi. Njihova osnovna funkcija jest osigurati siguran i efikasan prolaz ribama preko prepreke. Međutim, funkcionalnost riblje staze nije zajamčena samo njezinom prisutnošću, već primarno ispravnim hidrauličkim proračunom koji osigurava uvjete u rasponu fizioloških sposobnosti ciljanih ribljih vrsta. Neadekvatno projektirane staze mogu postati barijere umjesto prolazi.
+
+1.2. Cilj seminara
+
+Ovaj seminar ima za cilj detaljno istražiti i prikazati primjenu nomograma kao praktičnog alata za brzi proračun funkcionalnosti tehničkih ribljih staza na malim pragovima. Kroz analizu rezultata fizičkih i numeričkih modela, definirat će se ključne hidrauličke funkcionalne zavisnosti te će se predstaviti konkretni primjeri nomograma za najčešće tipove ribljih staza (bazenske s potopljenim pregradama i staze s vertikalnim otvorima). Poseban naglasak bit će stavljen na preporučene i granične vrijednosti hidrauličkih parametara prema hrvatskoj zonaciji vodotoka i specifičnim ribljim vrstama.
+
+Ključne riječi: riblje staze, nomogrami, hidraulički proračun, numerički model, fizički model, uzdužna povezanost, migracija riba.
+
+---
+
+2. Metodologija istraživanja funkcionalnosti ribljih staza
+
+Precizan hidraulički proračun ključan je za osiguranje prolaska riba. Budući da su protjecajni procesi u ribljim stazama turbulentni i kompleksni, za njihovo razumijevanje i definiranje funkcionalnih zavisnosti koriste se dvije osnovne metode: fizičko modeliranje i numeričko modeliranje.
+
+2.1. Fizičko modeliranje (Laboratorijska istraživanja)
+
+Fizički modeli predstavljaju umanjenu repliku stvarne riblje staze. Oni su nezamjenjivi za dobivanje pouzdanih podataka o disipaciji energije, protoku, brzinama i turbulentnim poljima unutar staze, posebice u kompleksnim zonama kao što su bazeni i pregrade.
+
+#2.1.1. Načelo Froudeove sličnosti
+
+Za dimenzioniranje fizičkog modela i prijenos rezultata na stvarni objekt (prototip) koristi se načelo Froudeove sličnosti. Froudeov broj ($Fr$) predstavlja omjer inercijskih i gravitacijskih sila te je definiran kao:
+$$
+Fr = \frac{v}{\sqrt{g \cdot L}}
+$$
+gdje je $v$ karakteristična brzina, $g$ gravitacijsko ubrzanje, a $L$ karakteristična duljina. U hidrauličkim modelima gdje dominira gravitacija (poput otvorenih tokova i hidrauličkih skokova), $Fr_{model}$ mora biti jednak $Fr_{prototip}$.
+
+Ovaj uvjet diktira skalarne odnose za duljine ($\lambda_L$), brzine ($\lambda_v$) i protoke ($\lambda_Q$):
+
+ Skala duljina: $\lambda_L = \frac{L_p}{L_m}$ (gdje indeksi $p$ i $m$ označavaju prototip i model)
+ Skala brzina: $\lambda_v = \sqrt{\lambda_L}$
+ Skala protoka: $\lambda_Q = \lambda_v \cdot \lambda_L^2 = \lambda_L^{2.5}$
+
+Rezultati mjerenja u modelu, poput brzina (v) i dubina (h), skaliraju se na prototip prema ovim zavisnostima.
+
+2.2. Numeričko modeliranje (CFD – Computational Fluid Dynamics)
+
+Numerički modeli, primjenom metoda računalne dinamike fluida (CFD), omogućuju simulaciju protjecanja i turbulencije u 3D prostoru. Prednost numeričkog modela je mogućnost brze izmjene geometrije i proračuna velikog broja scenarija (npr. promjene protoka, vodostaja) uz znatno niže troškove od fizičkog modeliranja. Za simulaciju turbulencije u ribljim stazama najčešće se koristi RANS (Reynolds-Averaged Navier-Stokes) jednadžbe u kombinaciji s modelima turbulencije poput $k-\epsilon$ ili $k-\omega$.
+
+Glavni hidraulički parametri dobiveni modeliranjem su:
+
+1.  Maksimalna brzina toka ($v_{max}$) unutar staze: Ključan faktor jer riba mora plivati brže od toka, ali pritom ne smije prelaziti njezinu kritičnu brzinu plivanja.
+2.  Disipacija specifične energije ($\Delta E$): Odnosi se na gubitak energije po jedinici mase vode između dva uzastopna bazena. Povezan je s turbulencijom i ne smije prelaziti granične vrijednosti.
+3.  Maksimalna turbulencija i Reynoldsov napon smicanja ($\tau$): Ekstremna turbulencija može dezorijentirati ili fizički ozlijediti ribu.
+4.  Minimalna dubina vode ($h_{min}$): Osigurava da riba ima dovoljno prostora za prolaz i plivanje.
+
+---
+
+3. Nomogrami kao alat za hidraulički proračun
+
+Nomogrami su grafički prikazi funkcionalnih zavisnosti triju ili više varijabli. U kontekstu ribljih staza, oni omogućuju projektantima da brzo odrede, primjerice, potrebne dimenzije staze za zadani protok i pad razine, ili da provjere funkcionalnost postojeće staze. Njihova prednost leži u brzini i jednostavnosti korištenja, čime se izbjegavaju dugotrajni iterativni proračuni ili kompleksne CFD simulacije u inicijalnoj fazi projektiranja.
+
+3.1. Funkcionalne zavisnosti i granični parametri
+
+Nomogrami se temelje na povezivanju ključnih geometrijskih parametara staze (širina $B$, duljina bazena $L$, visina pregrade $P$) s hidrauličkim parametrima toka (protok $Q$, pad razine $\Delta h$, brzina $v$).
+
+#3.1.1. Funkcionalna zavisnost protoka, brzine i pada razine vode
+
+Osnovna jednadžba za proračun snage disipacije energije ($P$) po jedinici volumena toka ($V$) u bazenu riblje staze je ključna za procjenu funkcionalnosti:
+$$
+\varepsilon = \frac{P}{V} = \frac{\rho \cdot g \cdot Q \cdot \Delta h}{\text{Vol}}
+$$
+gdje je $\varepsilon$ srednja specifična disipacija energije (snaga disipacije po jedinici mase), $\rho$ gustoća vode, $g$ gravitacijsko ubrzanje, $Q$ protok, $\Delta h$ pad razine vode između dva bazena, a $\text{Vol}$ volumen bazena. Ova vrijednost mora biti manja od fiziološke tolerancije ciljanih ribljih vrsta.
+
+Brzina toka ($v$) u prolazu ili bazenu direktno ovisi o protoku i površini protjecanja: $v = Q / A$. Nomogrami grafički predstavljaju ovu kompleksnu ovisnost za različite geometrije.
+
+3.2. Nomogrami za bazenske riblje staze s potopljenim pregradama
+
+Bazenske riblje staze s potopljenim pregradama (eng. pool-type fishway) najčešći su tip. Funkcionalnost ovisi o količini energije koja se disipira hidrauličkim skokom u svakom bazenu.
+
+Nomogram za ovaj tip staze tipično povezuje:
+ A-osu (X-os): Protok kroz stazu ($Q$ u $\text{m}^3/\text{s}$).
+ B-osu (Y-os): Visinu pregrade (pad razine $\Delta h$ ili visina praga $P$ u $\text{m}$).
+ C-linije (Krivulje): Izolinije maksimalne brzine u bazenu ($v_{max}$) ili izolinije snage disipacije po volumenu ($\varepsilon$ u $\text{W}/\text{m}^3$).
+
+Primjer nomograma (Konceptualni prikaz):
+
+Nomogram se sastoji od niza krivulja $\varepsilon = konst.$ u koordinatnom sustavu $Q$ naspram $\Delta h$ za fiksne dimenzije bazena. Za dani protok i geometriju, projektant može na nomogramu očitati disipaciju energije i provjeriti je li unutar preporučenih granica.
+
+>
+
+---
+
+4. Nomogrami za riblje staze s vertikalnim otvorima
+
+Riblje staze s vertikalnim otvorima (eng. vertical slot fishway) popularne su jer su manje osjetljive na promjene vodostaja. Otvor omogućuje ribama da se kreću kroz cijeli vodni stupac.
+
+Nomogrami za vertikalne otvore fokusiraju se na proračun brzine toka u otvoru.
+
+Primjer nomograma (Konceptualni prikaz):
+
+Ovaj nomogram može povezivati:
+ A-osu (X-os): Pad razine vode između dva bazena ($\Delta h$ u $\text{m}$).
+ B-osu (Y-os): Širina vertikalnog otvora ($W$ u $\text{m}$).
+ C-linije (Krivulje): Izolinije maksimalne brzine u otvoru ($v_{slot}$ u $\text{m}/\text{s}$) za fiksni protok ($Q$).
+
+Ključni proračunski parametar: Brzina u vertikalnom otvoru ključna je jer predstavlja usko grlo. Nomogram pomaže u određivanju optimalne širine otvora $W$ za zadani $\Delta h$ i $Q$ kako bi se osiguralo da $v_{slot}$ ne prelazi graničnu brzinu plivanja ciljane riblje vrste.
+
+>
+
+---
+
+5. Analiza preporučenih i graničnih vrijednosti u kontekstu Hrvatske
+
+Funkcionalnost riblje staze direktno ovisi o usklađenosti hidrauličkih parametara s fiziološkim sposobnostima ribljih vrsta prisutnih u određenom vodotoku. U Hrvatskoj je potrebno uvažiti specifičnosti hidrologije i ihtiofaune.
+
+5.1. Zonacija vodotoka i ciljane riblje vrste
+
+Prema hrvatskim hidrološkim i ekološkim smjernicama, vodotoci se zoniraju, a funkcionalnost ribljih staza mora biti prilagođena najslabijim plivačima ili vrstama od posebnog značaja (npr. endemi, ugrožene vrste).
+
+ Gornji tokovi i krške rijeke (Pastrvska zona): Glavne vrste su potočna pastrva (Salmo trutta), lipljan (Thymallus thymallus). Ove vrste su dobri plivači.
+     Preporučene vrijednosti: Maksimalna brzina $v_{max} < 1.5 - 2.0 \text{ m/s}$, Snaga disipacije $\varepsilon < 150 - 200 \text{ W}/\text{m}^3$.
+ Srednji i donji tokovi (Ciprinidna zona): Glavne vrste su mrena (Barbus barbus), podust (Chondrostoma nasus), deverika (Abramis brama). Ove vrste su slabiji plivači.
+     Preporučene vrijednosti: Maksimalna brzina $v_{max} < 0.8 - 1.2 \text{ m/s}$, Snaga disipacije $\varepsilon < 50 - 100 \text{ W}/\text{m}^3$.
+
+Za riblje staze na malim pragovima, najčešće su cilj mrene i podusti jer su njihove migracije ključne za održavanje populacija.
+
+5.2. Granične vrijednosti za funkcionalnost
+
+Projektanti moraju koristiti nomograme kako bi osigurali da se hidraulički parametri kreću unutar granica prilagođenih za slabo plivajuće vrste, jer će u tom slučaju i snažni plivači proći.
+
+| Hidraulički Parametar | Jedinica | Granična vrijednost (Ciprinidna zona) |
+| :--- | :--- | :--- |
+| Maksimalna brzina toka ($v_{max}$) | $\text{m}/\text{s}$ | $ < 0.8 - 1.2$ |
+| Snaga disipacije ($\varepsilon$) | $\text{W}/\text{m}^3$ | $ < 50 - 100$ |
+| Maksimalni pad razine po bazenu ($\Delta h$) | $\text{m}$ | $ < 0.15 - 0.30$ |
+| Minimalna dubina toka ($h_{min}$) | $\text{m}$ | $ > 0.40$ |
+
+Nomogrami omogućuju brzu provjeru, primjerice, ako je projektirani pad bazena $\Delta h = 0.25 \text{ m}$ i protok $Q = 0.5 \text{ m}^3/\text{s}$, a nomogram za tu geometriju daje $\varepsilon = 120 \text{ W}/\text{m}^3$, staza bi bila neprohodna za ciprinidne vrste i zahtijevala bi promjenu geometrije (npr. povećanje volumena bazena ili smanjenje $\Delta h$).
+
+5.3. Numerički modeli za optimizaciju
+
+Iako nomogrami daju brzu inicijalnu procjenu, numerički modeli (CFD) se koriste u završnoj fazi projektiranja za preciznu optimizaciju. Oni omogućuju lociranje točno onih točaka u stazi (npr. kutovi bazena, izlaz iz otvora) gdje su brzine i turbulencija najveće, što je ključno za postizanje maksimalne funkcionalnosti. Fizički modeli, pak, služe za kalibraciju i validaciju numeričkih modela. Korištenjem nomograma, projektant može brzo suziti raspon geometrija koje će se detaljno istraživati.
+
+---
+
+6. Zaključak
+
+Nomogrami predstavljaju izuzetno vrijedan i praktičan alat u hidrotehničkom projektiranju ribljih staza, posebice za male pragove gdje je često potrebno brzo i troškovno efikasno rješenje. Njihova glavna snaga leži u sposobnosti brzog grafičkog prikaza kompleksnih funkcionalnih zavisnosti između geometrijskih parametara (poput širine, duljine i pada) i ključnih hidrauličkih varijabli (protok, brzina i disipacija energije).
+
+Kroz istraživanje temeljeno na fizičkim i numeričkim modelima – s posebnim naglaskom na poštivanju Froudeove sličnosti – moguće je generirati pouzdane nomograme za najčešće tipove staza kao što su bazenske s potopljenim pregradama i staze s vertikalnim otvorima. Ovi grafički alati omogućuju inženjerima da osiguraju da ključni parametri, poput snage disipacije energije ($\varepsilon$) i maksimalne brzine toka ($v_{max}$), ostanu unutar preporučenih graničnih vrijednosti.
+
+Funkcionalnost riblje staze direktno je povezana s očuvanjem uzdužne povezanosti vodotoka i uspješnosti migracije riba. U kontekstu Hrvatske, projektiranje mora biti usklađeno sa zonacijom vodotoka, pri čemu se najveća pozornost mora posvetiti limitirajućim faktorima za slabo plivajuće ciprinidne vrste. Ispravno primijenjeni nomogrami osiguravaju da tehničko rješenje u potpunosti služi svojoj ekološkoj svrsi – pretvaranju umjetne prepreke u prohodan koridor za riblji svijet.

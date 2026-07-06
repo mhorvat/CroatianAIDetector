@@ -1,0 +1,94 @@
+1. Uvod
+Digitalizacija je transformirala mnoge aspekte života, uključujući sektor fitnessa i zdravlja. Klasični pristup vježbanju, često opterećen neefikasnošću i nedostatkom prilagodbe, postupno se zamjenjuje sofisticiranim digitalnim rješenjima. S porastom svijesti o važnosti tjelesne aktivnosti i sve većom dostupnošću pametnih uređaja, postoji izražena potreba za alatima koji omogućuju efikasno praćenje napretka i izradu istinski personaliziranih treninga. Standardni programi često ne uzimaju u obzir individualne fizičke predispozicije, ciljeve, razinu kondicije, pa čak i dostupnu opremu, što dovodi do smanjene motivacije i, u nekim slučajevima, ozljeda.
+
+Ovaj seminar istražuje proces izrade aplikacije koja adresira navedene nedostatke. Fokus je na kreiranju robustnog web razvoja rješenja koje koristi suvremene tehnologije za pružanje dinamičkog i prilagodljivog iskustva vježbanja. Kroz pregled ključnih funkcionalnosti, tehničkih zahtjeva i arhitektonskih odluka, detaljno će se opisati kako se može izgraditi platforma koja ne samo da prati statistike, već i aktivno sudjeluje u optimizaciji korisničkog puta prema zdravlju i fitnessu. Ključne tehnologije, s posebnim naglaskom na PHP kao serverski jezik, bit će analizirane u kontekstu njihove prikladnosti za izradu ovakvog sustava, osiguravajući skalabilnost i sigurnost.
+
+2. Konceptualni okvir i ključne funkcionalnosti aplikacije
+Konceptualni okvir aplikacije za personalizirani trening mora biti utemeljen na tri stupa: prikupljanje podataka, analiza podataka i generiranje plana. Aplikacija mora biti sposobna prikupiti inicijalne podatke o korisniku (spol, dob, visina, težina, zdravstveno stanje, ciljevi, trenutna razina kondicije, preferirana lokacija vježbanja – kod kuće/teretana/vanjski prostor) i kontinuirano bilježiti podatke o izvršenim treninzima (vježbe, serije, ponavljanja, težine, trajanje, percipirani napor).
+
+Ključne funkcionalnosti obuhvaćaju:
+
+Registracija i profil korisnika: Siguran sustav za autentifikaciju i autorizaciju. Detaljan profil s metričkim podacima i fitness ciljevima.
+
+Baza vježbi: Sveobuhvatna i strukturirana baza podataka s vježbama (s opisima, uputama i demonstracijskim medijem), kategorizirana prema mišićnoj skupini, opremi i tipu (snaga, kardio, fleksibilnost).
+
+Automatsko generiranje plana: Algoritam koji, na temelju korisničkih inputa i definiranih principa sportske znanosti (npr. progresivno opterećenje, periodizacija), kreira inicijalni program treninga.
+
+Praćenje treninga: Sučelje za jednostavno bilježenje izvedenih vježbi i setova. Automatsko izračunavanje volumena, intenziteta i utrošenih kalorija.
+
+Vizualizacija napretka: Grafički prikaz ključnih metrika tijekom vremena (npr. snaga u čučnju, promjena tjelesne mase, prosječni volumen tjednog treninga).
+
+Komunikacija i feedback: Mogućnost za korisnike da ostave bilješke o treningu, što služi kao ulazni podatak za re-evaluaciju algoritma personalizacije.
+
+Sustav obavijesti: Podsjetnici i motivacijske poruke.
+
+3. Arhitektura i web razvoj aplikacije
+Za izradu kompleksne aplikacije za fitness praćenje preporučuje se trostruka slojevita arhitektura (Three-tier architecture): prezentacijski sloj (frontend), aplikacijski sloj (backend) i sloj baze podataka.
+
+3.1. Sloj prezentacije (Frontend)
+Ovaj sloj je odgovoran za korisničko iskustvo (UX) i korisničko sučelje (UI). Mora biti responzivan (prilagođen za mobilne uređaje) i intuitivan. Moderne web razvoj tehnologije kao što su React, Vue.js ili Angular idealne su za izgradnju dinamičnog sučelja koje komunicira s backendom putem RESTful API-ja. Ključno je osigurati brzu interakciju, posebice kod unosa podataka tijekom treninga, gdje se traži minimalan broj klikova.
+
+3.2. Sloj aplikacije (Backend) – Uloga PHP-a
+Aplikacijski sloj predstavlja srce sustava i zadužen je za poslovnu logiku, autentifikaciju, obradu podataka i interakciju s bazom podataka. PHP je iznimno prikladan izbor za ovaj sloj zbog svoje zrelosti, bogatog ekosustava (posebice moderni frameworkovi poput Laravel ili Symfony), i dokazane skalabilnosti u web okruženjima. Korištenjem Laravel frameworka, na primjer, pojednostavljuje se implementacija složenih funkcionalnosti kao što su:
+
+Rukovanje API-jem: Brza izgradnja sigurnih RESTful endpointa za komunikaciju s frontendom.
+
+Autentifikacija i autorizacija: Upravljanje korisničkim sesijama i pristupnim pravima.
+
+Poslovna logika: Implementacija algoritama za personalizirani trening, uključujući formule za izračun volumena treninga, preporuke za opterećenje i pravila za periodizaciju.
+
+Zakazani poslovi (Scheduled Jobs): Korištenje PHP alata (npr. Laravel Scheduler) za periodično procesiranje podataka, slanje izvještaja ili automatsko prilagođavanje planova.
+
+PHP pruža stabilnu platformu za obradu velikog broja zahtjeva, što je ključno za aplikaciju koja će kontinuirano primati podatke o praćenju treninga od velikog broja korisnika.
+
+3.3. Sloj baze podataka
+Relacijske baze podataka (npr. MySQL ili PostgreSQL) su najbolji izbor za ovu aplikaciju jer pružaju integritet podataka i robusne veze između entiteta (Korisnici, Vježbe, Treninzi, Setovi, Planovi). Shema baze podataka mora biti pažljivo dizajnirana kako bi podržala brze upite za dohvaćanje korisničkih povijesti i efikasno generiranje novih planova treninga.
+
+4. Algoritmi i implementacija personaliziranog treninga
+Prava vrijednost ove aplikacije leži u njezinoj sposobnosti personalizacije. To zahtijeva implementaciju sofisticiranih algoritama koji nadilaze statične šablone.
+
+4.1. Inicijalna personalizacija
+Prvi korak je izrada početnog plana na temelju ciljeva korisnika (npr. mišićna hipertrofija, gubitak masnoće, snaga) i njihove razine kondicije (početnik, srednje, napredno). Algoritam mora pratiti principe periodizacije (makrociklus, mezociklus, mikrociklus) kako bi osigurao da treningi ne stagniraju i da se tijelo efikasno oporavlja. Na primjer, za hipertrofiju, algoritam mora izračunati odgovarajući tjedni volumen po mišićnoj skupini i rasporediti ga na optimalan broj treninga.
+
+4.2. Dinamička adaptacija (Feedback Loop)
+Ključna razlika između generičkog plana i personaliziranog treninga je dinamička adaptacija. Aplikacija mora koristiti podatke iz praćenja treninga kao povratnu informaciju (feedback) za kontinuirano optimiziranje plana.
+
+Praćenje učinkovitosti: Ako korisnik dosljedno bilježi da je lako odradio zadane serije i ponavljanja, algoritam mora povećati opterećenje (progresivno opterećenje).
+
+Praćenje oporavka: Ako korisnik prijavljuje kronični umor ili performanse opadaju, algoritam mora privremeno smanjiti volumen ili intenzitet (tzv. deload tjedan).
+
+Analiza preferencija: Na temelju učestalosti izmjena vježbi ili preskakanja određenih tipova treninga, algoritam može prilagoditi buduće prijedloge u skladu s korisničkim navikama, čime se povećava dugoročna angažiranost u fitness programu.
+
+Ovi algoritmi se implementiraju unutar backend sloja koristeći PHP i njegove biblioteke za obradu podataka. S obzirom na to da se radi o poslovnoj logici koja uključuje složene matematičke proračune i uvjete, PHP je idealan za strukturirano kodiranje i testiranje ovih funkcionalnosti.
+
+5. Sigurnost i skalabilnost sustava
+U web razvoj projektu ovakve prirode, sigurnost i skalabilnost su imperativi.
+
+5.1. Sigurnost podataka
+Korisnički podaci (osobni podaci, podaci o zdravlju i fitnessu) su osjetljivi, stoga je zaštita ključna.
+
+Autentifikacija: Koristiti jake mehanizme za heširanje lozinki (npr. bcrypt), dvofaktorsku autentifikaciju (2FA) i sigurne sesije.
+
+API sigurnost: Zaštita API endpointa s tokenima (npr. JWT) kako bi se spriječio neovlašteni pristup.
+
+Validacija: Rigorozna validacija svih ulaznih podataka na backendu (PHP), čime se sprječavaju napadi poput SQL injectiona i Cross-Site Scriptinga (XSS).
+
+5.2. Skalabilnost
+Uspješna aplikacija privući će velik broj korisnika, što zahtijeva da sustav bude skalabilan.
+
+Backend: PHP frameworkovi poput Laravel i Symfony su dizajnirani za podršku visokog prometa. Korištenje cachinga (npr. Redis) za često tražene podatke (kao što je baza vježbi) smanjuje opterećenje baze podataka.
+
+Baza podataka: Implementacija replikacije (Master-Slave) za odvajanje operacija čitanja i pisanja.
+
+Infrastruktura: Korištenje load balancera i postavljanje aplikacije na cloud platformu (AWS, Google Cloud, Azure) s mogućnošću automatskog skaliranja (horizontalno skaliranje – dodavanje novih poslužitelja po potrebi).
+
+Pravilno planiranje arhitekture i korištenje provjerenih PHP rješenja omogućuju da aplikacija raste bez degradacije performansi.
+
+6. Zaključak
+Izrada aplikacije za praćenje i kreiranje personaliziranih treninga predstavlja kompleksan multidisciplinarni web razvoj projekt koji kombinira principe sportske znanosti s naprednim softverskim inženjerstvom.
+
+Ključni zahtjevi uključuju robusnu bazu podataka vježbi, intuitivno korisničko sučelje za unos podataka i dinamičke algoritme za prilagodbu plana.
+
+PHP se, potpomognut modernim frameworkovima, dokazao kao izuzetno prikladan izbor za backend aplikacijski sloj, pružajući potrebnu stabilnost, skalabilnost i ekosustav za implementaciju složene poslovne logike personaliziranog treninga.
+
+Uspješnost ove aplikacije ovisi o kontinuiranom feedback loopu koji koristi podatke o stvarnim treninzima za optimizaciju budućih preporuka, čime se maksimalno povećava efikasnost i dugoročna motivacija korisnika u postizanju njihovih fitness ciljeva.

@@ -1,0 +1,137 @@
+Uvod
+
+Suvremena računalna oprema, od osobnih računala i radnih stanica do kompleksnih poslužiteljskih farmi i superračunala, karakterizirana je sve većom gustoćom tranzistora i, posljedično, sve većom disipacijom topline. Centralne procesorske jedinice (CPU), grafičke procesorske jedinice (GPU), čipseti i moduli radne memorije (RAM) generiraju značajne količine toplinske energije koja, ako se neadekvatno odvodi, izravno ugrožava stabilnost, pouzdanost i vijek trajanja računalnih komponenti. Optimalno upravljanje toplinom, poznato kao računalno hlađenje, stoga nije samo preporučljiva praksa, već esencijalni preduvjet za postizanje maksimalnih performansi i izbjegavanje kvarova.
+
+Ovaj seminar detaljno analizira ključne aspekte dijagnostike i održavanja sustava računalnog hlađenja. Cilj je pružiti sveobuhvatan pregled metoda za identifikaciju i rješavanje problema s hlađenjem, kao i smjernica za proaktivno održavanje koje osigurava dugovječnost i stabilan rad računalne opreme. Rad je strukturiran tako da obuhvati temeljne principe termodinamike u kontekstu računala, uobičajene vrste sustava hlađenja, dijagnostičke alate i tehnike, te praktične korake za preventivno i korektivno održavanje.
+
+---
+
+Temeljni Principi i Važnost Hlađenja
+
+Disipacija topline u poluvodičkim komponentama rezultat je ohmskih gubitaka zbog prolaska električne struje (Jouleov efekt) i prebacivanja stanja tranzistora. Povećanje temperature iznad tolerantne granice (obično oko $90^\circ\text{C}$ do $105^\circ\text{C}$ za moderne procesore) dovodi do niza negativnih pojava:
+
+1.  Smanjenje Performansi (Thermal Throttling): Procesori automatski smanjuju radnu frekvenciju i napon (poznato kao throttling) kako bi smanjili disipaciju topline i zaštitili se od pregrijavanja. To izravno utječe na brzinu izvršavanja zadataka.
+2.  Degradacija Komponenti (Electromigration): Povećana temperatura ubrzava starenje materijala, posebno fenomen elektromigracije, gdje atomi metala u međuspojevima (interconnects) migriraju pod utjecajem protoka elektrona, što s vremenom dovodi do prekida u strujnom krugu.
+3.  Nestabilnost Sustava: Visoke temperature mogu uzrokovati pogreške u izračunima, oštećenje podataka i neočekivano gašenje sustava.
+4.  Smanjenje Vijeka Trajanja: Svako trajno povećanje radne temperature značajno skraćuje predviđeni vijek trajanja poluvodičke komponente (prema Arrheniusovom zakonu, često se procjenjuje da smanjenje temperature za $10^\circ\text{C}$ može udvostručiti vijek trajanja komponente).
+
+Primarni cilj sustava hlađenja je prijenos topline s izvora (čipa) na okoliš. Taj proces uključuje tri ključna mehanizma:
+
+ Kondukcija (Provođenje): Prijenos topline kroz čvrste tvari (npr. od čipa kroz toplinsku pastu do heat spreadera i heat pipea).
+ Konvekcija (Prenošenje): Prijenos topline gibanjem fluida (npr. zrakom ili rashladnom tekućinom) preko površine hladnjaka.
+ Radijacija (Zračenje): Emitiranje topline u obliku elektromagnetskog zračenja, iako je ovaj mehanizam u konvencionalnom računalnom hlađenju najmanje značajan.
+
+---
+
+Vrste Sustava Računalnog Hlađenja
+
+Postoje tri dominantne kategorije sustava hlađenja koji se koriste u računalnoj tehnici:
+
+1. Zračno Hlađenje (Air Cooling)
+
+Zračno hlađenje je najčešći i najjednostavniji oblik hlađenja. Sastoji se od pasivnog elementa (hladnjak, heatsink) i aktivnog elementa (ventilator).
+
+ Pasivni Hladnjak (Heatsink): Obično je izrađen od aluminija ili bakra (zbog njihove visoke toplinske vodljivosti, $\lambda_{\text{Cu}} \approx 400 \text{ W/(m}\cdot\text{K)}$). Njegova funkcija je povećati površinu kontakta s okolnim zrakom, čime se maksimizira konvektivni prijenos topline.
+ Toplinske Cijevi (Heat Pipes): Koriste dvofazni prijenos topline (isparavanje i kondenzacija radnog fluida, poput vode, unutar zatvorene cijevi) za vrlo učinkovit prijenos topline s baze hladnjaka na udaljenija rebra.
+ Ventilatori: Generiraju protok zraka preko rebara hladnjaka (heatsinka) i unutar računalnog kućišta, osiguravajući kontinuirano odvođenje zagrijanog zraka iz sustava.
+
+2. Vodeno Hlađenje (Liquid Cooling)
+
+Vodeno hlađenje (često AIO - All-in-One ili prilagođeni custom loop sustavi) koristi tekućinu (najčešće destiliranu vodu s aditivima) kao medij za prijenos topline.
+
+ Vodeni Blok (Water Block): Montira se izravno na CPU/GPU i preuzima toplinu.
+ Pumpe (Pumps): Cirkuliraju tekućinu kroz sustav.
+ Radijatori (Radiators): Sastoje se od tankih cijevi i rebara, slično heatsinku, gdje se toplina prenosi s tekućine na zrak, koji se zatim odvodi ventilatorima.
+ Spremnici (Reservoirs): Drže tekućinu i omogućuju punjenje/održavanje sustava.
+
+Vodeno hlađenje je znatno učinkovitije u apsorpciji i prijenosu velikih količina topline, što ga čini preferiranim izborom za sustave visokih performansi (overclocking) i poslužitelje visoke gustoće.
+
+3. Specijalizirani Sustavi
+
+ Hlađenje Tekućim Dušikom (LN2) i Kompresijsko Hlađenje: Koristi se isključivo za ekstremni overclocking i testiranje performansi, ne za kontinuirani rad.
+ Immerzijsko Hlađenje (Immersion Cooling): Komponente su uronjene u dielektričnu tekućinu (npr. mineralno ulje) koja ne provodi struju. Izuzetno učinkovito za podatkovne centre.
+ Termoelektrično Hlađenje (TEC ili Peltierovi Elementi): Koriste Peltierov efekt za aktivno hlađenje jedne strane i zagrijavanje druge. Zahtijeva vrlo robusno dodatno hlađenje vruće strane.
+
+---
+
+Dijagnostika Problema s Hlađenjem
+
+Pravilna dijagnostika ključna je za brzo i točno lociranje uzroka povišenih temperatura.
+
+1. Praćenje Temperature i Opterećenja
+
+Prvi korak u dijagnostici je kontinuirano praćenje kritičnih temperatura:
+
+ CPU Temperature (Tj, Tcase): Temperatura jezgre (Tj - Junction Temperature) i temperatura kućišta (Tcase).
+ GPU Temperature: Temperatura jezgre GPU-a.
+ Chipset i SSD/HDD Temperature: Temperature pomoćnih komponenti.
+
+Alati za praćenje temperature:
+
+ Specijalizirani softver: HWMonitor, Core Temp, HWiNFO, MSI Afterburner. Ovi alati čitaju podatke iz ugrađenih termalnih senzora (Tj senzori, termistori) na komponentama.
+ BIOS/UEFI: Prikazuje osnovne temperature prije pokretanja operativnog sustava.
+ Stres Testovi: Za simulaciju maksimalnog opterećenja i provjeru stabilnosti pod najgorim uvjetima (npr. Prime95, FurMark, AIDA64). Ako temperatura tijekom stres testa brzo raste iznad $95^\circ\text{C}$ i throttling se aktivira, problem je jasan.
+
+2. Vizualna Inspekcija i Fizička Provjera
+
+Fizička inspekcija može otkriti niz uobičajenih problema:
+
+ Protok Zraka:
+     Provjerite jesu li ventilatori CPU/GPU hladnjaka i kućišta funkcionalni, okreću li se i u kojem smjeru.
+     Uvjerite se da su kabeli, prašina i drugi predmeti blokirali protok zraka.
+     Provjerite smjer protoka zraka u kućištu (trebao bi postojati ulaz hladnog zraka i izlaz toplog zraka; tipično: sprijeda/dolje ulaz, straga/gore izlaz).
+ Ventilatori: Poslušajte neuobičajene zvukove (grebanje, klikanje) koji ukazuju na kvar ležaja. Provjerite da li se okreću na očekivanoj brzini (RPM - Revolutions Per Minute) putem softvera.
+ Toplinska Pasta (Thermal Paste): Ako se sumnja na lošu aplikaciju ili isušivanje paste, potrebno je rastaviti hladnjak. Stara, tvrda i ispucala pasta značajno smanjuje učinkovitost prijenosa topline.
+ Vodeno Hlađenje:
+     Provjerite curi li sustav.
+     Poslušajte zvuk pumpe; nedostatak zvuka ili neobično glasan zvuk može ukazivati na kvar pumpe.
+     Provjerite temperaturu cijevi (jedna bi trebala biti primjetno toplija od druge).
+
+3. Akustična Dijagnostika
+
+Glasno brujanje, zujanje ili vibracije često su simptomi problema:
+
+ Glasni Ventilatori: Mogu ukazivati na previsoke temperature (ventilatori pokušavaju kompenzirati), nakupljanje prašine ili mehanički kvar ležaja.
+ Pumpe: Pucketanje ili "klokotanje" u vodenom hlađenju može ukazivati na zrak zarobljen u sustavu ili prenizku razinu rashladne tekućine.
+
+---
+
+Održavanje Sustava Računalnog Hlađenja
+
+Pravilno održavanje dijeli se na preventivno i korektivno.
+
+1. Preventivno Održavanje
+
+Preventivno održavanje temelj je dugovječnosti i stabilnosti sustava.
+
+ Redovito Čišćenje Prašine: Prašina je najveći neprijatelj zračnog hlađenja. Stvara izolacijski sloj na rebrima hladnjaka i lopaticama ventilatora, smanjujući površinu za izmjenu topline i narušavajući protok zraka. Preporučuje se čišćenje svakih 3 do 6 mjeseci pomoću komprimiranog zraka ili električnog puhala, držeći pritom lopatice ventilatora da se ne vrte prebrzo (kako bi se spriječilo oštećenje ležajeva ili generiranje povratne struje koja može oštetiti matičnu ploču). Posebnu pozornost treba posvetiti filterima za prašinu.
+ Optimizacija Ventilacije Kućišta: Osigurajte da računalo nije postavljeno u skučenom prostoru, naslonjeno na zid ili unutar zatvorenog ormarića. Osigurajte dovoljan prostor oko kućišta za neometan ulaz hladnog i izlaz toplog zraka.
+ Ažuriranje BIOS/UEFI i Upravljačkih Programa: Proizvođači često objavljuju ažuriranja koja poboljšavaju firmware kontrolu ventilatora i energetsko upravljanje, što može rezultirati boljim termalnim performansama.
+ Softversko Upravljanje Ventilatorima: Konfiguriranje fan curvea (krivulje brzine ventilatora u odnosu na temperaturu) u BIOS-u ili putem softvera omogućuje optimalnu ravnotežu između hlađenja i buke. Ventilatori bi trebali postupno povećavati brzinu s porastom temperature, a ne naglo prelaziti s niske na visoku brzinu.
+
+2. Korektivno Održavanje (Zamjena Komponenti i Materijala)
+
+Kada dijagnostika pokaže specifičan problem, provodi se korektivno održavanje:
+
+ Zamjena Toplinske Paste: Toplinska pasta (Thermal Interface Material - TIM) ima vijek trajanja (obično 2 do 5 godina) nakon čega se može osušiti i izgubiti svoja svojstva toplinske vodljivosti.
+     Postupak: Pažljivo uklonite hladnjak. Staru pastu temeljito obrišite s površine čipa (Integrated Heat Spreader - IHS) i baze hladnjaka izopropilnim alkoholom (IPA, čistoće $90\%$ ili više). Nanesite malu količinu (obično veličine zrna riže) nove, visokokvalitetne paste na sredinu IHS-a prije ponovnog postavljanja hladnjaka. Pritisak hladnjaka ravnomjerno će rasporediti pastu. Previše paste jednako je loše kao i premalo.
+ Zamjena Neispravnih Ventilatora: Ako ventilator zuji, grebe ili se ne okreće, mora se zamijeniti. Prilikom odabira, obratite pozornost na tri ključna parametra: CFM (Cubic Feet per Minute, protok zraka), RPM (brzina) i dB(A) (razina buke). Za hladnjake su često bolji ventilatori s visokim statičkim tlakom (SP), dok su za kućište važniji ventilatori s visokim protokom zraka (AF).
+ Održavanje Vodenog Hlađenja:
+     AIO: Sustavi "sve u jednom" obično ne zahtijevaju održavanje (zatvoreni su). Ako pumpa otkaže, cijeli sustav se mora zamijeniti.
+     Custom Loop: Zahtijeva redovito održavanje (svakih 6 do 12 mjeseci). Potrebno je isprazniti sustav, isprati ga destiliranom vodom (radi uklanjanja potencijalnih algi, naslaga ili korozivnih čestica) i ponovno napuniti svježom rashladnom tekućinom koja sadrži inhibitore korozije i biocide.
+
+---
+
+Napredni Aspekti: Overclocking i Termalni Dizajn
+
+U okruženjima visokih performansi (poput overclockinga ili podatkovnih centara), zahtjevi za hlađenjem su ekstremni.
+
+ Overclocking i Termalni Limit: Povećanje frekvencije i/ili napona (Vcore) rezultira eksponencijalnim porastom disipirane toplinske snage $P \propto f \cdot V^2$. Za stabilan overclocking, sustav hlađenja mora moći održavati temperature znatno ispod maksimalne granice, idealno $80^\circ\text{C}$ pod punim opterećenjem.
+ Termalna Dizajnerska Snaga (TDP): TDP (Thermal Design Power) je mjera maksimalne topline koju sustav hlađenja mora biti sposoban raspršiti kako bi osigurao stabilan rad procesora. Odabir hladnjaka uvijek treba biti baziran na TDP-u komponente, s preporučenom rezervom od $20-30\%$ iznad nazivne TDP vrijednosti.
+ Analiza Protok Zraka u Kućištu: Pravilno termalno zoniranje kućišta je esencijalno. Treba težiti pozitivnom tlaku (više zraka ulazi nego što izlazi) jer to smanjuje nakupljanje prašine uvlačenjem zraka samo kroz filtrirane ulaze. Nasuprot tome, negativan tlak (više izlazi nego ulazi) povećava usisavanje nefiltriranog zraka kroz pukotine.
+
+Zaključak
+
+Dijagnostika i održavanje računalnog hlađenja čine temelj stabilnog, učinkovitog i dugovječnog računalnog sustava. Zanemarivanje ovih aspekata neizbježno vodi smanjenju performansi (zbog thermal throttlinga), povećanju potrošnje energije i, u konačnici, prijevremenom otkazu komponenti.
+
+Implementacijom proaktivnog održavanja – redovitim čišćenjem, periodičnom zamjenom toplinske paste i optimizacijom protoka zraka – značajno se produljuje vijek trajanja hardvera i osigurava kontinuirana dostupnost maksimalnih performansi. U svijetu sve snažnijeg i toplijeg računalnog hardvera, vještine u dijagnostici i održavanju sustava hlađenja postaju ključne kompetencije svakog IT stručnjaka i entuzijasta.

@@ -1,0 +1,162 @@
+1. Uvod
+
+U današnjem digitalnom dobu, Internet stvari (engl. Internet of Things, skraćeno IoT) predstavlja jednu od najbrže rastućih i najutjecajnijih tehnoloških paradigmi. IoT podrazumijeva mrežu fizičkih objekata – stvari – opremljenih senzorima, softverom i drugim tehnologijama u svrhu međusobne komunikacije i razmjene podataka s drugim sustavima putem interneta. Potencijal IoT-a je ogroman, obuhvaćajući sve od pametnih kuća i gradova, preko industrijske automatizacije (IIoT), do precizne poljoprivrede i nosivih medicinskih uređaja.
+
+Za realizaciju IoT rješenja ključna je hardverska platforma koja mora biti energetski učinkovita, cjenovno pristupačna i sposobna za bežičnu komunikaciju. U tom kontekstu, mikroupravljač ESP32, proizvod tvrtke Espressif Systems, nameće se kao idealno rješenje. ESP32 je izuzetno popularan zbog svoje integrirane Wi-Fi i Bluetooth funkcionalnosti, moćne dvojezgrene arhitekture i širokog raspona perifernih sučelja, što ga čini de facto standardom za brzi razvoj prototipova IoT uređaja.
+
+Cilj ovog seminarskog rada je detaljno istražiti i predstaviti razvojnu platformu za Internet stvari temeljenu na mikroupravljaču ESP32. Rad će analizirati ključne tehničke karakteristike ESP32, prikazati njegovu ulogu u arhitekturi IoT sustava te opisati implementaciju različitih hardverskih komponenti kao što su senzori, aktuatori, GPS moduli i zasloni. Također, bit će riječi o programskom okruženju i mogućnostima bežične komunikacije koje ESP32 nudi. Kroz ovu analizu, cilj je potvrditi poziciju ESP32 kao temeljnog alata u razvoju modernih IoT rješenja.
+
+---
+
+2. Mikroupravljač ESP32 kao jezgra IoT platforme
+
+Mikroupravljač ESP32 je sustav na čipu (engl. System on a Chip, SoC) koji predstavlja evoluciju popularnog ESP8266 čipa. Njegove tehničke specifikacije i integrirane mogućnosti čine ga izuzetno pogodnim za kompleksne IoT aplikacije.
+
+2.1. Arhitektura i tehničke specifikacije
+
+ESP32 je dizajniran s naglaskom na balans između performansi i energetske učinkovitosti.
+
+2.1.1. Dvojezgreni procesor i memorija
+
+Većina ESP32 varijanti temelji se na dvojezgrenom 32-bitnom Xtensa LX6 procesoru, gdje jezgre rade na frekvenciji do 240 MHz. Ova arhitektura omogućuje efikasno razdvajanje zadataka: jedna jezgra se obično koristi za složene proračune i logiku aplikacije, dok se druga može posvetiti bežičnoj komunikaciji i mrežnim protokolima. To rezultira robusnijim i odzivnijim sustavom.
+
+Čip sadrži integriranu memoriju, uključujući SRAM i ROM, no glavnina programske memorije je vanjska Flash memorija (obično 4 MB ili više) na koju se pohranjuje firmware aplikacije.
+
+2.1.2. Integrirana bežična povezivost
+
+Ključna prednost ESP32 je integrirani 2.4 GHz Wi-Fi (802.11 b/g/n) i Bluetooth (Classic i BLE – Bluetooth Low Energy).
+
+ Wi-Fi omogućuje direktno spajanje uređaja na internet putem standardne infrastrukture (routera), što je preduvjet za većinu IoT aplikacija. Podržava TCP/IP stack, kao i popularne IoT protokole poput MQTT i CoAP.
+ Bluetooth Low Energy (BLE) je izuzetno važan za lokalnu komunikaciju, omogućujući uređajima da komuniciraju s pametnim telefonima ili drugim BLE uređajima uz minimalnu potrošnju energije. Koristan je za konfiguraciju uređaja i prijenos malih količina podataka na kratkim udaljenostima.
+
+2.2. Periferne mogućnosti i GPIO
+
+ESP32 nudi obilje perifernih sučelja koja mu omogućuju interakciju sa širokim spektrom senzora i aktuatora.
+
+ GPIO (engl. General-Purpose Input/Output) pinovi: Omogućuju digitalni ulaz i izlaz za spajanje jednostavnih prekidača ili LED dioda.
+ ADC/DAC (Analogno-Digitalna/Digitalno-Analogna pretvorba): Višestruki 12-bitni ADC kanali omogućuju očitavanje analognih senzora (npr. temperature, svjetlosti), dok 8-bitni DAC kanali mogu generirati analogne izlazne signale.
+ Standardna komunikacijska sučelja: Podržani su ključni komunikacijski protokoli potrebni za spajanje na periferne komponente:
+     SPI (engl. Serial Peripheral Interface): Koristan za brzu komunikaciju s OLED zaslonima, memorijskim karticama (SD kartice) ili nekim senzorima.
+     I²C (engl. Inter-Integrated Circuit): Najčešće korišteno sučelje za spajanje digitalnih senzora (npr. BMP280, MPU6050) zbog svoje jednostavnosti i mogućnosti spajanja više uređaja na iste dvije žice.
+     UART (engl. Universal Asynchronous Receiver-Transmitter): Koristi se za serijsku komunikaciju s računalom (za debugging), kao i za spajanje GPS modula.
+
+2.3. Energetska učinkovitost
+
+Za baterijski napajane IoT uređaje, potrošnja energije je kritična. ESP32 ima sofisticirane načine rada niske potrošnje (engl. Deep Sleep Mode). U Deep Sleep modu, većina čipa je isključena, a sustav se budi samo povremeno (npr. pomoću timera ili vanjskog signala) kako bi obavio mjerenje i poslao podatke. To omogućuje rad uređaja tjednima ili mjesecima na maloj bateriji.
+
+---
+
+3. Razvojna platforma i programsko okruženje
+
+Samostalni ESP32 čip zahtijeva dodatne komponente (oscilator, otpornike, vanjsku flash memoriju) da bi funkcionirao. Stoga se u razvoju koriste gotove razvojne ploče.
+
+3.1. Popularne razvojne ploče
+
+Najčešće korištene razvojne ploče koje čine osnovu platforme su:
+
+ ESP32 DevKitC: Standardna i najčešća razvojna ploča koja iznosi sve pinove i sadrži USB-to-Serial pretvarač (obično CP2102 ili CH340G) za jednostavno programiranje i serijsku komunikaciju preko USB kabela.
+ WEMOS D1 Mini32: Kompaktna verzija koja često ima manje dostupnih pinova, ali je idealna za projekte gdje je veličina bitna.
+ NodeMCU-32S: Slična DevKitC ploči, popularna zbog jednostavnog korištenja i jasne pinout sheme.
+
+Sve ove ploče imaju integriranu antenu i potrebnu regulaciju napona, čineći ih plug-and-play rješenjima za prototipiranje.
+
+3.2. Programsko okruženje i jezici
+
+ESP32 podržava nekoliko programskih okruženja i jezika, što mu daje veliku fleksibilnost.
+
+3.2.1. Arduino IDE
+
+Arduino IDE je najpopularnije i najpristupačnije okruženje za početnike i hobi projekte. Dodavanjem ESP32 Core paketa u Arduino Board Manager, programiranje ESP32 postaje identično programiranju standardnog Arduina, koristeći C++ jezik i bogatu biblioteku funkcija za senzore, komunikaciju i periferije.
+
+3.2.2. ESP-IDF (Espressif IoT Development Framework)
+
+Za profesionalne i zahtjevne komercijalne primjene, ESP-IDF je službeni razvojni okvir tvrtke Espressif. Temeljen je na C/C++ jeziku i pruža potpunu kontrolu nad hardverom i pristup naprednim značajkama kao što su FreeRTOS (operacijski sustav u stvarnom vremenu) i sofisticirani mrežni stackovi. Omogućuje bolju optimizaciju, učinkovitiju potrošnju memorije i multi-tasking.
+
+3.2.3. MicroPython i Lua
+
+Za brzo prototipiranje, često se koriste interpretirani jezici kao što je MicroPython. MicroPython je implementacija Pythona 3 optimizirana za mikrokontrolere. Njegova jednostavnost sintakse i brzi razvojni ciklus čine ga atraktivnim, iako su performanse nešto niže u usporedbi s C++. Lua je također popularan izbor za jednostavne aplikacije.
+
+---
+
+4. Integracija ključnih IoT komponenti
+
+Razvojna platforma temeljena na ESP32 zahtijeva integraciju različitih perifernih uređaja za interakciju s fizičkim svijetom.
+
+4.1. Senzori za prikupljanje podataka
+
+Senzori su "oči i uši" IoT uređaja. Oni pretvaraju fizičke veličine u električne signale koje ESP32 može očitati i obraditi.
+
+ Senzori temperature i vlage: Najčešće korišteni su digitalni senzori poput DHT22 ili precizniji BME280 (koji mjeri i barometarski tlak). Oni koriste I²C ili One-Wire protokol za prijenos podataka.
+ Akcelerometar i žiroskop (IMU): Moduli poput MPU6050 (I²C) ključni su za uređaje koji prate kretanje, položaj ili vibracije (npr. nosivi uređaji, dronovi).
+ Senzori plinova/kvalitete zraka: MQ serija senzora se koristi za detekciju opasnih ili štetnih plinova, dok senzori prašine (PM2.5) prate kvalitetu zraka.
+
+Odabir senzora ovisi o vrsti mjerene veličine, zahtjevima za točnost i potrebnom komunikacijskom protokolu s ESP32.
+
+4.2. Aktuatori za interakciju s okolinom
+
+Aktuatori su komponente koje izvršavaju fizičku radnju na temelju odluke ESP32.
+
+ Releji: Najčešći aktuatori, služe kao elektronički kontrolirani prekidači koji omogućuju ESP32 da uključi ili isključi uređaje koji rade na visokom naponu (npr. rasvjeta, pumpe, grijalice).
+ Servo i Stepper motori: Omogućuju preciznu kontrolu kretanja (npr. otvaranje ventila, pozicioniranje kamere, robotske ruke). ESP32 koristi PWM (engl. Pulse Width Modulation) signale za kontrolu brzine i položaja ovih motora.
+ Zvučni i svjetlosni indikatori: LED diode, zujalice ili sirene služe za davanje povratne informacije korisniku.
+
+4.3. GPS modul za geolokaciju
+
+Za aplikacije koje zahtijevaju praćenje lokacije (npr. praćenje imovine, navigacija), integracija GPS modula je esencijalna. Moduli poput NEO-6M koriste UART serijsku komunikaciju za slanje NMEA poruka koje sadrže podatke o zemljopisnoj širini, dužini, nadmorskoj visini i vremenu. ESP32 prima te podatke, parsira ih i može ih poslati na poslužitelj putem Wi-Fi veze.
+
+4.4. OLED zaslon za lokalni prikaz
+
+Lokalni prikaz podataka je često potreban za dijagnostiku ili trenutni uvid u stanje uređaja. OLED (engl. Organic Light-Emitting Diode) zasloni su idealni zbog svoje male potrošnje energije, visokog kontrasta i kompaktnih dimenzija. Moduli poput SSD1306 (obično 128x64 ili 128x32 piksela) koriste I²C ili SPI sučelje. ESP32, koristeći odgovarajuće biblioteke, lako prikazuje tekstualne ili grafičke informacije na zaslonu.
+
+---
+
+5. Komunikacija i arhitektura IoT sustava
+
+Uloga ESP32 kao razvojne platforme kulminira u njegovoj sposobnosti da podatke sakupljene od senzora efikasno prenese do oblaka (engl. Cloud) i prima naredbe za kontrolu aktuatora.
+
+5.1. Mrežni protokoli za IoT
+
+Za prijenos podataka preko Wi-Fi mreže, koriste se protokoli optimizirani za IoT, dizajnirani da budu lagani i pouzdani.
+
+5.1.1. MQTT (Message Queuing Telemetry Transport)
+
+MQTT je de facto standardni protokol za većinu IoT aplikacija. To je protokol za objavu/pretplatu (Publish/Subscribe) koji radi preko TCP/IP-a. Karakterizira ga minimalna propusnost (engl. overhead) i niska potrošnja baterije, što je savršeno za ESP32. Uređaji se spajaju na MQTT broker (poslužitelj) te objavljuju podatke na specifične teme ili se pretplate na teme kako bi primili naredbe.
+
+5.1.2. HTTP/REST
+
+Za jednostavnije aplikacije ili slanje sporadičnih podataka, koristi se standardni HTTP POST/GET protokol, temeljen na REST arhitekturi. ESP32 djeluje kao klijent koji šalje podatke na web poslužitelj (API krajnja točka). Iako je lakše implementirati, HTTP je često manje energetski učinkovit od MQTT-a.
+
+5.2. Cloud platforme i obrada podataka
+
+Podaci koje ESP32 šalje primaju se i obrađuju na IoT Cloud platformi. Popularni primjeri uključuju:
+
+ AWS IoT Core (Amazon Web Services): Skalabilno, profesionalno rješenje s bogatim skupom usluga za analizu, pohranu i vizualizaciju podataka.
+ Google Cloud IoT: Sličan AWS-u, nudi integraciju s Googleovim alatima za strojno učenje.
+ Microsoft Azure IoT Hub: Nudi sigurnu dvosmjernu komunikaciju i integraciju s Azure ekosustavom.
+ ThingSpeak/Ubidots: Jednostavnije platforme, često korištene u obrazovanju i prototipiranju, koje nude brzu vizualizaciju podataka (grafikone).
+
+Platforma omogućuje:
+1.  Pohranu: Sigurnu dugoročnu pohranu mjernih podataka.
+2.  Analizu: Obradu podataka u stvarnom vremenu ili naknadno za dobivanje uvida.
+3.  Vizualizaciju: Prikaz podataka korisniku putem kontrolnih ploča (dashboards).
+4.  Kontrolu: Slanje naredbi (preko MQTT-a ili API-ja) natrag na ESP32 za kontrolu aktuatora.
+
+5.3. Sigurnost u IoT rješenjima
+
+Sigurnost je ključni aspekt svakog IoT sustava. ESP32 podržava nekoliko značajki za jačanje sigurnosti:
+
+ SSL/TLS (Secure Sockets Layer/Transport Layer Security): Omogućuje šifriranu komunikaciju između ESP32 i Cloud platforme, štiteći podatke od presretanja.
+ Sigurna pohrana ključeva: Omogućava sigurnu pohranu privatnih ključeva i certifikata unutar čipa.
+ Sigurno pokretanje (Secure Boot): Osigurava da se samo autentičan i provjeren firmware može učitati i izvršiti na uređaju.
+
+---
+
+6. Zaključak
+
+Razvojna platforma za Internet stvari temeljena na mikroupravljaču ESP32 predstavlja izuzetno moćan, fleksibilan i cjenovno efikasan temelj za realizaciju širokog spektra IoT projekata. Analiza ključnih komponenti i mogućnosti platforme jasno ukazuje zašto je ESP32 postao lider u ovom segmentu.
+
+ESP32 nudi idealnu kombinaciju performansi (dvojezgreni procesor), integrirane bežične komunikacije (Wi-Fi i Bluetooth/BLE) i bogatih perifernih sučelja (ADC, I²C, SPI, UART). Ova kombinacija omogućuje mu da istovremeno učinkovito prikuplja podatke s raznih senzora (temperature, kretanja, GPS), vizualizira ih na lokalnom OLED zaslonu te upravlja aktuatorima (releji, motori).
+
+Programsko okruženje, od jednostavnog Arduino IDE-a do naprednog ESP-IDF-a, pruža programerima fleksibilnost u odabiru optimalnog pristupa ovisno o složenosti projekta. Kroz standardizirane IoT protokole kao što je MQTT, ESP32 se bežično i sigurno integrira s vodećim Cloud platformama, zatvarajući petlju u arhitekturi modernog IoT sustava.
+
+Zbog svoje svestranosti, niske cijene i snažne zajednice, razvojna platforma temeljena na ESP32 nastavit će igrati ključnu ulogu u demokratizaciji Interneta stvari, omogućujući brzi razvoj prototipova i implementaciju komercijalnih IoT rješenja koja će oblikovati budućnost povezanog svijeta.

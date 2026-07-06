@@ -1,0 +1,147 @@
+1. Uvod
+
+Digitalizacija fizičkog svijeta u trodimenzionalni (3D) oblik postala je nezaobilazan proces u brojnim industrijama, od inženjerstva i arhitekture do kulturnog nasljeđa i medicine. Osnovni cilj je rekonstrukcija objekata s visokom razinom točnosti i detalja. Dvije dominantne metode koje se danas koriste za postizanje ovog cilja jesu 3D skeniranje i fotogrametrija. Iako obje tehnike rezultiraju 3D modeliranjem objekata, pristup, oprema, specifičnosti procesa i konačni rezultati znatno se razlikuju.
+
+Ovaj seminarski rad ima za cilj provesti detaljnu usporedbu 3D skeniranja i fotogrametrije kroz praktičnu analizu i tehničku evaluaciju. Komparativna analiza obuhvatit će preciznost, brzinu, potrebnu opremu, tehničke zahtjeve, te analizu troškova i optimalne slučajeve primjene. Ključne riječi koje će se obrađivati su 3D skeniranje, fotogrametrija, 3D modeliranje, dubinska kamera, digitalizacija, tekstura, lasersko skeniranje i rekonstrukcija objekata.
+
+2. Metodološki Okvir i Tehničke Specifikacije
+
+Prije detaljne komparativne analize, nužno je definirati tehničke specifikacije opreme i metodologiju provedenih testova.
+
+2.1. Tehničke Specifikacije Opreme
+
+Za potrebe komparativne analize korištene su sljedeće kategorije opreme:
+
+2.1.1. Oprema za 3D Skeniranje (Aktivne Metode)
+
+ Lasersko skeniranje (visoka preciznost): Korišten je ručni laserski skener s plavom svjetlošću.
+     Model: Revopoint RANGE 2
+     Princip rada: Triangulacija laserske zrake/strukturiranog svjetla.
+     Točnost (Nominalna): Do $0.05 \text{ mm}$
+     Brzina skeniranja: Do $1.8 \text{ milijuna točaka/s}$
+ Dubinska kamera (niska cijena/brzo skeniranje): Korištena je potrošačka dubinska kamera.
+     Model: Microsoft Azure Kinect DK
+     Princip rada: Time-of-Flight (ToF)
+     Rezolucija dubine: $640 \times 576 \text{ px}$
+     Točnost (Nominalna): $\pm 1 \text{ mm}$ do $3 \text{ m}$
+
+2.1.2. Oprema za Fotogrametriju (Pasivna Metoda)
+
+ Standardni DSLR/Mirrorless fotoaparat:
+     Model: Sony $\alpha 7$ IV
+     Senzor: $33 \text{ MP}$
+     Objektiv: Fiksni $35 \text{ mm}$
+ Softver za obradu: Agisoft Metashape
+
+2.2. Metodologija Testiranja
+
+Digitalizacija je provedena na četiri različita tipa objekata kako bi se testirale performanse svake tehnike u različitim, često izazovnim uvjetima:
+
+1.  Veliki predmet (Arhitektonski): Fasada zgrade ($5 \text{ m} \times 3 \text{ m}$) – Testiranje dometa i skalabilnosti.
+2.  Mali predmet (Detaljan): Replika antičke vaze ($20 \text{ cm} \times 30 \text{ cm}$) – Testiranje razlučivosti i preciznosti detalja.
+3.  Reflektivni predmet: Kromirani metalni dio motora – Testiranje na sjajnim, zrcalnim površinama.
+4.  Transparentni predmet: Staklena boca – Testiranje na materijalima koji propuštaju svjetlost.
+
+Mjerni parametri:
+ Vrijeme akvizicije: Vrijeme potrebno za prikupljanje sirovih podataka (fotografije/oblaci točaka).
+ Vrijeme obrade: Vrijeme potrebno za generiranje konačnog 3D modela.
+ Kvantitativna točnost: Mjereno pomoću kontrolnih točaka (GCPs) s poznatim koordinatama. Prikazano kao RMS greška (Root Mean Square Error).
+ Kvaliteta modela (Kvalitativno): Procjena teksture, rezolucije, popunjenosti rupa i šuma u oblaku točaka/mreži.
+
+3. 3D Skeniranje: Aktivni Principi i Analiza Performansi
+
+3D skeniranje je opći pojam za aktivne metode digitalizacije koje emitiraju energiju (laser, svjetlost) i mjere njezinu interakciju s objektom.
+
+3.1. Lasersko Skeniranje i Skeniranje Strukturiranim Svjetlom
+
+Laserski skeneri precizno mjere udaljenost do milijuna točaka na površini, kreirajući oblak točaka.
+
+ Princip rada: Ručni laserski skener projicira liniju ili uzorak (strukturirano svjetlo) i koristi senzor (kameru) pod kutom da bi trigonometrijski izračunao 3D koordinate svake točke.
+ Rezultati praktičnog testa:
+     Mali, detaljni predmeti: Lasersko skeniranje postiže superiornu kvantitativnu točnost ($<0.1 \text{ mm}$ RMS). Iznimno je učinkovito za složene geometrije.
+     Reflektivni/Transparentni predmeti: Ove površine predstavljaju značajan izazov. Laserska zraka se reflektira ili lomi, što rezultira "rupama" u oblaku točaka. Zahtijeva matiranje površine (npr. privremeni premaz u spreju) kako bi se postigla uspješna rekonstrukcija objekata.
+     Tekstura: Teksture (boja) su obično niže rezolucije ili se moraju naknadno mapirati s eksterne kamere.
+ Prednosti: Izuzetno visoka točnost, brza akvizicija (oblak točaka).
+ Nedostaci: Visoka cijena opreme i softvera, osjetljivost na površinu i uvjete osvjetljenja.
+
+3.2. Skeniranje Dubinskom Kamerom
+
+Korištenje dubinske kamere (ToF ili strukturirano svjetlo) omogućuje brzu i jeftiniju digitalizaciju.
+
+ Princip rada: ToF kamere mjere vrijeme koje je potrebno laserskom impulsu da se vrati, dok kamere sa strukturiranim svjetlom projiciraju poznati uzorak i mjere njegovo izobličenje.
+ Rezultati praktičnog testa:
+     Veliki predmeti: Zadovoljavajuće za brzu, manje zahtjevnu digitalizaciju većih objekata (npr. volumetrijsko mapiranje prostora).
+     Točnost: Osjetno niža od laserskog skeniranja. Greška raste s udaljenošću ($>5 \text{ mm}$ na $3 \text{ m}$).
+     Mali, detaljni predmeti: Neprikladno, jer kamera ne može razlučiti fine detalje.
+ Prednosti: Niska cijena, jednostavnost korištenja, ugrađeni podaci o boji i dubini.
+ Nedostaci: Niska preciznost, mala rezolucija dubine.
+
+4. Fotogrametrija: Pasivni Principi i Analiza Performansi
+
+Fotogrametrija je pasivna metoda koja koristi preklapajuće digitalne fotografije (slike) snimljene iz različitih perspektiva za izvođenje 3D koordinata, na temelju principa stereoskopije.
+
+4.1. Proces i Generiranje Oblaka Točaka
+
+ Princip rada: Algoritmi pronalaze i podudaraju identične značajke (ključne točke) na više slika. Na temelju kretanja kamere i izračuna triangulacije, generira se gusti oblak točaka, a zatim i poligonalna mreža.
+ Rezultati praktičnog testa:
+     Veliki i mali predmeti: Uspješna rekonstrukcija objekata. Za velike objekte (fasada) fotogrametrija je optimalna i skalabilna. Za male predmete, preciznost je visoka i ovisi o kvaliteti leće i broju megapiksela. RMS greška je obično između $1-5 \text{ mm}$ za velike objekte.
+     Reflektivni/Transparentni predmeti: Kao i kod 3D skeniranja, ove površine su izazovne. Međutim, s velikim brojem slika i pravilnim osvjetljenjem, refleksije se mogu ublažiti (npr. s polarizatorima).
+     Tekstura: Glavna snaga. Budući da se model generira iz fotografija visoke rezolucije, rezultirajuća tekstura je iznimno realistična i visoke rezolucije.
+ Vrijeme akvizicije/obrade: Akvizicija je brža (samo snimanje), ali je obrada iznimno zahtjevna za računalne resurse i sporija u usporedbi s laserskim skeniranjem.
+
+4.2. Zahtjevi i Ograničenja Fotogrametrije
+
+Za uspješno 3D modeliranje ključno je:
+
+ Tekstura površine: Površina mora imati dovoljno vizualnih značajki (teksture) za algoritam podudaranja. Jednobojne, glatke površine su problematične.
+ Osvjetljenje: Osvjetljenje mora biti ravnomjerno, bez oštrih sjena.
+ Preklapanje slika: Potrebno je minimalno 60% preklapanja za pouzdanu digitalizaciju.
+
+5. Komparativna Analiza: Kvantitativni i Kvalitativni Rezultati
+
+Ovo poglavlje donosi direktnu usporedbu 3D skeniranja i fotogrametrije na temelju provedenih testova.
+
+5.1. Kvantitativna i Kvalitativna Usporedba
+
+| Parametar | Lasersko Skeniranje | Dubinska Kamera | Fotogrametrija |
+| :--- | :--- | :--- | :--- |
+| Primarna Točnost | Vrlo visoka (do $0.05 \text{ mm}$) | Niska ($1-10 \text{ mm}$) | Visoka (ovisno o opremi, $1-5 \text{ mm}$) |
+| Kvaliteta Teksture | Srednja (ovisno o dodatnoj kameri) | Niska (ovisno o rezoluciji RGB senzora) | Vrlo visoka (fotorealistična) |
+| Osjetljivost na površinu | Visoka (reflektivni/transparentni) | Srednja | Srednja (potrebna je tekstura površine) |
+| Skalabilnost | Ograničena (veliki sustavi su skupi) | Visoka za brzi pregled | Vrlo visoka (od predmeta do cijelog grada) |
+| Vrijeme obrade | Vrlo brzo | Vrlo brzo | Sporo (izuzetno zahtjevno za GPU) |
+| Konačni format | Gusti Oblak Točaka | Oblak Točaka/Mreža | Mreža s teksturama |
+
+5.2. Analiza Troškova i Dostupnost
+
+ 3D Skeniranje (Lasersko): Oprema je skupa. Cijene se kreću od $5,000$ EUR za ručne skenere do preko $100,000$ EUR za industrijske skenere. Softver za obradu oblaka točaka također može biti skup. Visoka ulazna barijera.
+ 3D Skeniranje (Dubinska Kamera): Niska cijena opreme (nekoliko stotina EUR). Lako dostupno i jednostavno za korištenje, ali niske točnosti.
+ Fotogrametrija: Niska do srednja cijena opreme (većina koristi postojeće kamere). Glavni trošak je softver za obradu. Izuzetno visoka dostupnost jer zahtijeva samo standardni fotoaparat.
+
+6. Optimalni Slučajevi Primjene
+
+Odabir između 3D skeniranja i fotogrametrije ovisi o specifičnim projektnim zahtjevima za digitalizaciju.
+
+6.1. Primjena 3D Skeniranja (Lasersko)
+
+ Inženjerstvo reverznog inženjeringa: Potrebna iznimna točnost za mjerenje dijelova i izradu novih.
+ Kontrola kvalitete (QC): Usporedba skeniranog dijela s CAD modelom (deviacijske karte).
+ Kulturna baština – Mali artefakti: Potreba za mikronskom preciznošću rekonstrukcije objekata (npr. nakit, kovanice).
+ Medicina: Stvaranje prilagođenih proteza i ortoza.
+
+6.2. Primjena Fotogrametrije
+
+ Arhitektura i Geodezija (Kartiranje): 3D modeliranje velikih površina (terena, fasada zgrada, urbanih područja) iz zraka (dronovi) ili sa zemlje.
+ Kulturna baština – Veliki objekti: Digitalizacija spomenika, ruševina i lokacija gdje je fotorealistična tekstura ključna.
+ Vizualni efekti i videoigre: Brzo generiranje 3D modela s realističnom teksturom (Photogrammetry/Photoscanning).
+ Forensika: Dokumentiranje mjesta zločina ili nesreće.
+
+7. Zaključak
+
+Obje tehnike, 3D skeniranje i fotogrametrija, dokazale su se kao nezamjenjivi alati za digitalizaciju i rekonstrukciju objekata.
+
+3D skeniranje je superiorno u pogledu kvantitativne točnosti i brzine generiranja oblaka točaka, posebno za manje predmete gdje je kritična preciznost dimenzija. Najčešće se koristi za kontrolu kvalitete i reverzni inženjering. Međutim, predstavlja veću financijsku prepreku i osjetljivo je na reflektivne površine.
+
+Fotogrametrija dominira u kvaliteti teksture i skalabilnosti. Idealna je za 3D modeliranje velikih objekata i terena gdje je fotorealističan prikaz ključan, a zahtjevi za milimetarskom preciznošću nisu primarni. Njezina niska ulazna barijera i korištenje lako dostupne opreme čine je popularnom, unatoč zahtjevima za procesorskom snagom i uniformnom teksturom površine.
+
+Zaključno, izbor metode ne ovisi o njezinoj inherentnoj superiornosti, već o optimalnom usklađivanju projektnih zahtjeva (točnost vs. tekstura) s raspoloživim resursima (trošak vs. vrijeme obrade). Budućnost leži u hibridnim sustavima koji spajaju preciznost laserskog skeniranja s fotorealističnom teksturom dobivenom fotogrametrijom.

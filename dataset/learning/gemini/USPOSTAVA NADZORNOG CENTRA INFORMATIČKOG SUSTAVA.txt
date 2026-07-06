@@ -1,0 +1,121 @@
+Uvod
+
+U današnjem digitalnom dobu, pouzdanost i dostupnost informatičkog sustava (IS) predstavljaju temelj uspješnog poslovanja svake organizacije. Kompleksnost modernih IT infrastruktura, koje se sastoje od hibridnih okruženja – kombinacije lokalnih (on-premise) resursa, virtualizacije i rješenja u oblaku (cloud computing) – nameće potrebu za centraliziranim i proaktivnim upravljanjem. U tom kontekstu, uspostava Nadzornog Centra Informatičkog Sustava (Network Operations Center - NOC ili Command Center) postaje ne samo preporučena, već i kritična aktivnost.
+
+Nadzorni centar djeluje kao mozak sistemske administracije, pružajući stalan uvid u zdravlje, performanse i sigurnost svih komponenti: od mrežne opreme i poslužitelja, preko baza podataka, sve do distribuiranih aplikacija. Cilj ovog seminarskog rada je detaljno analizirati proces uspostave takvog centra. Kroz rad će se obraditi temeljna načela monitoringa kritičnih sustava, s posebnim osvrtom na integraciju alata za upravljanje i nadzor. Posebna pažnja bit će posvećena ulozi rješenja poput Microsoft System Center Operations Managera (SCOM) u lokalnom okruženju, te strategijama nadzora u modernim cloud platformama kao što je Microsoft Azure, naglašavajući kako optimalan monitoring osigurava minimalno vrijeme zastoja i maksimalnu učinkovitost IT infrastrukture.
+
+---
+
+Konceptualni Okvir Nadzornog Centra
+
+Nadzorni centar predstavlja fizičku ili logičku lokaciju iz koje se centralizirano prati, upravlja i održava cjelokupna IT infrastruktura. Njegova primarna funkcija nije samo pasivno bilježenje grešaka, već aktivno i proaktivno sprječavanje incidenata. Učinkovit nadzorni centar transformira reaktivnu sistemsku administraciju (gašenje požara) u prediktivnu i proaktivnu.
+
+Uloga i Ciljevi
+
+Temeljni ciljevi uspostave su:
+
+1.  Kontinuirani Monitoring: Osiguravanje neprestanog uvida u rad svih ključnih sustava, 24 sata dnevno, 7 dana u tjednu.
+2.  Brza Detekcija i Odgovor: Smanjenje vremena između nastanka anomalije i početka rješavanja problema (MTTD – Mean Time To Detect i MTTR – Mean Time To Resolve).
+3.  Upravljanje Incidentima i Problemima: Implementacija standardiziranih ITIL procesa za efikasno rješavanje zastoja i identificiranje uzroka.
+4.  Optimizacija Resursa: Praćenje iskorištenosti IT resursa radi donošenja informiranih odluka o nadogradnji ili prebacivanju u oblak.
+
+Ljudski Resursi i Procesi
+
+Uspostava centra zahtijeva definiranje jasne organizacijske strukture i procesa. Osoblje centra – operateri i inženjeri – moraju biti educirani ne samo za korištenje alata, već i za primjenu eskalacijskih procedura. Standardizirani radni procesi (SOP) ključni su za konzistentan i brz odgovor na alarme. Bez jasnog definiranja tko i kako reagira na određeni tip upozorenja, čak i najsofisticiraniji alati postaju neučinkoviti.
+
+---
+
+Lokalni Monitoring i Upravljanje: Uloga SCOM-a
+
+Za IT infrastrukture koje i dalje imaju značajan broj lokalnih (on-premise) resursa, centralizirani alat za monitoring je neophodan. Microsoft System Center Operations Manager (SCOM) je de facto standard u okruženjima baziranim na Microsoft tehnologijama, ali se koristi i za nadzor heterogenih sustava.
+
+Arhitektura i Funkcionalnosti SCOM-a
+
+SCOM služi kao jedinstvena platforma za prikupljanje stanja, performansi i upozorenja iz različitih izvora. Njegova arhitektura se sastoji od upravljačkih poslužitelja, baze podataka, skladišta podataka (Data Warehouse) i agenata instaliranih na nadziranim poslužiteljima. Ključne funkcionalnosti uključuju:
+
+ Management Packs: Preddefinirane kolekcije pravila, monitora i izvještaja specifične za pojedini softver (npr. Exchange Server, SQL Server, Windows OS), koje omogućavaju nadzor bez potrebe za ručnim konfiguriranjem.
+ Aktivno i Proaktivno Upozoravanje: Mogućnost postavljanja pragova za performanse i generiranje upozorenja prije nego što kvar dovede do prekida usluge.
+
+SCOM je posebno moćan u nadzoru distribuiranih aplikacija. On omogućuje mapiranje komponenti aplikacije – od web-poslužitelja, preko sloja aplikacije, do baze podataka – te pruža End-to-End prikaz zdravlja aplikacije, umjesto izoliranog prikaza pojedinih poslužitelja.
+
+Integracija s Ticketing Sustavima
+
+Uspješan nadzorni centar ne koristi SCOM kao izolirani alat. Neophodna je integracija sa sustavima za upravljanje incidentima (tzv. ticketing sustavima) kako bi se automatski kreirali radni nalozi (tickets) na temelju kritičnih upozorenja. To osigurava da nijedan incident ne bude zaboravljen i da se vrijeme rješavanja precizno prati, što je kritični dio sistemske administracije.
+
+---
+
+Hibridna Infrastruktura i Cloud Computing
+
+Sve veća prisutnost cloud computing rješenja, posebice platformi kao što je Microsoft Azure, uvodi novi sloj kompleksnosti u monitoring. Nadzorni centar mora evoluirati kako bi efikasno pratio resurse koji se nalaze i lokalno i u oblaku.
+
+Nadzor Resursa u Microsoft Azure Okruženju
+
+Microsoft Azure pruža vlastiti set alata za monitoring i dijagnostiku, prvenstveno kroz uslugu Azure Monitor. Iako SCOM može biti proširen za nadzor Azure virtualnih strojeva, moderna strategija podrazumijeva korištenje izvornih cloud alata:
+
+ Azure Monitor: Centralna točka za prikupljanje metrika i logova iz svih Azure servisa (VM-ovi, Web Apps, Function Apps, Databases).
+ Log Analytics Workspace: Skladište za sve prikupljene logove i metrike koje omogućuje složene upite i analizu putem Kusto Query Language (KQL).
+ Application Insights: Ključan alat za nadzor performance i dostupnosti distribuiranih aplikacija iz perspektive krajnjeg korisnika (Application Performance Management - APM).
+
+Strategija Hibridnog Monitoringa
+
+Najveći izazov za nadzorni centar u hibridnom okruženju je stvaranje jedinstvenog operativnog prikaza (Single Pane of Glass). Potrebno je osigurati da alarmi iz SCOM-a (lokalno) i alarmi iz Azure Monitora (oblak) konvergiraju u isti sustav za upravljanje incidentima. Time se izbjegava situacija da operateri moraju pratiti više različitih konzola za istu IT infrastrukturu. Ovo se postiže integracijom i API pozivima između SCOM-a i Azurea, čime se SCOM koristi kao agregator upozorenja ili se cloud alati konfiguriraju da šalju webhooks prema lokalnom sustavu za obradu incidenata.
+
+---
+
+Nastavak i proširivanje teksta slijedi kako bi se dostigla željena duljina od 2000 riječi, detaljno razrađujući sljedeća poglavlja: "Tehnički Zahtjevi i Implementacija Nadzornog Centra," "Izazovi i Budući Trendovi u Monitoringu," i "Zaključak."
+
+  
+
+Tehnički Zahtjevi i Implementacija Nadzornog Centra
+
+Uspostava fizičkog ili virtualnog prostora za nadzorni centar zahtijeva pomnu analizu tehničkih zahtjeva. Fizički centar treba imati redundanciju napajanja, klimatizaciju i adekvatnu sigurnost pristupa. Međutim, jednako je važno posvetiti se softverskom i mrežnom aspektu implementacije.
+
+Mrežna Arhitektura za Monitoring
+
+Mreža za nadzor mora biti odvojena od produkcijske mreže (ili barem segmentirana) kako bi se osiguralo da u slučaju kvara produkcijske mreže, alati za nadzor ostanu dostupni. Ključno je osigurati robusnu povezanost između nadzornog centra i svih komponenti IT infrastrukture, uključujući udaljene lokacije i cloud computing resurse. Protokoli kao što su SNMP (Simple Network Management Protocol) i WinRM (Windows Remote Management) temelj su za prikupljanje podataka, pri čemu je nužno implementirati snažnu sigurnost na tim kanalima.
+
+Izrada Dashboarda i Vizualizacija
+
+Jedna od najvažnijih komponenti nadzornog centra je vizualizacija. Dashboardi moraju biti intuitivni, brzi za razumijevanje i prilagođeni različitim korisnicima.
+
+ Operativni Dashboardi: Fokusirani na trenutno zdravlje sustava, prikazujući upozorenja i kritične metrike (npr. iskorištenost CPU-a, memorije, kašnjenje mreže). U SCOM-u, to su često State i Alert Views.
+ Performance Dashboardi: Koriste se za dugoročnu analizu trendova i kapaciteta. Ovdje se koriste alati kao što su Power BI ili Grafana za vizualizaciju podataka iz SCOM Data Warehouse-a ili Azure Log Analytics-a.
+ Poslovni Dashboardi: Prezentiraju utjecaj IT infrastrukture na poslovne procese. Primjerice, prikaz broja uspješnih transakcija u minuti koje podržava distribuirana aplikacija.
+
+Prilagodba i Automatizacija
+
+Nijedan sustav, uključujući SCOM ili Azure Monitor, nije savršen bez prilagodbe. Standardne postavke alarma često su previše bučne (alert noise). Kvalitetna sistemska administracija uključuje proces tuninga – podešavanja pragova i pravila upozorenja kako bi se generirala samo smislena upozorenja. Nadalje, ključna je automatizacija. Korištenje Runbookova u Azure Automation ili Orchestrator-a (koji je također dio System Center obitelji) omogućuje automatsko pokretanje korektivnih akcija (npr. ponovno pokretanje servisa, proširenje diska) na temelju detektiranog incidenta, čime se drastično smanjuje MTTR.
+
+---
+
+Izazovi i Budući Trendovi u Monitoringu
+
+Unatoč sofisticiranosti alata poput SCOM-a i platformi poput Microsoft Azure, uspostava i održavanje nadzornog centra suočava se s brojnim izazovima, a tehnološki razvoj kontinuirano oblikuje budućnost monitoringa.
+
+Izazovi Upravljanja Alert Noiseom
+
+Prekomjeran broj upozorenja (alert noise) najveći je neprijatelj učinkovitog nadzornog centra. Kada operateri primaju stotine upozorenja dnevno, lako mogu postati neosjetljivi na stvarni problem. Rješenje leži u koreliranju upozorenja – prepoznavanju da je deset različitih upozorenja (npr. o padu različitih komponenti) zapravo manifestacija jednog temeljnog problema (npr. prekid rada routera ili data centra). Napredni monitoring alati moraju imati mogućnost event correlation i root cause analysis kako bi se iz mase upozorenja izvukao samo uzrok problema.
+
+Sigurnosni Monitoring i DevOps
+
+Moderni trendovi zahtijevaju integraciju sigurnosnog monitoringa (praćenje prijetnji i sigurnosnih događaja, Security Information and Event Management - SIEM) s operativnim monitoringom. Nadzorni centar sve više postaje i Sigurnosni Operativni Centar (SOC). S druge strane, DevOps pristup potiče monitoring od samog početka životnog ciklusa aplikacije (Monitoring as Code). To znači da se monitoring konfiguracija (npr. Azure Monitor Alert Rules) definira zajedno s infrastrukturom putem alata kao što su Terraform ili ARM Templates, što osigurava da je svaka nova distribuirana aplikacija odmah pokrivena adekvatnim monitoringom.
+
+Umjetna Inteligencija i Strojno Učenje (AIOps)
+
+Budućnost sistemske administracije leži u AIOps-u (Artificial Intelligence for IT Operations). AIOps koristi strojno učenje za analizu ogromne količine podataka (logova, metrika) koje generira IT infrastruktura (uključujući podatke iz SCOM-a i Microsoft Azure-a). Strojno učenje ima sposobnost:
+
+1.  Prediktivne Analize: Identificiranja obrazaca koji prethode kvaru, omogućavajući intervenciju prije nego se kvar dogodi.
+2.  Automatske Korelacije: Povezivanja naizgled nepovezanih upozorenja u logički slijed incidenta.
+3.  Detekcije Anomalija: Prepoznavanja neuobičajenog ponašanja sustava koje ljudsko oko ne bi primijetilo, što je ključno za cloud computing okruženja koja se dinamično skaliraju.
+
+Usluge poput Azure Sentinel (SIEM/SOAR) i napredne značajke Azure Monitora već implementiraju ove mogućnosti, čineći operativni tim proaktivnijim i efikasnijim.
+
+---
+
+Zaključak
+
+Uspostava modernog Nadzornog Centra Informatičkog Sustava daleko nadilazi puko postavljanje velikih ekrana i instalaciju osnovnog softvera. To je strateški projekt koji zahtijeva integraciju ljudi, procesa i tehnologije. S centraliziranom ulogom u sistemskoj administraciji, nadzorni centar predstavlja prvu liniju obrane dostupnosti i pouzdanosti.
+
+U hibridnom svijetu, učinkovito rješenje oslanja se na sinergiju lokalnih sustava poput SCOM-a za detaljan uvid u on-premise infrastrukturu, te nativnih cloud alata kao što je Microsoft Azure Monitor za upravljanje resursima u cloud computing okruženju. Integracija ovih alata ključna je za stvaranje jedinstvenog operativnog prikaza, neophodnog za efikasno praćenje kompleksnih distribuiranih aplikacija.
+
+Budućnost monitoringa usmjerena je prema automatizaciji i umjetnoj inteligenciji (AIOps) s ciljem smanjenja alert noisea i prijelaza iz reaktivnog u visoko-proaktivni model upravljanja. Nadzorni centar, pravilno postavljen i opremljen, nije trošak, već nužna investicija koja direktno utječe na poslovni kontinuitet i osigurava konkurentsku prednost organizacije u digitalnom svijetu. Njegova kontinuirana evolucija, praćenje tehnoloških trendova i prilagodba potrebama IT infrastrukture osigurat će dugoročnu stabilnost i uspjeh.

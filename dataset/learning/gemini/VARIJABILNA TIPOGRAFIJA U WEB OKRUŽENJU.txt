@@ -1,0 +1,142 @@
+Uvod
+
+Digitalni sadržaj postao je dominantan oblik komunikacije, a sučelja putem kojih mu pristupamo izuzetno su raznolika – od pametnih telefona i tableta, preko laptopa, do velikih desktop monitora. U tom kontekstu, tipografija, kao temeljni element vizualne komunikacije, suočava se s izazovom prilagodbe. Tradicionalne digitalne fontove karakterizirala je statičnost; za svaku debljinu (bold, regular, light) i stil (italic) postojala je zasebna datoteka. Ova krutost, uz sve veću potrebu za responzivnošću i besprijekornom čitljivošću na različitim veličinama ekrana, dovela je do razvoja varijabilne tipografije.
+
+Varijabilna tipografija predstavlja revolucionarni pomak u web dizajnu omogućujući dizajnerima i developerima da cijelu obitelj fontova smjeste u jednu, optimiziranu datoteku. Umjesto fiksiranih stilova, ova tehnologija koristi "osi" (engl. axes) unutar kojih se mogu definirati kontinuirani rasponi varijacija, kao što su debljina (engl. weight), širina (engl. width), optička veličina (engl. optical size) i mnoge druge.
+
+Cilj ovog seminarskog rada je detaljno analizirati koncept varijabilne tipografije, njezin povijesni razvoj, tehničke aspekte implementacije u web okruženju, te istražiti kako njezina primjena utječe na user experience i optimizaciju prikaza digitalnog sadržaja. Kroz analizu ćemo naglasiti prednosti koje varijabilni fontovi donose u pogledu performansi, dizajnerske fleksibilnosti i, najvažnije, poboljšanja čitljivosti teksta na svim uređajima.
+
+-----
+
+1. Povijesni kontekst i definicija varijabilne tipografije
+
+Tipografija je stoljećima prolazila kroz različite faze razvoja, od metalnih pomičnih slova do digitalnih formata kao što su PostScript, TrueType i OpenType. Digitalizacija je omogućila široku dostupnost fontova, ali je zadržala statičan model: svaki stil (npr. bold, italic, semibod) bio je zasebna datoteka. To je značilo da bi kompleksna font obitelj s više debljina i širina zahtijevala preuzimanje desetaka datoteka, što je značajno usporavalo učitavanje web stranica.
+
+Varijabilna tipografija (engl. Variable Fonts) službeno je predstavljena 2016. godine kao proširenje OpenType formata, nazvano OpenType Font Variations (OpenType 1.8). Osnovna ideja nije nova; slični koncepti postojali su u Adobeovom Multi Master formatu iz 1990-ih, ali nisu zaživjeli zbog složenosti i nedostatka standardizacije. OpenType Variations riješio je te probleme pružajući jedinstven, standardizirani način za pakiranje cijele font obitelji.
+
+Definicija: Varijabilni font je jedna datoteka koja sadrži podatke potrebne za generiranje širokog, kontinuiranog raspona stilova. Ti se stilovi definiraju duž osi varijacije (engl. variation axes). Font obično sadrži dva ili više mastera ili matrica – osnovne dizajne (npr. najtanji i najdeblji stil) – a softver generira sve međustilove kroz matematičku interpolaciju.
+
+Osi varijacije mogu biti:
+
+   Registrirane (standardne) osi: Pet standardnih osi koje podržavaju svi preglednici:
+       `wght` (Weight / Debljina)
+       `wdth` (Width / Širina)
+       `ital` (Italic / Kurziv)
+       `slnt` (Slant / Nagib)
+       `opsz` (Optical Size / Optička veličina)
+   Prilagođene (custom) osi: Dizajner može definirati bilo koju drugu os, poput npr. `grad` (Grade / Kontrast), `temp` (Temperature / Toplina), ili `serif` (Serif / Vrsta serifa).
+
+Ključna prednost leži u veličini datoteke. Umjesto da preuzima npr. 12 datoteka za 12 različitih debljina, preglednik preuzima samo jednu datoteku, koja je često jednake veličine kao samo nekoliko statičnih fontova, čime se drastično smanjuju zahtjevi za mrežnim prometom i poboljšava brzina učitavanja stranice.
+
+-----
+
+2. Tehnička implementacija u web okruženju
+
+Integracija varijabilne tipografije u web okruženje oslanja se na CSS (Cascading Style Sheets) i modernu podršku preglednika. U usporedbi sa statičnim fontovima, implementacija zahtijeva specifičnu sintaksu unutar CSS pravila.
+
+2.1. Definiranje fonta
+
+Varijabilni font se definira u CSS-u pomoću pravila `@font-face`, slično statičnim fontovima, ali s važnom razlikom u deklaraciji formata:
+
+```css
+@font-face {
+  font-family: 'MojaVarijabla';
+  src: url('MojaVarijabla.woff2') format('woff2 supports variations'),
+       url('MojaVarijabla.woff2') format('woff2-variations');
+  font-weight: 100 900; / Deklarira raspon debljine /
+  font-stretch: 50% 150%; / Deklarira raspon širine /
+}
+```
+
+Ova deklaracija ne samo da upućuje na datoteku (obično u optimiziranom WOFF2 formatu) već i definira raspon vrijednosti koje su dostupne za standardne osi (`wght` i `wdth`).
+
+2.2. Kontrola osi pomoću CSS-a
+
+Primjena i manipulacija varijabilnim stilovima u HTML elementima postiže se pomoću klasičnih svojstava i novog CSS svojstva: `font-variation-settings`.
+
+   Standardne osi: Osi `wght`, `wdth`, `ital` i `slnt` mogu se kontrolirati standardnim CSS svojstvima (`font-weight`, `font-stretch`, `font-style`).
+
+    ```css
+    h1 {
+      font-family: 'MojaVarijabla';
+      font-weight: 750; / Postavlja debljinu (wght) na 750 (unutar definiranog raspona) /
+      font-stretch: 120%; / Postavlja širinu (wdth) na 120% /
+    }
+    ```
+
+   Prilagođene (Custom) i ostale osi: Za sve ostale osi, uključujući `opsz` i bilo koje prilagođene osi, koristi se svojstvo `font-variation-settings`. Sintaksa koristi 4-slovni kod osi i željenu numeričku vrijednost.
+
+    ```css
+    .caption {
+      font-family: 'MojaVarijabla';
+      / Postavlja optičku veličinu (opsz) na 14 i prilagođenu os (grad) na 10 /
+      font-variation-settings: 'opsz' 14, 'grad' 10;
+    }
+    ```
+
+Optička veličina (Optical Size): Os `opsz` je ključna za čitljivost. Tradicionalno, dizajneri su kreirali različite fontove za naslove i male tekstove. Varijabilna tipografija to rješava unutar jedne datoteke: pri manjim veličinama fonta, `opsz` os automatski ili ručno podešava dizajn (npr. čini serif tanjim, povećava x-visinu) kako bi tekst bio jasniji.
+
+Tehnički gledano, varijabilni fontovi nude iznimnu preciznost. Dizajner više nije ograničen na unaprijed definirane stilove; može odabrati bilo koju debljinu između minimuma i maksimuma (npr. $732$ ili $855$), što omogućuje finije stiliziranje i savršeno vizualno usklađivanje s ostatkom dizajna.
+
+-----
+
+3. Utjecaj na responzivni web dizajn i performanse
+
+Varijabilna tipografija izravno rješava dva ključna izazova modernog web dizajna: responzivnost i performanse.
+
+3.1. Responzivnost i čitljivost
+
+Koncept responzivnosti diktira da se digitalni sadržaj mora prilagoditi svakom uređaju i kontekstu. Varijabilni fontovi omogućuju pravu "tipografsku responzivnost" izvan pukog mijenjanja veličine fonta.
+
+   Prilagodba na temelju viewporta: Pomoću CSS media upita i container queries (u razvoju), varijabilne osi mogu se dinamički mijenjati. Na primjer, na manjem ekranu s ograničenim prostorom, tekst se može automatski prebaciti na uži (kondenziraniji) stil (`wdth` manji od 100) kako bi se smanjio broj redaka, bez potrebe za smanjivanjem veličine fonta.
+   Poboljšanje čitljivosti na malim ekranima: Kombinacija `opsz` i prilagođene debljine može se koristiti za maksimiziranje čitljivosti. Na mobilnim uređajima, gdje je tekst mali, font se može automatski prebaciti na optičku veličinu optimiziranu za $12$ piksela, dok se na desktopu može koristiti $36$ piksela optimizacija, sve unutar iste datoteke. To osigurava da je tipografija dizajnirana za najbolji prikaz u tom konkretnom kontekstu.
+   Mikrotipografske prilagodbe: Varijabilna tipografija omogućuje suptilne prilagodbe za optimalno formatiranje teksta, kao što su rješavanje problema siročadi i udovica (engl. orphans and widows), gdje se mijenja širina fonta samo nekoliko postotaka kako bi se zadnji redak paragrafa elegantno uklopio.
+
+3.2. Optimizacija performansi
+
+Najveća prednost varijabilnih fontova leži u optimizaciji performansi, ključnom faktoru za user experience i SEO.
+
+   Smanjenje veličine datoteke: Kao što je spomenuto, jedna varijabilna datoteka zamjenjuje mnogo statičnih datoteka. U nekim slučajevima, ušteda u veličini datoteke može biti i do $70%$ u odnosu na ekvivalentnu obitelj statičnih fontova. Brže preuzimanje fonta znači brže prikazivanje teksta, što izravno poboljšava metriku Largest Contentful Paint (LCP), ključnu za Googleove Core Web Vitals.
+   Jedan HTTP zahtjev: Umjesto više HTTP zahtjeva za preuzimanje različitih stilova (Regular, Bold, Italic), varijabilni fontovi zahtijevaju samo jedan. Smanjenje broja zahtjeva značajno ubrzava proces renderiranja.
+   Dinamičko učitavanje: Preglednici mogu podržati tzv. subsetting varijabilnih fontova, gdje se učitava samo mali dio fonta (npr. samo osnovni masteri i podaci za određeni raspon osi), dodatno smanjujući inicijalno opterećenje.
+
+U eri mobilnog interneta i sporijih veza, optimizacija fontova nije samo nice-to-have, već je neophodna za osiguravanje brzog i pristupačnog digitalnog sadržaja za sve korisnike.
+
+-----
+
+4. Kreativne mogućnosti i poboljšanje user experiencea
+
+Osim tehničkih prednosti, varijabilna tipografija otvara neviđene kreativne mogućnosti za dizajnere i izravno utječe na user experience.
+
+4.1. Kreativna sloboda i mikroanimacije
+
+Varijabilni fontovi uvode koncept kontinuiteta u dizajnu. Umjesto diskretnih koraka (npr. 400 $rightarrow$ 700), dizajner ima neograničen izbor međuvrijednosti.
+
+   Fino podešavanje estetike: Tipografski parovi (npr. naslov i podnaslov) mogu se savršeno uskladiti mijenjanjem debljine u decimalama, npr. `font-weight: 683`, što statični fontovi ne dopuštaju.
+   Tipografska animacija: Budući da se vrijednosti osi mijenjaju kontinuirano, one su idealne za animaciju i interakciju. Na primjer:
+       Hover efekt: Tekst se može lagano "podebljati" pri prelasku miša (hover) ne skokom na bold, već fluidnom tranzicijom.
+       Scrolling efekt: Debljina ili širina fonta mogu se mijenjati ovisno o poziciji skrolanja, stvarajući dinamičan vizualni narativ.
+       Input interakcija: Font u polju za unos može postati uži ili širi dok korisnik tipka, vizualno signalizirajući količinu sadržaja.
+
+4.2. Pristupačnost (Accessibility)
+
+Varijabilna tipografija nudi moćne alate za poboljšanje pristupačnosti, daleko iznad standardnog povećanja veličine fonta.
+
+   Podešavanje kontrasta (Grade): Neke varijable nude prilagođenu os `GRAD` (Grade) koja mijenja ukupnu težinu znakova bez utjecaja na razmak ili tlocrt. Korisnici s problemima vida mogu povećati grade (kontrast) bez da se tekst preformatira i poremeti izgled stranice, čime se drastično poboljšava čitljivost.
+   Prilagodba na korisničke preferencije: Korisnici mogu definirati vlastite preferencije za debljinu fonta unutar operativnog sustava ili preglednika, a varijabilni fontovi mogu poštovati tu preferenciju nudeći kontinuirani raspon.
+
+Ukratko, varijabilna tipografija podiže user experience na novu razinu pružajući: potpunu kontrolu, estetsku sofisticiranost i personaliziranu čitljivost za svakog korisnika, bez obzira na uređaj i njegove potrebe.
+
+-----
+
+Zaključak
+
+Varijabilna tipografija u web okruženju nije samo tehnička nadogradnja, već je ključni pomak u paradigmi kako se tekst prikazuje na digitalnim platformama. Kombinirajući cijelu obitelj fontova u jednu, optimiziranu datoteku, ova tehnologija rješava dugotrajne probleme povezane s performansama i složenošću dizajna.
+
+Kroz analizu smo identificirali njezine glavne prednosti:
+
+1.  Optimizacija performansi: Drastično smanjenje veličine datoteke fonta i smanjenje HTTP zahtjeva ubrzava učitavanje web stranica, što je presudno za user experience i SEO.
+2.  Poboljšana responzivnost: Tipografija postaje zaista responzivna. Dizajneri mogu dinamički prilagođavati debljinu, širinu i optičku veličinu teksta na temelju različitih veličina ekrana i konteksta, osiguravajući savršenu čitljivost svugdje.
+3.  Dizajnerska kontrola: Svojstvo `font-variation-settings` omogućuje preciznu kontrolu nad svakom osi, pružajući neograničene mogućnosti stiliziranja i finog podešavanja.
+
+U kontekstu sve veće važnosti digitalnog sadržaja i naglaska na pristupačnosti, varijabilna tipografija postaje standard u web dizajnu. Ona omogućuje izradu elegantnih, brzih i univerzalno čitljivih sučelja, čime se ispunjava temeljno obećanje modernog weba – pružanje besprijekornog iskustva svakom korisniku, na bilo kojem uređaju. Budućnost tipografije u digitalnom svijetu je dinamična, fluidna i, doslovno, varijabilna.

@@ -1,0 +1,122 @@
+Uvod
+1.1 Predmet i cilj istraživanja
+Stihovi Đorđa Balaševića (1953. – 2021.) predstavljaju jedan od najznačajnijih i najautentičnijih fenomena u popularnoj glazbi na području bivše Jugoslavije. Njegov je izričaj duboko ukorijenjen u vojvođanskom kulturnom i jezičnom miljeu, ali u isto vrijeme obuhvaća univerzalne teme, dotičući se ljubavi, rata, nostalgije i socijalne kritike. Posebnost njegova jezika nije samo u narativnoj snazi, već i u bogatstvu koje proizlazi iz izloženosti različitim jezičnim slojevima i idiomima [1].
+
+Ovaj seminarski rad ima za cilj analizirati višejezični mozaik prisutan u Balaševićevim stihovima, fokusirajući se na manifestacije jezičnog kontakta i sustavnu upotrebu posuđenica. Istražit će se na koji način Balašević, kao autor popularne glazbe, inkorporira elemente njemačkog, mađarskog, slovačkog, a posebno turskog jezika (via srpskohrvatski), stvarajući jedinstveni poetski idiom koji odražava multikulturalnost njegove rodne ravnice – Vojvodine. Cilj je utvrditi funkciju i stilističku vrijednost tih leksičkih elemenata, te kako oni pridonose cjelokupnoj autorskoj poetici.
+
+1.2 Kontekst: Vojvodina kao jezični poligon
+Vojvodina, sjeverna autonomna pokrajina u Republici Srbiji, povijesno je bila administrativno, kulturno i jezično sjecište [2]. Kao dio Austro-Ugarske Monarhije, a kasnije višenacionalne države, to je područje stoljećima izloženo migracijama, suživotu i intenzivnom jezičnom kontaktu.
+
+“Jezični kontakt na ovom prostoru nije bio epizodan događaj, već trajna sociolingvistička stvarnost, oblikovana stoljećima suživota Mađara, Srba, Hrvata, Nijemaca, Slovaka i Rumunja.” [3]
+
+Ova povijesna i sociolingvistička pozadina direktno se odražava u svakodnevnom govoru, a posljedično i u umjetničkom izričaju, uključujući stihove Đorđa Balaševića. Upotreba lokalizama, dijalektizama i posuđenica funkcionira kao sredstvo lokalizacije i autentifikacije lirskog subjekta i prostora, čineći njegovo djelo prepoznatljivim i emotivno rezonantnim za regiju [4].
+
+1.3 Metodologija
+Za potrebe ove analize, koristit će se korpus odabranih pjesama Đorđa Balaševića (poput „Odlazi cirkus“, „Boža zvani Pub“, „Slovenska“, „Neki novi klinci“ i dr.) koje su prepoznate po visokoj frekvenciji upotrebe nenormiranih ili regionalno obilježenih riječi. Analiza će biti deskriptivna i kvalitativna, usmjerena na identifikaciju:
+
+Leksičkih posuđenica (turcizmi, germanizmi, hungarizmi): Identifikacija riječi stranog podrijetla.
+
+Stilističke funkcije: Utvrđivanje svrhe upotrebe (npr. humor, ironija, dočaravanje ambijenta).
+
+Sociolingvističke implikacije: Odnos jezika i društvene stvarnosti.
+
+Ključne riječi istraživanja su: pjesme Đorđe Balaševića, popularna glazba, jezični kontakt i posuđenice.
+
+2. Jezični slojevi i posuđenice u Balaševićevoj poetici
+2.1 Turcizmi kao oznaka orijentalnog nasljeđa
+Iako je Vojvodina dio Srednje Europe, njezin je jezik, kao i ostatak srpskohrvatskog jezičnog područja, pod snažnim utjecajem turcizama nastalih tijekom osmanske vladavine [5]. Turcizmi u Balaševićevim stihovima često nisu direktne posuđenice za koje postoje ekvivalenti, već duboko ukorijenjeni leksički elementi koji su postali sastavni dio govora i kulture.
+
+Na primjer, u pjesmama se često susreću riječi koje dočaravaju atmosferu i svakodnevicu:
+
+Riječi za hranu i piće: ćevap, kajmak, rakija, kafa
+
+Riječi za odjeću: džemper, čarapa
+
+Apstraktni pojmovi i karakteristike: inat, merak, baksuz
+
+Ove riječi rijetko nose pejorativan prizvuk; štoviše, često se koriste za postizanje topline i intimnosti pripovijedanja. Turcizmi pridonose Balaševićevu specifičnom narativnom stilu, dajući mu bliskost s govornim jezikom:
+
+“...a kad mi dođe merak, sve da udarim u bekriju…” (Iz pjesme "Al' se nekad dobro jelo")
+
+Korištenje turcizama u kontekstu sjevera daje zanimljiv kontrast, naglašavajući kulturnu sintezu koja je karakteristična za cijeli prostor bivše Jugoslavije.
+
+2.2 Germanizmi i hungarizmi: Srednjoeuropska patina
+Vojvođanski kolokvijalni govor, a samim time i Balaševićevi stihovi, bogat je leksikom naslijeđenim iz njemačkog i mađarskog jezika, što je izravna posljedica austrougarskog utjecaja.
+
+A) Germanizmi (švabizmi)
+Germanizmi su možda i najprepoznatljiviji element Balaševićeva vokabulara, jer često označavaju predmete iz urbanog i građanskog života koji su ušli u vojvođanski govor za vrijeme Monarhije. Ove posuđenice služe za evociranje starog, "švapskog" Novog Sada ili Subotice, dajući stihovima dozu buržoaskog ili nostalgičnog šarma [6].
+
+Primjeri iz stihova:
+
+šnela (brzo), gemišt (mješavina vina i vode), šlager (hit pjesma), kuplung (kvačilo), šnajder (krojač).
+
+Riječi kao firanga (zavjesa) ili špajz (smočnica) nisu samo leksičke jedinice, već kulturološki markeri koji stvaraju sliku dobro uređenog, malograđanskog interijera koji služi kao pozornica za radnju:
+
+“I sve je isto, firange, špajz i kredenc star…” (Iz pjesme "Neki novi klinci")
+
+B) Hungarizmi (mađarizmi)
+Mađarizmi su vitalan dio vokabulara koji doprinosi regionalnoj specifičnosti. Iako su manje frekventni u opusu od turcizama i germanizama, njihova je prisutnost ključna za portretiranje lokalnog karaktera i pejzaža.
+
+Primjeri: ašov (lopata), palinka (rakija), čikoš (konjušar).
+
+Njihova uporaba je snažno geografski obilježena, vežući radnju pjesme isključivo za ravnicu i njezine tradicije. Kombinacija germanizama i hungarizama Balaševiću služi kao jezični "pejzaž" koji precizno locira pjesmu u srednjoeuropski Panonski bazen.
+
+3. Stilistička funkcija višejezičnosti
+3.1 Humor i ironija
+Balašević je majstor upotrebe jezika za postizanje humora i ironije [7]. Posuđenice u njegovim stihovima često funkcioniraju kao komični elementi, pogotovo kada se koriste u neočekivanim kontekstima ili u kombinaciji sa standardnim jezikom. Upotreba njemačkih ili mađarskih izraza u opisu 'malih ljudi' i njihovih navika daje likovima živost i autentičnost.
+
+Primjerice, komičan učinak često se postiže upotrebom prezimena ili nadimaka koji sadrže posuđenice (Boža zvani Pub – njem. Bube, dječak; Mika Zvezdan – hungarizam/lokalizam za zvijezdu) [8].
+
+3.2 Oznaka autentičnosti i lokalnog kolorita
+Najvažnija funkcija Balaševićeve višejezičnosti je stvaranje autentičnosti. On ne koristi posuđenice samo kao ukras, već kao alat kojim oslikava prostor i vrijeme:
+
+Vojvođanski ambijent: Korištenje riječi poput bandera (stup), šlingeraj (vez) ili šajkača (vrsta kape) automatski smješta radnju u vojvođansku ili širu srpskohrvatsku ruralno-gradsku sredinu [9].
+
+Arhaizacija i nostalgija: Mnoge od ovih posuđenica su u standardnom jeziku zastarjele. Njihovim korištenjem, Balašević evocira prošlo, "bolje" vrijeme, što je česta tema u njegovoj poetici. Na taj način jezik postaje kanal kolektivne nostalgije za multikulturalnim suživotom.
+
+“Kroz posuđenice, Balašević ne samo da opisuje, on priziva duh Panonske nizine, njene mirise i ljude, čineći time svoj opus neponovljivim.” [10]
+
+Hvala! Nastavljam s preostalim dijelom seminarskog rada.
+
+4. Sociolingvističke i kulturne implikacije
+4.1 Jezični kontakt i kodno preklapanje (Code-Switching)
+Iako u Balaševićevim stihovima nema cjelovitih rečenica na drugom jeziku, primjetna je pojava kodnog preklapanja na leksičkoj razini. Izbor stranih riječi nad domaćim ekvivalentima često je svjestan sociolingvistički čin. Na primjer, umjesto pregača koristi se šlajer (germanizam), a umjesto skladište koristi se špajz [11].
+
+Ovo preklapanje služi kao:
+
+Indikator jezične kompetencije: Lirski subjekt Balaševića koristi jezik koji je bogat i neograničen standardnom normom, jezik koji reflektira stvarno, heterogeno jezično okruženje.
+
+Instrument pripadnosti: Korištenjem lokalno prepoznatljivih posuđenica, autor uspostavlja snažnu vezu sa svojom publikom koja dijeli isti jezični kod i razumije nijanse tih riječi.
+
+Balašević time ruši standardnu jezičnu barijeru u popularnoj glazbi, preferirajući autentični živi govor regije pred formalizmom.
+
+4.2 Posuđenice kao metonimija multikulturalnosti
+Upravo miješanje leksika iz različitih jezičnih izvora (Istok – turcizmi; Zapad/Centar – germanizmi, hungarizmi) Balaševiću omogućuje da stvori metonimiju multikulturalnosti Vojvodine [12]. Njegov jezik postaje odraz povijesne složenosti, gdje se na istom stolu služi turska kahva i pije njemački gemišt, a sve to u kući sa mađarskim palinkama.
+
+Na taj način, posuđenice nisu samo ukrasi, već nositelji dubljeg kulturnog značenja. One služe kao sjećanje na vremena kada su ti jezici i kulture intenzivno dijelili isti prostor, ne stvarajući pritom jezične hijerarhije, već funkcionalnu jezičnu simbiozu.
+
+“Jezični kolaž u Balaševićevim pjesmama je poetski odgovor na sociolingvističku stvarnost; on je ne samo opisuje, već ju slavi, pretvarajući posuđenice u stihove koji nose teret povijesti.” [13]
+
+5. Usporedba s drugim autorima i utjecaj na popularnu kulturu
+5.1 Balaševićev jedinstveni položaj
+Dok su i drugi autori popularne glazbe s tog područja koristili regionalizme i posuđenice (npr. Bijelo Dugme s turcizmima, Azra s urbanim žargonom), Balaševićev je pristup sustavniji i poetski dorađeniji [14]. On ne koristi posuđenice samo za ritam ili 'ulični' prizvuk; one su organski dio njegovih narativnih pjesama (šansona).
+
+Njegova je sposobnost integracije leksika takva da se šatra, žargon i germanizmi stapaju u prepoznatljiv autorski idiom koji nadilazi puko pjevačko prepričavanje. Time je Balašević postao jedan od ključnih faktora u prenošenju i očuvanju specifičnog, srednjoeuropskim jezicima obogaćenog, srpskohrvatskog vojvođanskog idioma u sferu popularne kulture [15].
+
+5.2 Leksik kao kulturna baština
+Njegovi stihovi su za mnoge generacije postali ne samo dio glazbenog, već i leksičkog pamćenja. Mnoge riječi koje su bile pred nestajanjem iz standardnog jezika, poput salaš (mađarizam) ili tendera (germanizam), revitalizirane su i usidrene u kolektivnu svijest upravo kroz njegove hitove [16].
+
+Ovakav pristup pokazuje kako popularna glazba, u rukama vještog pjesnika, može postati značajan faktor u dinamici jezičnih promjena i očuvanju regionalne jezične baštine. Njegovi stihovi stoga predstavljaju bogat korpus za sociolingvistička i dijalektološka istraživanja.
+
+Zaključak
+Đorđe Balašević je svojim bogatim i slojevitim stihovima stvorio istinski višejezični mozaik koji savršeno odražava multikulturalni i povijesno kompleksan identitet Vojvodine. Kroz pedantno uključivanje posuđenica – primarno turcizama, germanizama i hungarizama – Balašević je jezični kontakt preobrazio u poetsku snagu.
+
+Posuđenice u njegovom opusu funkcioniraju na tri ključne razine:
+
+Lokalizacija i Autentifikacija: Precizno lociraju radnju u Panonski bazen, dočaravajući specifični ambijent i karakter (npr. firanga, špajz).
+
+Stilistička vrijednost: Služe za humor, ironiju i postizanje topline/nostalgije (npr. merak, bekrija).
+
+Sociolingvistički marker: Svjedoče o jezičnom suživotu, predstavljajući metonimiju multikulturalnosti cijelog prostora.
+
+Balaševićev je jezik dokaz da popularna glazba nije nužno ograničena na jezični minimalizam, već može biti medij za duboku i složenu lingvističku refleksiju. Njegovo djelo ostaje neizostavan izvor za proučavanje jezičnih fenomena na području bivše Jugoslavije, gdje se povijest i kultura ispisuju svakom riječju, bez obzira na njezino podrijetlo. Multijezični mozaik u stihovima Đorđa Balaševića je poetski manifest suživota, utemeljen u preciznoj i emotivnoj upotrebi naslijeđenog vokabulara.

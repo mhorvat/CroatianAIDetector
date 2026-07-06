@@ -1,0 +1,82 @@
+1. Uvod
+1.1. Definicija i kontekst samovrjednovanja u visokom obrazovanju
+Samovrjednovanje (ili samoprocjena, engl. self-assessment) predstavlja kritički proces u kojem student procjenjuje vlastiti napredak, razumijevanje gradiva, kompetencije i konačne rezultate u odnosu na definirane ciljeve i kriterije učenja. U kontekstu visokog obrazovanja, ovo nije samo administrativna formalnost, već ključni element autonomnog učenja i razvoja meta-kognitivnih vještina.
+
+U tradicionalnoj nastavi, vrjednovanje je dominantno u rukama nastavnika. Prelaskom na studentski centrirani model učenja, naglasak se stavlja na odgovornost studenta za vlastito učenje, pri čemu samovrjednovanje služi kao most između studijskih ciljeva i ostvarene izvedbe.
+
+1.2. Uloga tehnologije i web alata u modernom vrjednovanju
+Digitalizacija obrazovanja transformirala je proces vrjednovanja. Web alati i platforme, od jednostavnih kvizova do složenih e-portfolija, nude studentima trenutačnu povratnu informaciju (real-time feedback), strukturirane okvire za refleksiju i mogućnost usporedbe s vršnjacima (vršnjačko vrjednovanje). Tehnologija omogućuje odmak od pasivnog primanja ocjene prema aktivnom sudjelovanju u procesu vrjednovanja.
+
+1.3. Cilj rada
+Cilj ovog seminarskog rada je analizirati teorijske osnove samovrjednovanja, identificirati i kategorizirati primjenjive web alate te istražiti pedagoške i tehnološke prednosti, ali i izazove implementacije samovrjednovanja uz pomoć tehnologije u studentskoj populaciji. Poseban naglasak bit će stavljen na razvoj refleksivnih vještina studenata.
+
+2. Teorijske osnove samovrjednovanja
+2.1. Samovrjednovanje kao metakognitivni proces
+Samovrjednovanje je u svojoj srži metakognitivni proces, što znači da je to razmišljanje o vlastitom razmišljanju i učenju. Uključuje tri ključne faze:
+
+Postavljanje standarda: Razumijevanje kriterija uspjeha (Što se očekuje?).
+
+Praćenje izvedbe: Mjerenje vlastite izvedbe (Kako mi ide?).
+
+Prosuđivanje i prilagodba: Identifikacija razlika između standarda i izvedbe te donošenje odluka o poboljšanju (Što trebam promijeniti?). Korištenje web alata ovaj proces čini transparentnijim, strukturiranijim i mjerljivijim.
+
+2.2. Razlika između samovrjednovanja i samotestiranja
+Važno je razlikovati samovrjednovanje od pukog samotestiranja. Samotestiranje (npr. online kvizovi) uglavnom mjeri puko prisjećanje činjenica i znanja (product-focused). Samovrjednovanje je širi, dublji proces koji uključuje kritičku refleksiju, postavljanje ciljeva i planiranje budućeg učenja (process-focused).
+
+2.3. Samoodređenje i motivacija (Deci i Ryan)
+Teorija samoodređenja (Self-Determination Theory) naglašava da samovrjednovanje pozitivno utječe na unutarnju motivaciju studenta. Kada studenti osjete da imaju kontrolu nad svojim učenjem i da su aktivni sudionici u procesu vrjednovanja (autonomija), njihova motivacija i uključenost u učenje značajno rastu. Web alati mogu olakšati tu autonomiju nudeći fleksibilne alate za praćenje i analizu napretka.
+
+3. Kategorizacija i primjena web alata za samovrjednovanje
+Digitalni alati mogu se podijeliti u nekoliko kategorija prema funkciji koju obavljaju u procesu samovrjednovanja.
+
+3.1. Alati za refleksiju i feedback (E-portfoliji i blogovi)
+E-portfoliji (npr. Mahara, Google Sites): Studentima omogućuju prikupljanje i organiziranje svih radova, eseja, projekata i multimedijskih sadržaja. Najvažnija komponenta je refleksivni esej uz svaki rad, gdje student objašnjava zašto je nešto napravio, što je naučio i kako bi to mogao poboljšati.
+
+Studentski blogovi/dnevnici (npr. WordPress, Medium): Služe kao manje formalni, kronološki zapisi o procesu učenja i osobnim uvidima. Potiču kontinuiranu introspekciju.
+
+3.2. Alati za formativno i dijagnostičko vrjednovanje (Kvizovi i ankete)
+Platforme za izradu kvizova (npr. Moodle, Google Forms, Kahoot!, Quizizz): Omogućuju studentima samostalno testiranje znanja, često s automatskim generiranjem povratne informacije za netočan odgovor. Ključno je da pružaju uvid u područja koja zahtijevaju dodatni rad, a ne samo konačan rezultat.
+
+Anketni alati (npr. SurveyMonkey, Google Forms): Mogu se koristiti za procjenu ne-kognitivnih aspekata, poput radnih navika, učinkovitosti grupnog rada ili samopouzdanja u određeno područje.
+
+3.3. Alati za vršnjačko i zajedničko vrjednovanje (Kolaborativni alati)
+Platforme za zajedničku izradu sadržaja (npr. Google Docs, Padlet, Wiki): Studenti rade na istom dokumentu ili projektu, a alati omogućuju praćenje doprinosa svakog studenta. Time se potiče samoprocjena vlastitog doprinosa timu.
+
+Specijalizirani alati za peer review (npr. Peergrade): Omogućuju studentima da koriste unaprijed definirane rubrike za anonimno ocjenjivanje radova svojih kolega. Ovaj proces izoštravanja kritičkog oka nužan je preduvjet za objektivno samovrjednovanje.
+
+4. Prednosti i pedagoški značaj implementacije
+4.1. Poboljšana objektivnost i transparentnost
+Web alati omogućuju strukturiranu refleksiju koristeći digitalne rubrike i check-liste. To smanjuje subjektivnost i čini proces procjene transparentnijim za studenta. Studenti precizno znaju što trebaju tražiti i na što se fokusirati.
+
+4.2. Razvoj vještina samoregulacije i odgovornosti
+Korištenje alata za samovrjednovanje potiče razvoj samoreguliranog učenja. Student preuzima aktivnu ulogu u planiranju, izvršavanju i evaluaciji učenja, što je ključno za cjeloživotno učenje.
+
+4.3. Trenutačna i ciljana povratna informacija
+Za razliku od klasičnih testova, digitalni alati (posebno kvizovi i simulacije) nude trenutačnu povratnu informaciju. Ova neposrednost omogućuje studentu da odmah prepozna i ispravi pogrešku, optimizirajući proces učenja.
+
+4.4. Priprema za profesionalni kontekst
+U suvremenom poslovnom svijetu, kritička samoprocjena vlastite učinkovitosti (self-reflection i self-evaluation u sklopu godišnjih procjena) temeljni je zahtjev. Kroz e-portfolije i refleksivne digitalne dnevnike, studenti razvijaju upravo te vještine nužne za uspjeh nakon studija.
+
+5. Izazovi i prepreke u implementaciji
+5.1. Nedostatak obučenosti i digitalna pismenost
+Studenti i nastavnici često nemaju dovoljno razvijene digitalne vještine potrebne za učinkovito korištenje složenijih alata, kao što su e-portfoliji. Potrebna su ciljana obuka i jasne upute za korištenje alata, s naglaskom na pedagošku, a ne samo tehničku primjenu.
+
+5.2. Pitanje iskrenosti i validnosti
+Najveći pedagoški izazov je osigurati da studenti budu iskreni i objektivni u svojoj samoprocjeni. Postoji rizik da studenti precjenjuju ili podcjenjuju vlastiti rad. Rješenje leži u uvođenju treninga kalibracije – uspoređivanja vlastite procjene s procjenom kolege ili nastavnika (vršnjačko i nastavničko vrjednovanje), čime se razvija realna slika vlastitih kompetencija.
+
+5.3. Opterećenje nastavnika i studenata
+Implementacija novih alata zahtijeva početni veliki angažman nastavnika u kreiranju jasnih kriterija, rubrika i obuci studenata. Za studente, refleksivno pisanje (npr. za e-portfolio) zahtijeva značajno ulaganje vremena i duboku introspekciju, što može dovesti do otpora ako nije jasno integrirano u sustav bodovanja.
+
+6. Preporuke za uspješnu implementaciju
+Integracija u kurikulum: Samovrjednovanje mora biti integralni dio predmeta i nositi određeni dio bodova, a ne biti dodatak.
+
+Jasnija definicija kriterija: Omogućiti studentima pristup digitalnim rubrikama i primjerima visokokvalitetnih radova kako bi znali što je cilj.
+
+Korištenje hibridnih modela: Kombiniranje digitalnih alata (za prikupljanje podataka) s individualnim konzultacijama (za dublju refleksiju).
+
+Trening refleksivnih vještina: Ne pretpostavljati da studenti znaju samovrjednovati. Uključiti vježbe kalibracije i pisanja refleksivnih dnevnika.
+
+7. Zaključak
+Samovrjednovanje studenata, potpomognuto web alatima, predstavlja neizbježan pomak prema modernom, studentski centriranom modelu visokog obrazovanja. Digitalne platforme, e-portfoliji i interaktivni kvizovi služe kao moćna podrška za razvoj metakognitivnih i refleksivnih vještina.
+
+Unatoč tehnološkim i pedagoškim izazovima, prednosti su dalekosežne: povećana autonomija, bolja unutarnja motivacija i razvijanje objektivnog, kritičkog pogleda na vlastite kompetencije. Uspješna implementacija zahtijeva pažljivo planiranje, obuku i pedagošku integraciju alata, čime se samovrjednovanje pozicionira kao ključna strategija za obrazovanje kompetentnih i samoreguliranih stručnjaka 21. stoljeća.

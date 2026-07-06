@@ -1,0 +1,59 @@
+Uvod
+
+Suvremena psihoterapija sve više prepoznaje potencijal tehnologije u unaprjeđenju dijagnostike, tretmana i postizanja terapijskih ciljeva. Integracija računalnih sustava u terapeutski proces otvara nova vrata za stvaranje kontroliranih, prilagodljivih i intenzivnih iskustava koja mogu značajno pomoći klijentima u obradi trauma, smanjenju anksioznosti, upravljanju fobijama te razvoju emocionalne regulacije. Temelj ovog pristupa leži u korištenju multimedijskih pobuda – pomno dizajniranih audio-vizualnih i interaktivnih elemenata – čija je primarna funkcija izazvati, odnosno elicitirati emocije i kognitivne odgovore unutar sigurnog terapijskog okruženja.
+
+Cilj ovog seminarskog rada jest istražiti i analizirati ulogu i strukturu računalnih sustava koji se koriste za generiranje ovih pobuda. Poseban naglasak stavlja se na napredne tehnologije poput virtualne stvarnosti, sofisticiranih alata za neurofeedback i primjene moćnih razvojnih okruženja kao što je Unreal Engine u kontekstu afektivne multimedije. Rad će nastojati pokazati kako precizno kalibrirane multimedijske pobude, u kombinaciji s biološkim mjerenjima poput EEG signala, omogućuju personaliziranu i učinkovitiju psihoterapiju, pomičući granice tradicionalnih metoda.
+
+---
+
+Multimedijske pobude i Elicitacija Emocija
+
+Multimedijske pobude u psihoterapijskom kontekstu predstavljaju stimuluse (vizualne, slušne, haptičke, a ponekad i olfaktorne) čija je svrha simuliranje realnih životnih situacija ili, pak, stvaranje apstraktnih iskustava koja su ključna za terapijski rad. Za razliku od pasivnog promatranja, terapijska učinkovitost ovih pobuda leži u njihovoj interaktivnosti i sposobnosti da izazovu snažne, ali kontrolirane emocionalne reakcije – proces poznat kao elicitacija emocija.
+
+Računalni sustavi omogućuju dinamičko generiranje sadržaja, što znači da se parametri pobude mogu mijenjati u realnom vremenu na temelju klijentovog odgovora. Na primjer, boja, intenzitet zvuka, brzina kretanja elemenata ili prisutnost određenih objekata mogu se prilagoditi kako bi se postigao optimalan nivo aktivacije. Koncept afektivne multimedije odnosi se upravo na dizajnerski pristup koji ciljano stvara sadržaj s namjerom izazivanja specifičnih emocionalnih stanja. Za terapiju fobija, to znači postepeno i kontrolirano izlaganje fobičnom objektu ili situaciji (npr. strahu od visine ili javnog nastupa), dok se u radu na traumama pobude mogu koristiti za desenzitizaciju ili jačanje resursa i osjećaja sigurnosti. Ključna prednost računalnog generiranja jest mogućnost precizne replikacije, ponavljanja i stupnjevanja intenziteta pobude, što je teško postići u klasičnoj terapijskoj prostoriji.
+
+---
+
+Virtualna Stvarnost kao Ključni Alat u Psihoterapiji
+
+Virtualna stvarnost (VR) predstavlja trenutno najnapredniji oblik računalnih sustava za generiranje multimedijskih pobuda. Koristeći specijalizirane VR naočale i perifernu opremu, klijent biva uronjen u simulirano okruženje koje se doživljava kao iznimno realno. Ta visoka razina uronjenosti (eng. immersion i presence) čini VR idealnim za tretman anksioznih poremećaja i fobija (terapija izlaganjem), ali i za složenije intervencije poput tretmana posttraumatskog stresnog poremećaja (PTSP).
+
+Primjena VR-a omogućuje terapeutu da:
+
+ Precizno kontrolira parametre izlaganja: Okruženje se može postepeno "dizati" po ljestvici anksioznosti. Na primjer, klijent s agorafobijom može prvo vježbati u praznom virtualnom supermarketu, a tek onda u onom punom ljudi.
+ Stvara sigurno okruženje za opasne ili nepraktične situacije: Tretman straha od letenja može se odraditi bez stvarnog ukrcaja u avion, čime se eliminira rizik i trošak.
+ Pruža povratnu informaciju u realnom vremenu: Terapeut može promatrati i analizirati klijentove reakcije unutar virtualnog svijeta, a neurofeedback sustavi mogu se integrirati izravno u VR okruženje.
+
+Razvoj ovakvih, visoko realističnih okruženja često zahtijeva korištenje moćnih platformi za razvoj videoigara, poput Unreal Enginea. Unreal Engine, poznat po svojim naprednim grafičkim mogućnostima i fizičkim simulacijama, omogućuje programerima i psiholozima stvaranje fotorealističnih virtualnih svjetova i scenarija koji su neophodni za uvjerljivu elicitaciju emocija i terapijsku učinkovitost.
+
+---
+
+Integracija Neurofeedbacka i EEG Tehnologije
+
+Kako bi multimedijske pobude bile maksimalno učinkovite, računalni sustavi moraju biti sposobni prilagođavati se unutarnjem stanju klijenta. Tu ulogu preuzima integracija biofizioloških mjerenja, prvenstveno putem elektroencefalografije (EEG), čiji se signali koriste u okviru neurofeedbacka.
+
+EEG mjeri električnu aktivnost mozga, bilježeći specifične obrasce moždanih valova (poput alfa, beta, theta i delta valova) koji su povezani s određenim emocionalnim i kognitivnim stanjima (npr. anksioznost, koncentracija, opuštenost).
+
+Neurofeedback je tehnika biološke povratne sprege u kojoj se klijentu u realnom vremenu prikazuje informacija o njegovoj vlastitoj moždanoj aktivnosti. Kada se to kombinira s računalno generiranim multimedijskim pobudama, sustav funkcionira na sljedeći način:
+
+1.  EEG Mjerenje: Senzori bilježe klijentovu moždanu aktivnost, npr. visoku razinu teta valova (povezanih s dubokom opuštenošću).
+2.  Računalna Analiza: Računalni sustav (softver za neurofeedback) obrađuje EEG signale.
+3.  Povratna Informacija (Pobuda): Multimedijska pobuda se dinamički mijenja kako bi "nagradila" ili "kaznila" klijenta. Ako klijent uspješno postiže željeni obrazac (npr. smanjenje anksioznosti), vizualni elementi u virtualnoj stvarnosti mogu postati svjetliji, glazba ugodnija, ili se virtualni zadatak lakše rješava. U slučaju neželjenog obrasca, pobuda postaje manje ugodna.
+
+Na ovaj način, klijent nesvjesno uči regulirati svoju moždanu aktivnost i posljedično svoja emocionalna stanja. Afektivna multimedija ovdje služi kao intuitivno i zanimljivo sučelje za učenje samoregulacije, gdje se apstraktni moždani valovi pretvaraju u konkretno, interaktivno iskustvo u virtualnom svijetu razvijenom, primjerice, u Unreal Engineu.
+
+---
+
+Budućnost Personalizacije i Etički Aspekti
+
+Napredni računalni sustavi otvaraju put prema izuzetno personaliziranoj psihoterapiji. Kombinirajući EEG podatke i neurofeedback s virtualnom stvarnošću, terapijski tretman postaje prilagođen ne samo dijagnozi, već i specifičnom neurofiziološkom odgovoru svakog klijenta na multimedijske pobude. Budućnost leži u sustavima koji će koristiti umjetnu inteligenciju i strojno učenje za analizu ogromne količine podataka o ponašanju i biološkim odgovorima klijenta te automatsko optimiziranje parametara afektivne multimedije za maksimalnu terapijsku učinkovitost i optimalnu elicitaciju emocija.
+
+Međutim, s porastom moći ovih sustava javljaju se i etički izazovi. Glavna pitanja odnose se na zaštitu privatnosti neurofizioloških podataka (EEG), osiguravanje kliničke validacije generiranih pobuda, te oprezno rukovanje potencijalom snažne elicitacije emocija unutar VR okruženja. Terapeut ostaje ključna figura u interpretaciji podataka i vođenju sesije, osiguravajući da se računalni sustav koristi kao alat za podršku, a ne kao zamjena za ljudski terapijski odnos.
+
+---
+
+Zaključak
+
+Računalni sustavi za generiranje multimedijskih pobuda predstavljaju jednu od najuzbudljivijih inovacija u modernoj psihoterapiji. Kombinacijom imerzivnih tehnologija poput virtualne stvarnosti (često razvijenih u alatima poput Unreal Enginea) i biološke povratne sprege putem neurofeedbacka temeljenog na EEG podacima, terapeuti stječu sposobnost provođenja preciznih, kontroliranih i visoko personaliziranih intervencija. Koncept afektivne multimedije i ciljana elicitacija emocija postaju ključni mehanizmi za postizanje terapijskih promjena.
+
+Iako je tehnološki razvoj brz i impresivan, neophodno je kontinuirano kliničko istraživanje koje će potvrditi dugoročnu učinkovitost i sigurnost ovih pristupa. Računalni sustavi nisu zamjena za terapeuta, već moćno proširenje njegovih mogućnosti, čija će etička primjena i daljnji razvoj sigurno oblikovati budućnost mentalnog zdravlja.

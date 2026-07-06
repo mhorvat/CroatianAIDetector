@@ -1,0 +1,135 @@
+Uvod
+Digitalna transformacija i sve veća ovisnost o mobilnom internetu postavili su visoke standarde pred razvojne inženjere. Korisnici očekuju brze, pouzdane i interaktivne aplikacije bez obzira na kvalitetu mreže ili uređaj koji koriste. Tradicionalni jaz između nativnih mobilnih aplikacija i standardnih web stranica predstavljao je značajan izazov, pri čemu su nativne aplikacije nudile bolje performanse i pristup hardveru, dok su web aplikacije nudile širu dostupnost i jednostavnije distribuiranje.
+
+Kao odgovor na ovaj izazov, Google je 2015. godine predstavio koncept Progresivnih Web Aplikacija (PWA), termin koji su skovali Frances Berriman i Alex Russell. PWA nije nova tehnologija, već filozofija razvoja i skup najboljih praksi koje koriste najnovije web tehnologije (HTML5, CSS3, JavaScript) i moderne API-je preglednika kako bi se web aplikacijama pružile mogućnosti koje su do tada bile rezervirane isključivo za nativne aplikacije.
+
+Osnovna ideja PWA je pružiti korisničko iskustvo koje je progresivno poboljšano, što znači da aplikacija radi na svim preglednicima, ali nudi dodatne, napredne značajke (poput rada izvan mreže, obavijesti i instalacije na početni zaslon) na modernim, podržanim preglednicima.
+
+Ovaj seminar ima za cilj provesti detaljnu analizu ključnih značajki PWA te istražiti metodologije i alate za mjerenje i optimizaciju njihovih performansi. Kroz poglavlja će biti secirane komponente koje čine PWA, prednosti koje donose za poslovanje i korisnike, kao i tehnički izazovi s kojima se susreću razvojni timovi.
+
+1. Definicija i Arhitektonski Elementi PWA
+PWA se definira skupom specifičnih značajki koje web aplikacija mora ispuniti kako bi se smatrala "progresivnom". Alex Russell definirao je tri ključna stupa PWA: Sposobnost (Capabilities), Pouzdanost (Reliability) i Dostupnost (Installability). Tehnički gledano, svaka PWA mora biti:
+
+Pouzdan (Reliable): Brzo se učitava (čak i na sporim mrežama) i radi izvan mreže.
+
+Brz (Fast): Reagira na korisničke interakcije u djeliću sekunde, s fluidnim animacijama.
+
+Angažirajući (Engaging): Pruža impresivno korisničko iskustvo, osjeća se kao nativna aplikacija, i može se instalirati.
+
+Ove karakteristike postižu se primjenom nekoliko ključnih arhitektonskih elemenata:
+
+1.1. Service Workers (Servisni Radnici)
+Servisni radnici su u srcu PWA arhitekture. To su programibilni proxyji između web aplikacije i mreže/cachea. Oni su JavaScript datoteke koje se izvode u pozadini, odvojene od glavne niti preglednika, omogućujući funkcije koje ne zahtijevaju korisničku interakciju.
+
+Rad izvan mreže (Offline First): Servisni radnici omogućuju presretanje mrežnih zahtjeva i posluživanje sadržaja iz lokalne predmemorije (Cache Storage API), čime se aplikacija čini pouzdanom neovisno o mrežnoj konekciji. Najbolja praksa je strategija "cache, then network" ili "stale-while-revalidate".
+
+Pozadinska sinkronizacija (Background Sync): Omogućuje odgodu radnji (npr. slanje poruke) dok korisnik ne povrati stabilnu internetsku vezu.
+
+Push Notifikacije: Omogućuju slanje obavijesti korisniku, čak i kada preglednik nije aktivan, slično nativnim aplikacijama.
+
+1.2. Web Manifest
+Web Manifest (u standardu manifest.json) je jednostavna JSON datoteka koja programeru omogućuje da definira kako bi se aplikacija trebala ponašati kada je "instalirana" na korisnikov uređaj. Ključna svojstva uključuju:
+
+name i short_name: Ime aplikacije koje se prikazuje na početnom zaslonu.
+
+start_url: URL koji se učitava kada korisnik pokrene aplikaciju s početnog zaslona.
+
+display: Definira način prikaza (npr. standalone za izgled bez standardnog sučelja preglednika).
+
+icons: Definira ikone koje će se koristiti za različite rezolucije.
+
+theme_color i background_color: Postavlja boju pozadine i trake statusa, čime se stvara dojam integracije s operativnim sustavom.
+
+1.3. HTTPS i Aplikacijska Ljuska (App Shell)
+HTTPS: Svi PWA moraju biti posluženi putem sigurne veze (HTTPS). Ovo nije samo sigurnosna preporuka, već i tehnički preduvjet za korištenje Servisnih radnika.
+
+App Shell: Koncept aplikacijske ljuske podrazumijeva minimalni HTML, CSS i JavaScript koji su potrebni za brzo prikazivanje osnovnog sučelja aplikacije (zaglavlje, navigacija, mjesta za sadržaj). Ljuska se kešira pomoću Servisnog radnika, a dinamički sadržaj se učitava naknadno. To daje korisniku dojam instantnog učitavanja i smanjuje percipirano vrijeme čekanja.
+
+2. Prednosti i Poslovni Utjecaj PWA
+Usvajanje PWA filozofije donosi značajne prednosti na svim razinama:
+
+2.1. Unaprijeđeno Korisničko Iskustvo (UX)
+Brzina: Istraživanja pokazuju da kašnjenje u učitavanju od samo jedne sekunde može smanjiti konverzije za 7%. PWA, kroz predmemoriranje (caching) i App Shell arhitekturu, osigurava gotovo trenutačno učitavanje i fluidnu interakciju, dramatično smanjujući stopu napuštanja stranice.
+
+Pouzdanost: Rad izvan mreže ili na vrlo nestabilnoj 2G/3G mreži omogućuje korisnicima da nastave koristiti ključne funkcionalnosti, čineći aplikaciju "uvijek dostupnom".
+
+Jednostavna Instalacija: PWA eliminira barijere App Storeova. Korisnik može instalirati aplikaciju izravno iz preglednika jednim klikom (Add to Home Screen - A2HS), što značajno smanjuje trenje pri usvajanju aplikacije.
+
+2.2. Poslovne i Marketinške Prednosti
+Veća Konverzija i Angažman: Primjeri iz prakse (npr. Twitter Lite, AliExpress, Lancome) pokazuju porast u konverzijama, prihodima i prosječnom broju sesija po korisniku nakon migracije na PWA.
+
+Niži Troškovi Razvoja i Održavanja: Razvoj jedne baze koda koja radi na webu, Androidu i iOS-u eliminira potrebu za zasebnim nativnim timovima i smanjuje troškove razvoja za mobilne platforme.
+
+Direktan Marketing (Push Notifikacije): Omogućuje tvrtkama izravan doseg do korisnika putem push obavijesti, neovisno o tome je li preglednik otvoren, što je moćan alat za ponovni angažman i marketing.
+
+SEO Prednosti: Google favorizira web stranice s brzim učitavanjem i dobrim performansama. Kako PWA poboljšava metrike brzine, automatski poboljšava i pozicioniranje u tražilicama.
+
+3. Analiza Performansi i Mjerenje Kvalitete PWA
+Iako je brzina ugrađena u definiciju PWA, performanse nisu zajamčene, već se moraju aktivno mjeriti, optimizirati i održavati. Za mjerenje kvalitete i performansi PWA koriste se specifični alati i metrike.
+
+3.1. Ključne Metrike Performansi
+Metrike performansi (Performance Metrics) su usmjerene na mjerenje stvarnog korisničkog iskustva, a ne samo tehničkih aspekata. Ključne metrike iz Web Vitals inicijative uključuju:
+
+Largest Contentful Paint (LCP): Mjeri vrijeme kada je najveći, najznačajniji sadržaj na stranici postao vidljiv. Idealna vrijednost je ispod 2,5 sekunde. Odražava brzinu učitavanja.
+
+First Input Delay (FID): Mjeri vrijeme od prve interakcije korisnika (klik, pritisak tipke) do trenutka kada preglednik može započeti obradu tog događaja. Idealna vrijednost je ispod 100 milisekundi. Odražava interaktivnost. Napomena: FID se zamjenjuje s INP (Interaction to Next Paint).
+
+Cumulative Layout Shift (CLS): Mjeri koliko se vizualno stabilna stranica učitava, sumirajući sve neočekivane pomake u izgledu stranice. Idealna vrijednost je ispod 0,1. Odražava vizualnu stabilnost.
+
+3.2. Alati za Audit i Optimizaciju
+Alat koji je de facto standard za analizu PWA je Lighthouse, ugrađen u Chrome DevTools. Lighthouse provodi audit PWA aplikacije po pet ključnih kategorija:
+
+Performanse: Ocjenjuje brzinu aplikacije na temelju Web Vitals metrika i drugih faktora.
+
+PWA: Provjerava ključne PWA zahtjeve (HTTPS, Manifest, Service Worker registracija).
+
+Dostupnost (Accessibility): Provjerava usklađenost s WCAG smjernicama za osobe s invaliditetom.
+
+Najbolje Prake (Best Practices): Provjerava moderne web prakse i sigurnost.
+
+SEO: Provjerava osnovne SEO elemente.
+
+Metodologija optimizacije:
+
+Keširanje: Implementacija učinkovitih strategija keširanja Service Workerom (App Shell + dinamički podaci).
+
+Kritični CSS: Učitavanje samo CSS-a potrebnog za prvi prikaz (above-the-fold sadržaj).
+
+Lazy Loading: Odgođeno učitavanje slika i resursa koji nisu odmah vidljivi.
+
+Kompresija: Korištenje tehnika kompresije (npr. Gzip, Brotli) i optimizacija veličine slika.
+
+4. Izazovi i Ograničenja PWA
+Unatoč brojnim prednostima, PWA se i dalje suočava s određenim izazovima u odnosu na nativne aplikacije.
+
+4.1. Podrška za Platforme i Funkcionalnost
+iOS Ograničenja: Apple (Safari) je sporije implementirao punu podršku za PWA u usporedbi s Googleom (Chrome). Iako Safari podržava Servisne radnike i A2HS, određene napredne značajke (poput Push notifikacija u samostalnom načinu rada, napredna pozadinska sinkronizacija, ili pristup nekim nativnim hardverskim API-jima) su ili ograničene ili nedostupne.
+
+Pristup Hardveru: Iako se situacija poboljšava s novim API-jima (npr. Web Share API, Geolocation, Media Devices), PWA i dalje ima ograničen pristup nekim nativnim hardverskim značajkama kao što su napredni senzori, NFC, Bluetooth na dubljoj razini ili kontakti na telefonu, što je moguće u nativnim aplikacijama.
+
+4.2. Ograničenja Distribucije
+Nedostatak Tržišne Vidljivosti: PWA se ne pojavljuje automatski u App Storeu (Apple) ili Play Storeu (Google), osim ako se ne koristi dodatni alat kao što je Trusted Web Activity (TWA) za Android. To znači da se PWA mora oslanjati na standardni web marketing i SEO, umjesto na vidljivost koju nude trgovine aplikacijama.
+
+Ograničenja Veličine Predmemorije: Preglednici postavljaju kvote na veličinu predmemorije koju PWA može koristiti, što može biti problematično za medijski bogate aplikacije.
+
+5. Budućnost PWA i Novi API-ji
+Budućnost PWA je usko povezana s kontinuiranim razvojem i standardizacijom novih web API-ja koji premošćuju jaz s nativnim mogućnostima:
+
+Trusted Web Activity (TWA): Razvijen od strane Googlea, TWA omogućuje da se PWA instalira i pokrene unutar nativnog omotača u Google Play Storeu. Aplikacija se i dalje učitava u Chromeu, ali se integrira s Android sustavom, pružajući PWA-u vidljivost u trgovini aplikacijama.
+
+Web Capabilities / Fugu Project: Google i partneri rade na projektu Fugu čiji je cilj izložiti sve sposobnosti mobilnog OS-a webu. Primjeri API-ja koji proizlaze iz ovog projekta uključuju:
+
+File System Access API: Omogućuje izravan pristup datotečnom sustavu korisnika.
+
+Badging API: Omogućuje prikaz broja nepročitanih stavki na ikoni aplikacije na početnom zaslonu.
+
+WebHID/WebUSB: Omogućuje povezivanje s hardverskim uređajima.
+
+Ove inovacije signaliziraju jasan trend prema daljnjoj integraciji weba s temeljnim operativnim sustavom, čime se PWA pozicionira kao primarna tehnologija za buduće mobilne i desktop aplikacije.
+
+Zaključak
+Progresivne web aplikacije predstavljaju evolucijski skok za web razvoj, nudeći pristup koji kombinira najbolje karakteristike weba (dostupnost, jednostavnost distribucije, niske troškove) s najboljim karakteristikama nativnih aplikacija (brzina, pouzdanost, angažman). Ključni arhitektonski elementi, prvenstveno Service Workers i Web Manifest, omogućuju PWA-u da funkcionira izvan mreže i ponudi instalacijske mogućnosti koje su transformirale korisničko iskustvo i poslovne rezultate.
+
+Iako izazovi poput neujednačene podrške na svim platformama i ograničenja pristupa određenom hardveru i dalje postoje, kontinuirani razvoj web standarda, poput inicijative Web Vitals i projekta Fugu, aktivno radi na otklanjanju tih nedostataka.
+
+PWA nije samo trend, već i dokazana strategija za poduzeća koja žele maksimizirati konverzije, smanjiti troškove razvoja i pružiti korisnicima brže i pouzdanije iskustvo bez frikcije. U konačnici, PWA predstavlja budućnost razvoja aplikacija – pružanje brzih, pouzdanih i angažirajućih iskustava koja su jednako impresivna bez obzira na uređaj ili mrežnu vezu.

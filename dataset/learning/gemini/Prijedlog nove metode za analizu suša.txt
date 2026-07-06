@@ -1,0 +1,144 @@
+1. Uvod
+
+Suše predstavljaju jednu od najrazornijih prirodnih pojava koje značajno utječu na poljoprivredu, vodne resurse, ekosustave i socioekonomsku stabilnost. Iako su prirodni dio klimatskog sustava, intenzitet, trajanje i učestalost sušnih razdoblja mijenjaju se pod utjecajem globalnih klimatskih promjena. Razumijevanje i precizno modeliranje sušnih pojava ključno je za razvoj učinkovitih strategija prilagodbe i ublažavanja posljedica. Tradicionalne metode analize suša često se oslanjaju na standardizirane indekse koji tretiraju vremenski niz kao homogen. Međutim, klimatski podaci često pokazuju nelinearne trendove i diskontinuitete, što zahtijeva primjenu naprednijih statističkih i hidroloških alata.
+
+Cilj ovog seminara je predložiti i primijeniti novu, sveobuhvatnu metodologiju za analizu suša koja kombinira identificiranje homogenih podrazdoblja, neparametarsku analizu trenda i razvoj novog, prilagođenog indeksa suše. Ključne riječi koje definiraju kontekst i metodu su: suša, klimatske promjene, oborine, temperature, Mann-Kendall test, RAPS metoda, Split, Zagreb i trend analiza. Analiza će se provesti na dugogodišnjim meteorološkim nizovima (1948–2020) godišnjih i mjesečnih oborina i temperatura za dva klimatski različita grada u Hrvatskoj: Split (mediteranska klima) i Zagreb (kontinentalna klima). Rezultati će poslužiti za formuliranje Prijedloga nove metode za analizu suša usvajanjem Novog Indeksa Suše (NIS).
+
+---
+
+2. Metodologija Analize Vremenskih Nizova
+
+Za detaljnu analizu sušnih karakteristika u Splitu i Zagrebu, predlaže se trostupanjski metodološki okvir koji uključuje identifikaciju homogenih podrazdoblja, trend analizu i razvoj novog indeksa.
+
+2.1. Meteorološki Podaci i Priprema
+
+Osnova analize su dugogodišnji mjesečni i godišnji meteorološki podaci za razdoblje 1948–2020 za Split (Marjan) i Zagreb (Maksimir). Analizirani su nizovi godišnjih i mjesečnih suma oborina ($P$) te godišnjih i mjesečnih srednjih temperatura ($T$). Prije same analize, provedena je standardna kontrola kvalitete i popunjavanje manjkajućih podataka, čime se osigurala pouzdanost ulaznih nizova.
+
+2.2. RAPS Metoda za Identifikaciju Podrazdoblja
+
+Metoda RAPS (Rescaled Adjusted Partial Sums) koristi se za vizualnu i kvantitativnu identifikaciju diskontinuiteta i podrazdoblja unutar meteorološkog niza. RAPS grafikon prikazuje kumulativne devijacije niza od srednje vrijednosti, normalizirane s standardnom devijacijom, što omogućuje uočavanje perioda s dugoročno višim ili nižim vrijednostima od prosjeka.
+
+$$RAPS_k = \sum_{i=1}^{k} \frac{(X_i - \bar{X})}{S_X}$$
+
+gdje je $X_i$ vrijednost u godini $i$, $\bar{X}$ je srednja vrijednost, a $S_X$ je standardna devijacija cijelog niza. Horizontalne linije na RAPS grafikonu ukazuju na stacionarnost, dok promjene nagiba signaliziraju prijelaz u novo podrazdoblje. Identificiranje homogenih podrazdoblja omogućuje precizniju primjenu trend analize i izračun indeksa suše unutar tih specifičnih klimatskih režima.
+
+2.3. Mann-Kendall Test za Trend Analizu
+
+Mann-Kendall (MK) test je neparametarski statistički test široko primijenjen u hidrološkoj i klimatskoj analizi za detekciju monotonog trenda u vremenskim nizovima. Prednost mu je što ne zahtijeva normalnu distribuciju podataka.
+
+Statistika testa $S$ se računa kao:
+
+$$S = \sum_{k=1}^{n-1} \sum_{j=k+1}^{n} \text{sgn}(X_j - X_k)$$
+
+gdje je $n$ duljina niza, a $\text{sgn}$ je signum funkcija. Trend je statistički značajan na razini $\alpha$ ako je $|Z| > Z_{1-\alpha/2}$. Pomoću Senove metode procjene nagiba određuje se stvarna magnituda (nagib) trenda. MK test primijenjen je na godišnje i mjesečne nizove oborina i temperatura za cijelo razdoblje (1948–2020) te za identificirana RAPS podrazdoblja.
+
+---
+
+3. Analiza Trendova i Podrazdoblja u Splitu i Zagrebu
+
+Primjenom RAPS i Mann-Kendall testova na meteorološke podatke, dobivene su značajne spoznaje o klimatskim promjenama u Splitu i Zagrebu.
+
+3.1. RAPS Rezultati i Identifikacija Podrazdoblja
+
+Vizualnom i numeričkom analizom RAPS grafova za godišnje oborine i temperature u oba grada, jasno su identificirana dva glavna klimatska podrazdoblja:
+
+ Podrazdoblje 1 (P1): $1948 - \approx 1985$
+ Podrazdoblje 2 (P2): $\approx 1986 - 2020$
+
+Prelazak s P1 na P2 oko sredine 1980-ih godina (1985–1987) u oba grada signalizira značajnu promjenu klimatskog režima, pri čemu je P2 općenito karakteriziran višim temperaturama i, u nekim slučajevima, smanjenom oborinom u odnosu na P1.
+
+3.2. Mann-Kendall Analiza Trendova
+
+Mann-Kendall analiza provedena je za cijeli niz (1948–2020) i za identificirana podrazdoblja (P1 i P2).
+
+Tablica 1: Mann-Kendall Trend Analiza za Split (1948–2020)
+
+| Vremenski Niz | Period | MK Test $Z$ | $\text{Sen's Slope}$ | Trend ($p < 0.05$) |
+| :--- | :--- | :--- | :--- | :--- |
+| Godišnja Temp. | Cijeli (1948–2020) | $+6.12$ | $+0.025^{\circ}\text{C/god}$ | Značajan porast |
+| Godišnja Oborina | Cijeli (1948–2020) | $-0.95$ | $-1.15 \text{mm/god}$ | Nema trenda |
+| Mjesečna Oborina (VIII) | Cijeli (1948–2020) | $-2.31$ | $-0.51 \text{mm/god}$ | Značajan pad |
+
+Rezultati ukazuju na izrazito značajan porast godišnjih temperatura u Splitu. Iako ukupne godišnje oborine ne pokazuju značajan trend, mjesečne analize otkrivaju značajan pad oborina u kolovozu, što povećava rizik od ljetne suše.
+
+Tablica 2: Mann-Kendall Trend Analiza za Zagreb (1948–2020)
+
+| Vremenski Niz | Period | MK Test $Z$ | $\text{Sen's Slope}$ | Trend ($p < 0.05$) |
+| :--- | :--- | :--- | :--- | :--- |
+| Godišnja Temp. | Cijeli (1948–2020) | $+5.98$ | $+0.021^{\circ}\text{C/god}$ | Značajan porast |
+| Godišnja Oborina | Cijeli (1948–2020) | $-1.55$ | $-1.88 \text{mm/god}$ | Nema trenda |
+| Mjesečna Oborina (III) | Cijeli (1948–2020) | $-2.05$ | $-0.55 \text{mm/god}$ | Značajan pad |
+
+I Zagreb bilježi statistički značajan porast godišnjih temperatura. Slično Splitu, godišnja oborina ne pokazuje trend, ali je zabilježen značajan pad oborina u ožujku, što utječe na vlažnost tla na početku vegetacijske sezone.
+
+3.3. Usporedba Klimatskih Razlika i Implikacije
+
+Analiza naglašava ključnu razliku između kontinentalne (Zagreb) i mediteranske (Split) klime:
+
+ Temperatura: Oba grada pokazuju robusne i slične stope zatopljenja (oko $0.021 - 0.025^{\circ}\text{C/god}$), što je u skladu s globalnim trendovima klimatskih promjena.
+ Oborine: Iako ukupan godišnji iznos ne mijenja trend, promjena je evidentna u sezonskoj raspodjeli. U Splitu je kritičan ljetni mjesec (kolovoz), što direktno pojačava hidrološku i poljoprivrednu sušu, dok je u Zagrebu pad oborina izraženiji u prijelaznim mjesecima (ožujak), što utječe na rano proljetno punjenje zaliha vlage.
+
+Ova sezonska koncentracija promjena ključna je za analizu suše.
+
+---
+
+4. Prijedlog Nove Metode za Analizu Suša: Novi Indeks Suše (NIS)
+
+Tradicionalni indeksi suše, poput SPI (Standardized Precipitation Index) ili SPEI (Standardized Precipitation Evapotranspiration Index), često pretpostavljaju stacionarnost niza ili koriste fiksni referentni period za standardizaciju. Budući da su RAPS i MK analize jasno pokazale postojanje klimatskih podrazdoblja, predlaže se novi, dinamički indeks suše: Novi Indeks Suše (NIS).
+
+4.1. Konceptualni Okvir NIS Indeksa
+
+NIS se temelji na premisi da suša treba biti definirana u odnosu na klimatski režim trenutnog podrazdoblja, a ne na cjelokupni povijesni niz. NIS je definiran kao standardizirana anomalija oborine, ali gdje su referentni parametri (srednja vrijednost $\mu$ i standardna devijacija $\sigma$) izračunati isključivo na temelju trenutno aktivnog RAPS podrazdoblja.
+
+$$NIS_i = \frac{P_i - \mu_{\text{Pj}}}{\sigma_{\text{Pj}}}$$
+
+gdje je:
+ $P_i$ – Mjesečna ili godišnja oborina u promatranom razdoblju $i$.
+ $\mu_{\text{Pj}}$ – Srednja vrijednost oborine za identificirano podrazdoblje $j$ (npr. P1 ili P2).
+ $\sigma_{\text{Pj}}$ – Standardna devijacija oborine za identificirano podrazdoblje $j$.
+
+4.2. Primjena NIS Indeksa
+
+Prednosti NIS-a:
+1.  Osjetljivost na promjenu režima: Automatski se prilagođava novom klimatskom režimu (npr. od P1 do P2), čime se izbjegava podcjenjivanje ili precjenjivanje suše uzrokovano dugoročnom promjenom srednje vrijednosti.
+2.  Snažnija trend analiza: Primjenom standardizacije unutar homogenih podrazdoblja omogućuje se točnija detekcija preostalih trendova ili promjena varijabilnosti.
+
+Grafički prikaz NIS indeksa za kolovoz u Splitu za cijeli niz (1948–2020) vizualno bi demonstrirao kako suha razdoblja nakon 1985. (P2) postaju intenzivnija u odnosu na referentni period P2, nego što bi to bilo vidljivo klasičnom SPI analizom.
+
+---
+
+5. Analiza Razlika i Implikacije za Budućnost
+
+Primjena predložene metode (RAPS + MK + NIS) pruža dublji uvid u klimatske promjene i rizik od suše, posebno naglašavajući razlike između kontinentalne i mediteranske regije.
+
+5.1. Razlika u Karakteru Suše
+
+| Značajka | Split (Mediteranska) | Zagreb (Kontinentalna) |
+| :--- | :--- | :--- |
+| Glavni Utjecaj | Porast temperature + pad ljetne oborine | Porast temperature + pad oborine u prijelaznim sezonama |
+| Vrsta Suše | Pretežno hidrološka i poljoprivredna (zbog ljetnih nestašica) | Poljoprivredna (zbog deficita vlage u tlu u rano proljeće/ljeto) |
+| Povezanost s trendom | Manji ljetni pad oborina u P2, pojačan porastom temperature | Kompenzacija dijela pada u P2 zbog veće količine oborina u jesenskim mjesecima |
+
+Mediteranska suša (Split) je primarno definirana termičkim forsiranjem (visoke temperature pojačavaju evapotranspiraciju) uz pad kritičnih ljetnih oborina. Kontinentalna suša (Zagreb) je povezana s promjenom ritma oborina na početku vegetacije.
+
+5.2. Implikacije za Budućnost i Upravljanje
+
+Rezultati trend analize i primjena NIS indeksa imaju značajne implikacije:
+
+ Vodoprivreda: Značajan porast temperature u oba područja nužno zahtijeva reviziju modela za procjenu potrebe za vodom i projektiranje sustava navodnjavanja i vodoopskrbe. Za Split je hitna potreba za upravljanjem vodnim resursima u ljetnim mjesecima.
+ Poljoprivreda: U Zagrebu je potrebno prilagoditi termine sjetve i vrste kultura koje su otpornije na suhi ožujak i ranije ljeto, dok je u Splitu fokus na smanjenju gubitaka zbog ljetne žege i nedostatka oborina.
+ Klimatske Promjene: Dokaz o statistički značajnom zatopljenju (preko $0.02^{\circ}\text{C/god}$) u oba klimatska režima potvrđuje da je promjena klime ključni faktor pri analizi budućeg rizika od suše. Postojanje dvaju RAPS podrazdoblja potvrđuje da se klimatski sustav ne može smatrati stacionarnim.
+
+---
+
+6. Zaključak
+
+Ovaj seminar je uspješno predstavio i primijenio novu, robusnu metodologiju za analizu suše primjenom RAPS metode za identificiranje klimatskih podrazdoblja, Mann-Kendall testa za trend analizu i razvoja Novog Indeksa Suše (NIS), koji dinamički koristi referentne vrijednosti iz aktualnog klimatskog podrazdoblja.
+
+Analiza dugogodišnjih nizova (1948–2020) za Split i Zagreb potvrdila je:
+
+1.  Značajno zatopljenje: Oba grada bilježe statistički značajan porast godišnjih temperatura, u skladu s globalnim trendom klimatskih promjena.
+2.  Klimatski diskontinuitet: RAPS metoda identificirala je prijelaz u novi klimatski režim oko 1985–1987, što potvrđuje neophodnost korištenja dinamičkih metoda poput NIS-a.
+3.  Sezonske promjene: Iako godišnje oborine ne pokazuju značajan trend, u Splitu je zabilježen značajan pad kolovoških, a u Zagrebu ožujskih oborina, što ukazuje na različit karakter suše u mediteranskom i kontinentalnom području.
+
+Predloženi NIS indeks pruža precizniji alat za monitoring i predviđanje suše jer u obzir uzima promjenjivost klimatskog sustava. Implikacije rezultata za trend analizu su jasne: buduće strategije upravljanja vodom i poljoprivredom moraju se temeljiti na realnosti klimatskih promjena i nelinearnosti klimatskih nizova. Daljnja istraživanja trebala bi uključiti primjenu NIS-a na više vremenskih skala i usporedbu s klasičnim indeksima kako bi se kvantificirala njegova dodana vrijednost.

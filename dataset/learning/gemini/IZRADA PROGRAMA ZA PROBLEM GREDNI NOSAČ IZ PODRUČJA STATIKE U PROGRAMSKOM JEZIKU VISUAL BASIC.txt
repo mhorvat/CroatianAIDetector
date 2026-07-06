@@ -1,0 +1,139 @@
+1. Uvod
+
+Problemi iz statike konstrukcija, a pogotovo analiza grednih nosača, predstavljaju temelj inženjerskog obrazovanja i prakse. Tradicionalno se ovi problemi rješavaju ručnim proračunima, koji su često dugotrajni i podložni pogreškama, osobito kod složenijih statičkih sustava. Razvojem računalstva i dostupnosti programskih alata, rješavanje statičkih problema je značajno automatizirano, čime se povećava točnost i brzina analize. Ovaj seminarski rad ima za cilj analizirati metodologiju i korake potrebne za izradu jednostavnog računalnog programa za rješavanje problema statički određenog grednog nosača u programskom jeziku Visual Basic (VB). Fokus će biti na pretvaranju fizikalno-matematičkog modela u računalni algoritam te na implementaciji korisničkog sučelja. Odabir programskog jezika VB, unatoč postojanju modernijih alternativa, opravdan je njegovom relativnom lakoćom u izradi grafičkog korisničkog sučelja (GUI) i snažnom podrškom za brzi razvoj aplikacija (RAD), što ga čini prikladnim za demonstraciju osnovnih koncepata [1].
+
+Glavni zadatak grednog nosača u statičkoj analizi je određivanje reakcija oslonaca i dijagrama unutarnjih sila (poprečne sile, uzdužne sile i moment savijanja) pri zadanom vanjskom opterećenju [2]. Razumijevanje ovih veličina ključno je za dimenzioniranje elementa i provjeru njegove sigurnosti. Programiranje ovakvog problema zahtijeva duboko razumijevanje teorije statike te sposobnost prevođenja tih teorijskih formula u efikasan i robustan računalni kod.
+
+-----
+
+2. Definiranje statičkog problema i odabir metode
+
+U svrhu ovog programa, fokusirat ćemo se na statički određene grede, što znači da se reakcije oslonaca mogu odrediti isključivo primjenom triju jednadžbi ravnoteže statike [2]:
+
+   Suma horizontalnih sila je nula ($\sum F_x = 0$).
+   Suma vertikalnih sila je nula ($\sum F_y = 0$).
+   Suma momenata oko proizvoljne točke je nula ($\sum M = 0$).
+
+Za gredni nosač, tipičan statički određen sustav je jednostavna greda na dva oslonca: zglobnom (koji preuzima vertikalnu i horizontalnu reakciju) i pomičnom (koji preuzima samo vertikalnu reakciju) [3].
+
+Odabir metode za proračun je ključan. Osnovna analitička metoda uključuje:
+
+1.  Određivanje reakcija oslonaca pomoću jednadžbi ravnoteže.
+2.  Određivanje unutarnjih sila (poprečne sile $V(x)$ i momenta savijanja $M(x)$) duž osi grede metodom presjeka [4]. Funkcije $V(x)$ i $M(x)$ bit će definirane po dionicama, ovisno o vrsti i rasporedu opterećenja.
+
+Opterećenja koja će program uzeti u obzir za početnu verziju su:
+
+   Koncentrirane sile ($P$).
+   Kontinuirano ravnomjerno raspoređeno opterećenje ($q$).
+   Koncentrirani momenti ($M_k$).
+
+Program mora biti dizajniran tako da korisniku omogući unos geometrije grede (duljina) i parametara opterećenja (veličina, pozicija/raspon).
+
+-----
+
+3. Dizajn korisničkog sučelja u Visual Basicu
+
+Visual Basic, posebno u verzijama koje koriste Windows Forms ili WPF, izuzetno je pogodan za brzu izradu intuitivnog GUI-ja. Uspješno inženjersko programiranje ne ovisi samo o točnosti izračuna, već i o lakoći interakcije korisnika s programom [5].
+
+GUI bi trebao sadržavati sljedeće elemente:
+
+   Područje za unos geometrije: Tekstualni okviri za unos ukupne duljine grede ($L$).
+   Područje za unos opterećenja: Gumbi i rešetke podataka (Data Grids) za unos specifičnih tipova opterećenja. Na primjer, za koncentriranu silu unosi se njezina vrijednost i udaljenost od početka grede ($x$). Za raspoređeno opterećenje unosi se vrijednost $q$, početna pozicija $x_1$ i završna pozicija $x_2$.
+   Gumb za proračun (Izračunaj): Pokreće glavni algoritam.
+   Područje za prikaz rezultata (numerički): Tekstualni okviri ili rešetke za prikaz izračunatih reakcija oslonaca.
+   Grafičko područje (poželjno, ali složeno): Za prikaz dijagrama poprečnih sila $V(x)$ i momenata savijanja $M(x)$. Za početnu implementaciju, grafički prikaz može biti zamijenjen tabličnim ispisom vrijednosti $V$ i $M$ za odabrani broj presjeka duž grede.
+
+VB-ov objektni model, gdje su kontrole poput tekstualnih okvira, gumba i rešetki objekti s vlastitim svojstvima i događajima, pojednostavljuje prikupljanje ulaznih podataka i prikaz rezultata.
+
+-----
+
+4. Algoritam za proračun reakcija oslonaca
+
+Proračun reakcija oslonaca je prva i najvažnija faza. Za jednostavnu gredu duljine $L$ na osloncima A (zglobni, na $x=0$) i B (pomični, na $x=L$), nepoznanice su $R_{Ax}$ (horizontalna reakcija), $R_{Ay}$ i $R_{By}$ (vertikalne reakcije).
+
+Korak 1: Vertikalne reakcije ($R_{Ay}, R_{By}$):
+Koristimo jednadžbe $\sum F_y = 0$ i $\sum M = 0$.
+
+1.  Jednadžba momenata oko točke A ($\sum M_A = 0$):
+    $$R_{By} \cdot L + \sum M_{op} = 0$$
+    gdje je $\sum M_{op}$ ukupan moment svih vanjskih opterećenja oko točke A. Moment od koncentrirane sile $P_i$ je $P_i \cdot x_i$. Moment od ravnomjerno raspoređenog opterećenja $q_j$ na dionici $(x_{j1}, x_{j2})$ zamjenjuje se rezultantom $Q_j = q_j \cdot (x_{j2} - x_{j1})$, a krak sile je udaljenost od A do težišta rezultante. Koncentrirani momenti $M_k$ se zbrajaju direktno.
+    Iz ove jednadžbe direktno se izračunava $R_{By}$.
+
+2.  Jednadžba vertikalne sile ($\sum F_y = 0$):
+    $$R_{Ay} + R_{By} + \sum F_{op} = 0$$
+    gdje je $\sum F_{op}$ suma svih vertikalnih vanjskih sila (negativne ako djeluju prema dolje). Sile su koncentrirane sile $P_i$ i rezultante raspoređenih opterećenja $Q_j$.
+    Iz ove jednadžbe se izračunava $R_{Ay}$.
+
+Korak 2: Horizontalna reakcija ($R_{Ax}$):
+Koristimo jednadžbu $\sum F_x = 0$:
+$$R_{Ax} + \sum F_{x, op} = 0$$
+gdje je $\sum F_{x, op}$ suma svih horizontalnih vanjskih sila. Za najčešće slučajeve greda bez horizontalnog opterećenja, $R_{Ax} = 0$ [3].
+
+-----
+
+5. Implementacija algoritma za unutarnje sile u Visual Basicu
+
+Nakon izračuna reakcija, slijedi proračun dijagrama unutarnjih sila, što je ključno za dimenzioniranje grede. Algoritam zahtijeva iteraciju kroz cijelu duljinu grede [4].
+
+Korak 1: Diskretizacija grede.
+Greda se podijeli na $N$ diskretnih segmenata. Preporučuje se da se presjeci uzmu na mjestima gdje se mijenja opterećenje (početak/kraj raspoređenog opterećenja, pozicija koncentrirane sile/momenta) te između tih točaka s malim korakom $\Delta x = L/N$ (npr., $N=100$ do $500$) kako bi se dobila glatka krivulja za dijagrame [5].
+
+Korak 2: Izračun $V(x)$ i $M(x)$ u svakom presjeku $x$.
+Za svaki presjek $x$ računaju se poprečna sila $V(x)$ i moment savijanja $M(x)$ uzimajući u obzir sve sile i momente lijevo od tog presjeka (metoda presjeka).
+
+   Poprečna sila $V(x)$:
+    $$V(x) = R_{Ay} + \sum F_{\text{vertikalne lijevo od } x}$$
+    Sile uključuju $R_{Ay}$ i sve koncentrirane sile $P_i$ i raspoređena opterećenja $q_j$ koja se nalaze lijevo od $x$. Utjecaj raspoređenog opterećenja $q$ na dionici $(x_1, x_2)$ za $x > x_1$ je rezultanta $q \cdot (x - x_1)$.
+   Moment savijanja $M(x)$:
+    $$M(x) = R_{Ay} \cdot x + \sum M_{\text{svih sila i momenata lijevo od } x} \text{ oko presjeka } x$$
+    Moment od $P_i$ je $P_i \cdot (x - x_i)$. Moment od raspoređenog opterećenja $q$ na dionici $(x_1, x)$ je moment rezultante $Q = q \cdot (x - x_1)$ oko presjeka $x$, a to je $Q \cdot \frac{x-x_1}{2} = \frac{1}{2} q \cdot (x - x_1)^2$. Koncentrirani momenti $M_k$ se zbrajaju direktno ako su lijevo od $x$.
+
+U VB kodu, ovaj dio se implementira s petljom (npr., `For...Next`) koja iterira od $x=0$ do $x=L$ u koracima $\Delta x$. Unutar petlje koriste se uvjetne strukture (`If...Then...Else`) za provjeru je li neko opterećenje aktivno u promatranom presjeku $x$. Korištenje vlastitih klasa (npr., klasa `Opterecenje`) za modeliranje ulaznih podataka (geometrija, opterećenje) značajno poboljšava organizaciju i čitljivost koda, što je u skladu s principima objektno orijentiranog programiranja koje VB podržava [1, 5].
+
+-----
+
+6. Struktura i izvedba koda u Visual Basicu
+
+Programska izvedba zahtijeva strukturirani pristup. Preporučuje se podjela funkcionalnosti na tri glavna modula ili klase:
+
+1.  Klasa/Modul za podatkovni model (Data Model): Definira strukture za spremanje podataka o gredi (duljina) i opterećenjima (tip, veličina, pozicije $x_1, x_2$). Time se osigurava da podaci budu konzistentni.
+2.  Klasa/Modul za proračun (Calculation Engine): Sadrži sve matematičke funkcije, uključujući implementaciju jednadžbi ravnoteže za reakcije oslonaca i funkcije za proračun $V(x)$ i $M(x)$. Ova klasa radi isključivo s podacima iz Data Modela i ne komunicira direktno s GUI-jem.
+3.  Glavna forma (Main Form - GUI): Odgovorna za interakciju s korisnikom: prikupljanje podataka iz kontrola, prosljeđivanje tih podataka Calculation Engineu, primanje rezultata i prikazivanje istih (numerički i/ili grafički).
+
+Korištenje odvojenog Calculation Enginea (poznato i kao poslovna logika) osigurava da je proračunski kod neovisan o korisničkom sučelju, što olakšava testiranje, ispravljanje pogrešaka i kasniju nadogradnju na složenije probleme (npr., statički neodređene grede) [6]. U VB-u se to postiže definiranjem javnih funkcija i procedura unutar odvojenog modula (`.vb` datoteke) ili klase.
+
+Primjer VB pseudokoda za izračun momenta na poziciji $x$:
+
+```vb
+Function IzracunajMoment(ByVal x As Double, ByVal L As Double, ByVal Opterecenja As List(Of Opterecenje)) As Double
+    Dim M As Double = 0.0
+    ' Dodaj moment od reakcije oslonca A
+    M = M + R_Ay  x
+    
+    ' Petlja kroz sva opterećenja lijevo od presjeka x
+    For Each Op In Opterecenja
+        If Op.Tip = "Koncentrirana Sila" And Op.Pozicija < x Then
+            M = M - Op.Vrijednost  (x - Op.Pozicija) ' Uz pretpostavku sile prema dolje
+        Else If Op.Tip = "Raspoređeno Opterećenje" And Op.Pozicija1 < x Then
+            ' Računanje rezultante i kraka za dio opterećenja lijevo od x
+            Dim duljina_opterecenja As Double
+            duljina_opterecenja = Math.Min(x, Op.Pozicija2) - Op.Pozicija1
+            If duljina_opterecenja > 0 Then
+                Dim Rezultanta As Double = Op.Vrijednost  duljina_opterecenja
+                Dim Krak As Double = (x - Op.Pozicija1) / 2 ' Udaljenost težišta rezultante od presjeka x
+                M = M - Rezultanta  Krak
+            End If
+        ' ... dodaj ostale tipove opterećenja
+        End If
+    Next
+    Return M
+End Function
+```
+
+-----
+
+7. Zaključak
+
+Izrada programa za rješavanje problema grednog nosača u Visual Basicu uspješno demonstrira kako se principi statike mogu prevesti u funkcionalan računalni alat. Ključ uspjeha leži u strogom pridržavanju matematičkog modela (jednadžbe ravnoteže i metoda presjeka) te primjeni dobre inženjerske prakse u programiranju, uključujući modularizaciju koda (odvajanje GUI-ja od proračunske logike) [6].
+
+Visual Basic se pokazao kao efikasan alat, posebice zbog svoje lakoće u kreiranju korisničkog sučelja, što je ključno za primjenjive inženjerske programe. Razvijeni algoritam omogućuje brz i točan proračun reakcija oslonaca i dijagrama unutarnjih sila za statički određene grede pod različitim tipovima opterećenja. Potencijalne nadogradnje uključuju implementaciju grafičkog prikaza dijagrama $V$ i $M$ (koristeći npr. biblioteke za crtanje), te proširenje funkcionalnosti za rješavanje složenijih statički neodređenih sustava primjenom, na primjer, metode sila ili metode pomaka [2]. Ovakvi alati ne samo da štede vrijeme inženjerima, već služe i kao vrijedan edukacijski resurs za provjeru ručnih proračuna.

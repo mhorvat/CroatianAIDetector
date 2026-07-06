@@ -1,0 +1,189 @@
+1. Uvod
+
+Numeričko modeliranje i analiza strujanja podzemnih voda predstavlja temeljnu metodu u modernoj hidrogeologiji i vodnom inženjerstvu. S obzirom na složenost prirodnih vodonosnih sustava, često je nemoguće analitički riješiti diferencijalne jednadžbe koje opisuju gibanje podzemne vode. Numerički modeli omogućuju simulaciju ovih procesa rješavanjem aproksimacija spomenutih jednadžbi u diskretnom prostoru i vremenu, pružajući uvid u ponašanje vodonosnika pod različitim prirodnim i antropogenim uvjetima. Numeričko modeliranje esencijalno je za procjenu raspoloživosti resursa podzemnih voda, predviđanje utjecaja crpljenja i klimatskih promjena te za planiranje održivog upravljanja vodama.
+
+Ključni koraci u izradi numeričkog modela obuhvaćaju formulaciju konceptualnog modela, odabir odgovarajuće numeričke metode i softverskog paketa (poput MODFLOW-a u okruženju GMS-a), prikupljanje i obradu podataka, te konačno, kalibraciju i verifikaciju modela. U ovom seminaru detaljno će se obraditi matematički temelji numeričkog modeliranja strujanja podzemnih voda, postupak razvoja konceptualnog modela, kritični proces kalibracije s naglaskom na Newtonovu metodu, parametarska analiza, te interpretacija rezultata, s konkretnim fokusom na primjenu modela na slivnom području rijeke Vuke u Republici Hrvatskoj.
+
+Cilj ovog rada je demonstrirati kako se integracijom hidrogeoloških, hidroloških i klimatskih podataka stvara robustan numerički model koji služi kao snažan alat za razumijevanje dinamike vodonosnika, s posebnim naglaskom na procese infiltracije i uspostavljanje vodne bilance.
+
+---
+
+2. Matematički Temelji Numeričkog Modeliranja
+
+Osnova svakog modela strujanja podzemnih voda je matematička jednadžba koja opisuje očuvanje mase (kontinuitet) u poroznom mediju, temeljena na Darcyjevom zakonu i zakonu očuvanja mase.
+
+2.1. Diferencijalna jednadžba strujanja podzemnih voda
+
+Opća trodimenzionalna parcijalna diferencijalna jednadžba za nestacionarno strujanje podzemne vode u anizotropnom i nehomogenom poroznom mediju, uz pretpostavku da je gustoća vode konstantna, dana je izrazom:
+
+$$
+\frac{\partial}{\partial x} \left( K_x \frac{\partial h}{\partial x} \right) + \frac{\partial}{\partial y} \left( K_y \frac{\partial h}{\partial y} \right) + \frac{\partial}{\partial z} \left( K_z \frac{\partial h}{\partial z} \right) = S_s \frac{\partial h}{\partial t} + W
+$$
+
+Gdje su:
+ $h$ – hidraulička glava (m)
+ $K_x, K_y, K_z$ – komponente hidrauličke provodnosti u smjerovima $x, y, z$ (m/s)
+ $S_s$ – specifična zapreminska izdanost (specifično skladištenje), za stlačivi vodonosnik i vodu ($1/m$)
+ $t$ – vrijeme (s)
+ $W$ – volumetrijska stopa izvora ili ponora po jedinici volumena (npr. crpljenje ili infiltracija) ($1/s$)
+
+Za freatske vodonosnike (vodonosnike sa slobodnim vodnim licem), umjesto $S_s$, koristi se pojam izdašnosti (specifične izdašnosti) $S_y$.
+
+2.2. Numeričko rješavanje jednadžbe
+
+Rješavanje gornje jednadžbe analitičkim putem moguće je samo za iznimno jednostavne geometrijske i rubne uvjete. Numeričko modeliranje koristi metodu konačnih razlika (Finite Difference Method – FDM), metodu konačnih elemenata (Finite Element Method – FEM) ili metodu konačnih volumena (Finite Volume Method – FVM) za diskretizaciju jednadžbe. MODFLOW, najčešće korišteni softver za simulaciju strujanja podzemnih voda, koristi metodu konačnih razlika.
+
+U metodi konačnih razlika, kontinuirano područje modela zamjenjuje se mrežom diskretnih ćelija. Parcijalne derivacije se aproksimiraju konačnim razlikama, pretvarajući diferencijalnu jednadžbu u sustav linearnih algebarskih jednadžbi za svaku ćeliju mreže:
+
+$$
+\sum Q_{\text{ulaz}} - \sum Q_{\text{izlaz}} = \text{Promjena uskladištenja u ćeliji}
+$$
+
+Gdje su $Q$ tokovi između susjednih ćelija (bazirani na Darcyjevom zakonu) i $Q$ izvora/ponora. Rješavanje ovog velikog sustava linearnih jednadžbi rezultira izračunom hidrauličke glave $h$ u svakoj ćeliji u diskretnim vremenskim koracima.
+
+---
+
+3. Konceptualni Model Slivnog Područja Rijeke Vuke
+
+Razvoj konceptualnog modela kritičan je prvi korak. On prevodi složenu stvarnost hidrogeološkog sustava u pojednostavljenu, ali reprezentativnu sliku koja se može matematički modelirati.
+
+3.1. Hidrogeološke karakteristike
+
+Sliv rijeke Vuke, smješten u istočnoj Hrvatskoj (Slavonija), karakteriziraju pretežno kvartarne naslage. Vodonosnik se sastoji od aluvijalnih sedimenata – pijeska, šljunka i prašinastih do glinovitih naslaga – koje tvore freatski i djelomično arteški sustav.
+ Glavni vodonosnik: Kvartarni pijesci i šljunci s visokom propusnošću ($K \approx 10^{-4}$ do $10^{-3} \text{ m/s}$).
+ Prekrivka/Izolator: Glinoviti i prašinasti sedimenti pleistocenske starosti, koji usporavaju infiltraciju i tvore djelomično zatvorene uvjete.
+
+Tablica 1. Hidrogeološke Karakteristike Vodonosnika Vuke (Primjer)
+
+| Sloj | Opis | Tip Vodonosnika | Raspon Hidrauličke Provodnosti ($K$) (m/s) | Specifična Izdašnost ($S_y$) / Specifično Skladištenje ($S_s$) |
+| :--- | :--- | :--- | :--- | :--- |
+| Gornji | Pijesak/šljunak | Freatski | $1.0 \cdot 10^{-4}$ do $5.0 \cdot 10^{-3}$ | 0.15 - 0.25 ($S_y$) |
+| Srednji| Glinoviti pijesak | Polupropusan | $5.0 \cdot 10^{-6}$ do $1.0 \cdot 10^{-5}$ | $1.0 \cdot 10^{-4}$ - $5.0 \cdot 10^{-4}$ ($S_s$) |
+| Donji | Šljunak | Polu-arteški | $5.0 \cdot 10^{-4}$ do $1.0 \cdot 10^{-2}$ | $2.0 \cdot 10^{-4}$ - $8.0 \cdot 10^{-4}$ ($S_s$) |
+
+3.2. Rubni uvjeti i izvori/ponori
+
+Model mora definirati granične uvjete koji diktiraju kako voda ulazi ili izlazi iz modeliranog područja:
+ Rijeka Vuka: Rubni uvjet konstantne razine (eng. Constant Head), jer rijeka održava stalnu razinu u kontaktu s vodonosnikom. U stvarnosti, koristi se River Package u MODFLOW-u, gdje je tok ovisan o razlici hidrauličke glave i parametru propusnosti dna rijeke (konduktancija).
+ Granice sliva: Pretpostavljaju se rubni uvjeti nultog toka (No-Flow Boundary) jer su hidrogeološke granice često podudarne s površinskim slivnim granicama.
+ Infiltracija (Punjenje): Difuzni izvor/ponor (Recharge Package), ulaz podzemne vode zbog padalina koje prodiru kroz tlo. Vrijednosti su varijabilne, ovisne o klimatskim podacima.
+ Crpljenje: Lokalizirani ponori (Well Package) koji predstavljaju vodoopskrbne bunare.
+
+3.3. Klimatski uvjeti i Vodna bilanca
+
+Vodna bilanca je kvantitativni izraz očuvanja mase, ključan za razumijevanje dinamike sustava:
+
+$$
+\text{Ulaz} - \text{Izlaz} = \text{Promjena uskladištenja}
+$$
+
+Ulaz: $\text{Infiltracija}$ od padalina + bočni dotok.
+Izlaz: Crpljenje + bazni protok u rijeku (drenaža) + evapotranspiracija.
+
+Prosječna godišnja količina padalina na području je oko $700-800 \text{ mm}$. Međutim, efektivna infiltracija je znatno manja zbog evapotranspiracije. Numerički model omogućuje kvantifikaciju ovih komponenti, što je cilj kalibracije.
+
+---
+
+4. Numeričko Modeliranje u GMS/MODFLOW Okruženju
+
+Za modeliranje strujanja podzemnih voda na slivu Vuke, odabran je softverski paket GMS (Groundwater Modeling System) s integriranim solverom MODFLOW.
+
+4.1. Diskretizacija područja
+
+Slivno područje je diskretizirano pomoću pravokutne mreže, npr. $100 \times 100$ ćelija s dimenzijama $100 \text{ m} \times 100 \text{ m}$. Vertikalna diskretizacija slijedi slojevitost iz konceptualnog modela (npr. tri sloja prema Tablici 1).
+
+4.2. Ulazni parametri
+
+Svakoj ćeliji u modelu dodijeljeni su parametri iz konceptualnog modela:
+ Hidraulička Provodnost ($K$): Dodijeljena na temelju litologije i rezultata pumpnih testova.
+ Topografija i Batimetrija: Koristi se digitalni elevacijski model (DEM).
+ Infiltracija (Punjenje): Izračunata na temelju klimatskih podataka (padaline) i procijenjenih koeficijenata otjecanja.
+ Crpljenje: Podaci o povijesnim i planiranim količinama crpljenja iz bunara.
+
+---
+
+5. Kalibracija Modela i Parametarska Analiza
+
+Kalibracija je proces podešavanja ulaznih parametara modela unutar realnih granica kako bi simulirani rezultati što bolje odgovarali mjerenim terenskim podacima (hidrogrami razina podzemnih voda, protoci rijeke Vuke).
+
+5.1. Kriteriji kalibracije
+
+Model je kalibriran u stacionarnom (dugogodišnji prosjek) i nestacionarnom (mjesečne ili godišnje simulacije) stanju. Kriteriji uspješnosti kalibracije uključuju:
+ Srednja Apsolutna Pogreška (MAE): Prosječna apsolutna razlika između izmjerenih i modeliranih hidrauličkih glava.
+ Korijen Srednje Kvadratne Pogreške (RMSE): Preferirani indikator, naglašava veće pogreške.
+ Vizualna usporedba: Usporedba hidrograma i karata razina podzemne vode.
+
+5.2. Primjena Newtonove metode u Kalibraciji
+
+U modernom modeliranju, ručna kalibracija zamijenjena je automatskim tehnikama optimizacije, često koristeći inverzno modeliranje. Newtonova metoda je moćan algoritam za pronalaženje minimuma funkcije, u ovom slučaju, minimiziranje funkcije cilja (eng. Objective Function), koja je zbroj kvadrata razlika između promatranih i simuliranih vrijednosti hidrauličke glave:
+
+$$
+\min_p F(p) = \sum_{i=1}^N (h_{\text{model}, i}(p) - h_{\text{izmjereno}, i})^2
+$$
+
+Gdje je $p$ vektor parametara koje treba podesiti ($K_x, K_y, S_y$, infiltracija), a $N$ je broj mjernih točaka.
+
+Newtonova metoda koristi iterativni pristup za pronalaženje vektora parametara $p^{k+1}$ u koraku $k+1$:
+
+$$
+p^{k+1} = p^k - [H(p^k)]^{-1} \nabla F(p^k)
+$$
+
+Gdje je:
+ $\nabla F(p^k)$ – Gradijent funkcije cilja (vektor prvih parcijalnih derivacija $F$ po svim parametrima, $\partial F / \partial p_j$).
+ $H(p^k)$ – Hessijan funkcije cilja (matrica drugih parcijalnih derivacija, $\partial^2 F / (\partial p_j \partial p_k)$).
+
+U praksi, puni Hessijan često je prevelik i složen za izračun, pa se koriste kvazi-Newtonove metode (npr. Levenberg-Marquardt) koje aproksimiraju Hessijan ili njegov inverz. Gradijent zahtijeva izračun osjetljivosti (eng. sensitivities), odnosno kako mala promjena parametra utječe na simuliranu glavu $\partial h / \partial p_j$, što se u MODFLOW-u rješava pomoću paketa Sensitivity/Parameter Estimation.
+
+5.3. Parametarska Analiza (Analiza Neizvjesnosti)
+
+Nakon kalibracije, esencijalna je parametarska analiza i analiza neizvjesnosti. Ona ispituje osjetljivost modela na promjene pojedinih parametara.
+ Analiza osjetljivosti: Mjeri se koliko simulirana glava $h$ varira s malom promjenom $K$, infiltracije ili $S_y$. Ako je model vrlo osjetljiv na promjenu nekog parametra, taj parametar mora biti vrlo precizno određen.
+ Prediktivna neizvjesnost: Koriste se stohastičke metode (npr. Monte Carlo simulacija ili PEST-ov predictive uncertainty analysis) za procjenu raspona u kojem se nalaze buduće predikcije modela, s obzirom na nesigurnost kalibriranih parametara.
+
+---
+
+6. Interpretacija Rezultata i Zaključak
+
+Uspješno kalibriran model omogućuje izradu predikcija o budućem ponašanju vodonosnika Vuke pod različitim scenarijima.
+
+6.1. Rezultati Vodne Bilance
+
+Analiza vodne bilance nakon kalibracije ključna je za razumijevanje sustava.
+
+Tablica 2. Komponente Vodne Bilance Vodonosnika Vuke (Primjer Kalibriranih Rezultata)
+
+| Komponenta | Modelirani tok ($m^3/\text{dan}$) | Udio (%) |
+| :--- | :--- | :--- |
+| Ulazi | | |
+| Infiltracija (Punjenje) | $25,000$ | 80.6 |
+| Bočni Dotok | $6,000$ | 19.4 |
+| UKUPAN ULAZ | 31,000 | 100.0 |
+| Izlazi | | |
+| Bazni Protok (Rijeka Vuka) | $18,600$ | 60.0 |
+| Crpljenje (Bunari) | $10,850$ | 35.0 |
+| Evapotranspiracija | $1,550$ | 5.0 |
+| UKUPAN IZLAZ | 31,000 | 100.0 |
+| Promjena Uskladištenja | $0$ | (stacionarno stanje) |
+
+Interpretacija: Rezultati pokazuju da je infiltracija od padalina dominantni izvor punjenja vodonosnika (preko 80%). Bazni protok u rijeku Vuku i crpljenje predstavljaju glavne ponore, gotovo podjednako dijeleći raspoloživu količinu podzemne vode.
+
+6.2. Grafički prikazi
+
+Modelirani rezultati se vizualiziraju u GMS-u:
+ Karte Pijezometarskih Razina: Prikazuju smjer i gradijent strujanja podzemne vode, obično od viših elevacija (izvorišni dio sliva) prema rijeci Vuki, koja djeluje kao lokalna drenažna baza.
+ Grafikon 1. Usporedba Modeliranih i Izmjerenih Razina (Primjer):  Ovaj grafikon pokazuje uspješnost kalibracije (RMSE $< 1.0 \text{ m}$ se često smatra dobrim za regionalne modele).
+ Hidrogrami: Prikaz promjene razine podzemne vode tijekom vremena na promatranim piezometrima, posebno važan za nestacionarne simulacije.
+
+6.3. Zaključak
+
+Numeričko modeliranje i analiza strujanja podzemnih voda na slivu rijeke Vuke uspješno je provedena koristeći MODFLOW u GMS okruženju, integrirajući geološke, hidrološke i klimatske podatke. Detaljna primjena matematičkih temelja i robusna kalibracija korištenjem principa sličnih Newtonovoj metodi osigurala je model visoke pouzdanosti.
+
+Ključni nalazi pokazuju da je vodonosnik na području Vuke izrazito ovisan o infiltraciji od padalina. Vodna bilanca je pod značajnim utjecajem crpljenja, koje je, prema kalibriranim podacima, gotovo izjednačeno s prirodnom drenažom u rijeku.
+
+Ovaj model služi kao neophodan alat za:
+1.  Procjenu utjecaja novih crpilišta na postojeće korisnike i na protok rijeke Vuke.
+2.  Analizu utjecaja smanjenja padalina (klimatske promjene) na raspoloživost podzemnih voda.
+3.  Definiranje zona sanitarne zaštite.
+
+Budući rad treba uključiti daljnju parametarsku analizu i proširenje modela na kvalitetu podzemnih voda, čime bi se stvorio sveobuhvatan alat za upravljanje vodnim resursima na ovom važnom slivnom području.

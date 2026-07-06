@@ -1,0 +1,82 @@
+Uvod
+
+Kvaliteta vode za piće ključna je za javno zdravlje. Proces dezinfekcije vode, iako neophodan za uništavanje patogenih mikroorganizama, može rezultirati nastankom nusprodukata dezinfekcije (NPD). Među najznačajnijim i najčešće reguliranim skupinama NPD-a su trihalometani (THM). Trihalometani su hlapljivi organski spojevi koji nastaju reakcijom klora (najčešće korištenog dezinficijensa) s prirodnim organskim tvarima (NOM) prisutnima u sirovoj vodi [1]. Glavni predstavnici ove skupine su kloroform (CHCl$_3$), bromodiklorometan (CHBrCl$_2$), dibromoklorometan (CHBr$_2$Cl) i bromoform (CHBr$_3$) [2]. Zbog potencijalne kancerogenosti i mutagenosti, regulatori diljem svijeta, uključujući Europsku uniju, postavljaju stroge granične vrijednosti za ukupnu koncentraciju THM-a (TTHM) u vodi za piće, koja je najčešće propisana na $100 \mu \text{g/L}$ [3].
+
+Ovaj seminarski rad posvećen je metodama određivanja koncentracije trihalometana u vodi, s naglaskom na specifičnosti uzorkovanja, pripreme uzorka i analitičkih tehnika. Kao studija slučaja, analizirat će se relevantnost i primjena ovih metoda na lokalitetu u Republici Hrvatskoj, s fokusom na vodocrpilište Bartolovec, koje predstavlja značajan resurs za opskrbu vodom šireg područja. Razumijevanje i precizno praćenje koncentracija THM-a ključno je za optimizaciju procesa dezinfekcije vode i osiguravanje zdravstvene ispravnosti konačnog proizvoda [4].
+
+Nastanak i toksikologija trihalometana
+
+Kemija nastanka
+
+Nastanak THM-a tijekom dezinfekcije vode ovisi o nekoliko čimbenika, uključujući koncentraciju prekursora (prirodnih organskih tvari, NOM), dozu i vrstu dezinficijensa, vrijeme kontakta, pH vrijednost i temperaturu vode [5].
+
+Opća reakcija halogenacije NOM-a klorom (hipoklorasta kiselina, $\text{HOCl}$, ili hipokloritni ion, $\text{OCl}^-$) slijedi mehanizam haloformske reakcije, pri čemu se organske molekule s ketonskim ili aldehidnim skupinama podvrgavaju uzastopnim supstitucijama s halogenom, što na kraju dovodi do cijepanja veze i stvaranja trihalometana [6].
+
+$$
+\text{NOM} + \text{Cl}_2 \rightarrow \text{THM} + \text{Ostali NPD}
+$$
+
+Povećanje temperature i produljeno vrijeme kontakta s klorom značajno povećavaju stvaranje THM-a, što je osobito važno pri distribuciji vode kroz dugačke cjevovode. Nadalje, prisutnost bromida u sirovoj vodi dovodi do stvaranja bromiranih THM-a (bromodiklorometana, dibromoklorometana i bromoforma) zbog oksidacije bromida u elementarni brom klorom [7]. Bromirani THM-i se često smatraju toksičnijima od kloroforma, a njihov omjer u ukupnoj koncentraciji THM-a služi kao važan pokazatelj za upravljanje rizikom [8].
+
+Toksikološki značaj
+
+THM-i se lako apsorbiraju iz gastrointestinalnog trakta, kroz kožu i udisanjem, posebno tijekom tuširanja, kupanja ili pranja posuđa [9]. Međunarodna agencija za istraživanje raka (IARC) klasificirala je kloroform kao mogući kancerogen za ljude (Grupa 2B), dok su bromodiklorometan i dibromoklorometan klasificirani kao vjerojatni kancerogeni (Grupa 2A) [10].
+
+Dugotrajna izloženost povišenim koncentracijama THM-a povezana je s povećanim rizikom od karcinoma mokraćnog mjehura i debelog crijeva. Osim kancerogenih učinaka, studije su ukazale i na potencijalne reproduktivne i razvojne učinke izloženosti THM-ima [11]. Zbog ovih zdravstvenih rizika, neophodno je strogo praćenje i kontrola THM-a u sustavima vodoopskrbe.
+
+Metode određivanja koncentracije trihalometana
+
+Precizno i pouzdano određivanje niskih koncentracija THM-a, obično u rasponu $\mu \text{g/L}$ ili $\text{ng/L}$, zahtijeva primjenu sofisticiranih analitičkih tehnika. Međunarodno prihvaćene metode, kao što su metode američke Agencije za zaštitu okoliša (US EPA), temeljene su na plinskoj kromatografiji (GC) [12].
+
+1. Uzorkovanje
+
+Uzorkovanje je kritičan korak koji izravno utječe na točnost konačnog rezultata. Budući da su trihalometani hlapljivi spojevi i da se kemijske reakcije stvaranja THM-a nastavljaju sve dok je prisutan zaostali klor, uzorkovanje se mora provesti na način koji sprječava gubitak THM-a i zaustavlja daljnju reakciju [13].
+
+ Sprečavanje hlapljenja: Voda se uzorkuje u staklene bočice (obično $40 \text{ mL}$) s hermetičkim zatvaračem (Septum-zatvarač) kako bi se eliminirao zračni prostor (eng. headspace) iznad uzorka, čime se sprječava isparavanje THM-a. Bočice moraju biti napunjene do prelijevanja [14].
+ Konzerviranje: Za zaustavljanje reakcije formiranja THM-a dodaje se kemijski reagens koji neutralizira zaostali klor. Najčešće se koristi natrijev tiosulfat ($\text{Na}_2\text{S}_2\text{O}_3$), koji uobičajeno dolazi u obliku kristala ili otopine već u bočici prije uzorkovanja [15]. Uzorci se obično čuvaju na $4^\circ\text{C}$ i analiziraju unutar 14 dana [16].
+
+2. Priprema uzorka i ekstrakcija
+
+Zbog niskih koncentracija THM-a, potrebna je tehnika koncentriranja analita prije injektiranja u plinski kromatograf. Dvije su najčešće korištene metode:
+
+ Pročišćavanje i zatvaranje (Purge-and-Trap, P&T): Ova tehnika je standardizirana i široko korištena (npr. US EPA Metoda 502.2 ili 524.2) [17]. Inertni plin (npr. helij) propušta se kroz zagrijani uzorak vode, čime se hlapljivi analiti (THM-i) prenose iz tekuće faze u plinsku fazu (pročišćavanje). Plinska struja prolazi kroz adsorbent (trap), gdje se THM-i zadržavaju. Zatim se adsorbent brzo zagrijava (termalna desorpcija), oslobađajući koncentrirane analite u plinski kromatograf (GC) [18].
+
+ Ekstrakcija mikrokrute faze (Solid-Phase Microextraction, SPME): Ova novija i ekološki prihvatljivija tehnika uključuje uranjanje vlakna obloženog posebnim polimerom u uzorak vode, gdje se analiti izravno sorbiraju na oblogu. Nakon sorpcije, vlakno se izravno uvodi u zagrijanu ulaznu komoru GC-a, gdje se THM-i termalno desorbiraju i prenose u kolonu [19]. SPME je brža i ne zahtijeva otapala.
+
+3. Analiza plinskom kromatografijom
+
+Nakon koncentriranja, smjesa THM-a uvodi se u plinski kromatograf (GC) [20].
+
+ Plinska kromatografija (GC): THM-i se razdvajaju na temelju njihovih fizikalno-kemijskih svojstava (hlapljivost, polarnost) pri prolasku kroz kapilarnu kolonu ispunjenu stacionarnom fazom. Razdvajanje se postiže kontroliranim podizanjem temperature kolone [21].
+
+ Detekcija: Najčešće korišteni detektori za THM-e su:
+     Maseni spektrometar (MS): (Npr. US EPA Metoda 524.2). Omogućuje identifikaciju i kvantifikaciju mjerenjem omjera mase i naboja iona fragmentiranih molekula. Ovo je najselektivnija i najosjetljivija metoda [22].
+     Detektor elektronskog hvatanja (Electron Capture Detector, ECD): (Npr. US EPA Metoda 502.2). Vrlo je osjetljiv na halogene spojeve poput THM-a, ali manje selektivan od MS-a [23].
+
+Kvantifikacija se provodi na temelju kalibracijske krivulje pripremljene iz standardnih otopina poznatih koncentracija svakog THM-a [24].
+
+Studija slučaja: Vodocrpilište Bartolovec
+
+Vodocrpilište Bartolovec nalazi se u Varaždinskoj županiji i predstavlja vitalni izvor pitke vode, crpeći podzemne vode iz aluvijalnih sedimenata rijeke Drave [25]. Iako je podzemna voda obično manje podložna zagađenju organskim tvarima u odnosu na površinsku vodu, prisutnost prirodne organske tvari (NOM) i amonijaka u sirovoj vodi zahtijeva primjenu dezinfekcije radi osiguranja mikrobiološke ispravnosti [26].
+
+Specifičnosti Bartolovca
+
+ Sirovina: Kvaliteta sirove podzemne vode na Bartolovcu je općenito dobra, ali prisutnost NOM-a predstavlja preduvjet za stvaranje THM-a nakon kloriranja [27]. Promjene u hidrološkim uvjetima (npr. visoki vodostaj Drave) mogu utjecati na infiltraciju i posljedično na koncentraciju NOM-a u sirovoj vodi, što izravno utječe na potencijal stvaranja THM-a [28].
+ Dezinfekcija: Osnovna metoda dezinfekcije vode je kloriranje. Uobičajeno je praćenje slobodnog rezidualnog klora kako bi se osigurala učinkovita mikrobiološka zaštita tijekom distribucije [29].
+ Potencijalni rizici: S obzirom na to da se voda crpi iz izdašnog vodonosnika, ključno je redovito praćenje na samom vodocrpilištu Bartolovec i na točkama u distribucijskom sustavu koje su najudaljenije od postrojenja [30]. Najudaljenije točke imaju najdulje vrijeme kontakta s klorom, a samim time i najviši potencijal za maksimalno stvaranje trihalometana [31].
+
+Implementacija analize na Bartolovcu
+
+Za učinkovito praćenje THM-a u sustavu koji opskrbljuje vodocrpilište Bartolovec, primjenjuje se rutinski monitoring prema nacionalnim i EU propisima [3].
+
+1.  Odabir lokacija uzorkovanja: Uzorkovanje se provodi na izlazu iz postrojenja (gdje se THM-i počinju stvarati) i na krajnjim točkama distribucijske mreže (gdje se očekuje maksimalna koncentracija THM-a) [32].
+2.  Analitička tehnika: Laboratoriji koji nadziru vodu s vodocrpilišta Bartolovec koriste standardizirane metode P&T-GC/MS ili P&T-GC/ECD, što osigurava visoku osjetljivost i pouzdanost u detekciji četiri glavna trihalometana [33].
+3.  Upravljanje THM-ima: Ako se koncentracija TTHM-a približi graničnoj vrijednosti, operater postrojenja može poduzeti korektivne mjere. To može uključivati:
+     Smanjenje doze klora na minimum potrebne za učinkovitu dezinfekciju vode [34].
+     Uklanjanje prekursora THM-a (NOM) prije kloriranja (npr. primjenom koagulacije/flokulacije ili aktivnog ugljena) [35]. Iako je primjena napredne obrade skuplja, u nekim slučajevima postaje neophodna.
+
+Zaključak
+
+Trihalometani predstavljaju neizbježnu posljedicu nužne dezinfekcije vode klorom, s izravnim implikacijama na javno zdravlje. Njihova kontrola zahtijeva sveobuhvatan pristup koji uključuje razumijevanje kemije njihova nastanka, precizno analitičko mjerenje i aktivno upravljanje sustavom vodoopskrbe.
+
+Primjena sofisticiranih tehnika uzorkovanja i analize (P&T-GC/MS) ključna je za osiguravanje točnosti podataka. Na primjeru vodocrpilišta Bartolovec, redovito i ciljano praćenje THM-a na ključnim točkama distribucije omogućuje voditeljima sustava da optimiziraju proces kloriranja, održavajući ravnotežu između uništavanja patogena i minimiziranja stvaranja nusprodukata. Budućnost upravljanja kvalitetom vode za piće leži u razvoju alternativnih, manje reaktivnih dezinficijenasa ili u primjeni pred-tretmana za uklanjanje prekursora THM-a, osiguravajući tako da voda bude istovremeno mikrobiološki sigurna i kemijski zdrava.

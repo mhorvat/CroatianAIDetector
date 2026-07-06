@@ -1,0 +1,123 @@
+Uvod
+
+1.1. Definicija i Značaj Industrije
+
+Industrija videoigara (engl. gaming industry) transformirala se iz niše za entuzijaste u globalnu silu koja premašuje prihode filmske i glazbene industrije zajedno. Predviđa se da će globalni prihod dosegnuti 300 milijardi dolara do 2025. godine, što je jasan pokazatelj njezine ekonomske moći. Ova industrija obuhvaća razvoj igara (game development), izdavanje (publishing), distribuciju, hardver, e-sport i prateće usluge. Njezin utjecaj proteže se od tehnoloških inovacija (AI, grafika) do kulture i obrazovanja.
+
+1.2. Cilj Seminara
+
+Ovaj seminar pruža dubinsku analizu aktualnih i nadolazećih trendova koji redefiniraju ekosustav videoigara. Pokriti će se tri ključne domene: Tehnološke Inovacije, Evolucija Poslovnih Modela i Tržišta te Socio-kulturni i Organizacijski Izazovi, s ciljem pružanja sveobuhvatnog razumijevanja dinamike industrije na fakultetskoj razini.
+
+---
+
+2. Tehnološki Trendovi: Pokretači Inovacija
+
+Tehnologija je temelj industrije igara, a sljedeći trendovi najznačajnije utječu na način na koji se igre razvijaju i konzumiraju.
+
+2.1. Umjetna Inteligencija (AI) i Generativna AI
+
+Umjetna inteligencija prestaje biti samo mehanika za ponašanje ne-igrivih likova (NPC) i postaje ključni alat za razvoj i dizajn igara.
+
+ Generativna AI u Razvoju:
+     Automatska kreacija sadržaja (Content Generation): AI alati poput onih za generiranje slika, tekstura i dijelova razina (proceduralno generiranje) dramatično ubrzavaju proces razvoja. Primjerice, AI može generirati varijacije okruženja ili dizajna unutar game enginea (poput Unreal Enginea) uz minimalan ljudski unos.
+     Pomoć u Kodiranju i Testiranju: AI pomaže programerima pisanjem dijelova koda i automatiziranim testiranjem igara, identificirajući bugove brže nego tradicionalne metode.
+ AI u Iskustvu Igrača:
+     Dinamičniji NPC-ovi: Korištenje naprednih jezičnih modela (LLM) omogućuje NPC-ovima da vode prirodnije dijaloge i reagiraju na igračeve odluke na složenije načine, čineći narative vođene igračevim izborima još dubljima.
+     Prilagodljiva Poteškoća i Sadržaj: AI može dinamički prilagođavati igru prema razini vještine igrača, nudeći personalizirano iskustvo.
+
+> Izazov: Pitanja autorskih prava na sadržaj generiran umjetnom inteligencijom i strah od gubitka radnih mjesta u kreativnim ulogama (poput concept artista ili writera) izazivaju etičke i organizacijske rasprave.
+
+2.2. Igranje u Oblaku (Cloud Gaming)
+
+Platforme poput NVIDIA GeForce NOW, Xbox Cloud Gaming (xCloud) i PlayStation Plus Premium dovode igre visoke klase (AAA naslove) na uređaje koji inače ne bi imali dovoljan hardver, kao što su pametni telefoni i jeftiniji laptopi.
+
+ Pristupačnost: Uklanjanjem potrebe za skupim konzolama ili računalima, cloud gaming smanjuje ulaznu barijeru i proširuje bazu igrača.
+ Model "Netflix za Igre": Ovaj model se savršeno uklapa u pretplatničke usluge, omogućujući igračima pristup velikoj biblioteci igara uz mjesečnu naknadu. Zrelost tehnologije i njezina stabilnost postaju ključni faktor rasta.
+
+2.3. Proširena i Virtualna Stvarnost (AR/VR)
+
+Iako su AR/VR tehnologije prisutne već nekoliko godina, daljnji razvoj hardvera (npr. Meta Quest serija, Apple Vision Pro) i rast kvalitete naslova dovode do njihove sve veće integracije.
+
+ Virtualna Stvarnost (VR): Fokus se pomiče s eksperimentalnih igara na immersive AAA naslove. VR postaje ključan za žanrove koji traže duboku uronjenost, kao što su simulacije i first-person iskustva.
+ Proširena Stvarnost (AR): AR igre (poput Pokémon GO) koriste pametne telefone za preklapanje digitalnog sadržaja sa stvarnim svijetom. Očekuje se da će s razvojem AR naočala ovaj segment doživjeti značajan rast u integraciji igranja i svakodnevnog života.
+
+2.4. Next-Gen Grafika i Game Enginei
+
+Napredak u grafičkim engineima (poput Unreal Engine 5 i Unity) s funkcijama kao što su ray tracing (praćenje zraka svjetlosti u stvarnom vremenu), napredni sustavi fizike (haptička povratna informacija) i optimizirani rendering za nove konzole (PS5, Xbox Series X) omogućuje izradu fotorealističnih okruženja i dinamičnijeg svijeta igara.
+
+---
+
+3. Evolucija Poslovnih Modela i Tržišta
+
+Način na koji igrači plaćaju za igre i kako developeri ostvaruju prihod neprestano se mijenja, s naglaskom na dugoročno zadržavanje igrača i monetizaciju usluga.
+
+3.1. Dominacija Free-to-Play (F2P) Modela i Live Service Igara
+
+Model Free-to-Play (Besplatno za igranje) i dalje je dominantan, posebno na mobilnom i PC tržištu.
+
+ Monetizacija: Prihodi se ostvaruju kroz kupnje unutar aplikacije (In-App Purchases - IAP). To uključuje kozmetičke predmete (skins), Battle Pass sustave, loot boxove i valutu u igri. Ova strategija omogućuje masovnu bazu korisnika uz monetizaciju malog postotka angažiranih igrača, tzv. kitova (engl. whales), koji doprinose većini prihoda.
+ Live Service Model: Veliki studiji sve više teže pretvaranju svojih naslova u live service igre, koje se kontinuirano razvijaju novim sadržajem, događajima i ažuriranjima godinama nakon izlaska. Ovaj pristup osigurava stabilan, dugoročan prihod, ali zahtijeva visoku razinu angažmana i podrške studija.
+
+3.2. Uspon Pretplatničkih Usluga i Tržišta
+
+Pretplatnički modeli postaju norma, oponašajući uspjeh streaming platformi.
+
+ Microsoft Xbox Game Pass i Sony PlayStation Plus: Ove usluge nude pristup stotinama igara uz mjesečnu naknadu. Njihova popularnost pokazuje da igrači sve više preferiraju model pristupa velikoj biblioteci naslova u odnosu na kupnju pojedinačnih igara.
+ Tržišna Dinamika: Pretplatnički model utječe na razvojne cikluse, budući da izdavači često osiguravaju da njihovi naslovi budu dostupni prvog dana lansiranja na tim platformama, mijenjajući ekonomiju povrata ulaganja.
+
+3.3. Indie Igre i Decentralizacija Tržišta
+
+Iako AAA naslovi privlače najveću pažnju, Indie igre (neovisne igre) postaju sve važnije za inovaciju i raznolikost.
+
+ Digitalna Distribucija: Platforme poput Steama, Epic Games Storea, Itcha, i konzolnih trgovina olakšale su neovisnim developerima da dođu do globalne publike.
+ Kvaliteta naspram Količine: U kontekstu velikih otpuštanja i financijske nesigurnosti u većim studijima (što je problem koji muči industriju), manji, fokusirani timovi često nude inovativne ideje i manju ulaznu cijenu, privlačeći igrače umorne od velikih, često repetitivnih AAA naslova.
+
+3.4. E-sport i Streaming kao Sastavni Dio Promocije
+
+E-sport (profesionalno natjecateljsko igranje) i streaming na platformama poput Twitcha i YouTubea nisu samo marketing, već postaju ključni ekosustavi.
+
+ Kulturni Utjecaj: Vrhunski e-sport turniri privlače milijunsku publiku, povećavajući popularnost i dugovječnost određenih naslova (npr. League of Legends, Dota 2, Valorant).
+ Monetizacija Publike: Streaming stvara izravnu vezu između developera i publike, a monetizacija se ostvaruje kroz partnerstva, oglašavanje i sponzorstva, čineći ih ključnim akterima u promicanju igara.
+
+---
+
+4. Socio-kulturni i Organizacijski Izazovi
+
+Uz tehnološki i ekonomski rast, industrija se suočava i sa značajnim unutarnjim i vanjskim izazovima.
+
+4.1. Nejednakost i Nestabilnost Zapošljavanja
+
+Unatoč visokim prosječnim plaćama u razvijenim zemljama, industrija se suočava s velikim problemima.
+
+ Valovi Otpuštanja (Layoffs): Godine su obilježene masovnim otpuštanjima u velikim studijima, unatoč rekordnim prihodima. To dovodi do velike nesigurnosti kod developera, pri čemu gotovo 80% zaposlenih smatra industriju nesigurnijom od drugih struka.
+ Crunch Kultura i Nejednakost: Dugotrajni radni sati (crunch) i stres ostaju problem. Također, izvješća pokazuju značajne nejednakosti u plaćama na temelju spola i rase, pri čemu žene i ne-bijeli radnici zarađuju znatno manje od svojih kolega.
+ Obrazovanje i Talent: Raste potreba za kvalificiranim kadrom, posebno u područjima AI-a i naprednog dizajna. Fakulteti i sveučilišta igraju ključnu ulogu u obrazovanju novih generacija developera, kombinirajući teoriju i praktičan rad na igrama (kao što je slučaj na hrvatskim sveučilištima).
+
+4.2. Etička Pitanja i Regulacija
+
+Sve veći utjecaj industrije privlači pažnju regulatornih tijela i javnosti.
+
+ Loot Boxovi i Kockanje: Mehanike loot boxova (kutije s nasumičnim nagradama) i mikrotransakcije sve više se reguliraju zbog sličnosti s kockanjem, što može utjecati na dizajn free-to-play igara.
+ Pitanja o Gamingu i Mentalnom Zdravlju: Iako Svjetska zdravstvena organizacija prepoznaje gaming disorder kao poremećaj, većina stručnjaka naglašava pozitivne aspekte igranja. Pitanje uravnoteženosti i zdravih navika igranja ostaje ključna raspravna točka.
+
+4.3. Hrvatska Gaming Industrija na Globalnoj Sceni
+
+Hrvatska je prepoznata kao zemlja s velikim potencijalom u gaming industriji, s aktivnim studijima poput Croteama i rastućim obrazovnim programima.
+
+ Rast i Potencijal: Hrvatska industrija bilježi konstantan rast prihoda i zaposlenih.
+ Potpora: Inicijative poput financiranja razvoja videoigara od strane HAVC-a (Hrvatskog audiovizualnog centra) i razvoj gaming centara jačaju poziciju Hrvatske na globalnom tržištu.
+
+---
+
+5. Zaključak
+
+5.1. Sinteza Trendova
+
+Industrija videoigara nalazi se na raskrižju tehnološke revolucije i ekonomske zrelosti.
+ AI, Cloud Gaming te AR/VR su ključne tehnološke sile koje će definirati igranje budućnosti, čineći ga pristupačnijim i vizualno impresivnijim.
+ F2P i pretplatnički modeli dominiraju, premještajući fokus s jednokratne prodaje na dugoročnu monetizaciju i angažman igrača (Live Service).
+ Organizacijski izazovi (nestabilnost zaposlenja, nejednakost) zahtijevaju etičku i organizacijsku transformaciju kako bi se održao zdrav i kreativan ekosustav.
+
+5.2. Buduće Perspektive
+
+Industrija će se nastaviti razvijati prema dubljoj integraciji digitalnog i stvarnog svijeta. Uspjeh će ovisiti o sposobnosti developera da iskoriste potencijal AI-a za kreativnu, a ne samo automatsku proizvodnju sadržaja, te o sposobnosti izdavača da pronađu ravnotežu između profitabilnosti i pravednosti za zaposlenike i potrošače. Predviđa se da će se trend rasta nastaviti, ali uz veće turbulencije i naglasak na etičkom razvoju i poslovanju.

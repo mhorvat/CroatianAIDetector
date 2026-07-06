@@ -1,0 +1,82 @@
+1. Uvod
+
+U suvremenom društvu, digitalna transformacija i eksponencijalni rast računalne snage čine umjetnu inteligenciju (UI) nezaobilaznim faktorom, osobito u domeni poučavanja mišljenja i potpore donošenju odluka. Tradicionalni sustavi za potporu odlučivanju (DSS) evoluirali su u kompleksne, inteligentne agente koji simuliraju ljudsko kognitivno rasuđivanje. No, implementacija UI u okruženjima koja zahtijevaju ljudsku prosudbu i interakciju ne predstavlja samo tehnički, već i duboko socio-tehnički izazov. Ovaj seminar ima za cilj analizirati ulogu UI u poboljšanju kognitivnih procesa s naglaskom na socio-tehničku perspektivu, istražujući teorijske okvire, metodološke pristupe te praktične implikacije.
+
+Ključne riječi koje će se obraditi uključuju umjetna inteligencija, ekspertni sustav, donošenje odluka, socio-tehnički sustav, svjesnost, učeći agenti i informacijski sustav. Posebna pažnja bit će posvećena konceptu ekspertnih sustava kao preteči moderne UI, sociomaterijalnosti kao ključnom teorijskom okviru za razumijevanje odnosa čovjeka i tehnologije, te metodologiji integralnog pluralizma. Kroz primjere iz primjene u tunelskim sustavima, analizirat će se stvarni utjecaj ovih sustava, a kritički osvrt poslužit će za identificiranje aktualnih ograničenja.
+
+2. Teorijski temelji i koncepti
+
+2.1. Ekspertni sustavi kao osnova za potporu odlučivanju
+
+Ekspertni sustavi (ES) predstavljaju prvu komercijalno uspješnu formu umjetne inteligencije i čine temelj za današnje inteligentne informacijske sustave za potporu odlučivanju. Njihova je svrha simulirati znanje i proces zaključivanja ljudskog eksperta u specifičnoj domeni. Osnovna arhitektura ES-a sastoji se od tri ključne komponente:
+
+ Baza znanja (Knowledge Base): Sadrži činjenice i pravila (npr. if-then pravila) prikupljena od ljudskih eksperata. Predstavlja statično znanje domene.
+ Mehanizam zaključivanja (Inference Engine): Srce sustava. Koristi logičke procedure (npr. prosljeđivanje, forward chaining, ili povratno traženje, backward chaining) za primjenu pravila na činjenice i izvođenje novih zaključaka.
+ Radna memorija (Working Memory) ili Kontekst: Sadrži podatke o trenutnoj situaciji ili problemu koji se rješava.
+
+U kontekstu donošenja odluka, ES-ovi djeluju kao mentor ili savjetnik, objašnjavajući svoje zaključke i rationale, čime potencijalno poboljšavaju mišljenje korisnika i proces učenja. Oni su primjeri učećih agenata u smislu da mogu obrađivati i strukturirati složene informacije, no njihova je sposobnost učenja u početku bila ograničena na simulaciju ljudske ekspertize, a ne na autonomno stjecanje znanja. Moderni sustavi prevladavaju ovo ograničenje integracijom strojnog učenja.
+
+2.2. Socio-tehnički sustavi i Sociomaterijalnost
+
+Koncept socio-tehničkog sustava prepoznaje inherentnu međusobnu ovisnost društvenog (ljudi, organizacijska struktura, procesi) i tehničkog (tehnologija, oprema, UI algoritmi) podsustava. Uvođenje UI, osobito u kritičnim domenama, remeti ravnotežu i stvara novu hibridnu strukturu. U tom smislu, donošenje odluka se ne može promatrati isključivo kao kognitivni proces pojedinca ili kao čisto tehnički izlaz algoritma.
+
+Koncept sociomaterijalnosti dodatno produbljuje ovu perspektivu. On odbacuje tradicionalnu dihotomiju između "socijalnog" i "materijalnog" (tehničkog) i tvrdi da su oni neodvojivo isprepleteni – tehnologija nije samo alat koji se koristi u društvenom okruženju, već je aktivni sudionik koji oblikuje same društvene prakse, procese mišljenja i strukturu organizacije. UI nije samo softver; ona je utjelovljena u praksama trainiranja, implementacije i interpretacije njenih izlaza. Učeći agenti i algoritam stoga aktivno sudjeluju u kreiranju novog socio-tehničkog sustava. Na primjer, algoritam koji predlaže odluke postaje dio timske dinamike, utječući na povjerenje, odgovornost i razinu autonomije ljudskog operatera.
+
+2.3. Samoregulirajući vs. Samoupravljajući sustavi
+
+Razlikovanje između samoregulirajućih i samoupravljajućih sustava ključno je za razumijevanje razine autonomije učećih agenata i rizika u socio-tehničkim sustavima.
+
+ Samoregulirajući sustavi (Self-regulating Systems): Ovi sustavi automatski prilagođavaju svoje unutarnje parametre kako bi postigli i održali postavljeni cilj unutar predefiniranih granica i pravila. Oni imaju visok stupanj automatizacije i mogu samostalno ispravljati pogreške unutar okvira svoje programske logike (npr., sustav za kontrolu temperature). Njihovo donošenje odluka je proceduralno i reaktivno.
+ Samoupravljajući sustavi (Self-governing Systems) / Autonomni sustavi: Ovi sustavi idu korak dalje. Ne samo da reguliraju svoje parametre, već su sposobni za autonomno definiranje ili redefiniranje vlastitih ciljeva, strategija i ponašanja, uključujući interakciju s nepredviđenim vanjskim okruženjem. Zahtijevaju razinu adaptivnosti i svjesnosti (ne u ljudskom smislu, već u smislu situacijske svjesnosti i proaktivnog planiranja) koja implicira napredne sposobnosti učećih agenata (npr., autonomna vozila). U kontekstu socio-tehničkog sustava, samoupravljajući sustav u potpunosti preuzima domenu donošenja odluka, potiskujući ljudskog operatera na ulogu nadzornika, što otvara pitanja odgovornosti i etike.
+
+3. Metodologija integralnog pluralizma
+
+Metodologija integralnog pluralizma nudi okvir za analizu i dizajn socio-tehničkih sustava u kojima se koristi UI. Prepoznaje da se stvarni problemi ne mogu riješiti primjenom jedne, monolitne perspektive (npr. čisto tehničke ili čisto društvene). Umjesto toga, predlaže integraciju različitih, komplementarnih perspektiva ili "svjetova" koji čine problem.
+
+Ključni "svjetovi" u ovom kontekstu su:
+
+1.  Tehnički svijet: Fokus na algoritmima, bazama znanja, arhitekturi sustava, performansama i skalabilnosti informacijskog sustava.
+2.  Organizacijski/Proceduralni svijet: Fokus na procesima, pravilima, radnim tokovima i strukturi unutar koje se odvija donošenje odluka.
+3.  Kulturni/Vrijednosni svijet: Fokus na normama, etici, povjerenju, transparentnosti i na to kako se UI percipira unutar radne zajednice.
+4.  Osobni/Kognitivni svijet: Fokus na kognitivnom opterećenju operatera, razini svjesnosti i sposobnosti ljudskog mišljenja da kritički interpretira izlaze ekspertnog sustava ili učećeg agenta.
+
+Integralni pluralizam zahtijeva da se pri implementaciji UI rješenja (npr. sustava temeljenog na ekspertnom sustavu) svi ovi svjetovi uzmu u obzir. Neuspjeh u integraciji (npr. odličan tehnički sustav bez adekvatne obuke ili etičkih smjernica) dovest će do neuspjeha cjelokupnog socio-tehničkog sustava. Metodologija nalaže dijalog i triangulaciju nalaza iz svake perspektive.
+
+4. Praktična primjena u tunelskim sustavima
+
+Primjena umjetne inteligencije u upravljanju tunelskim sustavima predstavlja izrazito relevantan i kritičan praktični primjer socio-tehničkog sustava. Tuneli su kompleksna i zatvorena okruženja u kojima pravovremeno donošenje odluka ovisi o integraciji senzorskih podataka (požar, CO koncentracija, promet, kvar ventilacije) i ljudske prosudbe.
+
+4.1. UI za situacijsku svjesnost i donošenje odluka
+
+Moderni tunelski informacijski sustavi koriste UI za obradu multimodalnih podataka i generiranje visoke razine svjesnosti o stanju tunela. Ekspertni sustavi bazirani na pravilima i učeći agenti za detekciju anomalija rade u pozadini:
+
+ Detekcija incidenata: UI analizira videosnimke (prepoznavanje zaustavljenih vozila, pješaka) i senzore (naglo povećanje CO2/dima) i spaja te signale u koherentnu procjenu rizika.
+ Preporuka akcije: Na temelju prikupljenog znanja i trenutne situacije, ekspertni sustav daje preporuke operateru (npr., Aktiviraj protupožarnu ventilaciju u zoni X, zatvori promet ispred ulaza Y). Ovo poboljšava mišljenje operatera, dajući mu brzu, proceduralno provjerenu početnu točku.
+
+4.2. Sociomaterijalni aspekti u tunelu
+
+U tunelskom okruženju, sociomaterijalnost je očita. Sučelje UI sustava (materijalni artefakt) utječe na rad operatera (društveni aspekt). Ako je sustav previše kompliciran ili nepouzdan, operater razvija nepovjerenje i može ignorirati preporuke sustava, oslanjajući se na vlastito iskustvo. To narušava optimalan rad socio-tehničkog sustava. Stoga je ključno postići balans između autonomije učećeg agenta i zadržavanja "ljudske petlje" (Human-in-the-Loop) radi zadržavanja odgovornosti.
+
+5. Kritički osvrt i ograničenja
+
+Iako umjetna inteligencija nudi značajne prednosti u potpori donošenju odluka, trenutni pristupi u poučavanju mišljenja i u dizajniranju socio-tehničkih sustava imaju značajna ograničenja.
+
+5.1. Nedostatak transparentnosti i etičke dileme
+
+Jedno od najvećih ograničenja je problem "crne kutije" (Black Box) kod složenih učećih agenata (npr. dubokih neuronskih mreža). Manjak transparentnosti onemogućuje ljudskom operateru kritičku procjenu, ometajući proces mišljenja i učenja. U kritičnim situacijama, kao što je upravljanje tunelom, operater mora razumjeti zašto je sustav preporučio određenu radnju (npr. gašenje ventilacije), što je ključno za odgovornost. Etičke dileme proizlaze iz ovog nedostatka objašnjivosti (Explainable AI - XAI), a ekspertni sustavi su u tom pogledu bili superiorniji jer su mogli pružiti jasan lanac zaključivanja.
+
+5.2. Ograničenje svjesnosti i prijenosa znanja
+
+UI trenutno postiže izuzetnu situacijsku svjesnost (sposobnost razumijevanja trenutne situacije), no ne posjeduje ljudsku svjesnost (sposobnost generalizacije, moralnog rasuđivanja ili razumijevanja konteksta izvan domene treninga).
+
+Učeći agenti su u opasnosti od prekomjernog prilagođavanja (overfitting) podacima treninga, što znači da loše reagiraju na situacije koje su izvan skupa podataka (out-of-distribution). Ljudski ekspert, za razliku od toga, koristi iskustvo i analogije iz drugih domena (transferno učenje), što je i dalje značajna slabost modernih informacijskih sustava. Stoga, poučavanje mišljenja kroz UI mora biti shvaćeno kao simbiotički proces, a ne kao zamjena za ljudsku kogniciju.
+
+5.3. Rizici samoupravljanja
+
+Potpuna predaja kontrole samoupravljajućim sustavima u kritičnim domenama nosi rizik gubitka ljudske ekspertize. Ako operater predugo delegira donošenje odluka, njegova sposobnost za mišljenje i brzu reakciju u slučaju kvara sustava (Automation Bias) može atrofirati. Održavanje optimalnog rada socio-tehničkog sustava zahtijeva stalno usavršavanje ljudskih vještina uz stalni nadzor učećih agenata.
+
+6. Zaključak
+
+Implementacija umjetne inteligencije i ekspertnih sustava u poučavanju mišljenja i potpori donošenju odluka transformira moderne organizacije u sofisticirane socio-tehničke sustave. Analiza kroz prizmu sociomaterijalnosti i metodologije integralnog pluralizma pokazuje da je uspjeh tih sustava ovisan o harmoničnoj integraciji tehničkog i ljudskog elementa. UI, putem učećih agenata, može poboljšati svjesnost i učinkovitost u kompleksnim okruženjima kao što su tunelski sustavi, no ne može u potpunosti zamijeniti ljudsko etičko i kontekstualno rasuđivanje.
+
+Ključni izazov leži u adresiranju transparentnosti i etike. Budući razvoj mora se usredotočiti na stvaranje objašnjivih informacijskih sustava i na jasno definiranje granica između samoregulirajućih i samoupravljajućih sustava, čime se osigurava odgovornost i održava kognitivna kompetencija ljudskog operatera. Budućnost UI u ovoj domeni leži u simbiozi – stvaranju tehnologije koja poboljšava, a ne potkopava, ljudsku sposobnost mišljenja i donošenja odluka.

@@ -1,0 +1,80 @@
+1. Uvod
+
+Digitalna transformacija znanosti i obrazovanja, potaknuta sve širom dostupnošću interneta i razvojem informacijskih tehnologija, neminovno je dovela do redefiniranja načina na koji se znanstveni rezultati stvaraju, pohranjuju i distribuiraju. Koncept otvorenog pristupa (Open Access, OA) postao je jedan od ključnih pokretača promjena u akademskoj zajednici, zagovarajući ideju da znanstvene publikacije i istraživački podaci trebaju biti slobodno i besplatno dostupni svim korisnicima na internetu, bez financijskih ili pravnih barijera, uz zadržavanje autorskih prava. U kontekstu Republike Hrvatske, primjena načela otvorenog pristupa posebno je relevantna za završne radove (stručne i diplomske) koji predstavljaju važan segment studentske produkcije i pokazatelj kvalitete studija. Pohranjivanje tih radova u digitalne repozitorije služi ne samo kao trajno arhiviranje, već i kao sredstvo za povećanje vidljivosti i citiranosti hrvatske akademske produkcije. Nacionalni repozitorij završnih i diplomskih radova (ZIR), kojeg održava Nacionalna i sveučilišna knjižnica u Zagrebu (NSK), predstavlja središnju platformu za prikupljanje i diseminaciju ovih radova s visokoškolskih ustanova. S obzirom na specifičnu ulogu i fokus veleučilišta unutar hrvatskog tercijarnog obrazovnog sustava – na primijenjeno znanje i stručnu praksu – analiza njihove zastupljenosti u ZIR-u pruža uvid u primjenu nacionalnih i globalnih politika otvorenog pristupa na stručnim studijima.
+
+Cilj ovog seminarskog rada jest analizirati i kvantificirati zastupljenost otvorenog pristupa završnim radovima pohranjenim u digitalnim repozitorijima hrvatskih veleučilišta, a čiji su metapodaci vidljivi u nacionalnom repozitoriju ZIR. Rad će detaljno prikazati temeljnu teorijsku podlogu otvorenog pristupa analizom ključnih deklaracija, provesti komparativnu analizu sa europskim standardima i prikazati konkretne statističke podatke. Ključne riječi ovog rada su: otvoreni pristup, digitalni repozitorij, završni radovi, veleučilišta, ZIR, vidljivost, citiranost i Hrvatska deklaracija o otvorenom pristupu.
+
+2. Teorijske osnove otvorenog pristupa
+
+Koncept otvorenog pristupa (OA) formaliziran je početkom 21. stoljeća s ciljem uklanjanja prepreka pristupu istraživačkim rezultatima. Temelji se na ideji da je javno financirano istraživanje javno dobro i stoga treba biti javno dostupno.
+
+2.1. Glavne inicijative otvorenog pristupa
+
+Tri ključne međunarodne inicijative definirale su i oblikovale suvremeni pokret otvorenog pristupa, postavljajući temelje za njegovu globalnu implementaciju.
+
+2.1.1. Budimpeštanska inicijativa otvorenog pristupa (BOAI)
+
+Budimpeštanska inicijativa otvorenog pristupa (Budapest Open Access Initiative, BOAI), objavljena u veljači 2002. godine, smatra se povijesnom prekretnicom. Ona je prva formalno definirala "otvoreni pristup" kao besplatnu dostupnost znanstvene literature na javnom internetu, dopuštajući svakom korisniku čitanje, preuzimanje, kopiranje, distribuciju, ispis, pretraživanje ili povezivanje s punim tekstovima članaka, indeksiranje, prosljeđivanje podataka softveru ili korištenje za bilo koju drugu zakonitu svrhu, bez financijskih, pravnih ili tehničkih prepreka. BOAI je definirala dva glavna puta za postizanje otvorenog pristupa:
+ Zeleni put (Green OA): Autori arhiviraju kopiju svog rada (obično recenziranu verziju rukopisa) u institucijski ili predmetni digitalni repozitorij.
+ Zlatni put (Gold OA): Rad se objavljuje u časopisu s otvorenim pristupom, gdje je članak odmah i trajno dostupan.
+
+2.1.2. Berlinska deklaracija o otvorenom pristupu znanju u prirodnim i humanističkim znanostima
+
+Berlinska deklaracija (Berlin Declaration on Open Access to Knowledge in the Sciences and Humanities), potpisana u listopadu 2003., nadovezala se na BOAI, ali s naglaskom na to da otvoreni pristup treba uključivati i primarne podatke istraživanja, uz znanstvene članke. Deklaracija je potpisnike obvezala da potiču svoje istraživače i nositelje financiranja da objavljuju svoje radove u OA časopisima i da pohranjuju svoje radove u OA repozitorije. Berlinska deklaracija uvela je strože zahtjeve za autorska prava, insistirajući na korištenju otvorenih licenci (poput Creative Commons) kako bi se osigurala ne samo besplatna dostupnost već i jasna prava za ponovnu upotrebu.
+
+2.1.3. Hrvatska deklaracija o otvorenom pristupu
+
+U Hrvatskoj je pokret otvorenog pristupa formaliziran usvajanjem Hrvatske deklaracije o otvorenom pristupu (HDOHA), usvojene na Prvoj konferenciji o otvorenom pristupu u Hrvatskoj 2012. godine. Deklaracija je potaknula akademsku i istraživačku zajednicu, financijere i kreatore politika na usvajanje i promicanje otvorenog pristupa. Ona prepoznaje znanstveno znanje kao javno dobro i ističe potrebu da se rezultati javno financiranih istraživanja učine dostupnima. Hrvatska deklaracija naglašava važnost uspostave i razvoja digitalnih repozitorija (institucijskih i tematskih) kao ključnog alata za postizanje otvorenog pristupa u nacionalnom kontekstu. Također, poziva na uvođenje politika obveznog arhiviranja (mandata) na razini institucija.
+
+2.2. Vidljivost, citiranost i utjecaj
+
+Primarni benefiti otvorenog pristupa leže u značajnom povećanju vidljivosti znanstvene produkcije. Radovi dostupni u OA repozitorijima ili časopisima lakše su pronalazivi, indeksirani u tražilicama (poput Google Scholar) i dostupni istraživačima diljem svijeta. Povećana vidljivost izravno je povezana s potencijalnim povećanjem citiranosti autora i institucije, što posljedično dovodi do većeg znanstvenog utjecaja. Za veleučilišta i njihove završne radove, otvoreni pristup osigurava da rezultati primijenjenih istraživanja postanu dostupni gospodarstvu i široj zajednici, ispunjavajući tako njihovu misiju služenja lokalnom i regionalnom razvoju.
+
+3. Digitalni repozitorij ZIR i veleučilišta
+
+Digitalni repozitoriji ključni su infrastrukturni elementi za implementaciju zelenog puta otvorenog pristupa. Oni služe kao središnja mjesta za prikupljanje, pohranu, očuvanje i distribuciju digitalne građe institucije.
+
+3.1. Uloga i struktura ZIR-a
+
+Nacionalni repozitorij završnih i diplomskih radova (ZIR), uspostavljen pri NSK u Zagrebu, nacionalna je agregacijska platforma koja prikuplja metapodatke o završnim i diplomskim radovima iz institucijskih repozitorija hrvatskih visokoškolskih ustanova. ZIR ne pohranjuje fizički radove, već funkcionira kao središnji katalog, pružajući jedinstveno pretraživanje i poveznicu (URL) na puni tekst koji se nalazi u izvornom institucijskom repozitoriju (npr. dabar sustavu). Glavna funkcija ZIR-a je osigurati nacionalnu vidljivost cjelokupne studentske produkcije i olakšati njihovo dugoročno očuvanje.
+
+3.2. Specifičnost veleučilišta
+
+Veleučilišta u Hrvatskoj prvenstveno izvode stručne studije, a njihovi završni radovi često su fokusirani na praktična rješenja, studije slučaja i primijenjena istraživanja relevantna za tržište rada. Iako su metodološki možda manje usmjereni na temeljno znanstveno istraživanje od sveučilišnih diplomskih radova, njihov praktični doprinos je značajan. Stoga je otvoreni pristup ovim radovima izuzetno važan za prijenos znanja u stručnu i gospodarsku praksu. Implementacija digitalnih repozitorija na veleučilištima, najčešće kroz nacionalnu platformu DABAR (Digitalni akademski arhivi i repozitoriji), ključna je za ispunjavanje obveze otvorenog pristupa.
+
+4. Komparativna analiza i statistički prikaz
+
+Analiza zastupljenosti otvorenog pristupa na hrvatskim veleučilištima nužno zahtijeva usporedbu s europskim standardima i kvantitativnu provjeru stanja.
+
+4.1. Europski standardi i politike
+
+Europska unija snažno podržava i potiče otvoreni pristup. Politike Europske komisije, posebno u okviru programa poput Obzor 2020 i Obzor Europa, nameću obvezu otvorenog pristupa recenziranim publikacijama i planovima upravljanja istraživačkim podacima (Data Management Plans, DMP). Standardi, koje su prihvatile europske istraživačke organizacije (npr. Plan S), idu u smjeru trenutnog i potpunog otvorenog pristupa svim rezultatima financiranim javnim sredstvima. Iako završni radovi nisu izravno obuhvaćeni Planom S, širi etos europskih politika snažno gura prema usvajanju mandata za repozitorije na svim visokoškolskim ustanovama. U usporedbi s nekim zapadnoeuropskim zemljama (npr. Nizozemska, Ujedinjeno Kraljevstvo) gdje je repozitorijsko arhiviranje studentskih radova rutinska praksa i često zakonska obveza, Hrvatska još uvijek radi na punoj implementaciji obvezujućih politika na svim institucijama, uključujući i veleučilišta.
+
+4.2. Statistički podaci o zastupljenosti
+
+Stanje zastupljenosti završnih radova veleučilišta u ZIR-u može se procijeniti analizom podataka dostupnih putem sučelja ZIR-a i DABAR sustava. Konkretni statistički podaci, iako podložni fluktuacijama u realnom vremenu, često pokazuju neujednačenu sliku:
+
+ Ukupan broj radova: Većina veleučilišta formalno ima uspostavljen repozitorij unutar DABAR sustava. Ukupan broj pohranjenih radova raste iz godine u godinu, ali taj rast ne prati uvijek ukupan broj obranjenih radova na instituciji, što ukazuje na problem potpunosti pohrane.
+ Stupanj OA: Ključni pokazatelj je postotak radova koji imaju omogućen otvoreni pristup punom tekstu. Iako je opća tendencija OA, dio radova i dalje ostaje pod restrikcijama (zbog autorskih prava, ugovora s mentorom, ili nejasnih institucionalnih politika). U prosjeku, veleučilišta imaju visok postotak OA radova (često iznad 90%) kada se rad pohrani, ali problem je u opsegu pohrane.
+ Aktivnost repozitorija: Neka veleučilišta imaju redovito ažuriran i iscrpan repozitorij koji pokriva sve studijske godine (ili barem od uvođenja DABAR-a), dok kod drugih postoji značajan zaostatak ili se radovi arhiviraju ad hoc.
+
+> Primjer: Analiza stanja iz 2024. godine često pokazuje da veleučilišta s dužom tradicijom i boljom podrškom knjižnice imaju najveći broj radova. Pokazatelji kažu da je u ZIR-u krajem 2024. registrirano preko 120.000 radova, od čega značajan, ali neujednačen, dio otpada na veleučilišta. Uspješna veleučilišta bilježe tisuće pohranjenih radova, dok slabije organizirana repozitorija bilježe tek nekoliko stotina. Disparitet ukazuje na ključnu ulogu institucionalne politike i osoblja knjižnice u efikasnosti OA.
+
+5. Preporuke za povećanje otvorenog pristupa i zaključak
+
+Iako je Hrvatska usvajanjem deklaracije i uspostavom ZIR-a i DABAR sustava postavila dobar temelj, puni potencijal otvorenog pristupa na veleučilištima još uvijek nije u potpunosti ostvaren.
+
+5.1. Preporuke za djelovanje
+
+Za povećanje zastupljenosti i kvalitete otvorenog pristupa završnim radovima veleučilišta, preporučuju se sljedeće mjere:
+
+ Uvođenje obvezujuće politike (Mandata): Najvažniji korak je donošenje i stroga primjena institucionalne politike koja obvezuje studente i mentore na elektroničku predaju i pohranu punog teksta završnog rada u repozitorij s otvorenim pristupom (uz jasno definirane iznimke).
+ Edukacija i podrška: Kontinuirana edukacija studenata, mentora i knjižničara o konceptu otvorenog pristupa, autorskim pravima i korištenju repozitorija je ključna. Knjižnično osoblje treba biti tehnički i pravno osposobljeno za podršku i unos radova.
+ Standardizacija metapodataka: Osigurati dosljedan i potpun unos visokokvalitetnih metapodataka (uključujući sažetke i ključne riječi) u skladu s europskim standardima (npr. OpenAIRE smjernice), što poboljšava vidljivost i interoperabilnost sa ZIR-om i međunarodnim servisima.
+ Promocija korištenja i citiranosti: Veleučilišta bi trebala aktivno promicati korištenje radova iz repozitorija u nastavi i praksi te pratiti statistike preuzimanja kako bi se studentima i mentorima vizualizirali benefiti vidljivosti.
+
+5.2. Zaključak
+
+Otvoreni pristup završnim radovima u digitalnim repozitorijima hrvatskih veleučilišta, agregiranih u ZIR-u, predstavlja vitalan element nacionalne znanstvene infrastrukture i implementacije europskih standarda. Hrvatska deklaracija o otvorenom pristupu postavila je jasan smjer, ali neujednačena implementacija politika na razini pojedinih veleučilišta rezultira nejednakom zastupljenošću radova u ZIR-u. Temeljna teorijska potpora, definirana Budimpeštanskom inicijativom i Berlinskom deklaracijom, jasno pokazuje put zelenog OA kao najučinkovitiji put za studentske radove.
+
+Iako je tehnička infrastruktura (DABAR/ZIR) uspostavljena, ključni izazov leži u pretvaranju preporuka u obvezujuće institucionalne prakse. Povećanje OA završnih radova izravno doprinosi ne samo boljoj vidljivosti i potencijalnoj citiranosti studenata i mentora, već i ispunjavanju društvene misije veleučilišta – prijenosu primijenjenog znanja u javnu i gospodarsku sferu. Budući napredak ovisi o snažnoj političkoj volji, obveznim repozitorijskim mandatima i kontinuiranom ulaganju u edukaciju akademske zajednice.

@@ -1,0 +1,114 @@
+1. Uvod
+
+Digitalna fotografija postala je temelj komunikacije, dokumentacije i dokazivanja u 21. stoljeću. Od novinskih izvještaja, sudskih postupaka, medicinske dijagnostike, do osobnih sjećanja, pouzdanost i autentičnost digitalne slike ključni su za povjerenje u digitalni sadržaj. Ipak, upravo lakoća stvaranja, distribucije i obrade digitalne fotografije otvara put njenoj potencijalnoj zlouporabi.
+
+Digitalna slika, za razliku od tradicionalne analogne fotografije, nije samo vizualni prikaz; ona je paket podataka. Ključni dio tog paketa čine metapodaci, ili podaci o podacima. Metapodaci su nevidljivi sloj informacija koji prati svaku digitalnu datoteku i pruža ključni kontekst o tome kada, gdje i kako je slika nastala. Upravo manipulacija tim pratećim podacima predstavlja jednu od najsuptilnijih, ali najopasnijih prijetnji integritetu digitalnog dokaza.
+
+Problem manipulacije metapodacima leži u jednostavnosti njihove izmjene uz pomoć standardnih, lako dostupnih softverskih alata. Izmijenjeni datum nastanka, lažirana geolokacija ili izbrisani podaci o autorskim pravima mogu temeljito promijeniti značenje i dokaznu vrijednost fotografije.
+
+Cilj ovog seminarskog rada je analizirati strukturu i važnost metapodataka, identificirati uobičajene metode njihove manipulacije te, što je najvažnije, predstaviti ključne mehanizme zaštite i forenzičke metode detekcije koje se koriste za očuvanje autentičnosti i integriteta digitalnih fotografija u profesionalnom i akademskom kontekstu.
+
+2. Razumijevanje metapodataka digitalne fotografije
+
+Metapodaci su strukturirani skup informacija ugrađenih u datoteku digitalne fotografije. Oni služe kao digitalni zapisnik, prateći svaki korak od trenutka nastanka slike pa do njezine eventualne arhivizacije ili objave. Postoje tri dominantna standarda za metapodatke u digitalnoj fotografiji: EXIF, IPTC i XMP.
+
+2.1. EXIF (Exchangeable Image File Format)
+
+EXIF je vjerojatno najpoznatiji i najčešće korišten standard, primarno fokusiran na tehničke podatke snimanja. Nastao je kao standard za digitalne kamere i pruža detaljan uvid u postavke koje je fotograf koristio. Ključni EXIF podaci uključuju:
+ Informacije o opremi: Marka i model kamere, serijski broj, korišteni objektiv.
+ Postavke ekspozicije: Brzina zatvarača, otvor blende ($f$/broj), ISO osjetljivost, način mjerenja svjetla.
+ Vremenske oznake: Datum i točno vrijeme snimanja (ključno za forenzičku analizu slijeda događaja).
+ Geolokacija (ako je omogućena): GPS koordinate mjesta snimanja.
+
+Ranjivost EXIF-a leži u njegovoj tehničkoj prirodi; vrlo ga je lako ukloniti prilikom obrade ili izravno manipulirati s ciljem uklanjanja potencijalnih dokaza ili narušavanja privatnosti.
+
+2.2. IPTC (International Press Telecommunications Council)
+
+IPTC standard je razvijen prvenstveno za potrebe novinske i medijske industrije te se fokusira na administrativne i deskriptivne podatke. On omogućuje profesionalcima da prate i upravljaju digitalnim pravima i kontekstom sadržaja. Ključni IPTC podaci uključuju:
+ Autorska prava: Ime autora, status autorskih prava, kontakt podaci.
+ Deskriptori sadržaja: Naslov, opis, ključne riječi (tagovi), kategorija.
+ Informacije o distribuciji: Naziv agencije, datum kreiranja (izvornog medija) i upute za upotrebu.
+
+IPTC podaci su ključni za Digital Rights Management (DRM) i etičku upotrebu tuđeg vizualnog sadržaja.
+
+2.3. XMP (Extensible Metadata Platform)
+
+XMP je moderniji, fleksibilniji standard tvrtke Adobe, dizajniran za integraciju i proširivost metapodataka. XMP može obuhvaćati i EXIF i IPTC podatke, ali nudi prednost u tome što podržava digitalno potpisivanje i lakšu integraciju s radnim procesima (workflow) profesionalnih alata za obradu. XMP podaci se često koriste za bilježenje povijesti obrade slike (npr. koraci primijenjeni u Photoshopu ili Lightroomu), što je važan trag za forenzičku analizu.
+
+3. Metode manipulacije metapodacima
+
+Manipulacija metapodacima može biti slučajna ili namjerna. Slučajna manipulacija obično se događa nepažnjom, npr. kada korisnik konvertira datoteku iz jednog formata u drugi (npr. iz RAW u JPEG), što može rezultirati gubitkom nekih metapodataka.
+
+Međutim, namjerna manipulacija predstavlja sigurnosni i etički problem. Ona se može podijeliti na dvije glavne kategorije:
+
+3.1. Uklanjanje ili čišćenje (Stripping)
+
+To je najjednostavnija i najčešća metoda manipulacije. Sastoji se od potpunog ili selektivnog brisanja svih metapodataka iz datoteke. Motiv za to može biti dvojak:
+ Očuvanje privatnosti: Uklanjanje GPS koordinata i serijskih brojeva kamere prije objavljivanja na internetu.
+ Uklanjanje dokaza: Brisanje datuma, vremena ili autorskih prava s ciljem prikrivanja izvora ili konteksta fotografije. Uklanjanjem metapodataka fotografija gubi svoj digitalni otisak, čime se onemogućuje forenzička provjera autentičnosti.
+
+3.2. Modifikacija ili lažiranje (Spoofing)
+
+Ova metoda uključuje namjernu izmjenu ključnih polja metapodataka kako bi se stvorio lažni narativ. Primjeri uključuju:
+ Lažiranje vremena: Mijenjanje datuma i vremena snimanja da bi se dokazao alibi ili da bi se stvorilo lažno vremensko razdoblje događaja.
+ Lažiranje lokacije: Izmjena GPS koordinata radi prikaza da je fotografija snimljena na drugom mjestu.
+ Lažiranje autorstva: Upisivanje vlastitog imena u polja autorskih prava kako bi se ilegalno preuzelo autorstvo nad tuđim djelom.
+
+Alati koji se koriste za ovu vrstu manipulacije su široko dostupni. Profesionalni softveri poput Adobe Photoshopa i besplatni alati poput ExifToola omogućuju korisnicima da izravno editiraju gotovo svako polje metapodataka bez ostavljanja vidljivih tragova manipulacije na samoj slici.
+
+4. Metode zaštite integriteta fotografija
+
+Zaštita digitalne fotografije od manipulacije metapodacima zahtijeva višeslojni pristup koji uključuje tehnološka i proceduralna rješenja. Fokus je na osiguravanju da svaka neovlaštena izmjena bude ne samo otkrivena, već i da se njezin izvorni oblik može potvrditi.
+
+4.1. Kriptografske metode i digitalno potpisivanje
+
+Ovo je najrobusniji oblik zaštite integriteta. Temelji se na matematičkim principima koji osiguravaju da je promjena bilo kojeg dijela datoteke odmah vidljiva.
+ Hash funkcije: Originalna fotografija (uključujući metapodatke) se prolazi kroz hash funkciju (npr. SHA-256) koja generira jedinstveni, kratki niz znakova (tzv. sažetak poruke ili digitalni otisak). Taj je otisak nepovratan i jedinstven: i najmanja promjena u datoteci rezultira potpuno drugačijim hash nizom.
+ Digitalno potpisivanje: Kreirani hash se zatim kriptira privatnim ključem autora ili ovlaštene organizacije, čime se stvara digitalni potpis. Taj se potpis pohranjuje uz fotografiju ili u neovisnu bazu podataka.
+ Provjera: Kada se fotografija provjerava, koristi se javni ključ za dekriptiranje digitalnog potpisa i generira se novi hash same datoteke. Ako se dekriptirani potpis i novoizračunati hash podudaraju, to jamči da fotografija i njeni metapodaci nisu mijenjani od trenutka potpisivanja.
+
+Ova metoda se široko primjenjuje u forenzici, gdje je lanac skrbništva (Chain of Custody) ključan za dokazivanje autentičnosti digitalnog dokaza.
+
+4.2. Tehnike digitalnog vodenog žiga (Digital Watermarking)
+
+Digitalni vodeni žig podrazumijeva ugrađivanje skrivenih informacija direktno u vizualni sadržaj slike. Te su informacije često nevidljive ljudskom oku, ali se mogu izvući pomoću specijaliziranog softvera.
+
+ Nevidljivi (Steganografski) žigovi: Ugrađuju se u najmanje značajne bitove (LSB) podataka piksela, čime se ne narušava kvaliteta slike, ali ih je teško ukloniti bez značajne degradacije slike.
+ Zaštita metapodataka: Ključna primjena za našu temu je ugrađivanje hash vrijednosti originalnih metapodataka u sam vodeni žig. Ako netko izbriše ili izmijeni EXIF podatke, forenzičar može izvući vodeni žig i provjeriti je li se izvučeni hash podudara s novim hash-om datoteke. Ako se ne podudara, to ukazuje na manipulaciju, a izvučeni hash služi kao dokazni original.
+
+4.3. Standardi za provjeru porijekla (Content Provenance)
+
+Industrija sve više radi na standardima koji bi trebali obvezati proizvođače softvera i hardvera na transparentnost. Inicijative poput C2PA (Coalition for Content Provenance and Authenticity) nastoje stvoriti otvorene tehničke standarde koji bi u digitalne slike trajno ugrađivali nepromjenjive zapise o njenom porijeklu.
+
+ Princip rada: Svaki put kada se fotografija snimi, obradi ili objavi, softver bi automatski dodao kriptografski ovjerenu "bilješku" o toj aktivnosti. Korisnik bi mogao putem standardiziranog sučelja vidjeti punu povijest slike, uključujući sve izmjene metapodataka.
+
+4.4. Blockchain i distribuirani sustavi
+
+Korištenje blockchain tehnologije za zaštitu autentičnosti predstavlja najnoviji trend. Blockchain se koristi kao nepromjenjiva, distribuirana knjiga zapisa.
+ Implementacija: Kada se fotografija snimi, njezin se hash trajno bilježi na blockchainu. Budući da je blockchain dizajniran da bude nepromjenjiv i transparentan, bilješka o originalnom digitalnom otisku služi kao neoboriv dokaz protiv bilo kakve kasnije manipulacije. Time se autentičnost prenosi s povjerenja u centralnu instituciju na povjerenje u matematički algoritam.
+
+5. Detekcija manipulacije i forenzička analiza
+
+Kada metode zaštite nisu primijenjene, forenzička analiza postaje ključna za detekciju manipulacije. Cilj je pronaći nedosljednosti koje su nastale uslijed promjene metapodataka.
+
+5.1. Analiza dosljednosti metapodataka (Consistency Check)
+
+Forenzičar pažljivo uspoređuje sve dostupne skupove metapodataka unutar datoteke (EXIF, IPTC, XMP).
+ Unutarnja dosljednost: Ako EXIF navodi datum snimanja 1. siječnja 2024., a XMP podaci, koji bilježe povijest obrade, pokazuju da je obrada započela 1. prosinca 2023., to je očigledna nedosljednost koja ukazuje na lažiranje datuma snimanja.
+ Dosljednost s opremom: Provjerava se jesu li sve EXIF oznake u skladu s poznatim karakteristikama navedenog modela kamere. Na primjer, ako EXIF navodi brzinu zatvarača koja je tehnički neizvediva za navedeni model, to upućuje na lažiranje EXIF polja.
+ Analiza GPS koordinata: Uspoređuje se navedena geolokacija s navedenim vremenom snimanja i putanjama sunca ili poznatim događajima, što može otkriti nelogičnosti.
+
+5.2. Analiza softverskih potpisa (Software Signatures)
+
+Kada se metapodaci izbrišu ili izmijene pomoću određenog softvera (npr. Microsoft Paint ili Adobe Photoshop), taj softver često ostavi svoj "digitalni potpis" u samoj strukturi datoteke ili u preostalim metapodacima.
+
+ Forenzički alati mogu analizirati strukturu JPEG datoteke (segmente i oznake) i prepoznati potpis manipulacije. Na primjer, ako je fotografija originalno snimljena s Canon kamerom, ali je kasnije spremljena u Photoshopu, forenzički alati će identificirati i Canon i Photoshop potpise. Ako su Canonovi podaci obrisani, ali se i dalje nalaze u metadata trailu, to je dokaz da su metapodaci naknadno uklonjeni.
+ Također se koristi analiza zaglavlja datoteke (Header Analysis) gdje se provjeravaju nekompatibilnosti između formata i podataka, što može biti znak nestručnog brisanja ili umetanja lažnih podataka.
+
+6. Zaključak
+
+Digitalna fotografija neizostavno nosi odgovornost za vjerodostojnost i integritet. Kao što je pokazano, metapodaci su kritičan, ali ranjiv, element tog integriteta. Dok s jedne strane predstavljaju izniman alat za organizaciju, autorska prava i forenziku, s druge strane su laka meta za manipulaciju s ciljem stvaranja lažnog konteksta ili narušavanja autentičnosti.
+
+Zaštita digitalnih fotografija od manipulacije metapodacima je stalna, dinamična borba između tehnologija zaštite i vještina manipulatora. Nepostoji jedno, univerzalno rješenje. Najefikasniji pristup je kombinacija robusnih kriptografskih mehanizama poput digitalnog potpisivanja (koji osiguravaju provjerljivost) i proceduralnih mjera (poput striktnog Chain of Custody i primjene industrijskih standarda).
+
+Budući razvoj ide u smjeru sve veće transparentnosti, pri čemu standardi poput C2PA i primjena blockchain tehnologije obećavaju da će povijest nastanka i obrade digitalne fotografije postati trajno i javno provjerljiva. Ipak, ključni element ostaje edukacija krajnjeg korisnika i forenzičara o važnosti i ranjivosti metapodataka. U digitalnom dobu, razumijevanje digitalnog otiska slike temelj je za kritičko promišljanje i očuvanje istine.

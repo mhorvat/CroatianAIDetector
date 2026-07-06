@@ -1,0 +1,91 @@
+1. Uvod
+1.1. Kontekst i značaj teme
+Tiskarska tehnologija, kao dinamična grana industrije, neprestano teži optimizaciji procesa, poboljšanju kvalitete proizvoda te razvoju novih, inovativnih primjena. U tom kontekstu, analitičke metode igraju ključnu ulogu u kontroli sirovina, praćenju procesnih parametara te verifikaciji konačnih proizvoda. Bliska infracrvena (NIR) spektroskopija, sa svojom brzinom, neinvazivnošću i minimalnim zahtjevima za pripremom uzorka, predstavlja snažan alat koji je našao svoje mjesto u različitim fazama tiskarskog lanca.
+
+Cilj ovog seminarskog rada je detaljno analizirati primjenu bliske infracrvene spektroskopije (NIR) u kontekstu tiskarske tehnologije. Poseban fokus stavit će se na napredne koncepte i tehnike koje su proizašle iz njene implementacije, uključujući specifične primjene kao što su sustavi temeljeni na INFRAREDESIGN konceptu, problematika VZ separacije, detekcija hidden image struktura, te korištenje ZRGB kamere u rješavanju fenomena blizanaca boja.
+
+1.2. Osnovni principi bliske infracrvene spektroskopije
+Bliska infracrvena spektroskopija obuhvaća područje elektromagnetskog spektra između vidljivog i srednjeg infracrvenog područja, tipično od 780 nm do 2500 nm. U ovom području primarno dolazi do pobuđivanja pretonova i kombinacijskih tonova molekularnih vibracija, uglavnom povezanih s vezama koje sadrže vodik, kao što su C-H, O-H i N-H veze. To čini NIR spektroskopiju izuzetno osjetljivom na organske materijale, koji su temeljni sastojci tiskarskih boja, papira, folija i premaza.
+
+Osnovni mehanizam uključuje ozračivanje uzorka bliskom infracrvenom svjetlošću i mjerenje apsorpcije ili refleksije svjetlosti. Dobiveni spektar predstavlja "kemijski otisak prsta" materijala, omogućujući kvantitativnu i kvalitativnu analizu sastava. Zbog složenosti NIR spektara, ključnu ulogu u interpretaciji i primjeni igraju napredne kemometrijske metode.
+
+2. Implementacija i napredni koncepti NIR spektroskopije u tisku
+2.1. INFRAREDESIGN i funkcionalni materijali
+Koncept INFRAREDESIGN predstavlja sveobuhvatni pristup dizajniranju tiskarskih materijala – tiskarskih boja, tonera, premaza i supstrata – s namjerom da njihova optička svojstva budu optimalno prilagođena za analizu i verifikaciju u NIR području. Cilj nije samo kemijska stabilnost i tiskarska izvedivost, već i jedinstveni spektroskopski potpis u bliskom infracrvenom području.
+
+Ovo je osobito važno u kontekstu sigurnosnog tiska i funkcionalnog tiska. Dizajniranje tintnih sustava koji izgledaju identično u vidljivom spektru, ali posjeduju drastično različite apsorpcijske karakteristike u NIR području, omogućuje stvaranje nevidljivih, strojno čitljivih slojeva informacija. Ovaj pristup je ključan za:
+
+Autentifikaciju: Brza i pouzdana provjera originalnosti proizvoda (npr. pakiranja, etiketa, dokumenata).
+
+Praćenje lanca opskrbe: Umetanje jedinstvenih NIR kodova koji se ne mogu vizualno percipirati.
+
+Pametno pakiranje: Dizajniranje materijala koji signaliziraju promjene stanja (npr. promjena apsorpcije uslijed promjene vlažnosti ili temperature) detektabilne NIR skenerima.
+
+2.2. VZ separacija: Razlučivanje tiskarskih slojeva
+VZ separacija (Vertikalna Z-osna Separacija) odnosi se na sposobnost razlučivanja i analize individualnih tiskarskih slojeva na supstratu, čak i kada su oni složeni jedan na drugi. U konvencionalnom tisku, kontrola debljine i kemijskog sastava svakog sloja (npr. temeljni premaz, boja, zaštitni lak) je izazovna.
+
+NIR spektroskopija, u kombinaciji s naprednim optičkim i kemometrijskim tehnikama, omogućuje "virtuano presijecanje" tiskarske strukture. To se postiže mjerenjem spektara pod različitim kutovima refleksije i/ili primjenom sofisticiranih algoritama koji dekonvoluiraju doprinos svakog sloja ukupnom mjerenom spektru. Konkretno, razlika u prodiranju NIR svjetlosti kroz površinske slojeve u usporedbi s dubljim slojevima može se iskoristiti za kvantificiranje debljine i sastava:
+
+Kontrola kvalitete: Verifikacija da je svaki sloj primijenjen u ispravnoj debljini i sastavu kako je specificirano.
+
+Analiza grešaka: Identifikacija koji sloj uzrokuje defekt u prianjanju, sušenju ili optičkom izgledu.
+
+2.3. Hidden image: Skrivena vizualna informacija
+Koncept hidden image (skrivena slika) odnosi se na ugrađivanje grafičke informacije koja je nevidljiva ili teško uočljiva ljudskom oku u vidljivom spektru, ali postaje jasno vidljiva i čitljiva kada se promatra pod bliskim infracrvenim osvjetljenjem ili uz analizu NIR spektroskopijom. Ovo je jedna od najvažnijih sigurnosnih primjena NIR-a u tiskarskoj tehnologiji.
+
+Postoje dva glavna mehanizma za stvaranje skrivenih slika:
+
+Spektralno podudaranje: Tisak se izvodi s dvije ili više tiskarskih boja koje su perceptivno identične (ili vrlo slične) u vidljivom području (npr. dvije crne boje), ali imaju značajno različite apsorpcijske karakteristike u NIR području. Kada se osvijetle NIR svjetlošću, područja tiskana jednom bojom (koja apsorbira NIR) i druga područja tiskana drugom bojom (koja reflektira NIR) stvaraju visoki kontrast, otkrivajući skrivenu sliku.
+
+Tisak s NIR aktivnim pigmentima: Korištenje prozirnih tiskarskih boja koje sadrže pigmente ili boje s jakom apsorpcijom isključivo u NIR području.
+
+Ova tehnika se masovno koristi u tisku vrijednosnih papira, putovnica, ID kartica, te u brendiranju luksuznih proizvoda radi zaštite od krivotvorenja.
+
+3. Instrumentacija i izazovi
+3.1. ZRGB kamera i kemometrija
+Tradicionalna NIR spektroskopija obično koristi točkasto mjerenje (spektrometar) ili linijsko skeniranje (hiperspektralna kamera). Međutim, za brzu i cjelovitu inspekciju tiskarskih proizvoda, razvijena je ZRGB kamera (Zona-RGB kamera), napredni multispektralni ili hiperspektralni sustav prilagođen tiskarskim zahtjevima.
+
+Naziv "ZRGB" aludira na mjerenje ne samo u uobičajenim vidljivim R, G, B kanalima, već i u specificiranim "Z-zonama" unutar bliskog infracrvenog spektra. Ova kamera omogućuje snimanje vizualnih podataka (slika) u nekoliko uskih, posebno odabranih NIR pojaseva, koji su najrelevantniji za razlikovanje materijala koji su optički slični u vidljivom području.
+
+Integracija ZRGB kamere s kemometrijskim softverom ključna je. Kamometarski modeli (npr. Partial Least Squares Regression - PLS, ili Principal Component Analysis - PCA) treniraju se na referentnim tiskarskim uzorcima kako bi se iz složenih multispektralnih podataka izlučili ključni parametri, kao što su:
+
+Koncentracija specifičnog pigmenta.
+
+Debljina sloja (korištenjem VZ separacije).
+
+Prisutnost sigurnosnog markera (hidden image).
+
+Brzina obrade i donošenja odluke (prolazi/ne prolazi) ZRGB kamere čini je idealnom za in-line kontrolu kvalitete u visokobrzinskom tisku.
+
+3.2. Fenomen "blizanaca boja"
+Jedan od najsloženijih izazova u kontroli tiska, koji NIR spektroskopija učinkovito rješava, je fenomen blizanaca boja (ponekad nazvan metamerizam tiskarskih boja). Blizanci boja su dva ili više tiskarska uzorka koji vizualno izgledaju identično pod jednim izvorom svjetlosti (npr. D65 - dnevno svjetlo), ali postaju vidljivo različiti pod drugim izvorom svjetlosti (npr. F11 - fluorescentno svjetlo).
+
+Iako je metamerizam primarno problem u vidljivom području, pojava se često javlja kada se koriste različiti pigmentni sustavi za postizanje iste nijanse boje.
+
+U kontekstu NIR-a, problem blizanaca boja se proširuje. Dva uzorka koja su vizualno identična (dobar metamerizam u vidljivom području) gotovo će sigurno imati drastično različite apsorpcijske spektre u bliskom infracrvenom području jer su sastavljeni od različitih kemikalija (pigmenata/veziva).
+
+NIR spektroskopija se koristi za:
+
+Formulacijsku kontrolu: Brza i objektivna verifikacija da se za proizvodnju boje koristi točno specificirana (i skuplja, kvalitetnija) formulacija, a ne jeftinija "blizanac" supstitucija.
+
+Konzistentnost serije: Osiguravanje da se od serije do serije koristi isti pigmentni sustav kako bi se izbjegao rizik metamerizma.
+
+Optimizacija bojanja: Odabir optimalnih formulacija s minimalnim razlikama u cijelom spektru (vidljivo i NIR) kako bi se osigurala robusnost boje.
+
+3.3. Izazovi i budućnost NIR-a u tisku
+Unatoč snažnim prednostima, primjena NIR spektroskopije u tiskarskoj tehnologiji suočava se s nekoliko izazova:
+
+Kemometrijska složenost: Razvoj robusnih kalibracijskih modela za tiskarske sustave koji sadrže složene smjese pigmenata, veziva i aditiva zahtijeva veliko stručno znanje i opsežnu bazu podataka.
+
+Temperaturna ovisnost: Spektri se mogu neznatno mijenjati s promjenama temperature, što zahtijeva kontrolirane uvjete mjerenja ili kompenzacijske algoritme.
+
+Standardizacija: Nedostatak globalno prihvaćenih standarda za NIR karakterizaciju tiskarskih boja i materijala otežava interoperabilnost sustava.
+
+Budućnost leži u minijaturizaciji i ugradnji NIR senzora izravno u tiskarske strojeve (in-line spektroskopija) za trenutnu povratnu informaciju i automatsku korekciju procesa. Očekuje se i daljnji razvoj strojnog učenja (Machine Learning) za automatsko prepoznavanje kompleksnih spektralnih uzoraka, dodatno automatizirajući detekciju hidden image i blizanaca boja.
+
+4. Zaključak
+Bliska infracrvena spektroskopija (NIR) transformirala je analitičke mogućnosti unutar tiskarske tehnologije. Njena sposobnost da neinvazivno i brzo pruži detaljan kemijski uvid u tiskarske materijale i slojeve etablirala ju je kao nezamjenjiv alat u kontroli kvalitete, optimizaciji procesa i razvoju sigurnosnih rješenja.
+
+Ključni doprinosi NIR-a obuhvaćaju implementaciju strategija poput INFRAREDESIGN-a za stvaranje funkcionalnih materijala s ugrađenim spektralnim potpisima. Tehničke inovacije poput VZ separacije omogućuju do sada neviđenu kontrolu debljine i sastava pojedinačnih slojeva, dok se kroz primjenu hidden image principa i korištenjem napredne ZRGB kamere osigurava visoka razina zaštite od krivotvorenja. Nadalje, NIR spektroskopija nudi objektivno rješenje za detekciju problematičnog fenomena blizanaca boja, osiguravajući konzistentnost i autentičnost tiskarskih formulacija.
+
+Integracijom kemometrije, optike i naprednih instrumentalnih platformi, NIR spektroskopija prelazi granice tradicionalne laboratorijske analize i postaje sastavni dio inteligentnih tiskarskih procesa. Nastavak razvoja u ovom području obećava još veću automatizaciju, preciznost i, konačno, višu dodanu vrijednost tiskarskom proizvodu.

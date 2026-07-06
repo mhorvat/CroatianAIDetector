@@ -1,0 +1,85 @@
+Uvod
+
+Ovaj seminarski rad bavi se analizom i evaluacijom primjene sustava za upravljanje sadržajem (CMS) Drupal u kontekstu izgradnje složenih web sustava. U digitalnom dobu, web sustavi više nisu statične stranice, već dinamične aplikacije koje moraju zadovoljiti visoke zahtjeve fleksibilnosti, skalabilnosti, sigurnosti i performansi.
+
+Kao jedan od vodećih open source CMS-ova, Drupal se ističe svojom arhitekturom koja ga pozicionira ne samo kao platformu za blogove, već i kao robusni framework za razvoj kompleksnih sustava, uključujući e-trgovinu, korporativne portale, vladine stranice i intranet rješenja. Cilj rada je istražiti ključne tehničke karakteristike Drupal CMS-a koje omogućuju njegovu učinkovitu primjenu u projektima visokih zahtjeva, te prikazati kako njegova modularna priroda doprinosi rješavanju specifičnih izazova u razvoju.
+
+Ključne riječi: Drupal, CMS, web sustav, fleksibilnost, skalabilnost, sigurnost, open source, kompleksni sustavi.
+
+---
+
+Razumijevanje Drupal Arhitekture i filozofije otvorenog koda
+
+Drupal kao Content Management Framework
+
+Drupal se često naziva Content Management Frameworkom (CMF) zbog svoje sposobnosti da nadilazi jednostavne CMS funkcije. Njegova jezgra (core) pruža temeljni skup API-ja i servisa koji programerima omogućuju izgradnju gotovo bilo kakve aplikacije.
+
+ Modularnost i Hook Sustav: Ključna snaga je modularni dizajn. Gotovo svaka funkcionalnost implementirana je kao modul. Pomoću hook sustava, moduli mogu komunicirati i proširivati funkcionalnost jezgre ili drugih modula bez izmjene izvornog koda, što drastično olakšava održavanje i nadogradnju.
+ Objektno Orijentirano Programiranje (OOP) i Symfony: Od verzije Drupal 8, jezgra je u potpunosti refaktorirana na temelju principa OOP-a, koristeći komponente popularnog Symfony PHP frameworka. Ova promjena donijela je modernu arhitekturu, bolju strukturiranost koda i lakšu integraciju s vanjskim servisima.
+ Konfiguracija u Bazi Podataka i Kodu: Drupal omogućuje izvoz cijele konfiguracije (pogledi, tipovi sadržaja, polja) iz baze podataka u datoteke (YAML), što je ključno za profesionalni razvojni proces (staging, produkcija) i korištenje sustava kontrole verzija (Git).
+
+Snaga Open Source Zajednice
+
+Kao open source projekt, Drupal se oslanja na globalnu zajednicu programera, dizajnera i korisnika.
+
+ Bogatstvo Modula i Tema: Zajednica je razvila desetine tisuća besplatnih modula (npr. Views, Field API, CiviCRM integracija) i tema. Ova dostupnost gotovih rješenja drastično smanjuje vrijeme i troškove razvoja.
+ Transparentnost i Održavanje: Otvoreni izvorni kod omogućuje neprestano revidiranje koda, što je ključno za brzu identifikaciju i popravak sigurnosnih propusta.
+
+---
+
+Fleksibilnost i Skalabilnost u Izgradnji Kompleksnih Sustava
+
+Fleksibilno Strukturiranje Sadržaja
+
+Za kompleksne sustave ključna je mogućnost definiranja složene strukture podataka. Drupal to postiže pomoću tri ključna elementa:
+
+1.  Tipovi Sadržaja (Content Types): Omogućuju definiranje prilagođenih tipova entiteta (npr. Proizvod, Događaj, Vijest).
+2.  Field API: Omogućuje dodavanje neograničenog broja prilagođenih polja (tekst, slike, relacije, datoteke) bilo kojem entitetu, čime se postiže visoka fleksibilnost u modeliranju podataka.
+3.  Taksonomija: Snažan sustav za kategorizaciju i označavanje sadržaja, ključan za navigaciju i pretraživanje na velikim web sustavima.
+
+Skaliranje Performansi i Arhitekture
+
+Skalabilnost je kritična za web sustave koji doživljavaju velik promet (e-trgovina, medijske kuće).
+
+ Keširanje (Caching): Drupal ima višeslojni sustav keširanja (interni, dinamički, keširanje renderiranja) koji značajno smanjuje opterećenje baze podataka i ubrzava učitavanje stranice. Podržava integraciju s vanjskim alatima kao što su Varnish, Redis i Memcached.
+ Distribuirani Sustavi: Drupal je dizajniran za rad u distribuiranom okruženju, podržavajući load balancing i odvojene baze podataka (master/slave replikacija), što omogućuje horizontalno skaliranje aplikacije.
+ Web Servisi (REST i JSON:API): Ugrađena podrška za standardizirane web servise omogućuje lako korištenje Drupala kao "backend" sustava (Content Repository) za odvojene (decoupled) frontend aplikacije (npr. React, Vue.js, Angular).
+
+---
+
+Sigurnost i Integracija s Vanjskim Servisima
+
+Naglasak na Sigurnosti
+
+Sigurnost je temeljni princip Drupal projekta i ključni zahtjev za korporativne i vladine web sustave.
+
+ Sigurnosni Tim: Drupal ima posvećeni tim za sigurnost koji proaktivno prati, objavljuje i ispravlja ranjivosti. Proces je brz i transparentan, što je nužno za održavanje povjerenja korisnika.
+ Ugrađena Zaštita: Jezgra uključuje ugrađenu zaštitu protiv najčešćih web prijetnji, uključujući XSS (Cross-Site Scripting), CSRF (Cross-Site Request Forgery) i SQL injekcije.
+ Sustav Dopuštenja (Permissions): Detaljan sustav uloga i dozvola omogućuje granularno kontroliranje tko može vidjeti, uređivati ili kreirati sadržaj, što je esencijalno za kompleksne sustave s mnogo korisnika i administratora.
+
+Integracija i Ekosustav
+
+Kao robustan CMF, Drupal se rijetko koristi izolirano. Njegova snaga leži u sposobnosti da se integrira s gotovo svim vanjskim sustavima.
+
+ Standardizirani API-ji: Laka integracija s vanjskim CRM (Salesforce, Dynamics), ERP (SAP), sustavima za plaćanje, sustavima za analitiku i drugim uslugama.
+ Jedinstvena Prijava (SSO): Podrška za industrijske standarde poput OAuth, SAML i LDAP za centralizirano upravljanje korisnicima i autentifikaciju.
+
+---
+
+Praktična primjena i primjeri iz prakse
+
+Ovo poglavlje bi u punoj verziji seminarskog rada analiziralo konkretne studije slučaja, demonstrirajući primjenu ključnih koncepata:
+
+ E-Trgovina s Drupal Commerceom: Kako se fleksibilnost Field API-ja koristi za modeliranje složenih proizvoda i kako skalabilnost podržava transakcijski promet.
+ Vladine i Edukativne Stranice: Analiza kako sigurnost i detaljna struktura dopuštenja omogućuju izgradnju portala s različitim razinama pristupa (npr. Sveučilišni portal s ulogama za studente, profesore, administratore).
+ Medijske Kuće: Korištenje Drupala kao izvora za više platformi (mobilne aplikacije, web) putem njegovih API-ja, naglašavajući skalabilnost za velik broj pregleda.
+
+---
+
+Zaključak
+
+Drupal CMS dokazao se kao izuzetno potentan alat u izgradnji zahtjevnih web sustava. Njegova temeljna arhitektura, razvijena kao Content Management Framework (CMF), pruža neusporedivu fleksibilnost u modeliranju podataka i funkcionalnosti, što je ključno za rješavanje složenih poslovnih zahtjeva.
+
+Kao open source platforma, podržana snažnom zajednicom, osigurava neprestane inovacije, transparentnost i bogat ekosustav gotovih rješenja. Elementi poput robusnog sustava keširanja i podrška za distribuirane arhitekture osiguravaju potrebnu skalabilnost za projekte s visokim prometom. Konačno, dosljedan naglasak na sigurnost pozicionira Drupal kao pouzdan izbor za kritične i kompleksne sustave, uključujući vladine, korporativne i financijske portale diljem svijeta.
+
+Iako zahtijeva višu ulaznu barijeru i veće tehničko znanje u usporedbi s jednostavnijim CMS-ovima, sposobnost Drupala da se prilagodi, proširi i integrira čini ga optimalnim rješenjem za tvrtke i organizacije koje zahtijevaju više od obične web stranice – zahtijevaju snažnu digitalnu aplikacijsku platformu.
