@@ -1,0 +1,15 @@
+('u', 'stvarnom', 'vremenu'),20,5,4.0
+('cilj', 'ovog', 'seminarskog'),15,0,inf
+('ovog', 'seminarskog', 'rada'),15,0,inf
+('ključna', 'je', 'za'),15,1,15.0
+('s', 'naglaskom', 'na'),15,1,15.0
+('što', 'je', 'ključno'),15,0,inf
+('je', 'ključno', 'za'),15,0,inf
+('ključno', 'je', 'za'),13,0,inf
+('seminarskog', 'rada', 'je'),12,0,inf
+('u', 'usporedbi', 's'),12,4,3.0
+('u', 'tom', 'kontekstu'),11,0,inf
+('ima', 'za', 'cilj'),10,2,5.0
+('može', 'dovesti', 'do'),10,2,5.0
+('ovaj', 'seminarski', 'rad'),10,0,inf
+('rada', 'je', 'detaljno'),10,0,inf

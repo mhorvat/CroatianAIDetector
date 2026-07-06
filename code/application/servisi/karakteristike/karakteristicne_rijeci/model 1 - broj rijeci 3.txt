@@ -1,0 +1,4 @@
+('bez', 'potrebe', 'za'),20,0,inf
+('jedan', 'od', 'ključnih'),15,2,7.5
+('može', 'dovesti', 'do'),14,2,7.0
+('u', 'kombinaciji', 's'),14,3,4.666666666666667
