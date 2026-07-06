@@ -1,0 +1,94 @@
+1. Uvod
+
+Pitanje energetske neovisnosti i pouzdanosti opskrbe električnom energijom u suvremenom je društvu postalo imperativ. Mobilni elektroagregati, kao autonomni izvori električne energije, igraju ključnu ulogu u situacijama gdje je fiksna mreža nedostupna, nepouzdana ili uništena uslijed prirodnih katastrofa. Tradicionalno su ovi sustavi bili promatrani kao robusni, ali tehnološki jednostavni strojevi s unutarnjim izgaranjem upareni s generatorom. Međutim, proces koji nazivamo modernizacija stubokom mijenja njihovu prirodu.
+
+Današnja modernizacija mobilnih elektroagregata ne podrazumijeva samo poboljšanje mehaničke učinkovitosti motora, već sveobuhvatnu integraciju napredne elektronike, digitalnih sustava upravljanja i algoritama za predviđanje kvarova. Ključni čimbenici u ovom razvoju su napredni senzor, precizna obrada informacija te primjena matematičkih modela kao što je Bayesova metoda. Cilj ovog rada je istražiti kako ovi elementi transformiraju klasični elektroagregat u inteligentni energetski sustav sposoban za samostalnu dijagnostiku i optimizaciju rada u realnom vremenu.
+
+
+
+2. Arhitektura suvremenog mobilnog elektroagregata
+
+Da bismo razumjeli proces modernizacije, moramo prvo definirati komponente suvremenog sustava. Klasični elektroagregat sastoji se od pogonskog stroja (obično dizelski ili benzinski motor), sinkronog ili asinkronog generatora, sustava za hlađenje i ispušnog sustava. Modernizirani sustavi, međutim, uvode dodatni sloj – digitalni upravljački sloj.
+
+2.1. Pogonska jedinica i njezina evolucija
+
+Moderni motori s unutarnjim izgaranjem u agregatima danas koriste Common Rail sustave ubrizgavanja goriva i elektroničke regulatore brzine vrtnje. Ovo omogućuje bržu reakciju na promjenu opterećenja, što je kritično za održavanje stabilne frekvencije (50 Hz ili 60 Hz). Modernizacija ovdje teži smanjenju emisija štetnih plinova (u skladu s Tier 4 ili Stage V standardima) i povećanju specifične snage po jedinici mase.
+
+2.2. Hibridizacija i pohrana energije
+
+Jedan od najznačajnijih trendova modernizacije je uvođenje baterijskih sustava u sklopu elektroagregata. Takvi hibridni sustavi omogućuju rad motora u optimalnom režimu rada, dok se vršna opterećenja pokrivaju iz baterija. Time se drastično smanjuje potrošnja goriva i produljuje servisni interval stroja.
+
+
+
+3. Uloga senzora u prikupljanju podataka
+
+Srce svake modernizacije je podatak, a primarni izvor podataka je senzor. Bez precizne detekcije fizikalnih veličina, nemoguće je provesti bilo kakvu naprednu optimizaciju.
+
+3.1. Vrste senzora u modernim agregatima
+
+Suvremeni elektroagregat opremljen je širokim spektrom senzora koji prate:
+
+ Termodinamičke parametre: temperatura rashladne tekućine, ulja i ispušnih plinova.
+ Mehaničke parametre: broj okretaja, vibracije ležajeva i tlak ulja.
+ Električne parametre: napon, struja, faktor snage (cos φ) i harmonijska izobličenja (THD).
+ Okolišne parametre: vlažnost zraka i nadmorska visina, koji utječu na gustoću zraka i učinkovitost izgaranja.
+
+3.2. Pametni senzori i rubno računalstvo (Edge Computing)
+
+Modernizacija donosi prelazak s analognih na pametne digitalne senzore koji ne samo da mjere, već i pretprocesiraju podatke. Ovi senzori mogu filtrirati šum i slati digitalno kodirane informacije putem sabirnica kao što su CAN bus ili Modbus, čime se smanjuje osjetljivost sustava na elektromagnetske smetnje koje generira sam alternator.
+
+
+
+4. Digitalna obrada informacija i sustavi upravljanja
+
+Kada senzori prikupe podatke, na scenu stupa obrada informacija. Upravljačka jedinica (ECU ili PLC) modernog agregata danas ima procesorsku snagu koja nadmašuje računala od prije desetak godina.
+
+4.1. Algoritmi upravljanja u realnom vremenu
+
+Obrada informacija omogućuje implementaciju kompleksnih algoritama kao što su PID regulatori s predviđanjem (Model Predictive Control  MPC). Ovi algoritmi predviđaju pad napona prilikom uključenja velikog trošila (npr. elektromotora) i preventivno povećavaju dotok goriva, čime se minimiziraju oscilacije u mreži.
+
+4.2. Povezivost i Internet stvari (IoT)
+
+Modernizirani mobilni elektroagregati integrirani su u oblak (Cloud). Putem GSM ili satelitskih veza, operateri mogu nadzirati cijelu flotu agregata s udaljene lokacije. Obrada informacija u oblaku omogućuje generiranje izvještaja o učinkovitosti, praćenje preostale količine goriva i planiranje logistike dopreme bez fizičkog prisustva pored stroja.
+
+
+
+5. Primjena Bayesove metode u dijagnostici i održavanju
+
+Jedan od najsofisticiranijih aspekata modernizacije je prijelaz s reaktivnog na prediktivno održavanje. Tu ključnu ulogu igra Bayesova metoda (Bayesova statistika i Bayesove mreže).
+
+5.1. Osnove Bayesovog pristupa
+
+U kontekstu elektroagregata, Bayesova metoda koristi se za procjenu vjerojatnosti kvara na temelju dostupnih (često nepotpunih ili šumnih) senzorskih podataka. Za razliku od klasične statistike, ona omogućuje ažuriranje vjerojatnosti hipoteze (npr. "ležaj će otkazati") kako pristižu novi dokazi (npr. "povećanje amplitude vibracija").
+
+Gdje je:
+
+   vjerojatnost kvara uz dane simptome (posteriori).
+   vjerojatnost pojave simptoma ako kvar postoji.
+   prethodna vjerojatnost kvara (priori).
+
+5.2. Bayesove mreže za dijagnostiku kvarova
+
+Modernizirani sustavi koriste Bayesove mreže za modeliranje uzročnoposljedičnih veza između različitih komponenti agregata. Ako senzor tlaka ulja očita pad, a istovremeno se poveća temperatura motora, sustav pomoću Bayesove logike može s visokom sigurnošću zaključiti radi li se o stvarnom kvaru pumpe ili o pogrešci samog senzora.
+
+
+
+6. Izazovi i budući smjerovi modernizacije
+
+Unatoč brojnim prednostima, modernizacija donosi i nove izazove. Povećana kompleksnost sustava znači da je za popravak i održavanje potrebno visokokvalificirano osoblje. Također, s povećanom povezivošću javlja se i rizik od kibernetičkih napada na energetsku infrastrukturu.
+
+6.1. Kibernetička sigurnost
+
+Budući da se obrada informacija često odvija putem javnih mreža, modernizirani elektroagregati moraju implementirati napredne enkripcijske protokole. Sigurnost podataka postaje jednako važna kao i kvaliteta ulja u motoru.
+
+6.2. Umjetna inteligencija i strojno učenje
+
+Osim Bayesove metode, u budućnosti se očekuje šira primjena dubokog učenja (Deep Learning) za analizu zvuka rada motora. Mikrofon kao senzor mogao bi prepoznati i najmanje promjene u akustičnom potpisu stroja koje ukazuju na zamor materijala, što bi bio vrhunac procesa modernizacije.
+
+
+
+7. Zaključak
+
+Modernizacija mobilnih elektroagregata proces je koji je transformirao ove uređaje iz pasivnih strojeva u aktivne, inteligentne sudionike energetske mreže. Kroz ovaj rad smo vidjeli da ključ uspjeha leži u sinergiji različitih disciplina. Svaki ugrađeni senzor pruža prozor u fizikalno stanje stroja, dok napredna obrada informacija te podatke pretvara u korisne uvide.
+
+Primjena matematičkih modela, prvenstveno kroz Bayesovu metodu, omogućila je sustavima da se "uče" iz iskustva i predviđaju buduće događaje, čime se pouzdanost agregata podiže na razinu koja je ranije bila nezamisliva. Elektroagregat budućnosti više nije samo motor s namotom; to je digitalizirana energetska jedinica koja optimizira vlastiti rad, čuva okoliš i minimizira troškove kroz pametno upravljanje resursima. Zaključno, ulaganje u modernizaciju nije samo tehnološki trend, već nužnost za osiguranje stabilnosti u sve nepredvidljivijem energetskom okruženju.

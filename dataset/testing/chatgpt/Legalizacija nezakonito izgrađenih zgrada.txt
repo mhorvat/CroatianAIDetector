@@ -1,0 +1,81 @@
+1. Uvod
+
+Nezakonita gradnja jedan je od dugotrajnih problema prostornog uređenja u Republici Hrvatskoj. Tijekom više desetljeća znatan broj građevina izgrađen je bez potrebnih akata za građenje ili protivno izdanim dozvolama, što je rezultiralo poremećajem planskog razvoja prostora, smanjenjem pravne sigurnosti vlasnika nekretnina i otežanim radom javne uprave. Kako bi se sustavno riješio ovaj problem, uveden je poseban zakonodavni okvir koji omogućuje legalizaciju određenog broja nezakonito izgrađenih zgrada pod jasno definiranim uvjetima (1).
+
+Cilj ovog seminara je prikazati pravni, tehnički i administrativni aspekt legalizacije nezakonito izgrađenih zgrada u Hrvatskoj. Poseban naglasak stavljen je na Zakon o postupanju s nezakonito izgrađenim zgradama, ulogu geodetskog snimka, značaj DOF5/2011, odnos prema građevinskoj dozvoli, obvezu plaćanja doprinosa te pravnu narav rješenja o izvedenom stanju.
+
+2. Zakonodavni okvir legalizacije
+2.1. Pojam nezakonito izgrađene zgrade
+
+Prema važećem zakonodavstvu, nezakonito izgrađena zgrada je građevina ili njezin dio izgrađen bez odgovarajućeg akta za građenje ili protivno tom aktu, pod uvjetom da je bila vidljiva na službenoj digitalnoj ortofoto karti Republike Hrvatske izrađenoj 2011. godine (1). Zakonom su precizno određeni minimalni stupnjevi dovršenosti građevine kako bi ista mogla biti predmet legalizacije.
+
+2.2. Zakon o postupanju s nezakonito izgrađenim zgradama
+
+Zakon o postupanju s nezakonito izgrađenim zgradama predstavlja temeljni propis kojim se uređuje postupak legalizacije. Njegov osnovni cilj bio je omogućiti vlasnicima nezakonito izgrađenih objekata da u razumnom roku i pod određenim uvjetima riješe pravni status svoje nekretnine, uz istodobnu zaštitu javnog interesa i prostornog uređenja (1).
+
+Zakon ne legalizira novu nezakonitu gradnju, već isključivo zgrade izgrađene do točno određenog datuma, čime se nastoji spriječiti daljnje širenje bespravne gradnje (2).
+
+3. Uloga DOF5/2011 u postupku legalizacije
+3.1. Značenje DOF5/2011
+
+DOF5/2011 je digitalna ortofoto karta Republike Hrvatske u mjerilu 1:5000, izrađena na temelju aerofotogrametrijskog snimanja iz 2011. godine. Ona ima ključnu dokaznu vrijednost u postupku legalizacije jer se njome utvrđuje je li zgrada postojala u trenutku propisanom zakonom (3).
+
+3.2. Vidljivost objekta kao uvjet legalizacije
+
+Ako građevina nije vidljiva na DOF5/2011, u pravilu ne može biti legalizirana. U iznimnim slučajevima moguće je koristiti i druge službene kartografske podloge, ali je teret dokazivanja na vlasniku objekta (3). U praksi je upravo dokazivanje vidljivosti jedan od najčešćih razloga odbijanja zahtjeva.
+
+4. Geodetski snimak izvedenog stanja
+4.1. Pojam i svrha geodetskog snimka
+
+Geodetski snimak izvedenog stanja jedan je od najvažnijih dokumenata u postupku legalizacije. Izrađuje ga ovlašteni inženjer geodezije, a njegov je cilj precizno prikazati položaj, tlocrt, dimenzije i odnos nezakonite građevine prema katastarskim česticama (4).
+
+4.2. Sadržaj geodetskog snimka
+
+Geodetski snimak mora sadržavati:
+
+grafički prikaz objekta,
+
+prikaz preklopa s DOF5/2011,
+
+tehničko izvješće,
+
+podatke o katastarskoj čestici.
+
+Bez pravilno izrađenog i ovjerenog geodetskog snimka postupak legalizacije ne može se uspješno provesti (4).
+
+5. Odnos legalizacije i građevinske dozvole
+5.1. Razlika između legalizacije i dozvole
+
+Važno je naglasiti da legalizacija nezakonito izgrađene zgrade nije isto što i ishođenje građevinske dozvole. Građevinska dozvola je akt kojim se unaprijed odobrava građenje u skladu s prostornim planovima, dok se legalizacijom naknadno priznaje već izgrađeni objekt (5).
+
+5.2. Pravne posljedice
+
+Objekt koji je legaliziran rješenjem o izvedenom stanju može se koristiti, upisati u katastar i zemljišne knjige, ali to ne znači da u potpunosti zadovoljava sve tehničke standarde suvremene gradnje (5).
+
+6. Doprinosi u postupku legalizacije
+6.1. Vrste doprinosa
+
+U postupku legalizacije vlasnici su obvezni platiti određene doprinose, ponajprije komunalni i vodni doprinos. Visina doprinosa ovisi o veličini objekta, njegovoj namjeni i lokaciji (6).
+
+6.2. Financijski aspekt legalizacije
+
+Iako su doprinosi često znatan financijski teret, zakonodavac ih je uveo kako bi se osigurala određena razina pravednosti u odnosu na investitore koji su gradili u skladu s propisima (6).
+
+7. Rješenje o izvedenom stanju
+7.1. Pravna narav rješenja
+
+Rješenje o izvedenom stanju je upravni akt kojim se službeno potvrđuje da je nezakonito izgrađena zgrada legalizirana u postojećem stanju. Donosi ga nadležno upravno tijelo nakon provedenog postupka i podmirenja svih obveza (7).
+
+7.2. Učinci rješenja
+
+Donošenjem rješenja omogućuje se upis zgrade u katastar i zemljišne knjige te njezino pravno korištenje. Time se uklanja status nezakonitosti, ali se ne brišu eventualni tehnički nedostaci građevine (7).
+
+8. Problemi i izazovi u praksi
+
+Unatoč zakonskom okviru, u praksi se javljaju brojni problemi: nepravodobno podnošenje zahtjeva, nevidljivost objekta na DOF5/2011, visoki troškovi doprinosa te nerazumijevanje razlike između legalizacije i građevinske dozvole. Ovi izazovi često dovode do dugotrajnih postupaka i pravne nesigurnosti vlasnika (8).
+
+9. Zaključak
+
+Legalizacija nezakonito izgrađenih zgrada bila je nužan odgovor na dugogodišnji problem bespravne gradnje u Hrvatskoj. Zakon o postupanju s nezakonito izgrađenim zgradama, uz ključne instrumente poput geodetskog snimka, DOF5/2011 i rješenja o izvedenom stanju, omogućio je velikom broju građana da urede imovinsko-pravni status svojih nekretnina.
+
+Iako proces ima brojne nedostatke, on je značajno doprinio uređenju prostora i jačanju pravne sigurnosti. Budući razvoj zakonodavstva trebao bi se usmjeriti na prevenciju nove nezakonite gradnje i pojednostavljenje administrativnih postupaka.

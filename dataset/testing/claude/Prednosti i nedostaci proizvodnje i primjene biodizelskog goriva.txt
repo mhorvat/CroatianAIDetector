@@ -1,0 +1,266 @@
+1. UVOD
+
+Biodizelsko gorivo predstavlja jedan od najvažnijih oblika obnovljive energije 
+u suvremenom svijetu. Riječ je o alternativnom gorivu koje se proizvodi iz 
+bioloških materijala poput biljnih ulja, životinjskih masti i otpadnih ulja 
+(1). Razvoj biodizelske industrije potaknut je rastućom potrebom za smanjenjem 
+ovisnosti o fosilnim gorivima i redukcijom emisija stakleničkih plinova.
+
+Prema podatcima Ministarstva energije Sjedinjenih Američkih Država, godišnja 
+proizvodnja biodizela u SAD-u premašila je 18 milijardi galona u 2022. godini, 
+pri čemu je skoro sav prodani dizelski gorivo u SAD-u pomiješan s najmanje 1% 
+biodizela (2). Ovi podaci svjedoče o rastućem značaju biodizela u globalnom 
+energetskom sektoru.
+
+Biodizel se može koristiti u postojećim dizelskim motorima s minimalnim ili bez 
+ikakvih preinaka, što predstavlja značajnu prednost u odnosu na druge 
+alternativne izvore energije (3). Može se koristiti kao čisti biodizel (B100) 
+ili u smjesama s naftnim dizelom, pri čemu se najčešće koristi smjesa B20 koja 
+sadrži 20% biodizela i 80% naftnog dizela (3).
+
+Ovaj seminar istražuje kompleksnost proizvodnje i primjene biodizelskog 
+goriva, analizirajući temeljne prednosti i nedostatke ovog alternativnog 
+izvora energije. Cilj je pružiti sveobuhvatan pregled ključnih aspekata 
+biodizelske industrije, od procesa proizvodnje do utjecaja na okoliš i 
+ekonomsku održivost.
+
+
+2. PROIZVODNJA BIODIZELSKOG GORIVA
+
+2.1. Sirovine za proizvodnju biodizela
+
+Biodizel se može proizvoditi iz različitih sirovina koje se klasificiraju u 
+nekoliko generacija. Prve generacije biodizela proizvodile su se iz jestivih 
+biljnih ulja poput soje, uljane repice, suncokreta i palminog ulja (7). Ove 
+sirovine su bile popularne na početku razvoja biodizelske industrije zbog 
+njihove dostupnosti i relativno jednostavnog procesa proizvodnje (7).
+
+Međutim, korištenje jestivih ulja za proizvodnju goriva dovelo je do značajnih 
+problema, uključujući konkurenciju s proizvodnjom hrane, ekonomsku neravnotežu 
+i visoke cijene (6). Kao odgovor na ove izazove, razvila se proizvodnja druge 
+generacije biodizela iz nejestivih biljnih izvora.
+
+Nejestive biljke imaju brojne prednosti kao izvor za proizvodnju biodizela, 
+uključujući sposobnost rasta na onečišćenim i nepogodnim poljoprivrednim 
+površinama, stabilnost u širokom rasponu klimatskih uvjeta, manju alokaciju 
+zemlje, potencijalnu sanaciju degradiranih zemljišta, otpornost na bolesti i 
+štetočine, te mogućnost proizvodnje korisnih nusproizvoda (7). Primjeri takvih 
+biljaka uključuju jatrofu, senf i razne druge uljarice.
+
+Treća generacija biodizela obuhvaća korištenje algi i mikroalgi, koje imaju 
+visok sadržaj ulja i mogu se uzgajati na površinama nepogodnim za poljoprivredu 
+(6). Četvrta generacija, još uvijek u ranoj fazi razvoja, uključuje genetski 
+modificirane organizme koji bi mogli nadmašiti nedostatke prethodnih generacija 
+(7).
+
+Osim biljnih izvora, biodizel se može proizvoditi i iz otpadnih materijala 
+poput korištenog jestivog ulja i životinjskih masti, što dodatno smanjuje 
+troškove proizvodnje i doprinosi održivosti procesa (15).
+
+
+2.2. Proces transesterifikacije
+
+Transesterifikacija je najčešće korištena kemijska metoda za proizvodnju 
+biodizela (1). Ovaj proces uključuje reakciju triglicerida iz biljnih ulja ili 
+životinjskih masti s kratkolančanim alkoholima, najčešće metanolom ili 
+etanolom, u prisutnosti katalizatora (11, 13).
+
+Tijekom transesterifikacije, trigliceridi se postupno razgrađuju u digliceride, 
+monogliceride i konačno u glicerol, pri čemu se u svakom koraku stvara po 
+jedan mol estera (12, 15). Reakcija je reverzibilna, stoga je potreban višak 
+alkohola kako bi se reakcijska ravnoteža pomaknula u smjeru nastajanja 
+proizvoda (18).
+
+U procesu se najčešće koriste baze kao katalizatori, posebno natrijev 
+hidroksid (NaOH) ili kalijev hidroksid (KOH), jer omogućuju kraće vrijeme 
+reakcije i niže troškove katalizatora u usporedbi s kiselim katalizatorom 
+(13, 17). Reakcija se obično odvija na temperaturi od 50 do 70 stupnjeva 
+Celzijusa (17).
+
+Osim biodizela, proces transesterifikacije proizvodi i glicerol kao 
+nusproizvod, koji ima veliku vrijednost u kozmetičkoj industriji (15). Nakon 
+završetka reakcije, potrebna je separacija biodizela od glicerola, uklanjanje 
+viška metanola te dodatne faze pročišćavanja kako bi se dobio biodizel visoke 
+čistoće (11).
+
+Alternativni procesi uključuju uporabu superkritičnog metanola pri visokim 
+temperaturama i tlakovima, čime se eliminira potreba za katalizatorom i 
+omogućava korištenje sirovina s visokim sadržajem slobodnih masnih kiselina 
+(13). Također se istražuju enzimski katalizatori poput lipaza, iako su 
+trenutno skupi i daju niže prinose (13, 18).
+
+
+3. PREDNOSTI PROIZVODNJE I PRIMJENE BIODIZELSKOG GORIVA
+
+3.1. Ekološke prednosti
+
+Jedna od najvažnijih prednosti biodizela jest njegovo pozitivno djelovanje na 
+okoliš. Biodizel smanjuje emisije stakleničkih plinova u usporedbi s fosilnim 
+gorivima jer ugljični dioksid oslobođen izgaranjem biodizela kompenzira se 
+ugljičnim dioksidom koji biljke apsorbiraju tijekom fotosinteze (3). Analiza 
+životnog ciklusa koju je provela Argonne National Laboratory pokazala je da 
+korištenje čistog biodizela (B100) smanjuje emisije ugljičnog dioksida za 74% 
+u usporedbi s naftnim dizelom (5).
+
+Biodizel proizvodi manje toksičnih onečišćujućih tvari od naftnih proizvoda 
+(3). Motorima proizvedenim nakon 2010. godine, koji koriste tehnologiju 
+selektivne katalitičke redukcije, biodizel omogućava postizanje gotovo nulte 
+razine emisija dušikovih oksida (5).
+
+U slučaju prolijevanja, biodizel je znatno manje štetan za okoliš od naftnog 
+dizela. Biodizel je biorazgradiv i manje zapaljiv, s točkom paljenja višom od 
+130°C u usporedbi s približno 52°C za naftni dizel (5). Ovo čini biodizel 
+sigurnijim za rukovanje, skladištenje i transport.
+
+
+3.2. Ekonomske i energetske prednosti
+
+Biodizel je obnovljivi izvor energije koji se može proizvoditi prema potrebi 
+iz biljnih i životinjskih izvora (3). To omogućava zemljama smanjenje ovisnosti 
+o uvozu nafte i povećanje energetske sigurnosti. Proizvodnja biodizela u zemlji 
+može značajno utjecati na smanjenje uvoza naftnih derivata, što pozitivno 
+utječe na trgovinsku bilancu i smanjuje geopolitičke napetosti vezane uz 
+energetsku politiku (3).
+
+Biodizel poboljšava podmazivost goriva i povećava cetanski broj, što dovodi do 
+boljeg rada motora i produženja vijeka trajanja motora (5). Jedna od značajnih 
+prednosti je što biodizel ne sadrži sumpor, što je posebno važno s obzirom na 
+stroge propise o smanjenju sadržaja sumpora u gorivima (5).
+
+Biodizel se može koristiti u postojećim dizelskim motorima bez potrebe za 
+značajnijim preinakama (3, 10). Ova kompatibilnost s postojećom infrastrukturom 
+predstavlja značajnu ekonomsku prednost jer eliminira potrebu za skupim 
+ulaganjima u novu opremu.
+
+
+3.3. Društvene prednosti
+
+Razvoj biodizelske industrije stvara nova radna mjesta u poljoprivredi, 
+proizvodnji i distribuciji (2). Proizvodnja biodizela doprinosi ruralnom 
+razvoju jer omogućava poljoprivrednicima dodatne izvore prihoda kroz uzgoj 
+energetskih kultura.
+
+Biodizel se može proizvoditi iz otpadnih materijala poput korištenog jestivog 
+ulja, čime se smanjuje količina otpada i doprinosi načelima kružne ekonomije 
+(4). Ovo recikliranje otpadnih materijala dodatno smanjuje okolišno opterećenje 
+i troškove zbrinjavanja otpada.
+
+
+4. NEDOSTACI PROIZVODNJE I PRIMJENE BIODIZELSKOG GORIVA
+
+4.1. Ekonomski nedostaci
+
+Jedan od glavnih nedostataka biodizela je njegova viša cijena u usporedbi s 
+konvencionalnim gorivima. Troškovi proizvodnje biodizela su značajno viši, pri 
+čemu sirovina čini 60-80% ukupnih troškova proizvodnje (15). U studenom 2022. 
+godine, prosječna cijena galona biodizela iznosila je 5,58 USD, dok je 
+prosječna cijena naftnog dizela bila 3,74 USD (9).
+
+Proizvodnja biodizela može koštati do 4.000 USD po kilowattu proizvedene 
+energije, što je gotovo dvostruko više od troškova proizvodnje energije iz 
+ugljena (10). Ovi visoki troškovi predstavljaju značajnu prepreku široj 
+primjeni biodizela, posebno u zemljama u razvoju.
+
+Biodizel proizvodi približno 10% manje energije od naftnog dizela (4). Ova niža 
+energetska vrijednost znači da je potrebna veća količina biodizela za postizanje 
+istog učinka kao s naftnim dizelom, što dodatno povećava operativne troškove.
+
+
+4.2. Okolišni nedostaci
+
+Iako biodizel ima mnoge ekološke prednosti, njegova proizvodnja može dovesti 
+do negativnih posljedica za okoliš. Povećana proizvodnja biodizelskih kultura 
+dovela je do krčenja šuma u nekim regijama svijeta, posebno za plantaže 
+palminog ulja u jugoistočnoj Aziji (8). Takve aktivnosti rezultiraju gubitkom 
+bioraznolikosti i prirodnih staništa ugroženih vrsta.
+
+Krčenje šuma i treseta za uzgoj uljnih palmi uzrokuje brzo povećanje emisija 
+ugljičnog dioksida, pri čemu se procjenjuje da ove aktivnosti u jugoistočnoj 
+Aziji uzrokuju 8% globalnih emisija ugljika (8). Ovo dovodi u pitanje ukupnu 
+ekološku korist biodizela kada se uzme u obzir cijeli životni ciklus.
+
+Biodizel proizvodi približno 10% više emisija dušikovih oksida (NOx) od 
+naftnog dizela (3). Dušikovi oksidi su značajni onečišćivači zraka koji 
+doprinose stvaranju smoga i kiselih kiša. Ovo je jedna od ključnih tehničkih 
+prepreka koja zahtijeva dodatne mjere kontrole emisija.
+
+Intenzivna proizvodnja biodizelskih kultura poput soje može iscrpljivati vodne 
+resurse jer je soja vodointenzivna biljka (9). Proizvodnja biodizela isključivo 
+iz soje može ugroziti lokalne vodne resurse, što je posebno problematično u 
+regijama s nedostatkom vode.
+
+
+4.3. Tehnički nedostaci
+
+Biodizel može uzrokovati koroziju metalnih komponenti motora, posebno kod 
+biodizela proizvedenog iz određenih sirovina poput jatrofe i salvadore (8). 
+Istraživanja su pokazala da ovi tipovi biodizela uzrokuju veću koroziju 
+željeznih i neželjeznih metala u usporedbi s naftnim dizelom.
+
+Kvaliteta biodizela može varirati ovisno o sirovini koja se koristi za 
+proizvodnju (3). Različite sirovine sadrže različite količine biljnog ulja, što 
+rezultira varijabilnošću u sposobnosti proizvodnje energije. Ova nedosljednost 
+u kvaliteti može predstavljati problem za korisnike i zahtijeva stroge standarde 
+kontrole kvalitete.
+
+Proces proizvodnje biodizela je energetski intenzivan, što može umanjiti ukupne 
+ekološke prednosti (1). Proizvodnja zahtijeva značajne količine energije za 
+grijanje, miješanje i pročišćavanje, što se mora uzeti u obzir pri procjeni 
+ukupne održivosti biodizela.
+
+
+4.4. Socio-ekonomski nedostaci
+
+Korištenje jestivih ulja za proizvodnju biodizela dovelo je do rasprave o 
+konkurenciji između proizvodnje hrane i goriva (7). Povećanje potražnje za 
+sirovinama za proizvodnju biodizela može dovesti do povećanja cijena hrane, što 
+posebno pogađa najranjivije skupine stanovništva.
+
+Neke sirovine za proizvodnju biodizela, poput jatrofe, mogu sadržavati otrovne 
+i kancerogene tvari koje predstavljaju rizik za ljudsko zdravlje i zdravlje 
+životinja (8). U zapadnoj Australiji, jatrofa je klasificirana kao otrovna 
+korovska biljka, a dokumentirano je da njeno ulje sadrži kurkanolnu kiselinu 
+koja može uzrokovati kožni karcinom i alergijske reakcije kod poljoprivrednika 
+(8).
+
+
+5. ZAKLJUČAK
+
+Biodizelsko gorivo predstavlja složen fenomen s brojnim prednostima i 
+nedostacima koji zahtijevaju temeljitu analizu i pažljivo razmatranje. Kao 
+obnovljivi izvor energije, biodizel nudi značajne ekološke prednosti kroz 
+smanjenje emisija stakleničkih plinova, poboljšanje kvalitete zraka i manji 
+negativan utjecaj u slučaju izlijevanja u okoliš.
+
+S ekonomskog stajališta, biodizel doprinosi energetskoj neovisnosti i 
+sigurnosti, stvara nova radna mjesta i omogućava recikliranje otpadnih 
+materijala. Njegova kompatibilnost s postojećom infrastrukturom dodatno 
+olakšava implementaciju. Međutim, visoki troškovi proizvodnje, niža energetska 
+vrijednost i varijabilnost kvalitete predstavljaju značajne izazove.
+
+Okolišni nedostaci, poput krčenja šuma za uzgoj energetskih kultura, povećanih 
+emisija dušikovih oksida i iscrpljivanja vodnih resursa, dovode u pitanje 
+ukupnu održivost biodizela kada se razmatra cijeli životni ciklus. Tehnički 
+problemi vezani uz koroziju i procesnu složenost dodatno zahtijevaju pažnju i 
+inovacije.
+
+Budućnost biodizela leži u nastavku istraživanja i razvoja, s fokusom na 
+korištenje nejestivnih sirovina druge i treće generacije, optimizaciju 
+proizvodnih procesa i smanjenje okolišnog utjecaja. Razvoj genetski 
+modificiranih organizama četvrte generacije mogao bi nadmašiti trenutne 
+nedostatke, iako su potrebna dodatna istraživanja o njihovoj sigurnosti i 
+utjecaju na okoliš.
+
+Za postizanje održive energetske budućnosti, biodizel ne smije biti jedino 
+rješenje, već dio šireg portfelja obnovljivih izvora energije. Potrebna je 
+suradnja između akademske zajednice, industrije i političkih kreatora kako bi 
+se razvile učinkovite politike i poticajni programi koji će podržati odgovornu 
+proizvodnju i primjenu biodizela, vodeći računa o ekološkim, ekonomskim i 
+društvenim aspektima.
+
+Uravnotežavajući prednosti i nedostatke biodizelskog goriva te nastavljajući s 
+inovacijama i poboljšanjima, biodizel može igrati važnu ulogu u prijelazu prema 
+čistijoj i održivijoj energetskoj budućnosti. Ključno je osigurati da njegova 
+proizvodnja i primjena ne narušavaju prehrambenu sigurnost, ne štete okolišu i 
+ne ugrožavaju zdravlje ljudi, već doprinose cjelokupnom poboljšanju kvalitete 
+života i zaštite planeta.

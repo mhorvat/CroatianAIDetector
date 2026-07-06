@@ -1,0 +1,88 @@
+1. Uvod
+
+Problem bespravne gradnje u Republici Hrvatskoj predstavlja višedesetljetni izazov koji zadire u prostore urbanizma, prava, ekonomije i socijalne politike. Nezakonita gradnja, definirana kao građenje bez izvršne građevinske dozvole ili protivno njoj, rezultirala je degradacijom prostora, nedostatkom infrastrukture i pravnom nesigurnošću vlasnika nekretnina. Kako bi se saniralo postojeće stanje i uveli nekretninski resursi u legalne tokove, zakonodavac je donio poseban pravni okvir koji odstupa od redovnih procedura prostornog uređenja i gradnje.
+
+Središnji instrument ove reforme je Zakon o postupanju s nezakonito izgrađenim zgradama, koji je omogućio "ozakonjenje" objekata pod specifičnim uvjetima. Ključni cilj legalizacije nije samo formalno priznavanje objekata, već i njihovo evidentiranje u katastru i zemljišnim knjigama, čime se omogućuje daljnji promet nekretnina, etažiranje te energetska obnova. Ovaj rad će detaljno obraditi ulogu tehničke dokumentacije, poput geodetskog snimka i digitalnih ortofoto karata (DOF5/2011), te financijske obveze u vidu doprinosa koji prethode konačnom rješenju o izvedenom stanju.
+
+2. Povijesni i društveni kontekst bespravne gradnje
+
+Bespravna gradnja u Hrvatskoj doživjela je procvat u drugom dijelu 20. stoljeća, potaknuta intenzivnom urbanizacijom i nedostatkom adekvatne stambene politike. Mnogi su građani rješavali svoje stambeno pitanje gradeći na vlastitim poljoprivrednim ili građevinskim zemljištima bez potrebnih odobrenja, često zbog sporosti administracije ili neusklađenosti prostornih planova sa stvarnim potrebama stanovništva [2].
+
+Takva praksa dovela je do stvaranja čitavih naselja koja su infrastrukturno neopremljena, bez adekvatnih pristupnih cesta, sustava odvodnje ili javnih sadržaja. Država je kroz povijest nekoliko puta pokušala provesti procese legalizacije, no tek je zakonodavna inicijativa iz 2011. i 2012. godine donijela dovoljno fleksibilne i istovremeno stroge kriterije koji su potaknuli masovni odaziv građana [3].
+
+3. Zakon o postupanju s nezakonito izgrađenim zgradama
+
+Temeljni pravni akt koji regulira ovo područje je Zakon o postupanju s nezakonito izgrađenim zgradama (NN 86/12, 143/13, 65/17, 14/19). Ovaj zakon predstavlja lex specialis u odnosu na Zakon o gradnji, jer privremeno suspendira stroge zahtjeve redovne građevinske dozvole kako bi se omogućilo saniranje zatečenog stanja u prostoru [1].
+
+3.1. Područje primjene i uvjeti za ozakonjenje
+
+Zakon definira nezakonito izgrađenu zgradu kao zgradu koja je izgrađena bez akta kojim se odobrava građenje ili protivno tom aktu, a koja je vidljiva na digitalnom ortofotoplanu (DOF5/2011). Osnovni preduvjet za legalizaciju je da zgrada ne smije biti izgrađena na područjima od posebnog javnog interesa, kao što su planirani koridori prometnica, nacionalni parkovi ili neposredna obalna crta, osim pod strogo definiranim iznimkama [1].
+
+3.2. Značenje digitalne ortofoto karte (DOF5/2011)
+
+Jedan od najvažnijih tehničkih parametara legalizacije je DOF5/2011. To je digitalna ortofoto karta u mjerilu 1:5000, izrađena na temelju aerofotogrametrijskog snimanja teritorija Republike Hrvatske završenog 21. lipnja 2011. godine. Zgrada se može ozakoniti samo ako je u stupnju dovršenosti (barem s grubim konstruktivnim radovima) vidljiva na tom snimku [5]. Ovaj datum postavljen je kao stroga granica kako bi se spriječila daljnja bespravna gradnja pod krinkom legalizacije.
+
+4. Postupak legalizacije i tehnička dokumentacija
+
+Postupak započinje podnošenjem zahtjeva nadležnom upravnom tijelu za graditeljstvo i prostorno uređenje. Uz zahtjev je potrebno priložiti opsežnu tehničku dokumentaciju čiji sadržaj ovisi o kategoriji zgrade.
+
+4.1. Geodetski snimak i dokumentiranje stanja
+
+Za većinu zgrada (zahtjevne i manje zahtjevne), ključan dokument je geodetski snimak izvedenog stanja nezakonito izgrađene zgrade. Geodetski snimak izrađuje ovlašteni inženjer geodezije, a on služi za smještaj zgrade na katastarskom planu i određivanje njezinih gabarita u prostoru [4]. Osim geodetskog snimka, potrebna je i arhitektonska snimka (ili opis stanja za jednostavnije zgrade) kojom se dokazuje mehanička otpornost i stabilnost objekta.
+
+4.2. Kategorizacija zgrada
+
+Zakon dijeli zgrade u četiri skupine:
+
+ Zahtjevne zgrade: Površine veće od 400 m² ili poljoprivredne zgrade veće od 1000 m².
+ Manje zahtjevne zgrade: Površine do 400 m² ili poljoprivredne do 1000 m².
+ Jednostavne zgrade: Površine do 100 m² ili poljoprivredne do 400 m².
+ Pomoćne zgrade: Površine do 50 m², u funkciji osnovne zgrade koja ima akt za građenje [1].
+
+Svaka kategorija zahtijeva različitu razinu dokumentacije, pri čemu su za pomoćne zgrade zahtjevi minimalni, što je ubrzalo proces za velik broj građana s manjim objektima poput garaža ili spremišta.
+
+5. Financijske obveze podnositelja zahtjeva
+
+Legalizacija nije besplatan proces, već podrazumijeva podmirenje obveza prema državi i jedinici lokalne samouprave. Ove obveze osiguravaju da vlasnici nezakonitih zgrada barem djelomično participiraju u troškovima komunalne opremljenosti prostora koji su godinama koristili izvan sustava.
+
+5.1. Komunalni i vodni doprinosi
+
+Nakon što upravno tijelo utvrdi da zgrada ispunjava uvjete za ozakonjenje, donosi se zaključak o obvezi plaćanja doprinosa. To su:
+
+1. Komunalni doprinos: Plaća se jedinici lokalne samouprave (gradu ili općini) za razvoj komunalne infrastrukture. Visina ovisi o volumenu zgrade () i zoni u kojoj se nalazi.
+2. Vodni doprinos: Plaća se Hrvatskim vodama za upravljanje vodama i zaštitu od poplava [3].
+
+Plaćanje ovih doprinosa, ili barem prve rate, uvjet je za izdavanje završnog akta.
+
+5.2. Naknada za zadržavanje nezakonito izgrađene zgrade u prostoru
+
+Osim redovnih doprinosa, specifičnost legalizacije je i naknada koja ima kazneni karakter jer se objekt gradio bez dozvole. Iznos naknade ovisi o lokaciji, namjeni zgrade i načinu njezina utjecaja na prostor. Prikupljena sredstva od naknade dijele se između državnog proračuna i proračuna lokalnih jedinica, s namjenom za sanaciju prostora i poboljšanje infrastrukture [1].
+
+6. Rješenje o izvedenom stanju kao konačni akt
+
+Kruna cijelog postupka je rješenje o izvedenom stanju. Ovaj upravni akt ima pravnu snagu i učinke građevinske dozvole i uporabne dozvole za zgradu koja je predmet postupka [1].
+
+6.1. Pravni učinci rješenja
+
+Izdavanjem rješenja zgrada prestaje biti nezakonita. To omogućuje vlasniku da:
+
+ Upiše zgradu u katastar i zemljišne knjige bez zabilježbe da nema uporabnu dozvolu.
+ Zatraži priključke na komunalnu infrastrukturu (električna energija, voda, plin).
+ Obavlja gospodarsku djelatnost u objektu (npr. iznajmljivanje apartmana).
+ Koristi zgradu kao zalog (hipoteku) za dobivanje bankovnih kredita [4].
+
+6.2. Razlika u odnosu na redovnu građevinsku dozvolu
+
+Važno je napomenuti da rješenje o izvedenom stanju ne rješava imovinsko-pravne odnose. Ono se izdaje bez obzira na to je li zgrada izgrađena na tuđem zemljištu, no ono ne zamjenjuje vlasnički list niti oduzima pravo stvarnom vlasniku zemljišta da sudskim putem traži zaštitu svojih prava [5]. Redovna građevinska dozvola, s druge strane, zahtijeva dokaz pravnog interesa (vlasništva) prije samog početka gradnje.
+
+7. Analiza rezultata i kritički osvrt
+
+Proces legalizacije u Hrvatskoj polučio je mješovite rezultate. S jedne strane, zaprimljeno je preko 800.000 zahtjeva, što je rezultiralo značajnim priljevom sredstava u lokalne i državne proračune te pravnim reguliranjem golemog broja nekretnina [2]. S druge strane, kritičari ističu da je ovakav masovni proces "prostorne amnestije" poslao lošu poruku građanima koji su poštovali zakone i plaćali sve dadžbine unaprijed.
+
+Nadalje, legalizacija je često bila "točkasta" – ozakonjeni su objekti, ali nije provedena sustavna sanacija naselja. Iako su zgrade legalne, mnoga naselja i dalje nemaju adekvatan širinu cesta ili zelene površine jer sam postupak nije zahtijevao usklađenost s detaljnim planovima uređenja [3].
+
+8. Zaključak
+
+Legalizacija nezakonito izgrađenih zgrada kroz primjenu Zakona o postupanju s nezakonito izgrađenim zgradama bila je nužna operacija u prostoru Republike Hrvatske. Korištenjem modernih tehnoloških alata poput DOF5/2011, država je postavila jasnu vremensku granicu i spriječila daljnju nekontroliranu gradnju.
+
+Iako je postupak bio administrativno i financijski zahtjevan, uključujući izradu geodetskih snimaka i plaćanje komunalnih i vodnih doprinosa, krajnji rezultat u obliku rješenja o izvedenom stanju donio je vlasnicima dugoročnu pravnu sigurnost. Budući izazov ostaje urbana sanacija legaliziranih područja kako bi se nivo kvalitete života u tim zonama izjednačio s planiranim gradskim naseljima. Legalizacija ne smije biti shvaćena kao poziv na ponovno kršenje zakona, već kao završni čin kojim se podvlači crta pod razdoblje prostornog nereda.

@@ -1,0 +1,84 @@
+1. Uvod
+
+Porast potrošnje energije, iscrpljivanje fosilnih goriva i sve izraženiji problem klimatskih promjena doveli su do intenzivnog razvoja alternativnih i obnovljivih izvora energije. Među njima posebno mjesto zauzimaju biogoriva, a biodizelsko gorivo predstavlja jednu od najvažnijih alternativa klasičnom dizelskom gorivu u prometu i industriji. Biodizel se proizvodi iz obnovljivih sirovina, poput biljnih ulja i životinjskih masti, te se može koristiti u postojećim dizelskim motorima uz minimalne ili nikakve tehničke prilagodbe (1).
+
+Zbog svojih svojstava biodizel se često ističe kao ekološki prihvatljivije gorivo koje doprinosi smanjenju emisija stakleničkih plinova, povećanju energetske neovisnosti i razvoju ruralnih područja. Ipak, njegova proizvodnja i primjena nisu bez nedostataka. Pitanja konkurencije s proizvodnjom hrane, troškova proizvodnje, tehničkih ograničenja i ukupnog utjecaja na okoliš predmet su brojnih znanstvenih rasprava (2).
+
+Cilj ovog seminarskog rada jest analizirati prednosti i nedostatke proizvodnje i primjene biodizelskog goriva s ekološkog, energetskog, tehničkog i ekonomskog stajališta, uz oslanjanje na relevantnu stručnu i znanstvenu literaturu.
+
+2. Osnovna obilježja biodizelskog goriva
+2.1. Definicija biodizela
+
+Biodizel je tekuće biogorivo koje se sastoji od metilnih ili etilnih estera masnih kiselina. Dobiva se kemijskim procesom transesterifikacije biljnih ulja ili životinjskih masti uz prisutnost alkohola i katalizatora. Najčešće korištene sirovine za proizvodnju biodizela su uljana repica, soja, suncokret, palmino ulje te otpadna jestiva ulja (1).
+
+Biodizel se može koristiti kao čisto gorivo (B100) ili u mješavinama s fosilnim dizelskim gorivom, pri čemu oznaka B označava udio biodizela u smjesi. Primjerice, gorivo B20 sadrži 20 % biodizela i 80 % konvencionalnog dizela.
+
+2.2. Razvoj i primjena biodizela
+
+Povijest biodizela seže još u početke razvoja dizelskog motora, no njegova šira primjena započinje krajem 20. i početkom 21. stoljeća, osobito nakon donošenja međunarodnih i europskih politika usmjerenih na smanjenje emisija stakleničkih plinova i povećanje udjela obnovljivih izvora energije (3).
+
+Danas se biodizel najčešće koristi u cestovnom prometu, poljoprivredi, javnom prijevozu te u stacionarnim energetskim sustavima. Njegova primjena regulirana je normama i zakonodavstvom koje propisuje maksimalne udjele biodizela u gorivima dostupnima na tržištu.
+
+3. Prednosti proizvodnje i primjene biodizela
+3.1. Ekološke prednosti
+3.1.1. Smanjenje emisija štetnih plinova
+
+Jedna od najvažnijih prednosti biodizela jest smanjenje emisija štetnih tvari u usporedbi s fosilnim dizelskim gorivom. Istraživanja pokazuju da uporaba biodizela može znatno smanjiti emisije ugljičnog monoksida, nezapaljenih ugljikovodika i lebdećih čestica (1).
+
+Osim toga, biodizel ne sadrži sumpor, čime se gotovo u potpunosti eliminiraju emisije sumpornih oksida, koji su jedan od glavnih uzroka kiselih kiša. U pogledu emisije ugljikova dioksida, biodizel se smatra povoljnijim jer ugljik koji se oslobađa izgaranjem potječe iz biomase, odnosno iz ugljika koji su biljke prethodno apsorbirale tijekom rasta (2).
+
+3.1.2. Biorazgradivost i manja toksičnost
+
+Biodizel je visoko biorazgradivo gorivo te pokazuje znatno manju toksičnost u odnosu na mineralni dizel. U slučaju izlijevanja u okoliš, biodizel se brže razgrađuje, što smanjuje dugoročne negativne posljedice za tlo i vodene ekosustave (4).
+
+Zbog tih svojstava biodizel se smatra sigurnijim gorivom za skladištenje, transport i rukovanje, osobito u osjetljivim okolišnim područjima.
+
+3.2. Energetske i tehničke prednosti
+3.2.1. Kompatibilnost s postojećim motorima
+
+Jedna od značajnih prednosti biodizela jest mogućnost njegove uporabe u postojećim dizelskim motorima bez većih konstrukcijskih zahvata. Mješavine s manjim udjelom biodizela mogu se koristiti u većini vozila bez ikakvih tehničkih prilagodbi, što olakšava njegovu integraciju u postojeći prometni sustav (1).
+
+3.2.2. Povoljnija mazivost
+
+Biodizel ima bolja maziva svojstva od fosilnog dizela, što može smanjiti trošenje dijelova sustava za ubrizgavanje goriva i produžiti vijek trajanja motora. Ta karakteristika posebno je važna nakon smanjenja udjela sumpora u fosilnim gorivima, koje je dovelo do pogoršanja mazivosti klasičnog dizela (3).
+
+3.3. Gospodarske i društvene prednosti
+3.3.1. Energetska neovisnost
+
+Proizvodnja biodizela iz domaćih sirovina doprinosi smanjenju ovisnosti o uvozu fosilnih goriva. Time se povećava energetska sigurnost države i smanjuje izloženost globalnim poremećajima na tržištu nafte (5).
+
+3.3.2. Razvoj ruralnih područja
+
+Uzgoj energetskih kultura za proizvodnju biodizela može pozitivno utjecati na razvoj ruralnih područja, stvaranje novih radnih mjesta i povećanje prihoda poljoprivrednika. Na taj način biodizel ima i važnu socijalnu dimenziju (5).
+
+4. Nedostaci proizvodnje i primjene biodizela
+4.1. Tehnički nedostaci
+4.1.1. Niža energetska vrijednost
+
+Biodizel ima nešto nižu ogrjevnu vrijednost u odnosu na fosilni dizel, što može rezultirati većom potrošnjom goriva i blagim smanjenjem snage motora, osobito pri uporabi čistog biodizela (3).
+
+4.1.2. Problemi pri niskim temperaturama
+
+Jedan od značajnih tehničkih problema biodizela jest njegova slabija otpornost na niske temperature. Pri hladnim uvjetima može doći do zgušnjavanja goriva, što otežava protok kroz sustav i može uzrokovati poteškoće pri pokretanju motora (2).
+
+4.2. Ekološki i resursni nedostaci
+4.2.1. Sukob proizvodnje hrane i goriva
+
+Proizvodnja biodizela iz poljoprivrednih kultura može dovesti do konkurencije između proizvodnje hrane i goriva. Ovaj problem može rezultirati porastom cijena hrane i pritiskom na poljoprivredno zemljište, osobito u zemljama s ograničenim resursima (6).
+
+4.2.2. Intenzivno korištenje prirodnih resursa
+
+Uzgoj energetskih kultura zahtijeva velike količine vode, gnojiva i pesticida, što može negativno utjecati na okoliš i dovesti do degradacije tla te zagađenja voda (6).
+
+4.3. Ekonomski nedostaci
+4.3.1. Visoki troškovi proizvodnje
+
+Troškovi proizvodnje biodizela često su viši u odnosu na proizvodnju fosilnog dizela, ponajprije zbog cijene sirovina. Zbog toga je proizvodnja biodizela u mnogim slučajevima ekonomski održiva samo uz državne poticaje i subvencije (7).
+
+5. Zaključak
+
+Biodizelsko gorivo predstavlja važnu alternativu fosilnim gorivima u kontekstu održivog razvoja i smanjenja negativnog utjecaja energetskog sektora na okoliš. Njegove glavne prednosti uključuju smanjenje emisija štetnih plinova, biorazgradivost, mogućnost uporabe u postojećim motorima te doprinos energetskoj neovisnosti i razvoju ruralnih područja.
+
+S druge strane, biodizel ima i niz nedostataka koji se odnose na tehnička ograničenja, nižu energetsku vrijednost, probleme pri niskim temperaturama te potencijalne negativne učinke na okoliš i sigurnost opskrbe hranom. Zbog toga biodizel ne treba promatrati kao jedino rješenje, već kao dio šire strategije energetske tranzicije.
+
+Daljnji razvoj tehnologija, uporaba otpadnih sirovina i razvoj naprednih biogoriva mogli bi u budućnosti značajno smanjiti postojeće nedostatke i povećati ulogu biodizela u održivom energetskom sustavu (4).

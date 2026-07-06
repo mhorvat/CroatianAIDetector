@@ -1,0 +1,65 @@
+1. Uvod
+
+Zavarljivost je jedno od najsloženijih i najvažnijih svojstava metalnih materijala, osobito čelika, koji čine okosnicu suvremenih strojarskih konstrukcija. U inženjerskoj praksi, zavarljivost se ne promatra kao apsolutno svojstvo materijala, već kao kompleksan odnos između materijala, konstrukcijskog rješenja i tehnološkog postupka zavarivanja. Osnovni cilj svakog pristupa određivanju zavarljivosti jest osigurati integritet zavarenog spoja, odnosno izbjegavanje pojave grešaka koje bi mogle kompromitirati sigurnost i funkcionalnost konstrukcije.
+
+S razvojem metalurgije, posebno pojavom mikrolegiranih čelika visoke čvrstoće i čelika za poboljšavanje, problem zavarljivosti postao je još izraženiji. Povećanje čvrstoće često je praćeno smanjenjem plastičnosti i povećanom osjetljivošću na pojavu pukotina, prvenstveno hladnih pukotina. Stoga je nužno poznavati metode kojima se zavarljivost može kvantitativno i kvalitativno odrediti. Ovaj rad analizira teorijske osnove zavarljivosti, mehanizme nastanka hladnih pukotina te specifične laboratorijske metode poput Implant i Tekken testa, s posebnim osvrtom na specifičnosti zavarivanja suvremenih grupa čelika.
+
+2. Pojam i klasifikacija zavarljivosti
+
+Zavarljivost se prema suvremenim definicijama (npr. ISO 5817) dijeli na metaluršku, tehnološku i konstrukcijsku zavarljivost.
+
+ Metalurška zavarljivost odnosi se na promjene u mikrostrukturi materijala uzrokovane toplinskim ciklusom zavarivanja. Ona ovisi o kemijskom sastavu osnovnog materijala i sklonosti stvaranju krhkih faza u zoni utjecaja topline (ZUT).
+ Tehnološka zavarljivost ovisi o primijenjenom postupku zavarivanja, parametrima (struja, napon, brzina), vrsti dodatnog materijala i predgrijavanju.
+ Konstrukcijska zavarljivost razmatra utjecaj krutosti konstrukcije, debljine stijenki i geometrije spoja na raspodjelu naprezanja.
+
+Sveukupna zavarljivost je sinergija ovih faktora. Ako čelik ima dobru metaluršku zavarljivost, on će podnijeti širi spektar tehnoloških parametara bez pojave grešaka.
+
+3. Utjecaj kemijskog sastava i ekvivalent ugljika
+
+Osnovni indikator zavarljivosti čelika je njegov kemijski sastav. Ugljik je najutjecajniji element jer direktno utječe na zakaljivost i stvaranje martenzita. Kako bi se pojednostavila procjena utjecaja svih legirajućih elemenata, uveden je koncept ekvivalenta ugljika (). Najčešće korištena formula prema IIW (International Institute of Welding) glasi:
+
+Čelici s  smatraju se dobro zavarljivima bez posebnih mjera, dok oni iznad te granice zahtijevaju predgrijavanje kako bi se spriječila pojava hladnih pukotina.
+
+4. Problem hladnih pukotina
+
+Hladne pukotine (vodikove pukotine) predstavljaju najopasniju grešku pri zavarivanju čelika visoke čvrstoće. Nastaju nakon što se zavareni spoj ohladi na temperaturu ispod 200°C, a ponekad i s odgodom od nekoliko sati ili dana. Za njihov nastanak moraju biti ispunjena tri uvjeta istovremeno:
+
+1. Osjetljiva mikrostruktura: Prisutnost tvrde i krhke martenzitne faze u ZUT-u.
+2. Prisutnost vodika: Vodik dospijeva u talinu iz vlage u oblozi elektrode, zaštitnom plinu ili s nečiste površine lima.
+3. Vlačna naprezanja: Uzrokovana toplinskim stezanjem i krutošću konstrukcije.
+
+Uklanjanjem bilo kojeg od ovih faktora (npr. predgrijavanjem ili korištenjem bazičnih elektroda s niskim sadržajem vodika), rizik od pukotina se minimizira.
+
+5. Metode ispitivanja zavarljivosti
+
+Ispitivanja zavarljivosti dijele se na izravna (zavarivanje stvarnih spojeva) i neizravna (simulacije). Dvije najznačajnije metode za procjenu sklonosti hladnim pukotinama su Tekken metoda i Implant metoda.
+
+5.1. Tekken metoda (Y-utor)
+
+Tekken test je statički test koji simulira realne uvjete krutosti u zavarenom spoju. Ispitni uzorak sastoji se od dvije ploče s utorom u obliku slova "Y". Rubni dijelovi su čvrsto zavareni kako bi stvorili visoku razinu upetosti, dok se pokusni zavar polaže u središnji dio.
+
+Nakon hlađenja, uzorak se pregledava na prisutnost pukotina u korijenu, poprečnom presjeku ili na površini. Ova metoda je izvrsna za određivanje kritične temperature predgrijavanja () potrebne da se izbjegnu pukotine pri specifičnoj energiji zavarivanja.
+
+5.2. Implant metoda
+
+Implant metoda je jedna od najpreciznijih kvantitativnih metoda za određivanje otpornosti na hladne pukotine. Ispitna epruveta (implant) umeće se u otvor na nosećoj ploči. Preko implanta se povlači zavar, čime implant postaje dio zone utjecaja topline. Nakon zavarivanja, epruveta se opterećuje vlačnom silom dok je još vruća ili nakon hlađenja.
+
+Rezultat testa je kritično naprezanje () ispod kojeg ne dolazi do loma u određenom vremenu (obično 24 sata). Ova metoda omogućuje inženjerima da točno odrede koliko opterećenje zavareni spoj može podnijeti uz određenu koncentraciju vodika i brzinu hlađenja.
+
+6. Zavarljivost mikrolegiranih čelika (HSLA)
+
+Mikrolegirani čelici (High-Strength Low-Alloy) sadrže male količine elemenata poput niobija (Nb), vanadija (V) ili titana (Ti). Ovi elementi formiraju karbonitride koji sprječavaju rast zrna austenita tijekom zavarivanja, čime se održava visoka žilavost ZUT-a.
+
+Glavni izazov kod ovih čelika je pojava omekšanja u određenim zonama ZUT-a ako je energija zavarivanja prevelika. S druge strane, prebrzo hlađenje može dovesti do prevelike tvrdoće. Optimalni prozor zavarivanja određen je vremenom hlađenja  (vrijeme potrebno da se temperatura spusti s 800°C na 500°C).
+
+7. Zavarljivost čelika za poboljšavanje
+
+Čelici za poboljšavanje (npr. 42CrMo4) sadrže veći udio ugljika i legirajućih elemenata kako bi se postigla visoka čvrstoća toplinskom obradom. Zbog toga imaju visoku zakaljivost, što ih čini izrazito teškima za zavarivanje.
+
+Pri zavarivanju ovih čelika obavezno je visoko predgrijavanje (često iznad 250°C) i kontrolirano hlađenje, a često je potrebna i naknadna toplinska obrada (popuštanje) kako bi se smanjila tvrdoća martenzita i zaostala naprezanja. Bez ovih mjera, stvaranje hladnih pukotina je gotovo neizbježno.
+
+8. Zaključak
+
+Pristup određivanju zavarljivosti čelika evoluirao je od jednostavnih empirijskih formula temeljenih na kemijskom sastavu do kompleksnih laboratorijskih ispitivanja i numeričkih simulacija. Razumijevanje interakcije između metalurških faza, difuzijskog vodika i unutrašnjih naprezanja ključno je za modernu proizvodnju.
+
+Metode poput Tekken i Implant testa pružaju neophodne podatke za definiranje tehnoloških postupaka, osobito kod kritičnih konstrukcija. Dok mikrolegirani čelici nude bolju zavarljivost uz visoku čvrstoću zahvaljujući finozrnatoj strukturi, čelici za poboljšavanje i dalje zahtijevaju strogu tehnološku disciplinu. Budućnost određivanja zavarljivosti leži u daljnjem razvoju računalnih modela koji će moći predvidjeti ponašanje materijala u realnom vremenu, smanjujući potrebu za skupim i dugotrajnim eksperimentalnim ispitivanjima, ali nikada u potpunosti ne eliminirajući važnost praktične provjere u laboratoriju.

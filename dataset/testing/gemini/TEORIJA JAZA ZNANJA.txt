@@ -1,0 +1,43 @@
+1. Uvod
+U suvremenom informacijskom društvu, pretpostavka je da povećani protok informacija vodi ka educiranijem i informiranijem građanstvu. Međutim, istraživanja u području masovnih komunikacija sugeriraju suprotno. Teorija jaza znanja, koju su 1970. godine postavili Tichenor, Donohue i Olien, postulira da uvođenje novih informacija u društveni sustav ne korelira s ujednačenim usvajanjem istih. Umjesto toga, segmenti populacije s višim socioekonomskim statusom teže bržem usvajanju informacija, čime se jaz između njih i nižih slojeva produbljuje, a ne smanjuje.
+
+2. Povijesni kontekst i nastanak teorije
+Hipoteza se pojavila kao odgovor na rane optimistične poglede na televiziju i masovne medije kao "velike izjednačitelje". Autori su primijetili da, unatoč dostupnosti informacija svima, obrazovniji pojedinci profitiraju više.
+
+Temeljna hipoteza (Tichenor et al., 1970):
+"Kako se protok informacija iz masovnih medija u društveni sustav povećava, segmenti populacije s višim socioekonomskim statusom teže stjecanju tih informacija bržim tempom od segmenata s nižim statusom; tako jaz u znanju između ovih segmenata teži povećanju, a ne smanjenju."
+
+3. Uzroci nastanka jaza
+Autori navode pet ključnih razloga zašto dolazi do ove diskrepancije:
+
+Komunikacijske vještine: Osobe s višim obrazovanjem posjeduju kognitivne vještine potrebne za bržu obradu kompleksnih informacija.
+
+Postojeće predznanje: "Efekt Mateja" u znanju – oni koji već znaju puno o temi, lakše povezuju nove informacije (kognitivne sheme).
+
+Relevantni socijalni kontakti: Viši socioekonomski status često podrazumijeva širu i raznolikiju društvenu mrežu koja potiče raspravu o javnim poslovima.
+
+Selektivna izloženost i prihvaćanje: Obrazovaniji pojedinci češće traže informacije koje su relevantne za znanost, politiku ili ekonomiju.
+
+Priroda medijskog sustava: Većina tiskanih medija i ozbiljnih portala dizajnirana je za publiku s razvijenijim rječnikom i interesima viših slojeva.
+
+4. Digitalni jaz (Digital Divide) kao nastavak teorije
+U 21. stoljeću, teorija jaza znanja evoluirala je u koncept digitalnog jaza. On se ne odnosi samo na posjedovanje hardvera (pristup internetu), već i na:
+
+Jaz u vještinama (Usage Gap): Kako se tehnologija koristi – za zabavu (niži slojevi) ili za učenje i napredovanje (viši slojevi).
+
+Jaz u ishodima: Koliku korist pojedinac izvlači iz informacija koje pronađe na mreži.
+
+5. Čimbenici koji smanjuju jaz
+Iako je jaz često neizbježan, postoje uvjeti pod kojima se on može smanjiti:
+
+Lokalna relevantnost: Kada je tema od vitalnog značaja za cijelu zajednicu (npr. lokalna ekološka katastrofa).
+
+Visoka razina socijalnog konflikta: Sukobi u društvu često potiču interes svih strana, bez obzira na obrazovanje.
+
+Zasićenje informacijama: Dugotrajno ponavljanje iste teme (npr. pandemija) dovodi do toga da i niži slojevi s vremenom dosegnu plafon znanja.
+
+6. Kritički osvrt i suvremena istraživanja
+Kritičari teorije navode da se jaz ponekad temelji na subjektivnom mjerenju "znanja" koje favorizira akademske teme, dok se zanemaruje praktično znanje nižih slojeva. Također, personalizirani algoritmi na društvenim mrežama danas stvaraju "ehokomore" koje dodatno kompliciraju originalnu teoriju.
+
+7. Zaključak
+Teorija jaza znanja podsjeća nas da informacija nije isto što i znanje. Puka dostupnost podataka ne garantira informiranost društva. Kako bi se jaz smanjio, potrebne su javne politike koje se ne fokusiraju samo na tehnološku infrastrukturu, već i na medijsku pismenost i kritičko razmišljanje od najranije dobi.

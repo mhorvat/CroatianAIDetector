@@ -1,0 +1,57 @@
+1. Uvod
+
+Suvremeno društvo suočava se s dvostrukim izazovom: neprestanim rastom potreba za energijom i hitnom potrebom za smanjenjem emisija stakleničkih plinova. Transportni sektor, kao jedan od najvećih emitera ugljikovog dioksida (), primarno se oslanja na fosilna goriva čije su zalihe konačne, a izgaranje ekološki destruktivno [1]. U tom kontekstu, biodizel se nametnuo kao jedna od najzrelijih alternativa konvencionalnom dizelskom gorivu. Dobiven iz obnovljivih izvora, biodizel nudi obećanje o zatvorenom ciklusu ugljika, no njegova masovna proizvodnja otvara niz kompleksnih pitanja – od etike korištenja poljoprivrednog zemljišta do tehničkih specifičnosti rada motora. Cilj ovog rada je sustavno analizirati prednosti i nedostatke biodizela kako bi se utvrdila njegova stvarna uloga u održivoj energetskoj budućnosti.
+
+2. Definicija i kemijska osnova biodizela
+
+Biodizel se definira kao monoalkilni ester masnih kiselina dobiven iz biljnih ulja ili životinjskih masti. Za razliku od sirovih biljnih ulja koja su se koristila u ranim fazama razvoja Dieselovog motora, biodizel prolazi kroz kemijsku obradu kako bi mu se smanjio viskozitet i približio svojstvima fosilnog dizela [2]. Kemijska struktura biodizela omogućuje njegovo miješanje s konvencionalnim dizelom u različitim omjerima (npr. B7, B20 ili B100), što ga čini praktičnim za postojeću infrastrukturu.
+
+3. Tehnološki procesi proizvodnje
+
+3.1. Sirovine prve, druge i treće generacije
+
+Razvoj biodizela klasificira se prema izvoru sirovina:
+
+ Prva generacija: Koristi jestive usjeve poput uljane repice, suncokreta, soje i palminog ulja. Iako je tehnološki najjednostavnija, ova generacija izaziva najviše kontroverzi zbog konkurencije s prehrambenom industrijom [3].
+ Druga generacija: Fokusira se na nejestiva ulja (npr. jatropha), otpadna jestiva ulja i životinjske masti. Ova kategorija doprinosi kružnom gospodarstvu jer reciklira otpad.
+ Treća generacija: Obuhvaća biogoriva dobivena iz algi. Alge imaju iznimno visok prinos ulja po jedinici površine i ne zahtijevaju obradivo zemljište, no tehnologija je još uvijek u fazi visoke cijene komercijalizacije [4].
+
+3.2. Proces transesterifikacije
+
+Glavna metoda proizvodnje biodizela je transesterifikacija. To je kemijska reakcija u kojoj trigliceridi iz ulja reagiraju s alkoholom (najčešće metanolom) uz prisutnost katalizatora (obično natrijev ili kalijev hidroksid). Produkti ove reakcije su biodizel (ester) i glicerol kao nusproizvod [5]. Glicerol nalazi primjenu u kozmetičkoj i farmaceutskoj industriji, što dodatno poboljšava ekonomsku sliku procesa.
+
+4. Prednosti primjene biodizela
+
+4.1. Ekološki aspekti i  neutralnost
+
+Najznačajnija prednost biodizela je smanjenje neto emisija stakleničkih plinova. Biljke tijekom rasta putem fotosinteze apsorbiraju  iz atmosfere. Kada se biodizel sagori, taj se isti  ispušta natrag, čineći ciklus teoretski zatvorenim [6]. Osim toga, biodizel je gotovo u potpunosti lišen sumpora, što eliminira emisije sumpornih oksida () koji su glavni uzročnik kiselih kiša. Biodizel je također biorazgradiv i znatno manje toksičan za vodene ekosustave u slučaju izlijevanja u odnosu na naftne derivate.
+
+4.2. Tehničke prednosti u motorima s unutarnjim izgaranjem
+
+Biodizel posjeduje izvrsna podmazujuća svojstva (lubricity). Moderni niskosumporni fosilni dizeli često zahtijevaju aditive za podmazivanje pumpi i brizgaljki, dok biodizel prirodno produžuje vijek trajanja tih komponenti [7]. Također, biodizel ima viši cetanski broj, što rezultira boljim paljenjem i mirnijim radom motora. Visok udio kisika u molekuli biodizela (oko 11%) omogućuje potpunije izgaranje, čime se smanjuje emisija čestica čađe i ugljičnog monoksida ().
+
+4.3. Socioekonomski utjecaj i energetska neovisnost
+
+Za države poput Hrvatske, koje imaju značajne poljoprivredne resurse, proizvodnja biodizela nudi put prema energetskoj neovisnosti. Smanjenjem uvoza sirove nafte jača se domaća ekonomija i otvaraju nova radna mjesta u ruralnim područjima [8]. Decentralizirana proizvodnja energije povećava otpornost energetskog sustava na geopolitičke potrese.
+
+5. Nedostaci i izazovi
+
+5.1. Etika "hrana nasuprot gorivu"
+
+Korištenje poljoprivrednih površina za proizvodnju goriva umjesto hrane jedan je od najžešćih argumenata protiv prve generacije biodizela. Porast cijena hrane na globalnom tržištu često se povezuje s preusmjeravanjem resursa u biogoriva, što pogađa najsiromašnije slojeve stanovništva [9]. Također, krčenje šuma (primjerice u Indoneziji radi nasada palmi) radi proizvodnje "ekološkog" goriva paradoksalno dovodi do većih emisija ugljika zbog uništavanja prirodnih ponora .
+
+5.2. Tehnička ograničenja i emisije dušikovih oksida ()
+
+Iako biodizel smanjuje većinu štetnih emisija, on paradoksalno može povećati emisije dušikovih oksida () zbog specifičnosti procesa izgaranja i prisutnosti kisika u gorivu [10]. Nadalje, biodizel ima lošija svojstva pri niskim temperaturama (visoka točka filtrabilnosti), što može dovesti do kristalizacije goriva i začepljenja filtara tijekom zime. Također, zbog svoje higroskopnosti, biodizel lakše upija vlagu iz zraka, što pogoduje razvoju mikroorganizama u spremnicima i koroziji.
+
+5.3. Ekonomska isplativost i energetska gustoća
+
+Biodizel ima približno 10% manju energetsku gustoću po jedinici mase u odnosu na fosilni dizel, što znači da je za istu snagu potrebna veća potrošnja goriva [11]. Trenutni troškovi proizvodnje, bez državnih subvencija i poticaja, često su viši od troškova rafiniranja sirove nafte, što biodizel čini tržišno manje konkurentnim bez regulatorne podrške.
+
+6. Biodizel u kontekstu Europske unije i Hrvatske
+
+Europska unija kroz Direktivu o obnovljivoj energiji (RED II i III) postavlja ambiciozne ciljeve za udio biogoriva u transportu. Hrvatska, kao članica, nastoji iskoristiti potencijal uljane repice i otpadnih ulja. Međutim, izazov ostaje niska razina prikupljanja otpadnog jestivog ulja iz kućanstava i ugostiteljstva, što bi moglo značajno smanjiti pritisak na proizvodnju prve generacije [12]. Strategije se sve više okreću naprednim biogorivima koja ne konkuriraju hrani.
+
+7. Zaključak
+
+Biodizel predstavlja ključni tranzicijski energent koji može značajno doprinijeti dekarbonizaciji prometa uz minimalne preinake na postojećoj tehnologiji. Njegove prednosti u obliku  neutralnosti, biorazgradivosti i poboljšanog podmazivanja motora čine ga superiornim u ekološkom smislu. Ipak, nedostaci poput visokih troškova, tehničkih problema zimi i etičkih dilema oko korištenja zemljišta jasno ukazuju na to da biodizel prve generacije nije konačno rješenje. Budućnost leži u razvoju druge i treće generacije sirovina te integraciji biodizela u širi mozaik održivih rješenja, uključujući elektrifikaciju i vodikove tehnologije. Samo balansiranim pristupom, koji uvažava i ekološke i socioekonomske faktore, biodizel može ispuniti svoju ulogu "zelenog" goriva sutrašnjice.

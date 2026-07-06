@@ -1,0 +1,100 @@
+1. Uvod
+U suvremenom globaliziranom svijetu, visoko obrazovanje više nije izolirani sustav javne uprave, već dinamično i izrazito konkurentno tržište. Institucije visokog obrazovanja (IVO) suočavaju se s brojnim izazovima: od demografskog pada i smanjenja proračunskih sredstava do digitalne transformacije i pojave alternativnih oblika učenja. U takvim okolnostima, marketing visokog obrazovanja postaje ključan alat za strateško pozicioniranje ustanova (1).
+
+Osnovni problem s kojim se susreću fakulteti i veleučilišta jest heterogenost njihovih korisnika. Studenti se razlikuju po svojim motivima, ambicijama, socio-ekonomskom statusu i očekivanjima od buduće karijere. Stoga je koncept masovnog marketinga, u kojem se jedna poruka šalje svim potencijalnim kandidatima, postao neučinkovit. Segmentacija tržišta omogućuje institucijama da identificiraju specifične skupine studenata i prilagode im svoju obrazovnu ponudu, čime se postiže veća razina zadovoljstva i lojalnosti (2). Ovaj rad analizira specifičnosti usluge visokog obrazovanja te dublje istražuje model segmentacije prema koristi kao najučinkovitiji način za privlačenje i zadržavanje studenata.
+
+2. Specifičnosti usluge visokog obrazovanja
+Razumijevanje marketinga u ovom sektoru zahtijeva prvo definiranje onoga što se zapravo nudi na tržištu. Usluga visokog obrazovanja bitno se razlikuje od materijalnih proizvoda, ali i od jednostavnijih komercijalnih usluga.
+
+2.1. Karakteristike obrazovne usluge
+Usluga visokog obrazovanja posjeduje četiri temeljna obilježja koja otežavaju njezino marketinško upravljanje (3):
+
+Neopipljivost: Obrazovanje se ne može fizički dotaknuti niti testirati prije konzumacije. Student kupuje "obećanje" buduće vrijednosti, što povećava percepciju rizika.
+
+Neodvojivost: Proces pružanja usluge (predavanja, vježbe) događa se istovremeno s procesom njezine potrošnje. Profesor i student moraju biti prisutni i angažirani u isto vrijeme.
+
+Prolaznost: Neiskorišteni kapaciteti u predavaonici ili neupisana mjesta u generaciji predstavljaju nepovratno izgubljeni prihod.
+
+Heterogenost: Kvaliteta usluge varira ovisno o raspoloženju predavača, atmosferi u grupi i predznanju studenta.
+
+2.2. Koncept studenta kao partnera (Co-creation)
+U suvremenoj marketinškoj teoriji, student se ne promatra samo kao pasivni "kupac", već kao aktivan sudionik u procesu stvaranja vrijednosti (tzv. co-creation). Uspjeh usluge visokog obrazovanja ne ovisi samo o kvaliteti resursa ustanove, već i o trudu i angažmanu samog studenta (4). Zbog toga segmentacija mora uzeti u obzir i spremnost studenta na rad i suradnju.
+
+3. Strategija segmentacije tržišta
+Segmentacija je prvi korak u poznatom marketinškom modelu STP (Segmentation, Targeting, Positioning). Bez precizne podjele tržišta, pozicioniranje institucije ostaje nejasno i generičko.
+
+3.1. Ciljevi i prednosti segmentacije
+Glavni cilj segmentacije u visokom obrazovanju je povećanje učinkovitosti marketinških aktivnosti uz smanjenje troškova. Prednosti uključuju (5):
+
+Bolje razumijevanje potreba i ponašanja potencijalnih studenata.
+
+Prilagodbu studijskih programa (kurikuluma) zahtjevima tržišta.
+
+Precizniju komunikaciju putem kanala koje ciljna skupina preferira (npr. društvene mreže vs. stručni sajmovi).
+
+Identificiranje tržišnih niša koje konkurencija zanemaruje.
+
+3.2. Razine segmentacije
+Institucije mogu provoditi segmentaciju na različitim razinama. Primjerice, na razini institucije (opći ugled), razini studijskog programa (npr. STEM vs. društvene znanosti) ili razini specifičnih tečajeva za cjeloživotno obrazovanje (6).
+
+4. Kriteriji segmentacije u visokom obrazovanju
+Da bi segmentacija bila uspješna, segmenti moraju biti mjerljivi, dostupni, dovoljno veliki i stabilni kroz vrijeme.
+
+4.1. Demografska i geografska segmentacija
+Ovo su najstariji i najlakše mjerljivi kriteriji. IVO često ciljaju studente iz određenih županija ili država (u slučaju međunarodne razmjene). Demografski podaci uključuju dob (tradicionalni studenti vs. odrasli polaznici), spol i socio-ekonomski status obitelji, što utječe na mogućnost plaćanja školarine (7).
+
+4.2. Psihografska segmentacija
+Ovaj pristup dijeli studente prema njihovim vrijednostima, stavovima i stilu života. Primjerice, neki studenti cijene prestiž i tradiciju, dok drugi traže inovativnost i fleksibilnost. Psihografija pomaže u kreiranju "brend osobnosti" fakulteta koja će rezonirati s unutarnjim uvjerenjima studenta (8).
+
+5. Segmentacija tržišta prema koristi (Benefit Segmentation)
+Segmentacija tržišta prema koristi smatra se najnaprednijim oblikom jer se fokusira na uzročne faktore odlučivanja. Ona ne pita "tko je student", već "zašto taj student želi studirati" (9).
+
+5.1. Identificiranje ključnih koristi
+Studenti u Republici Hrvatskoj i u svijetu obično traže jednu ili više od sljedećih koristi:
+
+Funkcionalne koristi: Stjecanje diplome koja omogućuje brzi pronalazak posla i visoku plaću.
+
+Simboličke koristi: Status koji donosi diploma prestižnog sveučilišta, osjećaj pripadnosti intelektualnoj eliti.
+
+Iskustvene koristi: Kvaliteta društvenog života, sportske aktivnosti na kampusu, mogućnost putovanja (Erasmus+).
+
+Spoznajne koristi: Istinska želja za znanjem i bavljenjem znanstvenim istraživanjem (10).
+
+5.2. Profiliranje segmenata prema traženim koristima
+Na temelju ovih koristi, možemo identificirati tipične segmente (11):
+
+Karijeristi: Studenti koji biraju programe s jakom vezom s gospodarstvom. Njih zanimaju podaci o zapošljivosti alumnija.
+
+Tragači za sigurnošću: Biraju državna sveučilišta s dugom tradicijom jer vjeruju da je takva diploma "sigurna oklada".
+
+Društveni tipovi: Njima je fakultet mjesto socijalizacije. Fokusirani su na lokaciju kampa i studentske udruge.
+
+Cjeloživotni polaznici: Zaposlene osobe koje traže korist u obliku fleksibilnosti (online nastava) i primjenjivosti znanja u trenutnom poslu.
+
+6. Upravljanje marketinškim spletom nakon segmentacije
+Nakon što institucija odabere svoje ciljne segmente, ona mora prilagoditi svoj prošireni marketinški splet (7P) kako bi ispunila obećane koristi (12).
+
+Product (Usluga): Kurikulum prilagođen segmentu (npr. više prakse za karijeriste).
+
+Price (Cijena): Model plaćanja, popusti za rane prijave ili stipendije za izvrsne.
+
+Place (Distribucija): Fizička lokacija, hibridna nastava ili dislocirani studiji.
+
+Promotion (Promocija): Korištenje različitih poruka (npr. "Postani lider" vs. "Uči od najboljih znanstvenika").
+
+People (Ljudi): Odnos profesora i administrativnog osoblja prema studentima.
+
+Process (Procesi): Jednostavnost upisa, digitalizacija referade.
+
+Physical Evidence (Fizički dokazi): Izgled zgrade, opremljenost laboratorija, izgled web stranice.
+
+7. Specifičnosti i izazovi u Republici Hrvatskoj
+Hrvatsko tržište visokog obrazovanja prolazi kroz fazu intenzivne tržišne utakmice. Ulazak privatnih visokih škola i veleučilišta natjerao je i velika javna sveučilišta na razmišljanje o marketingu (13).
+
+7.1. Utjecaj državne kvote i besplatnog studiranja
+Činjenica da je većina studija na javnim sveučilištima financirana od strane države stvara specifičnu tržišnu dinamiku. Međutim, čak i kada je cijena "nula", studenti biraju fakultet na temelju oportunitetnog troška vremena. Stoga je segmentacija prema kvaliteti i ishodima učenja ključna i za javni sektor (14).
+
+8. Zaključak
+Segmentacija tržišta visokog obrazovanja više nije izbor, već preduvjet za opstanak u uvjetima sve veće globalne konkurencije. Institucije koje pokušavaju biti "sve svima" riskiraju da ostanu bez jasnog identiteta i prepoznatljivosti. Analizom usluge visokog obrazovanja utvrdili smo da njezina složenost zahtijeva sofisticirane metode podjele tržišta.
+
+Poseban naglasak na segmentaciju prema koristi omogućuje institucijama da se odmaknu od suhoparnih statističkih podataka i usmjere na stvarne motive i želje studenata. U hrvatskom kontekstu, uspjeh će postići one ustanove koje uspiju uskladiti svoju tradiciju s modernim potrebama tržišta rada, istovremeno komunicirajući jasne i specifične koristi svakom pojedinom segmentu.

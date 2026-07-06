@@ -1,0 +1,64 @@
+1. Uvod
+U suvremenom, hiperpovezanom globalnom gospodarstvu, nesigurnost je postala jedina konstanta. Upravljanje poslovnim rizicima (ERM) više nije samo funkcija kontrole unutar financijskog odjela ili zakonska obveza, već strateška disciplina koja omogućuje poduzećima da opstanu i napreduju. Ovaj rad istražuje kako sustavni pristup rizicima transformira prijetnje u prilike te osigurava dugoročnu održivost poslovanja.
+
+2. Definicija i koncept poslovnog rizika
+Rizik se tradicionalno promatrao kao vjerojatnost gubitka ili negativnog događaja. Međutim, moderna teorija upravljanja rizicima definira rizik kao "učinak nesigurnosti na ciljeve". To znači da rizik može imati i pozitivan predznak (prilika) i negativan predznak (prijetnja).
+
+Upravljanje poslovnim rizicima je proces koji provode uprava, menadžment i ostali zaposlenici, a primjenjuje se kod postavljanja strategije i kroz cijelo poduzeće. Njegov cilj nije eliminacija rizika – jer bez rizika nema profita – već njegovo razumijevanje i držanje unutar granica "apetita za rizik".
+
+3. Vrste poslovnih rizika
+Kako bi se rizicima upravljalo, potrebno ih je kategorizirati. Najčešća podjela uključuje:
+
+Strateški rizici: Vezani uz dugoročne odluke, promjene na tržištu, ulazak nove konkurencije ili promašene investicije.
+
+Operativni rizici: Proizlaze iz unutarnjih procesa, ljudskog faktora, pogrešaka u sustavima ili vanjskih događaja (npr. kvarovi strojeva, štrajkovi).
+
+Financijski rizici: Uključuju tržišni rizik (promjene tečaja, kamatnih stopa), kreditni rizik (nemogućnost naplate potraživanja) i rizik likvidnosti.
+
+Usklađenost (Compliance): Rizik od zakonskih sankcija ili gubitka reputacije zbog nepridržavanja propisa (npr. GDPR, ekološki standardi).
+
+Reputacijski rizici: Možda najteže mjerljivi, ali potencijalno najrazorniji – gubitak povjerenja kupaca i javnosti.
+
+4. Proces upravljanja rizicima
+Ovaj proces je ciklički i sastoji se od nekoliko ključnih faza:
+
+Identifikacija rizika
+Prvi korak je prepoznavanje što se može dogoditi, zašto i kako. Koriste se tehnike poput SWOT analize, intervjua sa stručnjacima, "brainstorminga" i analize povijesnih podataka.
+
+Analiza i procjena
+Nakon identifikacije, rizici se rangiraju prema dvije dimenzije:
+
+Vjerojatnost nastanka
+
+Utjecaj na poslovanje
+
+Matrica rizika pomaže vizualizirati koji su rizici kritični (visoka vjerojatnost i visok utjecaj), a koji zanemarivi.
+
+Odgovor na rizik
+Poduzeće može reagirati na četiri načina:
+
+Izbjegavanje: Odustajanje od aktivnosti koja nosi rizik.
+
+Smanjenje (Mitigacija): Uvođenje kontrola kako bi se smanjila vjerojatnost ili utjecaj.
+
+Prijenos: Prebacivanje rizika na treću stranu (npr. osiguranje ili outsourcing).
+
+Prihvaćanje: Svjesno zadržavanje rizika jer je trošak rješavanja veći od potencijalne štete.
+
+5. Metodologije i okviri (COSO i ISO 31000)
+Dva najpoznatija svjetska standarda su:
+
+ISO 31000: Pruža generičke smjernice koje se mogu primijeniti na bilo koju vrstu organizacije. Naglašava da upravljanje rizikom mora biti integrirano u sve procese donošenja odluka.
+
+COSO ERM okvir: Fokusiran je više na korporativno upravljanje i unutarnje kontrole, povezujući strategiju s performansama poduzeća.
+
+6. Uloga tehnologije u upravljanju rizicima
+U doba "Big Data", tehnologija postaje ključna. Umjetna inteligencija (AI) i strojno učenje omogućuju predviđanje rizika u stvarnom vremenu. Na primjer, algoritmi mogu otkriti sumnjive transakcije koje ukazuju na prijevaru ili predvidjeti kvar na proizvodnoj liniji prije nego što se dogodi (prediktivno održavanje).
+
+Cyber-sigurnost je danas zasebna, ali integrirana grana upravljanja rizicima, s obzirom na porast hakerskih napada i važnost zaštite podataka.
+
+7. Psihološki aspekti i organizacijska kultura
+Nijedan sustav ne može biti učinkovit ako ne postoji "kultura svjesnosti o riziku". Zaposlenici se ne smiju bojati prijaviti pogrešku ili potencijalnu prijetnju. Psihološke pristranosti, poput pretjeranog optimizma menadžera, često dovode do podcjenjivanja rizika, što je bio jedan od glavnih uzroka velike financijske krize 2008. godine.
+
+8. Zaključak
+Upravljanje poslovnim rizicima nije projekt s početkom i krajem, već kontinuirana filozofija poslovanja. Poduzeća koja sustavno pristupaju rizicima su otpornija na šokove, brže se prilagođavaju promjenama i u konačnici ostvaruju bolji povrat na kapital. U svijetu koji se mijenja brže nego ikad, ignoriranje rizika je najveći rizik od svih.
