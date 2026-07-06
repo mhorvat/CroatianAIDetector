@@ -1,0 +1,195 @@
+1. Uvod
+
+Samovrjednovanje, odnosno proces u kojem studenti procjenjuju vlastito učenje, napredak i kvalitetu izvedenih zadataka, jedan je od ključnih elemenata suvremenog obrazovanja. U visokom obrazovanju uloga samovrjednovanja dodatno raste jer se studenti pripremaju za samostalnost, cjeloživotno učenje i kritičku analizu vlastitih kompetencija. U kontekstu digitalizacije nastave te sve veće prisutnosti interneta i digitalnih platformi, web-alati postaju prirodan nastavak i podrška ovome procesu. Njihova primjena omogućuje studentima strukturiranu, vizualno jasnu i dostupnu povratnu informaciju o vlastitome radu, dok nastavnicima pruža uvid u samoprocjene studenata, potencijalne nesigurnosti, ali i napredak tijekom semestra.
+
+Cilj ovoga seminarskog rada je detaljno istražiti ulogu samovrjednovanja u visokom obrazovanju, razmotriti suvremene teorijske pristupe koji ga podupiru te analizirati kako web-alati mogu unaprijediti taj proces. U radu se razmatraju konkretni digitalni alati, njihova primjena u nastavi, prednosti i nedostaci, kao i praktične preporuke za učinkovitije korištenje u akademskom okruženju.
+
+---
+
+2. Pojam i važnost samovrjednovanja
+
+2.1. Definiranje samovrjednovanja
+
+Samovrjednovanje se u literaturi najčešće definira kao proces u kojem studenti aktivno procjenjuju vlastite performanse na temelju unaprijed definiranih kriterija, standarda znanja ili očekivanih ishoda učenja. Za razliku od tradicionalnog vrednovanja, koje provodi nastavnik, samovrjednovanje pomiče fokus prema studentu kao aktivnom sudioniku u procesu učenja.
+
+Ključni elementi samovrjednovanja uključuju:
+
+ prepoznavanje vlastitih snaga i slabosti
+ refleksiju o procesu učenja
+ usporedbu ostvarenog rezultata s postavljenim kriterijima
+ samostalno planiranje daljnjeg učenja
+
+2.2. Uloga samovrjednovanja u visokom obrazovanju
+
+U suvremenim obrazovnim pristupima naglašava se važnost razvijanja metakognicije — svjesnosti studenata o vlastitim kognitivnim procesima. Samovrjednovanje je ključni alat za razvoj takvih vještina, jer potiče razmišljanje o tome kako studenti uče, a ne samo što uče.
+
+Prednosti samovrjednovanja uključuju:
+
+ veću autonomiju studenata
+ bolju regulaciju učenja
+ razvoj kritičkog mišljenja
+ realističniju procjenu vlastitih kompetencija
+ povećanu motivaciju
+ poboljšane akademske rezultate
+
+Uloga nastavnika u procesu samovrjednovanja nije pasivna; on usmjerava studente, nudi kriterije i pomaže im razumjeti kako konstruktivno ocijeniti vlastiti rad.
+
+---
+
+3. Teorijski pristupi i pedagoške osnove
+
+3.1. Konstruktivizam
+
+Konstruktivističke teorije naglašavaju da studenti aktivno stvaraju znanje kroz iskustvo. Samovrjednovanje je neizostavan dio konstruktivističkog učenja jer zahtijeva da student aktivno preuzima odgovornost za proces usvajanja znanja.
+
+3.2. Teorija samoreguliranog učenja
+
+Samoregulirano učenje uključuje planiranje, praćenje i evaluaciju vlastitog učenja. Web-alati mogu znatno olakšati ovaj proces jer omogućuju digitalno praćenje napretka, analitiku učenja (learning analytics) i automatizirane povratne informacije.
+
+3.3. Formativno vrednovanje
+
+Samovrjednovanje je oblik formativnog vrednovanja, koje za cilj ima unaprjeđenje učenja, a ne samo donošenje završne ocjene. Kombinacija samovrjednovanja i digitalnih alata čini ovaj proces kontinuiranim i transparentnim.
+
+---
+
+4. Uloga web-alata u samovrjednovanju
+
+Digitalni alati u obrazovanju više nisu novost, nego standard. Njihova primjena u samovrjednovanju nudi mogućnosti koje nisu bile dostupne tradicionalnim metodama: automatizirane rubrike, vizualizacije podataka, interaktivne refleksije, brže analize i mogućnost kontinuiranog praćenja.
+
+4.1. Prednosti korištenja web-alata
+
+1. Interaktivnost: Alati omogućuju vizualne i interaktivne načine procjene, što povećava motivaciju.
+2. Dostupnost: Samovrjednovanje se može provoditi bilo kada i s bilo kojeg uređaja.
+3. Automatizirana povratna informacija: Sustavi često nude sugestije i grafičke prikaze napretka.
+4. Arhiviranje podataka: Student može pratiti vlastiti napredak kroz vrijeme.
+5. Standardizacija kriterija: Rubrike i check-liste olakšavaju dosljednu primjenu kriterija.
+6. Integracija s e-učenjem: Web-alati se često povezuju s LMS-ovima poput Google Classrooma, Moodlea ili Microsoft Teamsa.
+
+4.2. Izazovi digitalnog samovrjednovanja
+
+ prevelika oslanjanja na tehnologiju
+ manjak digitalnih kompetencija pojedinih studenata
+ površno ispunjavanje rubrika bez dublje refleksije
+ tehničke prepreke (nestabilna mreža, nekompatibilnost uređaja)
+ potreba za kvalitetnom obukom nastavnika
+
+---
+
+5. Pregled najčešćih web-alata za studentsko samovrjednovanje
+
+U ovom poglavlju analiziraju se najčešće korišteni web-alati, njihova svrha, prednosti i potencijalne slabosti.
+
+5.1. Google Forms
+
+Jedan od najraširenijih alata za prikupljanje podataka. U kontekstu samovrjednovanja koristi se za:
+
+ refleksijske upitnike
+ procjenu napretka nakon određenog zadatka
+ generiranje grafova o napretku
+
+Prednosti: jednostavan za korištenje, integriran s Google Classroomom.
+Nedostaci: ograničene mogućnosti za sofisticirane rubrike.
+
+5.2. Microsoft Forms
+
+Sličan Google Formsu, ali s dodatnim mogućnostima integracije u Microsoft ekosustav. Učitelji cijene mogućnost povezivanja rezultata s Excelom i Teamsima.
+
+5.3. Mentimeter
+
+Interaktivni alat koji omogućuje studentima brzo davanje povratnih informacija o vlastitom radu ili tijeku nastave. Podržava:
+
+ skalne procjene
+ otvorene odgovore
+ word clouds
+  Prednost: potiče anonimnost i iskrenost.
+
+5.4. Padlet
+
+Digitalna ploča koja omogućuje refleksije, dijeljenje radova i međusobno komentiranje. Odlična za kolektivne procese samovrjednovanja i vršnjačke evaluacije.
+
+5.5. Kahoot i Quizizz
+
+Iako primarno namijenjeni kvizovima, studenti mogu koristiti rezultate za samoprocjenu znanja. Prednosti su gamifikacija i automatska povratna informacija.
+
+5.6. Edpuzzle
+
+Nudi video-lekcije s ugrađenim pitanjima. Student odmah dobiva povratne informacije, što olakšava samoprocjenu razumijevanja gradiva.
+
+5.7. Rubric-making tools (npr. iRubric, Quick Rubric)
+
+Alati specijalizirani za izradu rubrika. Studenti mogu samostalno ocijeniti svoj rad prema unaprijed definiranim kriterijima.
+
+5.8. LMS sustavi (Moodle, Canvas, Google Classroom)
+
+Veći LMS sustavi sadrže ugrađene funkcionalnosti za samovrjednovanje: aktivnosti tipa refleksije, upitnici, rubrike, portfoliji.
+
+---
+
+6. Praktična primjena web-alata u procesu samovrjednovanja
+
+6.1. Studijski predmeti u kojima se samovrjednovanje najčešće koristi
+
+Samovrjednovanje se često primjenjuje u predmetima koji naglašavaju projekte, istraživanja, kreativni rad, laboratorijske vježbe, ali i teorijske kolegije koji uključuju kontinuirano učenje.
+
+6.2. Primjer primjene u nastavi
+
+Primjer: Student iz pedagogije priprema seminarski rad. Nastavnik unaprijed daje rubriku u Quick Rubricu s kriterijima poput argumentacije, strukture, stila pisanja i korištenja izvora. Nakon predaje, student koristi rubriku za samovrjednovanje, uspoređuje procjenu s nastavnikovom i analizira razlike. Ovaj proces potiče dublje razumijevanje akademskih standarda.
+
+6.3. Digitalni portfoli kao alat za samovrjednovanje
+
+Web-portfoliji (npr. Google Sites, Seesaw) omogućuju studentima da prikupljaju svoje radove kroz vrijeme. Refleksija o napretku jedan je od ključnih elemenata samovrjednovanja i često rezultira većim osjećajem postignuća.
+
+6.4. Gamifikacija kao poticaj
+
+Korištenje igrolikih elemenata (bodovi, nagrade, rang-liste) motivira studente da aktivnije sudjeluju u samoprocjeni. Platforme poput Kahoota i Quizizza dobro se uklapaju u ovu kategoriju.
+
+---
+
+7. Prednosti i nedostaci digitalnog samovrjednovanja
+
+7.1. Prednosti
+
+ Veća motivacija zbog tehnološke interaktivnosti
+ Brže i jasnije povratne informacije
+ Smanjenje pristranosti uz standardizirane kriterije
+ Mogućnost detaljne analitike učenja
+ Poticanje digitalne pismenosti
+ Personalizacija učenja
+
+7.2. Nedostaci
+
+ Digitalni jaz između studenata
+ Rizik površnog pristupa
+ Poteškoće u interpretaciji podataka bez adekvatne obuke
+ Potencijalna ovisnost o tehnologiji
+ Sigurnosni i privatnosni izazovi
+
+---
+
+8. Preporuke za učinkovitu primjenu web-alata
+
+1. Jasno definirani kriteriji
+   Studentima treba ponuditi razumljive i transparentne kriterije prije procesa samovrjednovanja.
+
+2. Kombinacija samovrjednovanja i vršnjačkog vrednovanja
+   Ova kombinacija daje uravnoteženiju sliku o kvaliteti rada.
+
+3. Postupno uvođenje digitalnih alata
+   Posebice kod studenata koji nisu digitalno vješti.
+
+4. Osiguravanje tehničke podrške
+   Nužna je infrastruktura i podrška pri korištenju složenijih alata.
+
+5. Poticati refleksivno pisanje
+   Kratke refleksije nakon upitnika ili rubrika povećavaju dubinu učenja.
+
+6. Praćenje i analiza podataka
+   Nastavnici trebaju koristiti podatke iz alata kako bi poboljšali nastavu i pružili ciljanu podršku.
+
+---
+
+9. Zaključak
+
+Samovrjednovanje predstavlja važan i sve relevantniji aspekt suvremenog obrazovanja, osobito u visokoškolskom kontekstu gdje se od studenata očekuje mogućnost samostalnog upravljanja vlastitim učenjem. Korištenjem web-alata ovaj proces postaje strukturiraniji, pristupačniji i objektivniji. Digitalna tehnologija omogućuje studentima dublju refleksiju, personalizirano učenje i kontinuirano praćenje vlastitog napretka. Ipak, kako bi se ostvario puni potencijal digitalnog samovrjednovanja, potrebno je kvalitetno planiranje, jasno definirani kriteriji i pedagoška podrška nastavnika.
+
+Web-alati se ne bi trebali promatrati samo kao tehnološki dodatak nastavi, nego kao integrirani dio pedagoškog pristupa koji doprinosi razvoju samoreguliranog, odgovornog i aktivnog studenta — a to je upravo cilj suvremenog visokog obrazovanja. Pravilno korištenje ovih alata može znatno unaprijediti proces učenja, povećati motivaciju i doprinijeti stvaranju kompetentnih i digitalno pismenih stručnjaka.

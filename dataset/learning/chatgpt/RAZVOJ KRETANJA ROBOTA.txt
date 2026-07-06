@@ -1,0 +1,139 @@
+Uvod
+
+Robotika je interdisciplinarno područje koje objedinjuje mehaniku, elektroniku, računarstvo, umjetnu inteligenciju i automatizaciju s ciljem izrade sustava koji mogu izvoditi zadatke autonomno ili poluautonomno. Razvoj robotike započeo je sredinom 20. stoljeća, no ključan napredak dogodio se pojavom računalnih sustava, senzora visokih performansi te sofisticiranih algoritama za obradu informacija. Danas su roboti prisutni u industriji, medicini, transportu, istraživanju svemira, kućanstvima i mnogim drugim područjima. Među temeljnim funkcijama svakog robota nalazi se kretanje, koje mu omogućava obavljanje zadataka u fizičkom prostoru.
+
+Ovaj seminar bavi se vrstama robota te njihovim mehanizmima kretanja, uz naglasak na fizikalne principe, tehničke izvedbe i algoritme koji omogućuju njihovu mobilnost. Cilj je pružiti pregled ključnih koncepata, tehnologija i izazova vezanih uz kretanje robota, uz analizu najvažnijih pristupa mobilnosti.
+
+1. Klasifikacija robota prema načinu kretanja
+
+Kretanje robota može se realizirati različitim mehaničkim i informatičkim pristupima. Najčešća podjela uključuje sljedeće kategorije:
+
+1.1. Kotačni roboti
+
+Kotačni roboti koriste kotače kao glavni oblik mobilnosti. Prednost im je jednostavnost konstrukcije, visoka učinkovitost i brzina kretanja te relativno niska potrošnja energije. Najčešći oblici su:
+
+ Diferencijalni pogon – dva pogonska kotača koja se okreću različitim brzinama kako bi se robot kretao ravno ili skretao.
+ Tricikl pogon – jedan upravljački kotač i dva nosiva kotača.
+ Omnidirekcijski roboti – koriste Mecanum ili omni kotače koji omogućuju kretanje u svim smjerovima bez promjene orijentacije.
+
+1.2. Robotske platforme na gusjenicama
+
+Roboti na gusjenicama koriste kontinuiranu traku, sličnu tenkovskoj gusjenici. Prednosti su stabilnost, mogućnost savladavanja neravnog terena i dobra trakcija. Ovakvi se roboti često koriste u vojne svrhe, potragu i spašavanje, te u istraživanje nepristupačnih područja.
+
+1.3. Humanoidni i bipedalni roboti
+
+Humanoidni roboti oponašaju ljudsko tijelo te imaju dvije noge. Kretanje bipedalnih robota izrazito je kompleksno jer zahtijeva stalno usklađivanje ravnoteže, dinamike i stabilnosti. Koriste se u robotici usmjerenoj na interakciju s ljudima, istraživanju i razvoju te u zadacima koji zahtijevaju prilagodljivost.
+
+1.4. Višenožni roboti
+
+Višenožni roboti (npr. četveronožni ili paukoliki) imaju prednost u stabilnosti i savladavanju složenih terena. Svaki korak može se precizno kontrolirati, a redundancija nogu omogućuje nastavak kretanja i u slučaju otkaza jednog aktuatora.
+
+1.5. Leteći roboti (dronovi)
+
+Leteći roboti, koji obuhvaćaju multirotore, helikoptere i avione bez posade, kreću se kroz trodimenzionalni prostor koristeći potisak. Stabilizacija i kontrola leta zahtijevaju napredne algoritme za obradu signala i kontrolu motora.
+
+1.6. Plutajući i podvodni roboti
+
+Podvodni roboti koriste propelere, vodene mlaznice ili hidrodinamičke površine za kretanje u vodi. Podvodna navigacija posebno je izazovna zbog ograničenog dometa senzora i nedostatka GPS signala.
+
+2. Mehanika kretanja robota
+
+2.1. Kinematika
+
+Kinematika proučava geometriju kretanja robota bez razmatranja sila. U robotici se primjenjuju:
+
+ Direktna kinematika – određuje položaj robota na temelju poznatih upravljačkih veličina.
+ Inverzna kinematika – određuje potrebne upravljačke veličine za postizanje željenog položaja.
+
+Kod kotačnih robota kinematika se temelji na brzinama kotača i njihovoj udaljenosti. Kod manipulacijskih robota primjenjuju se Denavit–Hartenbergove transformacije za opisivanje koordinatnih sustava.
+
+2.2. Dinamika
+
+Dinamika proučava sile i momente koji djeluju na robot. Newton–Eulerovi i Lagrangeovi modeli najčešće se koriste za opis dinamike robota. Naročito su važni u humanoidnoj robotici, gdje ravnoteža ovisi o preciznom modeliranju dinamičkih interakcija.
+
+2.3. Raspodjela mase i stabilnost
+
+Stabilnost robota ovisi o njegovom težištu i području potpore. Kod višenožnih robota stabilnost se održava tako da je projekcija težišta unutar poligona potpore. Kod bipedalnih robota stabilnost je teže postići te zahtijeva stalnu kontrolu uz upotrebu senzora poput žiroskopa i akcelerometara.
+
+3. Senzori za kretanje i percepciju okoline
+
+3.1. Senzori pozicije i brzine
+
+Korišteni su:
+
+ Enkoderi – mjere kutne položaje kotača ili zglobova.
+ IMU senzori (Inertial Measurement Unit) – kombiniraju akcelerometar, žiroskop i magnetometar.
+ GPS sustavi – za pozicioniranje na otvorenom.
+
+3.2. Senzori udaljenosti
+
+Roboti često koriste:
+
+ Ultrazvučne senzore – za detekciju bližih prepreka.
+ LIDAR – precizno skeniranje prostora pomoću laserskih zraka.
+ Stereokamere – omogućuju percepciju u 3D prostoru.
+
+3.3. Vizualni sustavi
+
+Računalni vid omogućuje robotima naprednu percepciju. Dubinsko učenje omogućuje detekciju objekata, praćenje, segmentaciju i procjenu udaljenosti.
+
+4. Algoritmi za kretanje robota
+
+4.1. Planiranje puta
+
+Planiranje puta omogućuje robotima pronalazak optimalne ili izvedive rute. Najpoznatiji algoritmi su:
+
+ A – heurističko pretraživanje najkraćeg puta.
+ D – dinamička varijanta prikladna za promjenjiva okruženja.
+ RRT (Rapidly Exploring Random Tree) – koristi se za nelinearne sustave i 3D prostore.
+
+4.2. Lokalna navigacija
+
+Lokalna navigacija omogućuje izbjegavanje prepreka u realnom vremenu. Korišteni pristupi uključuju:
+
+ Potential Fields – modeliraju prepreke kao odbojne sile.
+ Dynamic Window Approach – odabire optimalne brzine za izbjegavanje sudara.
+
+4.3. SLAM sustavi
+
+SLAM (Simultaneous Localization and Mapping) kombinira procjenu položaja i izradu karte okoline. Najpoznatije metode su EKF‑SLAM, FastSLAM i graf‑bazirani SLAM.
+
+5. Primjeri robota i njihovih sustava kretanja
+
+5.1. Industrijski roboti
+
+Industrijski roboti obično nemaju sposobnost slobodnog kretanja, no postoje autonomni mobilni roboti (AMR) i autonomna vozila AGV u logistici. Kreću se pomoću kotača i koriste napredne navigacijske sustave.
+
+5.2. Humanoidni roboti
+
+Roboti poput ASIMO i Atlas koriste složene modele dinamike i kontrolu ravnoteže. Njihovo kretanje temelji se na imitaciji ljudskog hoda.
+
+5.3. Dronovi
+
+Dronovi koriste raspored rotora za generiranje uzgona i potiska. Sustavi stabilizacije koriste PID regulatore i napredne filtre.
+
+5.4. Podvodni roboti
+
+Primjenjuju se u morskom istraživanju, nadzoru i inženjeringu. Koriste kombinaciju propelera i hidrodinamičkih površina.
+
+6. Izazovi i budući razvoj kretanja robota
+
+6.1. Energetska učinkovitost
+
+Poboljšanje baterijske tehnologije i optimizacija mehaničkih sustava ključna su za produljenje autonomije robota.
+
+6.2. Autonomija i inteligencija
+
+Integracija umjetne inteligencije omogućit će robotima donošenje odluka u realnom vremenu te prilagodbu dinamičkim uvjetima.
+
+6.3. Interakcija čovjek–robot
+
+Sigurni sustavi kretanja u blizini ljudi bit će ključni za integraciju robota u radna okruženja.
+
+6.4. Novelni oblici kretanja
+
+Razvijaju se meki roboti, robotska tkiva te bioinspirirani sustavi koji oponašaju životinje i njihove načine kretanja.
+
+Zaključak
+
+Kretanje robota predstavlja temeljnu komponentu njihove funkcionalnosti. Ono zahtijeva integraciju mehanike, elektronike i naprednih algoritama. Robotski sustavi postaju sve sofisticiraniji, a razvoj senzorike i umjetne inteligencije omogućava im sve veću autonomiju i prilagodljivost. Budućnost robotike donosi nove izazove, ali i mogućnosti u obliku sustava koji će se moći kretati složenim okruženjima uz minimalnu ljudsku intervenciju.

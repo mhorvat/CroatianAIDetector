@@ -1,0 +1,124 @@
+1. Uvod
+
+Otok Vis, najudaljeniji naseljeni otok u Jadranskom moru, predstavlja iznimno zanimljivo područje za klimatološka istraživanja zbog svoje izdvojenosti, maritimnog utjecaja i specifične kombinacije geografskih i atmosferskih čimbenika. Klimatske značajke Visa oblikuju svakodnevni život lokalnog stanovništva, dinamiku turizma, ali i ekosustave karakteristične za ovo jedinstveno okruženje. U promatranju klimatskog sustava od ključne su važnosti tri parametra: temperatura zraka, temperatura površine mora i oborine. Njihov međusobni odnos pomaže u razumijevanju sezonskih i višegodišnjih varijacija, reakcija okoliša na klimatske promjene te potencijalnih rizika, uključujući suše ili ekstremne oborinske epizode.
+
+Ovim se seminarom nastoji prikazati analiza navedenih meteoroloških elemenata na otoku Visu, s naglaskom na njihovu dugoročnu dinamiku i međupovezanost. Poseban naglasak stavljen je na primjenu statističkog Mann-Kendall testa kao metode detekcije trendova te na interpretaciju klimatsko-vegetacijskih uvjeta putem Gaussen-Walter-ovog dijagrama. Kroz strukturirani pregled podataka i dostupne literature analizirat će se kako temperatura zraka, temperatura površine mora i oborine oblikuju klimatski identitet Visa, te kakve se promjene mogu uočiti u kontekstu suvremenih klimatskih trendova.
+
+2. Klimatske karakteristike otoka Visa
+2.1. Geografski položaj i osnovne značajke klime
+
+Otok Vis smješten je približno 45 kilometara od kopna, što ga čini najizloženijim otvorenom moru među dalmatinskim otocima. Zbog toga Vis ima izražen maritimni karakter klime: zime su blage, ljeta vruća, a godišnja amplituda temperature zraka relativno je mala. Usporedimo li Vis s otocima bliže obali, primijetit ćemo postojaniji temperaturni režim te manju varijabilnost u oborinskim ekstremima, premda i tu dolazi do sve češćih oscilacija uslijed regionalnih klimatskih promjena.
+
+Prosječna godišnja temperatura zraka kreće se oko 16 °C, s najtoplijim razdobljem u srpnju i kolovozu te najhladnijim u siječnju. Temperatura površine mora prati ovaj trend, ali uz manju amplitudu zbog sporije reakcije mora na promjene atmosferskih uvjeta. Oborinski režim karakterizira mediteranski uzorak: suha i duga ljeta te kišovite jeseni i zime.
+
+2.2. Utjecaj Jadranskog mora
+
+Otok Vis, okružen dubokim i relativno toplim Jadranskim morem, nalazi se pod snažnim utjecajem morskih struja, insolacije i ciklonalne aktivnosti. More djeluje kao toplinski spremnik koji ublažava temperaturne ekstreme. Zimi zagrijava okolišni zrak, a ljeti ga rashlađuje, doprinoseći stabilnosti klimatskih uvjeta. Zbog udaljenosti od kopna, Vis je manje podložan orografskim oborinama, no istodobno je izložen frontalnim sustavima i jugu, koji nerijetko uzrokuje intenzivne oborine.
+
+3. Temperatura zraka
+3.1. Sezonska i godišnja varijabilnost
+
+Temperature zraka na Visu tipične su za mediteransku klimu s dugim periodima toplog vremena. Ljetne maksimalne vrijednosti često prelaze 30 °C, ali zbog čestog povjetarca subjektivan osjećaj vrućine manji je nego na obali. Zimi rijetko dolazi do negativnih temperatura, a mraz se pojavljuje tek u iznimnim situacijama.
+
+Na godišnjoj razini očituju se dugoročni trendovi porasta prosječne temperature zraka, što je u skladu s općim zagrijavanjem Sredozemlja. Analiza niza duljeg od 30 godina pokazuje postupno povećanje ljetnih noćnih temperatura i produljenje toplog dijela godine, što ima implikacije na vegetaciju, poljoprivredu i sezonsku potražnju za resursima poput vode.
+
+3.2. Primjena Mann-Kendall testa na temperaturu zraka
+
+Mann-Kendall test predstavlja neparametrijsku statističku metodu kojom se procjenjuje postojanje trendova u vremenskim nizovima. Ova metoda posebno je prikladna za klimatske podatke jer ne pretpostavlja normalnu distribuciju i može detektirati monotone trendove.
+
+Primjena testa na dugoročne podatke o temperaturi zraka s Visa najčešće ukazuje na:
+
+pozitivan trend prosječne godišnje temperature,
+
+statistički značajan porast ljetnih minimalnih temperatura,
+
+slabiji, ali prisutan trend rasta zimskih temperatura.
+
+Pozitivan trend implicira da atmosfera oko otoka postupno postaje toplija, što može dovesti do promjena u režimu oborina, režimu isparavanja te u duljini vegetacijske sezone.
+
+4. Temperatura površine mora
+4.1. Dinamika i utjecaj na klimatski sustav otoka
+
+Temperatura površine mora pokazuje znatnu stabilnost zbog velike specifične topline vode. Na Visu ljeti tipično doseže 24–26 °C, dok se zimi spušta na 12–14 °C. Ova relativno blaga varijabilnost utječe na stabilnost lokalnih vjetrova, obalne mikroklime i opću ugodnost za život.
+
+Zbog globalnog zagrijavanja, Jadran bilježi trend porasta temperature površinskog sloja. Posljednjih desetljeća sve je učestalija pojava tzv. "morskih toplinskih valova" – dugotrajnih epizoda nenormalno visokih temperatura mora. Takvi valovi mogu utjecati na morski ekosustav, posebno na vrste osjetljive na temperaturni stres.
+
+4.2. Mann-Kendall analiza temperature mora
+
+Mann-Kendall test za temperaturu površine mora na Visu obično pokazuje:
+
+statistički značajan rast temperatura u toplom dijelu godine,
+
+porast srednjih godišnjih vrijednosti,
+
+slabiji, ali primjetan trend povećanja zimskih temperatura.
+
+Porast temperature mora izravno utječe na lokalnu cirkulaciju zraka, povećava vlagu u atmosferi i potencijalno doprinosi stvaranju lokalnih nestabilnosti koje mogu rezultirati jakim oborinama.
+
+5. Oborine
+5.1. Oborinski režim na Visu
+
+Oborine na otoku Visu imaju izrazito sezonski karakter. Najveće količine javljaju se tijekom jeseni i zime, dok su ljeta gotovo sušna. To je tipičan segment mediteranskog klimatskog režima, gdje ciklone dominiraju hladnijim dijelom godine, dok ljeti prevladavaju stabilne anticiklone.
+
+Godišnja suma oborina na Visu kreće se oko 600–700 mm, ali velika varijabilnost između godina nije neuobičajena. Intenzivni pljuskovi mogu se javiti u prijelaznim razdobljima, osobito u rujnu i listopadu, što može prouzročiti bujične poplave u manjih uvala i naselja.
+
+5.2. Trendovi oborina prema Mann-Kendall testu
+
+Za oborine je karakteristična velika međugodišnja oscilacija, što ponekad otežava detekciju trendova. Mann-Kendall test u klimatskim analizama Visa obično ukazuje na:
+
+nema statistički značajnog dugoročnog trenda ukupnih godišnjih oborina,
+
+blagi pad oborina ljeti, iako većinom statistički neznačajan,
+
+veću učestalost epizoda jakih oborina, što je važna klimatska promjena unutar regije.
+
+Takvi obrasci potvrđuju globalno zapažanje da se oborine u mediteranskim klimama ne smanjuju nužno, ali postaju neredovitije i intenzivnije.
+
+6. Međuodnos temperature zraka, temperature mora i oborina
+6.1. Fizičke veze između klimatskih parametara
+
+Temperatura zraka i temperatura površine mora usko su povezane. Zbog velikog toplinskog kapaciteta mora, porast temperature oceanske površine obično prethodi ili prati porast temperature zraka. Toplije more povećava isparavanje, što rezultira većom vlagom u nižim slojevima atmosfere, a time i potencijalom za razvoj konvektivnih oblaka.
+
+Temperatura zraka utječe na oborine ponajprije kroz dinamiku atmosferske nestabilnosti. Topliji zrak može sadržavati više vodene pare, što u uvjetima prisutne konvergencije i orografskih poticaja rezultira jačim oborinama. U slučaju Visa, iako nema izraženu orografiju, prisutnost jakog juga može izazvati nagle i obilne oborinske epizode.
+
+6.2. Klimatske implikacije za otok Vis
+
+Uočeni trendovi porasta temperature zraka i mora impliciraju potencijalno povećanje evapotranspiracije, produljenje sušnog razdoblja i veći stres na lokalnu vegetaciju. Istovremeno, povećana vlažnost zraka može dovesti do lokalnih intenzivnih kiša, osobito u prijelaznim sezonama. Zbog udaljenosti od kopna, Vis se sporije zagrijava od obale, ali istodobno slabije profitira od kopnenih pljuskova pa je ljeti izložen većem riziku od suše.
+
+7. Gaussen-Walter-ov dijagram
+7.1. Metodologija dijagrama
+
+Gaussen-Walter-ov dijagram prikazuje odnos između temperature zraka i količine oborina te služi za procjenu sušnosti i pogodnosti klimatskih uvjeta za vegetaciju. Na dijagramu se mjeseci s oborinama manjim od dvostruke vrijednosti temperature (P < 2T) označavaju kao sušni.
+
+7.2. Interpretacija za Vis
+
+Za otok Vis dijagram obično pokazuje:
+
+jasno izraženo sušno razdoblje koje traje od lipnja do rujna,
+
+najsušnije razdoblje u srpnju i kolovozu, kada je omjer oborina i temperature minimalan,
+
+vegetacijski povoljnije razdoblje u zimskim i proljetnim mjesecima, kada oborine nadmašuju kriterij vlažnosti.
+
+Ovakav prikaz potvrđuje klasični mediteranski obrazac, ali i potencijalne izazove poput ljetne suše, rizika od požara i potrebe za racionalnim upravljanjem vodnim resursima.
+
+8. Primjeri klimatskih utjecaja na lokalno gospodarstvo i okoliš
+8.1. Poljoprivreda
+
+Vis je poznat po vinogradima i maslinicima, kulturama koje dobro podnose sušno i toplo ljetno razdoblje. No produženje sušnih perioda može dovesti do pritiska na vodne resurse. Povećanje temperatura mora i zraka može utjecati na raniju berbu grožđa, promjene u šećernosti i kiselosti te potrebu za prilagodbom agrotehničkih mjera.
+
+8.2. Turizam
+
+Toplije more produžuje turističku sezonu, ali ekstremna vrućina može smanjiti dnevnu aktivnost turista. Intenzivni pljuskovi i nevere u jesenskom razdoblju mogu predstavljati izazove za nautički turizam.
+
+8.3. Ekosustavi
+
+Zagrijavanje mora mijenja sastav biocenoza, pogoduje širenju toploljubnih vrsta i potencijalno utječe na lokalne riblje populacije. Vegetacija na kopnu izložena je većim sušnim stresovima te povećanim opasnostima od požara.
+
+9. Zaključak
+
+Analiza odnosa temperature zraka, temperature površine mora i oborina na otoku Visu otkriva kompleksan, ali logičan sustav međusobnih utjecaja oblikovan mediteranskim klimatskim karakteristikama i specifičnostima geografskog položaja otoka. Primjena Mann-Kendall testa potvrđuje da su dugoročni trendovi porasta temperature zraka i površine mora jasno prisutni, dok trendovi oborina ostaju složeniji i manje jednoznačni. Porast temperatura, osobito ljetnih, produžuje sušna razdoblja i povećava evapotranspiraciju, što ima značajan utjecaj na ekosustave i ljudske aktivnosti.
+
+Interpretacija putem Gaussen-Walter-ovog dijagrama naglašava snažnu sezonalnost klimatskog režima i jasnu distinkciju između vlažnog i sušnog dijela godine. U kontekstu klimatskih promjena, sušno razdoblje sve je izraženije, a epizode jakih oborina sve učestalije, što zahtijeva prilagodbu lokalnih strategija upravljanja vodnim resursima, poljoprivredom i turizmom.
+
+Otok Vis predstavlja vrijedan primjer prirodnog laboratorija za praćenje klimatskih trendova u Jadranu. Razumijevanje povezanosti između temperature zraka, temperature mora i oborina ključ je za održivo upravljanje resursima i planiranje budućeg razvoja u sve dinamičnijim klimatskim uvjetima.

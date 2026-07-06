@@ -1,0 +1,167 @@
+1. Uvod
+
+Bliska infracrvena spektroskopija (BIS ili eng. NIR – Near Infrared Spectroscopy) posljednjih je desetljeća postala jedna od ključnih analitičkih metoda u mnogim tehnološkim područjima, pa tako sve veću primjenu nalazi i u tiskarskoj industriji. Razvoj novih materijala, posebice specijaliziranih pigmenata, te sve napredniji sustavi računalnog nadzora boje, omogućili su integraciju infracrvenih tehnologija u procese grafičke reprodukcije. Tiskarska tehnologija, tradicionalno usmjerena na vizualnu percepciju u vidljivom dijelu spektra, sada se proširuje prema spektralnim područjima koja ljudsko oko ne registrira. Ova proširena spektralna analiza omogućuje napredne sustave nadzora kvalitete, detekciju skrivenih informacija, autenticiranje tiskanih proizvoda te razvoj novih vizualnih i sigurnosnih efekata.
+
+U središtu mnogih od ovih inovacija nalazi se koncept INFRAREDESIGN, tehnološki pristup koji kombinira klasičnu reprodukciju boje s kontroliranim ponašanjem materijala u bliskom infracrvenom području. Pritom BIS nije samo alat za analizu, već i temelj za razvoj tiskarskih rješenja poput skrivenih slika (hidden image), sigurnosnih markera i otisnih "blizanaca boja" koji u vidljivom spektru izgledaju isto, ali se u infracrvenom području razlikuju. Uvođenje VZ separacije (vidljivo–zrakasto ili vidljivo–infracrveno separiranje) dodatno potiče inovativne pristupe grafičkom dizajnu i sigurnosnom tisku.
+
+Ovaj seminar istražuje načela BIS-a, njegovu primjenu u tiskarskoj tehnologiji, specifične materijale i tehnike te pregled sustava poput ZRGB kamera korištenih za senzoriku i analizu, uz naglasak na mogućnosti integracije skrivenih elemenata i sigurnosnih rješenja u suvremenom tisku.
+
+2. Osnove bliske infracrvene spektroskopije
+
+Bliska infracrvena spektroskopija obuhvaća spektralno područje valnih duljina približno od 780 do 2500 nm. Za razliku od vidljivog spektra (400–700 nm) gdje boju opažamo izravno, NIR područje zahtijeva uporabu specijaliziranih senzora i izvora zračenja. BIS se temelji na mjerenju apsorpcije i refleksije zračenja u bliskom infracrvenom području, pri čemu različiti materijali imaju karakteristične spektralne potpise. Pigmenti, veziva, papiri i zaštitne tiskarske boje često se razlikuju po ponašanju u ovom spektru, iako u vidljivom području mogu izgledati identično.
+
+Analitički principi BIS-a oslanjaju se na interakciju elektromagnetskog zračenja s molekularnim vibracijama. Organski materijali, osobito oni koji sadrže O–H, N–H i C–H skupine, imaju izražena apsorpcijska svojstva u NIR području. Upravo te karakteristike omogućuju primjene u kontroli kvalitete, identifikaciji tvari i detekciji skrivenih uzoraka.
+
+Za tiskarsku tehnologiju BIS je posebno važan jer se pigmenti i drugi tiskovni materijali mogu birati i formulirati tako da u NIR području imaju specifično ponašanje. Na taj način stvaraju se skriveni grafički slojevi vidljivi samo infracrvenim kamerama ili čitačima, što otvara mogućnosti od sigurnosnog tiska do marketinških vizualnih efekata.
+
+3. INFRAREDESIGN: koncept i primjena
+
+INFRAREDESIGN je pristup u kojem se grafička reprodukcija nadopunjuje selektivnim ponašanjem boja u bliskom infracrvenom području. Ideja je da se unutar jednoga otiska kombinira vidljivi dizajn i dodatna slojevita informacija koja se otkriva tek pri snimanju posebnim uređajima. To može biti skrivena slika, dodatni tekst, kod, sigurnosni marker ili diferencijacija boja koje ljudsko oko ne može registrirati.
+
+Primjena INFRAREDESIGN-a zahtijeva precizno poznavanje spektralnih karakteristika pigmenata. Neki pigmenti, premda standardni u vidljivom spektru, imaju osobito jake refleksijske razlike u NIR području, dok drugi zadržavaju stabilnu refleksiju. Kombinacijom ovih materijala može se postići efekt "blizanaca boja": dvije boje identične vizualno, ali potpuno različite pod infracrvenim zračenjem.
+
+Ovakav dizajnerski pristup najčešće se koristi u sigurnosnim elementima, primjerice na identifikacijskim dokumentima, ulaznicama visokog stupnja sigurnosti, vrijednosnicama ili zaštitnim etiketama. No sve češće se koristi i u komercijalne svrhe, primjerice u tiskanim kampanjama koje nude dodatan sloj "interaktivnosti" putem infracrvenih aplikacija ili kamera.
+
+INFRAREDESIGN zahtijeva blisku suradnju dizajnera, tehnologa tiska i stručnjaka za spektroskopiju. Sam proces uključuje odabir pigmenata, kontrolu separacije boja, prilagodbu tiskarskih parametara i testiranje infracrvene reakcije otiska.
+
+4. VZ separacija u grafičkoj pripremi
+
+VZ separacija (vidljivo–zrakasto ili vidljivo–infracrveno separiranje) predstavlja tehniku odvajanja grafičkih elemenata u dva paralelna kanala: jedan namijenjen reprodukciji u vidljivom spektru, a drugi prilagođen detekciji kamerama u infracrvenom području. Klasične CMYK separacije nisu dovoljne kada se želi postići kontrolirano infracrveno ponašanje otiska jer standardni pigmenti nisu uvijek predvidljivi u NIR području.
+
+Proces VZ separacije uključuje sljedeće faze:
+
+Analiza vidljivoga dizajna – određuje se koji elementi moraju biti potpuno integrirani u vidljivom spektru.
+
+Planiranje NIR sloja – definira se skriveni sadržaj ili IR diferencijacija boja.
+
+Odabir pigmenata – za NIR sloj biraju se pigmenti sa specifičnim apsorpcijskim karakteristikama.
+
+Spectral blending – podešavaju se pretisci, prijelazi i intenziteti s obzirom na spektralne odgovore.
+
+Kontrola interferencija – provjerava se kako prekrivanje vidljivog i NIR sloja utječe na konačni rezultat.
+
+VZ separacija omogućuje da dizajn koji se čini standardnim zapravo sadrži više razina informacija. Ovakav pristup tehnološki je zahtjevan, ali nudi veliku kreativnu slobodu, posebno u područjima gdje sigurnost i autentičnost igraju važnu ulogu. Kod INFRAREDESIGN-a VZ separacija je ključna jer omogućuje skrivanje slike bez narušavanja vidljivog otiska.
+
+5. Hidden image i sigurnosni elementi
+
+Jedna od najzanimljivijih primjena BIS-a u tiskarskoj tehnologiji je stvaranje skrivenih slika, odnosno hidden image elemenata. Skrivena slika konstruira se na način da bude potpuno nevidljiva ljudskom oku, a vidljiva jedino pod infracrvenom iluminacijom ili kamerama osjetljivim na NIR područje.
+
+Ovakvi skriveni slojevi obično se izrađuju pomoću pigmenata koji imaju jednak vizualni ton ali različit infracrveni odaziv. Kada se takvi pigmenti kombiniraju, ljudsko oko vidi jednoliku površinu, dok infracrvena kamera otkriva jasan kontrast.
+
+Skriveni elementi mogu imati nekoliko funkcija:
+
+Sigurnosnu – zaštita dokumenata, sprječavanje krivotvorenja, autentifikacija proizvoda.
+
+Informativnu – dodatne informacije za tehničko osoblje ili automatizirane sustave.
+
+Kreativnu i marketinšku – interaktivni efekti u digitalnim kampanjama, skriveni vizualni sadržaji.
+
+Hidden image tehnologija posebno je učinkovita kada se kombinira s uređajima poput ZRGB kamera, koje simultano bilježe podatke u vidljivom i infracrvenom spektru.
+
+6. Blizanci boja: isti izgled, različita spektralna svojstva
+
+Pojam "blizanci boja" odnosi se na dvije boje koje su u vidljivom spektru gotovo nedistinguibilne, ali pod BIS analizom pokazuju potpuno različite spektralne karakteristike. Realizacija ovakvih parova boja zahtijeva vrlo precizan odabir pigmenata i poznavanje njihovog ponašanja u NIR području.
+
+Zašto su blizanci boja važni?
+
+Sigurnost – omogućuju skriveno kodiranje informacija unutar standardnog dizajna.
+
+Automatizacija – strojevi opremljeni NIR senzorima mogu razlikovati elemente nedostupne ljudskog oku.
+
+Kontrola kvalitete – omogućuju automatsko praćenje autentičnosti boje tijekom tiska.
+
+Posebni vizualni efekti – u kombinaciji s kamerama mogu stvarati dinamične ili promjenjive prikaze.
+
+Primjerice, dva tiskovna elementa mogu izgledati identično u CMYK reprodukciji, ali pod NIR kamerom jedan postane gotovo crn, dok drugi ostaje svijetao. Takav efekt omogućuje višestruku vizualnu identifikaciju istog otiska.
+
+7. ZRGB kamera i sustavi za detekciju
+
+Središnje mjesto u primjeni BIS-a zauzimaju ZRGB kamere – uređaji koji kombiniraju standardne RGB senzore s dodatnim kanalom osjetljivim na infracrvenu svjetlost (Z kanal). Time se omogućuje simultano snimanje vidljivih i NIR podataka te analiza razlika između njih.
+
+ZRGB kamera koristi se:
+
+u kontroli kvalitete tiska,
+
+u validaciji sigurnosnih elemenata,
+
+u detekciji skrivenih slika,
+
+u provjeri INFRAREDESIGN sadržaja,
+
+u industrijskim procesima gdje se razlikuju materijali koji se vizualno ne mogu identificirati.
+
+Funkcionalnost ZRGB kamera temelji se na odvojenom procesuiranju signala iz vidljivog i infracrvenog područja. Softverski algoritmi uspoređuju Z kanal s RGB kanalima te generiraju slike koje prikazuju razlike i otkrivaju skrivene strukture, kodove ili anomalije.
+
+U tiskarskoj tehnologiji ZRGB sustavi omogućuju automatizirano prepoznavanje elemenata bez potrebe za ručnom intervencijom. Time se osigurava veća preciznost, brža kontrola kvalitete i smanjena mogućnost ljudske pogreške.
+
+8. Materijali i pigmenti za infracrveni tisak
+
+Da bi se postigao željeni NIR efekt, tiskarske boje moraju se formulirati s posebnim pigmentima koji u infracrvenom području imaju specifična apsorpcijska svojstva. Pigmente možemo podijeliti na:
+
+Reflektirajuće u NIR području – koriste se kada element treba biti vidljiv pod NIR kamerom.
+
+Apsorbirajuće u NIR području – elementi se pod NIR-om zatamnjuju i postaju manje reflektirajući.
+
+Neutralne spektre – pigmente koji imaju minimalnu promjenu između vidljivog i NIR područja.
+
+U proizvodnji boja za INFRAREDESIGN često se kombiniraju standardni CMYK pigmenti s dodacima koji moduliraju NIR ponašanje. Ovisno o cilju, može se dizajnirati otisak koji je vizualno identičan, ali u NIR području daje jasne razlike.
+
+Podloga (npr. papir ili polimerni materijali) također utječe na infracrveno ponašanje jer različiti materijali imaju različite stupnjeve refleksije u NIR području. Stoga je u procesu dizajna nužno provoditi spektroskopska mjerenja kako bi se odredila kompatibilnost boje i podloge.
+
+9. Sigurnosna primjena BIS-a u tiskarskoj tehnologiji
+
+Sigurnosni tisak jedno je od područja gdje je BIS ostvario najveći doprinos. U kombinaciji s tehnikama poput INFRAREDESIGN-a, skrivenih slika i VZ separacija, omogućeno je stvaranje višestruko zaštićenih dokumenata.
+
+Primjeri sigurnosnih aplikacija:
+
+identifikacijski dokumenti (putovnice, osobne iskaznice),
+
+sigurnosni certifikati,
+
+ulaznice i akreditacije,
+
+brendirane etikete i ambalaža,
+
+označavanje proizvoda radi suzbijanja krivotvorenja.
+
+Ključna prednost BIS-a u sigurnosti jest nevidljiva razina informacija. Za razliku od UV zaštite, koja je široko poznata i dostupna, NIR zaštita još je uvijek tehnološki kompleksnija i manje pristupačna potencijalnim krivotvoriteljima.
+
+10. Izazovi i ograničenja u primjeni BIS-a
+
+Iako BIS nudi brojne mogućnosti, njegova primjena u tiskarskoj tehnologiji suočava se s određenim izazovima:
+
+Visoka cijena specijaliziranih pigmenata i uređaja.
+
+Potrebna stručnost – dizajneri moraju poznavati spektroskopska svojstva boja, što izlazi iz okvira klasičnog grafičkog dizajna.
+
+Kompatibilnost materijala – nije svaki pigment kompatibilan s određenim tiskarskim tehnikama.
+
+Stabilnost boja – dugoročno ponašanje pigmenta u NIR području može biti osjetljivo na starenje.
+
+Potrebna oprema za provjeru – bez NIR kamera teško je provoditi kontrolu.
+
+Unatoč navedenom, razvoj senzora postaje sve pristupačniji, a tržište sigurnosnog tiska kontinuirano raste, što potiče širu primjenu BIS tehnologija.
+
+11. Budući razvoj i trendovi
+
+Očekuje se da će daljnji razvoj BIS-a u tiskarskoj tehnologiji biti usmjeren na sljedeća područja:
+
+Je jeftinija i fleksibilnija NIR oprema – miniaturizacija kamera i spektralnih senzora.
+
+Integracija BIS-a s mobilnim uređajima – mobiteli s NIR funkcionalnošću mogli bi otvoriti vrata interaktivnom i proširenom tisku.
+
+Napredne sigurnosne boje – razvoj novih pigmentnih formulacija s kontroliranim spektralnim profilima.
+
+Automatizirani sustavi kontrole kvalitete – strojevi opremljeni ZRGB kamerama i AI analizom.
+
+Kreiranje multisužbenih otisaka – otisaka koji kombiniraju vidljivi, UV i NIR sadržaj za maksimalnu sigurnost.
+
+Kako se industrija razvija, BIS postaje važan alat u modernim grafičkim procesima, čineći tisak ne samo vizualnim već i multispektralnim medijem.
+
+12. Zaključak
+
+Bliska infracrvena spektroskopija donosi nove dimenzije tiskarskoj tehnologiji. Primjena INFRAREDESIGN-a, VZ separacije, skrivenih slika, blizanaca boja i ZRGB kamera otvorila je mogućnosti koje donedavno nisu bile zamislive u klasičnom tisku. Integracijom BIS-a tiskarski proizvodi postaju višeslojni, inteligentni i sigurnosno unaprijeđeni.
+
+Kako tehnologija napreduje, NIR područje postaje sve važnije u dizajnu i kontroli otiska. Mogućnost skrivenog kodiranja informacija, diferencijacije materijala te vizualnih efekata koji nadilaze ljudsku percepciju čini BIS jednim od ključnih područja razvoja buduće grafičke industrije.
+
+Tiskarska tehnologija više se ne promatra samo kroz prizmu boje i estetike, već kao multispektralni sustav koji integrira znanja iz fizike, kemije, informatike i dizajna. U tom kontekstu, bliska infracrvena spektroskopija bit će jedan od temeljnih alata za inovaciju, sigurnost i kreativnost u nadolazećim godinama.

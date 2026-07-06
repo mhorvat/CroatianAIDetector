@@ -1,0 +1,139 @@
+1. Uvod
+
+WordPress je tijekom posljednjih dvadesetak godina prerastao iz jednostavne blogerske platforme u jedan od najrasprostranjenijih sustava za upravljanje sadržajem (CMS) na svijetu. Njegova popularnost temelji se na fleksibilnosti, otvorenosti koda, bogatom ekosustavu dodataka i predložaka, ali i jednostavnom, user-friendly sučelju koje omogućuje korisnicima različitih razina tehničke stručnosti da uspješno kreiraju i uređuju web stranice. Unutar takvog okruženja razvijanje vlastitog, prilagođenog predloška (custom theme) predstavlja važan korak prema izgradnji jedinstvenog vizualnog identiteta, optimiziranog korisničkog iskustva te napredne funkcionalnosti.
+
+Razvoj prilagođenog predloška za WordPress nije samo tehnički izazov, već i proces koji zahtijeva razumijevanje web tehnologija, principa dizajna, interakcije korisnika sa sadržajem te specifičnosti samog CMS-a. Ovaj seminar bavi se temeljnim aspektima tog procesa – od planiranja i analize potreba, preko strukture i tehnologija potrebnih za izradu predloška, pa sve do implementacije, testiranja i održavanja. Naglasak je na praktičnom i metodološkom pristupu koji omogućava izradu održive, sigurne i personalizirane WordPress teme.
+
+Kroz nekoliko poglavlja bit će objašnjeno kako se razvija prilagođeni predložak, koji alati i standardi se pri tome koriste te zašto je takav pristup dugoročno isplativ. Budući da sve veći broj organizacija i pojedinaca želi web stranicu koja odražava njihov brend i specifične funkcionalnosti, prilagođeni predložak često predstavlja najbolji način da se iskoriste sve mogućnosti WordPress sustava.
+
+---
+
+2. WordPress kao CMS platforma
+
+WordPress je open-source CMS koji se temelji na PHP-u i MySQL/MariaDB bazama podataka te integrira suvremene web tehnologije poput HTML-a, CSS-a i JavaScripta. Njegova arhitektura omogućava jednostavnu nadogradnju i proširenje funkcionalnosti bez potrebe za dubokim zahvatima u osnovni kod sustava. Zbog toga je WordPress postao dominantna platforma za izradu web stranica različite namjene – od osobnih blogova, preko poslovnih stranica, pa sve do velikih portala i specijaliziranih aplikacija.
+
+Temelj WordPressa čini sustav predložaka (themes) i dodataka (plugins). Predlošci definiraju vizualni identitet i strukturu prikaza, dok dodaci proširuju funkcionalnosti poput obrazaca, sigurnosnih mehanizama, SEO optimizacije, trgovina i slično. Time se omogućuje iznimna razina personalizacije, ali i modularnosti, budući da korisnici mogu birati između tisuća gotovih rješenja.
+
+Unatoč velikom broju dostupnih gotovih tema, mnoge organizacije sve češće biraju razvoj vlastitih predložaka jer im to omogućuje:
+
+ potpunu kontrolu nad dizajnom,
+ optimizaciju performansi,
+ sigurnosnu stabilnost,
+ jednostavnije održavanje,
+ dugoročno skalabilnu arhitekturu.
+
+Napredni korisnici i profesionalni razvojni timovi često priznaju da su gotove teme, iako praktične, opterećene suvišnim kodom i funkcijama koje se ne koriste, što može usporiti web stranicu, otežati održavanje i negativno utjecati na korisničko iskustvo. Razvoj prilagođenog predloška stoga predstavlja optimalan način da se usklade potrebe korisnika, zahtjevi brenda i mogućnosti platforme.
+
+---
+
+3. Planiranje i analiza potreba
+
+Izrada prilagođenog predloška započinje fazom planiranja koja uključuje analizu potreba korisnika i ciljeva web stranice. Ova faza ključna je kako bi se osiguralo da predložak od početka bude strukturiran prema funkcionalnostima koje će se stvarno koristiti. Analiza obuhvaća nekoliko kategorija:
+
+3.1. Funkcionalni zahtjevi
+To su specifične funkcionalnosti koje web stranica treba pružiti: prikaz portfelja, kontakt obrasci, blog, dinamičke galerije, korisnička registracija i slično. Svaka od tih funkcionalnosti treba biti planirana kako bi se mogla integrirati u predložak bez potrebe za naknadnim preinakama koje bi mogle destabilizirati sustav.
+
+3.2. Vizualni identitet
+Prilagođeni predložak mora biti u skladu s grafičkim standardima brenda. To uključuje izbor boja, tipografiju, raspored elemenata, logotipe, stil slika i ikonografiju. Dizajn treba biti moderan, responzivan i usmjeren na pristupačnost korisnicima.
+
+3.3. Arhitektura sadržaja
+CMS poput WordPressa funkcionira optimalno kada se sadržaj strukturira prema logičkih kategorijama, taksonomijama i tipovima sadržaja (post types). Analizom se utvrđuje je li potrebno definirati prilagođene tipove sadržaja (Custom Post Types), kao što su proizvodi, događaji ili projekti.
+
+3.4. Tehnički zahtjevi i web tehnologije
+Planiranje uključuje odabir tehnologija koje će se koristiti: moderni JavaScript okviri, preprocesori poput SASS/SCSS-a, integracija API-ja ili dodatnih servisa. Također se uzimaju u obzir sigurnosni standardi, kompatibilnost s različitim preglednicima i optimizacija za performanse.
+
+Ova faza čini temelj na kojem se gradi čitav projekt, a dobro strukturiran plan znatno olakšava kasniju izradu predloška.
+
+---
+
+4. Struktura i mehanika WordPress predloška
+
+WordPress predložak sastoji se od skupa datoteka koje zajedno određuju način na koji sustav prikazuje sadržaj. Te datoteke organizirane su prema WordPress hijerarhiji predložaka (template hierarchy), koja definira kojim redoslijedom sustav traži odgovarajuću datoteku da bi prikazao određeni sadržaj.
+
+4.1. Ključne datoteke predloška
+Najvažnije datoteke uključuju:
+
+ style.css – definira osnovne informacije o temi i stilove elemenata,
+ functions.php – središnja datoteka za registraciju funkcionalnosti i učitavanje skripti,
+ index.php – defaultni prikaz ako nijedan drugi predložak nije odgovarajući,
+ header.php, footer.php, sidebar.php – strukturalne komponente stranice,
+ single.php, page.php, archive.php – predlošci za prikaz pojedinih vrsta sadržaja.
+
+Kada se izradi prilagođeni predložak, ove datoteke modularno se povezuju kako bi se omogućilo lako proširivanje i održavanje.
+
+4.2. Template hierarchy
+Hijerarhija predložaka omogućuje WordPressu da automatski odabere odgovarajući predložak ovisno o vrsti sadržaja koju prikazuje. Primjerice, za prikaz pojedinog blog posta WordPress će prvo tražiti single-post.php, zatim single.php, a na kraju index.php.
+
+Razumijevanje ovog mehanizma ključno je za kvalitetan razvoj jer omogućuje stvaranje fleksibilnih struktura koje se lako prilagođavaju tijekom razvoja.
+
+4.3. Child i parent teme
+Razvojni timovi ponekad biraju izradu child teme koja nasljeđuje funkcionalnosti parent teme. Ipak, kod izrade potpuno personaliziranog predloška obično se kreira potpuno novi predložak kako bi se osigurala optimalna kontrola i kompatibilnost.
+
+Ova struktura omogućava personalizaciju bez kompromisa i čini WordPress izuzetno moćnim alatom za web razvoj.
+
+---
+
+5. Implementacija i razvoj prilagođenog predloška
+
+Nakon što je plan izrađen i struktura definirana, slijedi najopširnija faza – sama implementacija.
+
+5.1. HTML, CSS i JavaScript
+Osnova vizualnog dijela predloška počiva na HTML-u i CSS-u. Korištenje modernih CSS metoda, poput Flexboxa ili CSS Grida, omogućuje responzivan dizajn koji se prilagođava prikazima na mobilnim uređajima. JavaScript se koristi za interaktivne elemente poput padajućih izbornika, animacija i dinamičkih komponenti.
+
+5.2. PHP logika i WordPress funkcije
+Budući da je WordPress izgrađen na PHP-u, razvijanje predloška uključuje korištenje WordPress funkcija poput get_header(), get_footer(), the_loop() i drugih. One omogućuju dohvaćanje i prikaz sadržaja iz baze podataka.
+
+5.3. Registracija prilagođenih tipova sadržaja
+Ako web stranica zahtijeva specifične tipove sadržaja, oni se registriraju kroz functions.php. To omogućuje urednicima sadržaja da jednostavno upravljaju informacijama, bez potrebe za dodatnim programiranjem.
+
+5.4. Optimizacija i performanse
+Optimizacija uključuje minimiziranje CSS i JS datoteka, korištenje keširanja, optimizaciju slika i uklanjanje suvišnih funkcija. Brzina je ključna za korisničko iskustvo i SEO.
+
+5.5. Responzivni dizajn i pristupačnost
+Kvalitetan predložak prilagođava se različitim veličinama ekrana i zadovoljava standarde pristupačnosti. To uključuje pravilnu uporabu kontrasta, alt oznaka i semantičkih oznaka.
+
+Ova faza kombinira programerska i dizajnerska znanja te čini srž stvaranja funkcionalnog i estetski privlačnog predloška.
+
+---
+
+6. Testiranje, sigurnost i održavanje
+
+Izrada predloška završava detaljnim testiranjem koje obuhvaća tehničke, vizualne i funkcionalne aspekte.
+
+6.1. Testiranje funkcionalnosti
+Provjerava se radi li svaki element sukladno očekivanjima: izbornici, obrasci, galerije, moduli za komentiranje i sl. Testiranje se provodi u različitim preglednicima i na različitim uređajima.
+
+6.2. Sigurnosni aspekti
+Sigurnost WordPress predložaka uključuje pravilno korištenje funkcija za sanitizaciju i validaciju korisničkog unosa, sprječavanje zloporaba kroz XSS i SQL injection napade te osiguravanje ažuriranosti skripti i knjižnica.
+
+6.3. SEO optimizacija
+Predložak se prilagođava SEO standardima: pravilna uporaba naslovnih oznaka, meta podataka, strukturalnih oznaka i sitemapova.
+
+6.4. Dokumentacija i održavanje
+Kvalitetna dokumentacija omogućuje dugoročno održavanje predloška, lakše uključivanje novih članova tima te brže ispravljanje pogrešaka.
+
+Dugoročno održavanje osigurava da predložak ostane kompatibilan s novim verzijama WordPressa i web tehnologija.
+
+---
+
+7. Prednosti prilagođenog predloška u odnosu na gotova rješenja
+
+Razvoj vlastite WordPress teme ima brojne prednosti:
+
+ Potpuna kontrola nad dizajnom i funkcionalnostima, bez suvišnog koda,
+ Veća brzina i optimizacija jer se implementiraju samo potrebni elementi,
+ Napredna sigurnost zahvaljujući individualnom pristupu i minimiziranju ranjivosti,
+ Bolja skalabilnost, jer je kod organiziran tako da se lako proširuje,
+ Profesionalna prezentacija brenda, što je važno za poslovne i institucionalne web stranice.
+
+Iako prilagođeni predložak zahtijeva više vremena i znanja, njegova dugoročna vrijednost nadmašuje početne troškove razvoja.
+
+---
+
+8. Zaključak
+
+Razvoj prilagođenog predloška za WordPress sustav predstavlja ključnu strategiju za sve koji žele izgraditi web stranicu prilagođenu specifičnim potrebama, s jedinstvenim vizualnim identitetom i optimalnim korisničkim iskustvom. Kroz planiranje, strukturiranje i implementaciju temeljem suvremenih web tehnologija moguće je postići visok stupanj personalizacije, funkcionalnosti i skalabilnosti.
+
+WordPress kao CMS pruža snažan okvir koji omogućuje razvoj tema na modularan i standardiziran način. Prilagođeni predložak donosi brojne prednosti – od poboljšanih performansi preko sigurnosnih aspekata sve do profesionalnog brendiranja. U kontekstu sve zahtjevnijeg digitalnog tržišta, mogućnost kreiranja unikatnih web rješenja postaje ključna konkurentska prednost.
+
+Izrada takvog predloška zahtijeva znanje, iskustvo i multidisciplinarni pristup, no rezultat je dugoročno stabilna, moderna i user-friendly web stranica koja u potpunosti iskorištava potencijal WordPress sustava.

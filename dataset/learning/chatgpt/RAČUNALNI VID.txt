@@ -1,0 +1,143 @@
+Uvod
+
+Računalni vid (engl. Computer Vision) interdisciplinarno je područje koje obuhvaća elemente računarstva, matematike i kognitivnih znanosti, a bavi se omogućavanjem računalima da "vide" i razumiju sadržaj slike ili videa. Primjena računalnog vida postala je ključna u brojnim modernim tehnologijama — od autonomnih vozila, biometrijske identifikacije, medicinske dijagnostike, industrijske automatizacije pa sve do sustava nadzora. Unutar ovog širokog područja, jedan od najistraženijih i najvažnijih zadataka je detekcija i prepoznavanje lica. Detekcija lica predstavlja prvi korak u mnogim sustavima koji rade analizu lica, uključujući prepoznavanje identiteta, procjenu emocija ili verifikaciju korisnika.
+
+U ranim fazama razvoja računalnog vida, detekcija lica bila je iznimno zahtjevan problem zbog velikih varijacija u osvjetljenju, položaju lica, rotaciji, skali, te kvaliteti slike. Prijelomni trenutak dogodio se 2001. godine, kada su Paul Viola i Michael Jones predstavili metodu koja je omogućila iznimno brzo i učinkovito detektiranje lica u realnom vremenu. Njihov pristup temelji se na korištenju Haar značajki, integralnih slika i AdaBoost algoritma za treniranje kaskadnog klasifikatora.
+
+Svrha ovog rada je detaljno objasniti područje računalnog vida, razmotriti problem detekcije lica te objasniti teorijsku pozadinu, strukturu i praktičnu primjenu AdaBoost algoritma, jedne od ključnih komponenti u klasičnoj detekciji lica.
+
+Računalni vid: Osnovni koncepti i izazovi
+
+Računalni vid nastoji replicirati procese ljudske percepcije korištenjem matematičkih modela i algoritama. Zadatci računalnog vida mogu se podijeliti na nekoliko kategorija:
+
+* **Detekcija objekata:** prepoznavanje prisutnosti i položaja objekata unutar slike.
+* **Klasifikacija slika:** pripisivanje cijele slike određenoj kategoriji.
+* **Segmentacija slike:** izdvajanje objekata od pozadine segmentiranjem piksela.
+* **Praćenje objekata:** praćenje kretanja objekta kroz niz video-okvira.
+* **3D rekonstrukcija:** izgradnja trodimenzionalnog modela iz jedne ili više slika.
+
+Izazovi u računalnom vidu proistječu iz velike raznolikosti i nepravilnosti vizualnih podataka. Slike su pod utjecajem noisea, promjena osvjetljenja, perspektive, zaklonjenosti objekata, različitih veličina i pozicija. Za razliku od ljudskog vida, koji je robustan i intuitivan, računalni modeli zahtijevaju sofisticirane matematičke alate kako bi postigli čak i osnovnu razinu interpretacije.
+
+S razvojem dubokog učenja, računalni vid doživio je ogroman napredak, no tradicionalne metode poput one koju su razvili Viola i Jones i dalje imaju povijesnu važnost, te se i danas koriste u aplikacijama gdje je ograničena računalna snaga.
+
+Detekcija lica
+
+Detekcija lica predstavlja proces lociranja regija u slici koje sadrže ljudska lica. To je od temeljne važnosti za aplikacije poput:
+
+* sustava za prepoznavanje identiteta,
+* verifikacije korisnika na mobilnim uređajima,
+* sustava za brojanje osoba,
+* analize ponašanja i emocija,
+* sigurnosnih sustava.
+
+Detekcija lica može se provoditi različitim algoritmima. Prije pojave strojnog učenja, koristile su se metode temeljene na geometrijskim pravilima, modelima kože ili ručno dizajniranim filtrima. Ove metode često su bile nestabilne ili netočne u realnim uvjetima.
+
+Uvođenjem Haar značajki, integralnih slika i AdaBoost algoritma, detekcija lica postala je brza i robusna, što je omogućilo njeno korištenje u realnom vremenu.
+
+Haar značajke
+
+Haar značajke predstavljaju jednostavne pravokutne obrasce koji mjere razliku u intenzitetu između različitih dijelova slike. Na primjer, oči su obično tamniji dio lica u odnosu na obraze, pa se određeni pravokutni filtri mogu koristiti kako bi detektirali tu razliku.
+
+Pretpostavimo da imamo pravokutnu značajku sastavljenu od dva susjedna pravokutnika. Vrijednost značajke dobiva se kao razlika suma piksela u ta dva područja. Ako je rezultat dovoljno blizu očekivanoj vrijednosti (koja je karakteristična za lica), klasifikator može prepoznati potencijalnu regiju lica.
+
+Integralna slika
+
+Jedan od najvećih izazova pri korištenju Haar značajki jest činjenica da se za svaku regiju slike mora računati suma piksela. Da bi se ubrzao proces, koristi se **integralna slika** — struktura podataka u kojoj svaka točka (x, y) sadrži zbroj svih piksela iznad i lijevo od te pozicije.
+
+Integralna slika omogućuje izračun zbroja piksela unutar bilo kojeg pravokutnog područja u konstantnom vremenu, što drastično povećava brzinu algoritma.
+
+Kaskadni klasifikator
+
+Kaskadni klasifikator organizira više slabih klasifikatora u niz etapa. Svaka etapa eliminira većinu negativnih regija (regija koje ne sadrže lice), dok samo mali dio kandidata prolazi u sljedeću etapu. To omogućuje brzo filtriranje većine slike.
+
+U središtu ovog sustava nalazi se AdaBoost algoritam, koji od velikog broja slabih klasifikatora odabire i kombinira najkorisnije kako bi stvorio snažan klasifikator.
+
+AdaBoost: Teorijski okvir i primjena
+
+AdaBoost (Adaptive Boosting) jedan je od najpoznatijih algoritama stroj­nog učenja za povećanje točnosti klasifikatora. Razvili su ga Yoav Freund i Robert Schapire 1996. godine, te je za svoj doprinos dobio značajno priznanje u znanstvenoj zajednici.
+
+Osnovna ideja
+
+Glavna ideja AdaBoost algoritma jest da kombiniranjem više jednostavnih (slabih) klasifikatora možemo stvoriti jedan snažan klasifikator. Slabi klasifikatori su modeli koji jedva nadmašuju slučajnu pogađanja. U kontekstu detekcije lica, slabi klasifikatori često se temelje na pojedinačnim Haar značajkama.
+
+AdaBoost dodjeljuje različite težine treniranim primjerima. Na početku svi primjeri imaju jednake težine, no nakon što se istrenira prvi slabi klasifikator, primjercima koji su pogrešno klasificirani povećava se težina. Na taj način, sljedeći slabi klasifikator posvećuje više pažnje "teškim" slučajevima.
+
+Proces učenja
+
+Koraci AdaBoost algoritma su sljedeći:
+
+1. **Inicijalizacija težina:** svakom primjeru dodjeljuje se jednaka početna težina.
+2. **Treniranje slabog klasifikatora:** algoritam trenira jednostavan model koji minimizira ponderiranu pogrešku.
+3. **Izračun pogreške:** mjeri se koliko je težinski ponderiranih primjera pogrešno klasificirano.
+4. **Izračun koeficijenta α:** koeficijent određuje koliko je određeni slabi klasifikator pouzdan.
+5. **Ažuriranje težina:** težine pogrešno klasificiranih primjera povećavaju se.
+6. **Kombiniranje klasifikatora:** konačni model donosi odluku putem ponderirane sume svih slabih klasifikatora.
+
+Zašto AdaBoost radi dobro?
+
+AdaBoost ima nekoliko ključnih prednosti:
+
+* fokusira se na teške primjere i time poboljšava ukupnu točnost,
+* sprječava overfitting u mnogim praktičnim slučajevima,
+* jednostavan je za implementaciju, ali iznimno efektivan,
+* može se koristiti s različitim vrstama slabih klasifikatora.
+
+U kontekstu detekcije lica, AdaBoost omogućuje odabir najkorisnijih Haar značajki iz ogromnog skupa mogućih značajki. Umjesto da koristi sve značajke, algoritam pronalazi mali skup optimalnih značajki koje su dovolj­ne za točno razlikovanje lica od nelica.
+
+Spajanje AdaBoost algoritma i detekcije lica
+
+Viola-Jones metoda kombinira sva prethodno opisana načela kako bi se dobio visoko učinkovit sustav detekcije lica.
+
+1. **Generiranje velikog skupa Haar značajki** – Na jednoj relativno maloj regiji slike (npr. 24×24 piksela), moguće je generirati desetke tisuća Haar značajki.
+2. **Korištenje integralne slike** – Omogućuje brzu kalkulaciju svih značajki.
+3. **Primjena AdaBoost algoritma** – Odabire najrelevantnije značajke i gradi snažan klasifikator od slabih klasifikatora.
+4. **Izgradnja kaskadnog klasifikatora** – Omogućuje brzo odbacivanje neperspektivnih regija i učinkovitu obradu slike u realnom vremenu.
+
+Rezultat je sustav koji je u svoje vrijeme bio revolucionaran te omogućio implementaciju algoritama detekcije lica u kamerama, fotoaparatima i videonadzoru.
+
+Prednosti i nedostaci tradicionalnih metoda
+
+Iako duboko učenje danas dominira područjem detekcije objekata, tradicionalne metode poput Haar značajki i AdaBoost algoritma i dalje imaju svoje prednosti.
+
+Prednosti
+
+* iznimno brzi u predobradi i evaluaciji,
+* zahtijevaju malo memorije,
+* lako se implementiraju,
+* pogodni za uređaje s ograničenim resursima (npr. embedded sustavi).
+
+Nedostaci
+
+* manje robusni u odnosu na moderne konvolucijske neuronske mreže,
+* osjetljivi na promjene osvjetljenja i orijentacije lica,
+* imaju ograničen raspon značajki u odnosu na reprezentacije naučene dubokim učenjem.
+
+Moderne alternative i usporedba
+
+Današnje metode detekcije lica često se temelje na neuronskim mrežama kao što su:
+
+* CNN-based detektori (npr. MTCNN),
+* SSD i YOLO adaptacije za lice,
+* RetinaFace.
+
+Ovi sustavi automatski uče značajke iz podataka, za razliku od ručno definiranih Haar značajki. Unatoč tome, AdaBoost i Haar značajke i dalje se koriste kada je bitna brzina i niska potrošnja resursa.
+
+Primjena u stvarnom svijetu
+
+Detekcija lica pomoću AdaBoost klasifikatora primjenjuje se u:
+
+* digitalnim fotoaparatima (automatsko prepoznavanje lica),
+* mobilnim aplikacijama za uređivanje fotografija,
+* sustavima videoanalitike,
+* robotskim sustavima,
+* industrijskim aplikacijama.
+
+Zbog jednostavnosti primjene i male računarske potrošnje, ova metoda i danas se nalazi u mnogim komercijalnim sustavima.
+
+Zaključak
+
+Računalni vid predstavlja jedno od najdinamičnijih područja modernog računarstva, a detekcija lica ostaje jedan od njegovih najvažnijih problema. Iako su danas popularne metode temeljene na dubokom učenju, tradicionalni pristupi poput Viola-Jones metode i AdaBoost algoritma i dalje imaju važnu ulogu zbog svoje brzine i učinkovitosti.
+
+AdaBoost omogućuje izgradnju snažnih klasifikatora iz jednostavnih modela, dok Haar značajke i integralna slika omogućuju brzo i učinkovito računanje vizualnih informacija. Kombinacija ovih elemenata omogućila je prvi sustav detekcije lica koji radi u realnom vremenu, čime je otvoren put današnjim naprednim tehnologijama računalnog vida.
+
+Razumijevanje rada ovih klasičnih metoda važno je ne samo iz povijesne perspektive, već i zbog njihove praktične primjene i vrednovanja u kontekstu suvremenih algoritama. Iako možda nisu najpreciznije rješenje u današnje vrijeme, njihova jednostavnost i učinkovitost čine ih neizostavnim dijelom svakog ozbiljnog proučavanja računalnog vida.

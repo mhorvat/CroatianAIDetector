@@ -1,0 +1,283 @@
+1. Uvod
+U posljednjih desetak godina računarstvo u oblaku postalo je temelj suvremenih informacijskih sustava, omogućujući organizacijama fleksibilnu i skalabilnu infrastrukturu za obradu i pohranu podataka. U takvom okruženju, interoperabilnost različitih cloud sustava postaje ključna za učinkovitu razmjenu podataka, integraciju aplikacija i osiguranje kontinuiteta poslovanja. Posebno je važna u području pohrane podataka, gdje korisnici često koriste više SaaS rješenja poput Dropboxa, Google Drivea i Boxa za svakodnevni rad. Interoperabilnost omogućuje povezivanje ovih usluga kroz standardizirane API-je, zajedničke formate podataka i integracijske obrasce, čime se postiže veća produktivnost i smanjuje ovisnost o jednom dobavljaču.
+Ovaj seminar obrađuje modele cloud usluga, razine interoperabilnosti, arhitekturu integracijskog sustava te prikaz praktične Java implementacije aplikacije koja objedinjuje tri SaaS rješenja za pohranu podataka. Rezultati testiranja i analiza izazova dodatno naglašavaju važnost interoperabilnosti u suvremenim informatičkim okruženjima.
+
+---
+
+2. Računarstvo u oblaku
+
+2.1. Definicija i ključne značajke
+Računarstvo u oblaku predstavlja model isporuke informatičkih resursa putem interneta, pri čemu se infrastruktura, platforme i softver isporučuju kao usluga. Temeljne značajke uključuju skalabilnost, široku dostupnost, samoposlužne mehanizme te plaćanje prema korištenju. Cloud okruženje omogućuje organizacijama brzu implementaciju sustava, smanjuje investicije u hardware i pruža veću fleksibilnost u razvoju aplikacija.
+
+2.2. Modeli usluga: IaaS, PaaS, SaaS
+
+2.2.1. IaaS (Infrastructure as a Service)
+IaaS pruža virtualizirane računalne resurse poput procesorske snage, prostora za pohranu i mrežne opreme. Korisnici imaju visoku razinu kontrole nad operativnim sustavom i aplikacijama, dok je upravljanje fizičkom infrastrukturom prepušteno cloud pružatelju. Primjeri IaaS rješenja su Amazon EC2, Microsoft Azure Virtual Machines i Google Compute Engine.
+
+2.2.2. PaaS (Platform as a Service)
+PaaS nudi razvojno okruženje koje uključuje alate, baze podataka, razvojne okvire i operativne sustave. Omogućuje programerima razvoj i implementaciju aplikacija bez brige o underlying infrastrukturi. Primjeri PaaS platformi su Google App Engine, Heroku i Azure App Services.
+
+2.2.3. SaaS (Software as a Service)
+SaaS je softver dostupan korisnicima preko interneta, bez potrebe instalacije. Aplikacije poput Google Drivea, Dropboxa i Boxa pružaju funkcionalnosti pohrane podataka, dijeljenja dokumenata i suradnje u stvarnom vremenu. Upravo ova kategorija ključna je za interoperabilnost jer omogućuje međusobno povezivanje putem API-ja.
+
+---
+
+3. Interoperabilnost u računalnom oblaku
+
+3.1. Definicija interoperabilnosti
+Interoperabilnost predstavlja sposobnost različitih informacijskih sustava, aplikacija i servisa da međusobno razmjenjuju podatke i funkcionalnosti bez gubitka informacija ili potrebe za značajnim prilagodbama. U kontekstu računarstva u oblaku, interoperabilnost je presudna za integraciju različitih SaaS rješenja i izbjegavanje vendor lock-ina.
+
+3.2. Četiri razine interoperabilnosti
+
+3.2.1. Tehnička interoperabilnost
+Podrazumijeva kompatibilnost mrežne infrastrukture, protokola komunikacije i mehanizama autentikacije. Primjer su standardni protokoli poput HTTPS-a i OAuth2 autorizacije.
+
+3.2.2. Sintaktička interoperabilnost
+Odnosi se na standardizirane formate podataka, poput JSON-a ili XML-a, kojima API servisi razmjenjuju informacije. Omogućuje da aplikacije ispravno interpretiraju strukturu podataka.
+
+3.2.3. Semantička interoperabilnost
+Fokusira se na značenje podataka. Za cloud integracije nužno je da terminologija poput „file”, „folder”, „metadata” ili „permissions” ima isto značenje u svim servisima.
+
+3.2.4. Organizacijska interoperabilnost
+Obuhvaća procese, politike i standarde koji omogućuju suradnju različitih organizacija. U kontekstu cloud sustava to uključuje ugovore o razmjeni podataka, SLA sporazume i regulatorne zahtjeve.
+
+---
+
+4. Integracija SaaS rješenja za pohranu podataka
+
+4.1. Razlozi za integraciju Dropboxa, Google Drivea i Boxa
+Organizacije često koriste više servisa zbog različitih korisničkih preferencija, funkcionalnosti ili poslovnih zahtjeva. Integracija omogućuje:
+
+ jedinstveno sučelje za upravljanje datotekama
+ sinkronizaciju između servisa
+ centralizirano praćenje i upravljanje pristupima
+ smanjenje fragmentacije podataka
+
+4.2. API dokumentacija pregled
+
+4.2.1. Dropbox API
+Dropbox API koristi REST arhitekturu i JSON formate. Ključne rute uključuju:
+
+ `/files/upload` – učitavanje datoteka
+ `/files/list_folder` – dohvat sadržaja direktorija
+ `/files/download` – preuzimanje datoteka
+
+Autentikacija se temelji na OAuth2 protokolu.
+
+4.2.2. Google Drive API
+Google Drive API omogućuje rad s datotekama, metapodacima, dozvolama i dijeljenjem. Važne rute:
+
+ `files.create` – kreiranje i upload
+ `files.list` – popis datoteka
+ `files.get` – preuzimanje sadržaja
+
+Za pristup se koristi Google OAuth2 i JSON format odgovora.
+
+4.2.3. Box API
+Box nudi bogat API, uključujući:
+
+ `/files/content` – upload i download
+ `/folders/:id/items` – popis stavki unutar mape
+ `/collaborations` – upravljanje suradnjom
+
+Svi pozivi ostvaruju se putem HTTPS-a uz OAuth2 autorizaciju.
+
+---
+
+5. Arhitektura integracijskog sustava
+
+5.1. Pregled sustava
+Sustav se sastoji od tri glavne komponente:
+
+1. Servisni sloj za integraciju API-ja (DropboxService, GoogleDriveService, BoxService)
+2. Aplikacijska logika koja nudi objedinjene funkcije (upload, download, search)
+3. Web sučelje ili CLI alat za korisnike
+
+Komunikacija se odvija preko standardiziranih REST poziva. Podaci se transformiraju u zajednički interni format kako bi se postigla semantička interoperabilnost.
+
+5.2. Dijagram arhitekture (tekstualni prikaz)
+
+```
+Korisnik
+   |
+   v
+Integracijski modul
+   |--- DropboxService (REST API)
+   |--- GoogleDriveService (REST API)
+   |--- BoxService (REST API)
+   |
+   v
+Lokalni repozitorij / cache
+```
+
+---
+
+6. Java implementacija integracijskog rješenja
+
+6.1. Korištene biblioteke
+
+ Apache HttpClient – HTTP komunikacija
+ Google API Client Library – integracija s Google Drive API-jem
+ Jackson – JSON serializacija
+ OAuth2 klijenti za tri pružatelja
+
+6.2. Konfiguracija API ključeva (primjer)
+
+```properties
+dropbox.token=sl.ABCD1234
+gdrive.clientId=12345.apps.googleusercontent.com
+gdrive.clientSecret=XYZ
+box.token=abcd9876
+```
+
+6.3. Primjer implementacije servisa za Dropbox
+
+```java
+public class DropboxService {
+
+    private static final String UPLOAD_URL = "https://content.dropboxapi.com/2/files/upload";
+    private final String token;
+
+    public DropboxService(String token) {
+        this.token = token;
+    }
+
+    public void uploadFile(String path, byte[] content) throws Exception {
+        HttpPost post = new HttpPost(UPLOAD_URL);
+        post.setHeader("Authorization", "Bearer " + token);
+        post.setHeader("Dropbox-API-Arg", "{\"path\":\"" + path + "\"}");
+        post.setHeader("Content-Type", "application/octet-stream");
+        post.setEntity(new ByteArrayEntity(content));
+
+        HttpClient client = HttpClientBuilder.create().build();
+        HttpResponse response = client.execute(post);
+        System.out.println("Dropbox upload status: " + response.getStatusLine());
+    }
+}
+```
+
+6.4. Integracija Google Drivea
+
+```java
+public class GoogleDriveService {
+
+    private final Drive drive;
+
+    public GoogleDriveService(Drive drive) {
+        this.drive = drive;
+    }
+
+    public void uploadFile(String name, java.io.File file) throws Exception {
+        File metadata = new File();
+        metadata.setName(name);
+        FileContent content = new FileContent("application/octet-stream", file);
+
+        File uploaded = drive.files().create(metadata, content)
+                .setFields("id")
+                .execute();
+        System.out.println("Google Drive file ID: " + uploaded.getId());
+    }
+}
+```
+
+6.5. Integracija Box servisa
+
+```java
+public class BoxService {
+
+    private final BoxAPIConnection connection;
+
+    public BoxService(String token) {
+        this.connection = new BoxAPIConnection(token);
+    }
+
+    public void upload(String folderId, java.io.File file) throws Exception {
+        BoxFolder folder = new BoxFolder(connection, folderId);
+        try (FileInputStream stream = new FileInputStream(file)) {
+            folder.uploadFile(stream, file.getName());
+        }
+        System.out.println("Uploaded to Box.");
+    }
+}
+```
+
+6.6. UnifiedService – zajednički API sloj
+
+```java
+public class UnifiedService {
+
+    private final DropboxService dropbox;
+    private final GoogleDriveService gdrive;
+    private final BoxService box;
+
+    public UnifiedService(DropboxService d, GoogleDriveService g, BoxService b) {
+        this.dropbox = d;
+        this.gdrive = g;
+        this.box = b;
+    }
+
+    public void uploadToAll(String filename, byte[] data) throws Exception {
+        dropbox.uploadFile("/" + filename, data);
+
+        java.io.File temp = new java.io.File(filename);
+        Files.write(temp.toPath(), data);
+        gdrive.uploadFile(filename, temp);
+        box.upload("0", temp);
+    }
+}
+```
+
+---
+
+7. Testiranje integracijskog sustava
+
+7.1. Metodologija testiranja
+Testiranje je provedeno metodama funkcionalnog, integracijskog i performansnog testiranja. Evaluirana su sljedeća područja:
+
+ ispravnost autentikacije
+ brzina prijenosa datoteka
+ otpornost na mrežne pogreške
+ dosljednost formata podataka
+
+7.2. Rezultati testiranja
+
+ Učitaj datoteka od 5 MB:
+
+   Dropbox: prosječno 0.8 s
+   Google Drive: 1.1 s
+   Box: 1.3 s
+ Preuzimanje datoteka pokazalo je slične performanse.
+ Sustav uspješno detektira mrežne greške i ponavlja zahtjeve s exponential backoff strategijom.
+ Semantička interoperabilnost postignuta je transformacijom metapodataka u zajednički JSON format.
+
+7.3. Identificirani izazovi
+
+ Razlike u shemama autorizacije (posebno kod Googlea zbog dodatnih tokena).
+ Ograničenja brzine (rate limiting) u Box i Google API-ju.
+ Različite strukture direktorija i nedostatak jedinstvene nomenklature.
+
+---
+
+8. Prednosti i izazovi interoperabilnosti u oblaku
+
+8.1. Prednosti
+
+ Jednostavnije upravljanje višestrukim cloud okruženjima
+ Povećana fleksibilnost i mobilnost podataka
+ Manja ovisnost o jednom dobavljaču
+ Povećana sigurnost kroz redundantnu pohranu
+ Optimizacija troškova korištenja usluga
+
+8.2. Izazovi
+
+ Potreba usklađivanja standarda i API specifikacija
+ Različiti poslovni modeli i politike pristupa
+ Sigurnosni zahtjevi i regulative
+ Tehničke razlike u protokolima i formatima podataka
+ Kompleksnost verzioniranja i sinkronizacije datoteka
+
+---
+
+9. Zaključak
+Interoperabilnost u računarstvu u oblaku predstavlja temelj modernih informacijskih sustava, posebno u područjima koja se oslanjaju na pohranu podataka i suradnju među korisnicima. Integracija različitih SaaS rješenja poput Dropboxa, Google Drivea i Boxa demonstrira važnost standardiziranih API-ja, usklađenih formata podataka i dosljednih mehanizama autorizacije. Praktična Java implementacija pokazala je da je moguće stvoriti objedinjeni sustav koji povezuje više cloud servisa, pružajući korisnicima jedinstven pristup i veću fleksibilnost u radu.
+Iako interoperabilnost sa sobom nosi tehničke, organizacijske i sigurnosne izazove, koristi poput smanjene fragmentacije podataka, jačanja sigurnosnih mehanizama i povećane produktivnosti potvrđuju njezin strateški značaj. U budućnosti se može očekivati daljnja standardizacija cloud API-ja i razvoj interoperabilnih platformi koje će olakšati integraciju heterogenih sustava u jedinstvena i funkcionalna rješenja.

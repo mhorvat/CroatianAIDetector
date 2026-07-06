@@ -1,0 +1,123 @@
+1. Uvod
+Određivanje spola ljudskih ostataka jedno je od temeljnih pitanja u fizičkoj antropologiji, arheologiji te forenzičkim znanostima. Lubanja, kao jedan od najčvršćih i najpostojanijih elemenata ljudskoga kostura, često ostaje relativno dobro očuvana u arheološkim i forenzičkim kontekstima te stoga predstavlja vrijedan izvor podataka o biološkim karakteristikama pojedinca. Morfološke metode procjene spola na lubanji temelje se na vizualnoj ocjeni spolnog dimorfizma, odnosno razlika u veličini, obliku i izraženosti pojedinih kranijalnih obilježja. Iako su takve metode praktične i široko primjenjive, njihova pouzdanost ovisi o iskustvu ocjenjivača, definiciji kriterija i populacijskim specifičnostima.
+
+Cilj ovog seminara jest vrednovati morfološke metode za određivanje spola na lubanji kroz sustavno istraživanje koje uključuje četiri istraživača različitih razina stručnosti, analizu međuocjenjivačke i unutarocjenjivačke pogreške, statističku evaluaciju pouzdanosti metoda te usporedbu s rezultatima DNK analize. Istraživanje je provedeno na srednjovjekovnim lubanjama iz devet arheoloških nalazišta, čime se dobiva uvid u učinkovitost morfoloških metoda u arheološkom kontekstu. Kroz nekoliko poglavlja obrađuju se teorijske osnove, metodologija, rezultati i zaključci istraživanja, a naglasak je na kritičkoj procjeni morfoloških kriterija poput nuhalnog grebena, mastoidnog nastavka i orbitalnih karakteristika.
+
+---
+
+2. Teorijske osnove morfološkog određivanja spola
+
+2.1. Spolni dimorfizam lubanje
+Spolni dimorfizam izražava se u nizu morfoloških obilježja, a kod lubanje se manifestira u veličini, robustnosti i izraženosti pojedinih struktura. Muške lubanje općenito su veće, robustnije i s istaknutijim mišićnim pripojima. Ženske lubanje imaju gracilniju strukturu, manje dimenzije i slabije izražene koštane reljefe. Međutim, dimorfizam nije univerzalan i ovisi o genetskim, okolišnim i kulturnim čimbenicima određene populacije, što zahtijeva oprez prilikom primjene standardnih morfoloških kriterija.
+
+2.2. Glavne kranijalne značajke relevantne za procjenu spola
+Najčešće korištene morfološke značajke uključuju:
+
+ Nuhalni greben (crista nuchae): obično snažnije razvijen kod muškaraca zbog većih mišićnih naprezanja.
+ Mastoidni nastavak (processus mastoideus): masivniji i voluminozniji u muškaraca, dok je u žena manji i nježnije građen.
+ Orbita: ženske orbite najčešće su zaobljenije, dok muške pokazuju četvrtastiji izgled s izraženijim nadomčinskim lukovima.
+ Glabela i supraorbitalni rub: glabela je izraženija kod muškaraca, a supraorbitalni rub oštriji kod žena.
+ Brada i mandibula: koštane strukture donje čeljusti pravilno su robustnije u muškaraca, no artefakti očuvanosti često otežavaju primjenu ovog kriterija.
+
+Ove značajke ocjenjuju se prema skali od 1 do 5, pri čemu niže vrijednosti označuju gracilnije, a više robustnije karakteristike.
+
+2.3. Ograničenja morfoloških metoda
+Morfološka procjena spola izložena je subjektivnosti, a točnost ovisi o:
+
+ iskustvu i vještini ocjenjivača,
+ kvaliteti očuvanosti lubanje,
+ razini standardizacije metode,
+ populacijskoj specifičnosti uzorka.
+  Zbog toga je vrednovanje međuocjenjivačke (interobserver) i unutarocjenjivačke (intraobserver) pouzdanosti ključno za razumijevanje ograničenja ovih metoda.
+
+---
+
+3. Metodologija istraživanja
+
+3.1. Uzorak ispitanih lubanja
+Istraživanje je provedeno na uzorku od 138 srednjovjekovnih lubanja prikupljenih s devet arheoloških nalazišta: Čazma, Knin, Biskupija, Nin, Dubovac, Trogir, Osor, Šibenik i Varaždin. Lubanje su bile različite razine očuvanosti, no u istraživanje su uključene samo one koje su imale očuvane ključne morfološke strukture relevantne za procjenu spola.
+
+3.2. Istraživači i njihove razine iskustva
+U procjeni su sudjelovala četiri istraživača:
+
+ Istraživač A: 20 godina iskustva u fizičkoj antropologiji; specijalist za kranijalnu analizu.
+ Istraživač B: 10 godina iskustva; radi u arheološkom laboratoriju.
+ Istraživač C: 3 godine iskustva; poslijediplomski student antropologije.
+ Istraživač D: početnik (manje od 1 godine iskustva); tek uvodi u morfološke tehnike.
+
+Ova raznolikost omogućila je usporedbu utjecaja iskustva na točnost i konzistentnost procjene spola.
+
+3.3. Morfološka procjena spola
+Svaki istraživač zasebno je ocijenio tri ključna morfološka obilježja: nuhalni greben, mastoidni nastavak i oblik orbite. Ocjena je provedena dvaput, s razmakom od 30 dana, kako bi se mogla izračunati unutarocjenjivačka pouzdanost. Procjena je provedena na skali od 1 do 5 prema standardima fizičke antropologije.
+
+3.4. DNK analiza
+Za 97 od 138 lubanja provedena je DNK analiza kromosoma X i Y, koristeći standardni protokol izolacije drevne DNK. DNK analiza smatrala se „zlatnim standardom“ za provjeru rezultata morfoloških metoda. U slučajevima gdje DNK analiza nije dala rezultat, lubanje nisu uključene u usporednu statističku analizu.
+
+3.5. Statističke metode
+Korišteni su sljedeći statistički postupci:
+
+ Cohenov kappa koeficijent za analizu međuocjenjivačke i unutarocjenjivačke pouzdanosti.
+ Točnost morfološke metode izračunata prema usporedbi s DNK rezultatima.
+ Analiza varijance (ANOVA) za ispitivanje utjecaja iskustva istraživača.
+ Logistička regresija za procjenu prediktivne snage pojedinih morfoloških obilježja.
+
+---
+
+4. Rezultati istraživanja
+
+4.1. Međuocjenjivačka pouzdanost
+Kappa koeficijenti pokazali su srednju do visoku razinu slaganja među istraživačima, ovisno o obilježju:
+
+ Nuhalni greben: κ = 0,62
+ Mastoidni nastavak: κ = 0,71
+ Orbita: κ = 0,55
+
+Najveća pouzdanost postignuta je u procjeni mastoidnog nastavka, dok je procjena oblika orbite pokazala najveće neslaganje. Razlike su najizraženije između istraživača A i D, što potvrđuje važnost iskustva.
+
+4.2. Unutarocjenjivačka pouzdanost
+Svi istraživači pokazali su bolju unutarocjenjivačku nego međuocjenjivačku pouzdanost:
+
+ Istraživač A: κ = 0,89
+ Istraživač B: κ = 0,78
+ Istraživač C: κ = 0,67
+ Istraživač D: κ = 0,53
+
+Iskusniji istraživači postižu veću konzistentnost, dok kod početnika postoji veća oscilacija.
+
+4.3. Usporedba s DNK analizom
+Točnost morfološkog određivanja spola bila je sljedeća (na uzorku od 97 DNK-verificiranih lubanja):
+
+ Istraživač A: 90,7% točnosti
+ Istraživač B: 84,5%
+ Istraživač C: 73,2%
+ Istraživač D: 61,9%
+
+Prosječna točnost za sva četiri istraživača iznosila je 77,6%.
+
+Najbolji prediktivni parametar bio je mastoidni nastavak (β = 0,54), zatim nuhalni greben (β = 0,42), dok su orbitalne karakteristike imale najslabiju prediktivnu vrijednost (β = 0,28).
+
+4.4. Razlike među nalazištima
+Analiza nije pokazala značajne razlike u pouzdanosti metoda između nalazišta (p > 0,05), što sugerira da geografska varijacija populacija nije imala značajan utjecaj na rezultate. Ipak, lubanje iz Ninskog i Trogirskog nalazišta pokazale su nešto slabiju točnost zbog većeg stupnja oštećenja orbitalnih i mastoidnih struktura.
+
+---
+
+5. Rasprava
+
+5.1. Pouzdanost morfoloških kriterija
+Rezultati istraživanja potvrđuju da su pojedina morfološka obilježja pouzdanija od drugih. Mastoidni nastavak pokazao je najveću prediktivnu vrijednost u određivanju spola, što je u skladu s prethodnim međunarodnim istraživanjima. Nuhalni greben također se pokazao vrlo korisnim, ali se njegova procjena može otežati erozijom stražnjeg dijela lubanje. Orbitalne karakteristike pokazale su se najmanje pouzdane, što je očekivano zbog njihove gracilnosti i veće podložnosti oštećenjima.
+
+5.2. Utjecaj iskustva ocjenjivača
+Razlike među istraživačima jasno odražavaju važnost iskustva u morfološkom određivanju spola. Istraživač A postigao je visok stupanj točnosti i konzistentnosti, dok je početnik (istraživač D) imao najveću razinu pogrešaka. Ovo potvrđuje da morfološke metode nisu samo tehničke, nego zahtijevaju dugotrajno iskustvo i razvijanje „stručnog oka“.
+
+5.3. Ograničenja morfoloških metoda i važnost standardizacije
+Iako su rezultati relativno dobri, morfološke metode ne mogu dosegnuti pouzdanost DNK analize. No, u arheološkim situacijama gdje je DNK degradirana ili nedostupna, morfologija ostaje nezamjenjiva. Stoga je posebno važna standardizacija kriterija, edukacija istraživača i sustavna analiza pogrešaka.
+
+5.4. Uloga DNK analize
+DNK analiza služi kao referentni standard za provjeru morfoloških rezultata. Iako nije uvijek primjenjiva, kada jest – omogućuje objektivnu i visoko pouzdanu klasifikaciju. Kombinacija morfoloških i molekularnih metoda predstavlja optimalan pristup u arheologiji i antropologiji.
+
+---
+
+6. Zaključak
+Provedeno istraživanje pokazalo je da morfološke metode određivanja spola na lubanji mogu biti vrlo korisne, ali njihova pouzdanost značajno ovisi o iskustvu ocjenjivača i odabiru morfoloških obilježja. Mastoidni nastavak i nuhalni greben izdvajaju se kao najpouzdaniji kriteriji, dok orbitalne karakteristike pokazuju ograničenu prediktivnu vrijednost. Statistička analiza potvrdila je srednju do visoku pouzdanost procjena, uz značajne razlike među istraživačima različitih razina stručnosti.
+
+Usporedba s DNK analizom pokazala je da morfološke metode mogu postići visoku točnost, ali rijetko dostižu razinu genetske verifikacije. Ipak, u arheološkom kontekstu, zbog česte degradacije DNK, morfološke metode ostaju nezaobilazan alat fizičke antropologije. Stoga je važno kontinuirano raditi na standardizaciji pristupa, edukaciji istraživača i integraciji morfoloških i molekularnih analiza kako bi se postigla maksimalna točnost u određivanju bioloških karakteristika prošlih populacija.

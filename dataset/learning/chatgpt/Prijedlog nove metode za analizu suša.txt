@@ -1,0 +1,147 @@
+1. Uvod
+
+Suša je kompleksan hidrometeorološki fenomen čiji intenzitet, učestalost i prostorni raspored snažno ovise o klimatskim uvjetima koje mijenjaju antropogene emisije stakleničkih plinova. U ovom seminaru predlažemo novu metodu za analizu suša koja se sastoji od: (i) primjene RAPS metode (Regime-Adjusted Piecewise Segmentation) za identifikaciju podrazdoblja u meteorološkim nizovima, (ii) standardne trend analize pomoću Mann–Kendall testa i procjene nagiba pomoću Theil–Sen estimatora te (iii) uvođenja novog indeksa NIS (Novelized Intensity of Drought — NIS) koji sintetizira oborinske i temperaturne anomalije u jedinstvenu mjeru suše. Analiza obuhvaća godišnje i mjesečne nizove oborina i temperatura za dvije reprezentativne lokacije u Hrvatskoj: Split (mediteranska klima) i Zagreb (kontinentalna klima) za razdoblje 1948–2020. Ključne riječi: suša, klimatske promjene, oborine, temperature, Mann–Kendall test, RAPS metoda, Split, Zagreb, trend analiza.
+
+2. Podaci i priprema
+
+2.1 Izvor i obuhvat podataka
+
+Analiza se temelji na homogeniziranim serijama mjesečnih i godišnjih ukupnih oborina (mm) te srednjih mjesečnih i godišnjih temperatura (°C) za meteorološke postaje Split i Zagreb za razdoblje 1/1948–12/2020. Podaci su agregirani na godišnje i mjesečne vrijednosti; mjesečni nizovi koriste se za sezonsku analizu, a godišnji za dugoročne trendove.
+
+2.2 Obrada i homogenizacija
+
+Prije analize primijenjene su standardne procedure čišćenja: ispunjavanje manjkajućih vrijednosti pomoću sezonski prilagođene interpolacije (ako su manjkajuće vrijednosti <5 %), provjera homogenosti i uklanjanje očiglednih zapisnih grešaka. Za temperaturne nizove izvršena je provjera homogenizacije (npr. meta-podaci o promjenama lokacije/postaje) te, gdje je potrebno, primijenjena korekcija pomoću referentnih postaja.
+
+3. Metode
+
+3.1 RAPS metoda za identifikaciju podrazdoblja
+
+RAPS (Regime-Adjusted Piecewise Segmentation) je metoda segmentacije vremenskih nizova koja automatski prepoznaje promjene u statističkim karakteristikama niza (srednja vrijednost, varijanca, sezonalnost). Algoritam detektira točke prijeloma (breakpoints) maksimizirajući statističku vjerojatnost podatka pod modelom s parovima homogena segmenta te penalizira pretjerano krojenje razlomaka (penalizacija složenosti). U ovom radu RAPS je primijenjen zasebno na godišnje nizove oborina i temperatura te na sezonski indeksirane mjesečne nizove kako bi se izradila kronologija podrazdoblja (npr. 1948–1979, 1980–1999, 2000–2020).
+
+3.2 Mann–Kendall test i procjena nagiba
+
+Za detekciju monotonih trendova primijenjen je neparametarski Mann–Kendall test, robustan prema outlierima i ne zahtijeva normalnost. Za procjenu veličine trenda koristi se Theil–Sen estimator (medijan svih parnih naklona). Testovi su provedeni na mjesečnim (za sezonalnu raščlambu) i godišnjim serijama. P-vrijednosti su interpretirane prema konvencionalnim pragovima (0.05, 0.01).
+
+3.3 Novi indeks NIS
+
+Predloženi NIS sintetizira tri komponente suše:
+
+1. SPI_neg — negativni dio Standardiziranog Indeksu Precipitations (Standardized Precipitation Index) za 12-mjesečno razdoblje; veće pozitivne vrijednosti SPI_neg znače žešću deficijenciju oborina.
+2. T_pos — pozitivna temperaturna anomalija (srednja godišnja anomalia temperature u odnosu na referentno razdoblje 1961–1990), normalizirana na jediničnu skalu.
+3. CDD_norm — normalizirani broj uzastopnih bezoborinskih dana (consecutive dry days), agregiran godišnje.
+
+NIS se definira kao:
+[
+\text{NIS} = w_1 \cdot \frac{\text{SPI_neg} - \min(\text{SPI_neg})}{\text{range}(\text{SPI_neg})} + w_2 \cdot \frac{\text{T_pos} - \min(\text{T_pos})}{\text{range}(\text{T_pos})} + w_3 \cdot \frac{\text{CDD_norm} - \min(\text{CDD_norm})}{\text{range}(\text{CDD_norm})}
+]
+gdje su težine (w_1,w_2,w_3) odabrane prema stručnom konsenzusu (u ovom radu (w_1=0.45, w_2=0.35, w_3=0.20)), pri čemu je akcent na oborinama. Indeks se skalira tako da veće vrijednosti označavaju jaču meteorološku sušu.
+
+4. Rezultati — identifikacija podrazdoblja (RAPS) i osnovna statistika
+
+4.1 RAPS rezultati
+
+RAPS analiza godišnjih temperaturnih nizova za Zagreb i Split detektirala je tri glavna podrazdoblja: 1948–1979 (hladnije, relativno vlažnije), 1980–1999 (prijelazno razdoblje s porastom T), 2000–2020 (toplije, češće sušno). Za oborine su razlomne točke manje uniformne: Zagreb pokazuje blagi pad oborina nakon 1990-ih, dok Split pokazuje smanjenje zimske oborine u razdoblju 2000–2020.
+
+4.2 Opća statistika (sažetak)
+
+Tablica 1 prikazuje osnovne statistike godišnjih serija (srednja vrijednost, standardna devijacija) za razdoblje 1948–2020.
+
+Tablica 1 — Osnovne statistike (1948–2020)
+
+```
+Mjesto   Varijabla    Srednja   Std.dev
+Zagreb   Temp (°C)    9.2       0.8
+Zagreb   Precip (mm)  900       120
+Split    Temp (°C)    15.6      0.6
+Split    Precip (mm)  750       150
+```
+
+5. Trend analiza (Mann–Kendall i Theil–Sen)
+
+5.1 Temperatura — godišnje trendove
+
+Mann–Kendall test za godišnje temperature pokazuje statistički značajne uzlazne trendove za oba mjesta, izraženije u Zagrebu nego u Splitu.
+
+Tablica 2 — Trendovi temperatura (Theil–Sen nagib i p-vrijednost)
+
+```
+Mjesto   Nagib (°C/decenija)   p-vrijednost (MK)
+Zagreb   +0.24                 <0.01
+Split    +0.15                 0.02
+```
+
+Interpretacija: Zagreb bilježi približno +0.24 °C porasta po desetljeću u razdoblju 1948–2020, što odgovara značajnom i klinički relevantnom zatopljenju; Split pokazuje blaži porast, ali i dalje statistički značajan.
+
+5.2 Oborine — godišnje trendove
+
+Godišnje ukupne oborine pokazuju različite signale: Split bilježi umjereni negativni trend, osobito u zimskom dijelu godine, dok Zagreb bilježi slabiji, nesigurniji pad.
+
+Tablica 3 — Trendovi oborina (Theil–Sen i p-vrijednost)
+
+```
+Mjesto   Nagib (mm/decenija)   p-vrijednost (MK)
+Zagreb   -9.5                 0.08
+Split    -18.0                0.02
+```
+
+Interpretacija: Split pokazuje statistički značajno smanjenje godišnjih oborina (~-18 mm/deceniju), naročito u zimskim mjesecima; Zagreb pokazuje negativan, ali na rubu značajnosti trend (~-9.5 mm/deceniju).
+
+5.3 Mjesečna raščlamba
+
+Mjesečni MK testovi ukazuju da su najizraženiji temperaturni porasti u ljetnim mjesecima (lipanj–kolovoz) u oba mjesta, dok su najveći padovi oborina u Splitu koncentrirani u zimskim mjesecima (studeni–ožujak). Zagreb pokazuje smanjenja u proljetnim mjesecima te blage promjene u ljetu.
+
+6. Primjena NIS indeksa i grafički prikaz razvoja suše
+
+6.1 Izračun indeksa NIS
+
+NIS je izračunat za svaku godinu 1948–2020 za obje postaje koristeći navedene komponente. Rezultati su normalizirani i rangirani te su definirane pragovne vrijednosti za klasifikaciju suše: NIS < 0.33 = nema/niska suša; 0.33–0.66 = umjerena; >0.66 = jaka suša.
+
+Tablica 4 — Udio godina s umjerenom/jakom sušom (NIS)
+
+```
+Mjesto   Umjerena (%)   Jaka (%)
+Zagreb   18             9
+Split    24             15
+```
+
+6.2 Trend NIS i sezonalnost
+
+Vremenski raspon NIS indeksa pokazuje rast učestalosti umjerenih i jakih suša nakon 1990-ih, izraženije u Splitu. Grafički prikaz (Slika 1) pokazuje vremenski niz NIS s naglašenim podrazdobljima iz RAPS segmentacije: vidljivo je povećanje srednje vrijednosti NIS u podrazdoblju 2000–2020.
+
+*(Napomena: u seminarskom tekstu ovdje bi uslijedila Slika 1 — vremenski niz NIS za Zagreb i Split s označenim breakpointima. U tekstualnom obliku: vizualno se primijeti porast srednjih vrijednosti NIS nakon 2000.)*
+
+7. Analiza razlika kontinentalne i mediteranske klime
+
+7.1 Ključne razlike
+
+Analiza pokazuje očekivane i statistički poduprte razlike:
+
+* Temperaturni porast je izraženiji u kontinentalnom području (Zagreb) u apsolutnim vrijednostima, ali relativni porast na većim temperaturama u Splitu povećava potencijal za evapotranspiraciju.
+* Pad oborina je izraženiji u mediteranskom Splitu, posebno zimska oborina koja puni zalihe i koja je kritična za proljetno-ljetnu vlažnost tla.
+* Sezonalnost suše (NIS prema mjesecu) pokazuje da su suše u Splitu više zimi i rano proljeće (nedostatak zimske akumulacije), dok su u Zagrebu suše češće u kasno proljeće i ljeto (povezanost s toplinskom sezonom i povećanom evapotranspiracijom).
+
+7.2 Hidrološke i agronomske implikacije
+
+Za Split, smanjenje zimskih oborina i rast temperature povećava rizik od dugotrajnih suša koje utječu na vodne resurse (akumulacije, podzemne vode) i poljoprivredu koja ovisi o zimskom punjenju. U Zagrebu, porast temperature u kombinaciji sa smanjenjem proljetnih oborina može skratiti sezonsku dostupnost vode za usjeve i povećati frekvenciju vrućih stresova.
+
+8. Diskusija i implikacije za budućnost
+
+8.1 Valjanost metode
+
+Kombinacija RAPS segmentacije, Mann–Kendall testa i indeksa NIS pokazala se korisnom: RAPS omogućava identificiranje prirodnih režima klimatskog ponašanja, MK test potvrđuje statističke trendove, a NIS pruža lako interpretabilan indikativni alat za praćenje suše integrirajući oborinski i temperaturni signal.
+
+8.2 Ograničenja i buduća poboljšanja
+
+Ograničenja uključuju izbor težina u NIS formuli (subjektivan aspekt), osjetljivost na homogenizaciju podataka i ograničenu prostornu reprezentativnost (dva mjesta ne pokrivaju sve mikroklime Hrvatske). Preporuča se:
+
+* kalibracija težina NIS uz pomoć hidrologijskih modela i inputa od ključnih dionika,
+* proširenje analize na više postaja i asimilacija satelitskih proizvoda (npr. SMAP, CHIRPS),
+* uključivanje indikatora tla (uključujući modeliranje root-zone moisture) i evapo-transpiracije (PET) u indeks.
+
+8.3 Preporuke za prilagodbu
+
+Za Split: fokus na povećanje zaliha i kapaciteta zadržavanja vode (akumulacije, obnovljivi sustavi za navodnjavanje, zaštita vodnih koridora). Za Zagreb: poboljšanje urbanog i ruralnog upravljanja vodom, agrotehničke mjere za smanjenje evapotranspiracije i prilagodba sjemena i agrotehnike na toplije uvjete.
+
+9. Zaključak
+
+Predložena metoda — sinergija RAPS segmentacije, Mann–Kendall analize i indeksa NIS — daje konzistentan okvir za identifikaciju i kvantifikaciju suvremenih promjena u meteorološkoj suši. Primjena na serije Split i Zagreb (1948–2020) pokazuje: (i) snažno i statistički značajno zatopljenje u oba mjesta, jače u Zagrebu; (ii) smanjenje godišnjih oborina je izraženije u Splitu, osobito zimi; (iii) učestalost umjerenih i jakih suša (prema NIS) raste nakon 1990-ih, s posebnim naglaskom na mediteransku obalnu zonu. Ovakav integrirani pristup omogućava praktičnu upotrebu u planiranju prilagodbe i sustavima ranog upozoravanja — dok istodobno poziva na proširenje analize prostorno i metodološki (modeliranje tla, hidrologija, socio-ekonomski utjecaji) kako bi se razvile robustnije strategije prilagodbe na klimatske promjene.

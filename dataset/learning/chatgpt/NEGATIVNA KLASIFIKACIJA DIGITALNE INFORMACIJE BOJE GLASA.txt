@@ -1,0 +1,57 @@
+1. Uvod
+
+Boja glasa (timbre) predstavlja složen skup akustičkih svojstava koji omogućuju razlikovanje zvukova iste visine i glasnoće — kod ljudskog glasa ona je osobito bogata zbog harmonika, oblikovanja spektralnog omotača i vremenskih značajki izvora i filtera. Definicije i operativne deskriptore timbra razvijeni su kroz radove akustike i auditiveknih znanosti kako bi se omogućilo kvantificiranje perceptivnih atributa u signalnoj domeni. [1][2]. 
+
+Klasifikacija boje glasa u digitalnom okruženju podrazumijeva pretvaranje signalnih karakteristika u reprezentacije koje model strojne inteligencije može koristiti. Tradicionalno se koriste spektro-temporalni deskriptori poput MFCC, spektralnog centroids, spektralnog omotača i sličnih karakteristika, no alternativne transformacijske domene (npr. Walsh–Hadamardova transformacija) pokazuju potencijal zbog računskih i reprezentacijskih svojstava. [1][3]. 
+
+U ovom radu „negativna klasifikacija“ interpretira se kao skup metoda usmjerenih na modeliranje i detekciju negacijskih područja u zadatku prepoznavanja boje glasa — to uključuje open-set prepoznavanje, anomalijsku detekciju i one-class pristupe kojima se želi pravilno odbaciti nepripadni (negativni) uzorci. Takav je pristup relevantan u sigurnosnim, forenzičkim i biometriskim aplikacijama, kao i u obradi govora gdje je potrebno razlikovati željene glasovne karakteristike od poremećaja ili promjena u boji glasa. [6][7]. 
+
+2. Teorijska polazišta: boja glasa i karakteristične značajke
+
+Boja glasa rezultat je složene interakcije izvora (glasnice) i filtracije (vokalni trakt), pri čemu se perceptivno relevantne dimenzije mogu podijeliti na spektralne (npr. višestruki alikvotni tonovi i omotač spektra), vremenske (napoj, napad, izrazitost transijenata) i prosodične značajke (intenzitet, trajanje, intonacija). Kroz percepcijske studije razvijeni su brojni deskriptori koji se povezuju s imenovanim kvalitetama (topao/hladan, tamni/svijetli), a empirijska validacija tih deskriptora jedan je od temelja kvantitativne analize timbra. [1][19]. 
+
+Karakteristična značajka boje glasa u ovom kontekstu definira se kao mjerljiva veličina interoperabilna s klasifikacijskim sustavima — primjerice koeficijenti MFCC-a, parametri linearno-prediktivne analize (LPC), spektro-temporalne banalizacije, kao i parametri izvedeni iz transformacija poput DFT, DWT ili Walsh–Hadamard (WHT). Važno je da odabrane značajke sadrže dovoljnu diskriminativnost za ciljani zadatak, ali i da budu robusne prema varijacijama govornika, mikrofonima i uvjetima snimanja. [1][2]. 
+
+3. Walsh–Hadamard-ova transformacija i koeficijenti
+
+Walsh–Hadamardova transformacija (WHT) je ortogonalna, nedistribuirana transformacija bazirana na sekvencama ±1 koja omogućuje brzu računsku implementaciju (FWHT — Fast Walsh–Hadamard Transform). WHT preslikava vremenski signal u bazu pravokutnih valova (Walshove funkcije) umjesto trigonometrijskih baza Fourierove transformacije; zbog toga WHT ima prednosti u jednostavnosti računanja, niskoj numeričkoj kompleksnosti i povremenoj interpretacijskoj pogodnosti za određen spektar signala. [3][4]. 
+
+U govornoj obradi WHT se koristio za kompresiju, filtraciju i ekstrakciju značajki te je u suvremenim radovima ponovno aktualiziran zbog efikasnosti u obradi velikih dimenzija i u kombinaciji s drugim metodama (npr. EMD, FFT) za poboljšanje reprezentacije motoričkih i disfunkcionalnih govornih obilježja. Studije su pokazale da kombinacija FWHT i drugih dekompozicija može pojačati relevantne spektro-temporale strukture za specifične zadatke poput detekcije disartričnog govora. [5][13][9]. 
+
+Walsh–Hadamard-ovi koeficijenti, formulirani kao projekcije signala na Walsh-baze, mogu poslužiti kao karakteristične značajke: oni kvantificiraju energiju i obrazce unutar neobičnih (pravokutnih) spektralnih komponenti koje ponekad bolje razdvajaju određene tipove šuma, modulacijskih artefakata ili specifičnih harmoničkih odnosa prisutnih u boji glasa. Njihova binarna/amplitudna priroda olakšava jednostavne klasifikacijske modele i hardware-prijateljsku implementaciju. [3][4]. 
+
+4. Negativna klasifikacija: koncept i metode
+
+Negativna klasifikacija u kontekstu boje glasa obuhvaća skup tehnika kojima je cilj precizno identificirati uzorke koji ne pripadaju niti jednoj od poznatih pozitivnih klasa (tj. otkriti „negativne“ ili nepoznate primjere). Formalno to podrazumijeva open-set prepoznavanje, one-class klasifikaciju, anomalijsku detekciju i negative-selection algoritme inspirirane biološkim sustavima. [6][7][20]. 
+
+Open-set pristupi kombiniraju klasične klasifikatore s mehanizmima za procjenu nepouzdanosti (uncertainty estimation) te često koriste generativne modele ili reprezentacijske granice kako bi detektirali kada ulaz pripada nepoznatom domenu. U zvučnoj domeni, autoenkoderi trenirani samo na „pozitivne“ primjere često se koriste za anomalijsku detekciju: veliki rekonstrukcijski gubitak signalizira vjerojatnu anomaliju. U praksi se ove metode primjenjuju na detekciju patološkog govora, neželjenih promjena boje glasa ili lažiranja biometrijskih atributa. [7]. 
+
+One-class i negative-selection paradigme pokušavaju modelirati samo „normalu“ (pozitivnu klasu) i sve ostalo tretiraju kao negativu. U kontekstu boje glasa to može značiti modeliranje uobičajene boje govornika u zadanim uvjetima i označavanje odstupanja (npr. disfonija, lažno predstavljeni glas) kao negativnih. Takvi sustavi teškoće imaju s izborom pragova i reprezentacijom varijabilnosti normalne klase, što motivira korištenje robusnijih značajki i višedimenzionalnih granica. [6][11]. 
+
+5. Integracija Walsh-Hadamardovih koeficijenata u negativnu klasifikaciju
+
+Walsh-Hadamardovi koeficijenti mogu igrati ulogu u pozitivnoj/negativnoj selekciji na nekoliko razina. Kao brza transformacija, WHT omogućuje ekstrakciju značajki niske kompleksnosti koje su prikladne za real-time sustave; u kombinaciji s metodama kao što su autoenkoderi ili one-class SVM, koeficijenti WHT-a mogu poslužiti kao ulazni vektori koji zadržavaju ključne oblikovne informacije spektralnog omotača. Kompozitni pristupi (npr. FFT → EMD → FWHT) također su dokumentirani i pokazuju poboljšanje u detekciji disfunkcija govora kroz naglašavanje relevantnih frekvencijskih komponenti. [5][9][4]. 
+
+Primjena u negativnoj klasifikaciji uključuje: (1) treniranje modela na WHT-baziranim značajkama iz pozitivne klase, (2) definiranje metrika distance/rekonstrukcije u WHT-domeni te (3) fuziju WHT-značajki s tradicionalnim spektro-temporalnim deskriptorima radi povećanja robusnosti. Prednost ovakve integracije je smanjenje računskih troškova i mogućnost implementacije na ugradbenim sustavima (npr. uređaji za nadzor zdravlja glasa ili autentikaciju). [3][13]. 
+
+6. Primjeri primjene i ograničenja
+
+Primjene negativne klasifikacije boje glasa uključuju: forenzičku analizu (otkrivanje lažiranja ili skrivanja identiteta), medicinsku dijagnostiku (otkrivanje patoloških promjena u boji glasa), sigurnosne biometrije (odbijanje neautoriziranih glasovnih zapisa) i prilagođenu obradu govora u komunikacijskim sustavima (filtriranje neželjenih glasova). Svako od tih područja zahtijeva pažljivo kalibriranje sustava zbog varijabilnosti govornika, uređaja i okolišnih uvjeta. [6][7]. 
+
+Međutim, ograničenja su značajna: (1) perceptivna višeznačnost termina kao što su „topao“ ili „hladan“ glas otežava dosljedno označavanje podataka; (2) robustnost prema šumu i kanalnim promjenama često zahtijeva augmentaciju i adaptaciju modela; (3) open-set i one-class pristupi pate od problema balansiranja osjetljivosti i lažno-pozitivne stope; (4) WHT-značajke, iako računskom jednostavne, ne garantuju superiornu diskriminaciju u svim scenarijima i često su najbolje u fuziji s drugim deskriptorima. [1][19][3]. 
+
+7. Preporuke za dizajn sustava
+
+Za praktičnu implementaciju negativne klasifikacije boje glasa preporučuju se sljedeći koraci:
+
+Detaljna definicija problema i skupljanje visokokvalitetnog korpusa s jasno označenim pozitivnim primjerima boje glasa koja se modelira. [1]. 
+
+Eksperimentiranje s fuzijom značajki: kombinacija MFCC/LPC/spektralnih omotača s WHT-koeficijentima i vremenskim deskriptorima. [1][3].
+
+Upotreba autoenkodera ili one-class modela s pragovima koji se kalibriraju na osnovnim metrikama kao što su ROC/PR krivulje; u open-set scenarijima koristiti dodatne metapodatke i semantičke atribute kada su dostupni. [7][6]. 
+
+Validacija u realnim uvjetima s različitim kanalima i govorničkim populacijama te uključivanje augmentacijskih tehnika za bolju generalizaciju. [11].
+
+8. Zaključak
+
+Negativna klasifikacija digitalne informacije boje glasa predstavlja interdisciplinarni izazov u kojem se spajaju akustika, percepcija i strojno učenje. Karakteristične značajke boje glasa moraju biti pažljivo odabrane i validirane kako bi modeli mogli pouzdano razlikovati poznate od nepoznatih ili neželjenih uzoraka. Walsh–Hadamard-ovi koeficijenti nude računsku i reprezentacijsku alternativu koja u kombinaciji s modernim metodama (autoenkoderima, open-set tehnikama) može poboljšati detekciju negativnih klasa, osobito u situacijama gdje su računarski resursi ograničeni. Daljnja istraživanja trebala bi fokusirati kvantitativnu usporedbu WHT-baziranih značajki s klasičnim spektralnim opisima u različitim open-set scenarijima te razvijanje protokola za standardizirano označavanje perceptivnih atributa boje glasa. [3][5][6][1].

@@ -1,0 +1,217 @@
+1. Uvod
+
+Razvoj digitalne radiologije i sve šira primjena računalnih metoda u medicini otvorili su mogućnost preciznije, brže i učinkovitije analize medicinskih snimaka. Rendgenske snimke, kao najstariji oblik medicinskog oslikavanja, i dalje su jedan od ključnih izvora informacija pri donošenju dijagnostičkih odluka. No, kako bi se iz njih izvukao puni potencijal, nužno je provesti sustavno izdvajanje značajki slike koje omogućuje detekciju relevantnih struktura, identifikaciju patoloških promjena te automatizaciju dijagnostičkih procesa. U tom kontekstu, MATLAB se ističe kao jedan od najkorištenijih alata za obradu i analizu medicinskih slika, zahvaljujući svojoj robustnosti, velikom broju ugrađenih funkcija te mogućnostima vizualizacije i automatizacije.
+
+Ovaj seminar obrađuje teorijske i praktične aspekte izdvajanja značajki rendgenskih snimaka, s posebnim naglaskom na vrste značajki, metode njihovog izdvajanja, prednosti i ograničenja korištenja MATLAB-a te primjene u medicinskoj dijagnostici. Cilj je prikazati kako se primjenom suvremenih računalnih tehnika poboljšava objektivnost, pouzdanost i brzina interpretacije rendgenskih nalaza.
+
+2. Teorijski okvir izdvajanja značajki
+
+2.1. Pojam i važnost značajki slike
+
+Značajke slike predstavljaju numeričke ili opisne informacije dobivene analizom vizualnih elemenata unutar digitalne slike. One omogućuju strojevima i algoritmima da interpretiraju sadržaj slike na sličan način kao i ljudsko oko, ali na sustavan, ponovljiv i objektiviziran način. Kod rendgenskih snimaka, značajke služe za identificiranje anatomskih struktura, detekciju abnormalnosti, razlikovanje između zdravog i promijenjenog tkiva te klasifikaciju različitih patoloških stanja.
+
+Općenito, značajke slike dijele se na nekoliko kategorija: statističke značajke, teksturalne značajke, geometrijske značajke te frekvencijske značajke. Svaka od njih donosi specifične informacije, a u kombinaciji pružaju širok spektar podataka potrebnih za automatiziranu analizu.
+
+2.2. Rendgenske snimke kao poseban tip medicinske slike
+
+Rendgenske snimke temelje se na diferencijalnoj apsorpciji rendgenskih zraka u tkivu. Različita gustoća struktura proizvodi varijacije u intenzitetu, što se prikazuje kao različite nijanse sive boje. Budući da su rendgenske snimke projekcije trodimenzionalnih struktura u dvodimenzionalni prostor, one su podložne preklapanju anatomskih elemenata, šumu i artefaktima. Time se dodatno naglašava važnost kvalitetnih metoda izdvajanja značajki koje omogućuju izoliranje relevantnih informacija od neželjenih elemenata.
+
+3. Metode izdvajanja značajki rendgenskih snimaka
+
+3.1. Predobrada rendgenskih snimaka
+
+Predobrada se provodi prije samog izdvajanja značajki kako bi se poboljšala kvaliteta slike i pripremila za analizu. Ključne tehnike uključuju:
+
+Filtriranje šuma: korištenje bilateralnih filtara, Gaussovih filtara ili medijalnih filtara za uklanjanje šuma uz očuvanje rubova.
+
+Poboljšanje kontrasta: prilagodba histograma, CLAHE (Contrast Limited Adaptive Histogram Equalization) i druge metode poboljšanja vidljivosti struktura.
+
+Normalizacija: skaliranje intenziteta kako bi se osigurala konzistentnost između različitih snimaka.
+
+U MATLAB-u se predobrada izvodi funkcijama poput imadjust, histeq, medfilt2 i imgaussfilt, što omogućuje brzu implementaciju ovih osnovnih procedura.
+
+3.2. Izdvajanje rubova i kontura
+
+Rubovi u rendgenskim snimkama sadrže važne informacije o granicama kostiju, organa i patoloških tvorbi. Najčešće korištene metode su:
+
+Sobelov operator
+
+Cannyjev detektor
+
+Prewittov operator
+
+Laplacijski operator
+
+Cannyjev detektor često se smatra zlatnim standardom jer pruža optimalan odnos između detekcije, lokalizacije i otpornosti na šum. U MATLAB-u se koristi funkcija edge, koja implementira sve navedene algoritme.
+
+3.3. Teksturalne značajke
+
+Tekstura predstavlja raspored tonalnih varijacija na slici, a posebno je važna u dijagnostici bolesti pluća, dojke i kostiju. Najčešće metode izdvajanja teksture su:
+
+GLCM (Grey Level Co-occurrence Matrix) – temelji se na vjerojatnosti pojave određenih parova intenziteta na određenoj udaljenosti.
+
+GLRLM (Grey Level Run Length Matrix) – analizira sekvence istih razina sivila.
+
+Lawsovi filteri – koriste se za detekciju mikrotekstura.
+
+LBP (Local Binary Patterns) – kodiraju lokalne odnose između piksela.
+
+Ove metode omogućuju dobivanje statističkih mjera poput energije, homogenosti, kontrasta i entropije, koje se koriste u klasifikaciji medicinskih stanja.
+
+3.4. Geometrijske značajke
+
+Geometrijske značajke uključuju oblike, dimenzije i odnose između anatomskih struktura. Važne su u analizi prijeloma, deformacija kostiju, veličine tumora ili širine krvnih žila. Primjenjuju se tehnike poput:
+
+segmentacije objekata (npr. Otsuova metoda, watershed algoritmi, aktivni konturi),
+
+izračuna površine, opsega, ekscentriciteta i momenta oblika,
+
+praćenja anatomskih kontura.
+
+MATLAB nudi funkcije kao što su regionprops, bwlabel i polyshape, koje omogućuju izračun geometrijskih parametara na segmentiranim strukturama.
+
+3.5. Frekvencijske značajke
+
+Frekvencijske metode analiziraju sliku u domeni frekvencija, što omogućuje lakše otkrivanje periodičnih i strukturalnih uzoraka. Najčešće se koriste:
+
+Fourierova transformacija
+
+Wavelet transformacija
+
+Wavelet transformacija posebno je korisna u medicinskim slikama jer omogućuje multirezolucijsku analizu i odvajanje globalnih i lokalnih značajki. U MATLAB-u se koristi funkcija dwt2 za dvodimenzionalnu diskretnu wavelet transformaciju.
+
+4. Korištenje MATLAB-a u izdvajanje značajki rendgenskih snimaka
+
+4.1. Prednosti MATLAB-a za medicinsku obradu slike
+
+MATLAB je snažan alat za obradu slike zahvaljujući sljedećim prednostima:
+
+Intuitivno programiranje i pregledan vizualni prikaz rezultata.
+
+Bogat skup funkcija u Image Processing Toolboxu.
+
+Brza prototipizacija algoritama.
+
+Mogućnost integracije s drugim alatima i bibliotekama.
+
+Pogodan za edukaciju, istraživanja i kliničku primjenu.
+
+Zbog toga je MATLAB često prvi izbor pri izradi znanstvenih radova, istraživačkih prototipova i softvera za medicinsku dijagnostiku.
+
+4.2. Tipičan tijek analize u MATLAB-u
+
+Standardan postupak analize rendgenske slike sastoji se od sljedećih koraka:
+
+Učitavanje slike – imread.
+
+Pretvorba slike u format pogodan za obradu – npr. grayscale.
+
+Predobrada – filtriranje, normalizacija, korekcija kontrasta.
+
+Segmentacija struktura – izdvajanje interesa (ROI).
+
+Izdvajanje značajki – korištenje statističkih, teksturalnih, geometrijskih i frekvencijskih metoda.
+
+Analiza i interpretacija – klasifikacija, usporedba ili vizualizacija.
+
+Takav pristup omogućuje dosljednu i ponovljivu obradu većeg broja rendgenskih snimaka.
+
+4.3. Primjeri primjene MATLAB-a u medicinskoj dijagnostici
+
+MATLAB se uspješno primjenjuje u mnogim područjima dijagnostike, primjerice:
+
+Detekcija prijeloma – pomoću rubnih detektora i geometrijske analize.
+
+Analiza plućnih bolesti – npr. izdvajanje teksture parenhima i otkrivanje upala ili tumora.
+
+Procjena osteoporoze – analizom trabekularnih uzoraka kostiju.
+
+Mamografija – detekcija mikrokalcifikacija i nepravilnih masa pomoću wavelet transformacija.
+
+Procjena deformacija kralježnice – korištenje LBP značajki i analize oblika.
+
+U svim ovim primjerima ključnu ulogu ima izdvajanje značajki koje omogućuje pouzdanu i automatiziranu analizu.
+
+5. Izazovi i ograničenja u izdvajanje značajki rendgenskih snimaka
+
+5.1. Varijabilnost kvalitete snimaka
+
+Kvaliteta rendgenskih snimaka može varirati zbog različitih uređaja, tehnika snimanja, pozicioniranja pacijenta i prisutnosti artefakata. Zbog toga su algoritmi često osjetljivi na:
+
+šum,
+
+neujednačen kontrast,
+
+preklapanje struktura,
+
+nedostatke u osvjetljenju.
+
+Potrebne su solidne metode predobrade kako bi se osigurala robusnost.
+
+5.2. Problem segmentacije
+
+Mnoge tehnike ovise o kvalitetnoj segmentaciji. No segmentacija rendgenskih snimaka posebno je izazovna zbog nejasnih granica, slabog kontrasta i dubokog preklapanja tkiva. Neuspješna segmentacija može značajno narušiti kvalitetu izdvojenih značajki.
+
+5.3. Ograničenja tradicionalnih metoda
+
+Klasične metode, kao što su rubni detektori ili GLCM, često nisu dovoljno robusne za složene slučajeve. Pojava dubokog učenja i konvolucijskih neuronskih mreža promijenila je pristup analizi slika, ali zahtijeva velike baze označenih podataka i znatnu računalnu snagu. Ipak, tradicionalne metode i dalje imaju važnu ulogu, posebno u kombinaciji s modernim modelima.
+
+6. Primjena značajki u suvremenoj dijagnostici
+
+6.1. Automatizirane dijagnostičke platforme
+
+Sustavi koji koriste izdvojene značajke rendgenskih snimaka mogu:
+
+otkriti abnormalnosti poput tumora ili prijeloma,
+
+kategorizirati bolesti (npr. upala, degenerativne promjene),
+
+procijeniti progresiju bolesti kroz vrijeme.
+
+Kombinacija MATLAB-a i strojnog učenja omogućuje izgradnju klasifikacijskih modela koji koriste značajke kao ulazne podatke.
+
+6.2. Potpora kliničarima
+
+Računalne metode ne zamjenjuju liječnika, ali značajno doprinose procesu dijagnostike:
+
+skraćuju vrijeme analize,
+
+smanjuju subjektivnost,
+
+povećavaju pouzdanost nalaza,
+
+pomažu kod složenih ili graničnih slučajeva.
+
+Zahvaljujući tome, liječnici dobivaju bolji uvid u stanje pacijenta.
+
+6.3. Korištenje značajki u personaliziranoj medicini
+
+Značajke slike mogu poslužiti za:
+
+procjenu rizika,
+
+predviđanje ishoda liječenja,
+
+praćenje odgovora na terapiju.
+
+Radiološke značajke postaju sastavni dio tzv. radiomike, gdje se spajaju analitičke metode slike i personalizirani pristupi medicini.
+
+7. Budući trendovi i perspektive
+
+7.1. Integracija s dubokim učenjem
+
+Duboko učenje omogućuje automatsko učenje značajki, no kombinacija klasičnih značajki i neuronskih mreža često daje najbolje rezultate. MATLAB nudi alate poput Deep Learning Toolboxa za integraciju takvih metoda.
+
+7.2. Multimodalna analiza
+
+Sve se češće kombiniraju podaci iz različitih modaliteta (rendgen, CT, MR), što omogućuje sveobuhvatniju dijagnostičku sliku. Izdvajanje značajki rendgenskih snimaka ostaje važna komponenta ovakvih sustava.
+
+7.3. Automatizirana i mobilna dijagnostika
+
+Razvoj prijenosnih rendgenskih uređaja i mobilnih aplikacija za analizu slika čini algoritme za izdvajanje značajki još važnijima. MATLAB omogućuje pretvorbu algoritama u kod pogodan za integraciju u druge sustave.
+
+8. Zaključak
+
+Izdvajanje značajki rendgenskih snimaka predstavlja ključni korak u računalnoj analizi medicinskih slika i ima značajan utjecaj na suvremenu medicinsku dijagnostiku. Kroz proces predobrade, segmentacije, analize teksture, rubova i frekvencijskih komponenti moguće je dobiti vrijedne informacije koje doprinose prepoznavanju patoloških promjena, klasifikaciji bolesti i donošenju preciznijih dijagnostičkih odluka. MATLAB se pokazao kao iznimno moćan alat koji omogućuje jednostavnu implementaciju ovih metoda, brzu obradu podataka te vizualizaciju rezultata.
+
+Unatoč brojnim izazovima, poput varijabilnosti kvalitete snimaka i složenosti segmentacije, napredak algoritama i integracija sa strojnih učenjem otvaraju nove perspektive razvoja. U budućnosti se može očekivati još veća razina automatizacije i točnosti dijagnostičkih sustava, pri čemu će izdvajanje značajki i dalje biti temeljna komponenta analitičkog procesa. Značajke slike, MATLAB i dijagnostika ostaju neraskidivo povezani elementi u razvoju inteligentnih medicinskih tehnologija koje oblikuju moderne zdravstvene sustave.

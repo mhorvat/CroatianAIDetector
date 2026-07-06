@@ -1,0 +1,103 @@
+1. Uvod
+
+Ključne riječi: 5G, digitalizacija, željeznica, FRMCS, mobilne mreže, automatizacija, prometni sustavi, multimodalni prijevoz.
+
+Uvođenje suvremenih komunikacijskih tehnologija u željeznički sektor predstavlja temeljnu prekretnicu u procesu digitalizacije prometa. Digitalizacija željeznice ne podrazumijeva samo modernizaciju signala i zamjenu fizičkih zapisa elektroničkim bazama podataka, već cjelovitu transformaciju operacija — od nadzora infrastrukture i upravljanja prometom do integriranih putničkih usluga i međumodalnog povezivanja. Cilj ovog seminar-rada jest analizirati ključne komponente tehnološkog razvoja koje omogućuju digitalizaciju željeznice, s naglaskom na evoluciju mobilnih mreža (od 2G do 5G), tehničke karakteristike 5G, standard FRMCS kao buduću platformu željezničke komunikacije, primjene umjetne inteligencije (UI), pametnu infrastrukturu te ulogu nacionalne pristupne točke i EU regulative u poticanju digitalizacije. Radi točnosti i relevantnosti pri prikazu standarda i regulatornih smjernica koriste se izvori relevantnih institucija i standardnih tijela. ([UIC - International union of railways][1])
+
+2. Evolucija mobilnih mreža u kontekstu željezničkih komunikacija
+
+2.1. Od 2G do 3G: osnove mobilne komunikacije
+
+Mobilne mreže prve generacije bile su analogne i omogućile su osnovne glasovne usluge. Prava transformacija započinje s drugom generacijom (2G), koja je uvela digitalnu komutaciju, SMS i osnovne usluge kontrole pristupa. 2G je omogućio veću pouzdanost i sigurnost u odnosu na analogne sustave, ali njegove kapacitete i latenciju nisu bili prilagođeni za kompleksne telemetrijske i sigurnosne aplikacije koje zahtijeva željeznica.
+
+3G je donio povećane brzine prijenosa podataka i podršku za paketne podatkovne usluge što je otvorilo put za sustave udaljenog nadzora i osnovne aplikacije telemetrije. Međutim, pouzdanost, deterministička latencija i upravljanje kvalitetom usluge još uvijek su predstavljali izazov za kritične vlakovne sustave.
+
+2.2. 4G (LTE): prelazak na širokopojasnu podatkovnu platformu
+
+4G (LTE) značajno je povećao brzine i učinkovitost spektra, uveo bolju podršku za IP-bazirane usluge i omogućio realizaciju sofisticiranijih sustava upravljanja i nadzora. LTE je omogućio napredne telemetrijske aplikacije, sustave video nadzora i integrirane putničke usluge. Ipak, standardni LTE nije bio dizajniran primarno za željezničke operacije s vrlo strogim zahtjevima za latenciju i sigurnost; zbog toga je u željezničkom sektoru dugo vremena prevladavao specijalizirani GSM-R (koji je baziran na 2G tehnologiji) za operativnu komunikaciju i signalizaciju. ([ETSI][2])
+
+2.3. 5G: paradigma za industrijsku i željezničku digitalizaciju
+
+5G predstavlja kvantni skok: ne radi se samo o većim brzinama nego i o znatno nižim latencijama, većoj pouzdanosti, širenju raznolikih kvaliteta usluge (QoS) i podršci za masovnu povezanost uređaja (mMTC) te mrežnom segmentiranju (network slicing) koje omogućava odvajanje kritičnih željezničkih usluga od potrošačkog prometa. Ove karakteristike čine 5G prirodnim izborom za kritične željezničke aplikacije kao što su real-time kontrola, napredna signalizacija, autonomna vožnja i integracija u multimodalne prometne sustave. Europska inicijativa za 5G i ulaganja u koridore 5G dodatno potiču stvaranje infrastrukture pogodnije za široku primjenu u prometu. ([Digital Strategy][3])
+
+3. Tehničke karakteristike 5G bitne za željeznicu
+
+3.1. Brzina prijenosa podataka
+
+5G mreže nominalno omogućuju stotine megabita do gigabita udownlinku i uplinku, ovisno o konfiguraciji spektra (niskopojasni, srednjekorisni ili mmWave). U praksi, brzine koje omogućuju prijenos velikih količina telemetrijskih podataka, video streamova visokog rješenja te brze razmjene podataka između vozila i infrastrukture (V2I) čine ključnim elementom za modernu željezničku digitalizaciju.
+
+3.2. Latencija i deterministička komunikacija
+
+Jedna od najvažnijih značajki 5G je niska latencija — u idealnim uvjetima reda veličine jedne milisekunde za neke slučajeve upotrebe (ultra-pouzdane niske latencije, URLLC). To omogućuje real-time aplikacije poput automatskih sustava zaštite i koordinacije voznih naredbi. U željezničkom kontekstu, deterministička komunikacija (garantirana maksimalna latencija i pouzdanost) ključna je za zamjenu ili dopunu tradicionalnih signalnih sustava. ([Digital Strategy][3])
+
+3.3. Spektralni resursi i raspodjela
+
+5G koristi širok raspon frekvencijskih pojaseva — od niskih (za pokrivanje i penetraciju) do visokih mmWave pojaseva (za kapacitet). Za željezničke primjene posebno je važno pitanje harmonizacije spektra i dodjele frekvencijskih blokova za sigurnosno-kritične usluge. Standardizacijski i regulatorni rad na definiraju spektra za FRMCS i interoperabilnost provode tijela kao što su ETSI i UIC, uz koordinaciju s nacionalnim regulatorima. ([ETSI][2])
+
+4. FRMCS — budući željeznički mobilni komunikacijski sustav
+
+4.1. Što je FRMCS
+
+Future Railway Mobile Communication System (FRMCS) namijenjen je nasljedniku GSM-R sustava i definiran je kao okvir za željezničke komunikacije sljedeće generacije, oslonjen na 5G i standarde prilagođene željeznici. FRMCS ima za cilj pružiti jedinstvenu, interoperabilnu platformu za operativnu komunikaciju, signalizaciju, telemetriju i dodatne usluge potrebne za automatizaciju i digitalizaciju željezničkih operacija. ([UIC - International union of railways][1])
+
+4.2. Standardizacija i implementacija
+
+Rad na tehničkim specifikacijama FRMCS-a odvija se kroz suradnju UIC-a, ETSI-ja i 3GPP-a te uključuje pripremu testnih sustava i prototipova kroz EU projekte i industrijske konzorcije. Očekuje se postupna migracija od GSM-R prema FRMCS-u s faznom zamjenom uređaja i infrastrukture, prioritetizacijom kritičnih ruta i koordinacijom spektra. ETSI i drugi standardizacijski odbori rade na finalizaciji niza tehničkih specifikacija koje će omogućiti implementaciju u praksi. ([ETSI][2])
+
+5. Primjene umjetne inteligencije i pametne infrastrukture u željeznici
+
+5.1. Prediktivno održavanje i upravljanje imovinom
+
+Primjena UI za analizu senzorskih podataka omogućuje prediktivno održavanje: modeli uče prepoznati rane znakove kvarova na tračnicama, kotačima ili signalnoj opremi i time smanjuju vrijeme zastoja i troškove popravka. Takvi modeli zahtijevaju pouzdanu širokopojasnu komunikaciju i rubnu obradu podataka, što 5G i FRMCS mogu omogućiti.
+
+5.2. Automatizacija vožnje i podrška vozaču
+
+Složeniji modeli strojnog učenja koriste se za adaptivnu kontrolu vožnje, optimizaciju potrošnje energije i sigurnosne nadzorne sustave. U kombinaciji s niskolatentnim komunikacijama i točnim lokacijskim servisima moguće je razviti razine automatizacije od pomoći pri vožnji do potpuno autonomnih vlakova u kontroliranim uvjetima.
+
+5.3. Pametna infrastruktura i senzorski ekosustavi
+
+Integracija senzora u mostove, tunele i perone omogućava stalni monitoring stanja infrastrukture i uvjeta na mreži. Pametna infrastruktura koristi distribuirano prikupljanje podataka, rubnu analitiku i centralizirane sustave za donošenje odluka, čime se povećava sigurnost i učinkovitost upravljanja prometnim resursima.
+
+6. Nacionalna pristupna točka i sustavi za interoperabilnost
+
+6.1. Uloga nacionalne pristupne točke
+
+Nacionalna pristupna točka (NAP) funkcionira kao središnji čvor za razmjenu podataka između željezničkih subjekata (infrastrukturnih operatora, pružatelja usluga, regulatora) i dodatno omogućuje interoperabilni pristup informacijama o stanju mreže, raspoloživosti kapaciteta i planovima održavanja. Uloga NAP-a u digitalnoj transformaciji je kritična za ostvarenje jedinstvenog europskog tržišta željezničkih usluga i potporu multimodalnim lancima opskrbe. EU dokumenti i strategije naglašavaju potrebu takvih rješenja za harmonizirano upravljanje željezničkim informacijama. ([EUR-Lex][4])
+
+6.2. Sigurnost, privatnost i upravljanje podacima
+
+Implementacija NAP-ova i FRMCS zahtijeva stroge mehanizme za zaštitu podataka, autentikaciju i autorizaciju komunikacijskih tokova. Upravljanje osjetljivim sigurnosnim informacijama mora se odvijati u skladu s EU regulativom o zaštiti podataka i specifičnim pravilima za prometnu infrastrukturu, uključujući standarde koji definiraju dostupnost, cjelovitost i povjerljivost operativnih podataka.
+
+7. Integracija u multimodalne prometne sustave i koristi za prometnu politiku
+
+Digitalizacija željeznice omogućuje stvaranje povezanih, multimodalnih platformi gdje putnici i prijevoznici mogu planirati i izvršavati putovanja kombinirajući željeznicu, autobus, metro i druge oblike prijevoza. Takva integracija povećava atraktivnost željeznice u lancu mobilnosti, smanjuje emisije i potiče ciljane politike EU za prelazak na održive oblike prijevoza. EU strateški dokumenti i inicijative za „pametnu“ i „održivu“ mobilnost podupiru razvoj interoperabilnih digitalnih rješenja. ([Mobility and Transport][5])
+
+8. EU direktive, preporuke i strateške smjernice za digitalizaciju željeznog sektora
+
+8.1. Pravni okvir i ključne direktive
+
+Među najbitnijim pravnim instrumentima u području interoperabilnosti i sigurnosti željeznica su Direktiva (EU) 2016/797 o interoperabilnosti željezničkog sustava i Direktiva (EU) 2016/798 o sigurnosti željeznice. Ovi dokumenti postavljaju temelje za harmonizaciju tehničkih pravila i omogućuju uvođenje novih tehnologija pri održavanju interoperabilnosti među državama članicama. Komisija je u posljednjim godinama kroz komunikacije i strategije dodatno istaknula digitalizaciju kao ključni element modernizacije sektora. ([EUR-Lex][6])
+
+8.2. Komisijske komunikacije i akcijski planovi
+
+Europska komisija je u sklopu mobilnosti i transportne politike istaknula potrebu ulaganja u digitalnu infrastrukturu (uključujući 5G koridore), poticanje interoperabilnosti podataka te podršku projektima istraživanja i demonstracija (npr. programi CEF, Horizon Europe). Dokumenti za strategiju mobilnosti i konkretne komunikacije o željeznici naglašavaju poticanje FRMCS-a i standardizacije kao temelj za široku primjenu digitalnih tehnologija. ([EUR-Lex][4])
+
+9. Izazovi implementacije i prijedlozi politike
+
+9.1. Investicijski i spektralni izazovi
+
+Migracija na FRMCS i izgradnja 5G-pokrivenosti duž željezničkih koridora zahtijevaju značajna ulaganja. Harmonizacija spektra među državama članicama i koordinacija dodjele frekvencijskih resursa ključni su za nesmetanu interoperabilnost.
+
+9.2. Ljudski faktor i socijalni aspekt
+
+Digitalizacija donosi promjene u radnim procesima i zahtijeva osposobljavanje zaposlenika te promišljenu socijalnu politiku kako bi se smanjili negativni učinci automatizacije. Europski i nacionalni programi za usavršavanje trebaju pratiti tehnološki razvoj.
+
+9.3. Standardi i interoperabilnost
+
+Brza standardizacija i usklađivanje tehničkih normi (ETSI, UIC, 3GPP) te provedba pilot-projekata na ključnim koridorima omogućit će sigurnu i kontroliranu tranziciju. Poticanje javno-privatnih partnerstava i EU fondova ubrzat će implementaciju.
+
+10. Zaključak
+
+Suvremene komunikacijske tehnologije, a posebno 5G i FRMCS, predstavljaju temeljnu infrastrukturu za potpunu digitalizaciju željeznice. Tehnološke prednosti 5G — velike brzine, nizka latencija, mogućnost mrežnog segmentiranja i podrška masivnoj IoT povezanosti — omogućuju primjene koje unapređuju sigurnost, pouzdanost i kapacitet željezničkog prometa. FRMCS, kao specijalizirana željeznička implementacija 5G standarda, obećava elegantan put migracije od zastarjelog GSM-R prema interoperabilnoj, mrežno-orijentiranoj arhitekturi.
+
+Realizacija tih potencijala zahtijeva usklađenu strategiju: harmonizaciju spektra, standardizaciju tehničkih specifikacija, potporu EU politike i financiranje infrastrukture, te integraciju UI i pametne infrastrukture uz zaštitu podataka i socijalnu komponentu. Nacionalne pristupne točke i interoperabilni informacijski sustavi bit će ključni za povezivanje aktera i omogućavanje multimodalnih rješenja koja su u središtu europskih ciljeva za održivu i pametnu mobilnost. Sustavna provedba politika, testiranje na koridorima i kontinuirana suradnja industrije, regulatora i znanstvene zajednice osigurat će da digitalizacija željeznice ne ostane samo tehnološki cilj, već stvarna društvena i gospodarska prednost. ([UIC - International union of railways][1])

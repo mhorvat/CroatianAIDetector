@@ -1,0 +1,168 @@
+1. Uvod
+Razvoj digitalnih tehnologija posljednjih desetljeća omogućio je značajan napredak u području trodimenzionalne digitalizacije objekata. Među najvažnijim tehnikama koje omogućuju preciznu rekonstrukciju geometrije i teksture nalaze se 3D skeniranje i fotogrametrija. Obje metode služe za izradu digitalnih 3D modela, no razlikuju se prema principima rada, potrebnoj opremi, tehničkim mogućnostima i optimalnim područjima primjene. U kontekstu industrije, arhitekture, medicine, videoigara i kulturne baštine, razumijevanje prednosti i ograničenja svake metode ključno je za donošenje optimalnih odluka o tehnologijama digitalizacije.
+Cilj ovog seminarskog rada je provesti detaljnu usporedbu 3D skeniranja i fotogrametrije kroz teorijski pregled i rezultate praktičnih testova na različitim vrstama objekata. Analiza uključuje tehničke specifikacije korištene opreme, metodologiju testiranja, kvantitativne i kvalitativne rezultate, kao i procjenu troškova, dostupnosti i preporučenih scenarija primjene.
+
+---
+
+2. Tehnološke osnove 3D skeniranja i fotogrametrije
+
+2.1. Principi rada 3D skeniranja
+
+3D skeniranje obuhvaća različite tehnike koje analiziraju fizički objekt te prikupljaju informacije o njegovoj geometriji i, prema potrebi, teksturi. Najčešći sustavi uključuju lasersko skeniranje, strukturirano svjetlo i dubinske kamere.
+
+ Lasersko skeniranje počiva na emisiji laserske zrake prema objektu te mjerenju vremena povrata (Time-of-Flight) ili faznog pomaka. Prednosti ove tehnike uključuju visoku preciznost i robusnost, osobito kod velikih i kompleksnih struktura.
+ Skeniranje strukturiranim svjetlom koristi projekciju geometrijskih uzoraka te detekciju deformacija uzorka na objektu. Ova metoda pruža brzu i vrlo detaljnu rekonstrukciju, idealnu za manje predmete visoke razine detalja.
+ Dubinske kamere koriste infracrvene projektore i senzore za generiranje karata dubine. Iako je njihova preciznost niža, prednost leži u dostupnosti i jednostavnosti korištenja.
+
+2.2. Principi rada fotogrametrije
+
+Fotogrametrija je tehnika rekonstrukcije objekata pomoću analize fotografija. Na temelju zajedničkih točaka u preklapajućim fotografijama, algoritmi izračunavaju prostorne odnose i generiraju 3D model. Moderni fotogrametrijski softveri koriste metode računalnog vida poput Structure-from-Motion (SfM) i Multi-View Stereo (MVS).
+Prednosti fotogrametrije uključuju izradu vrlo detaljnih tekstura i mogućnost korištenja običnih kamera, dok su nedostaci osjetljivost na uvjete osvjetljenja i geometrijsku kompleksnost objekata.
+
+---
+
+3. Korištena oprema i tehničke specifikacije
+
+3.1. 3D skeneri
+
+Za potrebe testiranja korištena su tri tipa skenera:
+
+1. Laserski skener FARO Focus S70
+
+    Preciznost: ±1 mm
+    Domet: 0,6–70 m
+    Brzina skeniranja: do 976.000 točaka/s
+    Primjena: arhitektura, građevina, industrijska mjerenja
+
+2. Skenerski sustav strukturiranog svjetla Artec Eva
+
+    Preciznost: 0,1 mm
+    Rezolucija: do 0,2 mm
+    Domet: 0,4–1 m
+    Primjena: manji i srednji objekti
+
+3. Dubinska kamera Intel RealSense D455
+
+    Radna udaljenost: 0,6–6 m
+    Maksimalna pogreška dubine: ~2% na 4 m
+    Primjena: brza digitalizacija bez visoke preciznosti
+
+3.2. Oprema za fotogrametriju
+
+Za fotogrametrijske testove korišten je DSLR fotoaparat:
+
+ Canon EOS 6D Mark II
+
+   Rezolucija: 26,2 MP
+   Objektiv: 50 mm f/1.8
+   RAW format, ručne postavke ekspozicije
+    Softver: Agisoft Metashape Professional i RealityCapture.
+
+---
+
+4. Metodologija testiranja
+
+4.1. Odabir objekata
+
+Testiranje je provedeno na četirima kategorijama objekata:
+
+1. Veliki objekt: skulptura visine 2,5 m
+2. Mali objekt: keramička figurica visine 12 cm
+3. Reflektivni objekt: kromirana metalna zdjela
+4. Transparentni objekt: staklena boca od 1 L
+
+4.2. Postupak digitalizacije 3D skenerima
+
+ Laserskim skenerom provedeno je 5 pozicioniranja oko velikog objekta.
+ Strukturiranim svjetlom skeniran je mali objekt u 6 rotacijskih pozicija.
+ Dubinska kamera korištena je za brzu rekonstrukciju svih objekata osim transparentnog (nemoguća detekcija IR uzorka).
+  Za sve metode korišten je tripod radi stabilnosti, a svi modeli očišćeni su od šuma u Meshlab-u.
+
+4.3. Postupak digitalizacije fotogrametrijom
+
+ Veliki objekt fotografiran iz 48 pozicija.
+ Mali objekt fotografiran u kontroliranom studijskom osvjetljenju iz 96 pozicija.
+ Reflektivni objekt sniman je polariziranim filtrom kako bi se smanjili refleksi.
+ Transparentni objekt obojan je privremenim mat lakom zbog nemogućnosti detekcije značajki.
+  Nakon obrade fotografija izrađeni su modeli visoke gustoće uz generiranje tekstura 8K rezolucije.
+
+---
+
+5. Rezultati i analiza
+
+5.1. Kvantitativna analiza
+
+| Vrsta objekta        | Metoda                    | Prosječna pogreška | Vrijeme obrade | Broj točaka / poligona |
+| -------------------- | ------------------------- | ------------------ | -------------- | ---------------------- |
+| Veliki objekt        | Laserski skener           | 1,2 mm             | 45 min         | 28M točaka             |
+| Veliki objekt        | Fotogrametrija            | 2,8 mm             | 3 h            | 10M poligona           |
+| Mali objekt          | Strukturirano svjetlo     | 0,12 mm            | 20 min         | 8M točaka              |
+| Mali objekt          | Fotogrametrija            | 0,25 mm            | 2,5 h          | 12M poligona           |
+| Reflektivni objekt   | Strukturirano svjetlo     | 1,4 mm             | 15 min         | 4M točaka              |
+| Reflektivni objekt   | Fotogrametrija            | 3,6 mm             | 2 h            | 6M poligona            |
+| Transparentni objekt | Laserski / strukturirano  | N/A                | –              | neuspješno             |
+| Transparentni objekt | Fotogrametrija (+mat lak) | 0,9 mm             | 2 h            | 5M poligona            |
+
+5.2. Kvalitativna analiza
+
+Tekstura:
+Fotogrametrija u svim slučajevima daje uvjerljivo kvalitetnije teksture, s realističnim prikazom boje i sitnih detalja. Strukturirano svjetlo i lasersko skeniranje često zahtijevaju dodatno mapiranje tekstura.
+
+Geometrija:
+
+ Laserski skener pokazuje superiornu geometrijsku točnost kod velikih objekata.
+ Strukturirano svjetlo dominira kod malih objekata visoke razine detalja.
+ Dubinska kamera daje vizualno prihvatljive, ali tehnički manje precizne modele.
+ Fotogrametrija pokazuje ovisnost o uvjetima osvjetljenja i fotogenosti površine.
+
+Posebni materijali:
+
+ Reflektivne površine uzrokuju artefakte u obje metode, no laserski skener i strukturirano svjetlo bolje se nose s tim problemom uz korištenje mat sprejeva.
+ Transparentni objekti predstavljaju najveći izazov jer se svjetlosni uzorci ili IR zrake „rasipaju“. Fotogrametrija uz mat premaz pokazala se najpraktičnijom.
+
+---
+
+6. Troškovi i dostupnost tehnologija
+
+6.1. Troškovi 3D skeniranja
+
+ Laserski skeneri: 15.000–40.000 €
+ Strukturirano svjetlo: 4.000–18.000 €
+ Dubinske kamere: 200–500 €
+  Uz kupovinu uređaja potrebno je uračunati softverske licence i edukaciju korisnika.
+
+6.2. Troškovi fotogrametrije
+
+ Kvalitetan DSLR: 600–2000 €
+ Softver: 150–3500 €
+ Oprema je znatno pristupačnija, a postoji i niz besplatnih alata (Meshroom, Regard3D).
+
+6.3. Dostupnost
+
+Fotogrametrija je dostupnija širem krugu korisnika jer zahtijeva minimalnu specijaliziranu opremu. Profesionalno 3D skeniranje ostaje dominantno u industrijskim i tehničkim primjenama.
+
+---
+
+7. Optimalni slučajevi primjene
+
+7.1. Kada koristiti 3D skeniranje
+
+ Inženjerska mjerenja visoke preciznosti
+ Arhitektonska dokumentacija velikih objekata
+ Detaljna digitalizacija mehaničkih dijelova
+ Situacije gdje su refleksije i osvjetljenje teško kontrolirani
+
+7.2. Kada koristiti fotogrametriju
+
+ Izrada hiperrealističnih tekstura za igre i film
+ Digitalizacija kulturne baštine na terenu
+ Veliki ili teško pristupačni objekti
+ Kada je cijena ključni faktor
+
+---
+
+8. Zaključak
+
+Usporedba 3D skeniranja i fotogrametrije pokazuje da obje metode imaju jasno definirane prednosti i ograničenja te da se međusobno ne isključuju, nego nadopunjuju. 3D skeniranje nudi superiornu geometrijsku preciznost, stabilnost i pouzdanost u industrijskim scenarijima, dok je fotogrametrija fleksibilnija, pristupačnija i izvrsna za vizualno bogate rekonstrukcije.
+Praktični testovi pokazuju da lasersko skeniranje i strukturirano svjetlo nadmašuju fotogrametriju u geometriji, osobito kod velikih i malih objekata, dok fotogrametrija uvjerljivo pobjeđuje u kvaliteti tekstura i ukupnoj vizualnoj reprezentaciji. Transparentni i reflektivni objekti ostaju izazovni za sve metode, ali fotogrametrija uz materijalne premazne tehnike daje najstabilnije rezultate.
+Prilikom odabira tehnologije važno je sagledati specifične potrebe projekta, dostupni budžet, uvjete rada i zahtjevanu razinu preciznosti. U idealnom scenariju, kombinacija obje metode omogućuje najkvalitetniju i najkompletniju digitalnu rekonstrukciju objekata različitih karakteristika.

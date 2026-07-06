@@ -1,0 +1,129 @@
+1. Uvod
+
+U suvremenom akademskom i znanstvenom okruženju, koncept otvorenog pristupa – eng. open access (OA) – postaje sve značajniji. Otvoreni pristup omogućava slobodno, besplatno i neometano razmještanje znanstvenih informacija putem interneta, čime se povećava vidljivost, dostupnost i potencijalna citiranost radova. U Hrvatskoj je važan dio mehanizma za ostvarivanje OA javni ZIR — Nacionalni repozitorij završnih i diplomskih radova, koji objednjuje radove hrvatskih veleučilišta i visokih učilišta. Međutim — koliko su zaista završni radovi veleučilišta zastupljeni u otvorenom pristupu kroz ZIR? Ovaj seminar ima za cilj analizirati zastupljenost otvorenog pristupa završnim radovima veleučilišta u ZIR-u, uz komparaciju s međunarodnim standardima OA-pokreta, te iznijeti preporuke za povećanje dostupnosti.
+
+U uvodu ćemo definirati ključne pojmove (otvoreni pristup, digitalni repozitorij, vidljivost, citiranost), predstaviti ZIR i njegovu ulogu te ukratko objasniti metodologiju analize — pregled relevantne literature, statističkih podataka iz ZIR-a i normativnih dokumenata (deklaracija).
+
+2. Teorijska i normativna osnova otvorenog pristupa
+
+2.1 Budimpeštanska inicijativa (BOAI)
+
+Pokret otvorenog pristupa u modernom smislu započinje s Budimpeštanskom inicijativom iz 2002. godine. Prema njenom tekstu, otvoreni pristup znači da su radovi — bez financijskih, pravnih ili tehničkih barijera — slobodno dostupni na internetu, uz mogućnost čitanja, preuzimanja, kopiranja, distribuiranja, pretraživanja, indeksiranja i korištenja u skladu sa zakonitim svrham a uz poštovanje autorskih prava i atribucije. ([budapestopenaccessinitiative.org][1])
+
+BOAI naglašava da troškovi distribucije putem interneta često budu niži od tradicionalnih modela objavljivanja, što zajednicama daje poticaj da prihvate OA. ([budapestopenaccessinitiative.org][1])
+
+2.2 Berlinska deklaracija (2003)
+
+Sljedeći veliki dokument u razvoju OA pokreta je Berlinska deklaracija iz 2003. godine. Deklaracija, potpisana od strane više akademskih i kulturnih institucija, definira doprinos otvorenom pristupu kao znanstvene radove, podatke, metapodatke, izvorne materijale, multimedijalne sadržaje i slično, pod uvjetom da autori daju trajno, svjetsko, neograničeno pravo pristupa, kopiranja, distribucije, javnog prikazivanja i izrade izvedenih djela uz pravilnu atribuciju. ([openaccess.mpg.de][2])
+
+Također, deklaracija propisuje da kompletnu verziju rada zajedno s dodatnim materijalima treba pohraniti u barem jedan online repozitorij koji koristi prikladne tehničke standarde (npr. OAI-PMH), te da se taj repozitorij vodi od strane akademskih institucija, knjižnica ili relevantnih organizacija. ([openaccess.mpg.de][2])
+
+Berlinska deklaracija ostaje temeljna referenca za institucionalne i nacionalne politike OA. ([Wikipedia][3])
+
+2.3 Hrvatska deklaracija o otvorenom pristupu (2012)
+
+Hrvatska je 2012. godine usvojila vlastitu deklaraciju o otvorenom pristupu, čime je formalno integrirala međunarodne principe OA u nacionalni kontekst. Prema definiciji u toj deklaraciji, otvoreni pristup znači slobodan, besplatan i neometan mrežni pristup digitalnim znanstvenim informacijama, omogućavajući njihovo čitanje, pohranjivanje, distribuciju, pretraživanje, dohvaćanje, indeksiranje i/ili drugo zakonito korištenje. ([Hrčak][4])
+
+Deklaracija potiče institucije da uspostave repozitorije, da omoguće trajnu dostupnost radova te da osiguraju odgovarajuće tehničke i licencne uvjete za distribuciju i ponovnu uporabu sadržaja. ([Hrčak][4])
+
+Također, ovim dokumentom Hrvatska deklarira opredijeljenost za „zelene“ (repozitoriji) i/ili „zlatne“ i „dijamantne“ modele OA. ([pravri.uniri.hr][5])
+
+2.4 Značaj otvorenog pristupa: vidljivost, citiranost, transparentnost
+
+Prema definicijama, otvoreni pristup doprinosi povećanju vidljivosti i citiranosti radova: pohranjivanje u repozitorije omogućuje brži, globalni pristup, bolju pretraživost i trajnu čuvanje sadržaja. ([Nacionalni repozitorij ZIR][6])
+
+Za institucije — veleučilišta i visoka učilišta — digitalni repozitoriji povećavaju transparentnost njihovog rada, omogućuju evaluaciju i vrednovanje outputa, te dovode do većeg prepoznavanja rada studenata i istraživača. ([Nacionalni repozitorij ZIR][6])
+
+Zbog toga je teoretska i normativna osnova OA — kroz BOAI, Berlinsku i Hrvatsku deklaraciju — ključna za razumijevanje modela u kojem radi i ZIR.
+
+3. Predstavljanje repozitorija ZIR i kontekst u Hrvatskoj
+
+3.1 Što je ZIR i kako funkcionira
+
+ZIR je nacionalni repozitorij koji objedinjuje završne i diplomske radove (prediplomske, diplomske i specijalističke studije) svih visokih učilišta u Republici Hrvatskoj — sveučilišta, fakultete, veleučilišta i visoke škole. ([Nacionalni repozitorij ZIR][7])
+
+Uspostavljen je 2015. godine, u suradnji s Nacionalna i sveučilišna knjižnica u Zagrebu (NSK) i Srce te knjižnicama pojedinih ustanova. ([Nacionalni repozitorij ZIR][7])
+
+Autori — studenti — pohranjuju konačnu verziju rada u institucionalni repozitorij svoje ustanove; nakon toga, rad postaje dio ZIR-a. ([Nacionalni repozitorij ZIR][6])
+
+Metapodaci su obavezni: ime autora, naslov, eventualni podnaslov, podatci o ustanovi, datumu obrane, vrsti rada i sl. 
+
+Pohrana pdf-a, preporučeno u PDF/A formatu radi dugoročne čitljivosti. ([Nacionalni repozitorij ZIR][6])
+
+Zakonski — prema Zakonu o znanstvenoj djelatnosti i visokom obrazovanju (novosti iz 2022.) pohrana i javna objava rada u repozitoriju je propisana. ([Nacionalni repozitorij ZIR][6])
+
+ZIR reproducira i moguće mogućnosti za djela s ograničenim pristupom (embargo) — u slučaju povjerljivih ili ekonomskih podataka — no to je iznimka, a ne pravilo. ([Nacionalni repozitorij ZIR][6])
+
+3.2 ZIR-ova statistika i zastupljenost otvorenog pristupa
+
+Prema podacima iz službene stranice ZIR-a, ukupno je pohranjenih 274 887 objekata (završnih/diplomskih radova). ([Nacionalni repozitorij ZIR][8])
+
+Od toga, udio radova u otvorenom pristupu iznosi 51,4 %. ([Nacionalni repozitorij ZIR][8])
+
+To znači da je više od polovice završnih radova u ZIR-u dostupno javnosti bez ograničenja.
+
+Ovaj podatak pokazuje značajan napredak u usporedbi s ranijim fazama — prije pet godina (oko 2019) udio OA-radova u ZIR-u iznosio je oko 40,5 %. ([Nacionalni repozitorij ZIR][8])
+
+Iako 51,4 % ne znači da je svega pola radova dostupno, to jest značajan pomak prema ispunjenju načela otvorenog pristupa definiranim deklaracijama.
+
+U literaturi o temi zastupljenosti otvorenog pristupa u repozitorijima hrvatskih veleučilišta, navodi se da, unatoč rastu broja dostupnih radova, kao nedostatak prema OA-modelu ostaje kvaliteta metapodataka, a ponekad i nejedinstvenost standarda među institucijama. ([Hrčak][9])
+
+Također, istraživanja upozoravaju da sama dostupnost ne jamči kvalitetu informacija — nužna je dobra informacijska pismenost korisnika da razluče i odaberu relevantne radove. ([Hrčak][9])
+
+4. Komparativna analiza: ZIR i europski standardi otvorenog pristupa
+
+4.1 Usporedba s načelima Berlinske deklaracije i OA-pokreta u Europi
+
+Prema Berlinskoj deklaraciji, otvoreni pristup zahtijeva da autori daju trajno, neograničeno pravo pristupa, kopiranja, distribucije i javnog prikazivanja svojih djela, uz atribuciju, i da se kompletna verzija rada pohrani u online repozitorij s tehničkim standardima. ([openaccess.mpg.de][2])
+
+ZIR kao nacionalni repozitorij definiran je upravo s takvom svrhom: pohrana konačnih radova, s metapodacima, u digitalnom formatu, trajna čuvanja i dostupnost. ([Nacionalni repozitorij ZIR][7])
+
+Dakle, u konceptualnom i tehničkom smislu, ZIR je u skladu s europskim i međunarodnim standardima OA-pokreta.
+
+Međutim, stopa otvorenog pristupa (51,4 %) znači da polovina radova ne koristi taj potencijal — što je razmak od idealnog modela, prema kojem bi što veći (najbolje gotovo svi) radovi trebali biti slobodno dostupni. Deklaracije pozivaju na univerzalnu dostupnost; ali stvarnost — djelomična dostupnost — otkriva ograničenja u implementaciji.
+
+Europske analize pokazuju da, iako OA raste, razlike među državama i institucijama ostaju značajne. ([arXiv][10]) U tom smislu, Hrvatska i ZIR se nalaze negdje u sredini spektra: dobra infrastrukturna podrška, ali i dalje nedostaci u potpunoj primjeni.
+
+4.2 Specifičnosti veleučilišta i izazovi u Hrvatskoj
+
+Rad iz 2020. koji analizira zastupljenost OA-radova veleučilišta u ZIR-u navodi da — unatoč rastu — postoje problemi u usklađivanju prakse među institucijama, kvaliteti metapodataka te u razlikama u politici pristupa. ([Hrčak][9])
+
+Negativne strane otvorenog pristupa mogu biti, prema autorima, povećana mogućnost plagiranja radova. Ipak, autor iz istog rada navodi da uz rast vidljivosti i citiranosti ta mogućnost pada, posebice uz upotrebu softvera za provjeru autentičnosti radova. ([Hrčak][9])
+
+Također, institucionalna razina — razlike između veleučilišta, fakulteta i sama administracija — može dovesti do nekonzistentnosti u politici pohrane i objave.
+
+Time se nameće pitanje: iako postoji Nacionalni repozitorij, praksa je fragmentirana — uspjeh zavisi od pojedinačnih institucija i njihovih knjižnica.
+
+5. Preporuke za povećanje otvorenog pristupa i budući smjerovi
+
+Na temelju analize, moguće je iznijeti niz preporuka za povećanje zastupljenosti otvorenog pristupa završnih radova u ZIR-u, posebice za radove veleučilišta:
+
+5.1 Poticanje univerzalnog pohranjivanja i objave
+
+ Institucije treba potaknuti da čim prije nakon obrane rada pohrane konačnu verziju u repozitorij i omoguće javni pristup. ZIR-ova infrastruktura to omogućuje; važno je institucionalno prihvaćanje.
+ Razviti kampanje unutar veleučilišta i visokih škola koje informiraju studente o prednostima OA — vidljivost, citiranost, trajna pohrana — i olakšavaju im proces pohrane i objave.
+
+5.2 Standardizacija metapodataka i tehničkih procedura
+
+ Osigurati da sve institucije prate iste metapodacijske standarde (npr. onaj definiran dokumentom metapodataka ZIR-a). 
+ Preporučiti upotrebu standardnih licencija (npr. otvorene licencije poput CC-BY ili CC-0) gdje je moguće, te jasno definirati prava distribucije i ponovne uporabe.
+
+5.3 Institucionalna politika i motivacija
+
+ Uključiti otvoreni pristup kao kriterij u sustavima vrednovanja rada institucija: time bi veleučilišta bila motivirana da potiču pohranu i objavu radova. Ovo je sukladno preporukama iz međunarodnih deklaracija. ([openaccess.mpg.de][2])
+ Financijski i organizacijski poticaji: osigurati sredstva i podršku knjižnicama i administracijama koje upravljaju repozitorijima, kako bi mogli redovito održavati repozitorij, osigurati tehničku infrastrukturu i podršku autorima.
+
+5.4 Podizanje svijesti o kvaliteti i informacijsku pismenost korisnika
+
+ Edukacija studenata i korisnika o načinu procjene kvalitete radova — metapodaci, referenciranje, citiranost — kako bi se izbjegao problem „velike količine, male kvalitete“. Ovo je važno kako bi OA donio stvarnu znanstvenu vrijednost, a ne samo kvantitetu. ([Hrčak][9])
+ Promicanje korištenja softvera za provjeru autentičnosti i plagijata, kako bi transparentnost i integritet akademskog rada bili sačuvani. ([Hrčak][9])
+
+6. Zaključak
+
+Analiza pokazuje da je ZIR — nacionalni repozitorij završnih i diplomskih radova u Hrvatskoj — uspješno uspostavio infrastrukturne preduvjete za otvoreni pristup i da je trenutno više od polovice radova u otvorenom pristupu (51,4 %). To predstavlja značajan iskorak i doprinos ciljevima definiranim u međunarodnim deklaracijama (Budimpeštanska inicijativa, Berlinska deklaracija) kao i u nacionalnom okviru (Hrvatska deklaracija o otvorenom pristupu).
+
+Ipak, činjenica da gotovo polovica radova i dalje nije javno dostupna ukazuje na nedostatke u implementaciji — institucionalnim praksama, standardima, motivaciji i informiranosti autora. Komparativno, u kontekstu europskih standarda i trendova OA, Hrvatska je na dobrom putu, ali još uvijek ima prostora za napredak.
+
+Kako bi se sustavno povećala zastupljenost otvorenog pristupa, nužno je kombinirati tehničke mjere (standardizacija, repozitoriji), institucionalne politike (poticanje pohrane i objave, vrednovanje OA), te edukaciju korisnika (informacijska pismenost, zaštita autorskih prava, kvaliteta).
+
+U konačnici, veći otvoreni pristup — vidljivost, transparentnost, citiranost — koristi ne samo pojedinačnim autorima ili ustanovama, nego cijeloj znanstvenoj i akademskoj zajednici u Hrvatskoj. Realizacija te vizije zahtijeva koordiniran, sustavan i kontinuiran angažman svih dionika — studenata, institucija, knjižnica i zakonodavaca.

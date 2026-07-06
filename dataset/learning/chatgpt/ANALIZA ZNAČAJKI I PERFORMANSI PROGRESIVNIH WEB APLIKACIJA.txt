@@ -1,0 +1,151 @@
+1. Uvod
+
+Razvoj web tehnologija u posljednjem je desetljeću doživio izrazit napredak, ponajviše zahvaljujući sve većim zahtjevima korisnika za brzim, responzivnim i dostupnim aplikacijama koje funkcioniraju neovisno o uređaju i platformi. Tradicionalne web aplikacije, iako široko dostupne, često nisu nudile razinu performansi i korisničkog iskustva usporedivu s izvornim (native) mobilnim aplikacijama. Upravo iz tog razloga pojavljuje se koncept progresivnih web aplikacija (Progressive Web Apps – PWA), koje pokušavaju objediniti najbolje od oba svijeta.
+
+PWA su aplikacije temeljene na web tehnologijama koje korisnicima pružaju iskustvo slično izvornim aplikacijama, uključujući offline funkcionalnost, push obavijesti, instalaciju na početni zaslon i brz rad neovisno o kvaliteti mreže. Ovaj hibridni pristup omogućuje značajne prednosti kako korisnicima tako i developerima, npr. lakšu distribuciju, smanjene troškove razvoja i održavanja te povećanu dostupnost.
+
+Cilj ovog seminara jest analizirati ključne značajke, tehnološke temelje i performanse PWA-a te sagledati njihove prednosti i nedostatke u odnosu na tradicionalne modele web i mobilnih aplikacija. Kroz nekoliko poglavlja razradit će se koncept PWA-a, njihova arhitektura, osnovne funkcionalnosti, mjerne metode performansi te mogućnosti primjene u suvremenom digitalnom okruženju.
+
+2. Koncept i razvoj progresivnih web aplikacija
+2.1. Povijesni kontekst i motivacija razvoja
+
+Ideja progresivnih web aplikacija počinje se razvijati oko 2015. godine, u trenutku kada je Google predstavio novi skup tehnologija za poboljšanje mobilnog weba. Problem sporog učitavanja stranica, nestabilnih mreža i fragmentacije Android ekosustava doveo je do potrebe za univerzalnim rješenjem koje će raditi na svakom uređaju i u svim uvjetima.
+
+Svrha PWA koncepta nije zamijeniti izvorne aplikacije, nego proširiti mogućnosti weba. Time se web aplikacije pozicioniraju kao ozbiljan konkurent mobilnim aplikacijama, posebno u situacijama gdje je potreban širok doseg korisnika uz minimalne troškove razvoja.
+
+2.2. Temeljne tehnologije
+
+Tri ključne komponente čine progresivne web aplikacije:
+
+Service Worker – skripta koja radi u pozadini preglednika, nezavisno o korisničkom sučelju. Omogućuje offline rad, predmemoriranje resursa, push obavijesti te preusmjeravanje mrežnih zahtjeva prema kešu.
+
+Manifest datoteka (Web App Manifest) – JSON dokument koji definira naziv aplikacije, ikone, boje teme, način prikaza i druge parametre koji omogućuju instalaciju aplikacije na početni zaslon.
+
+HTTPS – PWA zahtijevaju sigurnu komunikaciju kako bi service worker mogao sigurno upravljati predmemorom i mrežnim zahtjevima.
+
+Ove tehnologije zajedno omogućuju da se web aplikacija ponaša kao instalirana mobilna aplikacija, ali bez potrebe za instalacijom putem trgovina aplikacijama.
+
+3. Značajke progresivnih web aplikacija
+3.1. Pouzdanost i offline funkcionalnost
+
+Jedna od najvažnijih karakteristika PWA-a jest pouzdan rad čak i u uvjetima slabe ili nepostojeće internetske veze. Zahvaljujući service workerima, ključni resursi aplikacije mogu se predmemorirati prilikom prvog učitavanja, nakon čega se korisniku omogućuje pristup sadržaju i funkcionalnosti čak i kada mreža nije dostupna.
+
+Ovaj pristup posebno je koristan u zemljama s lošijom infrastrukturom, kao i u scenarijima poput putovanja, rada na terenu ili korištenja aplikacija u ruralnim područjima.
+
+3.2. Brzina i optimizacija performansi
+
+Brzina je jedan od ključnih razloga popularnosti PWA-a. Primjenom modernih tehnika predmemoriranja, optimizacije resursa i asinkronog učitavanja omogućuje se vrlo brzo inicijalno učitavanje i gotovo trenutno prikazivanje sadržaja.
+
+Mnoge tvrtke, poput Twittera i Pinterest-a, pokazale su značajna poboljšanja u metrike brzine i konverzija prelaskom na PWA arhitekturu. Twitter Lite, primjerice, smanjio je veličinu aplikacije za više od 90 % i povećao broj angažiranih korisnika.
+
+3.3. Univerzalna dostupnost i responzivnost
+
+PWA su dizajnirane za rad na svim uređajima – pametnim telefonima, tabletima, laptopima i desktop računalima. Responzivni dizajn i adaptivni layout omogućuju konzistentno korisničko iskustvo bez obzira na rezoluciju, platformu ili preglednik.
+
+3.4. Instalacija bez aplikacijskih trgovina
+
+Korisnici mogu instalirati PWA izravno iz preglednika, bez potrebe za preuzimanjem putem Google Playa ili App Storea. Instalacija se odvija jednim klikom, a aplikacija se pojavljuje na početnom zaslonu, često s ponašanjem istovjetnim izvornim aplikacijama.
+
+Ovaj model uklanja prepreke poput dugih procesa odobravanja i provizija trgovina aplikacijama.
+
+3.5. Push obavijesti i interaktivnost
+
+PWA podržavaju push obavijesti, što im omogućuje izravnu komunikaciju s korisnikom. Ova funkcionalnost značajno povećava angažman i poboljšava marketinške mogućnosti, čineći ih posebno korisnima za e-trgovinu, medijske portale i društvene mreže.
+
+4. Arhitektura i tehnički aspekti PWA-a
+4.1. Uloga service workera
+
+Service worker predstavlja glavni mehanizam za poboljšanje performansi. On upravlja svim mrežnim zahtjevima te putem različitih strategija (cache-first, network-first, stale-while-revalidate) određuje hoće li se sadržaj preuzeti iz predmemorije ili s mreže.
+
+4.2. Predmemoriranje i strategije upravljanja resursima
+
+Predmemoriranje omogućuje brzo učitavanje resursa poput HTML-a, CSS-a, JavaScript datoteka i slika. Pravilno odabrana strategija upravljanja predmemorijom presudna je za postizanje optimalnih performansi.
+
+Primjerice:
+
+cache-first koristi se za statične resurse,
+
+network-first za dinamičke podatke poput vijesti ili komentara,
+
+stale-while-revalidate kombinira prednosti oba pristupa.
+
+4.3. Sigurnosni aspekti
+
+Budući da PWA zahtijevaju HTTPS, komunikacija između uređaja i poslužitelja zaštićena je od presretanja. No, posebnu pozornost treba posvetiti manipulaciji predmemorijom, jer pogrešne konfiguracije mogu dovesti do neželjenog prikazivanja zastarjelih ili pogrešnih podataka.
+
+5. Analiza performansi PWA-a
+5.1. Ključne metrike performansi
+
+Analiza performansi progresivnih web aplikacija obično se vrši korištenjem nekoliko metrika, među kojima se ističu:
+
+First Contentful Paint (FCP) – vrijeme potrebno do prvog prikazivanja sadržaja.
+
+Time to Interactive (TTI) – vrijeme potrebno da aplikacija postane potpuno interaktivna.
+
+Largest Contentful Paint (LCP) – mjera brzine učitavanja glavnog sadržaja.
+
+Total Blocking Time (TBT) – vrijeme tijekom kojeg su korisničke interakcije blokirane.
+
+Cumulative Layout Shift (CLS) – stabilnost vizualnog rasporeda stranice.
+
+Niže vrijednosti ovih metrika ukazuju na bolje performanse i pozitivnije korisničko iskustvo.
+
+5.2. Učinkovitost u odnosu na izvorne aplikacije
+
+Iako PWA-i mogu postići performanse vrlo blizu izvornim aplikacijama, ipak postoje neka ograničenja. Izvorne aplikacije imaju direktan pristup hardverskim komponentama i optimizirane su za određeni sustav, što im daje prednost u zahtjevnim operacijama poput grafički intenzivnih igara ili obrade multimedije.
+
+Međutim, u domeni klasičnih aplikacija za komunikaciju, e-trgovinu i informiranje, PWA često nadmašuju izvorne aplikacije zahvaljujući manjoj potrošnji resursa i bržem učitavanju.
+
+5.3. Utjecaj mrežnih uvjeta
+
+PWA su iznimno učinkovite u uvjetima loše mreže. Zahvaljujući predmemoriranju i mogućnosti offline rada, korisnik može pristupiti sadržaju i kada veza privremeno nestane. Kod izvornim aplikacija ovakva funkcionalnost ovisi o dizajnu i implementaciji, dok je u PWA arhitekturi prirodno uključena.
+
+6. Primjeri primjene i studije slučaja
+6.1. Twitter Lite
+
+Twitter Lite smatra se jednim od najuspješnijih primjera PWA implementacije. Aplikacija je smanjila potrošnju podataka za 70 %, a brzina učitavanja smanjena je za više od 30 %. Povećan je i broj sesija korisnika, što potvrđuje učinkovitost progresivnog pristupa.
+
+6.2. Pinterest
+
+Pinterest je nakon prelaska na PWA povećao broj konverzija za gotovo 40 %. Ključno poboljšanje bilo je u brzini prikaza sadržaja i mogućnosti instalacije aplikacije bez preuzimanja u klasičnom smislu.
+
+6.3. Uber Web App
+
+Uber je implementirao PWA kako bi omogućio korisnicima naručivanje vožnje i na uređajima niske snage. Aplikacija zauzima svega oko 50 kB, što je znatno manje od izvornog klijenta, a pritom omogućuje brzi rad na sporim mrežama.
+
+7. Prednosti i nedostaci progresivnih web aplikacija
+7.1. Prednosti
+
+Manji troškovi razvoja – jedna aplikacija radi na svim platformama.
+
+Brzo učitavanje – optimizirano predmemoriranje.
+
+Offline podrška – ključna za korisnike u nestabilnim mrežnim okruženjima.
+
+Izravna instalacija – bez aplikacijskih trgovina.
+
+Visoka razina sigurnosti – zahvaljujući HTTPS-u.
+
+Bolji SEO – za razliku od izvornih aplikacija, PWA sadržaj indeksira se na tražilicama.
+
+7.2. Nedostaci
+
+Ograničen pristup hardveru – uspoređujući s izvornih aplikacijama.
+
+Ovisnost o pregledniku – različiti preglednici nude različite razine podrške.
+
+Manja prisutnost u trgovinama aplikacija – iako Google Play dopušta dodavanje PWA-a, Apple i dalje preferira izvorne aplikacije.
+
+8. Budućnost progresivnih web aplikacija
+
+Razvoj PWA-a ide u smjeru sve veće integracije s operacijskim sustavima. Nova poboljšanja poput WebAssemblyja, Web Push API-ja za iOS i proširenog pristupa senzorima otvaraju vrata još snažnijim mogućnostima web aplikacija.
+
+Očekuje se da će PWA u budućnosti igrati ključnu ulogu u aplikacijskom ekosustavu, posebno za poslovne subjekte koji žele smanjiti troškove razvoja i povećati doseg svojih digitalnih rješenja. S obzirom na stalni napredak web standarda, razlika između PWA-a i izvornih aplikacija sve se više smanjuje.
+
+9. Zaključak
+
+Progresivne web aplikacije predstavljaju značajan korak naprijed u razvoju web tehnologija, kombinirajući dostupnost weba s performansama i funkcionalnošću izvornog softvera. Analiza njihovih značajki pokazuje da nude iznimno korisničko iskustvo, brzo učitavanje, offline podršku i jednostavnu instalaciju – sve to uz niže troškove razvoja i održavanja.
+
+Iako još uvijek postoje ograničenja, osobito u pristupu hardverskim funkcijama i podršci određenih preglednika, prednosti PWA-a čine ih idealnim rješenjem za velik broj aplikacijskih scenarija. Njihova uloga u digitalnoj transformaciji bit će sve veća, a trendovi upućuju na to da će se granice između web i mobilnih aplikacija nastaviti brisati.
+
+PWA su, stoga, ne samo tehnologija budućnosti, nego i rješenje koje već danas nudi optimalan balans između performansi, dostupnosti i jednostavnosti korištenja.

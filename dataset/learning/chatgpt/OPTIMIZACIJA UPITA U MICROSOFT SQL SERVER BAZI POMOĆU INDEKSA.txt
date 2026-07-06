@@ -1,0 +1,254 @@
+Uvod
+
+U suvremenim informacijskim sustavima količina podataka kontinuirano raste, a brzina pristupa tim podacima postaje jedan od ključnih čimbenika uspješnosti aplikacija i poslovnih procesa. Jedan od najvažnijih mehanizama koji omogućuju brza i učinkovita pretraživanja u relacijskim bazama podataka jesu indeksi. U Microsoft SQL Serveru indeksi predstavljaju strukture podataka dizajnirane da ubrzaju dohvat i filtriranje podataka, a pravilna upotreba i optimizacija indeksa može značajno poboljšati ukupne performanse sustava. Međutim, neadekvatna primjena može dovesti do suprotnih efekata: usporavanja upisa, povećanja korištenja memorije i fragmentacije.
+
+Ovaj rad detaljno obrađuje koncepte indeksa u SQL Serveru, vrste indeksa, načela po kojima funkcioniraju, strategije optimizacije te alate koje SQL Server nudi za analizu i poboljšanje performansi. Naglasak je stavljen na praktičnu primjenu i razumijevanje kako optimizacija indeksa utječe na cjelokupno ponašanje baze podataka.
+
+---
+
+1. Uloga indeksa u SQL Serveru
+
+Indeksi služe kao strukture podataka koje omogućuju puno brži pristup redovima unutar tablica. Konceptualno, indeks se može usporediti sa sadržajem knjige – umjesto pretraživanja svake stranice, sadržaj daje uputu gdje se nalazi tražena informacija, značajno skraćujući vrijeme pronalaženja.
+
+Bez indeksa, SQL Server mora koristiti table scan, odnosno sekvencijalno pretraživanje svih redova u tablici, što je izuzetno neučinkovito za velike tablice. Uz indeks, SQL Server može koristiti index seek, operaciju koja omogućuje brzi pristup samo relevantnim redovima.
+
+1.1. Prednosti korištenja indeksa
+
+ Brže izvršavanje SELECT upita
+ Učinkovitije filtriranje, sortiranje i grupiranje
+ Poboljšane performanse JOIN operacija
+ Mogućnost jedinstvene identifikacije redaka putem unique indeksa
+
+1.2. Nedostaci i troškovi
+
+ Indeksi zauzimaju dodatni prostor na disku
+ Usporavaju INSERT, UPDATE i DELETE operacije
+ Zahtijevaju održavanje (rebuild/reorganize)
+ Mogu se fragmentirati i uzrokovati neoptimalne planove izvršavanja
+
+---
+
+2. Vrste indeksa u SQL Serveru
+
+SQL Server nudi više vrsta indeksa, a razumijevanje njihove strukture i funkcije ključno je za pravilnu optimizaciju.
+
+2.1. Clustered indeks
+
+Clustered indeks određuje fizički redoslijed podataka u tablici. Tablica može imati samo jedan clustered indeks, jer redovi mogu biti poredani na samo jedan način.
+
+Karakteristike clustered indeksa:
+
+ Podaci su organizirani u B-tree strukturi
+ List-level sadrži stvarne podatke
+ Optimalan za stupce koji se često koriste u rasponskim upitima i sortiranju
+
+Odabir primarnog ključa često automatski stvara clustered indeks, iako to nije strogo pravilo.
+
+2.2. Non-clustered indeksi
+
+Non-clustered indeks sadrži samo ključeve i pointere prema stvarnim redovima podataka. Jedna tablica može imati više non-clustered indeksa, što omogućuje fleksibilnu optimizaciju različitih vrsta upita.
+
+Koristi se za:
+
+ Pretraživanje podataka po stupcima koji nisu dio clustered indeksa
+ Pokrivanje upita (covering queries) dodavanjem INCLUDE stupaca
+
+2.3. Unique indeksi
+
+Unique indeksi osiguravaju da vrijednosti u indeksiranom stupcu budu jedinstvene. Osim što poboljšavaju performanse, često se koriste za implementaciju poslovnih pravila.
+
+2.4. Filtered indeksi
+
+Filtered indeksi primjenjuju se samo na dio redova u tablici, npr.:
+
+```sql
+CREATE INDEX IX_ActiveCustomers ON Customers(Status) WHERE Status = 'Active';
+```
+
+Prednosti:
+
+ Brže stvaranje
+ Manje prostora
+ Poboljšane performanse kada se filtriranje poklapa s uvjetom indeksa
+
+2.5. Columnstore indeksi
+
+Columnstore indeksi koriste se za analitička i OLAP okruženja gdje se izvršavaju složene agregacije nad velikim količinama podataka.
+
+Prednosti:
+
+ Visok stupanj kompresije
+ Optimizirano za čitanje stupaca
+ Znatno ubrzanje agregacija
+
+Nedostatak je sporije izvršavanje transakcijskih operacija, ali se to može ublažiti korištenjem kombiniranih strategija (npr. clustered columnstore + delta store).
+
+---
+
+3. Struktura indeksa
+
+Većina SQL Server indeksa temelji se na B-tree (balanced tree) strukturi.
+
+3.1. Logičke komponente indeksa
+
+ Root level – početna točka za navigaciju
+ Intermediate levels – čvorovi koji vode do list-levela
+ Leaf level – razina koja sadrži podatke (clustered) ili pointere (non-clustered)
+
+3.2. Navigacija kroz indeks
+
+Kod index seek operacije, SQL Server navigira kroz razine B-stabla, što omogućuje pristup podacima u logaritamskom vremenu O(log n).
+
+Nasuprot tome, table scan je O(n) i ne skalira dobro.
+
+---
+
+4. Optimizacija indeksa
+
+Optimizacija indeksa obuhvaća analizu postojećih indeksa, stvaranje optimalnih kombinacija stupaca, održavanje te uklanjanje nepotrebnih indeksa.
+
+4.1. Pravila za dizajn indeksa
+
+ Indeksirajte stupce koji se često pojavljuju u WHERE uvjetima
+ Koristite clustered indeks na stupcima koji su jedinstveni, inkrementalni i često uključeni u sortiranje
+ Stavite stupce visoke selektivnosti na početak indeksa
+ Izbjegavajte indeksiranje stupaca male selektivnosti (npr. booleans) osim u filtered indeksima
+ Koristite INCLUDE za pokrivanje upita bez pretrpanog ključnog dijela indeksa
+
+4.2. Pokrivanje upita (Covering Index)
+
+Ako indeks sadrži sve stupce potrebne za upit, SQL Server može izbjeći pristup stvarnim podacima i dohvatiti sve iz indeksa.
+
+Primjer:
+
+```sql
+CREATE NONCLUSTERED INDEX IX_Orders_CustomerId
+ON Orders (CustomerId)
+INCLUDE (OrderDate, TotalAmount);
+```
+
+Ovakav indeks omogućuje brzu realizaciju upita poput:
+
+```sql
+SELECT OrderDate, TotalAmount FROM Orders WHERE CustomerId = 10;
+```
+
+4.3. Analiza selektivnosti
+
+Selektivnost mjeri koliko je vrijednost stupca jedinstvena. Stupci visoke selektivnosti bolje rade kao indeksi.
+
+Selektivnost = 1 / broj redova za istu vrijednost
+
+Što je bliže 1, to je stupac bolji za indeksiranje.
+
+---
+
+5. Statistike u SQL Serveru
+
+SQL Server koristi statistike za procjenu broja redova koje upit vraća i optimizaciju plana izvršavanja. Statistike su često jednako važne kao i indeksi sami.
+
+5.1. Automatsko održavanje statistika
+
+ `AUTO_CREATE_STATISTICS`
+ `AUTO_UPDATE_STATISTICS`
+
+Preporučuje se ostaviti uključeno u većini slučajeva.
+
+5.2. Ručno ažuriranje statistika
+
+```sql
+UPDATE STATISTICS Orders;
+```
+
+Ovo je važno kod vrlo dinamičnih tablica.
+
+---
+
+6. Fragmentacija indeksa
+
+Fragmentacija nastaje kada se logički redoslijed stranica ne poklapa s fizičkim.
+
+6.1. Vrste fragmentacije
+
+ Internal fragmentation – neiskorišten prostor na stranicama
+ External fragmentation – raspored stranica u krivom redoslijedu
+
+6.2. Rješenja: Rebuild i Reorganize
+
+ Reorganize – lagano restrukturiranje, online operacija
+ Rebuild – potpuna rekonstrukcija indeksa, uklanja fragmentaciju i obnavlja statistike
+
+Primjeri:
+
+```sql
+ALTER INDEX IX_Orders ON Orders REORGANIZE;
+ALTER INDEX IX_Orders ON Orders REBUILD;
+```
+
+---
+
+7. Alati za analizu i optimizaciju
+
+SQL Server nudi više alata koji pomažu u procjeni efikasnosti indeksa.
+
+7.1. Execution Plan
+
+Prikazuje kako SQL Server izvršava upit. Pokazuje:
+
+ table scan
+ index seek
+ key lookup
+ missing index preporuke
+
+7.2. Dynamic Management Views (DMVs)
+
+Npr.:
+
+```sql
+SELECT  FROM sys.dm_db_missing_index_details;
+```
+
+Ili analiza korištenja indeksa:
+
+```sql
+SELECT  FROM sys.dm_db_index_usage_stats;
+```
+
+7.3. Database Engine Tuning Advisor
+
+Automatski predlaže indekse, statistike i optimizacije.
+
+7.4. SQL Server Profiler
+
+Omogućuje praćenje upita koji najviše opterećuju sustav.
+
+---
+
+8. Najbolje prakse indeksiranja
+
+8.1. Optimizirajte za najčešće upite, ne za sve moguće upite
+
+Prekomjerno indeksiranje može napraviti više štete nego koristi.
+
+8.2. Koristite odgovarajuće vrste indeksa
+
+ OLTP → clustered + nekoliko non-clustered
+ OLAP → columnstore
+
+8.3. Redovito analizirajte neiskorištene indekse
+
+Rijetko korišteni indeksi samo usporavaju upise.
+
+8.4. Razumite trade-off između čitanja i pisanja
+
+Sustavi s puno pisanja trebaju biti štedljivi s indeksima.
+
+---
+
+Zaključak
+
+Indeksi u SQL Serveru predstavljaju ključan element u optimizaciji performansi baza podataka. Njihova pravilna implementacija skraćuje vrijeme izvršavanja upita, smanjuje potrošnju resursa i omogućuje skalabilnost sustava čak i kada količina podataka rapidno raste. Međutim, jednako je važno prepoznati da indeksi zahtijevaju pažljivo planiranje i održavanje; neprimjereno indeksiranje može dovesti do povećane fragmentacije, usporenih transakcijskih operacija i nepovoljnog iskorištavanja prostora.
+
+Optimizacija indeksa uključuje razumijevanje strukture podataka, odabir odgovarajućih vrsta indeksa, analizu selektivnosti stupaca, održavanje statistika te nadzor performansi kroz izvedbene planove i DMV-ove. Naposljetku, uspješan dizajn sustava temelji se na balansu između performansi čitanja i pisanja te kontinuiranom praćenju stvarnog ponašanja aplikacija.
+
+SQL Server nudi snažne mehanizme kojima korisnik može postići visoku razinu optimizacije, no krajnji rezultat ovisi o kvaliteti poznavanja koncepta i sposobnosti njihove pravilne primjene. Zbog toga su indeksi i optimizacija ključna područja koja svaki stručnjak za baze podataka mora temeljito razumjeti.

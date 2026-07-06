@@ -1,0 +1,47 @@
+1. Uvod
+
+Trihalometani (THM) su skupina kemijskih spojeva koja nastaje kao nusproizvod pri dezinfekciji vode kloriranjem. Kloriranje je standardni postupak za dezinfekciju vode, međutim, uz pozitivne učinke na zdravlje, ovaj postupak može dovesti i do nastanka štetnih tvari poput trihalometana, koji mogu imati ozbiljne zdravstvene posljedice ako se konzumiraju u visokim koncentracijama. Trihalometani su često prisutni u vodi koja se distribuira za ljudsku potrošnju, a zbog svojih toksičnih svojstava, potrebno je kontrolirati njihove koncentracije. Zbog toga je od esencijalne važnosti razumjeti mehanizam nastanka trihalometana, njihove učinke na ljudsko zdravlje te metode određivanja njihovih koncentracija u vodi.
+
+Cilj ovog seminara je prikazati proces određivanja koncentracije trihalometana u vodi, s posebnim naglaskom na vodocrpilište Bartolovec, jedno od važnijih izvora pitke vode u Hrvatskoj. Pored toga, bit će opisani faktori koji utječu na njihovu koncentraciju, kao i postupci smanjenja njihove koncentracije u vodi.
+
+2. Trihalometani: kemijska svojstva i nastanak
+
+Trihalometani su kemijski spojevi koji se sastoje od tri atoma halogena (fluor, klor, brom, jod) i jednog atoma ugljika. Najpoznatiji trihalometani koji se nalaze u pitkoj vodi su kloroform (CHCl3), dibromkloroform (CHCl2Br), bromoform (CHBr3) i jodoform (CHI3). Ti spojevi nastaju kada klor reagira s prirodnim organskim tvarima prisutnim u vodi, poput huminskih i fulvinskih kiselina (Morita et al., 2016). Ovaj proces je poznat kao halogenacija, a najčešće dolazi do njegovog stvaranja tijekom kloriranja u procesu dezinfekcije. Klor, kao jedan od najčešće korištenih dezinficijensa, reagira s prirodnim organskim tvarima u vodi, a posebno s onima koje sadrže dušik i kisik, stvarajući trihalometane.
+
+Iako je kloriranje vode vrlo učinkovit postupak za eliminaciju patogena, poput bakterija, virusa i parazita, nesretna posljedica tog postupka jest upravo nastanak trihalometana, koji imaju toksična svojstva. Klorirani trihalometani, osobito kloroform, imaju potencijalne kancerogene učinke, što čini njihovu regulaciju vrlo važnom u sustavima za vodoopskrbu (Richardson et al., 2007).
+
+3. Zdravstveni učinci trihalometana
+
+Trihalometani su prepoznati kao potencijalni karcinogeni, a njihova dugoročna konzumacija u visokim koncentracijama može imati ozbiljne posljedice po ljudsko zdravlje. Studije su povezale izloženost trihalometanima s povećanim rizikom od razvoja raka mokraćnog mjehura i debelog crijeva (Villanueva et al., 2004). Osim toga, dugoročno izlaganje trihalometanima može imati i negativne učinke na jetru, bubrege i živčani sustav, osobito kod osjetljivih skupina poput trudnica, djece i starijih osoba.
+
+Iako su trihalometani prisutni u vodi u niskim koncentracijama, njihova kronična konzumacija može rezultirati nakupljanjem toksičnih tvari u organizmu. Svjetska zdravstvena organizacija (WHO) i mnoge nacionalne agencije za zaštitu zdravlja postavile su smjernice za maksimalno dopuštene koncentracije trihalometana u pitkoj vodi. Preporučena koncentracija kloroforma, na primjer, ne bi smjela prelaziti 0,1 mg/L (WHO, 2006).
+
+4. Vodocrpilište Bartolovec
+
+Vodocrpilište Bartolovec, smješteno u blizini Varaždina, jedno je od ključnih izvora pitke vode u Hrvatskoj. Voda koja dolazi s ovog vodocrpilišta opskrbljuje velik broj domaćinstava, te je stoga od velikog značaja kontrolirati njezinu kvalitetu, posebno prisutnost štetnih tvari poput trihalometana. Vodocrpilište koristi podzemne izvore vode, što znači da je voda iz ovog izvora često siromašna prirodnim organskim tvarima, no to ne znači da se u procesu dezinfekcije kloriranjem ne mogu stvarati trihalometani.
+
+Kontrola kvalitete vode u Bartolovcu provodi se redovitim analizama, a određivanje koncentracije trihalometana postalo je standardna praksa kako bi se osigurala usklađenost s zakonodavstvom i smjernicama WHO-a. Zbog važnosti ovog vodocrpilišta za regionalnu vodoopskrbu, važno je usmjeriti pažnju na metode i instrumente koji omogućuju točno određivanje koncentracije trihalometana u vodi.
+
+5. Metode za određivanje trihalometana u vodi
+
+Postoji nekoliko metoda za određivanje koncentracije trihalometana u vodi. Najčešće korištena metoda temelji se na kromatografskoj analizi, osobito plinskoj kromatografiji (GC), koja omogućuje visoku osjetljivost i preciznost u detekciji ovih spojeva. U ovoj metodi, uzorak vode prvo se izvlači i priprema za analizu, a zatim se analizira pomoću plinske kromatografije, koja odvaja različite komponente na temelju njihovih kemijskih svojstava.
+
+Jedna od prednosti plinske kromatografije je njezina sposobnost razdvajanja trihalometana od drugih spojeva u vodi, što omogućuje precizno mjerenje njihove koncentracije. Korištenje različitih detektora, poput detektora plameno-ionizacijske detekcije (FID), omogućuje još veću osjetljivost analize (Lee et al., 2018). Ova metoda također je pogodna za analizu niskih koncentracija trihalometana, što je ključno za kontrolu kvalitete pitke vode.
+
+Osim plinske kromatografije, primjenjuju se i druge metode kao što su spektrofotometrija, visokomjerno-tekućinska kromatografija (HPLC), te elektrokemijske metode. Svaka od ovih metoda ima svoje prednosti i nedostatke, a izbor metode ovisi o specifičnostima uzorka vode i potrebnoj osjetljivosti (Chen et al., 2019).
+
+6. Faktori koji utječu na koncentraciju trihalometana u vodi
+
+Koncentracija trihalometana u vodi ovisi o nekoliko faktora. Prvo, sastav i kvaliteta izvorske vode imaju značajan utjecaj. Vode s većim sadržajem organskog materijala, osobito huminskih kiselina, sklonije su većem stvaranju trihalometana. Drugi važan faktor je koncentracija klora koji se koristi u procesu dezinfekcije. Više doze klora obično rezultiraju većim stvaranjem trihalometana, dok je niža doza klora učinkovitija u smanjenju nastanka ovih spojeva.
+
+Također, uvjeti poput temperature i pH vrijednosti također mogu utjecati na brzinu stvaranja trihalometana. Na primjer, viša temperatura može povećati brzinu reakcije između klora i organskih tvari, dok kiseli uvjeti mogu potaknuti veću proizvodnju trihalometana (Davis et al., 2003).
+
+7. Smanjenje koncentracije trihalometana u vodi
+
+Postoji nekoliko strategija koje se mogu primijeniti kako bi se smanjila koncentracija trihalometana u pitkoj vodi. Jedna od učinkovitih metoda je primjena alternativnih dezinficijenasa poput ozona ili UV svjetlosti. Ozone su učinkovite u uništavanju patogena, a istovremeno ne stvaraju trihalometane. Sličan učinak može se postići i primjenom UV svjetlosti, koja deaktivira mikroorganizme bez stvaranja nusproizvoda.
+
+Također, postoje i tehnike smanjenja organskog materijala u vodi prije procesa dezinfekcije, kao što je filtracija kroz aktivni ugljen, koji može adsorbirati organske tvari i time smanjiti potencijal za nastanak trihalometana (Baker et al., 2010).
+
+8. Zaključak
+
+Trihalometani predstavljaju ozbiljan problem u vodama koje se koriste za ljudsku potrošnju, jer njihova prisutnost u većim koncentracijama može imati negativne učinke na ljudsko zdravlje. Stoga je od esencijalne važnosti pratiti koncentraciju trihalometana u vodi, osobito u velikim vodocrpilištima kao što je Bartolovec. Razumijevanje kemije trihalometana, faktora koji utječu na njihovu koncentraciju, te metoda za njihovo određivanje i smanjenje može značajno pridonijeti očuvanju sigurnosti pitke vode.

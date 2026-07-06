@@ -1,0 +1,63 @@
+1. Uvod
+
+Individualizirani rukopisni fontovi — digitalne imitacije stvarne rukopisne varijante pojedinca — postali su važan alat u dizajnu, personalizaciji komunikacije i u identifikacijskim primjenama. Njihova upotreba proteže se od grafičkog dizajna i brendiranja preko obrazovnih materijala do generativnih sustava koji repliciraju stilove pisanja. Pitanje kako takve fontove klasificirati i kako precizno odrediti njihovu primarnu namjenu zahtijeva interdisciplinarni pristup koji uključuje tipografiju, analizu grafizma (stroke/pen dynamics), semantiku znakovnog sustava i računalne metode za modeliranje varijabilnosti rukopisa. U ovom radu izlažem sustavni pristup klasifikaciji rukopisnih fontova i kriterije za određivanje njihove namjene, oslanjajući se na postojeće klasifikacijske sheme tipografije, istraživanja u području sintetiziranja rukopisa i recentne metode za generiranje personaliziranih fontova. [1][3]
+
+2. Problematika klasifikacije fontova — teorijski okviri
+
+Klasifikacija tipografskih izvora tradicionalno se oslanja na sustave poput Vox-ATypI koji dijele tipove u velike skupine (serif, sans-serif, calligraphic/script, display itd.), što omogućuje kategorizaciju prema povijesnim, oblikovnim i funkcionalnim osobinama. Međutim, rukopisni i calligraphic fontovi zauzimaju poseban položaj jer s jedne strane reproduciraju slobodu i varijabilnost stvarnog rukopisa, a s druge su strane namijenjeni pouzdanoj primjeni u digitalnom okruženju (čitljivost, metrike, znakovi). Stoga se na razini klasifikacije treba kombinirati tradicionalna tipografska kategorizacija s parametrima koji mjere: prisutnost i tip serifa, kontrast debljine linije, stupanj povezanosti znakova (cursive vs. disconnected), te stupanj varijabilnosti pojedinačnih glyphova. [1][5]
+
+Nadalje, uloga formalnih klasifikacija ostaje vrijedna, ali ih je potrebno proširiti parametrima koji su specifični za rukopis: dinamika poteza (pressure/velocity simulacija), frekvencija varijacija iste znakove, i semantička interpretacija posebnih slovenskih/diakritičkih znakova u jezicima s latinicom. Takav prošireni skup atributa omogućuje preciznije razlikovanje npr. «personaliziranog rukopisnog fonta za brendiranje» od «funkcionalnog rukopisnog fonta za dugotrajno čitanje». [2][5]
+
+3. Ključni vizualni i funkcionalni kriteriji
+
+Klasifikacija po svrsi mora se temeljiti na mjerljivim vizualnim pokazateljima:
+
+Serifi (prisutnost/oblik): iako su serifi tradicionalno vezani uz serifne obitelji, rukopisni fontovi ponekad sadrže male završetke koji funkcioniraju kao serifi. Identifikacija i tipologija (bracketed, slab, hairline) utječu na čitljivost i primjenu u tisku naspram weba. [5][13]
+
+Debljina linije i kontrast: stupanj kontrasta između debljih i tanjih dijelova poteza utječe na percepciju formalnosti i čitljivosti; nisko-kontrastni rukopisni fontovi bolje funkcioniraju u malim veličinama ili kao display text u digitalnim sučeljima, dok visoki kontrast naglašava dekorativnost. [5][3]
+
+Povezanost i flow (cursive vs. disconnected): potpuna povezanost slova stvara dojam prirodnog rukopisa i brzine, ali može smanjiti prepoznatljivost pojedinačnih glyphova u malim veličinama. Disconnected varijante često su čitljivije i pogodnije za obrazovne materijale. [1][7]
+
+Varijabilnost glyphova i sistem alternata: individualizirani fontovi često sadrže varijante istog znaka (alternate glyphs, contextual alternates) kako bi simulirali prirodnu varijaciju; broj i način aktivacije tih alternata važan je za autentičnost i tehničku primjenu fonta. [7][3]
+
+Pokazatelji dinamike poteza: u sustavima koji modeliraju pritisak i brzinu olovke moguće je simulirati viskoznost i naglašavanje poteza, što je kritično za upotrebu u animaciji ili interaktivnim aplikacijama. Te su metrike predmet recentnih istraživanja u sintetiziranju rukopisa. [3][25]
+
+Ovi kriteriji služe kao operativni parametri unutar klasifikacijskog okvira koji povezuje vizualne osobine s funkcionalnom namjenom fonta. [3][25]
+
+4. Metodologija određivanja namjene
+
+Određivanje namjene fonta može se formalizirati kao višestupanjski proces:
+
+Ekstrakcija atributa: automatsko izdvajanje metrika (serif/no-serif, stroke contrast, povezivanje znakova, broj alternata, opseg diakritika) korištenjem alata za analizu glyphova i „skeleton“ ekstrakcije poteza. Te metode opisuju se u literaturi o automatskom građenju fontova i stroke recovery pristupima. [7][3]
+
+Mapiranje na namjenske kategorije: prema izdvajanju atributa font se klasificira u kategorije (npr. brending/personalizacija, editorial, obrazovni materijal, UI/UX friendly, signature/forensic). Svaka kategorija ima pragove za ključne varijable — primjerice, font za potpis (signature) zahtijeva visoku autentičnost poteza i male varijante, dok font za obrazovanje zahtijeva nisku količinu povezanosti i visoku konzistentnost glyphova. [3][8]
+
+Evaluacija čitljivosti i autentičnosti: provode se kvantitativni testovi čitljivosti (MRT, read-through measures) i kvalitativna procjena autentičnosti od strane ocjenjivača kako bi se potvrdila funkcionalna svrha. Recentna istraživanja pokazuju kako varijabilni fontovi s generativnim alternatama mogu povećati dojam autentičnosti, ali ponekad na štetu čitljivosti. [4][25]
+
+Kontekstualna validacija: konačna potvrda svrhe uključuje testiranje u realnim scenarijima (npr. tiskani letak, web članak, logotip), jer kontekst primjene može izmijeniti optimalne parametre (veličina, kerning, hinting). [9]
+
+Ovakva metodologija omogućuje dosljedno određivanje namjene individualiziranih rukopisnih fontova i osigurava prenosivost odluka među dizajnerima i inženjerima koji font implementiraju. [7][3]
+
+5. Primjeri primjene i implikacije
+
+Individualizirani rukopisni fontovi služe različitim svrham:
+
+Brending i identitet: personalizirani rukopis često pojačava dojam pristupačnosti i autentičnosti u vizualnom identitetu; može poslužiti i kao zaštitni znak brenda, no treba paziti na čitljivost pri manjim veličinama. [24]
+
+Obrazovanje i materijali za učenje: jasno strukturirani rukopisni fontovi mogu pomoći pri učenju pisanja i čitanja, pogotovo kada reproduciraju standardizirane oblike slova uz minimalnu varijaciju. [12]
+
+Forenzika i sigurnost: tehnike generiranja i klasifikacije rukopisa koriste se u prepoznavanju autentičnosti potpisa i u analizama rukopisnih uzoraka, što zahtijeva da generirani fontovi budu bivajući u granicama realistične varijabilnosti bez stvaranja mogućnosti za zloporabu. [16][23]
+
+Umjetnost i animacija: dinamički modelirani potezi omogućuju upotrebu rukopisnih fontova u animaciji i interaktivnim instalacijama gdje varijabilnost dodaje izražajnost. [19][3]
+
+Svaka primjena nameće prioritete među klasifikacijskim atributima i zahtijeva specifične procese validacije. [24][25]
+
+6. Tehničke i etičke napomene
+
+Tehnički, generativni sustavi za kreiranje personaliziranih fontova koriste strojeve učenja i algoritme za analizu poteza; važni su alati za ekstrakciju skeleta poteza i učenje stila iz malog broja primjera. Istraživanja naglašavaju potrebu za očuvanjem autentičnosti bez kompromitiranja privatnosti: osobni rukopisi su identifikacijski podaci i mogu imati forenzičku vrijednost, pa komercijalna primjena mora poštovati etičke i pravne okvire. [3][7][25]
+
+Postoji i pitanje standardizacije klasifikacije: dok tradicionalne sheme poput Vox-ATypI pružaju korisnu osnovu, contemporarni zahtjevi za varijabilnošću i digitalnom funkcionalnošću potiču razvoj proširenih klasifikacija koje su deskriptivne i parametarske. ATypI je 2021. priznao ograničenja stare sheme, što podcrtava potrebu za modernim klasifikacijskim modelima prilagođenima digitalnoj proizvodnji fontova. [1][18]
+
+7. Zaključak
+
+Klasifikacija i određivanje namjene individualiziranih rukopisnih fontova zahtijeva integraciju tipografskih znanja, analize poteza i računalnih metoda za modeliranje varijabilnosti. Prijedlog u ovom radu kombinira tradicionalne tipografske kategorije s operativnim parametrima: serifi, debljina linije, povezanost znakova, broj alternata i metrike dinamike poteza. Metodologija temeljena na ekstrakciji atributa, mapiranju na namjenske kategorije, evaluaciji čitljivosti i kontekstualnoj validaciji omogućava dosljednu odluku o primjeni fonta — bilo da se radi o brendiranju, obrazovanju, forenzici ili umjetničkoj upotrebi. Budući razvoj uključivat će formalizirane standarde za opis varijabilnosti rukopisa i etičke smjernice za upotrebu personaliziranih rukopisnih tehnologija. [1][3][7][25]

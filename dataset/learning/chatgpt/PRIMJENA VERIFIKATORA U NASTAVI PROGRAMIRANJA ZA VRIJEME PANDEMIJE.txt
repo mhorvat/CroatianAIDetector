@@ -1,0 +1,250 @@
+Uvod
+
+Pandemija bolesti COVID-19, koja je započela početkom 2020. godine, duboko je utjecala na sve segmente društva, uključujući i obrazovni sustav. Tradicionalna nastava, koja se u velikoj mjeri oslanjala na fizičku prisutnost studenata i nastavnika, morala se naglo prilagoditi novim okolnostima u kojima su online predavanja, virtualne laboratorijske vježbe i digitalni alati postali nužnost. Jedno od područja u kojem je ova transformacija bila posebno vidljiva jest nastava programiranja. Budući da programiranje zahtijeva praktičan rad, redovitu povratnu informaciju i stalnu procjenu kodnog rješenja, iznimno su važnu ulogu preuzeli verifikatori — automatizirani sustavi za provjeru i ocjenjivanje koda.
+
+Verifikatori, poput Mooshaka, BOSS-a, EdTestera, CodeRunnera, repl.it test okruženja ili sličnih rješenja, omogućuju automatizirano evaluiranje programskih zadataka, testiranje koda, uspoređivanje rezultata sa zadanim rješenjima, te generiranje povratnih informacija studentu. Tijekom pandemije postali su ključni alat u održavanju kontinuiteta nastave, standardizaciji procjene i povećanju efikasnosti rada nastavnika. Ovaj seminar istražuje ulogu verifikatora u nastavi programiranja u pandemijskom kontekstu, njihove prednosti i nedostatke, pedagoške učinke te izazove koje su donijeli u visokoškolskoj praksi.
+
+---
+
+1. Teorijski okvir i definicija verifikatora
+
+1.1. Što su verifikatori koda?
+
+Verifikatori su računalni sustavi dizajnirani za automatsko testiranje, ispravljanje i ocjenjivanje programskih rješenja na temelju unaprijed definiranih testnih primjera i kriterija. Oni najčešće:
+
+ izvršavaju studentski program u kontroliranom okruženju,
+ provjeravaju izlaz programa u odnosu na očekivane rezultate,
+ evaluiraju performanse (vrijeme izvršavanja, memorijsku složenost),
+ daju automatsku povratnu informaciju,
+ bilježe pokušaje i ocjene.
+
+Takvi sustavi već godinama postoje u kontekstu natjecanja iz programiranja (primjerice ACM ICPC ili IOI), ali su se s razvojem e-učenja postupno integrirali i u akademsku nastavu.
+
+1.2. Tipovi verifikatora
+
+Možemo ih podijeliti prema funkcionalnosti:
+
+1. Sustavi za jednostavnu provjeru izlaza
+   — Uspoređuju studentov izlaz s očekivanim. Primjeri: Mooshak, Kattis.
+
+2. Napredni evaluacijski sustavi
+   — Analiziraju i stil koda, točnost algoritma, robustnost. Primjeri: CodeGrade, CodeRunner.
+
+3. Didaktički orijentirani verifikatori
+   — Nude “step-by-step” povratne informacije i vizualizacije. Primjeri: repl.it Classroom, Scratch autocheck sustavi.
+
+4. Integrirani sustavi unutar LMS-a (Moodle, Canvas)
+   — Omogućuju testiranje koda izravno u sustavu za e-učenje, često putem dodataka (npr. CodeRunner u Moodlu).
+
+1.3. Uloga verifikatora u nastavi programiranja
+
+Verifikatori su zamišljeni da rasterete nastavnike, standardiziraju ocjenjivanje i povećaju objektivnost evaluacije. Kroz kontinuiranu automatsku provjeru omogućuju studentima brzu povratnu informaciju, što je ključno za razvoj programerskih kompetencija. U tradicionalnoj nastavi često je povratna informacija dolazila s odgodom, dok su verifikatori tu vremensku barijeru uklonili.
+
+---
+
+2. Nastava programiranja prije pandemije i uloga verifikatora
+
+Prije pandemije, mnogi fakulteti već su koristili verifikatore, ali uglavnom selektivno — na laboratorijima, projektima ili u kontekstu programerskih natjecanja. Nastavnici su često preferirali kombinaciju ručnog pregleda i automatske provjere.
+
+2.1. Ograničena primjena
+
+Razlozi ograničene upotrebe prije pandemije uključivali su:
+
+ navike nastavnika i studenata usmjerene prema kontaktnoj nastavi,
+ ponekad kompleksno postavljanje i održavanje sustava,
+ nerazvijene potrebe za potpunom digitalizacijom,
+ uvjerenje da ručno ocjenjivanje osigurava bolji pedagoški uvid.
+
+2.2. Polagani prelazak u digitalno okruženje
+
+Uvođenje verifikatora često je bilo povezano s modernizacijom kurikuluma, ali nije bilo nužno. Fakulteti su provodili pilot-projekte, a pojedini su nastavnici koristili verifikatore samo kao pomoćno sredstvo.
+
+---
+
+3. Pandemijski kontekst: nagla digitalizacija i porast važnosti verifikatora
+
+Pandemija je preko noći učinila verifikatore ne samo korisnim, već i neophodnim za održavanje nastave programiranja.
+
+3.1. Prelazak na online nastavu
+
+Zbog epidemioloških mjera:
+
+ predavanja su postala online,
+ laboratorijske vježbe morale su biti virtualne,
+ ispitivanje i ocjenjivanje morali su se odvijati na daljinu.
+
+To je otvorilo pitanje akademske čestitosti, potrebu za objektivnim i brzim ocjenjivanjem te osiguranje pedagoške kvalitete bez fizičkog kontakta.
+
+3.2. Verifikatori kao odgovor na izazove online ispitivanja
+
+Verifikatori su omogućili:
+
+ sprječavanje plagiranja putem jedinstvenih testova i randomizacije zadataka,
+ brzo ocjenjivanje velikog broja studenata,
+ transparentnu i ujednačenu procjenu,
+ smanjivanje nastavničkog opterećenja,
+ omogućavanje studentima rad od kuće uz realističnu simulaciju programerskog okruženja.
+
+3.3. Povećana dostupnost i širenje digitalnih alata
+
+Mnogi fakulteti su u kratkom roku integrirali ili proširili upotrebu sustava kao što su:
+
+ Moodle + CodeRunner
+ Mooshak
+ GitHub Classroom
+ repl.it / Replit
+ HackerRank for Education
+ Kattis
+
+Ovi sustavi omogućili su standardizaciju rada, ali i fleksibilnost u dizajniranju zadataka.
+
+---
+
+4. Pedagoški učinci verifikatora tijekom pandemije
+
+4.1. Povećana autonomija studenata
+
+Automatska povratna informacija potaknula je studente na:
+
+ samostalno rješavanje zadataka,
+ iterativno učenje metodom pokušaja i pogreške,
+ razvoj analitičkog i algoritamskog razmišljanja.
+
+Studenti su mogli odmah vidjeti gdje griješe, što tradicionalna nastava često ne omogućuje tako brzo.
+
+4.2. Poboljšanje motivacije
+
+Često se pokazalo da gamifikacijski elementi (ranking liste, broj pokušaja, vizualni indikatori uspješnosti) povećavaju motivaciju, posebno kod početnika.
+
+4.3. Povećanje objektivnosti
+
+Verifikatori eliminiraju subjektivnost ocjenjivanja, a kriteriji su jasni i jednako primijenjeni na sve studente. Time se povećalo povjerenje u proces ocjenjivanja u situaciji kad je nastava bila potpuno online.
+
+4.4. Razvoj tehničke pismenosti
+
+Studenti su usvojili:
+
+ rad sa sustavima za upravljanje kodom,
+ korištenje virtualnih okruženja,
+ razumijevanje testne automatizacije,
+ sposobnost pisanja koda koji zadovoljava stroge uvjete testiranja.
+
+Ove kompetencije izravno su korisne u industriji.
+
+---
+
+5. Izazovi korištenja verifikatora u pandemijskom kontekstu
+
+5.1. Tehničke poteškoće
+
+Neki fakulteti su se suočili s problemima kao što su:
+
+ nestabilnost serverske infrastrukture,
+ poteškoće sa skaliranjem sustava na velik broj studenata,
+ problemi s kompatibilnošću programskih jezika i interpreterima.
+
+Kod studenata se javljala frustracija prilikom tehničkih pogrešaka koje nisu povezane s njihovim kodom.
+
+5.2. Pretjerano oslanjanje na automatizaciju
+
+Jedan od izazova bio je rizik da studenti počnu “kodirati za verifikator”, tj. prilagođavati svoje rješenje očekivanim testovima, umjesto da razumiju koncept. Kako bi se to izbjeglo, nastavnici su morali:
+
+ dizajnirati jasnije i raznovrsnije testove,
+ poticati konceptualno razumijevanje kroz teorijske zadatke,
+ organizirati dodatna objašnjenja.
+
+5.3. Ograničena procjena kreativnosti
+
+Automatski sustavi dobro ocjenjuju točnost i efikasnost, ali slabije evaluiraju:
+
+ stil programiranja,
+ eleganciju rješenja,
+ originalnost ideje,
+ dizajn strukture programa.
+
+Zbog toga su mnogi nastavnici kombinirali automatsku provjeru i ručno ocjenjivanje projekata.
+
+5.4. Psihološki aspekti
+
+Neki studenti su osjećali:
+
+ stres zbog “strogoće” verifikatora,
+ demotivaciju kada sustav odbije rješenje više puta,
+ smanjenu interakciju s nastavnikom.
+
+Zbog toga su nastavnici uvodili dodatne konzultacije i mentorstvo kako bi smanjili osjećaj izolacije.
+
+---
+
+6. Studije slučaja (sažeti primjeri)
+
+6.1. Fakulteti koji su uveli Moodle CodeRunner
+
+Mnogi tehnički fakulteti u Hrvatskoj implementirali su CodeRunner tijekom pandemije. Sustav se pokazao iznimno korisnim u ispitima, jer je studentima omogućio rješavanje zadataka u kontroliranom okruženju istovremeno pružajući točnu automatsku provjeru. Rezultat je:
+
+ smanjenje opterećenja nastavnika,
+ brža obrada velikog broja studenata,
+ povećana transparentnost ocjenjivanja.
+
+6.2. Online hackathoni i natjecanja
+
+Pandemija je potaknula i održavanje virtualnih hackathona i programerskih natjecanja. Korišteni su sustavi poput Mooshaka i Kattisa, koji su omogućili nastavak studentskih aktivnosti i vježbanje programiranja u realnim uvjetima.
+
+6.3. GitHub Classroom i projektna nastava
+
+Za naprednije kolegije, GitHub Classroom je omogućio:
+
+ automatizirano preuzimanje i predaju zadataka,
+ integraciju testova (GitHub Actions),
+ praćenje rada studenata u stvarnom vremenu.
+
+U pandemiji se pokazalo da projekti razvijeni na ovaj način potiču suradnju i međusobnu komunikaciju, čak i kada su studenti fizički udaljeni.
+
+---
+
+7. Usporedba nastave s verifikatorima prije i tijekom pandemije
+
+| Aspekt                        | Prije pandemije          | Tijekom pandemije                      |
+| ----------------------------- | ------------------------ | -------------------------------------- |
+| Učestalost korištenja         | Umjerena                 | Visoka / obvezna                       |
+| Motivacija studenata          | Klasični zadaci          | Gamificirani sustavi povećali angažman |
+| Dostupnost                    | Ograničena (često labos) | Dostupno 24/7                          |
+| Ovisnost o tehnologiji        | Manja                    | Potpuna                                |
+| Evaluacija                    | Više ručna               | Pretežno automatizirana                |
+| Očuvanje akademske čestitosti | Jednostavnije osigurati  | Veći izazovi; verifikatori pomogli     |
+
+---
+
+8. Dugoročne posljedice pandemijskog korištenja verifikatora
+
+8.1. Normalizacija digitalnih metoda učenja
+
+Nakon pandemije, verifikatori su ostali dio standardnog obrazovnog procesa. Mnogi fakulteti i nastavnici nastavili su koristiti automatizirane provjere jer:
+
+ povećavaju objektivnost,
+ smanjuju troškove vremena,
+ omogućuju bolju pripremu studenata za tržište rada.
+
+8.2. Usvajanje industrijskih praksi
+
+Automatizirano testiranje i CI/CD koncepti dio su svakodnevice u IT-industriji. Nastava koja koristi verifikatore približava studente realnim radnim procesima.
+
+8.3. Evolucija nastavničkih kompetencija
+
+Pandemija je natjerala nastavnike da razviju:
+
+ digitalne kompetencije,
+ vještine dizajna online kurikuluma,
+ poznavanje automatiziranih testnih sustava.
+
+To dugoročno podiže kvalitetu nastave.
+
+---
+
+9. Zaključak
+
+Verifikatori su tijekom pandemije postali jedan od ključnih alata za održavanje kvalitete nastave programiranja. Njihova uloga bila je presudna u osiguravanju kontinuiteta obrazovanja, objektivnog ocjenjivanja i podrške studentima u procesu učenja. Pandemija je ubrzala digitalizaciju obrazovnog sustava i pokazala da automatizirani sustavi evaluacije mogu uspješno nadopuniti, ali ne i u potpunosti zamijeniti tradicionalnu pedagošku interakciju.
+
+Najvažniji doprinos verifikatora jest povećanje samostalnosti studenata, standardizacija provjere znanja i približavanje akademske nastave realnim potrebama industrije. Istodobno, neophodno je paziti na pedagoški balans između automatizacije i kreativnosti, kako bi studenti ne samo savladali sintaksu i algoritme, nego i razvili sposobnost rješavanja problema na višoj razini.
+
+Pandemija je time poslužila kao katalizator promjena, a iskustva stečena u tom periodu oblikovat će nastavnu praksu još dugi niz godina. Verifikatori su se pokazali ne samo kao tehnički alat, već i kao pedagoško sredstvo koje može značajno unaprijediti učenje programiranja, pod uvjetom da se koristi promišljeno, fleksibilno i uz razvoj dodatnih aktivnosti koje potiču dublje razumijevanje i kreativnost.

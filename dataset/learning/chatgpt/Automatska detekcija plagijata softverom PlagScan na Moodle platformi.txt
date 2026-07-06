@@ -1,0 +1,71 @@
+Uvod
+
+U suvremenom visokoobrazovnom okruženju digitalne tehnologije postale su sastavni dio procesa učenja, poučavanja i vrednovanja studentskih radova. Uz razvoj informacijsko-komunikacijskih tehnologija raste i dostupnost širokog spektra sadržaja na internetu, čime se otvara prostor za jednostavno kopiranje, preradu ili doslovno preuzimanje tuđih tekstova bez odgovarajućeg navođenja izvora. Plagijat, kao jedan od najčešćih oblika akademskog nepoštenja, predstavlja ozbiljan problem za obrazovne institucije, jer narušava vjerodostojnost evaluacijskog procesa, slabi akademski integritet i umanjuje kvalitetu samog obrazovanja. Kako bi se takve nepravilnosti spriječile ili barem značajno smanjile, institucije uvode različite sustave za otkrivanje sličnosti i plagijata.
+
+Jedan od najčešće korištenih alata u europskim obrazovnim sustavima jest PlagScan, softversko rješenje koje prepoznaje tekstualne podudarnosti analizirajući studentske radove u odnosu na internetske izvore, baze podataka i ranije predane dokumente. Kada se PlagScan integrira u Moodle — jednu od najraširenijih platformi za učenje i upravljanje kolegijima — nastaje cjelovit sustav za digitalnu provjeru autentičnosti i praćenje kvalitete studentskih radova. Cilj ovoga seminara je istražiti kako funkcionira automatska detekcija plagijata putem PlagScana, koje su prednosti i izazovi njegove primjene na Moodleu te kakva je uloga ovakvih tehnologija u očuvanju akademskog integriteta.
+
+Razumijevanje pojma plagijata
+
+Plagijat najčešće označava preuzimanje tuđih ideja, rečenica, odlomaka ili cjelovitih radova bez odgovarajuće atribucije. Iako se ponekad smatra isključivo svjesnom prijevarom, plagijat može biti i posljedica nedovoljnog razumijevanja akademskih pravila citiranja ili manjkavih istraživačkih vještina. U akademskom svijetu razlikuju se različiti oblici plagijata: doslovno kopiranje, parafraziranje bez navođenja izvora, autoplagijat (ponovna predaja vlastitog ranijeg rada), mozaik plagijat (kombiniranje dijelova iz više izvora), kao i plagiranje prevođenjem s drugih jezika.
+
+Sveučilišta i visoka učilišta poduzimaju edukacijske i administrativne mjere kako bi potaknula studente na odgovorno ponašanje, ali tehnološki alati postali su ključni u identifikaciji nepravilnosti. Uz porast broja digitalnih dokumenata raste i potreba za automatiziranim sustavima koji brzo i pouzdano pretražuju velike količine tekstualnih podataka. Time se rasterećuju nastavnici, ubrzava proces provjere i osigurava dosljedna evaluacija. PlagScan se u tom kontekstu nameće kao jedno od najpopularnijih rješenja.
+
+PlagScan kao alat za automatsko otkrivanje sličnosti
+
+PlagScan funkcionira na principu usporedbe predanog dokumenta s različitim izvorima teksta. Ti izvori uključuju javno dostupne internetske stranice, akademske baze podataka, znanstvene članke, e-knjige i prethodno predane radove registriranih korisnika. Algoritmi PlagScana analiziraju tekst tako da ga dijele na manje jedinice (npr. nizove riječi) i uspoređuju ih s postojećim zapisima, pri čemu prepoznaju doslovne podudarnosti i sličnosti u parafraziranom tekstu.
+
+Sustav generira izvješće u kojem prikazuje ukupni postotak sličnosti, označene problematične dijelove teksta i izvore s kojima su podudarnosti pronađene. Nastavnici mogu prilagoditi razinu osjetljivosti sustava, isključiti određene izvore iz analize ili postaviti prag iznad kojeg se rad smatra sumnjivim. PlagScan se kontinuirano nadograđuje novim funkcionalnostima, primjerice detekcijom prevelikog stupnja parafraziranja, što dodatno pomaže u razotkrivanju sofisticiranijih oblika plagijata.
+
+Iako nijedan alat ne može sa stopostotnom sigurnošću utvrditi plagijat, PlagScan predstavlja važan dio cjelovitog sustava akademske kontrole. Njegove analize treba promatrati kao potporu nastavniku, a ne konačnu presudu — interpretacija sličnosti zahtijeva stručnost, razumijevanje konteksta i poznavanje pravila citiranja.
+
+Moodle kao integrirana platforma za upravljanje učenjem
+
+Moodle je open-source sustav za upravljanje učenjem (LMS) koji omogućuje izradu online kolegija, postavljanje materijala, komunikaciju sa studentima, online testiranje i predaju zadataka. Njegova fleksibilnost i modularnost omogućile su mu široku primjenu u obrazovnim institucijama diljem svijeta, uključujući i Hrvatsku. Jedna od najvećih prednosti Moodlea je mogućnost integracije dodatnih alata i servisa, među kojima je i PlagScan.
+
+Integracija PlagScana u Moodle omogućuje besprijekoran tijek rada: student predaje rad putem Moodle aktivnosti Assignment, sustav automatski šalje dokument PlagScanu na analizu, a rezultati se vraćaju natrag u Moodle, gdje su dostupni studentima i nastavnicima, ovisno o postavkama koje odabere institucija. Na taj način proces provjere postaje transparentan i jednostavan, bez potrebe za ručnim preuzimanjem i učitavanjem dokumenata.
+
+Moodle također nudi različite mogućnosti prilagodbe postavki provjere, što nastavnicima omogućuje potpunu kontrolu nad procesom. Mogu se odrediti rokovi predaje, format dokumenata, vidljivost rezultata i prag sličnosti koji se smatra prihvatljivim. Ovakva integracija omogućuje da se provjera autentičnosti studentskih radova provodi sustavno, bez dodatnog administrativnog opterećenja.
+
+Postupak provjere radova kroz PlagScan na Moodleu
+
+Postupak detekcije plagijata započinje trenutačno nakon što student preda svoj rad na Moodle. Sustav može biti konfiguriran tako da automatski šalje rad na analizu, ili to može učiniti nastavnik ručnim pokretanjem provjere. Nakon slanja dokumenta PlagScan preuzima tekst i započinje proces usporedbe s bazama podataka i internetskim izvorima.
+
+Rezultati analize najčešće postaju dostupni relativno brzo, ovisno o veličini dokumenta i opterećenju sustava. Nastavnik u Moodleu vidi postotak sličnosti i može otvoriti detaljno izvješće. Izvješće prikazuje sve dijelove teksta označene različitim bojama prema razini rizika, a nastavnik može jednostavno pregledavati izvore s kojima se određeni dijelovi podudaraju. Ako sustav otkriva samo pravilno citirane dijelove ili uobičajene fraze, nastavnik može zanemariti takve rezultate.
+
+Student također može, ako nastavnik to dopusti, vidjeti svoje izvješće i korigirati rad prije konačne predaje. Ova mogućnost ima važnu edukacijsku ulogu: student uči razlikovati prihvatljivo citiranje od neispravnog preuzimanja sadržaja, čime se potiče razvoj akademske pismenosti i odgovornosti.
+
+Prednosti automatske detekcije plagijata
+
+Primjena sustava poput PlagScana donosi brojne prednosti. Prije svega, automatizirana provjera štedi vrijeme nastavnicima i osigurava objektivnost. Ljudi prirodno imaju ograničenja u pretraživanju velikih količina podataka, dok softver može u djeliću sekunde usporediti rad sa stotinama tisuća izvora. Time se znatno smanjuje mogućnost da plagijat prođe nezapaženo.
+
+Druga važna prednost je transparentnost. Studenti su svjesni da će njihov rad biti pregledan, što ih potiče na veću samostalnost i pridržavanje pravila citiranja. Ovakav sustav djeluje preventivno: smanjuje broj pokušaja plagiranja i potiče akademsku čestitost. Nastavnici, pak, mogu dosljedno primjenjivati pravila, što pridonosi pravednosti evaluacije.
+
+Treća prednost odnosi se na edukacijsku funkciju. Uz mogućnost povratne informacije prije konačne predaje, studenti mogu naučiti prepoznati vlastite pogreške, ispraviti neispravno parafraziranje i poboljšati svoje istraživačke vještine. Softverski alati tako ne služe samo za nadzor, već i za poučavanje pravilnog znanstvenog pisanja.
+
+Izazovi i ograničenja primjene PlagScana
+
+Unatoč brojnim prednostima, važno je osvijestiti i ograničenja automatske detekcije plagijata. Ponajprije, softver ne može uvijek razlikovati legitimne podudarnosti od stvarnog plagijata. Na primjer, u stručnim područjima često se koriste ustaljene fraze ili terminologija koju nije moguće izraziti bitno drugačije, pa su određeni postoci sličnosti neizbježni. Preveliko oslanjanje na postotak može dovesti do pogrešnih zaključaka.
+
+S druge strane, sofisticirane metode plagiranja, poput prekomjernog parafraziranja, prevođenja s drugih jezika ili korištenja umjetne inteligencije za preinaku tekstova, mogu otežati detekciju. Iako se PlagScan stalno razvija, nijedan alat ne može obuhvatiti sve oblike manipulacije. Ljudska prosudba i dalje je ključna, posebno u interpretaciji izvješća.
+
+Također, postavlja se pitanje privatnosti i zaštite podataka. Institucije moraju jasno regulirati gdje se i koliko dugo pohranjuju studentski radovi, kao i osigurati da se dokumenti koriste isključivo u svrhu detekcije plagijata. Transparentna pravila i informiranje studenata o načinu obrade podataka važni su za očuvanje povjerenja u sustav.
+
+Pedagoška dimenzija i utjecaj na studentsko učenje
+
+Primjena PlagScana i sličnih alata ne treba se promatrati samo kao sredstvo kontrole, već prvenstveno kao dio šire strategije razvijanja akademske pismenosti. Ako se koristi pravilno, ovaj alat može znatno unaprijediti kvalitetu studentskog pisanja. Uočavanjem pogrešno citiranih dijelova i prevelike oslonjenosti na tuđe tekstove, studenti imaju priliku unaprijediti svoje vještine, razviti kritičko mišljenje i postati samostalniji u istraživanju.
+
+Nastavnici također imaju važnu ulogu u obrazovnom procesu. Umjesto stroge kaznene politike, preporučljivo je kombinirati softverske alate s edukacijom o pravilima akademskog pisanja. To uključuje radionice, upute o citiranju, primjere dobrih praksi i jasna objašnjenja što se smatra plagijatom. Takav pristup smanjuje broj incidenata i potiče pozitivno akademsko okruženje.
+
+Primjena u hrvatskom visokom obrazovanju
+
+U Hrvatskoj sve veći broj fakulteta koristi Moodle kao primarnu platformu za e-učenje, što stvara preduvjete za sustavnu primjenu alata za detekciju plagijata. Integracija PlagScana omogućila je jednostavniji nadzor nad kvalitetom studentskih radova, osobito u kontekstu sve češće izrade seminarskih, završnih i diplomskih radova u digitalnom obliku.
+
+Mnoge visokoškolske ustanove donijele su pravilnike o sprječavanju plagijata, u kojima se precizira primjena softvera, način postupanja u slučajevima sumnje i sankcije za prekršitelje. Takva pravila doprinose transparentnosti i ujednačenoj praksi. Uz porast digitalizacije visokog obrazovanja, očekuje se da će se softverska rješenja sve više koristiti i nadopunjavati edukacijskim mjerama.
+
+Zaključak
+
+Automatska detekcija plagijata putem softvera PlagScan na Moodle platformi predstavlja važan korak u osiguravanju akademske čestitosti i kvalitete obrazovnog procesa. U suvremenom digitalnom okruženju, gdje je pristup informacijama jednostavan i brz, nužno je imati pouzdane alate koji pomažu nastavnicima u provjeri autentičnosti studentskih radova. PlagScan nudi efikasan način identifikacije podudarnosti, dok Moodle, kao fleksibilna obrazovna platforma, omogućuje jednostavnu integraciju i automatizaciju procesa.
+
+Iako automatska detekcija ne može u potpunosti zamijeniti ljudsku prosudbu, ona značajno unapređuje pravednost evaluacije i potiče studente na odgovorno ponašanje. Sustavi poput PlagScana najbolje funkcioniraju kada se kombiniraju s edukacijom o pravilima akademskog pisanja i razvojem istraživačkih vještina. Na taj način detekcija plagijata nije samo disciplina kontrole, nego i prilika za učenje.
+
+U konačnici, očuvanje akademskog integriteta temelj je kvalitete visokog obrazovanja. Integracija PlagScana u Moodle predstavlja važan alat u toj misiji, omogućujući da obrazovne institucije zadrže visoke standarde, a studenti razviju svijest o važnosti autentičnog, odgovornog i etičkog akademskog rada.

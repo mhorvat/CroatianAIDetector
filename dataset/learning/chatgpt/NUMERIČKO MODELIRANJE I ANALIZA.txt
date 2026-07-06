@@ -1,0 +1,210 @@
+1. Uvod
+
+1.1. Cilj i opseg rada
+Cilj seminara je prikazati metodološki i matematički okvir numeričkog modeliranja strujanja podzemnih voda te pokazati proces izrade konceptualnog modela, kalibracije (s posebnim naglaskom na primjenu Newtonove metode), parametarske analize i interpretacije rezultata na primjeru slivnog područja rijeke Vuke u istočnoj Hrvatskoj. U radu se koriste postojeći hidrogeološki podaci i klimatološki podaci relevantni za područje Vuke kako bi se ilustriralo tipično modeliranje vodonosnih sustava u aluvijalnim ravnicama. Ograničenja rada uključuju pojednostavljenja potrebna za kratki seminar: model će biti dvodimenzionalan vodeno-masu (plan) s vertikalno prosječenim parametrima.
+
+1.2. Motivacija i važnost teme
+Numeričko modeliranje podzemnih voda omogućuje kvantifikaciju vodne bilance, predviđanje razina podzemne vode pod različitim scenarijima i podršku upravljanju resursima (crpilišta, navodnjavanje, zaštita od poplava). Primjena standardnih alata kao što su MODFLOW i GMS čini postupke reproducibilnima i primjenjivima na lokalne probleme.
+
+1.3. Kratki prikaz područja primjene — sliv rijeke Vuke
+Rijeka Vuka teče istočnom Slavonijom i ulijeva se u Dunav kod Vukovara. U literaturi se navode različite procjene veličine sliva i karakteristika: dužina Vuke je približno 112 km, dok se za površinu sliva navode vrijednosti koje se razlikuju po izvorima (npr. 644 km² prema jednim izvorima i 1 759 km² u nekim analizama hidrologije i modeliranja poplava). Ove razlike ukazuju na različite definicije slivnog područja i obuhvat pritoka te je stoga pri modeliranju važno jasno definirati granice sliva. ([Wikipedia][1])
+
+Klima područja relativno odgovara kontinentalnoj Slavoniji s umjereno toplim ljetima i hladnim zimama; mjerenja sa stanica u blizini (Osijek/Đakovo) pokazuju srednje mjesečne padaline i temperature u rasponima koji su relevantni za proračun infiltracije i evapotranspiracije. Podaci DHMZ-a i klimatske statistike služe kao ulaz za simulaciju vodne bilance. ([meteo.hr][2])
+
+Hidrogeološki sklop sliva karakteriziran je kvartarno-aluvijalnim sedimenatima u nizinskom dijelu (šljunak, pijesak, glina) što znači značajnu prostornu heterogenost vodonosnika i često izravan hidraulički kontakt rijeke i vodonosnika. Takvi su sustavi često modelirani kao nehomogeni visoko-vodopropusni vodonosnici s promjenjivim specifičnim kapacitetom i brzom reakcijom na hidrometeorološke podražaje. ([Hrčak][3])
+
+---
+
+2. Matematički temelj modeliranja podzemnih voda
+
+2.1. Osnovne jednadžbe i fizički principi
+Temelj numeričkog modeliranja strujanja podzemnih voda je zakon kontinuiteta (masa) u kombinaciji s Darcyjevim zakonom za protok kroz porozno sredstvo. Za saturated (zasićeni) tok u homogenom anizotropnom mediju, opća varijabla je piezometarski tlak ili hidrostatska razina h(x,y,t). Transientni dvodimenzionalni oblik vodnog bilansa (planarno prosječen) može se zapisati kao:
+
+[
+S_s \frac{\partial h}{\partial t} = \nabla \cdot (K \nabla h) + q
+]
+
+gdje je (S_s) specifični skladišni koeficijent [1/m], (K) tensor hidrauličke vodljivosti [m/s] (u jednostavnim modelima tretiran kao skalarni (K) ili kao dijagonalni komponenti (K_x, K_y)), a (q) volumni izvor/ponor [m³/(m³·s) ili m/s] (uključuje pridonose infiltracije, crpljenja, rekuperacije iz rijeke i sl.).
+
+Za dvodimenzionalnu, poravnatu (plan) diskretizaciju s rotacijskim operatorom u kartezijevom koordinatnom sustavu, jednadžba postaje:
+
+[
+S_s \frac{\partial h}{\partial t} = \frac{\partial}{\partial x}\left(K_x \frac{\partial h}{\partial x}\right) + \frac{\partial}{\partial y}\left(K_y \frac{\partial h}{\partial y}\right) + q.
+]
+
+Stacionarna (steady-state) jednadžba se dobiva postavljanjem (\partial h/\partial t = 0).
+
+2.2. Diskretizacija i numeričke metode
+Standardni pristupi su metoda konačnih razlika (finite difference — MODFLOW), metoda konačnih elemenata i metoda konačnih volumena. MODFLOW primjenjuje implicitnu vremensku diskretizaciju (obično Crank–Nicolson ili Backward Euler za transientne probleme) i centralne razlike za prostor. U diskretiziranom obliku za svaku ćeliju dobivamo sustav linearnih (ili lineariziranih) jednadžbi:
+
+[
+A(h) \mathbf{h}^{n+1} = \mathbf{b}
+]
+
+gdje matrica (A) ovisi o parametrima vodljivosti i geometriji mreže, a vektor (\mathbf{b}) sadrži izvore/pomake i ranije stanje. Za nelinearne probleme (npr. unsaturated zone, ili ovisnost vodljivosti o zasićenju) treba linearizacija — za koju se primjenjuju Newton-Raphson ili Quasi-Newton metode.
+
+2.3. Granice i početni uvjeti
+Tipične granice: Dirichlet (fiksna razina), Neumann (flux, npr. infiltracija), i mješovite uvjete (riječni kontakt — river package u MODFLOW-u). Početni uvjeti su početne razine h(x,y,t0), često uzete iz mjerenja ili interpoliranih iz observation wells.
+
+---
+
+3. Konceptualni model za sliv rijeke Vuke
+
+3.1. Prostorna i vremenska skala modela
+Model obuhvaća nizinski aluvijalni pojas uz tok Vuke i pratećih pritoka. Horizontalna rezolucija mreže: tipično 100–500 m ćelije za regionalni model; za ilustraciju u ovom seminaru koristi se mreža 200 × 200 m. Vremenski korak: dnevni, s periodom simulacije jedne godine za kalibraciju na sezonske varijacije, i višegodišnja simulacija scenarija.
+
+3.2. Strukturne komponente konceptualnog modela
+
+ Jedan sloj (vertikalno prosječen vodonosnik) nad nepomičnim (impermeabilnim) podloštem.
+ Rijeka Vuka modelirana kao linearni niz rijetki kanalni elementi koji imaju izgubljeni/izvorni hidraulički kontakt s vodonosnikom (river boundary).
+ Plohe infiltracije iz prosječnih godišnjih padalina umanjene za evapotranspiraciju (ET) te lokalni ladanje iz kanala.
+ Izvori = crpilišta i utjecaji poljoprivrede; ponori = izravni gubici kroz crpljenja.
+
+3.3. Parametri i početne vrijednosti (tablica ulaznih podataka)
+
+TABLICA 1 — Osnovni podaci sliva Vuke (odabrani izvori i pretpostavke)
+
+| Parametar                                   |                                      Vrijednost / Opis | Izvor/napomena                                                         |
+| ------------------------------------------- | -----------------------------------------------------: | ---------------------------------------------------------------------- |
+| Dužina rijeke                               |                                                 112 km | literatura, opći opis sliva. ([Wikipedia][1])                          |
+| Površina sliva                              |               644–1 759 km² (varijabilno u literaturi) | različiti izvori; potrebno definirati granice za model. ([Hrčak][4])   |
+| Prosječne godišnje padaline (Osijek/Đakovo) |                                        ~550–650 mm/god | DHMZ, klimatski podaci za okolna mjesta. ([meteo.hr][2])               |
+| Vodni sloj                                  | kvartarno-aluvijalni sedimenti (šljunak/pijesak/glina) | karakteristike iz regionalnih studija kvartarnih naslaga. ([Hrčak][3]) |
+
+TABLICA 2 — Pretpostavljeni hidrogeološki parametri za model (upotrebljeni u simulaciji demonstracije)
+
+| Parametar                          |   Simbol |                      Vrijednost (pretpostavka) |
+| ---------------------------------- | -------: | ---------------------------------------------: |
+| Horizontalna vodljivost            | K_x, K_y | 1·10^-4 – 5·10^-3 m/s (regionalno, heterogeno) |
+| Specifični skladišni koef.         |      S_s |                1·10^-4 m^-1 (nizinski akvifer) |
+| Poroznost (efekt.)                 |        n |                                      0.25–0.35 |
+| Prosječna infiltracija (efektivna) |        R |        0.05–0.15 m/god (ovisno o upotrebi tla) |
+
+(Napomena: vrijednosti su tipične domenske pretpostavke za aluvijalne sustave i u stvarnom radu treba ih izmjeriti/estimirati terenskim i pumpnim testovima.)
+
+---
+
+4. Proces kalibracije modela — primjena Newtonove metode
+
+4.1. Problem kalibracije i formulacija optimizacije
+Kalibracija se tretira kao nelinearni problem najmanjih kvadrata: tražimo parametarski vektor (\mathbf{p}) (npr. log(K) po zonama, specifični skladišni koef.), koji minimizira ponderiranu sumu kvadrata odstupanja između modeliranih razina (\mathbf{h}{\text{model}}(\mathbf{p})) i izmjerenih razina (\mathbf{h}{\text{obs}}):
+
+[
+\Phi(\mathbf{p}) = \frac{1}{2} \sum_{i} w_i \left(h_{\text{model},i}(\mathbf{p}) - h_{\text{obs},i}\right)^2.
+]
+
+4.2. Newton-Raphson / Gauss–Newton koraci
+Klasična Newtonova metoda rješava (\nabla \Phi(\mathbf{p}) = 0) iterativno. Gradient i Hessian su:
+
+[
+\nabla \Phi = J^T W ( \mathbf{h}{\text{model}}(\mathbf{p}) - \mathbf{h}{\text{obs}} ),
+]
+
+[
+\nabla^2 \Phi \approx J^T W J \quad (\text{Gauss–Newton aproksimacija}),
+]
+
+gdje je (J) Jacobian matrica parcijalnih derivacija modeliranih razina po parametrima (J_{ij} = \partial h_{\text{model},i}/\partial p_j), a (W) je diagonalna matrica pondera (w_i).
+
+Iteracijski update prema Gauss–Newtonu:
+
+[
+\delta \mathbf{p} = - (J^T W J)^{-1} J^T W ( \mathbf{h}{\text{model}} - \mathbf{h}{\text{obs}} ),
+\quad
+\mathbf{p}_{k+1} = \mathbf{p}_k + \lambda \delta \mathbf{p},
+]
+
+gdje je (\lambda \in (0,1]) parametar redukcije koraka (line search) radi stabilnosti. Ako je problem snažno nelinearan ili Hessian nije pozitivno definitan, koristi se Levenberg–Marquardt (LM) ili potpuna Newton-Raphson modulacija s Hessianom.
+
+4.3. Izračun Jacobiana i numerička računica
+Jacobij se u praksi računa numerički (perturbacijom parametra i evaluacijom modela) ili agilno korištenjem adjointnih metoda za efikasnost. Za regionalne probleme dimenzije J mogu biti velike — tada se koristi regularizacija (Tikhonov) da se izbjegne prenaučavanje:
+
+[
+\Phi_{reg}(\mathbf{p}) = \Phi(\mathbf{p}) + \frac{\alpha}{2} |\mathbf{L}(\mathbf{p}-\mathbf{p}_0)|^2
+]
+
+gdje (\alpha) je regularizacijski parametar, a (\mathbf{L}) operator koji kodira preferencije (npr. glatkost parametrskog polja).
+
+4.4. Demonstrativni postupak kalibracije (syntetički primjer)
+Za ilustraciju pretpostavimo četiri ključne parametarske zone s početnim log-K vrijednostima: [-4.0, -3.5, -3.0, -2.5] (log10 m/s). Imamo 8 opservacijskih bušotina s mjerenim srednjim godišnjim razinama. Nakon iteracija Gauss–Newton s line search i regularizacijom dolazimo do ažuriranih parametara npr. [-3.9, -3.6, -2.9, -2.6], pri čemu root-mean-square (RMS) pogreška pada s 0.35 m na 0.12 m. (Ovaj primjer je ilustrativan — u stvarnoj kalibraciji brojevi dolaze iz simulacijskog izvođenja modela).
+
+TABLICA 3 — Primjer kalibracijskih rezultata (synthetic)
+
+| Bušotina | h_obs (m) | h_model_pre (m) | h_model_post (m) |
+| -------- | --------: | --------------: | ---------------: |
+| W1       |     98.35 |           98.10 |            98.32 |
+| W2       |     97.80 |           97.42 |            97.78 |
+| W3       |     99.10 |           98.55 |            99.03 |
+| W4       |     96.50 |           96.05 |            96.48 |
+| W5       |     98.90 |           98.30 |            98.86 |
+| W6       |     97.20 |           96.80 |            97.17 |
+| W7       |     95.80 |           95.40 |            95.78 |
+| W8       |     99.60 |           98.90 |            99.58 |
+
+RMS prije: 0.35 m; RMS poslije: 0.12 m.
+
+---
+
+5. Parametarska analiza
+
+5.1. Osnovni ciljevi i metode
+Parametarska analiza (sensitivity analysis) istražuje koliko promjene u parametrima (npr. K, R, S_s) utječu na modelirane razine. Metode: lokalna analiza (derivacijska — Jacobian), globalna analiza (Monte Carlo, Latin Hypercube sampling), i scenario-based analiza (varijacija pojedinih parametara unutar definiranih raspona).
+
+5.2. Primjer lokalne osjetljivosti
+Za svaku opservacijsku točku izračunava se osjetljivost ( \partial h/\partial \log K). U aluvijalnim sustavima, bušotine blizu rijeke pokazuju visoku osjetljivost na K rijeke i river conductance, dok udaljene bušotine reagiraju više na regionalne zone K i recharge R.
+
+TABLICA 4 — Sumarna lokalna osjetljivost (primjer)
+
+| Parametar    | Prosječna apsolutna osjetljivost na h |
+| ------------ | ------------------------------------: |
+| log K zone 1 |                        0.45 m per dex |
+| log K zone 2 |                        0.30 m per dex |
+| Recharge R   |                  0.25 m per 10 mm/god |
+
+5.3. Monte Carlo analiza i nesigurnost rezultata
+U Monte Carlo pristupu definiramo distribucije parametara (npr. log K ~ N(μ,σ), R ~ Uniform), generiramo N realizacija i analiziramo statistike modeliranih razina (mean, 5%–95% interval). Tipični rezultati pokazuju da nesigurnost u log K dominira varijabilnošću razina, dok varijabilnost u R utječe više na dugoročne prosječne razine i promjene u skladištu.
+
+---
+
+6. Interpretacija rezultata i vodna bilanca
+
+6.1. Rezultati tipične simulacije (demonstracijski)
+Nakon kalibracije simulacija daje slag razina koji se dobro podudara s opservacijama (RMS ~0.12 m). Prostorna raspodjela glave pokazuje nekoliko ključnih karakteristika: najniže razine u centralnom nizinskom dijelu s dominantnim paralelnim protokom prema Dunavu; pod utjecajem sezonske infiltracije, razlike između zime i ljeta mogu biti reda desetaka centimetara do metar.
+
+6.2. Vodna bilanca sliva — pojednostavljena tablica godišnjeg bilančnog toka
+
+TABLICA 5 — Vodna bilanca (godište, ilustracija za tipičnu godinu)
+
+| Komponenta                             | Vrijednost (mm/god) |                                                 Bilješka |
+| -------------------------------------- | ------------------: | -------------------------------------------------------: |
+| Padaline (P)                           |                 600 |                                  prosjek okolnih stanica |
+| Evapotranspiracija (ET)                |                 420 |                   procjena za poljoprivredu i vegetaciju |
+| Infiltracija (I) = P - ET              |                 180 |               efektivno dostupno za punjenje vodonosnika |
+| Površinski otjecaj                     |                 120 | dio od P koji ne infiltrira (ovisno o tlu i upravljanju) |
+| Podzemni odtok prema Dunavu (baseflow) |                 100 |                                        simulacija modela |
+| Promjena skladišta (ΔS)                |                 -40 |     godišnje smanjenje skladišta (ovisno o sušnijoj/god) |
+
+Napomena: vrijednosti su ilustrativne i ovise o lokalnim uvjetima, upravljanju i točnoj geometriji sliva.
+
+6.3. Prostorna interpretacija i implikacije upravljanja
+
+ Visoke vrijednosti K u šljunčanim zonama ukazuju na brz transport i osjetljivost izvora (npr. crpilišta) na promjene u dotoku.
+ Kontakt rijeke i vodonosnika znači da povratne pojave visokih voda Dunava ili Vuke mogu uzrokovati penetraciju vode u vodonosnik (poniranje) ili obrnuto — podizanje razina. ([Hrčak][4])
+ Upravljanje crpljenjem i poljoprivredom (navodnjavanje) značajno utječe na lokalne ravnoteže: preporučljivo je izraditi plan crpljenja temeljen na zonama osjetljivosti dobivenim iz parametarske analize.
+
+---
+
+7. Zaključak
+
+7.1. Sažetak glavnih nalaza
+Numeričko modeliranje podzemnih voda oslanja se na spoj fundamentalne fizike (Darcy + kontinuitet), numeričkih metoda (diskretizacija i linearizacija) i inverse problems (kalibracija). Primjena na primjeru sliva Vuke pokazuje da su ključni elementi: pravilna definicija granica sliva, reprezentacija heterogenosti vodonosnika, korištenje pouzdanih klimatskih podataka za infiltraciju i adekvatna kalibracija parametara (npr. log K, recharge, S_s). Kalibracija pomoću Newtonovih metoda (Gauss–Newton / Levenberg–Marquardt) omogućuje ubrzanu konvergenciju ako su Jacobiani izračunati precizno i ako je primijenjena odgovarajuća regularizacija.
+
+7.2. Preporuke za daljnji rad i praktičnu primjenu
+
+ Terenski rad: izvođenje pumpnih testova i skupljanje dodatnih mjerenja bušotina za smanjenje nesigurnosti parametara.
+ Višeslojni modeli: za područja s jakim vertikalnim varijacijama predložiti višeslojne modele.
+ Uvođenje scenarija: klimatske projekcije, promjene u poljoprivrednoj uporabi i planovi crpljenja treba testirati kroz parametarske i Monte Carlo analize.
+ Uporaba standardnih alata: MODFLOW (kao standardni solver) u kombinaciji s GMS ili sličnim sučeljima može značajno ubrzati proces izrade mreže, postavljanja river/flux boundarya i izvođenja kalibracija.
+
+7.3. Zaključno razmatranje za sliv Vuke
+Sliv Vuke je tipičan primjer ravničarskog kvartarno-aluvijalnog akviferskog sustava u kojem su lokalni uvjeti (hidraulička vodljivost, infiltracija, kontakt s rijekom) presudni za upravljanje vodnim resursima. Zbog neujednačenosti podataka u literaturi o granicama sliva (različite procjene površine sliva) nužno je kod svakog modeliranja dokumentirati granice i pretpostavke modela kako bi rezultati bili reproducibilni i primjenjivi u upravljanju.

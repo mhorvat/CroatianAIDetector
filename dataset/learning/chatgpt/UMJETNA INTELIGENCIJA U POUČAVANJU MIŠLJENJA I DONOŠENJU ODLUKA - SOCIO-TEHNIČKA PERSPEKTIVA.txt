@@ -1,0 +1,117 @@
+1. Uvod
+
+Umjetna inteligencija (UI) postupno postaje ključan element suvremenih informacijskih sustava i upravljačkih procesa. U području poučavanja mišljenja i donošenja odluka ona dobiva posebno značenje, jer djeluje kao nadogradnja i potpora ljudskom kognitivnom procesu. Pojam donošenja odluka, nekoć rezerviran za individualne i kolektivne ljudske prakse, danas uključuje i algoritamske učeće agente, ekspertne sustave i sve kompleksnije socio-tehničke sustave koji povezuju ljude, strojeve, podatke i materijalne artefakte. Tema ovog seminara obrađuje UI u kontekstu razvoja mišljenja i donošenja odluka, pri čemu se promatra ne samo tehnološki aspekt, nego i sociomaterijalne interakcije, metodologija integralnog pluralizma te praktični primjeri primjene, s posebnim naglaskom na tunelske sustave. Ključne riječi su: umjetna inteligencija, ekspertni sustav, donošenje odluka, socio-tehnički sustav, svjesnost, učeći agenti i informacijski sustav.
+
+---
+
+2. Teorijski okvir umjetne inteligencije i mišljenja
+
+2.1. Pojmovno određenje umjetne inteligencije
+
+Umjetna inteligencija predstavlja skup metoda i tehnika kojima se računalni sustavi osposobljavaju za obavljanje zadataka koji zahtijevaju inteligentno ponašanje: prepoznavanje obrazaca, učenje, planiranje, zaključivanje i odlučivanje. U kontekstu poučavanja mišljenja, UI ne zamjenjuje ljudski proces, već ga obogaćuje novim modelima analize i interpretacije podataka. Suvremeni UI sustavi koriste učeće agente koji kroz interakciju s okruženjem razvijaju sposobnost prilagodbe i samostalnog poboljšavanja.
+
+2.2. Algoritamsko mišljenje i donošenje odluka
+
+Algoritamsko mišljenje zasniva se na formalnom prikazu problema, definiranju pravila i procedura te evaluaciji mogućih rješenja. Iako se ljudsko mišljenje temelji na intuiciji, iskustvu i svjesnosti, UI koristi matematičke modele kako bi generirala reprezentacije problema i odluka. Donošenje odluka u UI sustavima odvija se na temelju strojnih heuristika, evaluacijskih funkcija, statističkih modela i dubokog učenja, pri čemu sustav traži optimalno ili dovoljno dobro rješenje prema zadanim ograničenjima.
+
+---
+
+3. Ekspertni sustavi – teorijski temelji
+
+3.1. Definicija i struktura ekspertnih sustava
+
+Ekspertni sustavi su računalni programi dizajnirani tako da oponašaju proces odlučivanja stručnjaka u određenom području. Obično se sastoje od tri komponente: baze znanja, mehanizma zaključivanja i korisničkog sučelja. Baza znanja pohranjuje činjenice i pravila koja odražavaju ekspertno znanje, dok mehanizam zaključivanja primjenjuje ta pravila na specifične situacije.
+
+3.2. Tipovi ekspertnih sustava
+
+Postoje deterministički i probabilistički ekspertni sustavi. Deterministički sustavi koriste logička pravila tipa “ako – onda”, dok probabilistički uključuju modele nesigurnosti poput Bayesovih mreža. Probabilistički pristup osobito je prikladan za donošenje odluka u kompleksnim i dinamičkim okruženjima, gdje nisu poznati svi parametri.
+
+3.3. Edukacijska funkcija ekspertnih sustava
+
+Ekspertni sustavi istovremeno mogu služiti kao alati za donošenje odluka i instrumenti za poučavanje. Oni omogućuju učenicima i stručnjacima da razumiju logiku procesa zaključivanja, identificiraju pogreške i razvijaju vlastite strategije rješavanja problema. U takvom kontekstu, UI funkcionira kao mentor ili kognitivni partner.
+
+---
+
+4. Socio-tehnička perspektiva UI sustava
+
+4.1. Socio-tehnički sustav kao integrirana cjelina
+
+Socio-tehnički sustavi označavaju interakciju tehnoloških komponenti i društvenih aktera unutar zajedničkog okruženja. Donošenje odluka stoga nije samo računalni proces, nego rezultat koordinacije ljudi, strojeva, organizacijskih procedura i materijalnih okolnosti. UI u socio-tehničkim okvirima djeluje kao element koji transformira način suradnje, komunikacije i kontrole.
+
+4.2. Koncept sociomaterijalnosti
+
+Sociomaterijalnost naglašava da se društveni i materijalni elementi ne mogu promatrati odvojeno. UI sustavi, senzori, baze podataka, fizički objekti i ljudski akteri djeluju kao mreža odnosa koja generira nove oblike znanja i moći odlučivanja. U tunelskim sustavima, primjerice, sociomaterijalnost se očituje u povezanosti ventilacijskih mehanizama, nadzornih kamera, operatera u kontrolnoj sobi i algoritama za procjenu rizika.
+
+4.3. Uloga svjesnosti u socio-tehničkim sustavima
+
+Dok UI ne posjeduje fenomenološku svjesnost u ljudskom smislu, ona posjeduje operativnu svjesnost – sposobnost percepcije okruženja putem senzora i reakcije u realnom vremenu. U takvim sustavima ljudska svjesnost nadopunjuje algoritamsku, omogućujući donošenje odluka koje uključuju društvene, etičke i emocionalne dimenzije.
+
+---
+
+5. Metodologija integralnog pluralizma
+
+5.1. Temeljna načela integralnog pluralizma
+
+Integralni pluralizam predstavlja metodologiju koja kombinira različite perspektive – tehničke, društvene, filozofske i organizacijske – u analizi složenih sustava. Umjesto jedne dominantne paradigme, koristi se više usporednih dimenzija kako bi se dobila cjelovita slika.
+
+5.2. Primjena u analizi UI sustava
+
+U kontekstu UI, integralni pluralizam omogućuje sagledavanje problema donošenja odluka iz različitih perspektiva: tehnološke učinkovitosti, ljudske psihologije, etičkih implikacija, organizacijskih struktura i materijalnih ograničenja. Time se olakšava izrada politika, procedura i tehnoloških rješenja koja uzimaju u obzir kompleksnost stvarnih situacija.
+
+5.3. Odnos s učenjem i ekspertizom
+
+Integralni pluralizam naglašava da se ekspertiza gradi na interakciji različitih vrsta znanja, odnosno na spoju ljudskog iskustva i algoritamskih preporuka. UI u takvim sustavima ne preuzima proces donošenja odluka, nego ga nadopunjuje podatkovno utemeljenim uvidima.
+
+---
+
+6. Praktični primjeri primjene UI u tunelskim sustavima
+
+6.1. Inteligentni nadzor i detekcija anomalija
+
+Tunelski sustavi predstavljaju visoko rizična i tehnički zahtjevna okruženja. UI se koristi za praćenje protoka prometa, nadzor temperaturnih uvjeta, detekciju dima, identifikaciju opasnosti i procjenu rizika. Sustavi strojnog učenja analiziraju senzorske podatke u realnom vremenu i signaliziraju anomalije prije nego što prerastu u kritične incidente.
+
+6.2. Ekspertni sustavi u upravljanju ventilacijom
+
+Ventilacijski sustavi u tunelima često koriste ekspertne sustave koji, na temelju prethodnih scenarija i pravila, optimiziraju protok zraka i smanjuju rizik od požara ili zagušenja. Mehanizmi zaključivanja mogu automatski pokrenuti protokole evakuacije, informirati operatere ili preuzeti kontrolu nad pojedinim segmentima infrastrukture.
+
+6.3. Simulacijski modeli za obuku operatera
+
+UI omogućuje izradu simulacijskih okruženja u kojima se operateri obučavaju za donošenje odluka u kriznim situacijama. Učeći agenti generiraju moguće scenarije, procjenjuju reakcije operatera i daju povratne informacije koje pomažu u razvoju profesionalnog refleksivnog mišljenja.
+
+---
+
+7. Samoregulirajući i samoupravljajući sustavi
+
+7.1. Samoregulirajući sustavi
+
+Samoregulirajući sustavi djeluju autonomno unutar unaprijed definiranih ograničenja i pravila. Oni mogu detektirati odstupanja i prilagoditi svoje ponašanje kako bi održali stabilnost, ali ne mogu redefinirati vlastite ciljeve. Većina trenutnih AI sustava, uključujući one u tunelima, pripada ovoj kategoriji.
+
+7.2. Samoupravljajući sustavi
+
+Samoupravljajući sustavi sadrže sposobnost preoblikovanja vlastitih ciljeva, pravila ponašanja i prioriteta. Oni zahtijevaju naprednije oblike učenja, adaptacije i meta-razumijevanja. Ljudsko-strojni sustavi ove vrste još su u razvoju i nose značajna sigurnosna i etička pitanja.
+
+7.3. Usporedna analiza
+
+Glavna razlika između ove dvije kategorije leži u razini autonomije. Samoregulirajući sustavi optimiziraju proces unutar zadanih okvira, dok samoupravljajući sustavi te okvire mogu mijenjati. Za primjenu u kritičnim infrastrukturama sigurnosni protokoli zahtijevaju predvidljivost, pa je samoupravljanje još uvijek predmet istraživanja, a ne praktične implementacije.
+
+---
+
+8. Ograničenja trenutnih pristupa i kritički osvrt
+
+8.1. Tehnološka ograničenja
+
+Unatoč napretku, UI sustavi pate od problema interpretabilnosti, nedostatka transparentnosti i oslanjanja na velike količine podataka. Duboke neuronske mreže djeluju kao “crne kutije”, što otežava audit i verifikaciju odluka.
+
+8.2. Organizacijska i društvena ograničenja
+
+Integracija UI u socio-tehničke sustave suočava se s otporom zaposlenika, nedostatkom edukacije i nepovjerenjem prema algoritamskim odlukama. Potrebna je transformacija organizacijske kulture, pri čemu se naglašava uloga čovjeka kao kritičkog evaluatora.
+
+8.3. Etika, odgovornost i sigurnost
+
+Zakonski okvir još se razvija, što dovodi do nejasnoća oko odgovornosti u slučaju pogrešnih odluka UI sustava. U tunelskim i drugim sigurnosno osjetljivim okruženjima pogreška UI sustava može imati ozbiljne posljedice, što zahtijeva višestruke razine kontrole i redundancije.
+
+---
+
+9. Zaključak
+
+Umjetna inteligencija u poučavanju mišljenja i donošenju odluka predstavlja spoj tehnoloških inovacija i društvenih potreba. Iz socio-tehničke perspektive UI se ne može razumjeti izolirano od mreže ljudi, infrastruktura i institucija koje oblikuju njezin rad. Ekspertni sustavi i učeći agenti pružaju nove mogućnosti učenja i optimizacije, dok pristup integralnog pluralizma omogućuje holističku analizu njihovih učinaka. U tunelskim sustavima UI demonstrira svoju praktičnu vrijednost, ali i ukazuje na ograničenja i rizike primjene u realnom svijetu. Razlikovanje između samoregulirajućih i samoupravljajućih sustava dodatno naglašava izazove u razvoju visoko autonomnih sustava. Budući razvoj treba usmjeriti prema transparentnijim, sigurnijim i društveno odgovornijim UI rješenjima koja uvažavaju kompleksnost ljudskog mišljenja i kolektivnog donošenja odluka.

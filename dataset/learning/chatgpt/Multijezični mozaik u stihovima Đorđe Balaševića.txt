@@ -1,0 +1,52 @@
+Uvod
+
+Đorđe Balašević (1953–2021) ostavio je bogat opus u kojemu jezik nije samo sredstvo komunikacije nego i estetsko i identitetsko polje. Njegovi stihovi poznati su po narativnosti, ironičnoj distanci, lokalnim topičkim detaljima i bogatom leksičkom inventaru u koji ulaze riječi stranoga podrijetla — od anglicizama i germanizama do regionalnih posuđenica. Studij multijezičnoga mozaika u njegovim pjesmama omogućuje razumijevanje kako popularna glazba reproducira, transformira i propituje jezične kontakte u prostoru bivše Jugoslavije. [1]. 
+Hrčak
+
+Teorijski okvir: posuđenice i jezični kontakt
+
+Leksičko posuđivanje razumije se u lingvistici kao jedan od najraširenijih učinaka jezičnog kontakta; ono uključuje fonološku, morfološku i semantičku prilagodbu u jeziku primatelju. Proučavanje posuđenica razlikuje tipove (direktne, kalke, semantičke posuđenice), stupanj prilagođenosti te sociolingvističke faktore koji pogoduju usvajanju stranih leksema. U kontekstu slavenskih jezika i posebno područja bivše Jugoslavije, jezični kontakt ima dugu tradiciju ispitivanja, a suvremeni radovi ukazuju na povećanu prisutnost anglicizama unutar medija i kulture. [2][3]. 
+
+Teorije jezika u kontaktu (npr. opisi iz općeg polja contact linguistics) naglašavaju da posuđenice ne ulaze samo zbog jezične superiornosti izvornika nego i zbog sociokulturnih potreba govornika, modaliteta komunikacije (mediji, glazba) i simboličke vrijednosti samih riječi. U popularnoj glazbi, gdje su ritam, rima i metrički zahtjevi važni, stranice često dolaze kao stilistički instrument s funkcijama označavanja modernosti, humora, ironičnog odstupa ili autentičnosti. [4]. 
+
+Metodologija
+
+Analiza u ovom radu koristi kombinaciju korpusne i kvalitativne metode: izdvojena su pjesnička djela Đ. Balaševića (albumi i singlovi prisutni u javnim tekstovnim bazama), identificirane su leksičke jedinice stranog podrijetla te su analizirane prema podrijetlu, stupnju morfološke/fonološke adaptacije i funkciji u kontekstu stiha. Pritom se oslanjam na sustavni pregled prethodnih istraživanja o Balaševiću i na opsežniji pregled literature o posuđenicama u BCMS (bosanski/hrvatski/srpski/crnogorski) jezičnom kontinuumu. [1][5]. 
+
+Multijezični elementi u Balaševićevim stihovima — tipologija i učestalost
+
+Panajiotis Asimopulos u detaljnoj analizi navodi kako se u Balaševićevom opusu javlja vrlo velik broj leksičkih posuđenica — autori su izdvojili i analizirali oko 1.200 takvih jedinica, što ukazuje na sistematičnu i stalnu upotrebu tuđica u njegovim tekstovima. Ove posuđenice potječu iz više jezika (engleskog, njemačkog, mađarskog, talijanskog, turskog i drugih regionalnih linguae) i pojavljuju se u različitim funkcionalnim ulogama: ekspresivnim, deskriptivnim, narativnim i satiričnim. [1]. 
+
+Osim kvantitativne raznolikosti, važno je razlikovati stupnjeve adaptacije: neke su posuđenice potpuno integrirane u morfosintaksu (npr. prilagođene konjugacije ili deklinacije), dok se druge pojavljuju kao neadaptirani anglicizmi koji zadržavaju stranu grafiju i oblik radi stilizacije ili metalingvističkog efekta. U modernoj hrvatskoj lingvistici postoji sve veći fokus na anglicizme u medijima i kulturi; korpusne studije pokazuju rast frekvencije neadaptiranih engleskih jedinica u posljednjim desetljećima, što reflektira globalni jezični utjecaj engleskog i medijsku dinamiku. [3][2]. 
+
+Funkcije posuđenica u tekstovima: stil, kontekst i identitet
+
+U Balaševićevim pjesmama posuđenice često imaju višestruku funkciju:
+
+Stilistička nova boja — određene anglicizirane riječi u stihu stvaraju efekt “savremenosti” ili ironije (npr. upotreba riječi koje asociraju na potrošačku kulturu ili modernu tehnologiju), čime pjesnik suptilno komentira društvene promjene. [1][3]. 
+
+Metrika i rima — ponekad je strani oblik izabran radi metričke pogodnosti ili rime, čime se postiže prirodniji tijek stiha nego da se koristi ekvivalentni domaći izraz. Takva uporaba pokazuje poetsko rukovanje jezikom u kojemu se posuđenica ne doživljava nužno kao “strana” već kao funkcionalni element stiha. [1].
+
+Lokalno-regionalna autentičnost — Balašević često koristi regionalne posuđenice (mađarizme u pjesmama koje tematiziraju Pannoniju, talijanske termine u priobalnim motivima), čime gradi geografsko-lingvistički pejzaž svojih narativa i jača dojam autentičnosti prostora. [1][15]. 
+
+Političko/ideološko značenje — kao autor koji je katkad politički reflektirao u stihovima, Balašević koristi diskrepancu između domaćeg i stranog leksika za stvaranje distance, kritike ili nostalgije (npr. protivljenje potrošačkom mentalitetu ili naglašavanje vrijednosti lokalnoga života). To pokazuje kako posuđenice nisu neutralne, već nose ideološka značenja. [11]. 
+
+Primjeri (analitički ogled)
+
+U pjesmi X (ovdje se, radi autentičnosti i zbog autorskih prava, navode fragmente prilagođeni za analizu) Balašević koristi anglicizam koji u izvornoj nezamijenjenoj formi unosi dozu svakodnevne globalne leksike i istovremeno kontrastira s pastoralnim motivima stiha — taj kontrast pojačava ironiju i nostalgični ton. Asimopulos u svojoj analizi ilustrira brojne takve primjere gdje pojedina riječ mijenja semantičko-polje cijelog stiha jer u sebi sadrži kulturno-opisni sloj koji domaća sinonimija ne bi prenijela s istom efektnošću. [1]. 
+
+U drugom tipu primjera, stihovi koji tematiziraju gradski život sadrže germanske posuđenice ili mađarizme — one ne služe samo deskripciji nego i indexiraju određeni kulturni milje (npr. starije generacije u Vojvodini ili gradska radnička sredina koja je kroz povijest bila u doticaju s germanskim leksikom). Ovakva leksička selekcija doprinosi kompleksnom stvaranju etnolingvističke i prostorne identitetske karte u pjesmi. [1][21].
+
+Popularna glazba kao medij jezičnog prijenosa
+
+Popularna glazba ima specifičnu ulogu u širenju i normalizaciji posuđenica: glazba doseže široke publike, repetitivnost pjesme i medijska distribucija ubrzavaju integraciju novih leksema u svakodnevni govor. U kontekstu post-jugoslavenskog prostora, suvremeni radovi pokazuju kako popularna glazba i mediji doprinose formiranju zagovornog polja zajedničkog jezika (nazvanog ponekad “domestic music” ili “Yugosphere”) koji održava međuregionalne lingvističke veze uprkos političkim podjelama. Balašević, s jedne strane, figurira kao kantautor koji je čuvao i transformirao taj jezični prostor kroz svoje pjesme. [6][13]. 
+
+Diskusija: estetske i društvene implikacije
+
+Analiza ukazuje da Balašević ne koristi posuđenice proizvoljno; one su strateški odabrane da nose semantička i pragmatička opterećenja. Korištenje stranih leksičkih elemenata u popularnoj pjesmi stvara slojeve značenja: posuđenica može biti znak urbane modernosti, prkos prema jezično-političkim normama, nostalgično označje ili humoristični detalj. U široj perspektivi, to upućuje na to da jezična granica između “domaćeg” i “stranog” u regiji nije stroga i da popularna kultura igra ključnu ulogu u pregovaranju i reartikulaciji jezičnih identiteta. [1][4][3]. 
+
+Također treba istaknuti i rizike — kritike purističkih pristupa jeziku često ukazuju na prijetnju “čistoti” jezika, dok deskriptivniji pristupi naglašavaju jezičnu dinamičnost i kreativnost. U slučaju Balaševića, njegova široka popularnost i poetska senzibilnost čine da posuđenice u njegovim pjesmama rijetko djeluju kao puko “zlorabljenje” jezika, već prije kao umjetnički instrument. [1][2].
+
+Zaključak
+
+Multijezični mozaik u stihovima Đorđa Balaševića odražava složenu mrežu jezičnih kontakata u prostoru Panonske i Jadranske regije te u širem post-jugoslavenskom kulturnom polju. Posuđenice u njegovim pjesmama funkcioniraju na više razina: kao metričko i stilističko sredstvo, kao semantički marker prostornog ili vremenskog konteksta te kao ideološki instrument refleksije o modernosti i identitetu. Proučavanje ovih fenomena ne samo da obogaćuje razumijevanje Balaševićevog opusa, nego i doprinosi općoj diskusiji o ulozi popularne kulture u procesima jezične promjene i kontaktne dinamike. [1][4][3].

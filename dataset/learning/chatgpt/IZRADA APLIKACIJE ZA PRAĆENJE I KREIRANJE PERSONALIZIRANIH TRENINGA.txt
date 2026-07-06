@@ -1,0 +1,160 @@
+Uvod
+
+Digitalna transformacija postala je ključni pokretač inovacija u svim područjima života, pa tako i u domeni zdravlja i fitnessa. Sve veći broj korisnika oslanja se na tehnologiju kako bi ostvarili svoje ciljeve vezane uz tjelovježbu, praćenje napretka i općenito poboljšanje životnog stila. U tom kontekstu razvoj web aplikacija za kreiranje i praćenje personaliziranih treninga predstavlja spoj programerskog znanja, dizajna korisničkog iskustva te razumijevanja fitness principa. Takve aplikacije omogućuju korisnicima izradu trening plana prilagođenog njihovim potrebama, mogućnostima i ciljevima, kao i sustavno praćenje napretka kroz vrijeme.
+
+Kao jedan od najraširenijih programskih jezika u web razvoju, PHP i dalje zauzima važno mjesto u izgradnji dinamičkih web sustava. Iako je kroz vrijeme dobio konkurenciju u obliku modernih JavaScript frameworka, PHP kao poslužiteljski jezik ostao je snažan alat za izradu stabilnih i sigurnih aplikacija. Upravo zbog svoje fleksibilnosti, jednostavnosti i bogate zajednice, PHP predstavlja prikladan izbor za izradu aplikacije za personalizirane treninge, posebno kada je u fokusu funkcionalnost i prilagodljivost sustava potrebama krajnjeg korisnika.
+
+Ovaj seminar prikazuje proces izrade web aplikacije za praćenje i kreiranje personaliziranih treninga, s naglaskom na arhitekturu sustava, funkcionalnosti, odabir tehnologija, sigurnost i iskustvo krajnjeg korisnika. Cilj rada je prikazati cjeloviti razvojni proces — od planiranja do implementacije — te istaknuti specifičnosti vezane uz povezivanje područja web razvoja i fitnessa u jedan koherentan i praktično primjenjiv digitalni proizvod.
+
+Razrada
+1. Analiza potreba i planiranje funkcionalnosti
+
+Izrada kvalitetne web aplikacije počinje procesom analize potreba korisnika. U kontekstu fitness aplikacije potrebno je definirati tko su primarni korisnici, koji su njihovi ciljevi te koje probleme aplikacija treba riješiti. Tipični korisnici ovakvog sustava mogu biti rekreativci, osobni treneri ili entuzijasti koji žele sustavno pratiti vlastiti napredak. Na temelju analize korisničkih potreba može se definirati skup ključnih funkcionalnosti kao što su:
+
+registracija i autentifikacija korisnika,
+
+kreiranje i uređivanje personaliziranih treninga,
+
+baza vježbi s opisima, kategorijama i ilustracijama,
+
+praćenje statistike i napretka,
+
+mogućnost spremanja i dijeljenja trening programa,
+
+generiranje preporuka temeljem korisničkih ciljeva.
+
+U fazi planiranja preporučuje se izrada dijagrama toka, strukture baze podataka i wireframeova korisničkog sučelja. Time se osigurava da će razvoj teći u smjeru jasne i pregledne tehničke arhitekture, čime se smanjuju kasniji problemi.
+
+2. Arhitektura sustava i izbor tehnologija
+
+Za jezgru poslužiteljskog dijela odabran je PHP zbog jednostavne integracije s bazom podataka i mogućnosti brze implementacije. PHP omogućava izgradnju robustnih backend funkcionalnosti, a uz korištenje MVC (Model-View-Controller) strukture kod postaje organiziran i skalabilan.
+
+Za pohranu podataka najčešće se koristi MySQL, koji se lako integrira s PHP-om i nudi dovoljno fleksibilnosti za kreiranje naprednijih upita potrebnih za praćenje treninga, analiza i statistiku. Struktura baze obično uključuje tablice za korisnike, trening programe, vježbe, kategorije vježbi, spremljene planove i zapise o napretku.
+
+Frontend dio aplikacije može biti izrađen uz HTML, CSS i JavaScript. Iako je moguće uključiti frameworke poput Reacta ili Vue.js, jednostavnije aplikacije mogu funkcionirati i s minimalnim korištenjem biblioteka, poput jQueryja, osobito kada fokus nije na kompleksnim interaktivnim komponentama.
+
+Posebna pozornost posvećuje se responzivnom dizajnu kako bi aplikacija bila jednako upotrebljiva na mobilnim uređajima, tabletima i desktop računalima. U području fitness aplikacija mobilna upotrebljivost ključna je, jer korisnici često koriste aplikaciju tijekom treninga.
+
+3. Implementacija sustava korisničkih računa
+
+Sustav registracije i prijave korisnika predstavlja temelj svake personalizirane aplikacije. Korisnički račun omogućuje sigurnu pohranu podataka, pristup personaliziranim treninzima i analitici.
+
+U PHP-u se za autentifikaciju koriste sigurnosne funkcije poput password_hash() i password_verify() kako bi lozinke bile pohranjene u enkriptiranom obliku. Sesije (sessions) služe za održavanje korisničkog statusa kroz različite dijelove aplikacije.
+
+Uz osnovnu autentifikaciju, moguće je implementirati dodatne funkcionalnosti:
+
+verifikaciju e-pošte,
+
+resetiranje lozinke putem sigurnih tokena,
+
+uvođenje višefaktorske autentifikacije,
+
+različite uloge korisnika (npr. trener, polaznik).
+
+Ovi elementi povećavaju sigurnost i pouzdanost aplikacije, što je od velike važnosti kada se radi o osobnim podacima korisnika.
+
+4. Baza vježbi i sustav za kreiranje personaliziranih treninga
+
+Jedna od središnjih funkcionalnosti aplikacije jest izrada trening plana. Kako bi se korisniku omogućila personalizacija, aplikacija treba imati bogatu bazu vježbi s relevantnim atributima kao što su:
+
+naziv vježbe,
+
+ciljane mišićne skupine,
+
+opis izvođenja,
+
+broj ponavljanja i serija,
+
+potreban rekvizit,
+
+slike ili video demonstracije.
+
+Korisnik može odabrati vježbe i kombiniranjem ih formirati vlastiti trening. Sustav može uključivati validaciju unosa i automatizirane preporuke na temelju ciljeva korisnika (npr. gubitak težine, povećanje snage ili mišićne mase).
+
+Naprednije mogućnosti mogu uključivati automatsko generiranje treninga pomoću algoritama koji analiziraju korisnički profil, povijest treninga i preferencije. Iako ova razina kompleksnosti zahtijeva dodatne logičke i matematičke modele, ona značajno podiže vrijednost aplikacije.
+
+5. Praćenje napretka i analitika
+
+Nakon što korisnik kreira trening, važno je omogućiti praćenje napretka kroz vrijeme. To može uključivati:
+
+unos težina za izvođenje vježbi,
+
+mjerenje ponavljanja i vremena trajanja,
+
+bilježenje subjektivnog osjećaja napora,
+
+mjerenje tjelesnih parametara (težina, obujam, masno tkivo).
+
+Iz tih podataka generiraju se grafički prikazi koji korisniku omogućuju bolji uvid u sveukupan napredak. Preporučljivo je koristiti JavaScript biblioteke poput Chart.js za izradu vizualno privlačnih grafikona.
+
+Korisnicima je ovakav uvid važan jer motivira daljnje napredovanje i omogućuje usporedbu rezultata kroz određene vremenske intervale. Iz perspektive web razvoja, ovo predstavlja spoj backend logike (obrada i agregiranje podataka) i frontend prezentacije.
+
+6. Optimizacija korisničkog iskustva (UX) i UI dizajn
+
+U fitness aplikacijama jednostavnost i preglednost ključni su za dobro korisničko iskustvo. Korisnici aplikaciju često koriste tijekom fizičke aktivnosti, stoga je važno da sučelje bude intuitivno i da omogućuje brzu navigaciju.
+
+Principi koji se primjenjuju u dizajnu uključuju:
+
+jasne i velike tipke za navigaciju,
+
+minimalizam u prikazu informacija,
+
+logičan raspored elemenata,
+
+jasna vizualna hijerarhija,
+
+korištenje boja koje označavaju kategorije (npr. mišićne skupine),
+
+mogućnost brze izmjene treninga.
+
+U sklopu razvoja moguće je provesti i testiranje s korisnicima kako bi se došlo do dodatnih povratnih informacija. U idealnim uvjetima aplikacija prolazi proces iterativnog poboljšanja gdje se UX stalno optimizira.
+
+7. Sigurnosni aspekti aplikacije
+
+Sigurnost je vrlo važna komponenta jer aplikacija upravlja osobnim podacima korisnika. U PHP-u je potrebno primijeniti sigurnosne smjernice kao što su:
+
+zaštita od SQL injekcija korištenjem pripremljenih upita (prepared statements),
+
+zaštita od XSS napada sanitizacijom korisničkog unosa,
+
+korištenje HTTPS protokola,
+
+pravilno upravljanje sesijama kako bi se izbjegla otmica sesije (session hijacking),
+
+ograničavanje pristupa osjetljivim dijelovima aplikacije.
+
+Također je važno implementirati backup sustave i kontrolu verzija, te po mogućnosti pohranjivati minimalnu količinu osobnih podataka u skladu sa zakonodavstvom poput GDPR-a.
+
+8. Integracija dodatnih funkcionalnosti
+
+Kako bi aplikacija bila konkurentna, može se dodatno unaprijediti sljedećim značajkama:
+
+sustav obavijesti i podsjetnika,
+
+mogućnost povezivanja s uređajima poput pametnih satova ili fitness narukvica,
+
+ugradnja video vodiča,
+
+integracija s društvenim mrežama za dijeljenje rezultata,
+
+gamifikacija (značke, razine, nagrade za redovito treniranje).
+
+Ovakve funkcionalnosti podižu angažman korisnika i doprinose većoj motivaciji za redovito korištenje aplikacije.
+
+9. Testiranje i implementacija
+
+Nakon završetka implementacije slijedi proces testiranja koji uključuje:
+
+funkcionalno testiranje svih modula,
+
+testiranje performansi,
+
+sigurnosno testiranje,
+
+testiranje kompatibilnosti na različitim uređajima.
+
+Potom slijedi implementacija na poslužitelj ili hosting platformu koja podržava PHP i MySQL. Korištenje modernih CI/CD alata može automatizirati dio procesa i doprinijeti stabilnosti sustava tijekom ažuriranja.
+
+Zaključak
+
+Izrada web aplikacije za praćenje i kreiranje personaliziranih treninga zahtijeva kombinaciju tehničkog znanja iz područja web razvoja i razumijevanja fitness domene. PHP, kao robustan i fleksibilan jezik, omogućuje izradu stabilnog backend sustava koji može upravljati korisnicima, trening programima, statistikama i drugim ključnim elementima aplikacije. Kroz dobro definiranu arhitekturu sustava, strukturiranu bazu podataka i intuitivan korisnički interfejs moguće je stvoriti aplikaciju koja korisnicima nudi personalizirano iskustvo, motivaciju i jasne povratne informacije o njihovom napretku. Sigurnost sustava, responzivnost i mogućnost nadogradnje čine ovakve aplikacije dugoročno održivima i prilagodljivima sve zahtjevnijem tržištu digitalnih fitness rješenja. Ovakav projekt pokazuje kako se sinergijom tehnologije i fitness znanja može razviti moderan, koristan i funkcionalan digitalni proizvod.

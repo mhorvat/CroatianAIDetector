@@ -1,0 +1,205 @@
+1. UVOD
+Riblje staze predstavljaju ključni element u očuvanju uzdužne povezanosti vodotoka te omogućuju migraciju riba uzvodno i nizvodno, unatoč prisutnosti antropogenih prepreka poput malih pragova, brana i pregrada. Funkcionalnost ribljih staza ovisi o nizu hidrauličkih, morfoloških i bioloških čimbenika, a njihov ispravan proračun presudan je kako bi se osigurala učinkovitost za ciljane riblje vrste. U posljednjih nekoliko desetljeća, nomogrami su se pokazali kao praktičan i pregledan alat za inženjere prilikom projektiranja ovih objekata, osobito na malim vodotocima gdje je brzina projektiranja presudna, a raspoloživa mjerna baza ograničena.
+
+Ovaj rad bavi se nomogramima za proračun funkcionalnosti tehničkih ribljih staza na malim pragovima, a posebno se fokusira na bazenske staze i staze s vertikalnim otvorima. Kroz analizu fizičkih i numeričkih modela, hidrauličkih zakonitosti, kriterija sličnosti, bioloških zahtjeva riba i zonacije vodotoka u Hrvatskoj, prikazuje se metodologija određivanja ključnih parametara poput protoka, pada razine vode i distribucije brzina. Rad se temelji na kombinaciji teorijskih osnova, praktičnih proračuna i vizualizacije podataka uporabom nomograma.
+
+---
+
+2. OPĆI POJMOVI I ZNAČAJ RIBLJIH STAZA
+
+2.1. Uzdužna povezanost i migracija riba
+Uzdužna povezanost vodotoka jedan je od temeljnih elemenata ekološki prihvatljivog upravljanja vodama. Kad se na vodotoku izgradi prag ili pregrada, prirodni migratorni putevi riba prekidaju se, što može dovesti do fragmentacije populacija, smanjenja genetske raznolikosti i poremećaja u mrijestu. U Hrvatskoj je migracija važna za niz autohtonih vrsta poput mladice (Hucho hucho), lipljena (Thymallus thymallus) i klenova, ali i za niz malih vrsta izraženih plivačkih ograničenja.
+
+Riblje staze omogućuju prevladavanje visinskih razlika i vraćaju kontinuitet ekosustava. Njihova učinkovitost određena je hidrauličkim parametrima koji moraju biti prilagođeni ciljanim vrstama. Iz tog razloga projektiranje ribljih staza zahtijeva interdisciplinarni pristup koji uključuje hidrotehniku, ekologiju riba, hidrologiju i geomorfologiju.
+
+2.2. Vrste tehničkih ribljih staza
+Najčešće izvedbe tehničkih staza na malim vodotocima su:
+
+ Bazenske riblje staze, koje se sastoje od niza bazena međusobno odvojenih pregradama s otvorima. One omogućuju ribama odmor i kretanje kroz niz manjih koraka pada.
+ Staze s vertikalnim otvorima (vertical slot fishways), koje omogućuju kontinuirani tok između bazena kroz okomite proreze. Takve staze posebno su cijenjene zbog stabilnosti hidrauličkih uvjeta pri promjenama protoka.
+
+U obje izvedbe hidraulički proračun temelji se na određivanju odnosa protoka, brzine, turbulencije, geometrije elemenata i pada razine vode.
+
+---
+
+3. HIDRAULIČKI KRITERIJI I BIOLOŠKI ZAHTJEVI
+
+3.1. Preporučene i granične vrijednosti brzina i turbulencije
+Projektiranje ribljih staza u Hrvatskoj oslanja se na zonaciju vodotoka (brzaci, prijelazi, nizine) te biološke potrebe karakterističnih vrsta unutar svake zone. Razine preporučenih i maksimalno dopuštenih brzina kretanja riba razlikuju se, ali okvirno se uzimaju:
+
+ 0,3–0,6 m/s za male, slabije plivače (npr. žutooka, vijun, ukljeva),
+ 0,7–1,2 m/s za srednje snažne plivače (klen, pastrva),
+ >1,2 m/s podnose samo izrazito snažni plivači poput mladice.
+
+Turbulencija mora biti ograničena kako bi se izbjegla pretjerana rasipanja energije koja mogu dezorijentirati ribe. Bazenske staze su stoga projektirane tako da u središtu bazena stvore zone smirenog toka.
+
+3.2. Funkcionalna ovisnost protoka, padova i brzina
+U tehničkim stazama hidraulički procesi ovise o:
+
+ padu između bazena (Δh),
+ geometriji otvora,
+ protoku (Q),
+ širini kanala (b),
+ hrapavosti površina i lokalnim gubicima.
+
+Najvažnija jednadžba odnosi se na proračun protoka kroz otvor kao funkciju otvora i razlike razina vode:
+
+[
+Q = C_d , a , \sqrt{2 g \Delta h}
+]
+
+gdje je C_d koeficijent protoka, a površina otvora, a Δh pad vode. Ova funkcionalna ovisnost izravno se ugrađuje u nomograme.
+
+---
+
+4. METODOLOGIJA ISTRAŽIVANJA
+
+4.1. Fizički modeli
+
+4.1.1. Uloga i prednosti fizičkog modeliranja
+Fizički modeli izrađuju se u mjerilu kako bi se simulirali hidraulički uvjeti u ribljim stazama. Prednosti fizičkog modeliranja uključuju:
+
+ mogućnost vizualnog opažanja toka,
+ pouzdanu procjenu turbulencije,
+ ispitivanje interakcije riba s protokom u laboratorijskim uvjetima,
+ validaciju numeričkih modela.
+
+4.1.2. Froudeova sličnost
+Kod modeliranja vodnih tokova s prevladavajućim gravitacijskim silama primjenjuje se Froudeova sličnost. Froudeov broj definiran je kao:
+
+[
+Fr = \frac{v}{\sqrt{gL}}
+]
+
+Za pravilno skaliranje mora vrijediti:
+
+[
+Fr_m = Fr_p
+]
+
+gdje su m i p oznake za model i prototip. Time se osigurava sličnost vala, toka i nastanka turbulencije, što je presudno u ribljim stazama. Razlike u Reynoldsovom broju se toleriraju jer je tok u stazama ionako u turbulentnom režimu.
+
+4.1.3. Mjerenja na fizičkom modelu
+Fizički modeli uključuju mjerenja:
+
+ razina vode u bazenima,
+ brzina u otvorima (PIV, ADV metode),
+ profila brzina po presjeku,
+ vizualizacije putanja čestica,
+ ponašanja riba u posebnim testiranjima.
+
+Rezultati se koriste za izradu nomograma i provjeru teorijskih jednadžbi.
+
+---
+
+4.2. Numerički modeli
+
+4.2.1. Modeli na temelju jednadžbi plitkih voda (2D)
+Numerički modeli, osobito oni bazirani na 2D plitkovodnim jednadžbama, omogućuju simulaciju:
+
+ raspodjele brzina,
+ turbulencije (k-ε, k-ω modeli),
+ promjena razina vode ovisno o protoku,
+ optimizacije geometrije ribljih staza.
+
+Prednost numeričkih modela je fleksibilnost pri promjeni parametara bez ponovnih fizičkih rekonstrukcija.
+
+4.2.2. Usporedba fizičkih i numeričkih modela
+Fizički modeli daju točnije rezultate za kompleksne turbulente tokove, dok numerički modeli omogućuju brzu parametarsku analizu. Kombinacijom dvaju pristupa dobivaju se najpouzdaniji nomogrami.
+
+---
+
+5. NOMOGRAMI ZA PRORAČUN RIBLJIH STAZA
+
+5.1. Uloga nomograma u hidrauličkom projektiranju
+Nomogrami služe kao grafički instrumenti za brzi proračun hidrauličkih parametara, bez potrebe za ponavljanjem kompleksnih jednadžbi. U ribljim stazama koriste se za:
+
+ određivanje protoka kroz otvore,
+ definiranje optimalnog pada između bazena,
+ odabir širine vertikalnih otvora,
+ određivanje potrebne dužine i nagiba staze.
+
+5.2. Nomogrami za bazenske riblje staze
+
+5.2.1. Proračun protoka kroz otvor
+Nomogram obično povezuje tri parametra:
+
+1. površinu otvora a,
+2. pad Δh,
+3. protok Q.
+
+Dijagram uključuje logaritamsku ili polulogaritamsku mrežu gdje su krivulje protoka za različite koeficijente C_d ucrtane kao skupovi paralelnih linija. Projektant se kreće kroz nomogram povlačeći pravac između poznata dva parametra.
+
+5.2.2. Veličina bazena i raspodjela brzina
+Drugi tip nomograma prikazuje:
+
+ dubinu bazena (h),
+ duljinu (L),
+ preporučenu površinu zone smirenog toka ovisno o vrsti riba.
+
+Ovi nomogrami nastaju spajanjem empirijskih podataka s fizičkih modela.
+
+5.3. Nomogrami za staze s vertikalnim otvorima
+
+5.3.1. Određivanje širine okomitog proreza
+U vertical-slot stazama ključni parametar je širina proreza b, koja određuje:
+
+ raspon brzina u otvoru,
+ količinu turbulencije,
+ ukupni protok staze.
+
+Nomogram tipično uključuje odnose Q–b–Δh, uz definirane zone preporučenih brzina za pojedine skupine riba.
+
+5.3.2. Funkcionalne ovisnosti u vertical-slot stazama
+Za razliku od bazenskih staza, gdje se energija disipira u bazenu, u stazama s vertikalnim otvorima protok je kontinuiran. Nomogrami su ovdje posebno prilagođeni prikazu stalnog gradijenta energije po duljini staze. Projektant na temelju njih određuje ukupan broj segmenata i potrebnu duljinu za savladavanje ukupnog pada.
+
+---
+
+6. PRIMJENA NOMOGRAMA U HRVATSKIM UVJETIMA
+
+6.1. Zonacija vodotoka u Hrvatskoj
+Hrvatski vodotoci obično se dijele na:
+
+ gorske i brdske tokove (hladni, brzi, oksigenirani),
+ prijelazne tokove,
+ nizinske tokove (spori, topli).
+
+Svaka zona zahtijeva drugačiju hidrauličku prilagodbu ribljih staza.
+
+6.2. Preporučene vrijednosti prema ribljim vrstama
+Pri izradi nomograma koriste se karakteristične vrijednosti:
+
+ minimalne dubine vode u otvorima (20–40 cm),
+ maksimalne brzine prema dominantnim vrstama (0,4–1,5 m/s),
+ maksimalni pad između bazena (0,1–0,2 m).
+
+U gorskim potocima moguće je koristiti nešto veće padove jer su lokalne vrste snažniji plivači, dok nizinski sustavi zahtijevaju blaže hidrauličke gradijente.
+
+6.3. Granične vrijednosti i ograničenja
+U proračun se ugrađuju i granične vrijednosti:
+
+ maksimalna ukupna dužina staze prije potrebe za dodatnim odmorištima,
+ ograničenja protoka da se izbjegne usisni efekt,
+ ograničene turbulencije kako bi se izbjegla dezorijentacija riba.
+
+Nomogrami jasno označavaju ove granične zone kako bi projektant bio upozoren.
+
+---
+
+7. RASPRAVA
+
+7.1. Prednosti uporabe nomograma
+Nomogrami omogućuju brzo dimenzioniranje i usporedbu više varijanti rješenja bez potrebe za složenim računalnim simulacijama. Posebno su korisni na malim vodotocima gdje se projektantske odluke moraju donositi brzo, a zahtjevi ribljih vrsta dobro su poznati.
+
+7.2. Ograničenja nomograma
+Ograničenja se očituju u tome da nomogrami predstavljaju aproksimacije temeljene na određenom rasponu parametara. Stoga nisu prikladni za ekstremne uvjete, vrlo velike padove ili nestandardne geometrije. Potrebno ih je uvijek koristiti u kombinaciji s numeričkim i fizičkim modeliranjem.
+
+7.3. Integracija fizičkih i numeričkih modela u praksu
+Zajedničkom primjenom oba modela dobivaju se nomogrami visoke pouzdanosti. Numerički modeli omogućuju brzo proširenje baze podataka, dok fizički modeli potvrđuju realnost rezultata. Kombinacija oba pristupa sve je prisutnija u modernom projektiranju ribljih staza.
+
+---
+
+8. ZAKLJUČAK
+Riblje staze predstavljaju jedan od ključnih elemenata očuvanja uzdužne povezanosti i biološke raznolikosti hrvatskih vodotoka. Hidraulički proračun njihove funkcionalnosti složen je proces koji uključuje razumijevanje bioloških potreba ciljanih ribljih vrsta, hidrauličkih zakonitosti i terenskih uvjeta. Nomogrami se pokazuju kao izuzetno praktičan alat u projektiranju, jer omogućuju brzu procjenu odnosnih veličina poput protoka, brzine i pada razine vode, te jasno prikazuju parametre kritične za učinkovitost ribljih staza.
+
+Kombinacija fizičkog i numeričkog modeliranja, uz primjenu Froudeove sličnosti, omogućuje izradu pouzdanih nomograma koji služe kao temelj za dimenzioniranje bazenskih ribljih staza i staza s vertikalnim otvorima. Prilagođavanje hidrauličkih uvjeta zonaciji vodotoka i karakteristikama ribljih vrsta u Hrvatskoj osigurava njihovu maksimalnu učinkovitost. Stoga nomogrami ostaju nezaobilazan alat u hidrotehničkom projektiranju te značajno doprinose očuvanju ekološkog integriteta vodnih ekosustava.

@@ -1,0 +1,76 @@
+1. Uvod i metodologija
+
+Industrija video igara je u dva desetljeća postala masovni kulturni i gospodarski fenomen. Ovaj rad sintetizira izvještaje industrijskih analitičara, relevantne članke i javno dostupne podatke kako bi identificirao ključne trendove. Posebna pažnja dana je izvorima koji objavljuju globalne tržišne podatke i analize (Newzoo, istraživanja tržišta te analiza promjena u distribuciji i cijenama). Tamo gdje je moguće, tvrdnje su potkrijepljene najnovijim izvještajima i člancima.
+
+---
+
+2. Veličina i dinamika tržišta
+
+Globalno tržište video igara pokazalo je stabilan rast nakon razdoblja snažnog porasta tijekom pandemije; prema procjenama, prihod industrije približava se granici od ~188–190 milijardi USD u 2024–2025. godini, uz očekivani daljnji rast u nadolazećim godinama. Trendovi pokazuju da su mobilne igre i dalje najveći pojedinačni segment po prihodima, ali konzole i PC ostaju važni, a neke regije (APAC) pokazuju različite stope rasta ovisno o platformi. ([Newzoo][1])
+
+**Implications (posljedice):** stabilnost prihoda smanjuje pritisak za brzim ekspanzijama, ali povećava konkurenciju za pažnju igrača i zaosvajanje tržišnog udjela kroz nove servise, franšize i monetizacijske modele.
+
+---
+
+3. Monetizacija i promjene u cijenama igara
+
+Modeli monetizacije evoluirali su od jednokratne kupnje (premium) prema modelima s višestrukim tokovima prihoda: mikrotransakcije, sezonske karte (season passes / battle passes), pretplate i oglasi (posebno u mobilnom segmentu). Istovremeno se mijenja i raspodjela cijena naslova na PC platformama — studije su pokazale pad medijalne cijene bestselera na platformama poput Steama, gdje uspjeh povoljnih indie naslova pritiska mogućnosti plasiranja srednje cijenjenih naslova bez jakog brand namea. To prisiljava developere na preciznije pozicioniranje proizvoda i agresivnije strategije izdavanja i promocije. ([GamesRadar+][2])
+
+**Akademska refleksija:** promjena u mediani cijena ukazuje i na promjene u percepciji vrijednosti digitalnog sadržaja te na rastuću važnost replay value-a, zajednica i dodatnog sadržaja za održavanje prihoda.
+
+---
+
+4. Cloud gaming i „gaming-as-a-service“
+
+Cloud gaming dobiva ubrzanje: velike platforme (Microsoft/Xbox, Google, NVIDIA itd.) šire dostupnost svojih servisa u više zemalja i na raznolikim uređajima (pametni televizori, set-top box, mobilni uređaji). Ovakva širina pristupa smanjuje ulaznu barijeru za igrače jer skida potrebu za skupom konzolom ili gaming računalom — dovoljno je stabilno širokopojasno povezivanje. Primjer širenja Microsoftovog Xbox Cloud Gaming servisa u nove regije ilustrira ovu strategiju povećanja dostupnosti bez potrebe za fizičkim hardverom. ([Windows Central][3])
+
+**Posljedične promjene u industriji:** usvajanje cloud gaminga može promijeniti lanac vrijednosti (manji fokus na hardver, veći na mrežnu infrastrukturu i licence), ali zahtijeva rješavanje latencije, prava za distribuciju i poslovnih modela (pretplate vs. ownership).
+
+---
+
+5. Umjetna inteligencija u razvoju i sadržaju igara
+
+AI je možda najsveobuhvatniji tehnološki trend: koristi se u alatima za proizvodnju sadržaja (proceduralna generacija, teksture, animacije), u testiranju (automatizirano pronalaženje bugova), kao i u gameplay sustavima (pametniji NPC-i, dinamička priča). Debata oko označavanja sadržaja „made with AI“ pokazuje kako industrija pokušava balansirati transparentnost, autorstvo i normalizaciju AI alata u proizvodnji. Neki lideri industrije smatraju da bi označavanje postalo nepraktično kako AI postane standardni alat, dok drugi ističu probleme autorskih prava i etike. ([The Verge][4])
+
+**Etika i IP:** primjena generativnih modela otvara pitanja izvora podataka, licence korištenih trening-skupova, te autorskih prava — što zahtijeva i tehnička i pravna rješenja (watermarking, traceability, uvjeti uporabe alata).
+
+---
+
+6. Promjene u ponašanju igrača i demografija
+
+Igrači su sve raznovrsniji po dobi, spolu i geografskoj lokaciji. Mlađe generacije daju veću važnost socijalnim i kreativnim elementima (kooperacija, user-generated content, live streaming) nego samim grafičkim performansama. Platforme koje naglašavaju socijalnost, kreaciju sadržaja i lakoću pristupa (npr. Roblox, Fortnite Creative) nastavljaju rasti u utjecaju na kulturu i način sudjelovanja igrača. Analize također pokazuju da su u nekim regijama mobilne platforme primarni pristup igrama, što mijenja dizajn i monetizaciju naslova. ([Bain][5])
+
+---
+
+7. Indie scene, AAA i konsolidacija industrije
+
+Industrija se polarizira: s jedne strane velike kompanije (AAA studiji) konsolidiraju s ciljem smanjenja rizika i iskorištavanja IP-a kroz multiplatformske strategije, s druge strane indie sceni su dostupni alati (Unity, Unreal, platforme za distribuciju) i kanali promocije koji omogućavaju izlazak manjih, kreativnijih naslova. Međutim, natjecanje za pažnju igrača i promjene u cijenama otežavaju financijsku održivost srednje velikih projekata. Unity i druge platforme izričito naglašavaju trend „većih svjetova i dugotrajnijih IP-a“ što sugerira pomak u razmišljanju o životnom vijeku igre i monetizaciji kroz kontinuirani sadržaj. ([Unity][6])
+
+---
+
+8. Esports, streaming i novi oblici kulturne produkcije
+
+Esports i streaming platforme značajno utječu na promociju igara i ponašanje potrošača. Igre dizajnirane da budu „stream-friendly“ (jasan spektakl, lako kućište za publici) često dobivaju veliki organski doseg. Također, monetizacija kroz sponzorstva, oglase i prava na prijenos dodatno diversificira prihode industrije.
+
+---
+
+9. Regulacija, sigurnost i društveni izazovi
+
+Rastuća monetizacija (microtransactions, loot boxovi) izaziva regulatorne rasprave o zaštiti potrošača i ovisnosti o igrama. Pitanja sigurnosti podataka, privatnosti maloljetnika i moderiranja korisničkog sadržaja posebno su važna u društveno orijentiranim igrama i game servisa. Europska i nacionalna zakonodavstva već rade na regulacijama koje ciljaju neke od ovih praksi, što će utjecati na dizajn i poslovne modele.
+
+---
+
+10. Predviđanja i preporuke za buduća istraživanja
+
+Na temelju trenutačnih pokazatelja moguće je izdvojiti nekoliko očekivanih smjerova razvoja:
+
+1. **Daljnja integracija AI alata** u sve faze razvoja igre (brži prototipovi, dinamičan sadržaj). Potrebna su empirijska istraživanja o kvaliteti i etici AI-generiranog sadržaja. ([The Verge][4])
+2. **Rast cloud gaminga i pretplatničkih servisa** te njihov utjecaj na vlasništvo igara i lanac vrijednosti. Potrebna su komparativna istraživanja latencije, korisničkog iskustva i poslovnih modela u različitim regijama. ([Windows Central][3])
+3. **Strukturiranje cijena i modeli monetizacije** — uloga nižih medijalnih cijena („value pricing“) i kako to utječe na portfelje izdavača. Istraživanja o učinku različitih cijena na prihode, dugoročnu angažiranost i reputaciju branda. ([GamesRadar+][2])
+4. **Regionalne varijacije rasta** — uloga APAC i tržišta u razvoju mobilnog gaminga i novih monetizacijskih strategija; longitudinalne studije potrošnje. ([Newzoo][1])
+
+---
+
+11. Zaključak
+
+Industrija video igara u 2024–2025. prolazi kroz fazu zrelosti i tehnološke transformacije. Rast prihoda je stabilan, ali konkurencija, promjene u ponašanju igrača i tehnološki skokovi (cloud, AI) nameću potrebu za adaptacijom. Izvori ukazuju da će usvajanje AI i širenje cloud servisa biti ključni pokretači promjena, dok monetizacijski i distributivni modeli ostaju područje intenzivne transformacije. Za akademsku zajednicu i praktičare to znači fokus na interdisciplinarna istraživanja koja povezuju tehnologiju, ekonomiju i etiku.
