@@ -1,0 +1,149 @@
+1. UVOD
+
+Suvremeno društvo obilježeno je ubrzanim razvojem informacijskih tehnologija koje prodiru u sve segmente ljudskog djelovanja. Umjetna inteligencija (AI) više nije samo predmet znanstvene fantastike, već postaje sastavni dio organizacijskih sustava koji podupiru složene procese donošenja odluka. Ovaj rad istražuje kako umjetna inteligencija transformira načine razmišljanja i odlučivanja unutar organizacija, pri čemu naglasak nije isključivo na tehnološkim aspektima, već na kompleksnoj interakciji između tehnologije, ljudi i organizacijskih struktura.
+
+Socio-tehnička perspektiva nudi holistički okvir za razumijevanje ovih procesa, naglašavajući da tehnologija nikada ne djeluje izolirano, već uvijek u odnosu sa socijalnim kontekstom u kojem je ugrađena. Ekspertni sustavi, kao specifična primjena umjetne inteligencije, predstavljaju paradigmatski primjer kako se stručno znanje može kodificirati i distribuirati kroz organizaciju, mijenjajući pritom same principe donošenja odluka.
+
+Cilj ovog rada je teorijski i praktički istražiti kako umjetna inteligencija utječe na procese poučavanja mišljenja i donošenja odluka, analizirajući pritom ključne koncepte poput učećih agenata, informacijskih sustava, sociomaterijalnsti i integralnog pluralizma. Posebna pozornost bit će posvećena razlici između samoregulirajućih i samoupravljajućih sustava, kao i kritičkom vrednovanju trenutnih pristupa i njihovih ograničenja.
+
+2. TEORIJSKI TEMELJI EKSPERTNIH SUSTAVA
+
+2.1. Definicija i arhitektura ekspertnih sustava
+
+Ekspertni sustavi predstavljaju granu umjetne inteligencije koja nastoji replicirati sposobnost donošenja odluka ljudskih stručnjaka unutar usko definiranih domena. Temeljna arhitektura ekspertnog sustava sastoji se od tri ključne komponente: baze znanja, mehanizma zaključivanja i korisničkog sučelja. Baza znanja sadržava domenski specifične informacije i heuristike koje stručnjaci koriste pri rješavanju problema, dok mehanizam zaključivanja primjenjuje logičke operacije nad tim znanjem kako bi generirao zaključke i preporuke.
+
+Važno je razumjeti da ekspertni sustavi nisu samo spremišta podataka, već aktivni procesori koji simuliraju kognitivne procese. Mehanizmi zaključivanja mogu biti forward chaining (unaprijedno ulančavanje), gdje sustav polazi od poznatih činjenica ka zaključcima, ili backward chaining (unazadno ulančavanje), gdje sustav počinje od željenog cilja i traži dokaze koji bi ga podržali. Ova distinkcija odražava različite strategije rješavanja problema koje primjenjuju i ljudi.
+
+2.2. Reprezentacija znanja i učeći agenti
+
+Reprezentacija znanja u ekspertnim sustavima evoluirala je od jednostavnih pravila "ako-onda" do sofisticiranih ontologija i semantičkih mreža. Učeći agenti predstavljaju naprednu inkarnaciju ekspertnih sustava koji nisu statični, već kontinuirano ažuriraju svoje znanje na temelju novih iskustava i povratnih informacija iz okoline. Ovi agenti koriste tehnike strojnog učenja, poput neuronskih mreža, algoritama genetskog programiranja ili pojačanog učenja.
+
+Autonomija učećih agenata označava prijelaz od programiranih ekspertnih sustava ka sustavima sposobnim za adaptaciju i evoluciju. Međutim, ova autonomija postavlja pitanja odgovornosti i transparentnosti - kada sustav samostalno mijenja svoje baze znanja, kako možemo jamčiti kvalitetu i etičnost njegovih odluka? Ovdje se socio-tehnička dimenzija pokazuje kritičnom: tehnologija ne može biti autonomna u potpunosti, već mora biti ugrađena u okvir ljudskog nadzora i evaluacije.
+
+2.3. Ekspertni sustavi kao informacijski sustavi
+
+Promatrajući ekspertne sustave kroz prizmu informacijskih sustava, prepoznajemo njihovu ulogu u organizacijskom kontekstu. Informacijski sustavi ne obrađuju samo podatke, već sudjeluju u stvaranju značenja i podupiru organizacijske procese. Ekspertni sustavi u tom smislu djeluju kao posrednici između eksplicitnog i tacitnog znanja, pokušavajući kodificirati intuicije i iskustveno znanje stručnjaka u formalnim strukturama.
+
+Ova kodifikacija uvijek je nepotpuna. Michael Polanyi je upozorio da "znamo više nego što možemo reći" - tacitno znanje uključuje tjelesne vještine, kontekstualno razumijevanje i intuiciju koja se teško može svesti na pravila. Ekspertni sustavi stoga ne zamjenjuju ljudske stručnjake u potpunosti, već djeluju kao proširenja njihovih kognitivnih kapaciteta, posebno u rutinskim situacijama koje dopuštaju formalizaciju.
+
+3. SOCIO-TEHNIČKI SUSTAVI I KONCEPT SOCIOMATERIJALNSTI
+
+3.1. Od tehno-determinizma ka socio-tehničkoj teoriji
+
+Rana razumijevanja tehnologije u organizacijama bila su obilježena tehno-determinizmom - vjerovanjem da tehnologija sama po sebi određuje organizacijske ishode. Socio-tehnička teorija, razvijena u Tavistock Institutu 1950-ih godina, odbacila je ovaj reduktivni pristup, tvrdeći da organizacije funkcioniraju kao otvoreni sustavi u kojima tehnološke i socijalne komponente moraju biti zajednički optimizirane.
+
+Ključna spoznaja socio-tehničke perspektive jest da tehnologija omogućuje određene akcije, ali ne određuje ih. Implementacija istog ekspertnog sustava u dvije različite organizacije može rezultirati sasvim različitim ishodima, ovisno o organizacijskoj kulturi, strukturi moći, obrazovanju zaposlenika i drugim socijalnim čimbenicima. Stoga je dizajn socio-tehničkih sustava uvijek također i dizajn socijalnih praksi.
+
+3.2. Sociomaterijalnst i prepletenost tehnologije i društva
+
+Koncept sociomaterijalnsti (sociomateriality) predstavlja suvremenu nadogradnju socio-tehničke teorije, razvijenu posebno u radovima Wande Orlikowski. Sociomaterijalnst tvrdi da društveno i materijalno nisu odvojeni entiteti koji međusobno utječu jedni na druge, već su konstitutivno isprepleteni - ne postoje neovisno jedan od drugog. Tehnologija nije puki alat koji ljudi koriste, već je utkana u samu strukturu socijalnih praksi.
+
+U kontekstu umjetne inteligencije, sociomaterijalnst znači da algoritmi i ljudi zajedno konstituraju procese donošenja odluka. Ekspertni sustav ne preuzima odlučivanje od čovjeka niti mu samo pomaže - već transformira samu prirodu odlučivanja, stvarajući nove hibridne prakse u kojima je teško razlučiti gdje završava ljudski i počinje strojni doprinos. Ova prepletenost zahtijeva novi analitički okvir koji nadilazi jednostavne dihotomije poput "čovjek nasuprot stroju".
+
+3.3. Svjesnost i distribuirana kognicija
+
+Pitanje svjesnosti u kontekstu umjetne inteligencije često se postavlja pogrešno. Umjesto da pitamo "jesu li strojevi svjesni", socio-tehnička perspektiva predlaže da razmotrimo kako se kognitivni procesi distribuiraju kroz mreže ljudi i tehnologija. Edwin Hutchins je pokazao kako brodske navigacije nije individualna kognitivna aktivnost, već distribuirana praksa u kojoj sudjeluju instrumenti, procedure i više članova posade.
+
+Slično tome, organizacijsko donošenje odluka uz podršku umjetne inteligencije predstavlja oblik distribuirane kognicije. Svjesnost nije svojstvo pojedinačnog agenta (ljudskog ili umjetnog), već emergentna karakteristika sustava. Ekspertni sustav može nedostajati fenomenološka svjesnost, ali sudjeluje u kolektivnom kognitivnom procesu kroz koji organizacija "razmišlja" i "uči".
+
+4. METODOLOGIJA INTEGRALNOG PLURALIZMA
+
+4.1. Višeperspektivnost i epistemološka skromnost
+
+Integralni pluralizam kao metodološki pristup prepoznaje da složeni fenomeni, poput implementacije umjetne inteligencije u organizacijama, zahtijevaju višestruke perspektive i metode istraživanja. Niti jedan pojedinačni teorijski okvir ili metodologija ne može potpuno obuhvatiti svu relevantnu kompleksnost. Umjesto traženja jedne "prave" teorije, integralni pluralizam zastupa koordiniranu primjenu različitih pristupa.
+
+Ova epistemološka skromnost posebno je važna u području umjetne inteligencije gdje se susreću različite discipline - računalna znanost, kognitivna psihologija, organizacijska teorija, filozofija uma, etika. Svaka donosi vlastite uvide i ograničenja. Integralni pluralizam ne zagovara eklektički relativizam, već metodičnu integraciju dopunskih perspektiva.
+
+4.2. Kombiniranje kvalitativnih i kvantitativnih metoda
+
+Istraživanje socio-tehničkih sustava sa umjetnom inteligencijom nužno zahtijeva kombinaciju kvalitativnih i kvantitativnih metoda. Kvantitativni pristupi mogu izmjeriti performanse sustava, točnost predviđanja, brzinu obrade - objektivne metrike koje su važne za evaluaciju tehnološke učinkovitosti. Međutim, oni ne mogu uhvatiti značenja koja akteri pridaju tehnologiji, otpore implementaciji, transformacije radnih praksi.
+
+Kvalitativne metode, poput etnografije, dubinskih intervjua i akcijskog istraživanja, omogućuju razumijevanje kako ljudi doživljavaju i interpretiraju ekspertne sustave u svom svakodnevnom radu. Kombinacija ovih pristupa - koja se ponekad naziva mixed methods istraživanje - omogućuje holističku sliku koja obuhvaća i objektivnu funkcionalnost sustava i subjektivno iskustvo korisnika.
+
+4.3. Kritička refleksija i participativni dizajn
+
+Integralni pluralizam uključuje i normativnu dimenziju - nije samo pitanje kako istražiti, već i kako dizajnirati sustave koji podupiru ljudsko flourishing. Participativni dizajn naglašava da korisnici sustava moraju biti aktivno uključeni u proces dizajna, ne samo kao pasivni recipijenti tehnologije. Ovo je posebno važno za ekspertne sustave koji transformiraju radne prakse - radnici posjeduju tacitno znanje o vlastitom poslu koje dizajneri možda ne prepoznaju.
+
+Kritička refleksija zahtijeva propitivanje moćnih struktura i pretpostavki ugrađenih u tehnologiju. Čija znanja se kodificiraju u ekspertnim sustavima, a čija se ignoriraju? Kako sustavi reproduciraju ili izazivaju postojeće nejednakosti? Ova pitanja nisu dodatna razmatranja, već centralna za razumijevanje socio-tehničkih implikacija umjetne inteligencije.
+
+5. SAMOREGULIRAJUĆI I SAMOUPRAVLJAJUĆI SUSTAVI
+
+5.1. Kibernetička osnova i povratne sprege
+
+Razlika između samoregulirajućih i samoupravljajućih sustava temelji se na kibernetičkoj teoriji koju je razvio Norbert Wiener. Samoregulirajući sustavi koriste negativne povratne sprege za održavanje homeostaze - odstupanja od ciljanog stanja automatski se korigiraju. Klasičan primjer je termostat koji održava temperaturu u prostoriji. U kontekstu umjetne inteligencije, ekspertni sustavi često funkcioniraju kao samoregulirajući mehanizmi koji korigiraju operativne procese prema unaprijed definiranim parametrima.
+
+Međutim, ovi sustavi ne postavljaju vlastite ciljeve - oni samo održavaju ciljeve koje su im postavili dizajneri. Regulacija je reaktivna i ograničena na predviđene scenarije. Kada se okolina promijeni na fundamentalan način koji dizajneri nisu anticipirali, samoregulirajući sustav može postati disfunkcionalan, uporno pokušavajući održati parametre koji više nisu relevantni.
+
+5.2. Samoupravljanje i refleksivna autonomija
+
+Samoupravljajući sustavi posjeduju viši stupanj autonomije - oni mogu ne samo regulirati vlastite operacije, već i modificirati vlastite ciljeve i strukture. Ovo zahtijeva refleksivnu sposobnost, što Stafford Beer naziva "učenje kako učiti". Samoupravljajući sustavi sposobni su prepoznati kada njihovi postojeći okviri postaju neadekvatni i redizajnirati vlastito funkcioniranje.
+
+U organizacijskom kontekstu, razlika odgovara distinkciji između single-loop i double-loop učenja koju je artikulirao Chris Argyris. Single-loop učenje korigira greške unutar postojećeg okvira (samoregulacija), dok double-loop učenje propituje sam okvir (samoupravljanje). Ekspertni sustavi s učećim agentima kreću se prema samoupravljanju, ali potpuno samoupravljajuća umjetna inteligencija ostaje teorijska mogućnost praćena značajnim etičkim pitanjima.
+
+5.3. Ljudska dimenzija autonomije
+
+Ključno je razumjeti da autonomija tehničkih sustava nije analogna ljudskoj autonomiji. Ljudska autonomija uključuje moralnu odgovornost, svjesnost, intencionalnost - karakteristike koje trenutni sustavi umjetne inteligencije ne posjeduju. Kada govorimo o samoupravljajućim AI sustavima, govorimo o funkcionalnoj autonomiji, ne moralnoj.
+
+Ova distinkcija ima praktične implikacije. Samoupravljajući sustavi mogu donositi odluke koje imaju etičke posljedice, ali ne mogu snositi moralnu odgovornost za te odluke. Odgovornost uvijek ostaje kod ljudi - dizajnera, operatera, organizacija koje sustave upotrebljavaju. Socio-tehnička perspektiva inzistira da tehnološka autonomija mora biti ugrađena u okvire ljudskog nadzora i odgovornosti.
+
+6. PRAKTIČNA PRIMJENA: TUNELSKI SUSTAVI
+
+6.1. Složenost i sigurnosni zahtjevi tunela
+
+Tunelski sustavi predstavljaju paradigmatski primjer okruženja gdje je integracija umjetne inteligencije i složena i kritična. Tuneli su zatvoreni prostori s ograničenim rute evakuacije, visikom koncentracijom vozila i potencijalno katastrofalnim posljedicama incidenata. Upravljanje tunelima zahtijeva kontinuirano praćenje brojnih parametara - prometni tok, kvaliteta zraka, temperatura, detekcija požara, video nadzor - i sposobnost brzog reagiranja na anomalije.
+
+Ekspertni sustavi u tunelima djeluju kao samoregulirajući mehanizmi koji kontinuirano uspoređuju trenutno stanje sa sigurnosnim parametrima. Senzori detektiraju povišenu razinu ugljičnog monoksida, sustav automatski aktivira ventilaciju. Temperatura naglo raste, aktiviraju se sustavi za suzbijanje požara. Ove odluke moraju biti brze i pouzdane - nema vremena za ljudsku deliberaciju u kritičnim sekudama.
+
+6.2. Hibridno donošenje odluka
+
+Unatoč automatizaciji, tunelski sustavi ostaju fundamentalno socio-tehnički. Ljudski operateri u kontrolnim centrima kontinuirano nadziru sustave, interpretiraju kompleksne situacije i interveniraju kada automatski sustavi dosegnu granice vlastitih kapaciteta. Ova podjela rada između ljudi i strojeva nije statična - učeći algoritmi postupno proširuju raspon situacija koje mogu rješavati autonomno, dok ljudi zadržavaju odgovornost za nejasne, etički osjetljive ili precedentne slučajeve.
+
+Interesantan aspekt je kako se znanje prenosi između ljudskih operatera i sustava. Iskusni operateri prepoznaju obrasce koji mogu signalizirati nadolazeće probleme prije nego se manifestiraju kroz standardne senzore - primjerice, specifične kombinacije čimbenika koji često prethode incidentima. Ovo tacitno znanje postupno se kodificira u algoritme, ali proces nikada nije potpun jer svaki tunel ima svoje specifičnosti.
+
+6.3. Ograničenja i rizici automatizacije
+
+Primjena umjetne inteligencije u tunelskim sustavima također ilustrira ograničenja i rizike. Automation bias - tendencija da ljudi nekritički prihvaćaju preporuke automatiziranih sustava - može dovesti do propusta u nadzoru. Kada sustavi funkcioniraju pouzdano tijekom dugih perioda, operateri mogu postati komplacentni, smanjujući svoju budnost upravo u vrijeme kada je njihov nadzor najkritičniji.
+
+Dodatno, kompleksni sustavi umjetne inteligencije mogu razviti ovisnosti o specifičnim podacima ili uvjetima pod kojima su trenirani. Tuneli se mjenjaju - nova infrastruktura, promjenjeni prometni obrasci, klimatske promjene. Sustav treniran na povijesnim podacima može postati progresivno manje pouzdan. Ovdje se vraćamo na razliku između samoregulacije i samoupravljanja - potrebni su mehanizmi koji omogućuju sustavima da prepoznaju vlastitu zastarjelost i aktiviraju procese revalidacije i ažuriranja.
+
+7. KRITIČKI OSVRT NA OGRANIČENJA TRENUTNIH PRISTUPA
+
+7.1. Problem transparentnosti i objašnjivosti
+
+Jedan od najznačajnijih izazova suvremene umjetne inteligencije je problem "crne kutije". Duboke neuronske mreže mogu postizati impresivne performanse u prepoznavanju obrazaca i predviđanju ishoda, ali način na koji dolaze do zaključaka često je neprozirani čak i njihovim kreatiorima. Ovo predstavlja fundamentalni problem za donošenje odluka u kontekstima gdje je potrebna odgovornost i obrazloženje.
+
+Ekspertni sustavi temeljeni na pravilima nude veću transparentnost - možemo pratiti koji su pravila aktivirana i kako je zaključak generiran. Međutim, njihov opseg je ograničen upravo tom potrebom eksplicitne kodifikacije. Postoji tenzija između moći i transparentnosti - napredniji sustavi često su manje razumljivi. Ova tenzija nije čisto tehnička, već odražava dublji epistemološki problem: razumijevanje i predviđanje nisu isto.
+
+7.2. Etička pitanja i društvene posljedice
+
+Umjetna inteligencija u donošenju odluka podiže brojna etička pitanja koja trenutni pristupi nedovoljno adresiraju. Algoritmi mogu reproducirati i amplificirati postojeće predrasude prisutne u podacima na kojima su trenirani. Odluke koje utječu na ljudske živote - zapošljavanje, kreditiranje, medicinske dijagnoze - sve više se delegiraju sustavima čiji kriteriji mogu biti problematični ili diskriminirajući na načine koje nije lako detektirati.
+
+Dodatno, distribucija odgovornosti u socio-tehničkim sustavima postaje nejasna. Kada AI sustav donese pogrešnu odluku s ozbiljnim posljedicama, tko je odgovoran? Dizajner algoritma? Organizacija koja ga primjenjuje? Korisnik koji mu je vjerovao? Ova pitanja nisu čisto pravna, već odražavaju fundamentalne konceptualne nejasnoće o prirodi djelovanja u hibridnim čovjek-stroj sustavima.
+
+7.3. Ograničenja tehno-centrične perspektive
+
+Većina istraživanja i razvoja umjetne inteligencije ostaje tehno-centrična - fokusirana na poboljšanje algoritama, točnosti predviđanja, efikasnosti procesiranja. Socijalne, organizacijske i ljudske dimenzije tretirane su kao sekundarne ili čak kao prepreke koje treba prevladati boljim dizajnom. Ova perspektiva zanemaruje temeljnu socio-tehničku lekciju: tehnologija ne funkcionira "unatoč" ljudima i društvenim kontekstima, već kroz njih.
+
+Uspjeh umjetne inteligencije ne mjeri se samo tehničkim metrikama, već i prihvaćanjem korisnika, socijalnom korisnosti, etičkom podobnošću, prinosom ljudskom flourishingu. Ove dimenzije zahtijevaju fundamentalno različite metodologije evaluacije i različite kriterije dizajna. Trenutni pristupi, unatoč retoričkom priznanju važnosti "human-centered AI", rijetko integriraju socio-tehničku perspektivu na sistemski način.
+
+7.4. Potreba za interdisciplinarnim pristupom
+
+Ograničenja trenutnih pristupa umjetnoj inteligenciji u donošenju odluka reflektiraju širu fragmentaciju znanja. Računalni znanstvenici razvijaju algoritme sa ograničenim razumijevanjem organizacijske teorije. Poslovni konzultanti implementiraju sustave bez duboke tehničke kompetencije. Etičari kritiziraju iz pozicije koja može biti otuđena od praktičnih realnosti. Ono što nedostaje je istinski interdisciplinarni pristup koji integrira tehničku ekspertizu, razumijevanje socijalnih sustava i etičku refleksiju.
+
+Metodologija integralnog pluralizma nudi okvir, ali njena implementacija zahtijeva institucionalne promjene - u obrazovanju, istraživanju, organizacijama. Potrebne su timove koji uključuju inženjere, sociologe, etičare, korisničke predstavnike - i što je kritično, kulture koje cijene različite oblike ekspertize ravnopravno. Bez ovakvih promjena, umjetna inteligencija riskira da postane tehnološki sofisticirana, ali socijalno i etički neadekvatna.
+
+8. ZAKLJUČAK
+
+Umjetna inteligencija u poučavanju mišljenja i donošenju odluka predstavlja transformativnu silu čije implikacije nadilaze tehničku domenu. Socio-tehnička perspektiva nudi neophodan analitički okvir koji odbacuje jednostavne dihotomije između tehnologije i društva, prepoznajući njihovu konstitutivnu isprepletenost. Ekspertni sustavi i učeći agenti nisu puki alati koje ljudi koriste, već aktivni sudionici u distribuiranim kognitivnim praksama kroz koje organizacije razmišljaju i djeluju.
+
+Teorijski temelji ekspertnih sustava, od reprezentacije znanja do mehanizama zaključivanja, moraju biti razumjeni u širem kontekstu informacijskih sustava i organizacijskih praksi. Koncept sociomaterijalnsti naglašava kako tehnologija i socijalne prakse uzajamno konstituiraju jedna drugu, dok metodologija integralnog pluralizma nudi put prema holističkom razumijevanju koje integrira multiple perspektive i metode.
+
+Razlika između samoregulirajućih i samoupravljajućih sustava ima duboke implikacije za razumijevanje autonomije umjetne inteligencije. Dok samoregulirajući sustavi održavaju unaprijed definirane parametre, samoupravljajući sustavi posjeduju refleksivnu sposobnost modificiranja vlastitih struktura i ciljeva. Međutim, funkcionalna autonomija ne implicira moralnu autonomiju - odgovornost uvijek ostaje kod ljudskih aktera.
+
+Praktična primjena u tunelskim sustavima ilustrira kako složenost, sigurnosni zahtjevi i potreba za brzim reagiranjem stvaraju okruženje gdje hibridno donošenje odluka postaje nužnost. Ljudi i strojevi dopunjavaju jedni druge, ali ta dopuna mora biti pažljivo dizajnirana i kontinuirano evaluirana. Iskustvo iz tunelskih sustava poučava nas o opasnostima automation bias-a i potrebi za mehanizmima koji omogućuju sustavima da prepoznaju granice vlastite pouzdanosti.
+
+Kritički osvrt na trenutne pristupe otkriva značajna ograničenja. Problem transparentnosti postavlja tenziju između moći i razumljivosti algoritama. Etička pitanja oko reprodukcije predrasuda i distribucije odgovornosti zahtijevaju više od tehničkih rješenja. Prevladavajuća tehno-centrična perspektiva zanemaruje suštinske socijalne dimenzije, dok fragmentacija znanja kroz disciplinarne granice otežava istinski integrativne pristupe.
+
+Putanja naprijed zahtijeva fundamentalnu rekonceptualizaciju odnosa između umjetne inteligencije i ljudskog donošenja odluka. Umjesto da pitamo kako tehnologija može zamijeniti ljudsku prosudbu, trebamo pitati kako socio-tehnički sustavi mogu poduprijeti ljudsko flourishing, kreativnost i moralnu odgovornost. Ovo zahtijeva ne samo tehnološku inovaciju, već i institucionalne, obrazovne i kulturne transformacije koje omogućuju istinsku interdisciplinarnu suradnju.
+
+Umjetna inteligencija nudi moćne alate za proširenje ljudskih kognitivnih kapaciteta, ali ostvarenje tog potencijala ovisi o našoj sposobnosti da je integriramo na načine koji poštuju ljudsko dostojanstvo, podupiru pravednost i omogućuju smislenu odgovornost. Socio-tehnička perspektiva, s njenim naglaskom na konstitutivnoj prepletenosti tehnologije i društva, nudi kritički okvir za navigaciju ovim izazovima. Buduća istraživanja i prakse moraju integrirati tehničku sofisticiranost s socijalnom mudrošću, stvarajući sustave koji su ne samo inteligentni, već i mudri.

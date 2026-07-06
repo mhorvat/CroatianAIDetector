@@ -1,0 +1,209 @@
+1. UVOD
+
+Uzdužna povezanost vodotoka predstavlja jedan od ključnih ekoloških zahtjeva za očuvanje biodiverziteta slatkovodnih ekosustava. Izgradnja vodoprivrednih objekata poput brana, pragova i ustava narušava prirodne migracijske putove riba, što dugoročno dovodi do fragmentacije staništa, smanjenja genetske raznolikosti populacija i poremećaja u reprodukcijskim ciklusima. Tehnička rješenja za uspostavu uzdužne povezanosti, posebno riblje staze, stoga zauzimaju središnje mjesto u održivom gospodarenju vodnim resursima.
+
+U Hrvatskoj, kao državi bogatoj vodotocima različitih morfoloških i hidrauličkih karakteristika, potreba za funkcionalnim ribljim stazama postaje sve izraženija. Mali pragovi, koji se nalaze na brojnim vodotocima, predstavljaju značajne prepreke za migraciju autohtonih ribljih vrsta. Proračun i dimenzioniranje riblje staze zahtijeva detaljno razumijevanje hidrauličkih procesa, ponašanja riba i međusobne interakcije između tehničkih parametara konstrukcije.
+
+Nomogrami kao grafički alati omogućuju brzu i pouzdanu procjenu funkcionalnosti riblje staze za različite hidrološke uvjete. Razvoj nomograma temelji se na kombinaciji numeričkih modela, fizičkih modela i empirijskih istraživanja. Cilj ovog rada je prikazati metodologiju razvoja nomograma za proračun tehničkih ribljih staza na malim pragovima, s posebnim naglaskom na bazenske staze i staze s vertikalnim otvorima, te analizirati preporučene vrijednosti hidrauličkih parametara prema zonaciji vodotoka i specifičnostima ribljih vrsta u Hrvatskoj.
+
+2. TEORIJSKE OSNOVE HIDRAULIČKOG PRORAČUNA RIBLJIH STAZA
+
+2.1. Hidraulički parametri ribljih staza
+
+Funkcionalnost riblje staze određena je nizom hidrauličkih parametara koji moraju biti prilagođeni plivačkim sposobnostima ciljnih ribljih vrsta. Temeljni parametri uključuju protok kroz stazu (Q), srednju brzinu strujanja (v), pad razine vode između bazena (Δh), disipaciju energije po jedinici volumena (P_vol) i dubinu vode u bazenima (h).
+
+Protok kroz riblju stazu mora biti dovoljan da privuče ribu prema ulazu, ali ne smije biti pretjeran jer bi to rezultiralo prevelikim brzinama. Minimalni protok obično se određuje kao postotak od karakterističnog protoka vodotoka, pri čemu se u praksi koriste vrijednosti između 1% i 5% srednjeg godišnjeg protoka. Maksimalni protok ograničen je kapacitetom staze i graničnim brzinama za ciljne vrste.
+
+Brzina strujanja ključni je parametar koji izravno utječe na mogućnost riba da savladaju stazu. Razlikuju se srednja brzina u bazenu, maksimalna brzina u mlazu između bazena i brzina kroz otvore. Granične brzine ovise o vrsti ribe, njenoj veličini i temperaturi vode. Za ciprinidne vrste slabijih plivačkih sposobnosti granične brzine kreću se oko 1,0-1,5 m/s, dok salmonidne vrste mogu savladati brzine do 2,5-3,0 m/s u kratkim intervalima.
+
+Pad razine vode između bazena (Δh) određuje intenzitet turbulencije i disipaciju energije. Preporučene vrijednosti kreću se od 0,10 do 0,30 m, pri čemu manji padovi osiguravaju mirnije uvjete pogodne za slabije plivače. Energetska disipacija po jedinici volumena (P_vol) izražava intenzitet turbulencije i ne smije prelaziti 150-200 W/m³ za osjetljive vrste.
+
+2.2. Tipovi tehničkih ribljih staza
+
+Tehnička rješenja ribljih staza razvijena su u brojnim varijantama, pri čemu se najčešće koriste bazenske staze s preljevnim pragovima, staze s vertikalnim otvorima, prirodne (prirodno slične) staze i denil staze. Ovaj rad fokusira se na bazenske staze s preljevnim pragovima i staze s vertikalnim otvorima kao najčešće primjenjivana rješenja na malim pragovima.
+
+Bazenska staza s preljevnim pragovima sastoji se od niza bazena odvojenih poprečnim pregradama preko kojih se voda prelijeva. Ovakav sustav omogućuje postupno savladavanje visinske razlike, pri čemu se u svakom bazenu disipira dio energije. Dimenzije bazena i visine prelijevanja projektiraju se prema hidrauličkim kriterijima i zahtjevima ciljnih vrsta.
+
+Staze s vertikalnim otvorima imaju otvore na dnu pregrada, kroz koje struja voda u obliku mlaza. Ovaj tip omogućuje ribi izbor između plivanja kroz mlaz ili skakanja preko pregrade ako je kombiniran s preljevanjem. Vertikalni otvori osiguravaju prolaznost i pri niskim protocima, što predstavlja prednost u odnosu na jednostavne preljevne pragove.
+
+3. METODOLOGIJA ISTRAŽIVANJA
+
+3.1. Fizički modeli i Froudeova sličnost
+
+Fizički hidraulički modeli predstavljaju nezamjenjiv alat u istraživanju ribljih staza, omogućujući kontrolirano ispitivanje strujnih prilika i optimizaciju geometrijskih parametara. Modeliranje se temelji na Froudeovoj sličnosti, koja osigurava ispravnu reprodukciju gravitacijskih i inercijskih sila u strujanju s slobodnom površinom.
+
+Froudeov broj (Fr) definira se kao omjer inercijskih i gravitacijskih sila:
+
+Fr = v / √(g·h)
+
+gdje je v karakteristična brzina, g gravitacijsko ubrzanje, a h karakteristična dubina. Uvjet Froudeove sličnosti zahtijeva da Froudeov broj bude jednak u modelu i prototipu. Za geometrijski sličan model s linearnim mjerilom λ, vrijede sljedeći odnosi:
+
+- Omjer brzina: λ_v = √λ
+- Omjer protoka: λ_Q = λ^2.5
+- Omjer vremena: λ_t = √λ
+
+Fizički model riblje staze obično se izrađuje u mjerilu 1:2 do 1:5, ovisno o veličini prototipa i raspoloživim kapacitetima laboratorija. Manja mjerila mogu dovesti do problema s viskoznim efektima i površinskom napetošću, što iskrivljuje sličnost.
+
+U izradi modela koriste se materijali koji omogućuju glatke površine kako bi se minimizirala hrapavost koja bi neproporcijalno utjecala na strujanje u modelu. Mjerenja hidrauličkih parametara obavljaju se preciznim instrumentima – brzine se mjere pomoću ADV sonde (Acoustic Doppler Velocimeter), a razine vode mikromanometrima ili ultrazvučnim senzorima.
+
+3.2. Numerički modeli
+
+Numeričko modeliranje strujanja u ribljih stazama temelji se na rješavanju Navier-Stokesovih jednadžbi za nestlačivo strujanje. S obzirom na kompleksnu geometriju i turbulentnu prirodu strujanja, koriste se metode računalne dinamike fluida (CFD - Computational Fluid Dynamics).
+
+Najčešće se primjenjuju trodimenzionalni RANS modeli (Reynolds-Averaged Navier-Stokes) s modelima turbulencije kao što su k-ε ili k-ω SST. Ovi modeli omogućuju predviđanje prostorne raspodjele brzina, tlakova i turbulentnih veličina u riblju stazu. Diskretizacija domene vrši se metodom konačnih volumena, a rješavanje jednadžbi iterativnim postupcima kao što je SIMPLE algoritam.
+
+Poseban izazov predstavlja modeliranje slobodne površine, što se rješava VOF metodom (Volume of Fluid) ili metodom razine (Level Set). Ove metode omogućuju praćenje granice između vode i zraka, što je bitno za točno određivanje dubina i prelijevanja preko pragova.
+
+Validacija numeričkih modela provodi se usporedbom s rezultatima fizičkih modela. Nakon validacije, numerički model postaje moćan alat za parametarske studije, omogućujući brzu analizu utjecaja različitih geometrijskih i hidrauličkih parametara na funkcionalnost staze.
+
+3.3. Funkcionalne zavisnosti
+
+Kombinacija fizičkog i numeričkog modeliranja omogućuje uspostavljanje funkcionalnih zavisnosti između projektnih parametara i hidrauličkih veličina. Ove zavisnosti čine osnovu za konstrukciju nomograma.
+
+Za bazensku stazu s preljevnim pragovima, protok se može izraziti pomoću jednadžbe prelijevanja:
+
+Q = μ · b · √(2g) · h_0^1.5
+
+gdje je μ koeficijent prelijevanja (0,4-0,45), b širina preljevne ivice, a h_0 visina prelijevanja iznad krune praga. Srednja brzina u bazenu ovisi o protoku i efektivnoj površini presjeka:
+
+v = Q / (B · h_sr)
+
+gdje je B širina bazena, a h_sr srednja dubina.
+
+Za staze s vertikalnim otvorima, protok kroz otvor možemo aproksimirati jednadžbom:
+
+Q = C_d · A_o · √(2g·Δh)
+
+gdje je C_d koeficijent protoka (0,6-0,8), A_o površina otvora, a Δh pad razine između bazena. Ovi odnosi pokazuju da su protok, brzine i pad razine međusobno povezani nelinearnim funkcijama, što zahtijeva grafički prikaz u obliku nomograma.
+
+4. NOMOGRAMI ZA BAZENSKE RIBLJE STAZE
+
+4.1. Konstrukcija nomograma
+
+Nomogram za bazensku riblju stazu konstruira se tako da omogućuje određivanje protoka i brzina za zadane geometrijske parametre i pad razine vode. Tipičan nomogram sadrži tri do četiri skale koje predstavljaju ključne varijable.
+
+Osnovna verzija nomograma povezuje pad razine vode (Δh), protok (Q) i srednju brzinu (v) za stazu zadane geometrije (širina bazena B, duljina bazena L, širina preljevne ivice b). Nomogram se konstruira na temelju niza proračuna ili mjerenja za različite kombinacije parametara.
+
+Na vertikalnoj osi obično se nanosi pad razine između bazena (Δh) u rasponu od 0,05 do 0,35 m. Na prvoj desnoj osi nanosi se protok (Q) u l/s ili m³/s, a na drugoj desnoj osi srednja brzina strujanja (v) u m/s. Krivulje povezuju vrijednosti koje odgovaraju jednoj te istoj geometrijskoj konfiguraciji.
+
+Svaka krivulja na nomogramu odgovara specifičnoj širini preljevne ivice ili određenom omjeru b/B. Za praktičnu primjenu, nomogram obično sadrži krivulje za nekoliko standardnih geometrija, primjerice b/B = 0,6; 0,7; 0,8. Korisnik može interpolirati između krivulja za međuvrijednosti.
+
+4.2. Primjena nomograma
+
+Primjena nomograma u projektiranju omogućuje brzu provjeru funkcionalnosti za različite hidrološke scenarije. Projektant za poznatu geometriju staze i očekivani raspon protoka odmah može očitati brzine i provjeriti jesu li unutar prihvatljivih granica.
+
+Postupak je sljedeći: za zadanu geometriju (B, L, b) i poznati protok (npr. Q95, srednji protok), na nomogramu se pronađe odgovarajuća krivulja i očita pripadna brzina i pad razine. Zatim se provjerava ispunjava li brzina kriterij za ciljne vrste. Ako brzina prelazi granične vrijednosti, geometrija se modificira (povećava se širina, smanjuje pad) i postupak ponavlja.
+
+Nomogram omogućuje i obrnuti postupak: za zadane granične uvjete (maksimalna dozvoljena brzina, minimalni protok) može se odrediti potrebna geometrija. Ovo je osobito korisno u preliminarnom dimenzioniranju.
+
+5. NOMOGRAMI ZA STAZE S VERTIKALNIM OTVORIMA
+
+5.1. Specifičnosti hidraulike vertikalnih otvora
+
+Staze s vertikalnim otvorima karakterizira složenija hidraulička slika zbog mlaznog strujanja kroz otvore. Brzina u mlazu znatno je veća od srednje brzine u bazenu, što stvara zone visokih i niskih brzina. Riba može birati putanju – kroz mlaz pri većim protocima ili bočno uz zid pri manjim protocima.
+
+Koeficijent protoka (C_d) ovisi o geometriji otvora, padu razine i dubini vode. Za pravilne pravokutne otvore C_d se kreće između 0,6 i 0,75. Eksperimentalna istraživanja pokazuju da ovaj koeficijent raste s povećanjem relativnog otvora (omjera površine otvora i površine pregrade).
+
+Disipacija energije u bazenu s vertikalnim otvorom odvija se kroz dva osnovna mehanizma: turbulencija mlaza koji ulazi u bazen i udarna disipacija na suprotnom zidu ili u samom bazenu. Ključno je osigurati dovoljnu duljinu bazena kako bi se disipirala energija prije sljedećeg otvora.
+
+5.2. Nomogrami za vertikalne otvore
+
+Nomogram za staze s vertikalnim otvorima konstruira se na sličan način kao za bazenske staze, ali uključuje specifične parametre otvora. Temeljne varijable su dimenzije otvora (širina a_o i visina b_o), pad razine (Δh) i protok (Q).
+
+Tipičan nomogram sadrži skale za pad razine vode, površinu otvora (ili zasebno širinu i visinu), protok i maksimalnu brzinu u mlazu. Krivulje odgovaraju različitim geometrijskim konfiguracijama, primjerice omjerima dubine otvora i visine pregrade ili omjerima širine otvora i širine staze.
+
+Posebna skala na nomogramu može prikazivati energetsku disipaciju po jedinici volumena (P_vol), koja se računa prema izrazu:
+
+P_vol = ρ · g · Q · Δh / V_bazena
+
+gdje je ρ gustoća vode, g gravitacijsko ubrzanje, a V_bazena volumen bazena. Ova veličina ne smije prelaziti kritične vrijednosti (150-200 W/m³) kako bi uvjeti u bazenu bili podnošljivi za ribu.
+
+6. ZONACIJA VODOTOKA I RIBLJE VRSTE U HRVATSKOJ
+
+6.1. Zonacija prema ribljem faunu
+
+Vodotoci Hrvatske karakterizirani su vertikalnom zonacijom koja odražava promjene morfoloških, hidrauličkih i ekoloških uvjeta od izvora do ušća. Tradicionalna zonacija obuhvaća salmonidnu (pstrva), lipljanska (klen), barbusnu (mrena) i ciprinidnu (balavac) zonu.
+
+Salmonidna zona obuhvaća gornje tokove s hladnom vodom (8-15°C), brzim strujanjem, kamenitom podlogom i visokom koncentracijom kisika. Dominantne vrste su potočna i jezerska pastrva (Salmo trutta) te potočna mrena (Thymallus thymallus). Ove vrste imaju jake plivačke sposobnosti i mogu savladati brzine preko 2,0 m/s u kratkim sprintevima.
+
+Lipljanska zona karakterizirana je umjereno brzim strujanjem, niskom do srednjom temperaturom (10-18°C) i šljunčanom podlogom. Tipične vrste uključuju klena (Squalius cephalus), vijuna (Barbatula barbatula) i potočnu mrenu u nižim dijelovima. Plivačke sposobnosti su umjerene, s graničnim brzinama 1,5-2,0 m/s.
+
+Barbusna zona nalazi se u srednjem toku, s umjerenim strujanjem i temperaturama 12-20°C. Dominiraju mrena (Barbus barbus), krkuša (Gobio gobio) i plotica (Rutilus rutilus). Granične brzine kreću se oko 1,2-1,8 m/s.
+
+Ciprinidna zona obuhvaća donje tokove s polaganim strujanjem, muljevitom podlogom i višim temperaturama (15-25°C). Karakteristične vrste su balavac (Abramis brama), šaran (Cyprinus carpio) i smuđ (Sander lucioperca). Ove vrste imaju slabe plivačke sposobnosti, s graničnim brzinama ispod 1,0 m/s.
+
+6.2. Preporučene vrijednosti hidrauličkih parametara
+
+Za salmonidnu zonu preporučene vrijednosti hidrauličkih parametara su: maksimalna srednja brzina 1,5-2,0 m/s, maksimalna brzina u mlazu 2,5-3,0 m/s, pad razine između bazena 0,20-0,30 m, minimalna dubina vode 0,40-0,50 m, energetska disipacija do 200 W/m³. Ove vrijednosti omogućuju prolaznost jak plivačkih vrsta uz odgovarajuće odmorišne zone.
+
+Za lipljansku i barbusnu zonu vrijednosti su umjerenije: maksimalna srednja brzina 1,0-1,5 m/s, maksimalna brzina u mlazu 2,0 m/s, pad razine 0,15-0,25 m, minimalna dubina 0,35-0,45 m, energetska disipacija do 150 W/m³. Ove vrijednosti osiguravaju prolaznost širokog spektra vrsta uključujući mlađe jedinke salmonida.
+
+Za ciprinidnu zonu potrebni su najmirniji uvjeti: maksimalna srednja brzina 0,8-1,2 m/s, maksimalna brzina u mlazu 1,5 m/s, pad razine 0,10-0,20 m, minimalna dubina 0,30-0,40 m, energetska disipacija do 100 W/m³. Alternativno, za donje tokove često su prikladnije prirodne ili prirodno slične staze s vrlo blagim padovima.
+
+6.3. Granične vrijednosti i sigurnosni faktori
+
+Prilikom projektiranja ribljih staza nužno je uvesti sigurnosne faktore koji uzimaju u obzir varijabilnost plivačkih sposobnosti unutar populacije, različite veličinske klase, sezonske varijacije temperature i kondicije riba te nesigurnosti u hidrauličkim proračunima.
+
+Standardna praksa preporučuje da se projektne brzine određuju za 80-90% populacije ciljnih vrsta, što znači da se koriste vrijednosti niže od apsolutnih maksimuma koje mogu postići najjače jedinke. Za salmonidne vrste kod kojih su poznate maksimalne sposobnosti oko 3,5 m/s u sprintu, projektna maksimalna brzina postavlja se na 2,5-3,0 m/s.
+
+Temperaturna korekcija nužna je jer plivačke sposobnosti riba opadaju pri nižim temperaturama. U zimskim mjesecima, kada je aktivnost riba smanjena ali mogu biti prisutne migracijske potrebe, preporučuje se smanjenje projektnih brzina za 20-30%.
+
+Veličinske klase također zahtijevaju pažnju – mlađe i manje jedinke imaju slabije sposobnosti. Ako je cilj osigurati prolaznost za mlađ, projektne brzine treba dodatno reducirati. Za osiguranje prolaznosti mladih salmonida (duljine 5-10 cm), brzine ne bi trebale prelaziti 1,0-1,5 m/s.
+
+7. PRAKTIČNA PRIMJENA I STUDIJE SLUČAJA
+
+7.1. Projektiranje riblje staze na malom pragu
+
+Praktična primjena nomograma ilustrira se na primjeru malog praga visine 1,80 m na vodotoku salmonidno-lipljanske zone. Karakteristični protoci su: Q95 = 0,450 m³/s, Qs = 2,80 m³/s, Q1% = 8,50 m³/s. Ciljne vrste uključuju potočnu pastrvu, potočnu mrenu i klena.
+
+Prvi korak je određivanje tipa staze. S obzirom na umjerenu visinu i zahtjeve za prolaznost šireg spektra vrsta, odabire se bazenska staza s vertikalnim otvorima kombinirana s mogućnošću prelijevanja. Ovakav hibridni sustav osigurava funkcionalnost u širokom rasponu protoka.
+
+Za početnu geometriju pretpostavlja se širina staze B = 2,0 m, duljina bazena L = 3,0 m (L/B = 1,5), dimenzije vertikalnog otvora 0,30 × 0,30 m, i pad razine između bazena Δh = 0,20 m. Broj bazena određuje se dijeljenjem ukupne visine s padom: N = 1,80 / 0,20 = 9 bazena.
+
+Pomoću nomograma za vertikalne otvore, za Δh = 0,20 m i otvor 0,30 × 0,30 m očita se protok kroz jedan otvor: Q ≈ 0,120 m³/s. Brzina u mlazu iznosi približno v_mlaz ≈ 2,2 m/s, što je prihvatljivo za ciljne vrste. Energetska disipacija za volumen bazena 3,0 × 2,0 × 0,8 = 4,8 m³ iznosi P_vol ≈ 145 W/m³, također unutar prihvatljivih granica.
+
+Provjera funkcionalnosti za različite protoke pokazuje da je staza funkcionalna u rasponu od 0,3 do 3,5 m³/s. Pri nižim protocima (Q95) razina u bazenima je dovoljna (h > 0,35 m), a brzine umjerene. Pri srednjim protocima počinje prelijevanje preko pregrada, što dodatno povećava prolaznost bez pretjeranih brzina. Pri visokim protocima brzine rastu ali ostaju u granicama podnošljivih za salmonide.
+
+7.2. Optimizacija geometrije
+
+Iterativna primjena nomograma omogućuje optimizaciju geometrije. Ako se pokaže da su brzine granične ili da energetska disipacija prelazi preporučene vrijednosti, geometrija se može modificirati.
+
+Povećanje širine bazena s 2,0 na 2,5 m smanjuje brzine proporcionalno, ali povećava trošak izgradnje. Smanjenje pada razine s 0,20 na 0,15 m smanjuje brzine u mlazu i energetsku disipaciju, ali povećava broj bazena s 9 na 12, što produljuje stazu i zahtijeva veći prostor.
+
+Povećanje dimenzija otvora na 0,35 × 0,35 m povećava protok kroz otvor ali i brzinu u mlazu, što može biti nepovoljno. Alternativno, instalacija dva manja otvora umjesto jednog većeg omogućuje ribi izbor putanje i smanjuje maksimalne brzine.
+
+Optimalna geometrija predstavlja kompromis između hidrauličkih zahtjeva, ekološke funkcionalnosti, raspoloživog prostora i troškova. Nomogrami omogućuju brzu procjenu različitih scenarija i podršku odlučivanju.
+
+8. MONITORING I VERIFIKACIJA FUNKCIONALNOSTI
+
+8.1. Post-konstrukcijska evaluacija
+
+Nakon izgradnje riblje staze nužan je monitoring funkcionalnosti kako bi se verificirala projektna rješenja i prikupili podaci za buduća poboljšanja. Monitoring obuhvaća hidraulička mjerenja i ichtio-ekološka istraživanja.
+
+Hidraulička mjerenja uključuju snimanje razina vode, brzina strujanja i protoka kroz stazu pri različitim vodostajima. Usporedba izmjerenih vrijednosti s projektnim omogućuje provjeru točnosti nomograma i identifikaciju odstupanja. Najčešća odstupanja nastaju zbog razlika između projektiranih i izvedenih dimenzija, neočekivanih morfoloških promjena (taloženje sedimenta, erozija) ili promjena u hidrologiji vodotoka.
+
+Ichtio-ekološka istraživanja provode se kako bi se procijenila stvarna prolaznost za ciljne vrste. Metode uključuju označavanje i praćenje riba (PIT oznake, akustičko praćenje), video nadzor ulaza i izlaza iz staze, te kontrolno ribolovljenje uzvodnije i nizvodno od staze. Omjer riba koje uspješno savladaju stazu u odnosu na one koje pokušavaju (passage efficiency) ključni je pokazatelj funkcionalnosti.
+
+8.2. Adaptivno upravljanje
+
+Podaci iz monitoringa koriste se za adaptivno upravljanje – prilagodbu i poboljšanje staze tijekom eksploatacije. Uobičajene modifikacije uključuju ugradnju dodatnih odmorišnih zona, prilagodbu veličine otvora pomičnim elementima, instalaciju vođenja strujanja ili izmjenu ulazne zone radi bolje privlačnosti.
+
+Nomogrami se također mogu refinirati na temelju izmjerenih podataka. Povratna informacija iz realiziranih projekata omogućuje kalibraciju koeficijenata i poboljšanje točnosti predviđanja za buduće projekte.
+
+9. ZAKLJUČAK
+
+Nomogrami predstavljaju praktično i pouzdano sredstvo za proračun funkcionalnosti tehničkih ribljih staza na malim pragovima. Razvoj nomograma temelji se na sustavnoj metodologiji koja objedinjuje numeričko modeliranje, fizičko modeliranje na temelju Froudeove sličnosti i empirijska istraživanja. Kroz ovu integriranu metodologiju uspostavljaju se funkcionalne zavisnosti između ključnih projektnih parametara – geometrije staze, protoka, brzina i pada razine vode.
+
+Nomogrami za bazenske riblje staze i staze s vertikalnim otvorima omogućuju brzo određivanje hidrauličkih uvjeta za zadanu geometriju i hidrološke scenarije, čime olakšavaju projektiranje i optimizaciju. Grafički prikaz omogućuje intuitivno razumijevanje odnosa između varijabli i ubrzava iterativni proces dimenzioniranja.
+
+Primjena nomograma mora biti prilagođena specifičnostima zonacije vodotoka i ribljih vrsta u Hrvatskoj. Preporučene i granične vrijednosti hidrauličkih parametara razlikuju se značajno između salmonidne, lipljanske, barbusne i ciprinidne zone, odražavajući različite plivačke sposobnosti karakterističnih vrsta. Za salmonidnu zonu dopuštene su veće brzine i padovi razine, dok ciprinidna zona zahtijeva znatno blaže uvjete.
+
+Sigurnosni faktori moraju biti ugrađeni u projektiranje kako bi se osigurala prolaznost za širi spektar populacije, uključujući mlađe jedinke i različite sezonske uvjete. Temperaturna korekcija, veličinske klase i varijabilnost plivačkih sposobnosti zahtijevaju konzervativan pristup u određivanju projektnih brzina.
+
+Fizički i numerički modeli koji stoje iza nomograma omogućuju razumijevanje složenih hidrauličkih procesa u ribljih stazama. Froudeova sličnost osigurava da se rezultati fizičkog modeliranja mogu pouzdano skalirati na prototip, dok numerički CFD modeli omogućuju detaljnu analizu prostorne raspodjele brzina i turbulencije. Validacija numeričkih modela fizičkim mjerenjima jamči pouzdanost rezultata.
+
+Praktična primjena nomograma na studijama slučaja pokazuje njihovu vrijednost u projektiranju i optimizaciji. Brza procjena različitih geometrijskih scenarija omogućuje identifikaciju optimalnog rješenja koje balansira hidrauličke zahtjeve, ekološku funkcionalnost i ekonomsku opravdanost.
+
+Monitoring post-konstrukcijske funkcionalnosti neophodan je za verifikaciju projektnih pretpostavki i kontinuirano poboljšanje metodologije. Povratna informacija iz realiziranih projekata omogućuje rafiniranje nomograma i prilagodbu preporučenih vrijednosti specifičnim uvjetima vodotoka u Hrvatskoj.
+
+Nomogrami za proračun ribljih staza ostaju nezamjenjiv alat u struci, premda ih današnje digitalne tehnologije dopunjuju softweiskim rješenjima. Njihova grafička priroda, jednostavnost korištenja i transparentnost čine ih prikladnima za brze procjene, preliminarno dimenzioniranje i edukaciju. U kombinaciji s naprednim numeričkim metodama i ičtio-ekološkim istraživanjima, nomogrami čine sastavni dio multidisciplinarnog pristupa projektiranju funkcionalnih ribljih staza koje doprinose očuvanju uzdužne povezanosti vodotoka i zaštiti biodiverziteta slatkovodnih ekosustava Hrvatske.

@@ -1,0 +1,300 @@
+Uvod
+
+Performanse baza podataka predstavljaju kritičan aspekt svakog suvremenog informacijskog sustava. U kontekstu Microsoft SQL Servera, indeksi su jedan od najmoćnijih alata za optimizaciju brzine izvršavanja upita i poboljšanje ukupne učinkovitosti sustava. Ovaj rad detaljno istražuje različite vrste indeksa u SQL Serveru, njihovu implementaciju, prednosti i nedostatke, te strategije za optimizaciju performansi baza podataka.
+
+Što su indeksi?
+
+Indeks u bazi podataka možemo usporediti s kazalom u knjizi. Umjesto da čitamo cijelu knjigu kako bismo pronašli određenu temu, koristimo kazalo koje nas vodi izravno na relevantne stranice. Slično tome, indeks u bazi podataka omogućava SQL Serveru da brzo locira podatke bez potrebe za pregledavanjem svake tablice u cijelosti.
+
+Tehnički gledano, indeks je struktura podataka koja poboljšava brzinu operacija dohvaćanja podataka na tablici. Indeksi se kreiraju koristeći jedan ili više stupaca tablice, pružajući brze puteve do redaka podataka. Međutim, treba napomenuti da indeksi dolaze s određenim troškovima - oni zauzimaju dodatni prostor na disku i usporavaju operacije umetanja, ažuriranja i brisanja jer se indeksi moraju održavati u skladu s promjenama podataka.
+
+Vrste indeksa u SQL Serveru
+
+Clustered indeksi
+
+Clustered indeks određuje fizički poredak redaka podataka u tablici. Svaka tablica može imati samo jedan clustered indeks jer podaci mogu biti fizički sortirani samo na jedan način. Kada kreirate clustered indeks, SQL Server reorganizira cijelu tablicu kako bi podatke pohranjivao u sortiranom redoslijedu indeksnih ključeva.
+
+Osnovne karakteristike clustered indeksa:
+
+- Listovi stabla indeksa sadrže stvarne podatkovne stranice
+- Tablice s clustered indeksom nazivaju se clustered tablice
+- Podaci su fizički sortirani prema ključu indeksa
+- Iznimno efikasni za upite koji dohvaćaju raspon podataka
+- Po defaultu, primarni ključ kreira clustered indeks
+
+Primjer kreiranja clustered indeksa:
+
+```sql
+CREATE CLUSTERED INDEX IX_Zaposlenik_Prezime
+ON Zaposlenici (Prezime, Ime);
+```
+
+Non-clustered indeksi
+
+Non-clustered indeksi imaju strukturu odvojenu od podatkovnih redaka. Non-clustered indeks sadrži ključne vrijednosti indeksa i pokazivače koji upućuju na lokaciju podataka. Tablica može imati više non-clustered indeksa, što omogućava fleksibilnost u optimizaciji različitih tipova upita.
+
+Struktura non-clustered indeksa sastoji se od:
+
+- Ključnih stupaca indeksa sortiranih u određenom redoslijedu
+- Pokazivača (RID ili clustered index key) koji upućuju na stvarne podatke
+- Opcionalnih uključenih stupaca za dodatnu funkcionalnost
+
+Primjer kreiranja non-clustered indeksa:
+
+```sql
+CREATE NONCLUSTERED INDEX IX_Zaposlenik_Email
+ON Zaposlenici (Email)
+INCLUDE (Ime, Prezime);
+```
+
+Ključna razlika između clustered i non-clustered indeksa je što non-clustered indeks ne utječe na fizički poredak podataka u tablici, već kreira odvojenu strukturu koja pokazuje na podatke.
+
+Unique indeksi
+
+Unique indeksi osiguravaju da nijedan redak podataka u indeksiranom stupcu nema duplirane vrijednosti. Oni mogu biti ili clustered ili non-clustered. Kada definirate primarni ključ ili unique ograničenje, SQL Server automatski kreira unique indeks.
+
+Primjer:
+
+```sql
+CREATE UNIQUE NONCLUSTERED INDEX IX_Zaposlenik_JMBG
+ON Zaposlenici (JMBG);
+```
+
+Filtered indeksi
+
+Filtered indeksi su optimizirani non-clustered indeksi koji indeksiraju samo podskup redaka u tablici. Ovi indeksi su posebno korisni kada trebamo često pristupati određenom podskupu podataka. Filtered indeksi zauzimaju manje prostora i imaju niže troškove održavanja od punih indeksa.
+
+Primjer:
+
+```sql
+CREATE NONCLUSTERED INDEX IX_Narudzbe_Aktivne
+ON Narudzbe (DatumNarudzbe, Kupac_ID)
+WHERE Status = 'Aktivna';
+```
+
+Columnstore indeksi
+
+Columnstore indeksi pohranjuju podatke u kolonskom formatu umjesto tradicionalnog redoslijednog pristupa. Oni su dizajnirani za data warehouse okruženja i analitičke upite koji obrađuju velike količine podataka. Columnstore indeksi nude izvrsnu kompresiju podataka i performanse za agregacijske upite.
+
+Postoje dvije vrste:
+
+- Clustered columnstore indeks - cijela tablica pohranjena u kolonskom formatu
+- Non-clustered columnstore indeks - dodatna kolonska kopija dijela podataka
+
+Full-text indeksi
+
+Full-text indeksi omogućavaju napredne tekstualne pretrage kroz velike količine tekstualnih podataka. Oni su neophodni za aplikacije koje zahtijevaju pretraživanje prirodnog jezika, poput tražilica ili sustava za upravljanje dokumentima.
+
+Kako SQL Server koristi indekse
+
+SQL Server optimizator upita automatski odlučuje hoće li koristiti indeks i koji indeks će koristiti za određeni upit. Ovaj proces uključuje:
+
+Index Seek vs Index Scan
+
+**Index Seek** je vrlo efikasna operacija u kojoj SQL Server koristi B-tree strukturu indeksa da brzo locira specifične redove. Ovo je idealan scenario koji želimo postići optimizacijom.
+
+**Index Scan** znači da SQL Server čita sve redove u indeksu ili tablici. To je slično operaciji Table Scan, ali se odvija na indeksu. Iako je sporije od Index Seek operacije, još uvijek može biti efikasnije od punog Table Scan-a.
+
+**Table Scan** je najskuplja operacija gdje SQL Server mora pročitati svaki redak u tablici. Ovo se događa kada nema odgovarajućeg indeksa ili kada optimizator procijeni da je to efikasniji pristup.
+
+Statistike
+
+SQL Server održava statistike o distribuciji podataka u indeksima i stupcima. Ove statistike su ključne za optimizator upita koji ih koristi za procjenu broja redaka koje će upit vratiti i odlučivanje o najboljem planu izvršavanja.
+
+Preporučuje se redovito ažuriranje statistika:
+
+```sql
+UPDATE STATISTICS Zaposlenici WITH FULLSCAN;
+```
+
+Strategije dizajniranja indeksa
+
+Odabir stupaca za indeksiranje
+
+Prilikom odlučivanja koje stupce indeksirati, trebamo razmotriti:
+
+**WHERE klauzule** - Stupci koji se često koriste u WHERE uvjetima su primarni kandidati za indeksiranje. Na primjer, ako često pretražujemo zaposlenike po gradu, stupac Grad trebao bi biti indeksiran.
+
+**JOIN operacije** - Stupci koji se koriste za spajanje tablica trebaju biti indeksirani. Foreign key stupci gotovo uvijek trebaju imati indeks.
+
+**ORDER BY i GROUP BY** - Indeksi mogu znatno ubrzati sortiranje i grupiranje podataka.
+
+**Selektivnost** - Stupci s visokom selektivnošću (mnogo različitih vrijednosti) su bolji kandidati za indeksiranje. Na primjer, stupac JMBG ima visoku selektivnost, dok stupac Spol ima nisku selektivnost.
+
+Kompozitni indeksi
+
+Kompozitni indeksi koriste više stupaca. Redoslijed stupaca u kompozitnom indeksu je kritičan - trebali biste staviti najselektivnije stupce prvo, osim ako specifični upiti zahtijevaju drugačiji redoslijed.
+
+Primjer:
+
+```sql
+CREATE NONCLUSTERED INDEX IX_Zaposlenik_Grad_Odjel
+ON Zaposlenici (Grad, Odjel_ID, Placa);
+```
+
+Ovaj indeks će biti efikasan za upite koji filtriraju po Gradu, ili po Gradu i Odjelu, ali neće pomoći upitima koji filtriraju samo po Odjelu.
+
+INCLUDE klauzula
+
+INCLUDE klauzula omogućava dodavanje stupaca u list razinu non-clustered indeksa bez uključivanja u ključnu strukturu. Ovo omogućava "covering" indekse koji mogu u potpunosti zadovoljiti upit bez pristupa baznoj tablici.
+
+```sql
+CREATE NONCLUSTERED INDEX IX_Narudzbe_Kupac
+ON Narudzbe (Kupac_ID, DatumNarudzbe)
+INCLUDE (Iznos, Status);
+```
+
+Održavanje indeksa
+
+Fragmentacija indeksa
+
+Tijekom vremena, kako se podaci umeću, ažuriraju i brišu, indeksi mogu postati fragmentirani. Fragmentacija smanjuje performanse jer SQL Server mora čitati više stranica s diska.
+
+Postoje dva tipa fragmentacije:
+
+**Interna fragmentacija** nastaje kada stranice indeksa nisu potpuno popunjene.
+
+**Externa fragmentacija** nastaje kada logički redoslijed stranica ne odgovara fizičkom redoslijedu na disku.
+
+Možemo provjeriti fragmentaciju:
+
+```sql
+SELECT 
+    OBJECT_NAME(ips.object_id) AS TableName,
+    i.name AS IndexName,
+    ips.avg_fragmentation_in_percent,
+    ips.page_count
+FROM sys.dm_db_index_physical_stats(DB_ID(), NULL, NULL, NULL, 'DETAILED') ips
+JOIN sys.indexes i ON ips.object_id = i.object_id 
+    AND ips.index_id = i.index_id
+WHERE ips.avg_fragmentation_in_percent > 10
+    AND ips.page_count > 1000;
+```
+
+Reorganizacija i rebuild indeksa
+
+**REORGANIZE** - Defragmentira list razinu indeksa preraspoređivanjem stranica. Ova operacija je online i zahtijeva manje resursa:
+
+```sql
+ALTER INDEX IX_Zaposlenik_Prezime ON Zaposlenici REORGANIZE;
+```
+
+**REBUILD** - Potpuno ponovo kreira indeks. Ova operacija je temeljitija ali zahtijeva više resursa:
+
+```sql
+ALTER INDEX IX_Zaposlenik_Prezime ON Zaposlenici REBUILD;
+```
+
+Preporučene smjernice:
+- Fragmentacija 10-30%: REORGANIZE
+- Fragmentacija >30%: REBUILD
+
+Monitoring i analiza performansi
+
+Dynamic Management Views (DMV)
+
+SQL Server pruža brojne DMV-ove za praćenje korištenja i performansi indeksa:
+
+**sys.dm_db_index_usage_stats** - Pokazuje kako se indeksi koriste:
+
+```sql
+SELECT 
+    OBJECT_NAME(s.object_id) AS TableName,
+    i.name AS IndexName,
+    s.user_seeks,
+    s.user_scans,
+    s.user_lookups,
+    s.user_updates
+FROM sys.dm_db_index_usage_stats s
+JOIN sys.indexes i ON s.object_id = i.object_id 
+    AND s.index_id = i.index_id
+WHERE database_id = DB_ID();
+```
+
+**sys.dm_db_missing_index_details** - Identificira potencijalno korisne indekse koji nedostaju.
+
+Database Engine Tuning Advisor
+
+Database Engine Tuning Advisor (DTA) je moćan alat koji analizira workload i preporučuje indekse, indeksirane poglede i particije. DTA može analizirati pojedinačne upite ili cjelokupan workload iz trace datoteka.
+
+Execution Plans
+
+Plan izvršavanja pokazuje kako SQL Server izvršava upit. Analiza planova izvršavanja ključna je za identifikaciju problema s performansama. Možemo vidjeti:
+
+- Koje operatore SQL Server koristi (Scan, Seek, Join tipove)
+- Procijenjene vs. stvarne brojeve redaka
+- Troškove svake operacije
+- Upozorenja i probleme
+
+Plan izvršavanja možemo dobiti s:
+
+```sql
+SET SHOWPLAN_ALL ON;
+-- ili grafički u SQL Server Management Studiu
+```
+
+Česte greške i najbolje prakse
+
+Česte greške
+
+**Prekomjerno indeksiranje** - Svaki indeks ima troškove održavanja. Previše indeksa može usporiti INSERT, UPDATE i DELETE operacije više nego što poboljšava SELECT upite.
+
+**Duplirani indeksi** - Indeksi s istim ili vrlo sličnim ključevima troše resurse bez dodavanja vrijednosti.
+
+**Zanemarivanje održavanja** - Indeksi zahtijevaju redovito održavanje. Fragmentirani indeksi značajno smanjuju performanse.
+
+**Loš odabir clustered indeksa** - Identity stupac nije uvijek najbolji izbor za clustered indeks. Trebalo bi razmotriti prirodne ključeve koji se često koriste u upitima.
+
+Najbolje prakse
+
+**Testirajte u produkcijskom okruženju** - Performanse indeksa mogu se značajno razlikovati između razvojnog i produkcijskog okruženja zbog različitih količina podataka.
+
+**Pratite stvarno korištenje** - Koristite DMV-ove da identificirate nekorištene indekse i uklonite ih.
+
+**Dokumentirajte odluke** - Bilježite zašto su određeni indeksi kreirani, što olakšava buduće odluke o održavanju.
+
+**Planirajte održavanje** - Uspostavite redovne prozore održavanja za rebuild i reorganizaciju indeksa.
+
+**Razmotriti filtriranje indeksa** - Za velike tablice gdje se često pristupa samo podskupu podataka, filtered indeksi mogu značajno smanjiti veličinu indeksa i poboljšati performanse.
+
+**Koristite pokrivajuće indekse** - Gdje je moguće, koristite INCLUDE klauzulu da kreirate indekse koji potpuno zadovoljavaju upite bez potrebe za pristupom baznoj tablici.
+
+Napredne tehnike optimizacije
+
+Index Hints
+
+U rijetkim slučajevima, možemo prisiliti SQL Server da koristi određeni indeks:
+
+```sql
+SELECT * FROM Zaposlenici WITH (INDEX(IX_Zaposlenik_Prezime))
+WHERE Prezime = 'Horvat';
+```
+
+Međutim, ovo bi trebalo biti posljednje rješenje jer SQL Server optimizator obično donosi bolje odluke.
+
+Particioniranje
+
+Za vrlo velike tablice, particioniranje može poboljšati performanse i olakšati održavanje dijeljenjem tablice u manje, lakše upravljive dijelove:
+
+```sql
+CREATE PARTITION FUNCTION PF_Godina (INT)
+AS RANGE RIGHT FOR VALUES (2020, 2021, 2022, 2023);
+
+CREATE PARTITION SCHEME PS_Godina
+AS PARTITION PF_Godina ALL TO ([PRIMARY]);
+```
+
+Kompresija
+
+SQL Server podržava kompresiju na razini reda i stranice koja može smanjiti veličinu indeksa i poboljšati performanse I/O operacija:
+
+```sql
+ALTER INDEX IX_Zaposlenik_Prezime ON Zaposlenici
+REBUILD WITH (DATA_COMPRESSION = PAGE);
+```
+
+Zaključak
+
+Indeksi su fundamentalni alat za optimizaciju performansi SQL Server baza podataka. Pravilno dizajnirani i održavani indeksi mogu dramski poboljšati brzinu izvršavanja upita, ali zahtijevaju pažljivo planiranje i redovito održavanje. Ključ uspješne strategije indeksiranja leži u razumijevanju radnih opterećenja aplikacije, pažljivom odabiru stupaca za indeksiranje, balansiranju između performansi čitanja i pisanja, te kontinuiranom praćenju i prilagođavanju.
+
+Optimizacija baze podataka nije jednokratna aktivnost već kontinuiran proces koji zahtijeva praćenje, analizu i prilagodbu kako se aplikacija razvija i kako se podaci mijenjaju. Kombinirajući razumijevanje različitih tipova indeksa, korištenje alata za praćenje performansi i primjenu najboljih praksi, možemo kreirati visoko performantne baze podataka koje efikasno služe potrebama suvremenih aplikacija.

@@ -1,0 +1,155 @@
+1. UVOD
+
+Umjetne neuronske mreže, inspirirane biološkim neuronskim sustavima, postale su dominantan pristup u području strojnog učenja i umjetne inteligencije. Njihova sposobnost učenja kompleksnih obrazaca iz podataka omogućila je revolucionarne napretke u prepoznavanju slika, obradi prirodnog jezika, autonomnoj vožnji i mnogim drugim domenama. Međutim, uspješno treniranje neuronskih mreža suočava se s brojnim izazovima, među kojima su najznačajniji problem pretreniranosti (overfitting), loša generalizacijska sposobnost i zaglavljivanje u lokalnim minimumima tijekom optimizacije.
+
+Buka, definirana kao stohastička perturbacija podataka, parametara modela ili samog procesa učenja, tradicionalno se smatrala nepoželjnom karakteristikom koju treba minimizirati. Međutim, paradigma se promijenila posljednjih desetljeća zahvaljujući teorijskim i empirijskim otkrićima koja pokazuju da kontrolirana primjena buke može biti moćan regularizacijski mehanizam. Ovaj naizgled kontraintuitivni fenomen temelji se na dubinskim vezama između stohastičkih procesa, teorije informacija i statističkog učenja.
+
+Cilj ovog rada je pružiti sveobuhvatan pregled uloge buke u učenju neuronskih mreža, analizirati teorijske temelje koji objašnjavaju njezin pozitivan učinak, te istražiti konkretne tehnike i algoritme koji iskorištavaju buku za poboljšanje performansi modela. Rad je strukturiran kako slijedi: drugo poglavlje predstavlja teorijske osnove, treće poglavlje opisuje različite vrste buke, četvrto poglavlje analizira mehanizme djelovanja, peto poglavlje prikazuje praktične primjene, a šesto poglavlje donosi zaključke i smjernice za buduća istraživanja.
+
+2. TEORIJSKE OSNOVE
+
+2.1. Problem Pretreniranosti
+
+Pretreniranost predstavlja fundamentalni problem u strojnom učenju gdje model nauči specifičnosti i šum trenažnog skupa podataka umjesto da nauči opće obrasce koji se mogu primijeniti na nove, neviđene podatke. To rezultira izvrsnim performansama na trenažnim podacima, ali lošim performansama na testnim podacima. Model s visokom pretreniranosti ima nisku pristranost (bias) ali visoku varijancu, što znači da je preosjetljiv na male varijacije u trenažnim podacima.
+
+Neuronske mreže, posebno duboke arhitekture s milijunima parametara, izrazito su podložne pretreniranosti jer posjeduju veliku kapacitetnu moć za memoriranje trenažnih podataka. Bez odgovarajućih regularizacijskih mehanizama, takvi modeli mogu perfektno naučiti trenažne podatke, uključujući šum i outliere, što ozbiljno narušava njihovu generalizacijsku sposobnost. Ovaj problem postaje još izraženiji kada je omjer broja parametara i broja trenažnih uzoraka velik.
+
+2.2. Buka kao Regularizacijski Mehanizam
+
+Regularizacija je skup tehnika koje sprječavaju pretreniranost ograničavajući kompleksnost modela ili dodajući penale funkciji gubitka. Tradicionalne regularizacijske metode uključuju L1 i L2 regularizaciju koje dodaju termine normi parametara u funkciju gubitka. Dodavanje buke može se matematički formulirati kao implicitna regularizacija koja ne zahtijeva eksplicitno modificiranje funkcije gubitka.
+
+Kada se buka dodaje ulaznim podacima ili težinama mreže, model mora naučiti robusne reprezentacije koje nisu osjetljive na male perturbacije. To prisiljava model da fokus stavi na učenje stabilnih obrazaca umjesto na specifične detalje pojedinih uzoraka. Iz probabilističke perspektive, dodavanje Gaussove buke s nultom sredinom može se interpretirati kao maksimizacija očekivanog log-vjerojatnosti pod perturbiranim podacima.
+
+Bishop (1995) je pokazao da dodavanje malih količina buke ulaznim podacima tijekom treniranja ekvivalentno odgovara minimizaciji regulariziranog funkcijskog gubitka gdje regularizacijski term penalizira osjetljivost mreže na perturbacije. Matematički, ako je f(x; θ) funkcija aproksimirana neuronskom mrežom s parametrima θ, dodavanje Gaussove buke sa standardnom devijacijom σ ekvivalentno je minimizaciji E[L(f(x + ε; θ), y)] + λ ||∇f(x; θ)||², gdje ε predstavlja buku, L je funkcija gubitka, a λ je regularizacijski koeficijent. Ovaj teoretski rezultat pruža čvrst temelj za primjenu buke kao regularizacijskog sredstva.
+
+2.3. Stohastička Optimizacija i Generalizacija
+
+Stohastički gradijentni spust (SGD), temeljni algoritam za treniranje neuronskih mreža, inherentno uvodi buku u proces optimizacije kroz stohastičko uzorkovanje mini-batch-eva. Umjesto korištenja cijeloga skupa podataka za izračun gradijenta, SGD koristi samo podskup podataka, što rezultira stohastičkom procjenom pravog gradijenta. Ova stohastičnost ima nekoliko važnih implikacija za proces učenja i konačne performanse modela.
+
+Prvo, stohastičnost omogućava bijeg iz oštrih lokalnih minimuma koji obično dovode do loše generalizacije. Oštar minimum karakterizira veliko zakrivljenje funkcije gubitka, što znači da male promjene u parametrima mogu značajno utjecati na vrijednost gubitka. Takvi minimumi često odgovaraju pretreniranim modelima. Nasuprot tome, široki minimumi s manjim zakrivljenjem povezani su s boljom generalizacijom jer manje promjene u parametrima ne utječu značajno na performanse modela.
+
+Drugo, buka u SGD-u preferira šire minimume funkcije gubitka. Istraživanja Hochreiter i Schmidhuber (1997) te kasnija proširenja pokazala su da algoritmi s većom bukom (manji batch size) imaju tendenciju konvergirati u šire minimume. Intuitivno, u uskom minimumu buka može lako izbaciti parametre iz minimuma, što rezultira velikim vrijednostima gubitka i velikim gradijentima koji guraju parametre natrag. U širokom minimumu, buka ne može lako izbaciti parametre dovoljno daleko da bi značajno povećala gubitak, što čini široke minimume stabilnijima pod stohastičkom optimizacijom.
+
+Treće, stohastička priroda SGD-a može pomoći u izbjegavanju lokalnih minimuma i zadržavanju pokreta kroz ravnice u funkciji gubitka. Ovo je posebno važno u dubokim neuronskim mrežama gdje funkcija gubitka može imati iznimno kompleksnu topologiju s mnogo lokalnih minimuma i ravnica.
+
+3. VRSTE BUKE U NEURONSKIM MREŽAMA
+
+3.1. Buka na Ulaznim Podacima
+
+Dodavanje buke na ulazne podatke jedna je od najstarijih i najjednostavnijih tehnika regularizacije u neuronskim mrežama. Tijekom treniranja, svakom ulaznom vektoru dodaje se slučajna perturbacija, obično uzorkovana iz Gaussove distribucije s nultom sredinom i malom varijancom. Matematički, perturbiran ulaz može se zapisati kao x' = x + ε, gdje je ε ~ N(0, σ²I).
+
+Ovaj pristup naziva se i data augmentation kroz aditivnu buku, iako se data augmentation obično odnosi na složenije transformacije specifične za domenu (rotacije, translacije za slike, sinonimi za tekst). Dodavanje Gaussove buke predstavlja najjednostavniji oblik augmentacije koji se može primijeniti na bilo koju vrstu podataka.
+
+Prednosti dodavanja buke na ulaze uključuju poboljšanu robusnost na šum u stvarnim podacima, povećanu efektivnu veličinu trenažnog skupa (jer svaki ulazni primjer se vidi s različitim perturbacijama u različitim epohama), i implicitnu regularizaciju koja prisiljava model da uči značajke otporne na male varijacije. Međutim, važno je pažljivo odabrati intenzitet buke - prevelika buka može narušiti signal do te mjere da učenje postane nemoguće, dok premala buka neće imati značajan regularizacijski učinak.
+
+Optimalna količina buke često se određuje eksperimentalno kroz validacijsku pogrešku. U praksi, vrijednosti σ između 0.01 i 0.1 (normalizirane prema rasponu ulaznih značajki) često daju dobre rezultate, ali optimalna vrijednost jako ovisi o prirodi podataka i zadatku.
+
+3.2. Buka na Težinama i Gradijentima
+
+Dodavanje buke parametrima (težinama) neuronske mreže tijekom treniranja predstavlja eksplicitniji oblik regularizacije. Ovaj pristup može se implementirati na različite načine - dodavanjem buke gradijentima tijekom backpropagation-a, perturbacijom težina prije forward pass-a ili dodavanjem stohastičnosti samim parametrima kroz Bayesovske pristupe.
+
+Najčešći pristup je dodavanje Gaussove buke gradijentima tijekom update koraka. Umjesto klasičnog update pravila θ_t+1 = θ_t - η∇L(θ_t), koristi se θ_t+1 = θ_t - η(∇L(θ_t) + ε_t), gdje je ε_t ~ N(0, σ²I). Ova tehnika poznata je kao gradient noise injection i može se pokazati da implicitno regularizira model na sličan način kao weight decay.
+
+Teoretski, dodavanje Gaussove buke težinama može se pokazati ekvivalentnim dodavanju L2 regularizacijskog termina funkciji gubitka pod određenim uvjetima. Ova veza pruža alternativnu perspektivu na klasičnu regularizacijsku tehniku i pokazuje da su mnoge regularizacijske metode međusobno povezane kroz stohastički formalizam.
+
+Buka na aktivacijama neurona, s druge strane, direktno utječe na reprezentacije koje mreža uči. Dodavanjem buke skrivenim aktivacijama h' = h + ε, gdje je h izlaz nekog sloja, prisiljavamo mrežu da razvije robusnije značajke koje nisu osjetljive na male perturbacije u međureprezentacijama. Ovaj pristup može se smatrati generalizacijom Dropout-a.
+
+3.3. Dropout: Strukturirana Stohastičnost
+
+Dropout, predložen od strane Hintona i suradnika (2012), predstavlja jednu od najutjecajnijih tehnika regularizacije u dubokom učenju. Za razliku od aditivne buke, Dropout koristi multiplikativnu buku implementiranu kroz stohastičko isključivanje neurona tijekom treniranja. Konkretno, svaki neuron se s vjerojatnošću p zadržava aktivan, a s vjerojatnošću 1-p se postavlja na nulu.
+
+Matematički, Dropout može se formulirati kao h' = h ⊙ m, gdje je ⊙ element-wise množenje, a m je binarna maska uzorkovana iz Bernoulli distribucije, m_i ~ Bernoulli(p). Tijekom testiranja, Dropout se ne primjenjuje, ali izlazi se skaliraju s p kako bi očekivana vrijednost ostala konzistentna s treniranjem (alternativno, može se koristiti inverted dropout koji skalira tijekom treniranja).
+
+Intuicija iza Dropout-a je da se sprječava ko-adaptacija neurona - situacija gdje neuroni postaju previše međuovisni i ne uče nezavisne, korisne značajke. Prisiljavajući mrežu da radi s različitim podskupovima neurona u različitim iteracijama, Dropout potiče učenje robusnih, distribuiranih reprezentacija.
+
+Teoretski, Dropout može se interpretirati na nekoliko načina. Prva interpretacija je kao aproksimativno Bayesovsko učenje gdje se Dropout tretira kao varijacijska aproksimacija posteriorne distribucije težina. Druga interpretacija je kao ensemble učenje gdje se tijekom treniranja trenira eksponencijalno velik broj podmodela koji dijele parametre, a tijekom testiranja se aproksimira ensemble predikcija. Treća interpretacija povezuje Dropout s adaptivnom regularizacijom gdje se regularizacijski pritisak prilagođava važnosti pojedinih značajki.
+
+U praksi, tipične vrijednosti za Dropout stopu su p = 0.5 za potpuno povezane slojeve i p = 0.8-0.9 za konvolucijske slojeve. Dropout je postao standardni dio arhitekture dubokih mreža i značajno je pridonio uspjehu dubokog učenja na mnogim zadacima.
+
+3.4. Stohastička Dubina i Arhitekturna Buka
+
+Noviji pristupi uvode stohastičnost na arhitekturnoj razini, gdje se tijekom treniranja stohastički isključuju cijeli slojevi ili rezidualni putovi. Stohastička dubina (Stochastic Depth), predložena za rezidualne mreže, nasumično ispušta rezidualne blokove tijekom treniranja s određenom vjerojatnošću koja može linearno rasti s dubinom mreže.
+
+Za rezidualnu vezu oblika h_l+1 = h_l + F(h_l), stohastička dubina uvodi Bernoulli slučajnu varijablu b_l takvu da h_l+1 = h_l + b_l F(h_l). Ovo efektivno stvara mreže različite dubine tijekom treniranja, ali koristi punu dubinu tijekom testiranja. Prednosti uključuju smanjenje problema nestajućih gradijenata, kraće vrijeme treniranja (jer se procjenjuje manje slojeva po iteraciji) i poboljšanu regularizaciju.
+
+DropConnect je varijanta koja umjesto isključivanja neurona isključuje pojedinačne veze (težine). Umjesto h' = (h ⊙ m)W, DropConnect koristi h' = h(W ⊙ M), gdje je M binarna maska primijenjena na matricu težina. Ovo pruža finiju granularnost regularizacije jer se svaka veza može nezavisno isključiti.
+
+4. MEHANIZMI DJELOVANJA BUKE
+
+4.1. Sravnjavanje Funkcije Gubitka
+
+Jedan od ključnih mehanizama kroz koje buka poboljšava učenje je sravnjavanje (smoothing) funkcije gubitka. Dodavanje buke ulazima ili parametrima efektivno transformira originalnu, možda neravnu funkciju gubitka L(θ) u zaglađenu verziju E[L(θ + ε)], gdje je ε buka. Ova zaglaađena funkcija gubitka ima poželjnija svojstva za optimizaciju - manje je vjerojatno da ima oštre lokalne minimume i lakša je za navigaciju gradijentnim metodama.
+
+Matematički, može se pokazati da je gradijent zaglađene funkcije gubitka povezan s gradijentom originalne funkcije konvolucijom s kernel funkcijom koja ovisi o distribuciji buke. Za Gaussovu buku, ovaj kernel je Gaussova funkcija koja efektivno prosjekluje gradijentu preko lokalne regije. To može pomoći u izbjegavanju oštrih značajki koje bi mogle zarobiti optimizaciju.
+
+Dodatno, zaglaađena funkcija gubitka može imati povoljniju Lipschitz konstantu, što olakšava konvergenciju gradijentnih metoda. Manji Lipschitz konstanta znači da se funkcija mijenja sporije, što omogućava korištenje većih koraka učenja bez rizika divergencije.
+
+4.2. Implicitna Ansambl Predikcija
+
+Druga važna perspektiva na buku je interpretacija kroz ensemble učenje. Dodavanjem buke tijekom treniranja, efektivno treniramo beskonačno mnogo perturbiraih verzija osnovnog modela. Tijekom inferencije bez buke, model se može smatrati aproksimacijom ensemble predikcije preko svih ovih perturbiranih modela.
+
+Za Dropout, ova veza je posebno jasna. Svaka konfiguracija isključenih neurona odgovara različitoj pod-mreži, a ukupan broj mogućih pod-mreža je 2^n za sloj s n neurona. Tijekom treniranja, implicitno treniramo sve ove pod-mreže koje dijele parametre. Tijekom testiranja, koristeći sve neurone s odgovarajućim skaliranjem, aproksimiramo geometrijsku sredinu predikcija svih pod-mreža.
+
+Ensemble metode poznate su po svojoj sposobnosti smanjenja varijance predikcija. Ako pojedinačni modeli prave nekorelirane pogreške, njihovo usrednjavanje može značajno poboljšati točnost. Buka prirodno uvodi raznolikost među pod-modelima, što je ključno za uspješno ensemble učenje.
+
+4.3. Poboljšana探索 (Exploration)
+
+Buka također može poboljšati eksploraciju prostora parametara tijekom optimizacije. Deterministički gradijentni spust može se zaglaviti u lokalnim minimumima ili ravninama gdje je gradijent blizu nule. Buka pruža mehanizam za bijeg iz takvih regija dodavanjem slučajnih perturbacija koje mogu "izbaciti" optimizaciju iz suboptimalnih točaka.
+
+Ovaj efekt je posebno važan u nekonveksnoj optimizaciji koja karakterizira duboke neuronske mreže. Funkcija gubitka dubokih mreža može imati kompleksnu topologiju s mnogo lokalnih minimuma, saddle točaka i ravnica. Stohastička priroda algoritama s bukom omogućava učinkovitiju navigaciju ovakvog prostora.
+
+Inoltre, buka može pomoći u izbjegavanju preuranjene konvergencije. U ranim fazama treniranja, kada model još nije dobro razvio korisne reprezentacije, prevelika pouzdanost u trenutne gradijentu može dovesti do konvergencije u lošu regiju. Buka održava određenu razinu neizvjesnosti koja sprječava preuranjena "zaključivanja" i omogućava nastavak exploracije.
+
+4.4. Usporavanje Učenja Nepoželjnih Obrazaca
+
+Zanimljiva hipoteza sugerira da buka može usporiti učenje šuma i nepoželjnih obrazaca u podacima. Ideja je da su pravi signali u podacima robustni na malu buku, dok su šum i specifični detalji osjetljiviji na perturbacije. Dodavanjem buke, model će brže naučiti robusne obrasce koji perzistiraju pod bukom, dok će učenje specifičnih detalja biti usporeno ili spriječeno.
+
+Ova perspektiva povezana je s "implicit bias" teorijom dubokog učenja koja sugerira da gradijentni spust ima inherentne pristranosti prema jednostavnijim funkcijama. Buka može pojačati ovu pristranost dodatno penalizirajući kompleksne, osjetljive funkcije.
+
+Empirijska istraživanja podržavaju ovu hipotezu pokazujući da mreže trenirane s bukom imaju tendenciju učiti značajke u određenom redoslijedu - prvo generalne, robusne značajke, zatim specifičnije detalje. Ovaj progresivni proces učenja može prirodno regularizirati model sprječavajući prerano učenje šuma.
+
+5. PRAKTIČNE PRIMJENE I TEHNIKE
+
+5.1. Label Smoothing
+
+Label smoothing je tehnika koja dodaje buku cilјnim oznakama tijekom treniranja klasifikacijskih modela. Umjesto korištenja tvrdih oznaka gdje je ciljna distribucija jednaka 1 za ispravnu klasu i 0 za sve ostale, label smoothing koristi meku distribuciju oblika y' = (1 - ε)y + ε/K, gdje je y originalna oznaka, K broj klasa, a ε parametar smoothing-a.
+
+Ova tehnika sprječava model da postane previše samouvjeren u svoje predikcije, što može dovesti do loše kalibracije i pretreniranosti. Dodatno, label smoothing implicitno regularizira model penalizirajući ekstremne vrijednosti logita prije softmax funkcije. Pokazalo se da ova jednostavna tehnika poboljšava generalizaciju u mnogim zadacima, posebno u kombinaciji s drugim regularizacijskim metodama.
+
+Teoretska analiza pokazuje da label smoothing ekvivalentno odgovara dodavanju regularizacijskog terma koji penalizira normu logita, što sprječava model da stvara arbitrarno velike vrijednosti kako bi postigao veću pouzdanost. Ovo je posebno korisno u situacijama gdje su oznake šumne ili gdje postoji preklapanje između klasa.
+
+5.2. Mixup i Data Augmentation
+
+Mixup je napredna tehnika augmentacije podataka koja trenira mrežu na konveksnim kombinacijama parova primjera i njihovih oznaka. Za dva primjera (x_i, y_i) i (x_j, y_j), Mixup konstruira virtualni primjer (x', y') = (λx_i + (1-λ)x_j, λy_i + (1-λ)y_j), gdje λ ~ Beta(α, α).
+
+Ova tehnika može se interpretirati kao oblik buke koja uvodi linearnu interpola između trenažnih primjera. Prednosti uključuju poboljšanu robusnost na adversarijalne primjere, bolju kalibraciju predikcija, i smanjenu memoraciju trenažnih podataka. Mixup prisiljava model da uči linearnije odlučne granice između klasa, što često dovodi do bolje generalizacije.
+
+Varijante Mixup-a uključuju CutMix koji kombinira primjere kroz prostorne regije umjesto linearne interpolacije, i ManifoldMixup koji primjenjuje miješanje na skrivenim reprezentacijama umjesto ulazima. Sve ove tehnike dijele istu osnovnu ideju - stvaranje virtualnih primjera kroz interpolaciju.
+
+5.3. Adversarijsko Treniranje s Bukom
+
+Adversarijsko treniranje dodaje buku u obliku perturbacija dizajniranih da maksimalno povećaju pogrešku modela. Za dani primjer x, nalazi se perturbacija δ koja maksimizira gubitak L(f(x + δ), y) pod ograničenjem ||δ|| ≤ ε. Model se zatim trenira na ovim adversarijskim primjerima.
+
+Dok je primarna motivacija adversarijskog treniranja robusnost na adversarijalne napade, pokazalo se da ova tehnika također poboljšava generalizaciju na čistim podacima. Intuicija je da adversarijalne perturbacije mogu otkriti pravce u ulaznom prostoru gdje je model najosjetljiviji, i prisiliti model da bude robusniji u tim pravcima.
+
+Fast Gradient Sign Method (FGSM) i Projected Gradient Descent (PGD) su popularne metode za generiranje adversarijalni primjera. U praksi, adversarijsko treniranje često se kombinira s drugim regularizacijskim tehnikama za optimalne performanse.
+
+5.4. Buka u Generativnim Modelima
+
+U generativnim modelima, posebno u Variational Autoencoders (VAE) i Diffusion modelima, buka igra fundamentalnu ulogu u samom dizajnu modela. VAE-ovi koriste stohastičko uzorkovanje iz latentnih distribucija, dok Diffusion modeli eksplicitno modeliraju proces dodavanja i uklanjanja buke.
+
+Diffusion modeli rade tako da postupno dodaju Gaussovu buku podacima kroz niz koraka, zatim uče obrnuti proces - kako ukloniti buku i rekonstruirati originalne podatke. Ovaj pristup pokazao je impresivne rezultate u generiranju slika, zvuka i drugih vrsta podataka. Ključna ideja je da je učenje uklanjanja male količine buke lakše od direktnog učenja kompleksne data distribucije.
+
+Generative Adversarial Networks (GANs) također mogu koristiti buku u diskriminatoru kao regularizacijski mehanizam. Instance noise, gdje se dodaje Gaussova buka i pravim i generiranim primjerima, može stabilizirati treniranje i spriječiti mode collapse.
+
+6. ZAKLJUČAK
+
+Buka u učenju neuronskih mreža prešla je put od nepoželjnog artefakta do esencijalnog alata za poboljšanje performansi modela. Ovaj rad prikazao je kako kontrolirana primjena različitih oblika buke - od jednostavnog dodavanja Gaussove buke ulazima do sofisticiranih tehnika poput Dropout-a i stohastičke dubine - može značajno poboljšati generalizacijske sposobnosti neuronskih mreža.
+
+Teorijske osnove objašnjavaju ovaj fenomen kroz nekoliko međusobno povezanih mehanizama: implicitnu regularizaciju, sravnjavanje funkcije gubitka, ensemble učenje, i poboljšanu eksploraciju prostora parametara. Ove različite perspektive pružaju komplementarne uvide u to zašto i kako buka poboljšava učenje.
+
+Praktične primjene pokazuju da je uspješna primjena buke više umjetnost nego znanost - zahtijeva pažljivo balansiranje između regularizacijskog učinka i očuvanja signala u podacima. Optimalne količine i vrste buke ovise o specifičnom zadatku, arhitekturi mreže, i karakteristikama podataka.
+
+Buduća istraživanja trebaju se fokusirati na nekoliko otvorenih pitanja. Prvo, potrebno je dublje teoretsko razumijevanje interakcija između različitih oblika buke i njihovih kumulativnih efekata. Drugo, razvoj adaptivnih metoda koje automatski prilagođavaju količinu buke tijekom treniranja mogao bi dodatno poboljšati performanse. Treće, proširenje ovih tehnika na nova područja poput reinforcement learninga i meta-learninga predstavlja obećavajući pravac.
+
+Zaključno, buka više nije nepoželjni element koji treba minimizirati, već moćan alat koji, kada se pažljivo primjeni, može značajno unaprijediti sposobnosti neuronskih mreža. Razumijevanje i vješta primjena buke postali su ključne vještine u modernom dubokom učenju.

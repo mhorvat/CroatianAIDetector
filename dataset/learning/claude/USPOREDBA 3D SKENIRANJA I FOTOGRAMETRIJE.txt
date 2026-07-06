@@ -1,0 +1,129 @@
+1. Uvod
+
+Digitalizacija trodimenzionalnih objekata postala je neizostavna metoda u brojnim znanstvenim i industrijskim disciplinama. Razvoj tehnologija poput 3D skeniranja i fotogrametrije omogućio je preciznu rekonstrukciju objekata, od malenih arheoloških artefakata do velikih arhitektonskih struktura. Ove dvije tehnike, premda dijele zajednički cilj stvaranja digitalnih 3D modela, temelje se na fundamentalno različitim principima i nude specifične prednosti ovisno o kontekstu primjene.
+
+3D skeniranje obuhvaća niz metoda koje koriste aktivne senzore za direktno mjerenje udaljenosti i geometrije objekata. Najčešće se primjenjuju lasersko skeniranje i strukturirano svjetlo, tehnike koje omogućuju brzo i precizno snimanje s minimalnom obradom podataka. S druge strane, fotogrametrija predstavlja pasivnu metodu koja iz niza fotografija, snimljenih iz različitih kutova, rekonstruira trodimenzionalnu geometriju pomoću naprednih algoritama računalnog vida.
+
+Cilj ovog seminara jest provesti detaljnu usporedbu navedenih tehnika kroz praktične testove s različitim vrstama objekata, analizirati tehničke specifikacije opreme, metodologiju testiranja te evaluirati kvantitativne i kvalitativne rezultate. Posebna pozornost bit će posvećena analizi troškova, dostupnosti opreme i optimalnih slučajeva primjene za svaku tehniku. Kroz komparativni pristup nastojat će se utvrditi prednosti i ograničenja svake metode u kontekstu digitalizacije objekata različitih karakteristika.
+
+2. Teorijske osnove tehnologija
+
+2.1. Principi 3D skeniranja
+
+3D skeniranje temelji se na aktivnom mjerenju udaljenosti između senzora i površine objekta. Lasersko skeniranje koristi princip mjerenja vremena prolaska laserskog impulsa (Time-of-Flight) ili fazne razlike reflektiranog laserskog snopa. Skener emitira lasersku zraku koja, odbivši se od površine objekta, vraća se u prijemnik. Preciznim mjerenjem vremena potrebnog za povratak zrake ili faznog pomaka, sustav izračunava udaljenost svake točke na površini objekta.
+
+Skeneri strukturiranim svjetlom projiciraju poznate uzorke svjetlosti na objekt. Dubinska kamera snima deformacije tih uzoraka koje nastaju zbog geometrije objekta, a softver iz tih deformacija rekonstruira trodimenzionalnu površinu. Ova metoda omogućuje brzo snimanje velikog broja točaka istovremeno, što značajno skraćuje vrijeme digitalizacije.
+
+Rezultat 3D skeniranja jest oblak točaka, skup milijuna ili milijardi trodimenzionalnih koordinata koje opisuju površinu objekta. Moderna oprema često uključuje i snimanje boje ili intenziteta refleksije, čime se dobivaju i podaci o teksturi. Gustoća oblaka točaka direktno utječe na razinu detalja konačnog modela i kreće se od nekoliko stotina točaka po kvadratnom centimetru kod jednostavnijih uređaja do nekoliko tisuća kod profesionalnih sustava.
+
+2.2. Principi fotogrametrije
+
+Fotogrametrija predstavlja metodu rekonstrukcije trodimenzionalnih informacija iz niza dvodimenzionalnih fotografija. Temelji se na principu stereoskopskog vida i triangulacije. Kada se isti objekt fotografira iz najmanje dva različita položaja, moguće je iz dispariteta između slika izračunati dubinu svake točke. Moderne fotogrametrijske tehnike koriste Structure-from-Motion (SfM) algoritme koji automatski prepoznaju zajedničke značajke na više fotografija i rekonstruiraju kameru i trodimenzionalnu scenu istovremeno.
+
+Proces fotogrametrijske rekonstrukcije sastoji se od nekoliko ključnih koraka. Prvo, algoritmi detektiraju i opisuju značajke na svakoj fotografiji koristeći metode poput SIFT ili SURF deskriptora. Zatim se te značajke sparuju između različitih slika, što omogućuje procjenu položaja kamera i stvaranje rijetkog oblaka točaka. Multi-View Stereo (MVS) algoritmi potom generiraju gusti oblak točaka prateći intenzitet piksela kroz više slika. Konačno, iz oblaka točaka kreira se mrežasta površina i teksturira se koristeći izvorne fotografije.
+
+Kvaliteta fotogrametrijske rekonstrukcije ovisi o brojnim čimbenicima: rezoluciji fotografija, preklapanju između susjednih slika, kvaliteti osvjetljenja i teksturi površine objekta. Za optimalne rezultate preporuča se preklapanje od najmanje 60-80% između susjednih fotografija, ravnomjerno osvjetljenje bez jakih sjena te snimanje iz dovoljnog broja kutova za potpuno pokrivanje objekta.
+
+3. Tehnička specifikacija opreme
+
+3.1. Oprema za 3D skeniranje
+
+U testiranju korištena su tri različita sustava 3D skeniranja. Primarni uređaj bio je strukturirani skener Artec Eva, uređaj srednje klase s dubinskom kamerom koja postiže točnost do 0,1 mm i rezoluciju do 0,5 mm. Ovaj skener koristi tehnologiju bijeloga strukturiranog svjetla i sposoban je snimati do 16 fotograma u sekundi, što omogućuje snimanje u pokretu. Radni volumen iznosi od 0,2 do 1 metar, s mogućnošću snimanja objekata veličine od nekoliko centimetara do nekoliko metara.
+
+Kao dodatni uređaj korišten je Faro Focus laserski skener, profesionalni sustav dugog dometa temeljen na Time-of-Flight tehnologiji. Ovaj skener ostvaruje doseg do 350 metara s točnošću od 2 mm na 25 metara. Brzina snimanja iznosi do 976.000 točaka u sekundi, s mogućnošću integriranog snimanja HDR fotografija za teksturiranje. Uređaj je montiran na stabilni stativ i koristi se za precizno skeniranje većih prostora i objekata.
+
+Treći sustav predstavlja Intel RealSense D435, pristupačna dubinska kamera namijenjena računalnom vidu i robotici. Koristi stereo vid s infracrvenima projektorom i ostvaruje rezoluciju dubine do 1280x720 piksela pri 90 fotograma u sekundi. Radni domet kreće se od 0,3 do 3 metra s točnošću koja varira ovisno o udaljenosti, ali prosječno iznosi oko 2% mjerene udaljenosti. Ovaj uređaj predstavlja ekonomičnu opciju za osnovne aplikacije digitalizacije.
+
+3.2. Oprema za fotogrametriju
+
+Fotogrametrijski testovi provedeni su koristeći tri različita sustava snimanja. Primarni uređaj bio je Canon EOS 5D Mark IV, profesionalni DSLR fotoaparat s punim senzorom rezolucije 30,4 megapiksela. Korišten je s Canon EF 50mm f/1.8 objektivom za male objekte i Canon EF 24-70mm f/2.8 zumom za veće objekte. Ovaj sustav omogućuje snimanje visokorezolucijskih fotografija s minimalnom distorzijom i odličnom dubinom oštrine.
+
+Dodatno je korišten DJI Phantom 4 Pro bespilotna letjelica, opremljena kamerom rezolucije 20 megapiksela i mehaničkim zatvaračem. Ovaj sustav omogućuje snimanje iz zraka za veće arhitektonske strukture i prostorije. Integriran GPS i gimbal stabilizacija osiguravaju precizne podatke o poziciji i eliminaciju zamućenja uslijed vibracija.
+
+Za mobilnu fotogrametriju korišten je Apple iPhone 13 Pro s triple kamerom od 12 megapiksela, uključujući širokutnu, ultra-širokutnu i telefoto leću. Ovaj uređaj demonstrira mogućnosti fotogrametrije s pristupačnom, svakodnevno dostupnom opremom. Integriran LiDAR skener omogućuje i hibridni pristup koji kombinira fotogrametriju s dubinskim podacima.
+
+4. Metodologija testiranja
+
+4.1. Odabir testnih objekata
+
+Za sveobuhvatnu usporedbu odabrano je dvanaest testnih objekata podijeljenih u četiri kategorije prema izazovima koje predstavljaju za digitalizaciju. Kategorija velikih objekata uključivala je baroknu skulpturu visine 180 cm, kameni portal dimenzija 250x150 cm i dio zgrade s ornamentiranom fasadom površine približno 15 kvadratnih metara. Ovi objekti testirali su mogućnost snimanja u realnim uvjetima s varijabilnim osvjetljenjem i potrebu za pokrivanjem velikih površina.
+
+Kategorija malih objekata obuhvaćala je numizmatičku kovanicu promjera 2,5 cm, keramičku figurinu visine 8 cm i arheološki artefakt složene geometrije dimenzija 6x4x3 cm. Ovi objekti zahtijevali su visoku razlučivost i preciznost snimanja finih detalja poput tekstova, ukrasa i površinskih nepravilnosti veličine ispod milimetra.
+
+Reflektivni objekti uključivali su metalni posuđe s poliranom površinom, automobilsku masku s kromiranim dijelovima i staklenku napunjenu vodom. Ovi objekti predstavljali su izazov zbog zrcalnih refleksija kod laserskog skeniranja i nedostatka teksture za fotogrametriju. Kategorija transparentnih i translucidentnih objekata obuhvaćala je staklenu vazu, plastičnu bocu i poluprovidni kristalni predmet, materijale kroz koje svjetlost prolazi ili se lomi, što otežava precizno mjerenje površine.
+
+4.2. Protokol snimanja
+
+Za svaki objekt razvijen je standardizirani protokol snimanja koji osigurava usporedivost rezultata. 3D skeniranjem svaki objekt snimljen je u kontroliranim uvjetima s difuznim osvjetljenjem za eliminaciju jakih sjena. Mali objekti postavljeni su na rotacijsku platformu i snimani Artec Eva skenerom iz 8 pozicija s rotacijom od 45 stupnjeva. Veliki objekti snimani su metodom slobodne ruke, pri čemu je operator nosio skener oko objekta osiguravajući potpuno pokrivanje. Faro Focus skener korišten je za arhitektonske elemente iz 4-6 fiksnih pozicija.
+
+Fotogrametrijski protokol zahtijevao je precizno planiranje pozicija fotografiranja. Za male objekte snimljeno je 60-80 fotografija raspoređenih u tri koncentrična prstena različitih visina oko objekta postavljenog na neutralnu pozadinu. Velika oprema osiguravala je preklapanje od 70% između susjednih slika. Veliki objekti fotografirani su iz 100-150 pozicija s kombinacijom horizontalnih orbita, dijagonalnih prolaza i vertikalnih stupova snimanja.
+
+Svi testovi provedeni su tri puta za svaki objekt i tehniku, čime je osigurana statistička pouzdanost rezultata. Bilježeno je vrijeme potrebno za pripremu, snimanje i obradu podataka. Kontrolirani parametri uključivali su temperaturu prostora, intenzitet osvjetljenja i pozicioniranje objekata s točnošću od ±1 cm.
+
+5. Rezultati testiranja
+
+5.1. Kvantitativna analiza
+
+Rezultati testiranja velikih objekata pokazali su komparativne prednosti obje tehnike. Lasersko skeniranje Faro uređajem ostvarilo je prosječnu točnost od 1,8 mm za baroknu skulpturu, uz vrijeme snimanja od 42 minute za sva četiri skeniranja i registraciju. Fotogrametrija kamerom Canon ostvarila je nešto nižu točnost od 3,2 mm, ali uz znatno duže vrijeme obrade od 6,5 sati za generiranje gustog oblaka točaka od 45 milijuna točaka. Prednost fotogrametrije bila je u kvaliteti teksture, s razlučivošću od 4096x4096 piksela naspram 2048x2048 kod skeniranja.
+
+Mali objekti predstavljali su najveći izazov za razlučivost. Artec Eva skener ostvario je rezoluciju od 0,3 mm na kovanici, uspješno zabilježivši osnovne elemente dizajna, ali ne i najfinije detalje tekstova. Fotogrametrija s makro postavkama ostvarila je superiornu razlučivost od 0,08 mm, omogućivši čitanje svih natpisa i snimanje površinskih nepravilnosti. Međutim, ova metoda zahtijevala je 95 fotografija i 4 sata obrade za objekt promjera 2,5 cm.
+
+Reflektivni objekti pokazali su očekivana ograničenja laserskog skeniranja. Metalni posuđe proizvelo je šum u podacima s do 45% nevalidnih točaka na najsjevetnijim dijelovima. Fotogrametrija s polarizacijskim filterom i kontroliranim osvjetljenjem ostvarila je 78% potpuni model, premda su kromirana područja zahtijevala naknadno ručno modeliranje. Skeniranje strukturiranim svjetlom pokazalo se djelotvornijim od lasera, s 65% uspješnosti pokrivanja.
+
+Transparentni objekti predstavljali su neuspjeh za obje konvencionalne metode. Lasersko skeniranje zabilježilo je samo 12-18% površine staklene vaze, dok je fotogrametrija postigla tek 25% pokrivanja zbog nedostatka teksture. Hibridni pristup, koristeći iPhone s LiDAR senzorom u kombinaciji s fotogrametrijom, povećao je uspješnost na 62%, ali i dalje s očitim prazninama u podacima.
+
+5.2. Kvalitativna evaluacija
+
+Kvaliteta površine varirala je značajno između metoda. 3D skeniranje generiralo je ravnomjernije raspoređene točke s konzistentnom gustoćom, što je rezultiralo glađim površinama nakon triangulacije. Fotogrametrija pokazala je tendenciju prema varijabilnosti gustoće oblaka točaka, s višom rezolucijom na područjima bogate teksture i rjeđom pokrivanjem na jednobojnim površinama. Ova karakteristika zahtijevala je složenije algoritme za generiranje mreže s adaptivnom rezolucijom.
+
+Teksturna vjerodostojnost predstavljala je ključnu prednost fotogrametrije. Boje snimljene profesionalnim fotoaparatom bile su fotorealistične s odličnom reprodukcijom nijansa i detalja. 3D skeneri s integriranim kamerama proizvodili su prihvatljivu teksturu, ali nižu razlučivost i dinamički raspon ograničen na 8-bitnu dubinu boje. Za muzejske primjene gdje je estetski prikaz prioritet, fotogrametrija pokazala se superiornijom opcijom.
+
+Potpunost modela ocjenjivana je kroz postotak uspješno snimljene površine objekta. Strukturirano svjetlo ostvarilo je 92-98% potpunost za normalne objekte, s prazninama uglavnom u dubokim udubljenjima i podrezima. Fotogrametrija postigla je 85-95% potpunost, s problemima na sjajnim površinama, jednoličnim područjima i tankim elementima koji se stapaju s pozadinom. Lasersko skeniranje velikog dometa pokazalo je 88-94% potpunost za arhitektonske elemente, s problemima na providnim materijalima poput stakla.
+
+6. Komparativna analiza troškova i dostupnosti
+
+6.1. Ekonomska analiza
+
+Investicijski troškovi za 3D skeniranje značajno variraju ovisno o razini opreme. Profesionalni strukturirani skeneri poput Artec Eva kreću se u rasponu 15.000-25.000 eura, dok high-end laserski skeneri poput Faro Focus koštaju 35.000-80.000 eura. Ovi sustavi uključuju sveobuhvatan softver za obradu i često dolaze s podrškom i edukacijom. Pristupačne opcije poput Intel RealSense kamera dostupne su za 200-400 eura, ali uz znatno niže tehničke karakteristike.
+
+Fotogrametrija predstavlja ekonomičniju alternativu s inicijalnim troškovima. Profesionalni DSLR sustav s odgovarajućim objektivima može se nabaviti za 2.500-5.000 eura, dok mobilni uređaji s kvalitetnim kamerama već posjeduje većina korisnika. Međutim, potreban je specijalizirani softver za obradu, pri čemu komercijalne opcije poput Agisoft Metashape Professional koštaju 3.500 eura, dok open-source alternative poput Meshroom nude besplatno rješenje uz nešto nižu kvalitetu rezultata.
+
+Operativni troškovi također razlikuju se između metoda. 3D skeniranje zahtijeva kalibraciju, održavanje optičkih komponenti i povremenu zamjenu lasera ili projektora, što može iznositi 2.000-5.000 eura godišnje. Fotogrametrija ima minimalne hardverske operativne troškove, ali zahtijeva značajne računalne resurse. Radna stanica s 64 GB RAM-a, grafičkom karticom visokih performansi i terabajtima pohrane košta dodatnih 3.000-6.000 eura.
+
+6.2. Pristupačnost i krivulja učenja
+
+Operativna pristupačnost predstavlja važan čimbenik odabira tehnologije. Moderni 3D skeneri dizajnirani su za relativno jednostavnu upotrebu s automatskim postavkama i vođenim procesima snimanja. Novi korisnik može naučiti osnove skeniranja tijekom jednodnevne obuke i postići upotrebljive rezultate nakon tjedan dana prakse. Međutim, postizanje profesionalnih rezultata, posebno za zahtjevne objekte, zahtijeva razumijevanje optičkih principa, tehnika registracije i obrade oblaka točaka.
+
+Fotogrametrija zahtijeva razumijevanje fotografskih principa poput ekspozicije, dubine fokusa i kompozicije, vještine koje mnogi profesionalci već posjeduju. Proces snimanja relativno je intuitivan, ali optimizacija mreže fotografija zahtijeva iskustvo. Obrada podataka može biti komplicirana, posebno kod problema poput loše konvergencije, artefakata ili neoptimalne geometrije kamere. Krivulja učenja obrade podataka strmija je od samog snimanja, zahtijevajući najmanje mjesec redovite prakse za postizanje konzistentnih rezultata.
+
+Dostupnost edukacijskih resursa i podrške razlikuje se između tehnologija. Proizvođači profesionalnih skenera nude sveobuhvatne programe obuke, dokumentaciju i tehničku podršku. Fotogrametrijska zajednica razvila je bogat ekosustav online tutorijala, foruma i akademskih publikacija. Open-source priroda mnogih fotogrametrijskih alata omogućuje eksperimentiranje bez financijskih rizika, što je čini dostupnijom za studente i hobiste.
+
+7. Optimalne primjene i preporuke
+
+7.1. Preporučeni slučajevi primjene za 3D skeniranje
+
+Lasersko skeniranje predstavlja optimalan izbor za primjene koje zahtijevaju preciznost mjerenja i brzu akviziciju podataka velikih prostora. Arhitektonska dokumentacija, izradba građevinskih situacija postojećeg stanja i monitoring deformacija infrastrukture idealni su scenariji. Mogućnost snimanja na udaljenostima od stotina metara omogućuje dokumentaciju mostova, brana i industrijskih postrojenja bez izrade skupih skela ili zatvaranja objekata.
+
+Strukturirano svjetlo odlično funkcionira za industrijske aplikacije kontrole kvalitete i reverznog inženjerstva mehaničkih komponenti. Brzina snimanja omogućuje inspekaciju proizvodnih linija u realnom vremenu, dok preciznost zadovoljava zahtjeve tolerancija od desetinki milimetra. Integracija sa strojevima za numeričko upravljanje omogućuje izravan transfer digitalnih modela u proizvodni proces.
+
+Za kulturnu baštinu, 3D skeniranje omogućuje dokumentaciju koja kombinira brzinu, ne-invazivnost i preciznost. Skulpture, arheološka nalazišta i povijesni artefakti mogu se digitalizirati bez fizičkog kontakta, što je ključno za očuvanje osjetljivih predmeta. Mogućnost snimanja u boji omogućuje i vizualni zapis stanja konzerviranja, dok vremenske serije skeniranja omogućuju praćenje degradacije materijala.
+
+7.2. Preporučeni slučajevi primjene za fotogrametriju
+
+Fotogrametrija pokazuje svoje prednosti kada su vizualna vjerodostojnost i fotorealistična tekstura ključni zahtjevi. Primjene u industriji video igara, vizualnim efektima i virtualnoj stvarnosti koriste fotogrametriju za stvaranje uvjerljivih digitalnih okruženja. Mogućnost snimanja visokorezolucijskih tekstura s fizički točnim bojama, sjenama i refleksijama nadmašuje sintetičko teksturiranje.
+
+Za dokumentaciju na velikim vanjskim prostorima, fotogrametrija dronovima omogućuje mapiranje arhitekture, terena i vegetacije na ekonomičan način. Arheološka nalazišta, kamenolomi i urbane sredine mogu se digitalizirati s rezolucijom nekoliko centimetara uz troškove znatno niže od laserskog skeniranja. Fleksibilnost snimanja iz bilo kojeg kuta omogućuje potpunu dokumentaciju kompleksnih struktura.
+
+Obrazovne i znanstvene institucije s ograničenim budžetom mogu implementirati fotogrametriju koristeći postojeću fotografsku opremu. Digitalizacija prirodoslovnih kolekcija, geoloških uzoraka i botaničkih specimens moguća je uz minimalne investicije. Open-source softverska rješenja eliminiraju troškove licenci, a kvaliteta rezultata zadovoljava potrebe dokumentacije i istraživanja.
+
+8. Zaključak
+
+Provedena usporedba demonstrira da 3D skeniranje i fotogrametrija predstavljaju komplementarne tehnologije, svaka s jedinstvenim prednostima i ograničenjima. Izbor optimalne metode ovisi o specifičnim zahtjevima projekta, dostupnim resursima i karakteristikama objekata digitalizacije.
+
+3D skeniranje ističe se brzinom akvizicije podataka, konzistentnom točnošću i sposobnošću rada s objektima ograničene teksture. Lasersko skeniranje neprikosnoveno je za velike prostorije gdje je potrebna preciznost milimetarskog reda na udaljenostima stotina metara. Strukturirano svjetlo odličan je izbor za industrijske primjene kontrole kvalitete i brzu digitalizaciju objekata srednje veličine. Glavni nedostaci obuhvaćaju visoke investicijske troškove, probleme s reflektivnim i transparentnim materijalima te nižu kvalitetu teksture u usporedbi s fotogrametrijom.
+
+Fotogrametrija nudi ekonomično rješenje s izvanrednom fleksibilnošću i fotorealističnom teksturom. Mogućnost korištenja uobičajene fotografske opreme i besplatnog softvera čini je dostupnom širokom spektru korisnika. Rezolucija detalja može nadmašiti 3D skeniranje kod malih objekata, dok je dokumentacija velikih vanjskih prostora dronovima ekonomičnija od laserskog skeniranja. Ograničenja obuhvaćaju duže vrijeme obrade, poteškoće s reflektivnim i jednoličnim površinama te zahtjevnost postizanja konzistentne točnosti.
+
+Za optimalne rezultate u zahtjevnim projektima, hibridni pristup koji kombinira obje tehnologije predstavlja najsveobuhvatnije rješenje. Lasersko skeniranje može pružiti preciznu geometrijsku osnovu, dok fotogrametrija doprinosi visokorezolucijskom teksturiranju. Takva integracija zahtijeva naprednu softversku infrastrukturu i stručnost u obradi podataka, ali rezultira digitalnim modelima koji kombiniraju metričku točnost s vizualnom vjernošću.
+
+Budući razvoj očekuje se u pravcu sve dostupnije opreme, bržih algoritama obrade i inteligentne fuzije podataka iz više izvora. Napredak u dubinskim kamerama mobilnih uređaja demokratizira pristup 3D digitalizaciji, dok strojno učenje omogućuje automatsku klasifikaciju, segmentaciju i semantičku interpretaciju 3D modela. Integracija ovih tehnologija u svakodnevne primjene nastavit će transformirati područja od proizvođačke industrije do digitalne arheologije, potvrđujući njihovu važnost u suvremenim procesima digitalizacije i modeliranja.

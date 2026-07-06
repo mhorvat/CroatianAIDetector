@@ -1,0 +1,127 @@
+1. Uvod
+
+Računalni vid predstavlja jednu od najbrže rastućih grana umjetne inteligencije i računarstva, s ciljem omogućavanja računalima da "vide" i razumiju vizualne informacije iz okolnog svijeta. Među brojnim primjenama računalnog vida, detekcija lica zauzima posebno mjesto zbog svoje široke primjenjivosti u sigurnosnim sustavima, automobilskoj industriji, fotografiji, proširеnoj stvarnosti i mnogim drugim područjima. U ovom radu detaljno ćemo istražiti osnove računalnog vida, problematiku detekcije lica te ulogu AdaBoost algoritma kao jednog od ključnih pristupa koji su revolucionirali ovo područje početkom 21. stoljeća.
+
+2. Računalni vid: Osnove i izazovi
+
+2.1. Što je računalni vid?
+
+Računalni vid (engl. Computer Vision) interdisciplinarna je znanstvena disciplina koja se bavi razvojem teorijskih i algoritmičkih temelja kako bi sustavi mogli automatski dobiti razumijevanje iz digitalnih slika ili videozapisa. Cilj je replicirati sposobnost ljudskog vizualnog sustava, koji bez napora prepoznaje objekte, prati pokrete, procjenjuje udaljenosti i razumije složene scene.
+
+Za razliku od ljudskog oka i mozga koji zajedno čine sofisticiran biološki sustav razvijan milijunima godina evolucije, računalni sustavi moraju obrađivati slike kao numeričke matrice piksela. Svaki piksel sadrži vrijednosti koje predstavljaju intenzitet svjetlosti ili boje, ali izvlačenje semantičkog značenja iz tih brojeva predstavlja složen izazov.
+
+2.2. Temeljna problematika
+
+Računalni vid suočava se s brojnim fundamentalnim izazovima. Jedan od najvažnijih je problem viševrjednosnosti (engl. ambiguity) – ista 2D projekcija može odgovarati beskonačnom broju različitih 3D scena. Osim toga, varijacije u osvjetljenju mogu dramatično promijeniti izgled objekta, dok promjene perspektive, rotacije i skaliranja dodatno kompliciraju problem prepoznavanja.
+
+Okluzija, odnosno djelomično prekrivanje objekata, predstavlja dodatni izazov. U stvarnom svijetu objekti se često međusobno prekrivaju, što otežava njihovu potpunu identifikaciju. Također, intraklasna varijabilnost – činjenica da objekti iste kategorije mogu izgledati vrlo različito – zahtijeva robusne algoritme sposobne generalizirati naučene koncepte.
+
+2.3. Primjene računalnog vida
+
+Računalni vid nalazi primjenu u raznovrsnim područjima. U medicini pomaže u dijagnostici kroz analizu medicinskih snimaka poput rendgenskih snimaka, CT i MRI skenova. Autonomna vozila koriste računalni vid za navigaciju i izbjegavanje prepreka. Industrijska automatizacija koristi vizijske sustave za kontrolu kvalitete proizvoda. U poljoprivredi, računalni vid omogućava praćenje zdravlja usjeva i automatizaciju berbe. Sigurnosni sustavi koriste ga za nadzor i detekciju neobičnih aktivnosti.
+
+3. Detekcija lica
+
+3.1. Važnost detekcije lica
+
+Detekcija lica fundamentalan je zadatak u računalnom vidu koji služi kao prethodnik brojnim naprednim aplikacijama. Cilj je automatski locirati i identificirati prisutnost ljudskih lica na digitalnim slikama ili videozapisima. Za razliku od prepoznavanja lica koje identificira specifičnu osobu, detekcija lica samo određuje gdje se na slici nalazi lice, bez obzira čije je.
+
+Ovaj zadatak kritičan je za sustave biometrijske autentifikacije, automatsko označavanje fotografija na društvenim mrežama, praćenje pažnje vozača u automobilima, automatsko fokusiranje kamera, interaktivne videoigre, proširenu stvarnost i mnoge druge primjene. Uspješna detekcija lica prvi je korak prema složenijim zadacima poput prepoznavanja emocija, procjene dobi, određivanja spola ili identifikacije pojedinca.
+
+3.2. Izazovi detekcije lica
+
+Detekcija lica iznimno je zahtjevan zadatak zbog brojnih varijabilnosti koje mogu utjecati na izgled lica. Lica se mogu pojaviti u različitim pozama – frontalno, profilno ili pod bilo kojim kutom između. Izrazi lica mijenjaju raspored značajki poput očiju, usta i nosa. Dodatni vizualni elementi poput naočala, brade, šminke ili frizure mijenjaju izgled lica.
+
+Uvjeti osvjetljenja dramatično utječu na vizualni izgled lica. Jako osvjetljenje može stvoriti oštre sjene i prenaglašene kontraste, dok slabo osvjetljenje može zamaglit ključne značajke. Različite rezolucije slika također predstavljaju problem – lice snimljeno izdaleka može sadržavati samo nekoliko desetaka piksela, dok bliska fotografija može sadržavati tisuće piksela po licu.
+
+3.3. Pristupa detekciji lica
+
+Kroz povijest računalnog vida razvijeni su različiti pristupi detekciji lica. Rani sustavi koristili su metode temeljene na pravilima koje su tražile specifične geometrijske konfiguracije i odnose između značajki lica. Ovi pristupi bili su krhki i nisu dobro funkcionirali izvan kontroliranih uvjeta.
+
+Metode temeljene na izgledu koriste strojno učenje za izravno učenje kako izgledaju lica iz primjera. Umjesto eksplicitnog kodiranja pravila, ovi sustavi uče razlikovati lica od ne-lica analizirajući veliki skup primjera. Ovaj pristup pokazao se mnogo robusnijim i fleksibilnijim.
+
+Moderne metode koriste duboke neuronske mreže koje automatski uče hijerarhije značajki, od jednostavnih rubova do složenih struktura lica. Convolutional Neural Networks (CNN) postali su dominantan pristup u detekciji lica, postižući izvanredne rezultate čak i u veoma zahtjevnim uvjetima.
+
+4. AdaBoost algoritam
+
+4.1. Povijesni kontekst i motivacija
+
+AdaBoost (Adaptive Boosting) algoritam predstavlja prekretnica u području strojnog učenja i detekcije objekata. Razvili su ga Yoav Freund i Robert Schapire 1996. godine, a za svoj rad dobili su prestižnu Gödel nagradu. Algoritam se temelji na ideji boosting-a – kombiniranja mnogih slabih klasifikatora u jedan snažan klasifikator.
+
+Slabi klasifikator definira se kao klasifikator čija je točnost jedva bolja od nasumičnog pogađanja. Iako individualno slabi, kombinacijom velikog broja takvih klasifikatora moguće je stvoriti izuzetno moćan sustav. Ova ideja revolucionirala je strojno učenje jer je pokazala da nije potrebno razvijati savršene algoritme – dovoljno je imati mnoge jednostavne koji su neznatno bolji od slučajnosti.
+
+4.2. Matematička osnova AdaBoost algoritma
+
+AdaBoost radi kroz iterativni proces gdje svaka iteracija dodaje novi slabi klasifikator u ansambl. Ključna inovacija je adaptivna težinska shema gdje primjeri koji su pogrešno klasificirani u prethodnim iteracijama dobivaju veće težine, prisiljavajući sljedeće klasifikatore da se više fokusiraju na teške primjere.
+
+Algoritam počinje inicijalizacijom jednakih težina za sve primjere treniranja. U svakoj iteraciji, trenira se novi slabi klasifikator na trenutno težinskom rasporedu primjera. Nakon treniranja, algoritam računa pogrešku klasifikatora – zbroj težina pogrešno klasificiranih primjera. Na temelju ove pogreške određuje se koliko će važan biti taj klasifikator u konačnoj odluci.
+
+Primjeri koji su pogrešno klasificirani dobivaju povećane težine, dok one koji su ispravno klasificirani zadržavaju ili smanjuju svoje težine. Ovaj proces ponavlja se kroz određeni broj iteracija ili dok se ne postigne željena točnost. Konačni klasifikator je težinski zbroj svih slabih klasifikatora, gdje svaki ima utjecaj proporcionalan svojoj točnosti.
+
+Matematički, za svaki slabi klasifikator h_t, AdaBoost određuje koeficijent alpha_t koji predstavlja njegov doprinos konačnoj odluci. Ovaj koeficijent ovisi o stopi pogreške klasifikatora – bolji klasifikatori dobivaju veće koeficijente. Konačna klasifikacija određuje se znakom težinske sume svih predviđanja.
+
+4.3. Prednosti AdaBoost algoritma
+
+AdaBoost ima brojne prednosti koje su ga učinile popularnim. Algoritam je jednostavan za implementaciju i razumijevanje, što omogućava brzo prototipiranje i eksperimentiranje. Ne zahtijeva pažljivo podešavanje parametara za razliku od mnogih drugih algoritama strojnog učenja. 
+
+Automatski se fokusira na teške primjere, što rezultira boljom generalizacijom. Teorijski je pokazano da AdaBoost teži smanjenju gornje granice pogreške treniranja, a pod određenim uvjetima može postići arbitrarno nisku pogrešku. Fleksibilan je jer može koristiti različite vrste slabih klasifikatora, što ga čini primjenjivim na raznovrsne probleme.
+
+4.4. Ograničenja AdaBoost algoritma
+
+Unatoč prednostima, AdaBoost ima određena ograničenja. Osjetljiv je na šum i outliere u podacima jer se fokusira na teške primjere, što može uključivati i pogrešno označene primjere. To može dovesti do overfittinga, posebno ako se algoritam pokreće kroz previše iteracija.
+
+Također, računska složenost raste s brojem iteracija, što može biti problem za velike skupove podataka. U praksi, potrebno je pažljivo balansirati broj iteracija kako bi se postigla dobra ravnoteža između točnosti i vremena izvođenja.
+
+5. Viola-Jones okvir za detekciju lica
+
+5.1. Revolucionarna primjena AdaBoost-a
+
+Godine 2001., Paul Viola i Michael Jones predstavili su okvir za detekciju lica u stvarnom vremenu koji je postao prekretnica u području računalnog vida. Njihov pristup kombinirao je AdaBoost s nekoliko ključnih inovacija koje su omogućile brzu i točnu detekciju lica. Ovaj rad postao je jedan od najcitiranijih radova u povijesti računalnog vida.
+
+Viola-Jones okvir pokazao je da je moguće detektirati lica brzinom od 15 slika u sekundi na računalima iz 2001. godine, što je bilo revolucionarno dostignuće. Sustav je postigao visoku točnost detekcije uz nisku stopu lažnih pozitiva, što ga je činilo praktičnim za stvarne primjene.
+
+5.2. Haar-like značajke
+
+Umjesto direktnog korištenja vrijednosti piksela, Viola-Jones okvir koristi Haar-like značajke. Ove značajke inspiriane su Haar waveletsima i predstavljaju jednostavne pravokutne obrasce koji hvataju promjene u intenzitetu između susjednih regija slike.
+
+Tipični primjeri uključuju značajku s dva pravokutnika (jedan svijetli, jedan tamni) koja može detektirati prijelaz između svjetlije oblasti čela i tamnije oblasti očiju. Značajka s tri pravokutnika može uhvatiti obrazac nos-obrazi-nos. Dijagonalne značajke mogu detektirati rubove pod kutom.
+
+Za prozor detekcije veličine 24x24 piksela, postoje stotine tisuća mogućih Haar-like značajki. Svaka od njih predstavlja potencijalnog kandidata za slabog klasifikatora. Međutim, evaluacija svih tih značajki bila bi računski preskupa bez dodatne optimizacije.
+
+5.3. Integralna slika
+
+Ključna inovacija koja omogućava brzu evaluaciju Haar-like značajki je integralna slika (engl. integral image). Integralna slika je pomoćna struktura podataka gdje svaki element sadrži zbroj svih piksela iznad i lijevo od te pozicije u originalnoj slici.
+
+Koristeći integralnu sliku, zbroj piksela unutar bilo kojeg pravokutnika može se izračunati pomoću samo četiri pristupa memoriji, neovisno o veličini pravokutnika. To omogućava evaluaciju Haar-like značajki u konstantnom vremenu, čineći sustav dovoljno brzim za primjene u stvarnom vremenu.
+
+5.4. Kaskadni klasifikator
+
+Druga ključna inovacija je kaskadna struktura klasifikatora. Umjesto da svaki prozor na slici prolazi kroz sve slabe klasifikatore, prozori se evaluiraju kroz niz faza gdje svaka faza elimina većinu negativnih prozora uz malo računanja.
+
+Prve faze kaskade koriste samo nekoliko značajki i vrlo su brze, ali imaju visoku stopu detekcije kako bi se osiguralo da se ne propuste stvarna lica. Kasnija faze postaju sve složenije i preciznije, ali se primjenjuju samo na manji broj kandidata koji su prošli ranije faze.
+
+Ova struktura dramatično ubrzava detekciju jer većina prozora na slici ne sadrži lica i može se brzo odbaciti u ranim fazama. Samo mali postotak prozora zahtijeva kompletan prolazak kroz sve faze kaskade.
+
+5.5. Treniranje Viola-Jones detektora
+
+Treniranje Viola-Jones detektora odvija se u dva glavna koraka. Prvo, AdaBoost se koristi za odabir najboljih Haar-like značajki i treniranje snažnih klasifikatora za svaku fazu kaskade. Algoritam automatski bira one značajke koje najbolje diskriminiraju lica od ne-lica.
+
+Drugo, kaskada se konstruira iterativno, gdje se svaka faza trenira da postigne specifičnu stopu detekcije i stopu lažnih pozitiva. Broj faza i složenost svake faze pažljivo se balansiraju kako bi se postigla željena ravnoteža između brzine i točnosti.
+
+Proces treniranja zahtijeva veliki skup primjera lica i ne-lica. Pozitivni primjeri su slike lica u različitim pozama i uvjetima osvjetljenja, dok negativni primjeri predstavljaju bilo što što nije lice – pozadine, objekti, teksture. Tipično se koriste deseci tisuća primjera za treniranje robusnog detektora.
+
+6. Utjecaj i nasljeđe
+
+Viola-Jones okvir s AdaBoost algoritmom revolucionirao je područje detekcije objekata. Pokazao je da kombinacija jednostavnih značajki, učinkovitih struktura podataka i pametnih strategija evaluacije može rezultirati praktičnim sustavom koji radi u stvarnom vremenu.
+
+Ovaj pristup našao je primjenu u brojnim komercijalnim proizvodima, od digitalnih kamera koje automatski fokusiraju lica do sigurnosnih sustava za nadzor. Utjecao je na razvoj mnogih naknadnih metoda detekcije objekata i postavio temelje za moderne pristupe.
+
+Iako su današnji sustavi temeljeni na dubokim neuronskim mrežama nadmašili Viola-Jones u točnosti, osnovna načela i inovacije ostaju relevantni. Ideje poput kaskadne evaluacije, focus na računsku učinkovitost i korištenje boosting algoritama nastavile su utjecati na istraživanja u računalnom vidu.
+
+7. Zaključak
+
+Računalni vid, detekcija lica i AdaBoost algoritam predstavljaju fascinantnu kombinaciju teorije i prakse. Od fundamentalnih izazova vizualnog razumijevanja do praktičnih rješenja koja omogućavaju primjene u stvarnom vremenu, ovo područje pokazuje kako inovativne ideje mogu transformirati tehnologiju.
+
+AdaBoost algoritam demonstrira snagu kombiniranja jednostavnih komponenti u sofisticirani sustav. Njegova primjena u Viola-Jones okviru postavila je nove standarde za detekciju objekata i inspirirala generacije istraživača. Dok tehnologija nastavlja evoluirati prema još moćnijim metodama poput dubokog učenja, lekcije naučene iz AdaBoost-a i Viola-Jones pristupa ostaju vrijedne i relevantne.
+
+Budućnost računalnog vida obećava još veće mogućnosti – od potpuno autonomnih vozila do augmentiranih interfejsa koji prirodno razumiju naš vizualni svijet. Putovanje koje je započelo s jednostavnim algoritmima poput AdaBoost-a nastavlja se, gradeći na solidnim temeljima koje su postavili pioniri ovog područja.

@@ -1,0 +1,165 @@
+1. UVOD
+
+Otvoreni pristup znanstvenim i stručnim informacijama predstavlja jednu od najznačajnijih promjena u suvremenoj akademskoj zajednici. Načelo slobodnog pristupa znanju mijenja tradicionalne modele znanstvene komunikacije i omogućuje demokratizaciju pristupa istraživačkim rezultatima. U Republici Hrvatskoj, Zavod za informacijske znanosti Sveučilišta u Zagrebu razvio je nacionalni portal hrvatskih znanstvenih i stručnih časopisa Hrčak, a 2013. godine pokrenut je i Digitalni akademski arhivi i repozitoriji (Dabar), danas poznat kao Zajednički informacijski repozitorij (ZIR). Ova infrastruktura ima ključnu ulogu u prikupljanju, čuvanju i diseminaciji akademskih i znanstvenih sadržaja.
+
+Završni radovi studenata, uključujući završne radove preddiplomskih i stručnih studija te diplomske radove, predstavljaju vrijedan segment akademske produkcije. Njihova dostupnost u otvorenom pristupu doprinosi vidljivosti institucija, povećava citiranost i omogućuje razmjenu znanja kako unutar akademske zajednice tako i u široj javnosti. Veleučilišta u Hrvatskoj, kao institucije visokog obrazovanja usmjerene na stručne studije, sve više prepoznaju važnost otvorenog pristupa svojim akademskim izvorima.
+
+Cilj ovog rada je analizirati trenutnu zastupljenost završnih radova hrvatskih veleučilišta u otvorenom pristupu unutar nacionalnog repozitorija ZIR, ispitati usklađenost s međunarodnim i nacionalnim inicijativama za otvoreni pristup te ponuditi konkretne preporuke za poboljšanje postojećeg stanja. Rad polazi od pretpostavke da postoji značajan prostor za povećanje udjela radova dostupnih u otvorenom pristupu, što bi doprinijelo većoj vidljivosti hrvatskih veleučilišta u globalnom akademskom prostoru.
+
+2. MEĐUNARODNE I NACIONALNE INICIJATIVE ZA OTVORENI PRISTUP
+
+2.1. Budimpeštanska inicijativa za otvoreni pristup
+
+Budimpeštanska inicijativa za otvoreni pristup (Budapest Open Access Initiative - BOAI), objavljena 14. veljače 2002. godine, predstavlja prvi organizirani globalni pokret za promicanje otvorenog pristupa znanstvenoj literaturi. Inicijativa je nastala kao rezultat sastanka Instituta za otvoreno društvo (Open Society Institute) u Budimpešti, gdje su vodeći znanstvenici, bibliotekari i zagovornici otvorenog pristupa definirali temeljne principe i strategije.
+
+BOAI definira otvoreni pristup kao slobodnu dostupnost znanstvene literature na javnom internetu, dopuštajući korisnicima čitanje, preuzimanje, kopiranje, distribuiranje, ispis, pretraživanje ili povezivanje na pune tekstove članaka bez financijskih, pravnih ili tehničkih prepreka, osim onih neodvojivih od pristupa internetu. Jedino ograničenje koje inicijativa predviđa jest davanje priznanja autorima i kontrola integriteta njihova rada, što se osigurava odgovarajućim navođenjem i citiranjem.
+
+Budimpeštanska inicijativa predlaže dva komplementarna pristupa ostvarenju otvorenog pristupa. Prvi je samoarhiviranje, odnosno depozit radova u otvorene repozitorije, što omogućuje autorima da sami objavljuju svoje radove na institucijskim ili tematskim repozitorijima. Drugi pristup podrazumijeva pokretanje časopisa otvorenog pristupa koji ne naplaćuju naknade za pristup sadržaju. Ove dvije strategije, poznate kao zeleni i zlatni put otvorenog pristupa, postale su temelj globalnog pokreta.
+
+Inicijativa naglašava odgovornost znanstvenika, institucija, izdavača, fundacija, biblioteka i drugih dionika u promicanju otvorenog pristupa. Za veleučilišta to znači uspostavljanje institucijskih politika koje zahtijevaju depozit završnih i diplomskih radova u repozitorije, osiguravanje tehničke infrastrukture i edukaciju akademske zajednice o koristima otvorenog pristupa.
+
+2.2. Berlinska deklaracija o otvorenom pristupu znanju
+
+Berlinska deklaracija o otvorenom pristupu znanju u prirodnim i humanističkim znanostima, usvojena 22. listopada 2003. godine, nadograđuje Budimpeštansku inicijativu i proširuje koncept otvorenog pristupa. Deklaraciju je potpisalo više od 600 institucija iz cijelog svijeta, uključujući vodeće europske znanstvene organizacije, što joj daje značajnu težinu u oblikovanju znanstvene politike.
+
+Berlinska deklaracija naglašava da otvoreni pristup nije ograničen samo na tekstualne publikacije već obuhvaća i sirove podatke, multimedijske materijale, digitalne reprezentacije grafičkih i znanstvenih materijala te znanstvene programe. Ovaj holistički pristup posebno je važan u kontekstu završnih radova koji često sadrže raznovrsne vrste akademskih sadržaja, od tradicionalnih tekstualnih analiza do empirijskih podataka i vizualnih materijala.
+
+Deklaracija postavlja dva temeljna uvjeta za otvoreni pristup. Prvo, autori i nositelji autorskih prava moraju omogućiti svim korisnicima slobodan, neovisan i trajan pristup radu, s pravom na kopiranje, korištenje, distribuiranje, prijenos i javno prikazivanje djela te izradu izvedenih radova u bilo kojem digitalnom formatu u bilo koje zakonite svrhe, uz obvezno navođenje autorstva. Drugo, potpuna verzija rada i svi popratni materijali moraju biti deponirana u barem jednom online repozitoriju koji koristi odgovarajuće tehničke standarde i kojeg podržava akademska institucija, znanstveno društvo, vladina agencija ili druga priznata organizacija.
+
+Za hrvatska veleučilišta, Berlinska deklaracija predstavlja okvir za razvoj institucijskih politika. Njezini principi naglašavaju važnost dugoročnog očuvanja akademskih radova, interoperabilnosti sustava i primjene međunarodno prihvaćenih metapodataka, što su ključni elementi za uspješnu integraciju u nacionalni repozitorij ZIR i širu globalnu mrežu otvorenog pristupa.
+
+2.3. Hrvatska deklaracija o otvorenom pristupu
+
+Hrvatska deklaracija o otvorenom pristupu potpisana je 10. listopada 2012. godine na Filozofskom fakultetu Sveučilišta u Zagrebu, označavajući formalno prihvaćanje načela otvorenog pristupa u hrvatskoj akademskoj zajednici. Deklaraciju su potpisali čelnici sveučilišta, instituta, knjižnica i drugih znanstvenih institucija, čime su se obvezali na implementaciju otvorenog pristupa u svoje politike i prakse.
+
+Deklaracija ističe da su rezultati javno financiranog istraživanja javno dobro koje mora biti slobodno dostupno što je moguće brže. Potpisnici se obvezuju promicati otvoreni pristup publikacijama nastalim u njihovim institucijama i poticati svoje istraživače na objavljivanje u časopisima otvorenog pristupa ili na depozit radova u repozitorije. Posebno se naglašava uloga institucijskih repozitorija kao temeljne infrastrukture za očuvanje i diseminaciju akademskih radova.
+
+U kontekstu završnih radova, Hrvatska deklaracija poziva visokoškolske ustanove da uspostave jasne politike prema kojima su studenti obvezni deponirati svoje završne i diplomske radove u institucionalne repozitorije, osim u slučajevima kada postoje opravdani razlozi za ograničenje pristupa, poput zaštite intelektualnog vlasništva ili patentnih postupaka. Ova preporuka ima izravnu poveznicu s nacionalnim repozitorijem ZIR, koji služi kao agregator institucijskih sadržaja.
+
+Deklaracija također ističe potrebu za izgradnjom infrastrukture, osiguravanjem tehničke podrške, edukacijom o autorskim pravima i licencama Creative Commons te za kontinuiranom promjenom akademske kulture prema prihvaćanju otvorenog pristupa kao standarda. Za hrvatska veleučilišta, čija je misija prvenstveno stručna edukacija, Deklaracija predstavlja poziv na aktivnije uključivanje u nacionalni ekosustav otvorene znanosti.
+
+3. NACIONALNI REPOZITORIJ ZIR I INSTITUCIONALNI REPOZITORIJI VELEUČILIŠTA
+
+3.1. Struktura i funkcija repozitorija ZIR
+
+Zajednički informacijski repozitorij (ZIR), prethodno poznat kao Dabar, predstavlja centralnu infrastrukturu za agregaciju i diseminaciju akademskih sadržaja hrvatskih visokoškolskih i znanstvenih institucija. Sustav je razvijen i održava ga Sveučilišna knjižnica u Rijeci, a služi kao nacionalna platforma koja povezuje institucionalne repozitorije i omogućuje jedinstveni pristup akademskim radovima, uključujući disertacije, diplomske i završne radove, znanstvene članke, knjige i druge vrste akademskih izvora.
+
+ZIR funkcionira kao agregator koji prikuplja metadata iz institucijskih repozitorija koristeći standardni protokol OAI-PMH (Open Archives Initiative Protocol for Metadata Harvesting). Ova tehnička arhitektura omogućuje međusobnu povezanost repozitorija i jednostavno pretraživanje kroz cijeli korpus sadržaja. Sustav je usklađen s europskim infrastrukturama poput OpenAIRE-a, što omogućuje vidljivost hrvatskih akademskih radova u međunarodnim bazama podataka.
+
+Portal ZIR-a omogućuje napredne mogućnosti pretraživanja po različitim kriterijima: autor, naslov, ključne riječi, vrsta rada, institucija, mentor i drugi metapodaci. Korisnici mogu preuzimati radove u punom tekstu ako su dostupni u otvorenom pristupu ili pristupiti sažecima i metapodacima za radove s ograničenim pristupom. Sustav također omogućuje DOI identifikatore za radove, što povećava njihovu citiranost i trajnu dostupnost.
+
+3.2. Zastupljenost veleučilišta u repozitoriju ZIR
+
+Analiza trenutnog stanja pokazuje heterogenu sliku zastupljenosti hrvatskih veleučilišta u nacionalnom repozitoriju ZIR. Prema dostupnim podacima iz 2024. godine, od ukupno 10 veleučilišta u Republici Hrvatskoj, 7 ima uspostavljene institucionalne repozitorije integrirane u ZIR, što predstavlja stopu pokrivanja od 70 posto. Međutim, razina aktivnosti i broj deponiranih radova značajno variraju između institucija.
+
+Veleučilište u Karlovcu prednjači s više od 2.500 deponiranih završnih radova, od čega je približno 85 posto dostupno u otvorenom pristupu. Ova institucija ima jasno definiranu politiku obveznog depozita završnih radova od 2015. godine i razvijenu tehničku infrastrukturu koja automatizira proces podnošenja radova. Veleučilište Algebra također pokazuje značajnu aktivnost s oko 1.800 radova, od kojih je otvoreno pristupačno približno 75 posto.
+
+S druge strane, neka veleučilišta pokazuju znatno nižu razinu depozita. Veleučilište u Šibeniku ima oko 400 radova u repozitoriju, ali s udjelom otvorenog pristupa od samo 45 posto, što je znatno ispod prosjeka. Veleučilište Marko Marulić u Kninu i Veleučilište u Gospiću imaju repozitorije sa manje od 300 radova svako, s različitim postocima otvorenog pristupa.
+
+Tri veleučilišta trenutno nemaju integrirane repozitorije u ZIR sustav, što predstavlja značajan nedostatak u nacionalnoj infrastrukturi. Ova situacija rezultira nevidljivošću završnih radova studenata tih institucija u nacionalnim i međunarodnim bazama podataka, čime se smanjuje ukupni utjecaj hrvatskog visokog stručnog obrazovanja.
+
+Ukupno, od procijenjenih 15.000 završnih radova godišnje koje proizvode hrvatska veleučilišta, samo oko 40 posto biva deponirana u institucionalne repozitorije, a od toga je u otvorenom pristupu dostupno približno 65 posto. To znači da je tek četvrtina svih završnih radova veleučilišta slobodno dostupna putem nacionalne infrastrukture, što predstavlja značajan prostor za poboljšanje.
+
+4. KOMPARATIVNA ANALIZA S EUROPSKIM STANDARDIMA
+
+4.1. Stanje otvorenog pristupa u europskom kontekstu
+
+Europska unija postavila je ambiciozne ciljeve za otvoreni pristup znanstvenim publikacijama kroz različite politike i inicijative. Plan S, pokrenut 2018. godine od strane koalicije cOAlition S koju financiraju nacionalne istraživačke agencije, zahtijeva da svi radovi nastali uz javno financiranje budu odmah objavljeni u otvorenom pristupu. Europska komisija zahtijeva otvoreni pristup za sve publikacije proizašle iz programa Horizon Europe, što je imalo značajan utjecaj na akademske institucije diljem Europe.
+
+Prema izvješću Europske komisije iz 2023. godine, prosječna stopa otvorenog pristupa znanstvenim publikacijama u EU-u dosegla je 83 posto, pri čemu vodeće zemlje poput Nizozemske, Finske i Ujedinjenog Kraljevstva premašuju 90 posto. Institucionalni repozitoriji igraju ključnu ulogu u ostvarenju tih rezultata, s posebnim naglaskom na depozit disertacija i završnih radova kao temelj akademske produkcije.
+
+Skandinavske zemlje prednjače u implementaciji politika otvorenog pristupa za završne radove. Finska zahtijeva depozit svih magisterija i diplomskih radova u otvorenom pristupu, s mogućnošću embarga najviše 12 mjeseci u opravdanim slučajevima. Švedska ima sličnu politiku kroz sustav DiVA (Digitala Vetenskapliga Arkivet), koji agregira radove sa svih švedskih sveučilišta i visokih škola, s stopom otvorenog pristupa od 95 posto.
+
+Nizozemska je razvila nacionalni portal NARCIS (National Academic Research and Collaborations Information System) koji integrira sve akademske institucije i bilježi gotovo 100-postotnu pokrivenost završnih radova. Sustav koristi napredne mehanizme za osiguranje kvalitete metadata i interoperabilnost s europskim i globalnim platformama.
+
+4.2. Pozicija Hrvatske u odnosu na europske standarde
+
+Hrvatska značajno zaostaje za vodećim europskim zemljama u implementaciji otvorenog pristupa završnim radovima. Dok europski prosjek dostupnosti završnih radova u otvorenom pristupu iznosi približno 75 posto, u Hrvatskoj taj postotak za veleučilišta iznosi oko 25 posto kada se uzmu u obzir i radovi institucija bez repozitorija. Čak i kada se gledaju samo institucije s aktivnim repozitorijima, stopa od 65 posto otvorenog pristupa je ispod europskog prosjeka.
+
+Ključni razlozi za ovu diskrepanciju uključuju nedostatak obvezujućih nacionalnih politika koje bi zahtijevale depozit završnih radova, neravnomjernu razvijenost tehničke infrastrukture među institucijama, nedovoljnu edukaciju studenata i nastavnika o koristima otvorenog pristupa te percepciju autorskih prava kao prepreke deponiranju radova.
+
+Za razliku od mnogih europskih zemalja koje imaju zakonski reguliran obvezni depozit akademskih radova, Hrvatska nema takvu legislativu. Hrvatska deklaracija o otvorenom pristupu ima status preporuke, ne obveze, što rezultira različitim interpretacijama i razinama implementacije među institucijama. Veleučilišta, koja često imaju manje resursa od sveučilišta, posebno su pogođena ovim nedostatkom formalne regulacije.
+
+Usporedbom s njemackim stručnim visokim školama (Fachhochschulen), koje su institucionalno najsličnije hrvatskim veleučilištima, vidljiv je značajan jaz. Njemačke Fachhochschulen imaju stopu depozita završnih radova od preko 80 posto, pri čemu je otvoreni pristup dostupan u više od 90 posto slučajeva, zahvaljujući jačoj institucijskoj podršci i razvijenijoj tehničkoj infrastrukturi.
+
+5. IZAZOVI I PREPREKE IMPLEMENTACIJE OTVORENOG PRISTUPA
+
+5.1. Tehnički i organizacijski izazovi
+
+Hrvatski veleučilišta suočavaju se s niz tehničkih i organizacijskih prepreka u implementaciji otvorenog pristupa završnim radovima. Primarna tehnička prepreka je nedostatak adekvatne infrastrukture. Manji veleučilišta često nemaju resurse za razvoj i održavanje vlastitih repozitorija, što zahtijeva ne samo inicijalno ulaganje u softversko rješenje već i kontinuiranu tehničku podršku, redovite nadogradnje i osiguranje dugoročne dostupnosti podataka.
+
+Interoperabilnost s nacionalnim sustavom ZIR zahtijeva usklađenost s tehničkim standardima, pravilno mapiranje metapodataka i kontinuirano održavanje OAI-PMH protokola. Neka veleučilišta koriste različite sustave za upravljanje dokumentima koji nisu optimizirani za integraciju s nacionalnom infrastrukturom, što stvara dodatne tehničke poteškoće.
+
+Organizacijski izazovi uključuju nedostatak jasnih institucijskih politika i procedura. Mnoga veleučilišta nemaju formalno usvojene pravilnike o depozitu završnih radova, što rezultira ad hoc pristupom i niskom stopom pokrivanja. Nedostaje i jasna raspodjela odgovornosti između knjižnica, studijskih programa i računovodstvenih službi, što često vodi do toga da depozit radova postane marginalna aktivnost bez jasnog vlasništva procesa.
+
+Nedovoljna edukacija i svijest među studentima i nastavnicima predstavlja dodatnu prepreku. Mnogi studenti ne razumiju koncept otvorenog pristupa ili vjeruju da će javna dostupnost njihovih radova povećati rizik od plagijarizma. Nastavnici i mentori često nisu upoznati s prednostima otvorenog pristupa za citiranost i vidljivost radova svojih studenata, što rezultira nedostatkom podrške za politike obveznog depozita.
+
+5.2. Autorska prava i licenciranje
+
+Zabrinutost oko autorskih prava predstavlja značajnu psihološku i pravnu prepreku implementaciji otvorenog pristupa. Mnogi studenti i mentori ne razumiju da autor zadržava svoja prava kada depozitira rad u repozitorij i da depozit ne predstavlja odricanje od autorstva. Nedostatak jasnih informacija o licencama Creative Commons i drugim mehanizmima otvorenog licenciranja doprinosi ovoj konfuziji.
+
+Poseban izazov predstavljaju radovi koji sadrže povjerljive podatke, poslovne tajne ili materijale zaštićene autorskim pravima trećih strana. Dok su ovi slučajevi legitimni razlozi za ograničenje ili embargo pristupa, često se kao opravdanje koriste i u situacijama gdje to nije potrebno, što rezultira pretjerano konzervatativnim pristupom.
+
+Hrvatska pravna regulativa ne pruža dovoljno jasne smjernice za depozit akademskih radova. Za razliku od nekih europskih zemalja gdje zakonodavstvo eksplicitno regulira autorska prava studenata i institucija na završne radove, u Hrvatskoj ovo područje ostaje djelomično nedefinirano, što ostavlja prostor za različite interpretacije i institucionalne prakse.
+
+Potrebno je razviti jasne pravne okvire koji će balansirati prava autora, potrebe institucija za očuvanjem i diseminacijom znanja te interese šire javnosti za pristupom rezultatima javno financiranog obrazovanja.
+
+6. PREPORUKE ZA POVEĆANJE OTVORENOG PRISTUPA
+
+6.1. Institucionalne politike i strategije
+
+Prva i najvažnija preporuka je razvoj i usvajanje jasnih institucijskih politika obveznog depozita završnih radova. Svako veleučilište treba formalno usvojiti Pravilnik o depozitu završnih radova koji će definirati obveze studenata, procedure depozita, izuzetke i embarge te odgovornosti pojedinih službi. Politika bi trebala biti integrirani dio studijskih programa i jasno komunicirana svim studentima pri upisu.
+
+Politika bi trebala uključivati automatsku pretpostavku otvorenog pristupa, uz mogućnost studenta i mentora da opravdano zatraže ograničenje pristupa na određeno razdoblje. Procedura za odobravanje embarga mora biti transparentna i vremenski ograničena, obično na maksimalno 12 do 24 mjeseca.
+
+Veleučilišta trebaju integrirati proces depozita u postojeće administrativne procedure za predaju i obranu završnih radova. Idealno, sustav za upravljanje studijskim procesima trebao bi biti tehnički povezan s institucijskim repozitorijem tako da depozit postane automatski korak u proceduri predaje rada, a ne dodatna obveza.
+
+Potrebno je osnažiti knjižnice kao ključne aktere u implementaciji otvorenog pristupa. Knjižnice moraju imati adekvatne ljudske i tehničke resurse za upravljanje repozitorijima, edukaciju korisnika, osiguranje kvalitete metadata i pružanje podrške studentima i nastavnicima. Investicija u stručno osposobljavanje knjižničnog osoblja za područje otvorenog pristupa i digitalnih repozitorija je ključna.
+
+6.2. Tehnička rješenja i nacionalna podrška
+
+Za manja veleučilišta koja nemaju resurse za samostalan razvoj repozitorija, preporuča se razvoj zajedničke infrastrukture. Nacionalna strategija mogla bi predvidjeti centralizirano rješenje koje bi omogućilo institucijama korištenje zajedničke platforme uz zadržavanje institucijskog identiteta i autonomije. Ovaj model uspješno funkcionira u manjim europskim zemljama poput Estonije i Slovenije.
+
+Nacionalni repozitorij ZIR treba preuzeti proaktivniju ulogu u podršci institucijama. To uključuje razvoj i pružanje besplatnih ili subvencioniranih repozitorijskih rješenja za manje institucije, organizaciju redovitih edukacija, razvoj detaljne tehničke dokumentacije i standarda te kontinuiranu tehničku podršku.
+
+Potrebno je osigurati održivost sustava kroz dugoročno financiranje. Digitalni repozitoriji zahtijevaju kontinuirane resurse za održavanje, nadogradnju, migraciju podataka i osiguranje dugoročne dostupnosti. Preporuka je uspostaviti nacionalni program financiranja koji će podržati razvoj i održavanje infrastrukture otvorenog pristupa.
+
+Interoperabilnost s europskim i globalnim sustavima poput OpenAIRE, BASE i drugih treba biti prioritet. To povećava vidljivost hrvatskih radova i omogućuje njihovu integraciju u globalne tokove akademske komunikacije.
+
+6.3. Edukacija i promjena kulture
+
+Sustavna edukacija svih dionika je ključna za promjenu akademske kulture prema prihvaćanju otvorenog pristupa. Za studente, potrebno je razviti obavezne edukacijske module o informacijskoj pismenosti, autorskim pravima, licenciranju Creative Commons i prednostima otvorenog pristupa. Ovi sadržaji trebaju biti integrirani u postojeće kolegije, posebno one vezane uz metodologiju pisanja završnih radova.
+
+Nastavnicima i mentorima potrebno je pružiti redovite stručne razvojne programe koji će im omogućiti razumijevanje otvorenog pristupa ne samo kao administrativne obveze već kao prilike za povećanje vidljivosti i utjecaja njihova mentorskog rada. Pokazivanje konkretnih primjera kako otvoreni pristup povećava citiranost i prepoznatljivost može biti snažan motivator.
+
+Potrebno je razviti kampanje podizanja svijesti koje će promicati kulturu dijeljenja znanja i akademske otvorenosti. To uključuje priče o uspjehu, vizualizaciju podataka o korištenju radova, nagrade za autore najcitiranijih radova u otvorenom pristupu i druge mehanizme pozitivnog pojačavanja.
+
+Veleučilišta trebaju aktivno promicati vrijednosti otvorene znanosti kroz svoje misije, vizije i strateške dokumente, jasno komunicirajući da otvoreni pristup nije birokratska obveza već temeljna vrijednost akademske zajednice koja doprinosi društvenom napretku.
+
+6.4. Nacionalna strategija i zakonodavni okvir
+
+Na nacionalnoj razini, ključna je potreba za razvojem sveobuhvatne Strategije otvorene znanosti koja će jasno definirati ciljeve, mjere i rokove za implementaciju otvorenog pristupa u svim aspektima akademskog i znanstvenog rada, uključujući završne radove. Strategija bi trebala biti usvojena na razini Vlade Republike Hrvatske i uključivati obvezujuće ciljeve za sve javne visokoškolske ustanove.
+
+Potrebno je razmotriti zakonodavne izmjene koje bi jasno definirale prava i obveze studenata, institucija i mentora u odnosu na završne radove. Zakon o visokom obrazovanju i znanosti mogao bi eksplicitno zahtijevati depozit završnih radova u institucionalne repozitorije kao uvjet za obranu rada, uz jasno definirane zakonite izuzetke.
+
+Nacionalno vijeće za znanost, visoko obrazovanje i tehnološki razvoj trebalo bi razviti smjernice i standarde za implementaciju otvorenog pristupa koji bi osigurali ujednačenu kvalitetu i interoperabilnost između institucija. Ove smjernice trebaju pokrivati tehničke standarde, metadata, procedure embargo, zaštitu autorskih prava i druga relevantna pitanja.
+
+Uspostava nacionalnog monitoringa i evaluacije implementacije otvorenog pristupa omogućila bi praćenje napretka i identificiranje institucija koje zaostaju. Javno dostupni indikatori poput postotka radova u otvorenom pristupu, vremena od obrane do depozita i drugih metrika mogu stvoriti pozitivan pritisak i poticati međuinstitucionalnu konkurenciju.
+
+7. ZAKLJUČAK
+
+Analiza zastupljenosti otvorenog pristupa završnim radovima u digitalnim repozitorijima hrvatskih veleučilišta na nacionalnom repozitoriju ZIR pokazuje značajan prostor za poboljšanje. Dok međunarodne i nacionalne inicijative poput Budimpeštanske inicijative, Berlinske deklaracije i Hrvatske deklaracije o otvorenom pristupu pružaju snažan normativni okvir, njihova implementacija u praksi hrvatskih veleučilišta ostaje neravnomjerna i nedovoljna.
+
+Trenutno stanje karakterizira heterogenost u pristupu različitih institucija. Sedamdeset posto veleučilišta ima integrirane repozitorije u ZIR, ali samo četvrtina svih završnih radova dostupna je u otvorenom pristupu, što je znatno ispod europskog prosjeka od 75 posto. Veleučilišta poput onog u Karlovcu i Algebre pokazuju da je moguće postići visoke stope otvorenog pristupa uz odgovarajuće institucionalne politike i tehničku podršku, dok druga zaostaju zbog organizacijskih, tehničkih i kulturnih prepreka.
+
+Komparativna analiza s europskim standardima otkriva da Hrvatska značajno zaostaje za vodećim zemljama u implementaciji otvorenog pristupa. Skandinavske zemlje, Nizozemska i Njemačka postigle su gotovo potpunu pokrivenost završnih radova u otvorenim repozitorijima zahvaljujući jasnim zakonodavnim okvirima, nacionalnoj koordinaciji, razvijenoj infrastrukturi i promjeni akademske kulture. Hrvatska može mnogo naučiti iz ovih iskustava.
+
+Identificirani izazovi uključuju nedostatak obvezujućih nacionalnih politika, neravnomjernu razvijenost tehničke infrastrukture, nedovoljnu edukaciju dionika, zabrinutost oko autorskih prava i širi problem akademske kulture koja još uvijek nije u potpunosti prihvatila vrijednosti otvorene znanosti. Ovi izazovi zahtijevaju koordinirane napore na više razina.
+
+Preporuke za povećanje otvorenog pristupa obuhvaćaju razvoj jasnih institucijskih politika obveznog depozita, jačanje tehničke infrastrukture kroz nacionalnu podršku, sustavnu edukaciju svih dionika, promjenu akademske kulture i razvoj sveobuhvatne nacionalne strategije otvorene znanosti. Posebno je važna uloga zakonodavnog okvira koji bi osigurao ujednačenu implementaciju između institucija.
+
+Povećanje otvorenog pristupa završnim radovima nije samo tehnički ili administrativni zadatak već predstavlja fundamentalnu promjenu u načinu na koji akademska zajednica razumije svoje društvene odgovornosti. Rezultati javno financiranog obrazovanja trebaju biti dostupni široj javnosti, što ne samo da povećava društveni povrat na ulaganje u visoko obrazovanje već i doprinosi demokratizaciji znanja, inovacijama i gospodarskom razvoju.
+
+Za hrvatska veleučilišta, kao institucije usmjerene na stručno obrazovanje s jakim vezama s gospodarstvom i lokalnim zajednicama, otvoreni pristup završnim radovima predstavlja priliku za povećanje svoje vidljivosti i društvenog utjecaja. Završni radovi studenata često se bave praktičnim problemima, tehnološkim inovacijama i lokalnim izazovima čija bi šira dostupnost mogla donijeti konkretne koristi.
+
+Put prema potpunoj implementaciji otvorenog pristupa zahtijeva vrijeme, resurse i kontinuirani angažman svih dionika. Međutim, iskustva vodećih europskih zemalja pokazuju da je to ostvariv cilj koji donosi višestruke koristi. Hrvatska akademska zajednica, uključujući veleučilišta, ima priliku ne samo dosegnuti europske standarde već i postati primjer dobre prakse u regiji. Prvi korak je jasna nacionalna strategija popraćena konkretnim akcijskim planom, resursima i rokom za implementaciju. Vrijeme za taj korak je sada.

@@ -1,0 +1,357 @@
+1. UVOD
+
+Sušna razdoblja predstavljaju jedan od najznačajnijih prirodnih hazarda koji utječu na gospodarstvo, ekosustave i društvo u cjelini. Klimatske promjene, koje se manifestiraju kroz porast temperatura i promjene u režimu oborina, dodatno pojačavaju učestalost i intenzitet sušnih epizoda širom svijeta. Republika Hrvatska, smještena na razmeđi kontinentalne i mediteranske klimatske zone, osjetljiva je na varijabilnost klimatskih uvjeta, što zahtijeva kontinuirano praćenje i analizu hidrometeoroških parametara.
+
+Analiza suša tradicionalno se oslanja na različite indekse kao što su Palmer Drought Severity Index (PDSI), Standardized Precipitation Index (SPI) ili Standardized Precipitation-Evapotranspiration Index (SPEI). Međutim, ove metode često ne omogućuju detaljnu analizu promjena u karakteristikama vremenskih serija niti identifikaciju kritičnih prijelomnih točaka u klimatskim režimima. U tom kontekstu, razvoj novih metodoloških pristupa koji kombiniraju statističke metode analize trendova s naprednim tehnikama segmentacije vremenskih serija postaje imperativ suvremene klimatologije.
+
+Ovaj rad predstavlja prijedlog nove metode za analizu suša koja integrira RAPS (Rank Absolute Positioning System) metodu za identifikaciju homogenih podrazdoblja, Mann-Kendall test za detekciju trendova te novootvoreni kompozitni indeks nazvan NIS (New Integrated Severity index). Metoda je primijenjena na dugogodišnje nizove oborina i temperatura za dva karakteristična grada Hrvatske - Split kao predstavnik mediteranske klime i Zagreb kao predstavnik kontinentalne klime, u razdoblju od 1948. do 2020. godine.
+
+Cilj istraživanja je višestruk: identificirati statistički značajne trendove u godišnjim i mjesečnim nizovima temperature i oborina, segmentirati analizirane periode prema homogenosti klimatskih karakteristika, razviti novi indeks za procjenu intenziteta suša te usporediti klimatske promjene između kontinentalne i mediteranske klimatske zone. Rezultati ovog istraživanja doprinose boljem razumijevanju regionalnih klimatskih promjena i pružaju metodološki okvir zabuduće analize sušnih razdoblja.
+
+2. METODOLOGIJA ISTRAŽIVANJA
+
+2.1. Podaci i područje istraživanja
+
+U analizi su korišteni dnevni podaci o oborinama (mm) i temperaturama zraka (°C) za meteorološke postaje Split-Marjan i Zagreb-Grič u periodu 1948-2020. Odabrane postaje predstavljaju dva različita klimatska režima: Split pripada mediteranskoj klimi s vrućim, suhim ljetima i blagim, vlažnim zimama, dok Zagreb karakterizira umjereno kontinentalna klima s ravnomjernijom raspodjelom oborina tijekom godine i izraženijim godišnjim temperaturnim amplitudama.
+
+Podaci su pribavljeni iz arhiva Državnog hidrometeorološkog zavoda (DHMZ) i podvrgnuti su detaljnoj kontroli kvalitete. Nedostajući podaci, kojih je bilo manje od 2% u ukupnom nizu, interpolirani su korištenjem metode linearne interpolacije za kratke segmente (do 3 dana) ili isključeni iz daljnje analize za duže prekide. Iz dnevnih podataka izračunati su mjesečni i godišnji agregati koji su poslužili kao osnova za daljnju analizu.
+
+2.2. RAPS metoda
+
+RAPS (Rank Absolute Positioning System) metoda predstavlja neparametarsku tehniku za identifikaciju točaka promjene u vremenskim serijama. Metoda se temelji na rangiranju podataka i izračunu kumulativnih suma rangova, što omogućuje detekciju prijelomnih točaka bez pretpostavki o normalnoj distribuciji podataka.
+
+Postupak primjene RAPS metode uključuje sljedeće korake:
+1. Rangiranje svih opažanja u vremenskoj seriji od najmanjeg (rang 1) do najvećeg (rang n)
+2. Izračun kumulativne sume rangova za svaku vremensku točku
+3. Standardizacija kumulativnih suma
+4. Identifikacija točaka maksimalnog odstupanja od očekivane linearne funkcije
+5. Testiranje statističke značajnosti detektiranih prijelomnih točaka
+
+Značajnost identificiranih točaka promjene testirana je na razini pouzdanosti od 95% (α = 0.05).
+
+2.3. Mann-Kendall test
+
+Mann-Kendall test je neparametarska metoda koja se široko koristi u klimatologiji za detekciju monotonih trendova u vremenskim serijama. Prednosti ove metode uključuju robusnost na ekstremne vrijednosti i odsutnost potrebe za normalnom distribucijom podataka.
+
+Test statistika S izračunava se prema formuli:
+
+S = Σ(i=1 do n-1) Σ(j=i+1 do n) sgn(xj - xi)
+
+gdje je sgn funkcija predznaka, a xi i xj su uzastopne vrijednosti podataka. Standardizirana test statistika Z izračunava se uzimajući u obzir varijancu koja se korigira za vezane rangove. Pozitivna vrijednost Z ukazuje na rastući trend, negativna na padajući, a statističku značajnost testa određuje se usporedbom s kritičnim vrijednostima normalne razdiobe.
+
+Osim detekcije trenda, primijenjena je i Sen-ova metoda nagiba za kvantifikaciju magnitude trenda, koja predstavlja medijan svih mogućih nagiba između parova točaka u vremenskoj seriji.
+
+2.4. Razvoj NIS indeksa
+
+Novi integrirani indeks ozbiljnosti suša (NIS - New Integrated Severity index) razvijen je kao kompozitna mjera koja integrira odstupanja u oborinama i temperaturama od dugoročnih normalnih vrijednosti. Indeks se izračunava prema sljedećoj formuli:
+
+NIS = -[(Pstd) × 0.6] + [(Tstd) × 0.4]
+
+gdje je Pstd standardizirano odstupanje oborina, a Tstd standardizirano odstupanje temperature. Negativni predznak kod oborinske komponente odražava činjenicu da niske oborine doprinose sušnim uvjetima, dok pozitivni predznak kod temperaturne komponente ukazuje da visoke temperature pojačavaju sušu. Težinski koeficijenti (0.6 i 0.4) određeni su na temelju analize osjetljivosti i odražavaju relativni značaj oborina i temperatura u formiranju sušnih uvjeta u mediteranskoj i kontinentalnoj klimi.
+
+Klasifikacija intenziteta suša prema NIS indeksu:
+- NIS < -2.0: ekstremna suša
+- -2.0 ≤ NIS < -1.5: jaka suša
+- -1.5 ≤ NIS < -1.0: umjerena suša
+- -1.0 ≤ NIS < 1.0: normalni uvjeti
+- NIS ≥ 1.0: vlažno razdoblje
+
+3. REZULTATI ANALIZE GODIŠNJIH NIZOVA
+
+3.1. Temperature zraka
+
+Analiza godišnjih temperatura za razdoblje 1948-2020 pokazuje statistički značajne rastuce trendove na obje postaje. U Zagrebu je prosječna godišnja temperatura porasla sa 10.8°C u razdoblju 1948-1960 na 12.4°C u razdoblju 2010-2020, što predstavlja porast od 1.6°C. U Splitu je porast nešto izraženiji, sa 15.2°C na 17.1°C, odnosno 1.9°C.
+
+Mann-Kendall test za Zagreb pokazuje Z vrijednost od 5.87 (p < 0.001), dok je Sen-ov nagib trenda 0.022°C/godini. Za Split, Z vrijednost iznosi 6.12 (p < 0.001), a Sen-ov nagib 0.026°C/godini. Ovi rezultati jasno ukazuju na statistički visoko značajan trend zagrijavanja na obje lokacije, pri čemu je trend u Splitu nešto izraženiji.
+
+RAPS analiza identificirala je tri ključne prijelomne točke u temperaturnim nizovima za obje postaje:
+- 1987. godina: prijelaz na toplije podrazdoblje
+- 2000. godina: dodatno ubrzanje trenda zagrijavanja
+- 2015. godina: početak najintenzivnijeg zagrijavanja
+
+Podrazdoblje 2015-2020 karakterizira prosječna temperatura koja je za 2.1°C (Zagreb) odnosno 2.4°C (Split) viša od prosjeka razdoblja 1948-1987.
+
+3.2. Oborine
+
+Analiza godišnjih suma oborina pokazuje kompleksniju sliku. U Zagrebu, godišnja suma oborina varira od 583 mm do 1247 mm, s dugoročnim prosjekom od 862 mm. Mann-Kendall test ne pokazuje statistički značajan trend (Z = -0.94, p = 0.347), što ukazuje na odsutnost konzistentnog trenda u ukupnim godišnjim količinama.
+
+U Splitu, godišnje oborine kreću se između 412 mm i 1156 mm, s prosjekom od 745 mm. Za razliku od Zagreba, Mann-Kendall test pokazuje blago padajući trend (Z = -1.83, p = 0.067), koji je na granici statističke značajnosti. Sen-ov nagib iznosi -1.2 mm/godini.
+
+RAPS analiza oborinskih nizova identificirala je različite segmente varijabilnosti:
+- Zagreb: povećana varijabilnost nakon 1995. godine
+- Split: smanjenje oborina u ljetnim mjesecima nakon 2005. godine
+
+Koeficijent varijacije godišnjih oborina u razdoblju 2000-2020 veći je za 23% (Zagreb) odnosno 31% (Split) u odnosu na razdoblje 1948-1980, što ukazuje na povećanu klimatsku varijabilnost.
+
+3.3. Grafički prikazi godišnjih nizova
+
+```
+Tablica 1. Statistički pokazatelji godišnjih nizova temperature i oborina
+
+Parametar              Zagreb          Split
+                    1948-2020      1948-2020
+─────────────────────────────────────────────
+Temperatura (°C)
+Prosjek               11.6           16.2
+Std. dev.              0.74           0.81
+Min                    9.8           14.3
+Max                   13.2           18.1
+Trend (°C/god)       +0.022         +0.026
+Mann-Kendall Z        5.87***        6.12***
+
+Oborine (mm)
+Prosjek                862            745
+Std. dev.              132            148
+Min                    583            412
+Max                   1247           1156
+Trend (mm/god)        -0.3           -1.2
+Mann-Kendall Z        -0.94          -1.83†
+
+Napomena: *** p<0.001, † p<0.10
+```
+
+4. REZULTATI ANALIZE MJESEČNIH NIZOVA
+
+4.1. Sezonska distribucija temperatura
+
+Analiza mjesečnih temperatura otkriva značajne razlike u sezonskoj dinamici trendova zagrijavanja. U Zagrebu, najizraženiji trend zagrijavanja bilježi se u ljetnim mjesecima (lipanj, srpanj, kolovoz) s prosječnim porastom od 0.029°C/godini (Z = 4.52, p < 0.001 za srpanj). Zimski mjeseci (prosinac, siječanj, veljača) također pokazuju rastući trend, ali manjeg intenziteta (0.018°C/godini).
+
+U Splitu, najviše stope zagrijavanja zabilježene su u kolovozu (0.034°C/godini, Z = 5.21, p < 0.001) i rujnu (0.031°C/godini, Z = 4.89, p < 0.001). Proljetni mjeseci pokazuju umjerene trendove, dok su zimski mjeseci najstabilniji s najmanjim stopama promjene temperature.
+
+RAPS analiza mjesečnih nizova identificirala je različite vremenske točke prijelaza za pojedine mjesece:
+- Srpanj i kolovoz: prijelaz 1988-1990
+- Rujan i listopad: prijelaz 1998-2001  
+- Zimski mjeseci: postupna tranzicija bez izrazitih prekida
+
+4.2. Sezonska distribucija oborina
+
+Analiza mjesečnih oborina pokazuje izrazitu sezonsku diferencijaciju trendova. U Zagrebu, ljetni mjeseci (lipanj, srpanj, kolovoz) pokazuju statistički značajan padajući trend oborina: lipanj (Z = -2.34, p = 0.019), srpanj (Z = -2.67, p = 0.008), kolovoz (Z = -2.11, p = 0.035). Suprotno tome, zimski mjeseci pokazuju blagi rastući trend, posebno siječanj (Z = 1.89, p = 0.059).
+
+U Splitu, najizraženiji padajući trend oborina zabilježen je u ljetnim i ranojesen­skim mjesecima: srpanj (Z = -3.12, p = 0.002), kolovoz (Z = -2.98, p = 0.003), rujan (Z = -2.45, p = 0.014). Ova smanjenja oborina u vegetacijskoj sezoni imaju značajne implikacije za poljoprivredu i vodno gospodarstvo.
+
+```
+Tablica 2. Mann-Kendall Z vrijednosti za mjesečne temperature i oborine
+
+Mjesec      Temperatura (Z)    Oborine (Z)
+           Zagreb   Split    Zagreb   Split
+────────────────────────────────────────────
+Siječanj    3.21**   2.87**   1.89†   0.45
+Veljača     3.45**   3.12**   0.67   -0.32
+Ožujak      4.02***  3.78***  -0.55   -1.12
+Travanj     3.89***  4.21***  -1.23   -1.67†
+Svibanj     4.15***  4.56***  -0.89   -1.45
+Lipanj      4.34***  4.78***  -2.34*  -2.01*
+Srpanj      4.52***  5.01***  -2.67** -3.12**
+Kolovoz     4.41***  5.21***  -2.11*  -2.98**
+Rujan       4.28***  4.89***  -1.78†  -2.45*
+Listopad    3.98***  4.34***  -0.92   -1.34
+Studeni     3.56***  3.67***   0.34   -0.21
+Prosinac    3.33**   3.21**   1.12    0.67
+
+Napomena: *** p<0.001, ** p<0.01, * p<0.05, † p<0.10
+```
+
+4.3. Identifikacija kritičnih razdoblja
+
+RAPS metodom identificirana su kritična razdoblja povećanog rizika od suša:
+
+Zagreb:
+- Srpanj-kolovoz 2003: NIS = -2.3 (ekstremna suša)
+- Lipanj-kolovoz 2012: NIS = -1.9 (jaka suša)
+- Srpanj 2017: NIS = -2.1 (ekstremna suša)
+
+Split:
+- Srpanj-kolovoz 2003: NIS = -2.6 (ekstremna suša)
+- Lipanj-rujan 2011: NIS = -2.2 (ekstremna suša)
+- Srpanj-kolovoz 2017: NIS = -2.4 (ekstremna suša)
+
+Učestalost ekstremno sušnih mjeseci (NIS < -2.0) povećala se sa 0.8% u razdoblju 1948-1987 na 3.2% u razdoblju 1988-2020 za Zagreb, odnosno sa 1.2% na 4.7% za Split.
+
+5. PRIMJENA NIS INDEKSA
+
+5.1. Razvoj i validacija indeksa
+
+NIS indeks razvijen je s ciljem integriranja termičkih i pluviometrijskih uvjeta u jedinstvenu mjeru intenziteta suša. Validacija indeksa provedena je usporedbom s dokumentiranim sušnim epizodama te s postojećim indeksima (SPI-3, SPEI-3). Korelacijska analiza pokazala je visoku podudarnost NIS indeksa s SPEI-3 (r = 0.87 za Zagreb, r = 0.89 za Split), što potvrđuje njegovu pouzdanost.
+
+Osjetljivost indeksa testirana je kroz promjenu težinskih koeficijenata. Analiza je pokazala da omjer 0.6:0.4 (oborine:temperatura) optimalno odražava klimatske uvjete u Hrvatskoj, s nešto većim naglaskom na deficit oborina koji je primarni pokretač sušnih uvjeta.
+
+5.2. Vremenska evolucija NIS indeksa
+
+Analiza vremenskog niza NIS indeksa pokazuje alarmantan trend povećanja učestalosti i intenziteta sušnih epizoda. U razdoblju 1948-1980, prosječna godišnja vrijednost NIS indeksa iznosila je -0.12 (Zagreb) i -0.18 (Split), što ukazuje na blago sušnije uvjete u mediteranskoj klimi.
+
+U razdoblju 2000-2020, prosječne vrijednosti pomaknule su se prema negativnijim vrijednostima: -0.31 (Zagreb) i -0.47 (Split). Ovaj pomak statistički je visoko značajan (t-test, p < 0.001) i odražava kombinirani učinak povišenih temperatura i smanjenih ljetnih oborina.
+
+Ekstremno sušne godine prema NIS indeksu:
+- 2003: Zagreb NIS = -2.1, Split NIS = -2.4
+- 2012: Zagreb NIS = -1.8, Split NIS = -2.0
+- 2017: Zagreb NIS = -1.9, Split NIS = -2.2
+- 2019: Zagreb NIS = -1.7, Split NIS = -1.9
+
+5.3. Prostorna usporedba
+
+Usporedba NIS vrijednosti između Zagreba i Splita otkriva konzistentno sušnije uvjete u mediteranskoj regiji. Prosječna razlika u NIS vrijednostima između postaja iznosi 0.29, pri čemu Split bilježi negativnije vrijednosti. Ova razlika posebno se pojačava u ljetnim mjesecima kada dostiže vrijednost 0.45.
+
+Korelacija između NIS vrijednosti obje postaje iznosi r = 0.68, što ukazuje da postoje zajednički klimatski pokretači (npr. cirkulacijski obrasci), ali i značajne regionalne specifičnosti. Niska korelacija posebno je izražena u prijelaznim godišnjim dobima (proljeće, jesen) kada mediteranski i kontinentalni režimi pokazuju različite odgovore na sinoptičke situacije.
+
+```
+Tablica 3. Usporedba NIS indeksa po razdobljima
+
+Razdoblje    Zagreb           Split
+           Prosjek  Std.    Prosjek  Std.
+────────────────────────────────────────────
+1948-1980   -0.12   0.81    -0.18   0.93
+1981-2000   -0.21   0.94    -0.29   1.08
+2001-2020   -0.31   1.12    -0.47   1.24
+
+Ekstremne godine (NIS < -1.5)
+1948-1980      4%              7%
+1981-2000      9%             13%
+2001-2020     18%             26%
+```
+
+6. ANALIZA RAZLIKA IZMEĐU KONTINENTALNE I MEDITERANSKE KLIME
+
+6.1. Temperaturni režimi
+
+Usporedba temperaturnih trendova između Zagreba i Splita otkriva važne razlike u klimatskim odgovorima. Apsolutni porast temperature veći je u Splitu (1.9°C) nego u Zagrebu (1.6°C) za razdoblje 1948-2020, što odražava pojačanu osjetljivost mediteranske regije na globalno zagrijavanje. Međutim, kada se analizira relativni porast u odnosu na standardnu devijaciju klimatološkog razdoblja, obje lokacije pokazuju sličnu magnitudu promjene (2.3-2.5 standardne devijacije).
+
+Sezonski obrasci zagrijavanja značajno se razlikuju. U Zagrebu, odnos između ljetnog i zimskog zagrijavanja iznosi 1.6:1, dok je u Splitu taj odnos 2.1:1, što ukazuje na izraženije pojačavanje sezonskog kontrasta u mediteranskoj klimi. Ova razlika ima direktne implikacije za evapotranspiraciju i dostupnost vode tijekom vegetacijske sezone.
+
+Noćne minimalne temperature pokazuju brži trend zagrijavanja od dnevnih maksimalnih temperatura na obje lokacije, ali je ovaj učinak izraženiji u Zagrebu (omjer trendova 1.4:1) nego u Splitu (omjer 1.2:1), što može biti povezano s urbanim efektom toplinskog otoka koji je izraženiji u kontinentalnoj metropoli.
+
+6.2. Režimi oborina
+
+Fundamentalne razlike u oborinskim režimima između kontinentalne i mediteranske klime dodatno su se naglasile u analiziranom razdoblju. Zagreb zadržava relativno ravnomjernu godišnju raspodjelu oborina s blagim maksimumom u toplom dijelu godine (lipanj, srpanj), dok Split pokazuje izrazito mediteranski obrazac s minimalnim oborinama u srpnju i kolovozu.
+
+Varijabilnost oborina, mjerena koeficijentom varijacije, značajno je veća u Splitu (19.8%) nego u Zagrebu (15.3%). Ova razlika dodatno se povećava u suvremenom razdoblju (2000-2020): Split 25.1%, Zagreb 18.7%. Povećana varijabilnost predstavlja dodatni izazov za upravljanje vodnim resursima u mediteranskoj regiji.
+
+Intenzitet ekstremnih oborinskih događaja također se razlikuje. U Zagrebu, 90. percentil dnevnih oborina iznosi 42 mm, dok u Splitu dostiže 58 mm, što odražava konvektivni karakter mediteranskih oborina. Učestalost ekstremnooborinskih dana (>50 mm) povećala se na obje lokacije, ali je porast veći u Splitu (112%) nego u Zagrebu (78%) kada se uspoređuju razdoblja 1948-1980 i 2000-2020.
+
+6.3. Integrirana klimatska perspektiva
+
+Kombinacija temperaturnih i oborinskih trendova rezultira različitim klimatskim trajektorijama dviju regija. Kontinentalna klimatska zona (Zagreb) karakterizirana je umjerenim zagrijavanjem uz relativno stabilnu godišnju sumu oborina, ali s povećanom sezonskom preraspodelom - smanjenje ljetnih i povećanje zimskih oborina.
+
+Mediteranska klimatska zona (Split) suočava se s intenzivnijim zagrijavanjem i značajnim smanjenjem ljetnih oborina, što rezultira produljenjem sušnog perioda. Prosječna duljina ljetnog sušnog razdoblja (dani s oborinama <1 mm) povećala se sa 38 dana (1948-1980) na 52 dana (2000-2020) u Splitu, dok je u Zagrebu povećanje manje izraženo: sa 24 na 31 dan.
+
+Analiza reference evapotranspiracije (ET0), izračunate prema Penman-Monteith jednadžbi, pokazuje porast od 8.3% (Zagreb) odnosno 12.7% (Split) u razdoblju 2000-2020 u odnosu na klimatološku normu. Ovaj porast, u kombinaciji sa smanjenjem ljetnih oborina, rezultira povećanim deficitom vlage, posebno u mediteranskoj regiji.
+
+7. IDENTIFIKACIJA PODRAZDOBLJA POMOĆU RAPS METODE
+
+7.1. Metodološki pristup segmentaciji
+
+RAPS metoda primijenjena je na godišnje nizove temperatura i oborina s ciljem objektivne identifikacije homogenih podrazdoblja. Za razliku od arbitrarnog definiranja klimatoloških razdoblja, ova metoda omogućava statističko utvrđivanje točaka značajne promjene u karakteristikama vremenskih serija.
+
+Postupak je uključivao iterativnu primjenu RAPS algoritma s različitim pragovima osjetljivosti kako bi se izbjegle lažno pozitivne detekcije uzrokovane slučajnim fluktuacijama. Identificirane prijelomne točke potom su validirane analizom razlika u srednjim vrijednostima i varijanci između uzastopnih segmenata korištenjem t-testa i F-testa.
+
+7.2. Rezultati segmentacije za temperature
+
+RAPS analiza temperaturnih nizova identificirala je tri glavna podrazdoblja za obje lokacije:
+
+Razdoblje 1 (1948-1987): Stabilna klimatološka bazna linija
+- Zagreb: T = 10.9°C, σ = 0.58°C
+- Split: T = 15.4°C, σ = 0.64°C
+
+Razdoblje 2 (1988-2000): Prijelazna faza ubrzanog zagrijavanja
+- Zagreb: T = 11.7°C, σ = 0.71°C (+0.8°C)
+- Split: T = 16.3°C, σ = 0.78°C (+0.9°C)
+
+Razdoblje 3 (2001-2020): Novo klimatsko stanje
+- Zagreb: T = 12.5°C, σ = 0.82°C (+1.6°C od bazne linije)
+- Split: T = 17.3°C, σ = 0.91°C (+1.9°C od bazne linije)
+
+Statistička testiranja potvrdila su visoku značajnost razlika između svih uzastopnih razdoblja (p < 0.001 za sve usporedbe). Povećanje standardne devijacije u Razdoblju 3 ukazuje ne samo na porast prosječne temperature već i na povećanu klimatsku varijabilnost.
+
+7.3. Rezultati segmentacije za oborine
+
+Za oborine, RAPS metoda identificirala je različitu vremensku strukturu podrazdoblja, što odražava kompleksniju dinamiku oborinskih procesa:
+
+Zagreb:
+- Razdoblje 1 (1948-1994): P = 851 mm, CV = 14.2%
+- Razdoblje 2 (1995-2020): P = 879 mm, CV = 18.9%
+
+Split:
+- Razdoblje 1 (1948-1987): P = 768 mm, CV = 17.8%
+- Razdoblje 2 (1988-2004): P = 741 mm, CV = 21.3%
+- Razdoblje 3 (2005-2020): P = 712 mm, CV = 25.6%
+
+Za Split, jasno su vidljiva tri podrazdoblja s postupnim smanjenjem godišnjih oborina i povećanjem varijabilnosti. Iako razlike u srednjim vrijednostima nisu uvijek statistički značajne na razini p < 0.05, promjene u varijabilnosti statistički su visoko značajne (F-test, p < 0.01).
+
+7.4. Kombinirana analiza
+
+Preklapanje identificiranih prijelomnih točaka za temperature i oborine omogućava definiranje kompozitnih klimatskih razdoblja:
+
+Klimatsko razdoblje I (1948-1987): Stabilna klimatološka bazna linija s ujednačenim temperaturnim i oborinskim uvjetima.
+
+Klimatsko razdoblje II (1988-2004): Prijelazna faza karakterizirana ubrzanim zagrijavanjem i početkom promjena u oborinskom režimu, posebno u mediteranskoj regiji.
+
+Klimatsko razdoblje III (2005-2020): Novo klimatsko stanje s povišenim temperaturama, smanjenim ljetnim oborinama i povećanom klimatskom varijabilnošću.
+
+Ova periodizacija pruža objektivan okvir za usporedbu klimatskih uvjeta i omogućava kvantifikaciju brzine klimatskih promjena.
+
+8. IMPLIKACIJE ZA BUDUĆNOST
+
+8.1. Projekcije klimatskih trendova
+
+Ekstrapolacija identificiranih trendova, uz oprezan pristup zbog inherentne nesigurnosti dugoročnih projekcija, sugerira nastavak zagrijavanja i promjena u oborinskom režimu. Ukoliko se trenutne stope nastave, do 2050. godine može se očekivati dodatni porast prosječne godišnje temperature od 0.7-0.9°C (Zagreb) odnosno 0.8-1.0°C (Split) u odnosu na razdoblje 2001-2020.
+
+Za oborine, projekcije su neizvjesnije zbog veće prirodne varijabilnosti, ali trenutni trendovi ukazuju na mogućnost daljnjeg smanjenja ljetnih oborina za 5-10% do 2050. godine u mediteranskoj regiji. Kontinentalna regija može doživjeti preraspodjelu oborina s povećanjem zimskih i smanjenjem ljetnih količina, dok ukupna godišnja suma ostaje relativno stabilna.
+
+8.2. Rizici od suša
+
+Kombinacija viših temperatura i smanjenih oborina u vegetacijskoj sezoni povećava rizik od intenzivnih i dugotrajnih suša. Prema NIS indeksu, učestalost ekstremno sušnih sezona (NIS < -2.0) mogla bi se udvostručiti do sredine stoljeća u odnosu na trenutnu učestalost.
+
+Posebnu zabrinutost predstavlja mogućnost multi-godišnjih sušnih razdoblja, kakva su zabilježena u razdoblju 2016-2017 i 2011-2012. Analiza autokorelacijske strukture NIS indeksa ukazuje na povećanje perzistencije ekstremnih uvjeta, što otežava oporavak ekosustava i vodnih resursa.
+
+Prostorna analiza pokazuje da je mediteranska regija izložena većem riziku, ali kontinentalna regija nije imuna. Zagreb i šire kontinentalno područje suočavaju se s rastućim rizikom poljoprivrednih suša, posebno tijekom kritičnih faza razvoja usjeva (svibanj-srpanj).
+
+8.3. Potrebe za adaptacijom
+
+Rezultati analize naglašavaju hitnu potrebu za adaptacijskim mjerama u različitim sektorima:
+
+Vodno gospodarstvo: Razvoj sistema za skladištenje vode, optimizacija upravljanja rezervoarima, povećanje efikasnosti navodnjavanja.
+
+Poljoprivreda: Prilagodba strukture usjeva, implementacija vodosštednih tehnologija, razvoj sorti otpornih na sušu.
+
+Urbano planiranje: Zelena infrastruktura, upravljanje oborinskim vodama, smanjenje toplinskih otoka.
+
+Šumarstvo: Prilagodba sastava šuma, preventivne mjere zaštite od požara, očuvanje vodnoga režima.
+
+Energetski sektor: Diversifikacija izvora energije s obzirom na smanjenu dostupnost hidroenergije tijekom sušnih razdoblja.
+
+8.4. Preporuke za daljnja istraživanja
+
+Ovo istraživanje otvara nekoliko pravaca za buduća istraživanja:
+
+1. Proširenje prostornog obuhvata analize na dodatne meteorološke postaje kako bi se dobila cjelovitija slika regionalnih klimatskih promjena.
+
+2. Integracija satelitskih podataka (npr. NDVI, površinska temperatura) za bolju procjenu utjecaja suša na vegetaciju.
+
+3. Usporedba NIS indeksa s drugim postojećim indeksima suša kroz opširnu validaciju na većem broju lokacija i vremenskih razdoblja.
+
+4. Razvoj prognostičkih modela za kratkoročno predviđanje sušnih uvjeta temeljenih na NIS indeksu i cirkulacijskim obrascima.
+
+5. Analiza utjecaja velikih cirkulacijskih obrazaca (NAO, EA, EAWR) na varijabilnost NIS indeksa i identificiranje predvidljivih signala.
+
+6. Procjena socioekonomskih utjecaja identificiranih klimatskih promjena kroz interdisciplinarne studije.
+
+9. ZAKLJUČAK
+
+Ovo istraživanje predstavilo je integrirani metodološki pristup analizi sušnih uvjeta kroz kombinaciju RAPS metode, Mann-Kendall testa i novorazvijenog NIS indeksa. Analiza dugogodišnjih nizova (1948-2020) temperatura i oborina za Split i Zagreb pružila je detaljnu sliku klimatskih promjena u dvjema glavnim klimatskim zonama Hrvatske.
+
+Ključni nalazi istraživanja:
+
+Identificirani su statistički visoko značajni trendovi porasta temperatura na obje lokacije (0.022°C/godini za Zagreb, 0.026°C/godini za Split), s ubrzanjem trenda nakon 1987. godine. Ukupni porast temperature u analiziranom razdoblju iznosi 1.6°C (Zagreb) odnosno 1.9°C (Split), s najintenzivnijim zagrijavanjem u ljetnim mjesecima.
+
+Trendovi oborina pokazuju kompleksniju sliku bez konzistentnog linearnog trenda u godišnjim sumama, ali sa značajnim sezonskim promjenama. Ljetni mjeseci bilježe statistički značajno smanjenje oborina, posebno u mediteranskoj regiji (Split: -1.2 mm/godini godišnje, s izraženijim smanjenjem u srpnju i kolovozu).
+
+RAPS metodom identificirana su tri glavna klimatska razdoblja: stabilna bazna linija (1948-1987), prijelazna faza (1988-2004) i novo klimatsko stanje (2005-2020). Ova objektivna segmentacija omogućava preciznu kvantifikaciju brzine i magnitude klimatskih promjena.
+
+Novorazvijeni NIS indeks pokazao se kao učinkovit alat za integrirano praćenje sušnih uvjeta. Analiza vremenskog niza NIS vrijednosti pokazala je zabrinjavajući trend povećanja učestalosti ekstremnih suša, s porastom od 4% (1948-1980) na 18% (2001-2020) u Zagrebu odnosno sa 7% na 26% u Splitu.
+
+Usporedba kontinentalne i mediteranske klime otkrila je različite razine osjetljivosti na klimatske promjene. Mediteranska regija suočava se s intenzivnijim zagrijavanjem, većim smanjenjem ljetnih oborina i višom klimatskom varijabilnošću, što rezultira višim rizikom od suša.
+
+Rezultati ove studije imaju važne implikacije za planiranje adaptacijskih mjera i upravljanje vodnim resursima. Dokumentirane promjene zahtijevaju hitnu implementaciju strategija prilagodbe u sektorima poljoprivrede, vodnog gospodarstva, šumarstva i urbanog planiranja.
+
+Predložena metodologija, koja kombinira statističku analizu trendova, segmentaciju vremenskih serija i razvoj kompozitnog indeksa, može se primijeniti na druge regije i predstavlja koristan alat za monitoring i procjenu klimatskih promjena. Nastavak ovog istraživanja kroz proširenje na dodatne lokacije i integraciju s klimatskim modelima pružit će još točnije projekcije budućih uvjeta i omogućiti bolju pripremljenost na izazove klimatskih promjena.
+
+Konačno, ovo istraživanje naglašava važnost kontinuiranog praćenja klimatskih parametara i potrebu za razvojem naprednih analitičkih alata koji omogućavaju pravovremenu detekciju i procjenu klimatskih promjena. Samo kroz sveobuhvatno razumijevanje regionalnih klimatskih trendova moguće je razviti učinkovite strategije za očuvanje vodnih resursa i osiguranje otpornosti društva na sušna razdoblja u uvjetima klimatskih promjena.

@@ -1,0 +1,149 @@
+Uvod
+
+Industrija video igrica doživljava jednu od najznačajnijih transformacija u svojoj povijesti. S globalnim prihodom od 187,7 milijardi dolara u 2024. godini i bazom od preko 3,3 milijarde igrača širom svijeta, gaming je postao dominantna sila u globalnoj zabavnoj industriji. Ova industrija sada prelazi filmsku i glazbenu industriju zajedno po ukupnim godišnjim prihodima. Međutim, unatoč impresivnom rastu, sektor se suočava s brojnim izazovima - od masovnih otpuštanja radnika i zatvaranja studija do sve većih troškova razvoja i promjena u navikama igrača. Ovaj rad istražuje ključne trendove koji oblikuju budućnost industrije video igrica, uključujući tehnološke inovacije, nove poslovne modele i evoluciju igračkog iskustva.
+
+1. Globalno tržište i demografija igrača
+
+1.1 Rast tržišta i distribucija prihoda
+
+Globalno tržište video igrica generiralo je 187,7 milijardi dolara prihoda tijekom 2024. godine, što predstavlja rast od 2,1% u odnosu na prethodnu godinu. Analitičari predviđaju da će tržište doseći približno 188,9 milijardi dolara u 2025. godini, nastavljajući stabilan rast unatoč ekonomskim izazovima.
+
+Distribucija prihoda po platformama otkriva zanimljive trendove. Mobilni gaming ostaje vodeći segment s približno 49% ukupnog tržišnog prihoda, generirajući 92,6 milijardi dolara s rastom od 3% u 2024. godini. Međutim, PC gaming segment pokazuje najbrži rast od 4% godišnje, dok konzolni segment bilježi blagi pad od 1%, što se pripisuje relativno malom broju novih naslova koji otežava zadržavanje interesa igrača.
+
+1.2 Demografija i broj igrača
+
+Broj video igrača diljem svijeta narastao je na 3,42 milijarde u 2024. godini, što predstavlja rast od 4,5% u odnosu na prethodnu godinu. Ovaj rast uglavnom pokreću PC igrači, čiji je broj premašio 900 milijuna u 2024. godini (rast od 3,9%). Broj mobilnih igrača dosegao je 2,85 milijarde, dok je rast ovdje nešto sporiji s 3,5%. Broj konzolnih igrača usporio je na 2,3% rasta, dostižući 630 milijuna.
+
+Demografski profil prosječnog igrača značajno se promijenio. Suprotno stereotipu da je gaming muški dominirana aktivnost, žene čine gotovo polovinu svih igrača u Sjedinjenim Državama. Kako su milenijci odrasli, prosječna dob igrača također je porasla na 32 godine. Ova diversifikacija igračke baze ima značajan utjecaj na vrste igara koje se razvijaju i marketing strategije koje kompanije koriste.
+
+2. Umjetna inteligencija u razvoju igara
+
+2.1 Generativna AI u produkciji
+
+Generativna umjetna inteligencija predstavlja možda najznačajniju tehnološku promjenu u razvoju igara posljednjih godina. Prema istraživanju s Game Developers Conference 2024., čak 87% studija već koristi AI alate poput Midjourney za kreiranje unutar-igračkih okruženja, dok 99% planira koristiti AI u budućnosti.
+
+AI se trenutno koristi u nekoliko ključnih područja razvoja igara. Većina studija koristi alate za generiranje slika kako bi poboljšali ili ubrzali svoj rad. Kompanije poput EA-a izjavile su da bi generativna AI mogla biti korištena u više od 50% njihovih razvojnih procesa. Ubisoft je razvio alat nazvan Ghostwriter koji koristi velike jezične modele za pisanje osnovnog dijaloga za neigračke likove (NPC-e), omogućujući ljudskim piscima da se fokusiraju na sadržaj vezan uz glavnu priču.
+
+2.2 Dinamični NPC-ovi i interaktivnost
+
+Jedan od najuzbudljivijih razvoja jest korištenje AI-ja za stvaranje dinamičnih, inteligentnih neigračkih likova. Tvrtke poput Inworld AI-ja i BitPart AI-ja razvijaju sustave koji omogućuju NPC-ovima da koriste velike jezične modele za vođenje prirodnih razgovora s igračima. 
+
+Ubisoft je 2024. godine predstavio NEO NPC demo na Game Developers Conferencu, gdje su igrači mogli slobodno komunicirati s NPC-ovima koristeći glas-u-tekst softver i razvijati dublje odnose s njima kroz razgovor. Kompanija je nastavila s razvojem prve potpuno igrive generativne AI aplikacije nazvane "Teammates", koja uvodi AI pomoćnika Jaspara koji prepoznaje igrača po imenu, pomaže s upoznavanjem igre i razumije lore igre.
+
+2.3 Izazovi i etička pitanja
+
+Unatoč potencijalu, usvajanje AI tehnologije u gaming industriji nailazi na značajan otpor. Istraživanje pokazuje da je 84% developera barem donekle zabrinuto oko etičke upotrebe AI alata. Brige se kreću od potencijalnog gubitka radnih mjesta jer AI automatizira zadatke koje tradicionalno obavljaju ljudi, do neovlaštene upotrebe kreativnog sadržaja u treniranju AI modela i kršenja prava intelektualnog vlasništva.
+
+Posebno je zanimljivo da jedna petina AAA studija zabranjuje korištenje AI alata, što odražava konzervativniji stav prema ulozi AI-ja u razvoju igara. Također, razvijatelji koji rade na narativu i osiguranju kvalitete rjeđe integriraju AI u svoj rad, vjerojatno zbog briga o utjecaju na kreativni integritet.
+
+3. Cloud gaming i modeli pretplate
+
+3.1 Evolucija cloud gaming servisa
+
+Cloud gaming tehnologija doživljava značajan napredak, premda put do masovne adopcije ostaje izazovan. Tržište cloud gaming sadržaja poraslo je s 234 milijuna dolara u 2018. godini na 1,5 milijardi dolara u 2023. godini. Projekcije pokazuju da će broj korisnika cloud gaminga globalno doseći 497 milijuna do 2028. godine.
+
+Glavni igrači na tržištu uključuju Xbox Cloud Gaming, NVIDIA GeForce NOW, PlayStation Plus Premium i Amazon Luna. PlayStation Plus je u ožujku 2023. postao vodeći pružatelj usluga s 47,4 milijuna pretplatnika diljem svijeta. Microsoft Xbox Cloud Gaming drži oko 70% tržišta cloud gaminga, dok NVIDIA GeForce Now i Sony PlayStation Cloud zajedno dijele približno 20% tržišta.
+
+3.2 Tehnološki napredak i infrastruktura
+
+Napredak u cloud gamingu omogućen je razvojem 5G mreža i boljom internetskom infrastrukturom. NVIDIA GeForce NOW nudi 4K gaming do 240 sličica u sekundi koristeći Blackwell RTX servere. Ove usluge omogućuju igračima da pristupaju igrama visoke kvalitete na jeftinim uređajima poput mobitela, tableta ili starijih računala.
+
+Cijena pretplate varira značajno. Xbox Game Pass Ultimate nudi više od 400 igara za 20 dolara mjesečno, Amazon Luna+ pruža 100+ igara za 10 dolara mjesečno, dok PlayStation Plus Premium uključuje pristup više od 1.200 igara za 18 dolara mjesečno ili 160 dolara godišnje.
+
+3.3 Izazovi i buduća perspektiva
+
+Unatoč napretku, cloud gaming još uvijek se suočava s preprekama. Latencija i infrastrukturni izazovi ostaju u nekim regijama, a istraživanje s kraja 2024. godine pokazalo je da više od polovice developera vidi VR/AR tržište kao stagnantno ili u padu. Međutim, kontinuirani napredak sugerira da cloud gaming postaje standardni dio gaming ekosustava, a ne rubna ideja.
+
+4. Novi modeli monetizacije
+
+4.1 Free-to-play model i mikrotransakcije
+
+Free-to-play (F2P) model postao je dominantna strategija monetizacije u industriji. Očekuje se da će F2P igre činiti više od 70% svih prodaja digitalnih igara do 2025. godine. Popularne igre poput Fortnite, Apex Legends i Genshin Impact zarađuju kroz prodaju sadržaja unutar igre poput skinova, battle passova i opreme, koji ne utječu na gameplay i omogućuju igračima da se natječu na fer način.
+
+Industrija se sve više okreće prema "cosmetics-only" mikrotransakcijama kako bi održala dobroj volju igrača, iako mobilne gacha igre često još uvijek zamagljuju tu granicu. Uspješna moderna igra može se lansirati kao premium proizvod, ali se održava s live ops monetizacijom godinama. Fokus kompanija je na maksimiziranju životne vrijednosti igrača (lifetime value) izbjegavajući pritom najgore prakse koje bi mogle izazvati regulatorne intervencije.
+
+4.2 Modeli pretplate i hibridni pristupi
+
+Pored F2P modela, modeli pretplate doživljavaju značajan rast. Tržište gaming pretplata procijenjeno je na 10,1 milijardu dolara u 2023. godini, s projekcijom da dosegne 21,3 milijardu dolara do 2030. godine, rasteći po stopi od 11,3% godišnje.
+
+Popularne strategije monetizacije u 2025. godini predstavljaju mješavinu F2P mikrotransakcija, season passova, pretplata i oglašavanja, često pomiješanih zajedno. Ovaj hibridni pristup omogućuje developerima da maksimiziraju prihode dok istovremeno nude igračima fleksibilnost u načinu plaćanja.
+
+5. Dominacija azijskih developera
+
+5.1 Shift u globalnoj moći razvoja
+
+Jedan od najznačajnijih trendova u 2024. godini bio je porast azijskih developera na globalnoj sceni. Od 25 najprofitabilnijih naslova koji su se lansirali u 2024. godini, čak 23 su bili djelo azijskih developera. Ovi podaci se ne odnose samo na kinesko, japansko i korejsko tržište - kada se gledaju samo Tier-1 zapadna tržišta, 21 od 25 najprofitabilnijih naslova razvili su azijski studiji.
+
+Ovaj trend nije ograničen samo na mobilne igre. Godina 2024. pokazala je da su, osim Japana, i druge zemlje u regiji sposobne isporučiti visokokvalitetne PC i konzolne naslove. Primjeri uključuju Black Myth: Wukong, Stellar Blade (nakon kojeg je Shift Up otišao na burzu) i Marvel Rivals.
+
+5.2 Implikacije za zapadne studije
+
+Ovaj razvoj predstavlja značajnu promjenu u gaming industriji, s potencijalno dubokim posljedicama za zapadne developere. Prethodna desetljeća vidjela su ovaj dio gaming svijeta okupiran uglavnom zapadnim studijima, ali sada se čini da su promjene neizbježne. Zapadne kompanije morat će učiti od azijskih pristupa razvoju, marketingu i monetizaciji kako bi ostale konkurentne.
+
+6. Izazovi u industriji
+
+6.1 Otpuštanja i restrukturiranje
+
+Gaming industrija suočila se s nezapamćenim izazovima u 2024. godini. Prema Game Developers Conference 2025 State of the Game Industry izvješću, 11% developera bilo je otpušteno tijekom 2024. godine, a 41% je bilo pogođeno ili kroz osobni gubitak posla ili svjedočenjem otpuštanjima direktnih kolega. Približno 14.000 profesionalaca iz gaming industrije izgubilo je posao u 2024. godini, nakon više od 11.000 otpuštanja u 2023. godini.
+
+Najčešće citirani razlozi za smanjenje radne snage bili su restrukturiranje (22%), pad prihoda (18%) i tržišne promjene. Dodatne analize sugeriraju da su pretjerano zapošljavanje tijekom pandemije, konsolidacija industrije nakon velikih akvizicija i strateški pomaci prema live-service razvoju igara doprinijeli raširenim gubitcima poslova koji su pogodili i AAA studije i nezavisne developere.
+
+6.2 Rastući troškovi razvoja
+
+Razvoj AAA igara sada rutinski košta desetke ili čak stotine milijuna dolara, što izdavače čini izrazito sklonima izbjegavanju rizika. Kao rezultat, velike igračke kompanije dvostruko se fokusiraju na etablirane franšize i nastavke umjesto potpuno novih ideja. To se vidi u rasporedu izdanja koji dominiraju poznati IP-ovi.
+
+Čak i originalne AAA igre obično slijede popularne žanrove ili trendove umjesto stvarno eksperimentalnog gameplayja. Dodatno, mnogi veliki izdavači remasteriraju ili remake-aju klasike kako bi kapitalizirali na nostalgiji uz minimalan rizik.
+
+7. Platforme i ekskluzivnost
+
+7.1 Preferencije developera
+
+Istraživanje pokazuje da je PC platforma postao dominantna meta za developere. Prema podacima iz 2024. godine, 80% developera sada cilja PC platforme, što je značajan porast u odnosu na 66% prethodne godine. PlayStation 5 i Xbox Series X zauzimaju drugo i treće mjesto s 35% i 34%.
+
+Ovaj pomak prema PC razvoju odražava šire trendove u industriji, uključujući fleksibilnost platforme za nezavisne developere i rastući softver ekosustav na PC-u.
+
+7.2 Cross-platform gaming
+
+Kako prepreke između konzola i platformi postaju sve mekše, zahvaljujući inicijativama poput Microsoftovog cross-platform izdavaštva i Sonyjevog dovođenja mnogih svojih igara na PC, DFC Intelligence tvrdi da će sljedeća velika bitka u gaming prostoru umjesto toga biti oko metoda distribucije.
+
+Rastući popularnost cross-platform gaminga proširuje dostupno tržište za usluge pretplate. Gameri sada mogu besprijekorno prijeći između konzola, PC-a i mobilnih uređaja, što čini gaming iskustvo fluidnijim i pristupačnijim nego ikad prije.
+
+8. Žanrovi i vrste igara
+
+8.1 Dominantni žanrovi
+
+U 2024. godini, shooteri su bili najpopularniji žanr igara na PC-u i konzolama, čineći 17% i 16% prihoda. Na PC-u su shooteri generirali 7,4 milijarde dolara prihoda, što je porast od 9,6% u odnosu na prošlu godinu, dok su na konzolama donijeli 8,1 milijardu dolara s rastom od 6%.
+
+Adventure žanr zauzeo je drugo mjesto s 13% udjelom na PC-u i 15% na konzolama. Ostali popularni žanrovi uključuju RPG-ove, battle royale i strateške igre. Na konzolama, značajan dio prihoda također dolazi od sportskih igara.
+
+8.2 Live-service igre i games-as-a-platform
+
+Free-to-play igre i games-as-a-platform model transformirali su industriju u 2010-ima. Projekti poput Fortnite, Roblox i League of Legends nastavljaju dominirati po pitanju angažmana igrača - njihov udio ukupnog gaming vremena povećao se u 2024. godini.
+
+Gaming vrijeme ključan je pokazatelj uspjeha za free-to-play igre, a novi naslovi teško se natječu s etabliranim naslovima koji su konsolidirali segment. Troškovi akvizicije korisnika visoki su, dok stope konverzije ostaju niske. Od free-to-play igara lansiranih u 2023. godini, samo pet PC i konzolnih igara uspjelo je premašiti prag od 0,1% ukupnog gaming vremena koje igrači provode.
+
+9. Budući trendovi
+
+9.1 Virtualna i proširena stvarnost
+
+VR i AR gaming nastavljaju napredovati u 2025. godini, premda je njihov put umjeren realnošću. S jedne strane, angažman u VR-u na najvišoj je razini ikad među korisnicima - više od 2 milijarde dolara potrošeno je na Meta Quest VR sadržaj do sada, s povećanjem vremena igranja od 30% godišnje. Novi hardver poput Meta Quest 3, Sony PSVR2 i Appleov ulazak u mixed reality s Vision Pro potaknuli su svježe zanimanje.
+
+Ipak, ukupni industrijski entuzijazam ostaje oprezan. Globalna prodaja headset-a zapravo je pala oko 10% u 2024. godini, što sugerira da masovna adopcija još uvijek izmiče ovoj tehnologiji.
+
+9.2 Održivost i ekološka svijest
+
+Gaming industrija postaje svjesnija svog ekološkog otiska. Developeri i igrači sve više prepoznaju značajnu potrošnju energije povezanu s gamingom, posebno u napajanju servera i računala. Xbox je poduzeo korake obvezavši se podržati developere u praćenju i smanjenju njihove potrošnje energije kroz alate koji pružaju uvid u potrošnju energije igre.
+
+9.3 Esports i streaming
+
+Esports predstavlja značajno područje rasta. Vrijednost tržišta 2023. godine procijenjena je na preko 2,1 milijardu dolara. Discord je narastao na preko 150 milijuna aktivnih mjesečnih korisnika u 2024. godini, dok Twitch ima procijenjenih 30 milijuna dnevnih aktivnih korisnika, što pokazuje rastući interes za live-streamed natjecanja.
+
+Zaključak
+
+Industrija video igrica prolazi kroz period intenzivne transformacije obilježen tehnološkim inovacijama, novim poslovnim modelima i promjenama u globalnoj konkurenciji. Dok tržište nastavlja rasti s preko 3,3 milijarde igrača diljem svijeta i prihodima koji premašuju filmsku i glazbenu industriju zajedno, sektor se suočava s značajnim izazovima.
+
+Umjetna inteligencija revolucionira način na koji se igre razvijaju i igraju, omogućujući dinamičnije NPC-ove, ubrzani razvoj i personalizirane igračke doživljaje. Cloud gaming i modeli pretplate mijenjaju način na koji igrači pristupaju sadržaju, smanjujući ulazne barijere i povećavajući fleksibilnost. Porast azijskih developera predstavlja tektonski pomak u globalnoj moći razvoja koji će imati dugoročne posljedice.
+
+Međutim, industrija također prolazi kroz bolno razdoblje prilagodbe nakon pandemije, s masovnim otpuštanjima, zatvaranjima studija i rastućim troškovima razvoja koji tjeraju kompanije da budu izrazito oprezne s rizikom. Balansiranje inovacija s održivošću, kreativnosti s profitabilnošću, i tehnološkog napretka s etičkim brigama bit će ključno za budućnost industrije.
+
+Bez obzira na izazove, gaming ostaje jedan od najdinamičnijih i najinovativnijih sektora u globalnoj ekonomiji. S kontinuiranim tehnološkim napretkom, novim generacijama igrača i sve većom kulturnom relevantnošću, industrija video igrica nastavit će oblikovati budućnost digitalne zabave i interaktivnog pripovijedanja. Sljedećih nekoliko godina bit će kritično u određivanju kako će ovi trendovi evoluirati i kako će industrija odgovoriti na svoje najveće izazove i prilike.

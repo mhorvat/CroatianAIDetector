@@ -1,0 +1,83 @@
+Uvod
+
+WordPress je danas najrasprostranjeniji sustav za upravljanje sadržajem (CMS - Content Management System) na internetu, koji pokreće više od 40% svih web stranica diljem svijeta. Njegova popularnost počiva na jednostavnosti korištenja, fleksibilnosti i opsežnoj zajednici razvojnih inženjera koji kontinuirano doprinose njegovom razvoju. Iako WordPress nudi brojne gotove predloške koji omogućuju brzo postavljanje web stranica, prilagođeni predlošci pružaju jedinstvenu priliku za kreiranje web rješenja koja u potpunosti odgovaraju specifičnim potrebama korisnika.
+
+Razvoj prilagođenog predloška predstavlja proces kreiranja jedinstvenog dizajna i funkcionalnosti koji se razlikuju od standardnih rješenja dostupnih na tržištu. Ovaj pristup omogućuje potpunu kontrolu nad izgledom web stranice, njenom strukturom i korisničkim iskustvom. Prilagođeni predložak može biti osmišljen za specifičnu industriju, korporativni identitet ili posebne funkcionalne zahtjeve koje standardni predlošci ne mogu zadovoljiti.
+
+U ovom radu razmatrat ćemo proces razvoja prilagođenog predloška za WordPress sustav, od osnovnih koncepata i planiranja do tehničke implementacije i optimizacije. Cilj je pružiti sveobuhvatan pregled koji obuhvaća razumijevanje WordPress arhitekture, tehnologije potrebne za razvoj predložaka, najbolje prakse u dizajnu i razvoju te napredne tehnike personalizacije koje omogućuju kreiranje user-friendly sučelja.
+
+1. WordPress kao sustav za upravljanje sadržajem
+
+WordPress je otvoreni CMS sustav napisan u PHP programskom jeziku koji koristi MySQL ili MariaDB bazu podataka za pohranu sadržaja. Razvijen je 2003. godine kao platforma za blogiranje, ali se tijekom godina transformirao u moćan alat za kreiranje raznovrsnih web stranica, od jednostavnih blogova do složenih korporativnih portala i internetskih trgovina.
+
+Ključna prednost WordPressa leži u njegovoj modularnoj arhitekturi koja razdvaja sadržaj, dizajn i funkcionalnost. Ova separacija omogućuje razvojnim inženjerima da mijenjaju izgled web stranice bez utjecaja na sadržaj, odnosno da dodaju nove funkcionalnosti bez potrebe za izmjenom osnovnog koda. WordPress sustav se sastoji od jezgre (core), predložaka (themes) i dodataka (plugins), pri čemu svaki element ima jasno definiranu ulogu u sustavu.
+
+Sustav za upravljanje sadržajem koji nudi WordPress temelji se na intuitivnom administratorskom sučelju koje omogućuje korisnicima bez tehničkog znanja da upravlja sadržajem web stranice. Korisnici mogu kreirati stranice i objave, dodavati medijske datoteke, upravljati izbornicima i prilagođavati postavke bez potrebe za poznavanjem programiranja. Ova user-friendly pristupačnost čini WordPress idealnim izborom za širok spektar korisnika.
+
+WordPress također nudi opsežan ekosustav dodataka koji proširuju njegovu osnovnu funkcionalnost. Postojanje više od 60,000 besplatnih dodataka omogućuje integraciju različitih funkcija poput kontakt obrazaca, optimizacije za tražilice, sigurnosnih rješenja i integracije s društvenim mrežama. Međutim, za postizanje jedinstvenog identiteta i specifičnih funkcionalnosti, razvoj prilagođenog predloška postaje neophodan.
+
+2. Osnove razvoja WordPress predložaka
+
+Predložak u WordPress sustavu je skup datoteka koje kontroliraju vizualni prikaz web stranice. Svaki predložak mora sadržavati minimalno dvije ključne datoteke: style.css koja definira stilove i metapodatke predloška, te index.php koja predstavlja osnovnu predložnu datoteku. Međutim, složeniji predlošci uključuju brojne dodatne datoteke koje omogućuju detaljnu kontrolu nad različitim aspektima web stranice.
+
+Struktura WordPress predloška temelji se na hijerarhiji predložnih datoteka. WordPress koristi specifičan redoslijed pretraživanja datoteka kada prikazuje različite tipove sadržaja. Na primjer, za prikaz pojedinačne objave sustav prvo traži single-{post-type}.php, zatim single.php, pa index.php. Razumijevanje ove hijerarhije ključno je za razvoj učinkovitih prilagođenih predložaka.
+
+Razvoj predloška zahtijeva poznavanje nekoliko web tehnologija. HTML (HyperText Markup Language) služi za strukturiranje sadržaja, CSS (Cascading Style Sheets) za vizualno oblikovanje, JavaScript za interaktivnost, a PHP za dinamičko generiranje sadržaja i komunikaciju s bazom podataka. WordPress nudi vlastiti skup funkcija i API-ja koji olakšavaju razvoj i integraciju s jezgrom sustava.
+
+Važan koncept u razvoju WordPress predložaka je sustav petlji (The Loop) koji omogućuje dohvaćanje i prikazivanje sadržaja iz baze podataka. Petlja predstavlja osnovni mehanizam za iteriranje kroz objave i prikazivanje njihovog sadržaja na web stranici. Uz standardnu petlju, razvojni inženjeri mogu kreirati prilagođene upite (custom queries) koji omogućuju preciznu kontrolu nad prikazanim sadržajem.
+
+3. Planiranje i dizajn prilagođenog predloška
+
+Prije početka programiranja prilagođenog predloška, neophodan je detaljan proces planiranja koji uključuje analizu zahtjeva, definiranje ciljane publike i kreiranje korisničkog iskustva. Ovaj proces započinje razgovorom s klijentom ili dionicima projekta kako bi se razumjele specifične potrebe web stranice, njen cilj i očekivani rezultati.
+
+Analiza ciljane publike ključna je za kreiranje user-friendly sučelja koje odgovara navikama i očekivanjima korisnika. Razumijevanje demografskih karakteristika, tehničke pismenosti i uređaja koje korisnici najčešće koriste omogućuje dizajniranje prilagođenog predloška koji pruža optimalno korisničko iskustvo. Istraživanje tržišta i analiza konkurencije pružaju dodatne uvide u trenutne trendove i najbolje prakse u industriji.
+
+Kreiranje žičanih okvira (wireframes) i maketa predstavlja sljedeću fazu procesa dizajniranja. Žičani okviri su pojednostavljeni crteži koji prikazuju strukturu stranice i raspored elemenata bez vizualnih detalja, dok makete predstavljaju detaljnije vizualne prikaze konačnog dizajna. Ovi alati omogućuju evaluaciju korisničkog toka i organizacije sadržaja prije početka razvoja.
+
+Personalizacija predloška uključuje definiranje jedinstvenog vizualnog identiteta koji odražava brand ili svrhu web stranice. To obuhvaća izbor paleta boja, tipografije, ikona i fotografskog stila koji zajedno stvaraju koherentan vizualni jezik. Dizajn mora biti dosljedan kroz sve stranice web stranice, čime se osigurava prepoznatljivost i profesionalan dojam.
+
+4. Tehnička implementacija prilagođenog predloška
+
+Razvoj prilagođenog predloška započinje postavljanjem osnovne strukture direktorija i kreiranjem neophodnih datoteka. Uz obvezne style.css i index.php datoteke, preporučuje se kreirati header.php za zaglavlje stranice, footer.php za podnožje, sidebar.php za bočnu traku te single.php i page.php za prikaz pojedinačnih objava i stranica. Datoteka functions.php služi za registraciju funkcionalnosti predloška i predstavlja srž prilagodbe.
+
+Implementacija responzivnog dizajna postala je imperativ u modernom web razvoju. Prilagođeni predložak mora pružati optimalno korisničko iskustvo na različitim uređajima, od računala do tableta i pametnih telefona. To se postiže korištenjem CSS media upita, fleksibilnih mreža (flexible grids) i responzivnih slika. Mnogi razvojni inženjeri koriste CSS okvire poput Bootstrap ili Foundation kako bi ubrzali proces razvoja responzivnih stranica.
+
+Integracija WordPress funkcija i hookovā omogućuje predlošku da komunicira s jezgrom sustava bez izmjene osnovnog koda. WordPress nudi sustav akcija (actions) i filtera (filters) koji omogućuju dodavanje ili izmjenu funkcionalnosti u specifičnim točkama izvršavanja. Na primjer, wp_head() i wp_footer() funkcije moraju biti uključene u header.php i footer.php datoteke kako bi omogućile dodatcima da ispravno dodaju svoje skripte i stilove.
+
+Upravljanje sadržajem može biti dodatno poboljšano implementacijom prilagođenih tipova objava (custom post types) i taksonomija (taxonomies). Prilagođeni tipovi objava omogućuju kreiranje strukturiranih sadržaja koji nisu standardne objave ili stranice, poput portfelja, svjedočanstava ili proizvoda. Taksonomije služe za kategorizaciju i organizaciju ovog sadržaja, čime se olakšava navigacija i pretraživanje.
+
+5. Optimizacija i najbolje prakse
+
+Optimizacija performansi predloška ključna je za pružanje brzog i učinkovitog korisničkog iskustva. Spore web stranice imaju negativan utjecaj na zadovoljstvo korisnika i rangiranje u tražilicama. Optimizacija uključuje minimizaciju CSS i JavaScript datoteka, kompresiju slika, implementaciju predmemorije (caching) i smanjenje broja HTTP zahtjeva. Korištenje alata poput Google PageSpeed Insights pomaže identificirati područja za poboljšanje.
+
+Sigurnost predstavlja kritičan aspekt razvoja web stranica. Prilagođeni predložak mora biti razvijen s fokusom na sigurnost, što uključuje validaciju i sanitizaciju svih podataka koje korisnici unose, korištenje WordPress funkcija za sigurne upite u bazu podataka (prepared statements) te implementaciju zaštite od uobičajenih sigurnosnih prijetnji poput XSS (Cross-Site Scripting) i CSRF (Cross-Site Request Forgery) napada.
+
+Pristupačnost web stranice osigurava da sadržaj bude dostupan svim korisnicima, uključujući osobe s invaliditetom. To podrazumijeva korištenje semantičkog HTML koda, pružanje alternativnog teksta za slike, osiguravanje dovoljnog kontrasta boja, omogućavanje navigacije pomoću tipkovnice te korištenje ARIA (Accessible Rich Internet Applications) atributa gdje je potrebno. Pridržavanje WCAG (Web Content Accessibility Guidelines) smjernica pomaže u kreiranju inkluzivnih web stranica.
+
+Testiranje predloška kroz različite preglednike i uređaje osigurava dosljednost korisničkog iskustva. Compatibility testiranje uključuje provjeru funkcionalnosti u različitim verzijama popularnih preglednika poput Chrome, Firefox, Safari i Edge. Automatizacija testiranja pomoću alata poput BrowserStack ili Selenium može ubrzati ovaj proces i identificirati potencijalne probleme prije objave.
+
+6. Napredne tehnike personalizacije
+
+Integracija WordPress Customizer API-ja omogućuje korisnicima da prilagode predložak kroz vizualno sučelje bez potrebe za uređivanjem koda. Customizer pruža mogućnost dodavanja kontrola za promjenu boja, tipografije, rasporeda i drugih vizualnih elemenata u stvarnom vremenu. Ova funkcionalnost značajno poboljšava user-friendly aspekt predloška i omogućuje krajnjim korisnicima da personaliziraju izgled web stranice prema svojim preferencijama.
+
+Implementacija Gutenberg blokova predstavlja moderan pristup kreiranju sadržaja u WordPressu. Razvoj prilagođenih blokova omogućuje korisnicima da kreiraju složene rasporede i dizajne bez potrebe za poznavanjem HTML ili CSS koda. Blokovi se razvijaju pomoću React biblioteke i WordPress Block Editor API-ja, što zahtijeva poznavanje JavaScripta, ali rezultira moćnim i fleksibilnim alatom za upravljanje sadržajem.
+
+Integracija s vanjskim servisima i API-jima omogućuje proširenje funkcionalnosti predloška. To može uključivati povezivanje s društvenim mrežama, integraciju sustava za e-mail marketing, povezivanje s CRM (Customer Relationship Management) sustavima ili implementaciju sustava za plaćanje. WordPress nudi HTTP API koji olakšava komunikaciju s vanjskim servisima na siguran i učinkovit način.
+
+Višejezična podrška postaje sve važnija u globalnom digitalnom okruženju. Implementacija višejezične funkcionalnosti može se postići korištenjem dodataka poput WPML ili Polylang, ali prilagođeni predložak mora biti pripremljen za prijevod korištenjem WordPress funkcija za internacionalizaciju (i18n) i lokalizaciju (l10n). Ovo uključuje omatanje svih tekstualnih stringova u prikladne funkcije poput __() i _e().
+
+Zaključak
+
+Razvoj prilagođenog predloška za WordPress sustav predstavlja složen, ali izuzetno nagrađujući proces koji omogućuje kreiranje jedinstvenih web rješenja prilagođenih specifičnim potrebama i ciljevima. Kroz ovaj rad razmotrili smo ključne aspekte ovog procesa, od razumijevanja WordPress arhitekture i osnovnih koncepata sustava za upravljanje sadržajem do tehničke implementacije i naprednih tehnika personalizacije.
+
+WordPress kao CMS platforma nudi solidnu osnovu koja kombinira moć i fleksibilnost s user-friendly sučeljem pristupačnim širokom spektru korisnika. Prilagođeni predlošci nadopunjuju ovu osnovu omogućujući potpunu kontrolu nad vizualnim identitetom, strukturom i funkcionalnošću web stranice. Razumijevanje web tehnologija poput HTML-a, CSS-a, JavaScripta i PHP-a, zajedno s poznavanjem WordPress-specifičnih funkcija i API-ja, čini temelj uspješnog razvoja predložaka.
+
+Proces planiranja i dizajniranja prethodi tehničkoj implementaciji i predstavlja kritičnu fazu koja određuje uspjeh projekta. Detaljna analiza zahtjeva, razumijevanje ciljane publike i kreiranje korisničkog iskustva osiguravaju da konačni proizvod odgovara potrebama korisnika i postiže postavljene ciljeve. Personalizacija ne odnosi se samo na vizualne aspekte, već obuhvaća i funkcionalne mogućnosti koje omogućuju jedinstveno korisničko iskustvo.
+
+Tehnička implementacija zahtijeva pažljivo balansiranje između funkcionalnosti, performansi i održivosti koda. Primjena najboljih praksi u optimizaciji, sigurnosti i pristupačnosti osigurava da prilagođeni predložak ne samo da izgleda profesionalno, već i funkcionira učinkovito, štiti podatke korisnika i ostaje dostupan svim posjetiteljima. Testiranje kroz različite preglednike i uređaje, kao i kontinuirana održavanje i ažuriranje, ključni su za dugoročni uspjeh.
+
+Napredne tehnike personalizacije, uključujući integraciju Customizer API-ja, razvoj prilagođenih Gutenberg blokova i povezivanje s vanjskim servisima, otvaraju dodatne mogućnosti za kreiranje sofisticiranih web rješenja. Ove tehnike omogućuju krajnjim korisnicima veću kontrolu nad sadržajem i izgledom stranice, dok istovremeno pružaju razvojnim inženjerima alate za implementaciju složenih funkcionalnosti.
+
+U današnjem digitalnom okruženju gdje je prisutnost na internetu ključna za uspjeh, sposobnost kreiranja prilagođenih WordPress predložaka predstavlja vrijednu vještinu. Ovaj pristup omogućuje kreiranje web stranica koje se ističu od konkurencije, pružaju optimalno korisničko iskustvo i odražavaju jedinstveni identitet branda ili organizacije. Kontinuirano obrazovanje i praćenje novih trendova i tehnologija u WordPress zajednici osigurava da razvojni inženjeri ostanu konkurentni i sposobni pružiti najkvalitetnija rješenja.
+
+Razvoj prilagođenog predloška za WordPress sustav nije jednokratan projekt, već kontinuiran proces koji zahtijeva redovito održavanje, ažuriranje i prilagođavanje promjenjivim potrebama i tehnologijama. S pravim pristupom, alatima i znanjem, moguće je kreirati web stranice koje ne samo da ispunjavaju trenutne zahtjeve, već su i pripremljene za budući rast i razvoj.

@@ -1,0 +1,111 @@
+UVOD
+
+Pandemija COVID-19 donijela je dramatične promjene u načinu izvođenja nastave programiranja na fakultetima širom svijeta. Zatvaranje sveučilišta u ožujku 2020. godine prisililo je nastavnike i studente na brzu tranziciju s tradicionalne nastave uživo na online platforme. U ovom kontekstu, automatski verifikatori koda postali su ključni alat koji je omogućio kontinuitet obrazovanja te pružio rješenje za evaluaciju studentskih radova na daljinu. Ovaj seminar analizira ulogu verifikatora u nastavi programiranja tokom pandemije, njihove prednosti, izazove implementacije te dugoročne posljedice koje su ostavile na visoko obrazovanje u području računarstva.
+
+
+KONTEKST PANDEMIJE I PRIJELAZ NA ONLINE NASTAVU
+
+Kada je Svjetska zdravstvena organizacija proglasila pandemiju COVID-19 u ožujku 2020. godine, obrazovne ustanove diljem svijeta suočile su se s hitnom potrebom za transformacijom nastavnih metoda. Prema istraživanju UNESCO-a, gotovo 1,4 milijarde studenata bilo je pogođeno zatvaranjem obrazovnih ustanova. Institucije visokog obrazovanja morale su gotovo preko noći prebaciti svoje programe na online platforme, što je predstavljalo poseban izazov za praktične kolegije poput programiranja.
+
+Kolegiji programiranja tradicionalno su se oslanjali na kombinaciju predavanja, laboratorijskih vježbi i individualnog mentorstva. Nastavnici su mogli promatrati studente dok kodiraju, pružati trenutnu povratnu informaciju i identificirati probleme u razumijevanju materije. Pandemija je eliminirala ovu mogućnost, stvarajući pritisak za pronalaženje alternativnih rješenja koja bi omogućila sličnu razinu praćenja i evaluacije.
+
+
+ŠTO SU AUTOMATSKI VERIFIKATORI KODA?
+
+Automatski verifikatori koda su programski sustavi dizajnirani za evaluaciju studentskih programskih zadataka bez potrebe za ljudskom intervencijom. Ovi alati analiziraju kod na više razina, od provjere sintaktičke ispravnosti do testiranja funkcionalnosti i evaluacije kvalitete koda.
+
+Prema sistematskom pregledu literature, automatski sustavi za ocjenjivanje mogu evaluirati različite aspekte koda. Prva razina provjere odnosi se na kompilaciju i sintaktičku ispravnost. Druga razina uključuje testiranje funkcionalnosti programa kroz unaprijed definirane test slučajeve. Treća razina obuhvaća analizu kvalitete koda, stilske konvencije i optimizaciju. Najnapredniji sustavi koriste jedinične testove (unit tests) i dinamičku analizu za provjeru ponašanja programa u različitim scenarijima.
+
+Postoje dva osnovna pristupa u automatskom ocjenjivanju: dinamička i statička analiza. Dinamička analiza evaluira atribute programa tijekom izvršavanja, provjeravajući koje će se osobine održati u jednom ili više izvođenja. Tipične metode uključuju uporabu skupova jediničnih testova koji uspoređuju stvarni i očekivani output programa. Statička analiza, s druge strane, ispituje izvorni kod bez njegovog izvršavanja, fokusirajući se na strukturu, stil i kvalitetu koda.
+
+
+PLATFORME I ALATI KORIŠTENI TOKOM PANDEMIJE
+
+Tijekom pandemije došlo je do eksplozivnog rasta korištenja različitih platforma za automatsko ocjenjivanje koda. Među najpopularnijima bile su:
+
+CodeGrade - Platforma koja omogućava integraciju s Learning Management Systems (LMS) poput Moodle, Blackboard i Canvas. Nudi automatsko ocjenjivanje, detekciju plagijarizma i AI asistente za pomoć studentima. Koriste je brojne obrazovne institucije diljem svijeta za evaluaciju programskih zadataka.
+
+Gradescope - Sustav koji podržava različite tipove zadataka, od ručno napisanih odgovora do programskih projekata. Koristi umjetnu inteligenciju za olakšavanje procesa ocjenjivanja i omogućava anonimno ocjenjivanje te detekciju sličnosti koda.
+
+Codio - Razvojna platforma u pregledniku koja podržava automatsko ocjenjivanje kroz usporedbu input/output podataka, jedinične testove i prilagođene bash skripte. Nudi profesionalnu razvojnu okolinu s podrškom za Linux GUI, grafiku i zvuk.
+
+Web-CAT - Sustav razvijen na Virginia Tech sveučilištu, koji koristi JUnit framework za testiranje Java programa. Naglasak stavlja na studentsko pisanje vlastitih testova kao dio razvojnog procesa.
+
+Repl.it (sada Replit) - SaaS platforma koja podržava desetke različitih programskih jezika i nudi integraciju s većinom sustava za upravljanje kolegijima.
+
+
+PREDNOSTI VERIFIKATORA U ONLINE NASTAVI
+
+Trenutna povratna informacija
+
+Jedna od najvećih prednosti automatskih verifikatora bila je mogućnost pružanja trenutne povratne informacije studentima. Za razliku od tradicionalnog modela gdje studenti moraju čekati dane ili tjedne na ocjenu zadatka, verifikatori omogućavaju instant feedback. Studenti mogu odmah vidjeti rezultate testova, razumjeti gdje su pogriješili i pokušati ispraviti kod. Ova vrsta iterativnog učenja pokazala se iznimno učinkovitom, posebno u situaciji kada neposredna pomoć nastavnika nije bila dostupna.
+
+Skalabilnost i upravljanje velikim brojem studenata
+
+Pandemija je dovela do porasta broja studenata koji su upisivali online kolegije programiranja. Tradicionalno ručno ocjenjivanje programa postalo bi neodrživo pri velikim brojevima polaznika. Automatski sustavi omogućili su nastavnicima da efikasno upravljaju kolegijima s desetinama ili čak stotinama studenata. Istraživanja pokazuju da automatsko ocjenjivanje može smanjiti vrijeme potrebno za evaluaciju zadatka za 76-89%.
+
+Konzistentnost i objektivnost ocjenjivanja
+
+Verifikatori osiguravaju da svi studenti budu ocijenjeni prema istim kriterijima, eliminirajući subjektivnost i moguću pristranost ljudskog ocjenjivača. Ista testna baterija primjenjuje se na sve studentske radove, što rezultira pravednijim i transparentnijim procesom ocjenjivanja.
+
+Podrška za samoučenje i fleksibilnost
+
+U online okruženju studenti su imali različite vremenske zone, obiteljske obveze i pristup tehnologiji. Verifikatori su omogućili studentima da rade vlastitim tempom, predaju zadatke kada im odgovara i dobivaju trenutne rezultate bez potrebe za čekanjem na nastavnikovu dostupnost. Ova fleksibilnost bila je ključna za mnoge studente koji su se suočavali s izazovima pandemije.
+
+
+IZAZOVI I OGRANIČENJA
+
+Tehnički problemi i pristup tehnologiji
+
+Jedan od glavnih izazova bila je digitalna podjela među studentima. Istraživanja su pokazala da nisu svi studenti imali pouzdanu internet vezu ili odgovarajuće računalne resurse za sudjelovanje u online nastavi. U Zagrebu, na primjer, potres u ožujku 2020. dodatno je komplicirao situaciju, uzrokujući probleme s internetom i stavljajući studente pod značajan stres.
+
+Ograničena povratna informacija
+
+Dok verifikatori pružaju trenutne rezultate, kvaliteta povratne informacije često je ograničena. Većina sustava govori studentima samo jesu li testovi prošli ili nisu, ali ne objašnjavaju dublje konceptualne probleme. Studenti mogu znati da njihov kod ne radi, ali ne razumiju zašto ili kako pristupiti rješavanju problema. Ovo je posebno problematično za početnike koji trebaju više kontekstualnog vodstva.
+
+Fokus na funkcionalnost umjesto na kvalitetu
+
+Automatski verifikatori tipično se fokusiraju na funkcionalnu ispravnost koda - radi li program što treba. Međutim, u profesionalnom programiranju jednako su važni čitljivost, održivost, dokumentacija i stil koda. Mnogi sustavi ne evaluiraju ove aspekte adekvatno, što može rezultirati studentima koji razvijaju loše programerske navike.
+
+Nemogućnost evaluacije kreativnosti
+
+Programiranje nije samo tehnička vještina nego i kreativni proces. Verifikatori teško evaluiraju eleganciju rješenja, inovativnost pristupa ili razumijevanje većih arhitektonskih koncepata. Neki kompleksniji projekti ili otvoreni zadaci praktički su nemogući za automatsku evaluaciju.
+
+
+ADAPTACIJA NASTAVNIKA I INSTITUCIJA
+
+Nastavnici su morali brzo razviti nove kompetencije kako bi efikasno koristili verifikatore u svojoj nastavi. Sistematski pregled literature naglašava važnost obuke nastavnog osoblja u pedagoškim i tehničkim aspektima online podučavanja. Mnoge institucije organizirale su radionice i programe podrške za pomoć nastavnicima u prijelazu.
+
+Dizajniranje kvalitetnih testnih slučajeva pokazalo se kritičnim za uspješnu implementaciju verifikatora. Nastavnici su morali osmisliti test slučajeve koji ne samo da provjere osnovnu funkcionalnost nego također pokrivaju rubne slučajeve, greške u obradi podataka i različite scenarije korištenja. Ovaj proces zahtijevao je značajno ulaganje vremena i stručnosti.
+
+
+HIBRIDNI MODELI OCJENJIVANJA
+
+Kako bi se prevladala ograničenja čisto automatskog ocjenjivanja, mnoge institucije razvile su hibridne modele koji kombiniraju prednosti verifikatora s ljudskom supervizijom. U ovom pristupu, verifikatori obrađuju rutinske provjere funkcionalnosti, dok nastavnici i asistenti fokusiraju na evaluaciju kvalitete koda, arhitektonskih odluka i konceptualnog razumijevanja.
+
+Neki sustavi, poput CodeInspectora, integirali su velike jezične modele (LLM) za generiranje relevantnijih test slučajeva i personalizirane formativne povratne informacije. Ovi sustavi koriste kontekstualno razumijevanje studentskog koda za pružanje specifičnijih savjeta i sugestija, što približava povratnu informaciju onoj koju bi pružio ljudski mentor.
+
+
+MASOVNI OTVORENI ONLINE TEČAJEVI (MOOCS)
+
+Pandemija je također donijela renesansu masovnih otvorenih online tečajeva (MOOCs). Platforme poput Coursere, edXa i FutureLearn doživjele su eksponencijalni rast. Tijekom travnja 2020., ove platforme privukle su više novih korisnika u jednom mjesecu nego tijekom cijele 2019. godine.
+
+Za MOOCs programiranja, automatski verifikatori nisu samo korisni nego potpuno esencijalni. Nemoguće je imati ljudske evaluatore za stotine tisuća studenata koji sudjeluju u tim tečajevima. Platforme poput Courserine uspješno su koristile kombinaciju automatskih provjera, peer ocjenjivanja i video instrukcija za pružanje kvalitetnog obrazovanja u programiranju na masovnoj razini.
+
+
+DUGOROČNE POSLJEDICE I BUDUĆNOST
+
+Pandemija je ubrzala digitalizaciju visokog obrazovanja za nekoliko godina. Prema analizama, mnoge institucije dosegle su razinu digitalizacije koju su planirali postići za dvije godine. Mnogi studenti i nastavnici otkrili su prednosti online učenja i vjerojatno će nastaviti koristiti te metode i nakon pandemije.
+
+Istraživanja pokazuju da studenti cijene fleksibilnost i instant feedback koje pružaju verifikatori. Mnogi su izjavili da planiraju nastaviti s online kolegijima čak i kada se nastava vrati u učionice. Ovo ukazuje na trajnu transformaciju visokog obrazovanja prema hibridnim modelima koji kombiniraju najbolje aspekte online i offline nastave.
+
+Razvoj sofisticiranijih verifikatora koji koriste umjetnu inteligenciju i strojno učenje nastavit će se ubrzavati. Budući sustavi moći će pružati još personaliziraniju povratnu informaciju, detektirati specifične konceptualne zablude i prilagoditi razinu izazova individualnim potrebama studenta.
+
+
+ZAKLJUČAK
+
+Automatski verifikatori koda igrali su kritičnu ulogu u održavanju kontinuiteta nastave programiranja tijekom pandemije COVID-19. Omogućili su skalabilnu, konzistentnu i trenutnu evaluaciju studentskih radova u situaciji kada tradicionalne metode nisu bile moguće. Iako su imali ograničenja u kvaliteti povratne informacije i nemogućnosti evaluacije svih aspekata programiranja, njihove prednosti nadmašile su nedostatke.
+
+Iskustvo pandemije pokazalo je da kombinacija automatskih verifikatora s ljudskim mentorovanjem daje najbolje rezultate. Verifikatori su efikasni za rutinske provjere i pružanje trenutne povratne informacije, dok ljudski nastavnici mogu fokusirati na dublje konceptualno razumijevanje, kreativno rješavanje problema i razvoj profesionalnih vještina.
+
+Dugoročno, pandemija je ubrzala evoluciju obrazovanja u programiranju prema fleksibilnijim, personaliziranijim i tehnološki podržanim modelima. Verifikatori će i dalje igrati važnu ulogu, ne samo kao alat za krizne situacije, nego kao integralni dio modernog obrazovanja u računarstvu. Budućnost nastave programiranja bit će hibridna, koristeći najbolje elemente online i offline pristupa, s verifikatorima kao ključnom komponentom koja omogućava skalabilnost, konzistentnost i efikasnost obrazovnog procesa.

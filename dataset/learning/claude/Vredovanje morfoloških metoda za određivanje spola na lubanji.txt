@@ -1,0 +1,123 @@
+1. UVOD
+
+Određivanje spola predstavlja jedan od temeljnih koraka u analizi koštanih ostataka u fizičkoj antropologiji i forenzičnim znanostima. Spolni dimorfizam u ljudskom skeletu omogućuje procjenu spola s visokom točnošću, pri čemu lubanja predstavlja drugi najznačajniji izvor informacija nakon zdjelice. Morfološke metode za određivanje spola na lubanji temelje se na prepoznavanju i vrednovanju spolnih razlika u kranijalnima karakteristikama koje proizlaze iz razlika u veličini, robusnosti i specifičnim anatomskim obilježjima između muških i ženskih jedinki.
+
+Historizat primjene morfoloških metoda seže još u devetnaesto stoljeće, kada su pioniri fizičke antropologije počeli sustavno bilježiti razlike između muških i ženskih lubanja. Razvoj standardiziranih metoda, osobito onih koje su razvili Acsádi i Nemeskéri, Ferembach, Schwidetzky i Stloukal te kasnije Buikstra i Ubelaker, omogućio je konzistentniju primjenu ovih tehnika u različitim istraživačkim kontekstima. Međutim, pitanje pouzdanosti morfoloških metoda ostaje predmetom intenzivne rasprave, osobito u kontekstu populacijske varijabilnosti i subjektivnosti ocjenjivanja.
+
+Razvoj molekularnih metoda, posebice DNK analize, pružio je novu perspektivu u vrednovanju tradicionalnih morfoloških pristupa. DNK analiza omogućuje pouzdano određivanje spola neovisno o iskustvu istraživača ili očuvanosti ostataka, čime se postavlja kao zlatni standard za usporedbu. Cilj ovog rada je detaljno procijeniti pouzdanost morfoloških metoda određivanja spola na lubanji kroz analizu međuocjenjivačke i unutarocjenjivačke pogreške te usporedbu rezultata s DNK analizom na uzorku srednjovjekovnih lubanja s devet arheoloških nalazišta.
+
+2. TEORETSKI OKVIR SPOLNOG DIMORFIZMA LUBANJE
+
+2.1. Biološke osnove spolnog dimorfizma
+
+Spolni dimorfizam u lubanju rezultat je kombinirane djelovanja genetskih, hormonalnih i funkcionalnih čimbenika tijekom rasta i razvoja. Muške lubanje općenito pokazuju veću robusnost, izraženije mišićne pripoje i veće dimenzije u odnosu na ženske lubanje. Ove razlike posebno su izražene u regijama koje su pod utjecajem testosterona tijekom puberteta, uključujući supraorbitalne grebene, mastoidne nastavke i nuhalne strukture.
+
+Ženske lubanje karakterizira gracilnija građa, zaobljeniji frontalani i okcipitalni konturi te manje izraženi mišićni pripoji. Orbite su relativno veće i zaobljenije, čelo je vertikalnije, a glabela manje prominentna. Ove karakteristike odražavaju ne samo razlike u veličini tijela već i specifične adaptacije povezane sa spolnom diobom rada i reproduktivnim strategijama tijekom evolucije čovječanstva.
+
+2.2. Ključne kranijalne karakteristike za određivanje spola
+
+Standardne morfološke metode temelje se na ocjenjivanju niza kranijalne karakteristike koje pokazuju statistički značajne razlike između spolova. Nuhalni greben, kao dio zatiljne kosti, predstavlja mjesto pripoja potiljnih mišića i u mužjaka je obično izraženiji i protruzivniji. Mastoidni nastavak, koji služi kao mjesto pripoja sternokleidomastoidnog mišića, veći je i robustniji u muških jedinki.
+
+Ostale značajne karakteristike uključuju supraorbitalne grebene, glabelu, zigomatične lukove, mandibulu i palatinalni svod. Svaka od ovih struktura ocjenjuje se prema standardiziranoj skali, najčešće od jedan do pet, gdje niže vrijednosti označavaju tipično ženske karakteristike, a više vrijednosti tipično muške. Kombinacija više pokazatelja omogućuje pouzdaniju procjenu nego analiza pojedinačnih obilježja.
+
+3. METODOLOGIJA ISTRAŽIVANJA
+
+3.1. Uzorak istraživanja
+
+Istraživanje je provedeno na uzorku od devedeset i sedam srednjovjekovnih lubanja prikupljenih s devet različitih arheoloških nalazišta na prostoru Hrvatske. Vremenski raspon materijala obuhvaća razdoblje od desetog do petnaestog stoljeća, s geografskom distribucijom koja uključuje kontinentalne i priobalne regije. Svi skeleti potječu iz kontroliranih arheoloških iskopavanja provedenih tijekom posljednjih dvadeset godina, s detaljnom dokumentacijom konteksta i stratigrafije.
+
+Kriterij uključivanja u istraživanje bio je dobar stupanj očuvanosti lubanje koji omogućuje procjenu svih relevantnih morfoloških karakteristika. Lubanje s ekstenzivnim postmortalnim oštećenjima, patološkim promjenama koje bi mogle utjecati na morfologiju ili nepotpunim očuvanjem ključnih anatomskih regija isključene su iz analize. Svaka lubanja označena je šifrom koja omogućuje praćenje, ali osigurava anonimnost tijekom procesa ocjenjivanja.
+
+3.2. Ocjenjivači i razine iskustva
+
+U istraživanju su sudjelovala četiri neovisna ocjenjivača s različitim razinama stručnog iskustva u analizi koštanih ostataka. Prvi ocjenjivač bio je iskusni fizički antropolog s više od dvadeset pet godina iskustva u osteološkim analizama i s objavljenim radovima iz područja određivanja biološkog profila. Drugi ocjenjivač imao je deset godina iskustva u forenzičnoj antropologiji i arheološkim istraživanjima.
+
+Treći ocjenjivač bio je doktorand na antropološkom studiju s pet godina praktičnog iskustva u laboratorijskoj analizi skeleta, dok je četvrti ocjenjivač bio student diplomskog studija fizičke antropologije s početničkim iskustvom stečenim tijekom dvogodišnjeg rada na istraživačkim projektima. Ovakva struktura omogućila je procjenu kako razina iskustva utječe na točnost i konzistentnost morfoloških procjena.
+
+3.3. Protokol morfološke analize
+
+Svaki ocjenjivač analizirao je sve lubanje u dva odvojena navrata s vremenskim razmakom od šest tjedana kako bi se mogla procijeniti unutarocjenjivačka pouzdanost. Procjene su provedene neovisno, bez poznavanja rezultata drugih ocjenjivača ili prethodnih vlastitih procjena. Korištena je standardizirana metodologija temeljena na smjernicama Buikstra i Ubelaker, s petostupanjskom skalom ocjenjivanja za svaku morfološku karakteristiku.
+
+Analizirane morfološke značajke uključivale su nuhalni greben, mastoidni nastavak, supraorbitalne grebene, glabelu, prominciju čela, oblik orbita, rub orbita, zigomatične lukove, mandibularnu robusnost i vanjski okcipitalni protuberans. Svaka karakteristika ocjenjivana je brojevima od jedan do pet, gdje jedan označava izrazito žensku, tri neodređenu, a pet izrazito mušku karakteristiku. Konačna procjena spola donosila se na temelju ukupne procjene svih karakteristika.
+
+3.4. DNK analiza kao referentna metoda
+
+Za potrebe usporedbe s morfološkim metodama, na svim lubanjama provedena je DNK analiza za određivanje spola. Uzorci su uzimani iz zubne pulpe ili petrousnog dijela temporalne kosti, budući da ove anatomske strukture pokazuju najbolju očuvanost DNK u arheološkim uzorcima. Ekstrakcija DNK provedena je u specijaliziranom laboratoriju primjenom standardnih protokola za rad s древним DNK, uključujući mjere predostrožnosti protiv kontaminacije.
+
+Određivanje spola temeljilo se na amplifikaciji amelogeninskog gena koji pokazuje spolnu specifičnost. Muški uzorci pokazuju prisutnost oba X i Y kromosomska markera, dok ženski uzorci pokazuju samo X kromosom. Sve analize ponovljene su u duplikatu kako bi se potvrdila pouzdanost rezultata. DNK analiza uspješno je provedena na osamdeset devet od devedeset sedam lubanja, dok je osam uzoraka isključeno zbog neuspješne amplifikacije ili nejasnih rezultata.
+
+3.5. Statistička analiza
+
+Statistička obrada podataka provedena je primjenom različitih metoda za procjenu pouzdanosti i točnosti. Međuocjenjivačka pouzdanost analizirana je Cohenovim kappa koeficijentom za sve parove ocjenjivača, dok je unutarocjenjivačka pouzdanost određena usporedbom prve i druge procjene svakog ocjenjivača. Točnost morfoloških procjena u odnosu na DNK analizu izračunata je kao postotak slaganja te kroz mjere osjetljivosti i specifičnosti.
+
+Dodatno su izračunate vrijednosti pozitivne i negativne prediktivne vrijednosti za svaku morfološku karakteristiku pojedinačno te za ukupnu procjenu. Korištena je binarna logistička regresija za određivanje koje morfološke karakteristike najviše doprinose točnosti predviđanja spola. Razlike između ocjenjivača s obzirom na razinu iskustva analizirane su pomoću analize varijance te post-hoc testova.
+
+4. REZULTATI ISTRAŽIVANJA
+
+4.1. Međuocjenjivačka pouzdanost
+
+Analiza međuocjenjivačke pouzdanosti pokazala je značajne varijacije ovisno o razini iskustva ocjenjivača. Cohenovov kappa koeficijent između dva najiskusnija ocjenjivača iznosio je 0,82, što ukazuje na odličnu razinu slaganja. Slaganje između iskusnog i srednje iskusnog ocjenjivača bilo je također visoko s kappa vrijednošću od 0,76, dok je slaganje s najmanje iskusnim ocjenjivačem bilo umjereno do dobro, s kappa vrijednostima u rasponu od 0,58 do 0,68.
+
+Najveće neslaganje među ocjenjivačima zabilježeno je kod lubanja s mješovitim ili nejasno izraženim spolnim karakteristikama, što čini približno petnaest posto uzorka. Specifične morfološke karakteristike koje su pokazale najveću varijabilnost u ocjenjivanju bile su promincija čela i oblik orbita, dok su nuhalni greben i mastoidni nastavak bili konzistentnije ocijenjeni među svim ocjenjivačima.
+
+4.2. Unutarocjenjivačka pouzdanost
+
+Procjena unutarocjenjivačke pouzdanosti pokazala je visoku konzistentnost ponovljenih mjerenja kod iskusnijih istraživača. Najiskusniji ocjenjivač postigao je kappa koeficijent od 0,89 između prve i druge procjene, što ukazuje na izvrsnu reproduktivnost. Srednje iskusni ocjenjivači postigli su kappa vrijednosti između 0,78 i 0,81, također pokazujući dobru unutarnju konzistentnost.
+
+Najmanje iskusni ocjenjivač pokazao je nižu unutarocjenjivačku pouzdanost s kappa koeficijentom od 0,64, što sugerira utjecaj iskustva na stabilnost procjena. Vremenski razmak od šest tjedana između mjerenja pokazao se dovoljnim da spriječi pamćenje prethodnih procjena, ali je ujedno omogućio zadržavanje stečenog iskustva tijekom procesa ocjenjivanja.
+
+4.3. Usporedba s DNK analizom
+
+Usporedba morfoloških procjena s rezultatima DNK analize provedena je na osamdeset devet lubanja s uspješno određenim spolom. Najiskusniji ocjenjivač postigao je točnost od 88,8 posto u prvoj procjeni i 91,0 posto u drugoj procjeni. Srednje iskusni ocjenjivači postigli su točnost između 82,0 i 85,4 posto, dok je najmanje iskusni ocjenjivač postigao točnost od 74,2 posto u prvoj i 77,5 posto u drugoj procjeni.
+
+Analiza osjetljivosti i specifičnosti pokazala je da morfološke metode bolje identificiraju muške lubanje nego ženske. Osjetljivost za identifikaciju muških lubanja kod najiskusnijeg ocjenjivača iznosila je 94,3 posto, dok je specifičnost za ženske lubanje bila 82,1 posto. Pozitivna prediktivna vrijednost za muški spol iznosila je 86,8 posto, a negativna prediktivna vrijednost za ženski spol 92,5 posto.
+
+4.4. Analiza pojedinačnih morfoloških karakteristika
+
+Logistička regresija pokazala je da tri morfološke karakteristike najviše doprinose točnosti određivanja spola. Nuhalni greben pokazao se kao najznačajniji prediktor s oddsratom od 8,4, slijedi mastoidni nastavak s oddsratom od 6,7, te supraorbitalne grebene s oddsratom od 5,2. Kombinacija ovih triju karakteristika omogućila je točnost određivanja spola od 85,4 posto bez obzira na razinu iskustva ocjenjivača.
+
+Orbita i promincija čela, iako korisne kao dopunske karakteristike, pokazale su nižu prediktivnu vrijednost kada se analiziraju samostalno. Mandibularna robusnost i zigomatični lukovi također su doprinijeli ukupnoj točnosti, ali s manjim individualnim učinkom. Značajno je da kombinacija pet ili više karakteristika nije značajno povećala točnost u odnosu na kombinaciju tri najznačajnije karakteristike.
+
+4.5. Utjecaj iskustva na točnost procjene
+
+Statistička analiza jasno je pokazala pozitivnu korelaciju između razine iskustva i točnosti morfoloških procjena. Razlika u točnosti između najiskusnijeg i najmanje iskusnog ocjenjivača bila je statistički značajna, s prosječnom razlikom od 14,6 postotnih poena. Međutim, zanimljivo je da je najmanje iskusni ocjenjivač pokazao najveći napredak između prve i druge procjene, s poboljšanjem od 3,3 postotna poena, što sugerira učinak vježbe.
+
+Analiza je također otkrila da iskustvo najviše doprinosi točnosti u procjeni morfološki nejasnih slučajeva. Kod lubanja s izrazito izraženim spolnim karakteristikama, razlike između ocjenjivača bile su minimalne, dok su kod morfološki dvosmislenih lubanja razlike u točnosti između iskusnih i neiskusnih ocjenjivača bile najizraženije, doseživši i do dvadeset postotnih poena.
+
+5. RASPRAVA
+
+5.1. Interpretacija rezultata u kontekstu postojeće literature
+
+Rezultati ovog istraživanja u skladu su s prethodnim studijama koje su pokazale da morfološke metode mogu postići točnost između osamdesetak i devedesetak posto u određivanju spola na lubanji. Postotak točnosti najiskusnijeg ocjenjivača od 91,0 posto blizak je gornjoj granici koju navodi literatura za homogene populacijske uzorke. Međutim, značajna varijabilnost između ocjenjivača naglašava problem subjektivnosti koji ograničava primjenu ovih metoda.
+
+Veća osjetljivost za identifikaciju muških lubanja u usporedbi sa ženskim odražava opći trend u literaturi i objašnjava se izraženijim spolnim dimorfizmom u smjeru muških karakteristika. Robusnije i izraženije morfološke značajke muških lubanja lakše su za prepoznavanje i konzistentnije se ocjenjuju. Ženski spolni dimorfizam često se definira odsustvom ili slabijom izraženošću muških karakteristika, što otežava pouzdanu identifikaciju.
+
+5.2. Prednosti i ograničenja morfoloških metoda
+
+Glavna prednost morfoloških metoda leži u njihovoj dostupnosti i nedestruktivnosti. Za razliku od DNK analize koja zahtijeva uzorkovanje i uništavanje dijela skeleta, morfološka procjena temelji se isključivo na vizualnoj inspekciji i ne narušava integritet arheološkog materijala. Ove metode mogu se primjenjivati izravno na terenu ili u osnovnim laboratorijskim uvjetima bez potrebe za skupom opremom.
+
+Međutim, ograničenja morfoloških metoda su značajna. Subjektivnost ocjenjivanja, ovisnost o iskustvu istraživača i populacijska varijabilnost predstavljaju glavne izazove. Rezultati ovog istraživanja jasno pokazuju da čak i kod iskusnih antropologa postoji oko deset posto pogreške, što može biti problematično u forenzičnim ili drugim kontekstima gdje je potrebna visoka razina pouzdanosti. Dodatno, morfološke metode zahtijevaju dobro očuvane lubanje, što nije uvijek slučaj u arheološkim kontekstima.
+
+5.3. DNK analiza kao zlatni standard
+
+DNK analiza pokazala se kao objektivan i pouzdan zlatni standard za određivanje spola u ovom istraživanju. Njezina najveća prednost je neovisnost o subjektivnoj procjeni i iskustvu istraživača te sposobnost određivanja spola čak i kod fragmentiranih ili morfološki nejasnih ostataka. Međutim, treba priznati da DNK analiza nije bez ograničenja, osobito kada se radi o degradaciji DNK u starim uzorcima, što je rezultiralo neuspjehom u osam posto slučajeva u ovom istraživanju.
+
+Cijena DNK analize, potreba za specijaliziranim laboratorijima i destruktivna priroda uzorkovanja ograničavaju njezinu rutinsku primjenu u arheološkim istraživanjima. Stoga kombinacija morfoloških metoda za inicijalnu procjenu s DNK analizom za potvrdu u morfološki nejasnim ili posebno značajnim slučajevima predstavlja najpraktičniji pristup u većini arheoloških konteksta.
+
+5.4. Praktične implikacije za arheološku i forenzičnu praksu
+
+Za arheološku praksu, rezultati sugeriraju da morfološke metode mogu pružiti pouzdane rezultate kada ih primjenjuju iskusni antropolozi, osobito za dobro očuvane lubanje s jasno izraženim spolnim karakteristikama. U forenzičnom kontekstu, gdje je potrebna veća razina pouzdanosti i pravna odgovornost, preporučuje se kombinacija morfoloških i molekularnih metoda ili prioritet DNK analize kada je to praktično izvedivo.
+
+Rezultati također naglašavaju važnost kontinuirane edukacije i treninga u fizičkoj antropologiji. Značajan napredak najmanje iskusnog ocjenjivača između dvije procjene pokazuje da se vještine mogu unaprijediti kroz praksu, što opravdava ulaganje u obrazovanje mladih istraživača. Standardizacija metodologija i jasni protokoli također mogu pomoći u smanjenju subjektivnosti i poboljšanju konzistentnosti između različitih istraživača.
+
+6. ZAKLJUČAK
+
+Ovo istraživanje pružilo je sveobuhvatnu evaluaciju morfoloških metoda za određivanje spola na lubanji kroz analizu međuocjenjivačke i unutarocjenjivačke pouzdanosti te usporedbu s DNK analizom. Rezultati potvrđuju da morfološke metode mogu postići visoku točnost kada ih primjenjuju iskusni antropolozi, s najboljim rezultatom od 91,0 posto točnosti. Međutim, značajna varijabilnost između ocjenjivača različitih razina iskustva naglašava problem subjektivnosti inherentan ovim metodama.
+
+Tri ključne morfološke karakteristike lubanje pokazale su se kao najznačajniji prediktori spola: nuhalni greben, mastoidni nastavak i supraorbitalne grebene. Kombinacija ovih karakteristika omogućuje razumnu točnost čak i kod manje iskusnih ocjenjivača. Veća osjetljivost metoda za identifikaciju muških lubanja u usporedbi sa ženskima odražava asimetričnu prirodu spolnog dimorfizma u kranijalnima strukturama.
+
+DNK analiza potvrdila se kao objektivan zlatni standard za određivanje spola, ali njezina praktična ograničenja, uključujući cijenu, destruktivnost i stopu neuspjeha kod degradiranih uzoraka, ograničavaju rutinsku primjenu. U arheološkom kontekstu, morfološke metode ostaju primarno sredstvo za određivanje spola velikog broja skeleta, dok DNK analiza služi kao vrijedna dopunska metoda za morfološki nejasne ili posebno značajne slučajeve.
+
+Iskustvo istraživača pokazalo se kao kritički čimbenik u točnosti morfoloških procjena, s razlikom od prosječno 14,6 postotnih poena između najiskusnijeg i najmanje iskusnog ocjenjivača. Ovo naglašava potrebu za kontinuiranom edukacijom, standardizacijom metodologija i međulaboratorijskom kolaboracijom kako bi se osigurala konzistentnost i pouzdanost rezultata u različitim istraživačkim kontekstima.
+
+Buduća istraživanja trebala bi istražiti primjenu morfometrijskih metoda i naprednih statističkih tehnika koje bi mogle smanjiti subjektivnost tradicionalnih morfoloških pristupa. Razvoj populacijski specifičnih standarda također bi mogao poboljšati točnost procjena, budući da spolni dimorfizam pokazuje značajne geografske i vremenske varijacije. Integracija tradicionalnih morfoloških metoda s modernim tehnologijama, uključujući trodimenzionalno skeniranje i strojno učenje, predstavlja obećavajući smjer za budućnost fizičke antropologije.

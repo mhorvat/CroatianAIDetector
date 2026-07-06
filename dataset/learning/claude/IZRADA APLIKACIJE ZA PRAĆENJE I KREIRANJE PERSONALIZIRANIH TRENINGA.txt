@@ -1,0 +1,78 @@
+1. Uvod
+U suvremenom digitalnom društvu, zdravlje i fitness postali su prioritet za sve veći broj ljudi. Paralelno s tim trendom, razvoj web aplikacija koje omogućuju praćenje i personalizaciju fitness treninga doživljava eksponencijalni rast. Ove aplikacije ne samo da olakšavaju korisnicima upravljanje vlastitim treninzima, već im pružaju i mogućnost stvaranja personaliziranih programa prilagođenih njihovim specifičnim ciljevima, tjelesnim mogućnostima i zdravstvenim stanjima.
+
+Cilj ovog seminara je detaljno analizirati proces izrade web aplikacije za praćenje i kreiranje personaliziranih treninga, s posebnim naglaskom na upotrebu PHP programskog jezika kao temeljne backend tehnologije. PHP, kao jedan od najraširenijih server-side programskih jezika, nudi robusnu podlogu za razvoj dinamičkih web aplikacija s kompleksnom logikom i interakcijom s bazom podataka.
+
+Kroz ovaj rad će biti obrađena arhitektura sustava, dizajn baze podataka, implementacija ključnih funkcionalnosti, sigurnosni aspekti te najbolje prakse u razvoju ovakvih aplikacija. Posebna pažnja bit će posvećena personalizaciji treninga kroz algoritme koji uzimaju u obzir korisničke parametre i napredak, što predstavlja ključnu komponentu moderne fitness tehnologije.
+
+2. Arhitektura sustava i tehnološki stack
+Razvoj fitness aplikacije zahtijeva promišljenu arhitekturu koja će osigurati skalabilnost, maintainability i optimalne performanse. Moderna web aplikacija ovog tipa tipično koristi višeslojnu arhitekturu koja odvaja prezentacijski sloj (frontend), aplikacijsku logiku (backend) i sloj za pohranu podataka (bazu podataka).
+
+Za backend razvoj, PHP se pokazao kao iznimno prikladna tehnologija zahvaljujući svojim karakteristikama. Korištenje PHP frameworka poput Laravela ili Symfony omogućuje strukturirani pristup razvoju s ugrađenim MVC (Model-View-Controller) obrascem, routing mehanizmom, ORM (Object-Relational Mapping) alatima i mnogim drugim korisnim značajkama. Laravel, primjerice, nudi Eloquent ORM koji znatno pojednostavljuje rad s bazom podataka kroz elegantnu sintaksu i objektno-orijentirani pristup.
+
+Frontend dio aplikacije može biti implementiran kao Single Page Application (SPA) koristeći moderne JavaScript frameworke poput React, Vue.js ili Angular, koji komuniciraju s PHP backendom putem RESTful API-ja ili GraphQL upita. Ovaj pristup osigurava responzivno korisničko sučelje i bogatije korisničko iskustvo. Alternativno, za jednostavnije implementacije može se koristiti tradicionalni pristup s PHP template engineima poput Blade-a ili Twig-a.
+
+Za pohranu podataka najčešće se koristi relaciona baza podataka poput MySQL ili PostgreSQL, koje pružaju potrebnu pouzdanost, ACID svojstva transakcija i mogućnosti kompleksnih upita. Za dodatnu funkcionalnost poput cachiranja često se implementira Redis ili Memcached, što značajno poboljšava performanse aplikacije pri ponovljenim upitima i upravljanju sesijama korisnika.
+
+3. Dizajn baze podataka i modeliranje entiteta
+Baza podataka predstavlja srce fitness aplikacije jer pohranjuje sve relevantne informacije o korisnicima, treninzima, vježbama i napretku. Pravilno dizajniranje sheme baze ključno je za buduću proširivost i efikasnost sustava.
+
+Osnovni entiteti u sustavu uključuju: Korisnik (User), Trening (Workout), Vježba (Exercise), Set, Program Treninga (Training Program) i Napredak (Progress). Entitet Korisnik sadrži demografske podatke, fitnes parametre (visina, težina, BMI), ciljeve i preferencije. Entitet Vježba definira pojedinačne vježbe s njihovim karakteristikama poput naziva, opisa, mišićnih grupa koje aktiviraju, težine izvođenja i potrebne opreme.
+
+Trening predstavlja instancu pojedinačnog treninga koji korisnik izvodi, dok Set označava specifičan set ponavljanja određene vježbe unutar treninga. Program Treninga je dugoročniji plan koji obuhvaća više treninga raspoređenih kroz određeno vremensko razdoblje. Entitet Napredak bilježi korisničke metrike kroz vrijeme, omogućujući praćenje razvoja i prilagodbu treninga.
+
+Relacije između entiteta implementiraju se kroz strane ključeve i join tablice. Na primjer, veza između Korisnika i Treninga je one-to-many, dok je veza između Treninga i Vježbi many-to-many, jer jedan trening može sadržavati više vježbi, a jedna vježba može biti dio više različitih treninga. Indeksiranje ključnih kolona i optimizacija upita putem EXPLAIN naredbi osiguravaju brze odgovore sustava čak i pri velikim količinama podataka.
+
+4. Implementacija personalizacije treninga
+Personalizacija predstavlja najvrjedniju značajku moderne fitness aplikacije. Algoritmi personalizacije uzimaju u obzir višestruke faktore: korisnikovu razinu kondicije, ciljeve (gubitak težine, dobivanje mišićne mase, poboljšanje izdržljivosti), zdravstvene ograničenja, dostupnost opreme i vremenske preferencije.
+
+U PHP implementaciji, personalizacija se ostvaruje kroz klase i servise koji analiziraju korisničke podatke i generiraju prilagođene treninge. Sustav može koristiti bodovni algoritam koji svakoj vježbi dodijeljuje težinu relevantnosti na temelju korisničkih parametara. Na primjer, korisnik koji teži izgradnji gornjeg dijela tijela dobit će veću reprezentaciju vježbi za prsa, leđa i ruke.
+
+Progresivno opterećenje implementira se kroz algoritme koji automatski prilagođavaju intenzitet treninga na temelju korisničkog napretka. Ako korisnik dosljedno uspijeva dovršiti planiran broj setova i ponavljanja, sustav može automatski povećati opterećenje ili volumen treninga. Ovaj mehanizam koristi pohranjene podatke o prethodnim treninzima i primjenjuje pravila progresije specifična za vrstu cilja.
+
+PHP omogućuje integraciju naprednih tehnika poput machine learning algoritama kroz biblioteke ili eksterne API servise. Sustav može učiti iz korisničkih obrazaca i predviđati optimalne treninge na temelju povijesnih podataka. Laravel, primjerice, omogućuje laku integraciju s Python mikroservisima koji pokreću ML modele za kompleksnije analize.
+
+5. Korisničko sučelje i user experience
+Uspjeh fitness aplikacije u velikoj mjeri ovisi o kvaliteti korisničkog sučelja i ukupnog korisničkog iskustva. Sučelje mora biti intuitivno, responzivno i motivirajuće, jer će korisnici aplikaciju najčešće koristiti u gym prostoru ili tijekom treninga.
+
+Dashboard predstavlja centralnu točku aplikacije i mora pružiti brz pregled ključnih informacija: danasnji trening, postignuti napredak, statistike i motivacijske pokazatelje. Vizualizacija podataka kroz grafikone (npr. Chart.js ili D3.js) pomaže korisnicima razumjeti svoj napredak kroz vrijeme. Elementi gamifikacije poput bedgova, achievement-a i leaderboarda mogu značajno povećati engagement korisnika.
+
+Tijekom izvođenja treninga, aplikacija treba omogućiti jednostavan unos podataka s minimalnim brojem klikova. Timer funkcionalnost za praćenje pauza između setova, video demonstracije vježbi i mogućnost brzog prilagođavanja planiranog treninga ključne su značajke. Progressive Web App (PWA) pristup omogućuje offline funkcionalnost, što je posebno važno u gym okruženjima gdje WiFi veza može biti nepouzdana.
+
+Responsive dizajn je imperativ jer će značajan postotak korisnika pristupati aplikaciji putem mobitela. CSS frameworki poput Tailwind CSS ili Bootstrap omogućuju brzi razvoj responzivnog sučelja, dok PHP backend osigurava da se podaci prikazuju optimizirano ovisno o uređaju. Važno je testirati aplikaciju na različitim veličinama ekrana i rezolucijama kako bi se osiguralo konzistentno iskustvo.
+
+6. Sigurnost i zaštita podataka
+Fitness aplikacije rukuju osjetljivim osobnim podacima uključujući zdravstvene informacije, što zahtijeva stroge sigurnosne mjere i usklađenost s regulativama poput GDPR-a. Implementacija višeslojne sigurnosti je ključna za zaštitu korisničkih podataka i održavanje povjerenja.
+
+Autentifikacija korisnika implementira se kroz sigurne mehanizme poput bcrypt ili Argon2 hash algoritama za lozinke. PHP nudi ugrađene funkcije poput password_hash() i password_verify() koje olakšavaju implementaciju best practice pristupa. Dodatni sloj sigurnosti može se postići kroz two-factor autentifikaciju (2FA) koristeći TOTP (Time-based One-Time Password) algoritme.
+
+Zaštita od čestih web ranjivosti mora biti prioritet: SQL injection se sprječava kroz parametrizirane upite i ORM korištenje; XSS (Cross-Site Scripting) kroz HTML encoding outputa; CSRF (Cross-Site Request Forgery) kroz tokene; i Session hijacking kroz sigurno upravljanje sesijama. Laravel automatski implementira mnoge od ovih zaštita, ali razvojni tim mora biti svjestan potencijalnih sigurnosnih prijetnji.
+
+Šifriranje osjetljivih podataka u bazi podataka (encryption at rest) i korištenje HTTPS protokola za sve komunikacije (encryption in transit) nužni su standardi. PHP biblioteke poput OpenSSL omogućuju implementaciju robusnih šifriranja. Regularna sigurnosna revizija koda, penetracijski testovi i nadogradnje komponenti ključni su za održavanje sigurnog sustava kroz vrijeme.
+
+7. Praćenje performansi i analitika
+Implementacija sustava za praćenje performansi aplikacije i analizu korisničkog ponašanja omogućuje kontinuirano poboljšanje proizvoda i razumijevanje korisničkih potreba. PHP aplikacije mogu integrirati različite alate za monitoring i analitiku koji pružaju vrijedne uvide.
+
+Server-side performanse mogu se pratiti kroz alate poput New Relic, Blackfire ili Tideways koji identificiraju bottlenecke u kodu, spore database upite i probleme s memorijom. Laravel Telescope nudi elegantno sučelje za debugging i praćenje requestova, exceptiona, database upita i queue jobova u real-time. Query logging i analiza najčešćih operacija pomaže u optimizaciji database strukture i indeksa.
+
+Korisničko ponašanje može se analizirati kroz integraciju s platformama poput Google Analytics ili Mixpanel. Ovi alati omogućuju praćenje user journeys, conversion funnels, retention rate i drugih ključnih metrika. A/B testiranje različitih značajki ili UI elemenata pomaže u donošenju odluka temeljenih na podacima umjesto pretpostavki.
+
+Dodatno, aplikacija može implementirati vlastiti analytics sustav koji prikuplja fitness-specifične metrike: koje vježbe su najpopularnije, prosječno trajanje treninga, stope dovršavanja planiranih programa i korelacije između određenih treninga i postizanja ciljeva. Ovi podaci ne samo da pomažu u poboljšanju aplikacije već mogu pružiti vrijedne uvide o fitness trendovima i preferencijama korisnika.
+
+8. Integracije i proširivost sustava
+Moderna fitness aplikacija rijetko funkcionira kao izolirani sustav. Integracije s vanjskim servisima i uređajima značajno povećavaju vrijednost aplikacije i omogućuju holistički pristup fitness praćenju. PHP, sa svojom bogatom ekosistemom biblioteka, olakšava implementaciju različitih integracija.
+
+Integracija s wearable uređajima poput fitness trackera i pametnih satova omogućuje automatsko prikupljanje podataka o pređenim koracima, otkucajima srca, potrošenim kalorijama i kvaliteti sna. Većina proizvođača nudi API-je kroz koje PHP aplikacija može dohvaćati podatke. Na primjer, Fitbit API, Garmin Connect API ili Apple HealthKit omogućuju dohvaćanje korisničkih health metrika koje se mogu koristiti za personalizaciju treninga.
+
+Payment gateway integracije nužne su za monetizaciju kroz premium planove ili in-app kupnje. PHP biblioteke za Stripe, PayPal ili druge payment procesore omogućuju sigurnu obradu plaćanja. Laravel Cashier nudi gotova rješenja za subscription billing s automatskim upravljanjem pretplata, faktura i payment failures.
+
+Dodatno, aplikacija može integrirati nutritijske API-je koji pružaju informacije o namirnicama i kalorijama, što omogućuje holistički pristup fitnessu koji kombinira trening i prehranu. Social media integracije omogućuju korisnicima dijeljenje postignuća, što povećava engagement i viralnost aplikacije. Implementacija webhook sistema omogućuje real-time notifikacije i automatizaciju workflow-a, dok API-first pristup razvoju omogućuje buduću integraciju s drugim platformama i uslugama.
+
+9. Zaključak
+Izrada aplikacije za praćenje i kreiranje personaliziranih treninga predstavlja kompleksan ali iznimno vrijedan projekt koji kombinira elemente web razvoja, algoritamskog razmišljanja, UI/UX dizajna i razumijevanja fitness industrije. PHP, kao backend tehnologija, pokazao se kao robusno i skalabilno rješenje za ovakve aplikacije, posebno kada se koristi u kombinaciji s modernim frameworkima poput Laravela.
+
+Kroz ovaj seminar analizirani su ključni aspekti razvoja: od arhitekture sustava i dizajna baze podataka, preko implementacije personalizacije i korisničkog sučelja, do sigurnosnih mjera i integracija. Svaki od ovih elemenata mora biti pažljivo planiran i implementiran kako bi rezultirao aplikacijom koja je ne samo funkcionalna već i ugodna za korištenje, sigurna i skalabilna.
+
+Personalizacija treninga, kao centralna značajka, zahtijeva kontinuirani razvoj i usavršavanje algoritama na temelju korisničkog feedbacka i napretka. Implementacija machine learning komponenti i napredne analitike omogućuje da aplikacija postane sve pametnija i relevantnija za svakog pojedinog korisnika.
+
+Budućnost fitness aplikacija leži u još većoj personalizaciji, integraciji s AI asistentima, proširenom realitetu za vođene treninge i IoT integracijama s gym opremom. PHP ekosistem, sa svojom aktivnom zajednicom i konstantnim razvojem, pruža solidnu osnovu za razvoj inovativnih rješenja u ovom prostoru. Uspješna fitness aplikacija mora kontinuirano evoluirati, pratiti tehnološke trendove i, najvažnije, stavljati korisnika u centar svakog dizajnerskog i razvojnog procesa.

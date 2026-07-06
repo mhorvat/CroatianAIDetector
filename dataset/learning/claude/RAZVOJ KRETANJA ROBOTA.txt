@@ -1,0 +1,95 @@
+1. UVOD
+
+Robotika predstavlja interdisciplinarno područje koje objedinjuje mehaniku, elektroniku, računarstvo i umjetnu inteligenciju s ciljem stvaranja autonomnih ili poluautonomnih strojeva sposobnih za izvršavanje složenih zadataka. Temeljni preduvjet za učinkovito funkcioniranje robota u stvarnom svijetu jest sposobnost kretanja - bilo da se radi o jednostavnoj navigaciji u strukturiranoj industrijskoj okolini ili kompleksnom kretanju po neravnom terenu.
+
+Problematika robotskog kretanja predstavlja fascinantan inženjerski izazov koji zahtijeva rješavanje niza međusobno povezanih problema: mehaničku konstrukciju sustava za lokomotoriju, razvoj algoritama za kontrolu i planiranje kretanja, integraciju senzorskih sustava za percepciju okoline te implementaciju učinkovitih strategija za izvršavanje zadataka u dinamičkim i često nepredvidivim uvjetima.
+
+Razvoj mobilne robotike započeo je sredinom 20. stoljeća s prvim eksperimentalnim vozilima, no značajan napredak postignut je tek posljednjih desetljeća zahvaljujući napretku u mikroelektronici, razvoju naprednih algoritama strojnog učenja i dostupnosti snažnih, energetski učinkovitih aktuatora. Današnji roboti koriste se u širokom spektru aplikacija - od automatiziranih skladišta i proizvodnih pogona, preko istraživanja nepristupačnih prostora poput oceanskih dubina ili planetarnih površina, do pomoći u zdravstvu i kućanstvima.
+
+
+2. TEMELJNI KONCEPTI ROBOTSKOG KRETANJA
+
+2.1. Stupnjevi slobode i konfiguracijski prostor
+
+Kretanje robota može se matematički opisati kroz koncept stupnjeva slobode (Degrees of Freedom - DOF). Broj stupnjeva slobode određuje koliko neovisnih parametara je potrebno za potpuno opisivanje položaja i orijentacije robota u prostoru. Mobilni robot koji se kreće po ravnoj površini ima tri stupnja slobode: dvije translacije (x, y koordinate) i jednu rotaciju (orijentacija θ). Robot u trodimenzionalnom prostoru, poput quadkoptera, ima šest stupnjeva slobode: tri translacije i tri rotacije.
+
+Konfiguracijski prostor (C-space) predstavlja matematičku apstrakciju svih mogućih konfiguracija koje robot može zauzeti. Za planiranje putanje, configuracijski prostor se dijeli na slobodni prostor (gdje robot može sigurno boraviti) i prostor prepreka (zabranjene konfiguracije). Transformacija fizičkog prostora u konfiguracijski prostor omogućuje primjenu sofisticiranih algoritama za pronalaženje optimalnih putanja.
+
+2.2. Kinematika i dinamika
+
+Kinematika opisuje geometrijske aspekte kretanja bez razmatranja sila koje ga uzrokuju. Forward kinematics omogućuje izračunavanje položaja robota na temelju stanja aktuatora, dok inverse kinematics rješava obrnutu problem - određivanje potrebnih vrijednosti aktuatora za postizanje željenog položaja.
+
+Dinamika proučava odnos između sila, momenata i rezultirajućeg kretanja. Dinamički modeli robota temelje se na Newtonovim zakonima i Euler-Lagrangeovim jednadžbama, omogućujući preciznu kontrolu i predviđanje ponašanja sustava. Za praktičnu implementaciju često se koriste pojednostavljeni modeli koji zanemaruju manje značajne efekte poput trenja i klizanja, no za visokoprecizne aplikacije potrebno je uključiti i ove nelinearnosti.
+
+
+3. TIPOVI ROBOTSKIH SUSTAVA ZA KRETANJE
+
+3.1. Kotačni roboti
+
+Kotačni sustavi predstavljaju najrasprostranjeniju kategoriju mobilnih robota zbog svoje jednostavnosti, energetske učinkovitosti i mogućnosti postizanja visokih brzina na ravnim površinama. Razlikuju se različite konfiguracije kotača, od kojih svaka ima specifične prednosti i ograničenja.
+
+Diferencijalni pogon (differential drive) koristi dva neovisno pokretana kotača smještena na zajedničkoj osi, s jednim ili više potpomogućih kotača za stabilnost. Kretanje i okretanje robota postižu se varijacijom brzina lijevog i desnog kotača. Ovaj sustav omogućuje okretanje na mjestu (nulti radijus okretanja) i jednostavnu implementaciju kontrolnih algoritama, što ga čini popularnim izborom za kućne i obrazovne robote poput Roomba usisavača ili TurtleBot platformi.
+
+Ackermann upravljanje, preuzeto iz automobilske industrije, koristi prednje kotače za upravljanje i stražnje za pogon. Sustav ne može skretati na mjestu, no pruža izvrsnu stabilnost pri visokim brzinama i prirodnu kontrolu sličnu konvencionalnim vozilima. Primjenjuje se u autonomnim automobilima i industrijskim vozilima velikih dimenzija.
+
+Omnidirekcionalni kotači, poput Mecanum i omni kotača, omogućuju kretanje u bilo kojem smjeru bez potrebe za prethodnim okretanjem robota. Mecanum kotači koriste seriju malih rola postavljenih pod kutom od 45° na obod kotača, omogućujući translaciju u bilo kojem smjeru kombinacijom različitih brzina kotača. Ova sposobnost holistične kontrole čini ih idealnim za skladišne robote koji moraju manevrirati u uskim prostorima.
+
+3.2. Nogasti roboti
+
+Nogasti robotski sustavi inspirirali su se biološkim uzorima, od insekata do sisavaca, nudeći superiornu prilagodljivost neravnom terenu i sposobnost prelaženja prepreka koje bi bile nepremostive za kotačne sustave. Klasificiraju se prema broju nogu: bipedalni (dvije noge), quadrupedalni (četiri noge), heksapodalni (šest nogu) i oktopodalni (osam nogu).
+
+Bipedalni roboti, poput Hondine ASIMO ili Boston Dynamicsovog Atlasa, imaju prednost antropomorfne strukture koja im omogućuje navigaciju prostorima dizajniranim za ljude - stubišta, uska vrata, neravne površine. Međutim, bipedalno kretanje predstavlja izuzetno zahtjevan kontrolni problem zbog inherentne nestabilnosti i potrebe za kontinuiranim balansirajućim reakcijama. Stabilnost se može postići statičkom kontrolom (centar mase uvijek iznad površine potpore) ili dinamičkom kontrolom (dopuštanje privremene nestabilnosti s korektivnim reakcijama).
+
+Quadrupedalni roboti, kao što su Boston Dynamicsov Spot ili MIT Cheetah, kombiniraju stabilnost s okretnosti. S četiri noge mogu održavati statičku stabilnost održavajući stalno tri točke kontakta sa zemljom (trokut potpore), dok četvrta noga izvršava korak. Ovi roboti postižu impresivne performanse u trčanju, skakanju i kretanju po kompleksnom terenu, što ih čini praktičnim za aplikacije poput inspekcije infrastrukture, spasilačkih operacija ili vojnih misija.
+
+Heksapodalni roboti, inspirirali su ih kukci, nude maksimalnu stabilnost s mogućnošću zadržavanja statičke stabilnosti koristeći tri noge za potporu dok se preostale tri kreću. Ovaj tripod hod omogućuje relativno jednostavnu kontrolu i izvrsnu prilagodljivost terenu. Koriste se u istraživačkim aplikacijama i situacijama gdje je pouzdanost kritična.
+
+3.3. Gusjenični sustavi
+
+Gusjenice (tracks) predstavljaju robustan mehanizam za kretanje po teškom terenu, distribucijama težine preko velike površine što smanjuje pritisak na tlo i omogućuje navigaciju po mekanim, klizavim ili neravnim površinama. Vojni i istraživački roboti često koriste gusjenične sustave zbog njihove pouzdanosti i sposobnosti prelaženja prepreka visine do polovice promjera gusjenice.
+
+Kontrola gusjeničnih robota slična je diferencijalnom pogonu - varijacija brzine lijevih i desnih gusjenica omogućuje okretanje. Nedostatak je veća mehanička složenost, potreba za održavanjem i veća potrošnja energije u usporedbi s kotačnim sustavima na ravnim površinama.
+
+3.4. Hibridni i specijalizirani sustavi
+
+Kombinacija različitih mehanizama može pružiti prednosti više pristupa. WhegsTM (Wheel-Legs) kombinira kotače s radijalnim produžecima koji funkcioniraju kao kratke noge, omogućujući učinkovito kretanje po ravnom terenu kotačima, a prelaženje prepreka nogama. RHex robot koristi šest polukružnih nogu koje rotiraju, kombinirajući jednostavnost kontrole rotirajućih aktuatora s prilagodljivosti nogastih sustava.
+
+Zmijski roboti oponašaju kretanje zmija koristeći serijski povezane segmente, omogućujući kretanje kroz uske prostore i preko prepreka. Plazeći roboti koriste peristaltičko kretanje ili vibracijske mehanizme za navigaciju kroz cijevi i nepristupačna područja.
+
+
+4. SENZORI I PERCEPCIJA OKOLINE
+
+Autonomno kretanje zahtijeva integraciju raznovrsnih senzorskih sustava koji robotu omogućuju percepciju okoline. Proprioceptivni senzori mjere interno stanje robota (enkoderi kotača, inercijski senzori, žiroskopi), dok eksteroceptivni senzori percipiraju okolinu (kamere, lidari, ultrazučni senzori, radari).
+
+LIDAR (Light Detection and Ranging) senzori emitiraju laserske zrake i mjere vrijeme povratka, stvarajući precizne 2D ili 3D mape okoline s rezolucijom centimetra. Koriste se u autonomnim vozilima za detekciju prepreka i mapiranje.
+
+Stereo kamere i RGB-D senzori pružaju vizualnu informaciju s procjenom dubine, omogućujući prepoznavanje objekata, semantičku segmentaciju scene i vizualnu odometriju. Napredne tehnike računalnog vida, poput konvolucijskih neuronskih mreža, omogućuju robotu razumijevanje složenih vizualnih scena.
+
+Senzorska fuzija kombinira podatke iz više senzora koristeći algoritme poput Kalmanovog filtra ili particle filtera, pružajući robustniju i pouzdaniju percepciju nego bilo koji pojedinačni senzor.
+
+
+5. ALGORITMI PLANIRANJA PUTANJE I NAVIGACIJE
+
+Autonomna navigacija zahtijeva rješavanje problema planiranja putanje - pronalaženja kolizijom-neopterećene putanje od početne do ciljne konfiguracije. Klasični pristupi uključuju graf-bazirane metode poput A* algoritma, Dijkstrinog algoritma ili D* (Dynamic A*) za dinamičke okoline.
+
+Sampling-based metode, kao što su RRT (Rapidly-exploring Random Tree) i PRM (Probabilistic Roadmap), randomiziranim uzorkovanjem konfiguracijskog prostora grade graf mogućih putanja. Ove metode posebno su učinkovite u visokodimenzionalnim prostorima gdje deterministički pristupi postaju računalno zahtjevni.
+
+Lokalna kontrola prepuštena je reaktivnim algoritmima poput Dynamic Window Approach (DWA) ili Artificial Potential Fields koji u realnom vremenu izbjegavaju prepreke prilagođavajući putanju na temelju trenutnih senzorskih očitanja.
+
+SLAM (Simultaneous Localization and Mapping) predstavlja fundamentalni problem u mobilnoj robotici - istovremeno procjenjivanje položaja robota i izgradnja mape nepoznate okoline. Moderne implementacije koriste grafovske optimizacije i Bayesovske filtriranje za postizanje konzistentnih rješenja.
+
+
+6. IZAZOVI I BUDUĆI PRAVCI
+
+Unatoč značajnom napretku, robotsko kretanje suočava se s brojnim izazovima. Energetska učinkovitost ostaje kritično ograničenje, posebno za autonomne sustave koji moraju operirati dulje vrijeme bez punjenja. Robusnost i pouzdanost u nepredvidivim okruženjima zahtijeva kontinuirane inovacije u mehaničkom dizajnu i kontrolnim algoritmima.
+
+Soft robotics istražuje uporabu mekih materijala i fluidnih aktuatora za stvaranje prilagodljivijih i sigurnijih sustava za interakciju s ljudima. Učenje potkrepljivanjem omogućuje robotima autonomno učenje učinkovitih strategija kretanja kroz interakciju s okolinom.
+
+Integracija umjetne inteligencije, naprednih senzorskih sustava i inovativnih mehaničkih dizajna obećava novu generaciju robota sposobnih za navigaciju i izvršavanje zadataka u praktički neograničenom spektru okolina.
+
+
+7. ZAKLJUČAK
+
+Robotsko kretanje predstavlja multidisciplinarno područje koje kontinuirano evoluira, integrirajući dostignuća mehanike, elektronike, računarstva i umjetne inteligencije. Od jednostavnih kotačnih sustava do sofisticiranih nogastih robota i hibridnih konfiguracija, različiti pristupi nude specifične prednosti prilagođene zahtjevima aplikacije.
+
+Budućnost mobilne robotike leži u razvoju sve prilagodljivijih, energetski učinkovitijih i inteligentnih sustava sposobnih za autonomnu navigaciju kompleksnim, dinamičkim okruženjima. S kontinuiranim napretkom u materijalima, aktuatorima, senzorima i algoritmima, roboti će postajati sve prisutnije u svakodnevnom životu, transformirajući industriju, zdravstvo, transport i brojne druge domene ljudske djelatnosti.

@@ -1,0 +1,107 @@
+Uvod
+
+U suvremenom digitalnom okruženju, sustavi za upravljanje sadržajem (Content Management Systems - CMS) predstavljaju temelj izgradnje i održavanja web aplikacija. Drupal se izdvaja kao jedan od vodećih open source CMS rješenja, omogućujući razvoj kompleksnih web sustava s visokim zahtjevima za fleksibilnošću, skalabilnošću i sigurnošću. Ovaj seminar istražuje ključne aspekte primjene Drupala u izgradnji web sustava, s posebnim naglaskom na njegove prednosti u kontekstu složenih digitalnih projekata.
+
+Drupal je nastao 2001. godine kao studentski projekt Driesa Buytaerta na Sveučilištu u Antwerpenu, a danas pokreće milijune web stranica širom svijeta, uključujući portale vladnih institucija, sveučilišta, korporacija i medijskih kuća. Njegova arhitektura temeljena na modularnosti i ekstenzibilnosti omogućuje izradu prilagođenih rješenja koja zadovoljavaju specifične poslovne potrebe, od jednostavnih informativnih stranica do kompleksnih digitalnih platformi s integriranim sustavima.
+
+Ključna pitanja koja će biti razmotrena u ovom radu obuhvaćaju tehničke aspekte Drupal arhitekture, prednosti open source pristupa, mogućnosti prilagodbe i proširivosti sustava, te praktične primjere uspješne primjene u različitim domenama. Posebna pozornost bit će posvećena aspektima koji Drupal čine idealnim izborom za enterprise projekte i kompleksne web aplikacije.
+
+Drupal kao CMS platforma
+
+Arhitektura i temeljni koncepti
+
+Drupal se temelji na modularnoj arhitekturi koja omogućuje visoku razinu fleksibilnosti i prilagodljivosti. Jezgra sustava (Drupal Core) pruža osnovne funkcionalnosti poput upravljanja korisnicima, upravljanja sadržajem, upravljanja izbornicima i osnovne sigurnosne mehanizme. Ova jezgra je napisana u PHP programskom jeziku i koristi objektno orijentirani pristup, što omogućuje čist i održiv kod.
+
+Sustav sadržaja u Drupalu organiziran je kroz koncept entiteta i polja. Entiteti predstavljaju osnovne jedinice sadržaja, pri čemu najvažniji tip entiteta čini node (čvor). Svaki node pripada određenom tipu sadržaja koji definira strukturu i ponašanje sadržaja. Polja omogućuju dodavanje različitih vrsta podataka svakom tipu sadržaja, čime se postiže visoka razina fleksibilnosti u modeliranju informacija. Ovaj pristup omogućuje kreiranje kompleksnih struktura podataka bez potrebe za direktnim izmjenama u bazi podataka.
+
+Sustav temeljnih modula (module system) predstavlja srž Drupalove ekstenzibilnosti. Moduli su paketi funkcionalnosti koji proširuju mogućnosti jezgre. Postoje jezgreni moduli koji dolaze s instalacijom, doprinijeti moduli koje razvija zajednica, te prilagođeni moduli koje organizacije razvijaju za vlastite specifične potrebe. Svaki modul može se aktivirati ili deaktivirati prema potrebama projekta, što omogućuje optimizaciju sustava i smanjenje nepotrebnih funkcionalnosti.
+
+Sustav tema i prikaza
+
+Prezentacijski sloj u Drupalu odvojen je od logičkog sloja kroz sustav tema (themes). Teme kontroliraju vizualni izgled web stranice koristeći HTML, CSS i JavaScript, dok Twig sustav šablona omogućuje dinamičko generiranje HTML koda na temelju podataka iz sustava. Ovaj pristup omogućuje potpunu kontrolu nad korisničkim sučeljem bez potrebe za miješanjem prezentacijskog i logičkog koda.
+
+Sustav prikaza (Views) predstavlja moćan alat za kreiranje prilagođenih liste, tablica, galerija i drugih formata prikaza sadržaja. Putem grafičkog sučelja moguće je definirati složene upite nad bazom podataka, primjenjivati filtre, sortiranje i grupiranje podataka, te oblikovati izlazni format. Ova funkcionalnost omogućuje izradu kompleksnih prikaza podataka bez potrebe za pisanjem SQL upita ili PHP koda.
+
+Prednosti open source pristupa
+
+Open source priroda Drupala donosi brojne prednosti koje ga čine atraktivnim rješenjem za organizacije različitih veličina. Prva i najočitija prednost je dostupnost izvornog koda bez licencnih naknada. Organizacije mogu preuzeti, instalirati, koristiti i modificirati Drupal bez financijskih ograničenja, što značajno smanjuje ukupnu cijenu vlasništva (Total Cost of Ownership - TCO) u usporedbi s vlasničkim CMS rješenjima.
+
+Globalna zajednica programera, dizajnera i stručnjaka aktivno doprinosi razvoju Drupala. Ova zajednica broji desetke tisuća članova koji razvijaju nove module, teme, ispravljaju greške i dijele svoje znanje i iskustva. Takav kolektivni pristup razvoju rezultira bržim inovacijama, višom kvalitetom koda i boljom sigurnošću sustava. Zajednica organizira konferencije (DrupalCon), lokalne sastanke (meetups) i online komunikacijske kanale koji omogućuju razmjenu znanja i umrežavanje stručnjaka.
+
+Transparentnost razvoja još je jedna značajna prednost. Sve izmjene koda, diskusije o budućim funkcionalnostima i sigurnosni izvještaji javno su dostupni. Ovaj pristup omogućuje organizacijama da prate razvoj platforme, sudjeluju u donošenju odluka i pravovremeno reagiraju na potencijalne probleme. Transparentnost također osigurava da ne postoji ovisnost o pojedinom dobavljaču (vendor lock-in), što organizacijama daje slobodu izbora partnera za implementaciju i podršku.
+
+Fleksibilnost i skalabilnost
+
+Prilagodljivost različitim potrebama
+
+Drupal je dizajniran s fokusom na fleksibilnost, omogućujući implementaciju web sustava različitih vrsta i kompleksnosti. Od jednostavnih blogova i portfelja do kompleksnih enterprise portala s integracijama na vanjske sustave, Drupal pruža alate i mehanizme za implementaciju prilagođenih rješenja. Ova prilagodljivost proizlazi iz modularne arhitekture koja omogućuje kombiniranje postojećih modula s prilagođenim razvojem.
+
+Sustav upravljanja sadržajem omogućuje definiranje proizvoljno složenih struktura podataka kroz kreiranje prilagođenih tipova sadržaja s odgovarajućim poljima. Moguće je modelirati različite entitete poput proizvoda, događaja, lokacija, korisničkih profila i drugih domenskih objekata, te uspostaviti relacije između njih. Pristupna prava mogu se granularno kontrolirati na razini tipova sadržaja, pojedinih stavki sadržaja ili čak pojedinih polja, što omogućuje precizno upravljanje tko što može vidjeti i mijenjati.
+
+Skalabilnost sustava
+
+Skalabilnost predstavlja kritičan aspekt za web sustave koji očekuju rast prometa i količine sadržaja. Drupal je dizajniran kako bi podržao različite strategije skaliranja, od vertikalnog skaliranja (povećanje resursa pojedinačnih servera) do horizontalnog skaliranja (dodavanje dodatnih servera u klaster). Sustav podržava različite mehanizme predmemoriranja (caching) uključujući memorijsko predmemoriranje baze podataka, statičkog sadržaja i renderiranih stranica.
+
+Integracija s Content Delivery Network (CDN) sustavima omogućuje distribuciju statičkih resursa (slike, CSS, JavaScript) preko geografski distribuiranih servera, čime se smanjuje opterećenje glavnog servera i poboljšava brzina učitavanja stranica za korisnike širom svijeta. Drupal također podržava Redis i Memcached sustave za brzo predmemoriranje, što značajno ubrzava rad aplikacije u uvjetima visokog opterećenja.
+
+Arhitektura bazirana na API-jima (API-first architecture) omogućuje korištenje Drupala kao backend sustava koji servira sadržaj različitim frontend aplikacijama. Ovaj pristup, poznat kao headless ili decoupled Drupal, omogućuje nezavisno skaliranje backend i frontend komponenti, te korištenje modernih JavaScript framework-a za izradu korisničkog sučelja.
+
+Sigurnost web sustava
+
+Sigurnost predstavlja jedan od najvažnijih aspekata pri odabiru CMS platforme, posebno za organizacije koje upravljaju osjetljivim podacima. Drupal ima reputaciju izuzetno sigurne platforme zahvaljujući proaktivnom pristupu sigurnosti i aktivnom Drupal Security Team-u. Ovaj tim se sastoji od volontera i plaćenih stručnjaka koji kontinuirano prate sigurnosne prijetnje, analiziraju ranjivosti i brzo objavljuju sigurnosne zakrpe.
+
+Sustav automatskog ažuriranja omogućuje administratorima da budu obaviješteni o dostupnim sigurnosnim nadogradnjama i da ih jednostavno primijene. Drupal Security Team objavljuje sigurnosne savjete (security advisories) za jezgru i doprinijete module, pri čemu se kritične ranjivosti rješavaju hitno. Ova praksa osigurava da organizacije mogu pravovremeno reagirati na sigurnosne prijetnje.
+
+Ugrađene sigurnosne značajke uključuju zaštitu od najčešćih web ranjivosti poput SQL injection napada, cross-site scripting (XSS), cross-site request forgery (CSRF) i session hijacking napada. Sustav pristupnih prava temelji se na principu najmanjeg privilegija (principle of least privilege), gdje korisnici dobivaju samo one dozvole koje su nužne za obavljanje njihovih zadaća. Dodatno, Drupal podržava dvostruku autentifikaciju (two-factor authentication), šifriranje osjetljivih podataka i integraciju s vanjskim sustavima za upravljanje identitetom.
+
+Primjena u kompleksnim sustavima
+
+Enterprise portali i intranet rješenja
+
+Drupal se često koristi za izgradnju enterprise portala i intranet sustava zahvaljujući svojoj sposobnosti integracije s različitim poslovnim sustavima. Mogućnost integracije s Active Directory, LDAP, SAML i drugim sustavima za autentifikaciju omogućuje jedinstveno upravljanje korisnicima (Single Sign-On - SSO). Isto tako, Drupal može komunicirati s ERP, CRM i drugim poslovnim aplikacijama putem REST API-ja, SOAP web servisa ili prilagođenih integracija.
+
+Višejezična podrška omogućuje stvaranje internacionalnih portala koji pružaju sadržaj na više jezika. Sustav upravljanja prijevodima omogućuje neovisno upravljanje sadržajem na različitim jezicima, dok automatsko prepoznavanje jezika i preusmjeravanje korisnika na odgovarajuću jezičnu verziju poboljšava korisničko iskustvo. Ova funkcionalnost posebno je važna za multinacionalne korporacije i međunarodne organizacije.
+
+Medijske platforme i distribucija sadržaja
+
+Mnoge velike medijske kuće koriste Drupal za upravljanje i distribuciju digitalnog sadržaja. Sustav omogućuje učinkovito upravljanje multimedijskim sadržajem uključujući slike, video zapise, audio datoteke i dokumente. Integracija s vanjskim platformama za streaming video sadržaja, skladištenje u oblaku i sustave za upravljanje digitalnim pravima (Digital Rights Management - DRM) omogućuje kreiranje sveobuhvatnih medijskih platformi.
+
+Workflow sustav omogućuje definiranje složenih uredničkih procesa s različitim fazama odobrenja sadržaja. Moguće je kreirati višerazinske procese gdje sadržaj prolazi kroz različite faze recenzije prije objave. Sustav praćenja verzija omogućuje čuvanje povijesti izmjena i vraćanje na prethodne verzije sadržaja, što je kritično za organizacije koje moraju održavati evidenciju svih promjena.
+
+Obrazovne institucije i javni sektor
+
+Sveučilišta i obrazovne institucije često biraju Drupal za svoje web portale zbog potrebe za fleksibilnošću u organizaciji informacija i pristupačnošću sadržaja. Drupal ima ugrađenu podršku za standarde pristupačnosti (WCAG) što omogućuje kreiranje web stranica koje su dostupne osobama s invaliditetom. Ova značajka posebno je važna za javne institucije koje moraju zadovoljiti zakonske zahtjeve pristupačnosti.
+
+Vladine agencije i organizacije javnog sektora cijene Drupalovu sigurnost i transparentnost. Mnoge vlade širom svijeta razvile su distribucije Drupala prilagođene specifičnim potrebama javnog sektora, s ugrađenim modulima za pristupačnost, višejezičnost i upravljanje službenom dokumentacijom. Sustav revizije (audit trail) omogućuje potpuno praćenje svih aktivnosti korisnika, što je važno za transparentnost i odgovornost javnih institucija.
+
+Ekosustav modula i proširenja
+
+Jedna od najvećih prednosti Drupala je bogat ekosustav modula koje razvija zajednica. Na službenom Drupal.org repozitoriju dostupno je preko 40.000 modula koji pokrivaju gotovo sve moguće funkcionalnosti potrebne za web razvoj. Od jednostavnih modula za SEO optimizaciju, integraciju s društvenim mrežama, formata za prikaz sadržaja, do kompleksnih sustava za e-trgovinu, online učenje i upravljanje projektima.
+
+Moduli poput Commerce omogućuju kreiranje potpunih e-commerce rješenja s podrškom za kataloge proizvoda, košarice, sustave plaćanja i upravljanje narudžbama. Webform modul omogućuje kreiranje složenih formi s prilagođenim validacijama, višestraničnim formularima i integracijama s vanjskim sustavima. Paragraphs modul omogućuje kreiranje fleksibilnih stranica s različitim komponentama koje urednici mogu slobodno kombinirati.
+
+Proces doprinosa modula zajednici dobro je reguliran. Svaki modul prolazi kroz proces recenzije koda, mora zadovoljiti standarde kodiranja i sigurnosti, te mora biti dokumentiran. Ova procedura osigurava kvalitetu i pouzdanost modula dostupnih u zajednici. Programeri mogu također kreirati privatne module specifične za potrebe svojih organizacija, čuvajući pritom vlasništvo nad intelektualnim vlasništvom.
+
+Izazovi i razmatranja
+
+Unatoč brojnim prednostima, primjena Drupala donosi i određene izazove. Krivulja učenja za početnike može biti strmija u usporedbi s nekim jednostavnijim CMS platformama. Razumijevanje Drupalovih koncepata poput entiteta, polja, viewova i hook sustava zahtijeva vrijeme i iskustvo. Međutim, ova početna investicija u učenje dugoročno se isplati kroz mogućnost izgradnje kompleksnih sustava bez potrebe za pisanjem opsežnog prilagođenog koda.
+
+Performanse sustava mogu biti izazov za web stranice s izuzetno visokim prometom ako sustav nije pravilno konfiguriran. Implementacija odgovarajućih strategija predmemoriranja, optimizacija baze podataka i korištenje eksterne infrastrukture poput CDN-a i load balancera ključni su za postizanje optimalnih performansi. Stručno poznavanje Drupalovih mehanizama predmemoriranja i optimizacije neophodno je za velike projekte.
+
+Troškovi razvoja i održavanja također zahtijevaju pažljivu procjenu. Iako je Drupal besplatan, potrebni su kvalificirani programeri za implementaciju, prilagodbu i održavanje sustava. Organizacije moraju odlučiti hoće li graditi interni tim stručnjaka ili angažirati vanjske agencije specijalizirane za Drupal razvoj. Dugoročno planiranje uključuje i razmatranje troškova ažuriranja na nove verzije Drupala, što može zahtijevati značajan napor za kompleksne sustave.
+
+Budućnost Drupala
+
+Drupal zajednica kontinuirano radi na unapređenju platforme kroz redovite verzije koje donose nove značajke, poboljšanja performansi i sigurnosti. Drupal 10, najnovija glavna verzija, fokusira se na modernu arhitekturu, poboljšan developer experience i bolje performanse. Naglasak je stavljen na API-first pristup koji omogućuje korištenje Drupala kao backend sustava za moderne frontend framework-e poput React, Vue.js ili Angular.
+
+Trend decoupled (headless) CMS arhitekture postaje sve popularniji. U ovom pristupu, Drupal služi isključivo kao sustav za upravljanje sadržajem i izlaže podatke putem API-ja, dok je prezentacijski sloj potpuno odvojen i implementiran u modernim JavaScript framework-ima. Ovaj pristup omogućuje veću fleksibilnost u dizajnu korisničkog sučelja, bolje performanse i mogućnost serviranja sadržaja različitim platformama (web, mobilne aplikacije, IoT uređaji).
+
+Umjetna inteligencija i strojno učenje počinju nalaziti primjenu u Drupal ekosustavu kroz module za automatsku klasifikaciju sadržaja, personalizaciju korisničkog iskustva i naprednu analitiku. Integracija s cloud platformama poput AWS, Azure i Google Cloud Platform olakšava deployment i skaliranje Drupal aplikacija. Containerizacija putem Docker-a i orkestracijski alati poput Kubernetes-a omogućuju moderan pristup upravljanju infrastrukturom.
+
+Zaključak
+
+Drupal se pokazao kao robusna i svestrana platforma za izgradnju web sustava različitih kompleksnosti i namjena. Njegove ključne prednosti - open source pristup, fleksibilnost, skalabilnost i sigurnost - čine ga idealnim izborom za organizacije koje traže dugoročno održivo rješenje za svoje digitalne potrebe. Modularna arhitektura omogućuje prilagodbu specifičnim poslovnim zahtjevima, dok bogat ekosustav modula i aktivna zajednica osiguravaju kontinuirani razvoj i podršku.
+
+Primjena Drupala u kompleksnim sustavima, od enterprise portala i medijskih platformi do obrazovnih institucija i javnog sektora, potvrđuje njegovu sposobnost odgovora na najzahtjevnije izazove. Iako postoje izazovi vezani uz krivulju učenja i potrebu za stručnim razvojem, dugoročne koristi u smislu fleksibilnosti, sigurnosti i skalabilnosti nadmašuju početne troškove.
+
+U kontekstu brzog razvoja web tehnologija i sve većih zahtjeva za digitalnim rješenjima, Drupal se kontinuirano prilagođava i evoluira. Fokus na API-first arhitekturu, podršku za moderne frontend framework-e i integraciju s cloud tehnologijama osigurava da će Drupal ostati relevantan i u budućnosti. Za organizacije koje traže moćan, siguran i prilagodljiv CMS sustav, Drupal predstavlja izvrsnu investiciju koja omogućuje izgradnju robusnih web sustava sposobnih pratiti i nadmašiti poslovne potrebe u dinamičnom digitalnom okruženju.

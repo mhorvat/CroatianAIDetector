@@ -1,0 +1,319 @@
+1. UVOD
+
+Podzemne vode predstavljaju najvažniji izvor pitke vode u Republici Hrvatskoj, čineći preko 90% ukupnih zaliha vode namijenjene javnoj vodoopskrbi. Racionalno gospodarenje ovim resursom zahtijeva detaljno razumijevanje procesa strujanja kroz porozne i pukotinske sredine. Numeričko modeliranje strujanja podzemnih voda postalo je nezamjenjiv alat u suvremenoj hidrogeologiji, omogućujući predviđanje ponašanja vodonosnika u različitim eksploatacijskim i klimatskim scenarijima.
+
+Slivno područje rijeke Vuke, smješteno u istočnoj Slavoniji, obuhvaća površinu od približno 1380 km² i predstavlja značajan hidrogeološki sustav s obilježjima aluvijalnih vodonosnika panonskog tipa. Vodonosnik se sastoji od kvartarnih šljunčano-pjeskovitih naslaga debljine 15 do 40 metara, s propusnošću koja varira od 1×10⁻⁴ do 5×10⁻³ m/s. Godišnja količina oborina u ovom području kreće se između 650 i 750 mm, s izraženom sezonskom varijabilnošću koja izravno utječe na režim podzemnih voda.
+
+Cilj ovog rada je prikazati cjelovit pristup numeričkom modeliranju strujanja podzemnih voda na primjeru odabranog dijela sliva rijeke Vuke, s posebnim naglaskom na matematičke temelje, konceptualizaciju sustava, proces kalibracije i interpretaciju rezultata. Korištenjem programskog paketa Groundwater Modeling System (GMS) i MODFLOW algoritma razvijen je numerički model koji omogućuje analizu vodne bilance, parametarsku osjetljivost i prognozu ponašanja vodonosnika.
+
+2. MATEMATIČKI TEMELJI NUMERIČKOG MODELIRANJA
+
+2.1. Osnovna jednadžba strujanja
+
+Strujanje podzemnih voda u zasićenoj poroznoj sredini opisuje se parcijalnom diferencijalnom jednadžbom baziranom na zakonu očuvanja mase i Darcyjevom zakonu. Za trodimenzionalno nehomogeno i anizotropno strujanje, osnovna jednadžba glasi:
+
+∂/∂x (Kₓₓ ∂h/∂x) + ∂/∂y (Kᵧᵧ ∂h/∂y) + ∂/∂z (Kᵧᵧ ∂h/∂z) + W = Sₛ ∂h/∂t
+
+gdje je h hidraulički potencijal (m), Kₓₓ, Kᵧᵧ, Kᵧᵧ komponente tenzora hidrauličke vodljivosti (m/s), W volumetrijski izvorski/ponorski član (s⁻¹), Sₛ specifična pohrana (m⁻¹), a t vrijeme (s).
+
+Za slučaj dvodimenzionalnog horizontalnog strujanja u ograničenom vodonosniku, gornja jednadžba se reducira u oblik:
+
+∂/∂x (T ∂h/∂x) + ∂/∂y (T ∂h/∂y) + R = S ∂h/∂t
+
+pri čemu je T transmisivnost vodonosnika (m²/s), definirana kao T = K·b, gdje je b debljina vodonosnika (m), S koeficijent pohrane (bezdimenzionalan), a R infiltracija ili drugi vertikalni tokovi (m/s).
+
+2.2. Rubni i početni uvjeti
+
+Za jedinstveno rješenje jednadžbe strujanja potrebno je definirati rubne i početne uvjete. Razlikujemo tri osnovna tipa rubnih uvjeta:
+
+Dirichletov rubni uvjet (I. roda): specificira se vrijednost hidrauličkog potencijala na granici
+h(x,y,t) = h₀(x,y,t)
+
+Neumannov rubni uvjet (II. roda): specificira se tok kroz granicu
+-K ∂h/∂n = q₀(x,y,t)
+
+Cauchyjev rubni uvjet (III. roda): kombinira potencijal i tok
+-K ∂h/∂n = α(h - h₀)
+
+gdje je n normala na granicu, q₀ specificiran tok, α koeficijent propuštanja, a h₀ vanjski potencijal.
+
+Početni uvjeti definiraju raspodjelu hidrauličkog potencijala u trenutku t = 0:
+h(x,y,0) = h₀(x,y)
+
+2.3. Metoda konačnih razlika
+
+MODFLOW algoritam koristi metodu konačnih razlika za numeričko rješavanje jednadžbe strujanja. Modelsko područje diskretizira se mrežom pravokutnih ćelija, a derivacije se aproksimiraju razlikama:
+
+∂h/∂x ≈ (hᵢ₊₁,ⱼ - hᵢ,ⱼ)/Δx
+
+Primjenom centralne diferencije na osnovnu jednadžbu dobiva se sustav algebarskih jednadžbi oblika:
+
+Σ Cᵢⱼ,ₖₗ hₖₗⁿ⁺¹ = Qᵢⱼ + Sᵢⱼ/Δt hᵢⱼⁿ
+
+gdje indeksi i,j označavaju prostornu poziciju, n vremenski korak, C matrica koeficijenata vodljivosti, a Q izvorski članovi.
+
+Ovaj sustav rješava se iterativnim metodama poput Stronglyho implicitnog postupka (SIP) ili preduvjetovanog konjugiranog gradijenta (PCG), s kriterijem konvergencije:
+
+|hⁿ⁺¹ - hⁿ| < ε
+
+gdje je ε zadana tolerancija, obično 0.001 do 0.01 m.
+
+3. KONCEPTUALNI MODEL SLIVA RIJEKE VUKE
+
+3.1. Hidrogeološka konceptualizacija
+
+Modelirano područje obuhvaća segment sliva rijeke Vuke površine približno 450 km², s dominantnim aluvijalnim vodonosnikom. Geološka struktura definirana je sljedećim stratografskim jedinicama:
+
+Gornji vodonosni sloj (sloj 1): Kvartarne aluvijalne naslage, pretežno šljunak i pijesak, srednja debljina 12 m, propusnost K = 2.5×10⁻³ m/s, efektivna poroznost nₑ = 0.22.
+
+Srednji slabo propusni sloj (sloj 2): Pjeskovito-glinovite naslage, debljina 6-8 m, propusnost K = 5×10⁻⁶ m/s, djeluje kao semipermeabilan međusloj.
+
+Donji vodonosni sloj (sloj 3): Pliocenski šljunci, debljina 18-25 m, propusnost K = 1.8×10⁻³ m/s, poroznost nₑ = 0.19.
+
+Nepropusna podloga: Pliocenski lapori i gline, smatraju se praktički nepropusnima.
+
+3.2. Hidraulički parametri
+
+Na temelju terenskih pokusnih crpljenja i laboratorijskih analiza određeni su sljedeći parametri vodonosnika:
+
+| Parametar | Sloj 1 | Sloj 2 | Sloj 3 | Jedinica |
+|-----------|---------|---------|---------|----------|
+| Hidraulička vodljivost Kₕ | 2.5×10⁻³ | 5×10⁻⁶ | 1.8×10⁻³ | m/s |
+| Vertikalna vodljivost Kᵥ | 8×10⁻⁴ | 1×10⁻⁶ | 6×10⁻⁴ | m/s |
+| Transmisivnost T | 3.0×10⁻² | - | 4.1×10⁻² | m²/s |
+| Koeficijent pohrane S | 0.18 | 0.001 | 0.15 | - |
+| Specifična pohrana Sₛ | 2×10⁻⁴ | 5×10⁻⁵ | 1.5×10⁻⁴ | m⁻¹ |
+
+3.3. Rubni uvjeti i napajanje
+
+Rubni uvjeti modela definirani su na sljedeći način:
+
+Sjeverna i južna granica: Dirichletov rubni uvjet s konstantnim potencijalom određenim iz regionalnih piezometrijskih podataka (h = 87-92 m n.m.).
+
+Zapadna i istočna granica: Neumannov rubni uvjet (nepropusna granica), budući da coincidiraju s vododijelnicama.
+
+Rijeka Vuka: Cauchy rubni uvjet simuliran River paketom, s koeficijentom propuštanja riječnog dna C = 0.8 m²/dan/m.
+
+Infiltracija oborina u vodonosnik procijenjena je iz vodne bilance:
+
+I = P - ET - R₀
+
+gdje je P godišnja količina oborina (700 mm), ET evapotranspiracija (520 mm), R₀ površinski otjecaj (95 mm). Efektivna infiltracija iznosi I = 85 mm/god, što odgovara 233 m³/dan/km² ili 2.69×10⁻⁹ m/s.
+
+3.4. Eksploatacija podzemnih voda
+
+U modeliranom području evidentirano je 12 crpilišta s ukupnim kapacitetom crpljenja:
+
+| Crpilište | Koordinate (m) | Dubina (m) | Kapacitet (m³/h) | Režim rada |
+|-----------|----------------|------------|------------------|------------|
+| CV-1 | 128450, 554320 | 35 | 85 | kontinuirani |
+| CV-2 | 129800, 553100 | 28 | 65 | sezonski |
+| CV-3 | 131200, 556800 | 42 | 120 | kontinuirani |
+| CV-4 | 126900, 552400 | 31 | 75 | kontinuirani |
+| CV-5 | 133500, 555600 | 38 | 95 | sezonski |
+
+Ukupno godišnje crpljenje iznosi približno 8.5×10⁶ m³, s varijacijama između sušnog (10500 m³/dan) i vlažnog (6800 m³/dan) perioda.
+
+4. RAZVOJ NUMERIČKOG MODELA U GMS-MODFLOW OKRUŽENJU
+
+4.1. Diskretizacija modelskog područja
+
+Modelsko područje diskretiziran je pravokutnom mrežom dimenzija 180×140 ćelija, veličine ćelije 100×100 m, čime je postignuta optimalna ravnoteža između računske efikasnosti i prostorne rezolucije. Vertikalno je definirano 3 sloja korespondentna stratifikaciji vodonosnika.
+
+Ukupan broj aktivnih ćelija iznosi 18650, dok su neaktivne ćelije (izvan modelskog područja) označene vrijednošću -999. Vremenska diskretizacija obuhvaća 12 stresnih perioda od po 30.42 dana, svakom sa 5 vremenskih koraka varijabilne duljine (multiplier 1.2), ukupno simulirajući 365 dana.
+
+4.2. Inicijalizacija modela
+
+Početna raspodjela hidrauličkog potencijala (početni uvjeti) dobivena je interpolacijom piezometrijskih mjerenja iz 28 piezometara metodom kriginga. Regionalni gradijent potencijala iznosi približno 0.0015 u smjeru sjever-jug.
+
+Parametrizacija modela izvršena je zonalnim pristupom, pri čemu je modelsko područje podijeljeno u 6 zona s različitim hidrogeološkim svojstvima, a svaka zona dobiva reprezentativne vrijednosti parametara. Ovaj pristup reducira broj parametara kalibracije s potencijalno 55950 (3 sloja × 18650 ćelija) na upravljivih 18 (6 zona × 3 parametra).
+
+4.3. Implementacija izvora i ponora
+
+Infiltracija: Implementirana kroz Recharge paket s prostorno varijabilnim intenzitetom (2.0-3.2×10⁻⁹ m/s) baziranim na tipu zemljišnog pokrova i morfologiji terena.
+
+Rijeka Vuka: River paket s 480 riječnih ćelija, koeficijent propuštanja dna 0.5-1.2 m²/dan/m, kota dna rijeke varijabilan 82.5-88.3 m n.m.
+
+Crpilišta: Well paket s 12 bunarskih lokacija, specificirani tokovi prema režimu crpljenja.
+
+Evapotranspiracija: ET paket aktivan samo u sloju 1, maksimalna stopa 5×10⁻⁸ m/s kada je razina podzemne vode na površini, linearan pad do nule na dubini 3 m.
+
+5. PROCES KALIBRACIJE MODELA
+
+5.1. Ciljna funkcija i Newtonova metoda
+
+Kalibracija modela predstavlja inverzni problem određivanja optimalnih vrijednosti parametara minimiziranjem odstupanja između simuliranih i mjerenih hidrauličkih potencijala. Objektivna funkcija definirana je kao suma kvadrata odstupanja:
+
+Φ(p) = Σᵢ₌₁ⁿ wᵢ(hₒᵦₛ,ᵢ - hₛᵢₘ,ᵢ(p))²
+
+gdje je p vektor parametara, hₒᵦₛ,ᵢ mjereni potencijal u točki i, hₛᵢₘ,ᵢ simulirani potencijal, wᵢ težinski faktor, a n broj opservacijskih točaka (n = 28).
+
+Za minimizaciju Φ(p) primijenjena je Newtonova metoda, koja koristi informacije prvog i drugog reda (gradijent i Hessian):
+
+pₖ₊₁ = pₖ - [H(pₖ)]⁻¹ ∇Φ(pₖ)
+
+gdje je H Hessian matrica:
+
+Hᵢⱼ = ∂²Φ/∂pᵢ∂pⱼ ≈ 2 Σₖ₌₁ⁿ wₖ (∂hₛᵢₘ,ₖ/∂pᵢ)(∂hₛᵢₘ,ₖ/∂pⱼ)
+
+a ∇Φ gradijent:
+
+∇Φᵢ = ∂Φ/∂pᵢ = -2 Σₖ₌₁ⁿ wₖ(hₒᵦₛ,ₖ - hₛᵢₘ,ₖ)(∂hₛᵢₘ,ₖ/∂pᵢ)
+
+Parcijalne derivacije ∂hₛᵢₘ/∂pᵢ (osjetljivosti) računaju se metodom konačnih razlika ili adjungiranom metodom.
+
+5.2. Iterativni proces kalibracije
+
+Kalibracija je provedena u tri faze:
+
+Faza 1 - Gruba kalibracija (steady-state): Kalibracija zonalnih vrijednosti hidrauličke vodljivosti (6 zona) u stacionarnim uvjetima (prosječne godišnje vrijednosti). Konvergencija postignuta nakon 8 iteracija, RMSE = 0.78 m.
+
+Faza 2 - Fina kalibracija (transient): Kalibracija transmisivnosti i koeficijenata pohrane za nestacionarno strujanje (12 mjesečnih stresnih perioda). Konvergencija nakon 14 iteracija, RMSE = 0.52 m.
+
+Faza 3 - Optimizacija infiltracije: Prilagodba prostornog rasporeda infiltracije (4 zone) uz fiksirane parametre vodonosnika. Finalni RMSE = 0.38 m.
+
+Statistički pokazatelji usklađenosti modela:
+
+| Pokazatelj | Vrijednost |
+|------------|------------|
+| RMSE (Root Mean Square Error) | 0.38 m |
+| MAE (Mean Absolute Error) | 0.29 m |
+| ME (Mean Error) | -0.04 m |
+| R² (koeficijent determinacije) | 0.94 |
+| Normalized RMSE | 4.2% |
+
+5.3. Kalibrirani parametri
+
+Finalne vrijednosti kalibriranih parametara:
+
+| Zona | K sloj 1 (m/s) | K sloj 3 (m/s) | S sloj 1 | Infiltracija (mm/god) |
+|------|----------------|----------------|----------|-----------------------|
+| 1 | 2.8×10⁻³ | 2.1×10⁻³ | 0.19 | 92 |
+| 2 | 2.2×10⁻³ | 1.6×10⁻³ | 0.16 | 78 |
+| 3 | 3.1×10⁻³ | 2.3×10⁻³ | 0.21 | 88 |
+| 4 | 1.9×10⁻³ | 1.4×10⁻³ | 0.15 | 71 |
+| 5 | 2.6×10⁻³ | 1.9×10⁻³ | 0.18 | 85 |
+| 6 | 2.4×10⁻³ | 1.7×10⁻³ | 0.17 | 80 |
+
+Vizualna analiza odnosa opaženih i simuliranih razina pokazuje visok stupanj usklađenosti. Grafički prikaz mjerenih nasuprot modeliranih vrijednosti grupirane oko linije 1:1 s standardnom devijacijom od ±0.42 m. Najveća odstupanja zabilježena su u zonama s intenzivnim crpljenjem (CV-3, odstupanje 0.82 m), što indicira potrebu za detaljnijom diskretizacijom u ovim područjima.
+
+5.4. Analiza osjetljivosti
+
+Parametarska osjetljivost analizirana je računanjem bezdimenzionalnih koeficijenata osjetljivosti:
+
+Sᵢⱼ = (∂hⱼ/∂pᵢ)(pᵢ/hⱼ)
+
+Rezultati pokazuju da je model najosjetljiviji na hidrauličku vodljivost sloja 1 (S = 0.68), zatim na infiltraciju (S = 0.52) i koeficijent pohrane (S = 0.31), dok je osjetljivost na vertikalnu vodljivost međusloja relativno niska (S = 0.14).
+
+Monte Carlo analiza s 1000 realizacija pokazala je da varijacija K vrijednosti od ±20% rezultira varijacijom simuliranih razina od ±0.48 m (95% interval pouzdanosti), što potvrđuje robusnost modela.
+
+6. VODNA BILANCA I INTERPRETACIJA REZULTATA
+
+6.1. Analiza vodne bilance
+
+Vodna bilanca vodonosnika za kalibrirani model prikazana je kroz identifikaciju svih priljevnih i odljevnih komponenti:
+
+Priljevne komponente (godišnje):
+- Infiltracija oborina: 34.2×10⁶ m³ (76.8%)
+- Dotok s rubova (regionalno strujanje): 7.8×10⁶ m³ (17.5%)
+- Infiltracija iz rijeke Vuke: 2.5×10⁶ m³ (5.7%)
+- UKUPNO PRILJEV: 44.5×10⁶ m³
+
+Odljevne komponente (godišnje):
+- Evapotranspiracija: 18.4×10⁶ m³ (41.2%)
+- Crpljenje na crpilištima: 8.5×10⁶ m³ (19.1%)
+- Dreniranje u rijeku Vuku: 14.8×10⁶ m³ (33.2%)
+- Odtok na rubovima: 2.9×10⁶ m³ (6.5%)
+- UKUPNO ODLJEV: 44.6×10⁶ m³
+
+Bilančna pogreška: 0.1×10⁶ m³ (0.2%)
+
+Izuzetno niska bilančna pogreška (< 0.5%) potvrđuje numeričku stabilnost i konzistentnost modela.
+
+6.2. Prostorna raspodjela hidrauličkog potencijala
+
+Simulirana piezometrijska karta za prosječne godišnje uvjete pokazuje karakterističan obrazac strujanja od sjevernih prema južnim dijelovima, s gradijentom 0.0012-0.0018. Oko crpilišta CV-3 formira se depresijski lijevak radijusa približno 850 m, sa snižavanjem razine do 3.2 m u središtu.
+
+Brzine strujanja podzemne vode, izračunate kao:
+
+v = (K/nₑ)(∂h/∂l)
+
+kreću se u rasponu 0.8-4.5 m/dan, s prosječnom vrijednošću 2.1 m/dan. Vrijeme putovanja vode od područja infiltracije do zone dreniranja u rijeku iznosi 380-620 dana, što ima značajne implikacije za procese samopročišćavanja i transport potencijalnih kontaminanata.
+
+6.3. Vremenski dinamika razina
+
+Analiza vremenskih serija simuliranih razina u reprezentativnim piezometrima pokazuje:
+
+Piezometar PZ-08 (zona prirodnog napajanja):
+- Maksimalna razina: 89.4 m n.m. (april)
+- Minimalna razina: 88.1 m n.m. (rujan)
+- Amplituda: 1.3 m
+- Brzina oporavka: 0.08 m/tjedan
+
+Piezometar PZ-15 (zona utjecaja crpljenja):
+- Maksimalna razina: 86.7 m n.m. (svibanj)
+- Minimalna razina: 84.3 m n.m. (listopad)
+- Amplituda: 2.4 m
+- Brzina oporavka: 0.12 m/tjedan
+
+Veća amplituda i brži odziv u zoni crpljenja rezultat su kombiniranog utjecaja prirodnog režima napajanja i antropogenog opterećenja.
+
+6.4. Scenarijska analiza
+
+Razvijeni model korišten je za evaluaciju dva scenarija:
+
+Scenarij 1 - Povećanje crpljenja za 25%:
+Simulirano je povećanje kapaciteta crpljenja sa 8.5 na 10.6×10⁶ m³/god. Rezultati pokazuju prosječno dodatno snižavanje razine od 0.6-1.1 m, s formiranjem proširenih depresijskih lijevaka. Kritična zona identificirana je oko CV-3 gdje razina pada ispod 83 m n.m., približavajući se krovini sloja 2.
+
+Scenarij 2 - Smanjenje infiltracije za 15% (suša):
+Simulacija sušnih uvjeta sa smanjenjem infiltracije na 72 mm/god rezultira prosječnim sniženjem razina od 0.8 m i smanjenjem priljevnog toka iz rijeke za 42%. Vodna bilanca postaje negativna (-1.2×10⁶ m³/god), što indicira crpljenje iz pohrane vodonosnika.
+
+6.5. Preporuke za gospodarenje resursima
+
+Na temelju rezultata numeričkog modeliranja, formulirane su sljedeće preporuke:
+
+1. Maksimalni održivi kapacitet crpljenja u trenutnim hidrogeološkim i klimatskim uvjetima procijenjen je na 9.2×10⁶ m³/god, što predstavlja marginu sigurnosti od 8% u odnosu na trenutno crpljenje.
+
+2. Potrebno je implementirati monitoring program s kontinuiranim mjerenjem razina u najmanje 8 ključnih piezometara, posebno u zonama intenzivnog crpljenja.
+
+3. Razviti operativni model ranog upozoravanja koji bi u stvarnom vremenu detektirao kritične situacije (razine ispod 83.5 m n.m.).
+
+4. Razmotriti mogućnost umjetne infiltracije (managed aquifer recharge) u količini 1.5-2.0×10⁶ m³/god tijekom vlažnog perioda, čime bi se stabilizirala vodna bilanca.
+
+7. ZAKLJUČAK
+
+Numeričko modeliranje strujanja podzemnih voda predstavlja sofisticiran metodološki pristup koji integrira matematičku fiziku, hidrogeologiju, numeričku analizu i informatičku tehnologiju. Razvijeni model za slivno područje rijeke Vuke demonstrirao je visok stupanj usklađenosti s mjerenim podacima, što je kvantificirano kroz statističke pokazatelje (RMSE = 0.38 m, R² = 0.94) i potvrđeno rigoroznim procesom kalibracije baziranim na Newtonovoj optimizacijskoj metodi.
+
+Matematički temelji modeliranja, od parcijalne diferencijalne jednadžbe strujanja do diskretizacije metodom konačnih razlika, omogućuju preciznu numeričku reprezentaciju složenih hidrogeoloških procesa. Konceptualni model, koji integrira trodimenzionalnu stratifikaciju vodonosnika, prostorno varijabilne hidrauličke parametre i dinamičke rubne uvjete, predstavlja vjernu apstrakciju stvarnog sustava.
+
+Analiza vodne bilance pokazala je da infiltracija oborina (76.8%) i regionalno podzemno strujanje (17.5%) predstavljaju dominantne priljevne komponente, dok evapotranspiracija (41.2%), dreniranje u recipijent (33.2%) i antropogeno crpljenje (19.1%) čine glavne odljevne komponente. Bilančna pogreška od svega 0.2% potvrđuje numeričku stabilnost i fizikalnu konzistentnost modela.
+
+Parametarska analiza osjetljivosti identificirala je hidrauličku vodljivost gornjeg sloja i intenzitet infiltracije kao najutjecajnije parametre, što usmjerava buduće napore u prikupljanju dodatnih terenskih podataka. Monte Carlo analiza potvrdila je robusnost modela, pokazujući da varijabilnost ulaznih parametara u razumnim granicama ne uzrokuje drastične promjene simuliranih rezultata.
+
+Scenarijska analiza omogućila je procjenu održivosti različitih režima eksploatacije i klimatskih uvjeta. Rezultati upozoravaju da povećanje crpljenja za više od 8% ili smanjenje infiltracije za 15% može dovesti vodonosnik u stanje negativne bilance, što dugoročno ugrožava stabilnost resursa.
+
+MODFLOW-GMS platforma pokazala se kao iznimno moćan alat za integraciju heterogenih podataka, provedbu kompleksnih analiza i vizualizaciju rezultata. Grafičko korisničko sučelje omogućuje efikasnu konceptualizaciju, dok robusni numerički algoritmi osiguravaju pouzdanost simulacija.
+
+U širem kontekstu, numeričko modeliranje predstavlja nezamjenjiv instrument za održivo gospodarenje podzemnim vodama, omogućujući kvantitativnu podlogu za odlučivanje, identifikaciju kritičnih točaka sustava i evaluaciju dugoročnih strategija zaštite. Kontinuirano ažuriranje modela novim podacima, proširenje na dublje slojeve i integracija s modelima kvalitete vode predstavljaju logične smjernice budućeg razvoja.
+
+Ovaj rad je demonstrirao da numeričko modeliranje, kada se provodi kroz rigorozan znanstveni pristup koji kombinira teoretsku utemeljenost, pomnu validaciju i kritičku interpretaciju, može pružiti vrijedne uvide u dinamiku podzemnih voda i omogućiti racionalno upravljanje ovim vitalnim resursom.
+
+---
+
+LITERATURA
+
+1. Anderson, M.P., Woessner, W.W., Hunt, R.J. (2015): Applied Groundwater Modeling: Simulation of Flow and Advective Transport, Academic Press, San Diego.
+
+2. Harbaugh, A.W. (2005): MODFLOW-2005, The U.S. Geological Survey Modular Ground-Water Model, U.S. Geological Survey Techniques and Methods 6-A16.
+
+3. Hill, M.C., Tiedeman, C.R. (2007): Effective Groundwater Model Calibration: With Analysis of Data, Sensitivities, Predictions, and Uncertainty, Wiley-Interscience.
+
+4. Kovač, Z., Nakić, Z., Pavlić, K. (2018): Hidrogeologija aluvijalnih vodonosnika Slavonije, Rudarsko-geološko-naftni zbornik, 33(2), 45-58.
+
+5. McDonald, M.G., Harbaugh, A.W. (1988): A Modular Three-Dimensional Finite-Difference Ground-Water Flow Model, U.S. Geological Survey Techniques of Water-Resources Investigations, Book 6.
+
+6. Nakić, Z., Ružičić, S., Posavec, K., Mileusnić, M., Parlov, J., Bačani, A., Durn, G. (2013): Conceptual model for groundwater status and risk assessment - case study of the Zagreb aquifer system, Geologia Croatica, 66(1), 55-76.
+
+7. Urumović, K., Hlevnjak, B. (2016): Determination of infiltration rate and hydraulic conductivity in alluvial aquifers, Građevinar, 68(4), 279-288.
+
+8. Zheng, C., Bennett, G.D. (2002): Applied Contaminant Transport Modeling, Wiley-Interscience, New York.

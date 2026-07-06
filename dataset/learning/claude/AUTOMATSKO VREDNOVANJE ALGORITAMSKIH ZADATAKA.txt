@@ -1,0 +1,127 @@
+Automatsko vrednovanje algoritamskih zadataka
+
+**Autor:** [Ime i prezime]  
+**Kolegij:** [Naziv kolegija]  
+**Akademska godina:** [Godina]
+
+---
+
+1. Uvod
+
+Suvremeno obrazovanje u području računalnih znanosti suočava se s izazovima koje donosi sve veći broj studenata i potreba za učinkovitim vrednovanjem njihovih programerskih vještina. Tradicionalni pristup ručnom pregledu i ocjenjivanju programskog koda postaje neodrživ kada nastavnici trebaju ocijeniti stotine ili tisuće rješenja zadataka. U takvim okolnostima automatsko vrednovanje algoritamskih zadataka nameće se kao nužno rješenje koje omogućuje brzinu, dosljednost i objektivnost u procesu ocjenjivanja.
+
+Automatsko vrednovanje predstavlja sustavni pristup evaluaciji programskog koda pomoću računalnih alata koji provjeravaju ispravnost, učinkovitost i kvalitetu studentskih rješenja. Ovaj pristup ne zamjenjuje u potpunosti ulogu nastavnika, već mu omogućuje da se usredotoči na složenije aspekte podučavanja poput konceptualnog razumijevanja, optimizacije algoritama i razvoja kritičkog mišljenja kod studenata.
+
+Cilj ovog seminara jest istražiti mogućnosti i izazove automatskog vrednovanja algoritamskih zadataka, s posebnim naglaskom na dva popularna sustava: Virtual Programming Lab (VPL) i Autogradr. Kroz analizu ovih platformi nastojat ćemo razumjeti kako suvremena tehnologija može unaprijediti proces učenja i podučavanja programiranja te algoritamskog razmišljanja.
+
+2. Teorijske osnove automatskog vrednovanja
+
+2.1. Što je automatsko vrednovanje?
+
+Automatsko vrednovanje predstavlja proces u kojem računalni sustavi samostalno analiziraju i ocjenjuju studentska rješenja programerskih zadataka bez izravnog ljudskog nadzora. Ovaj proces obuhvaća nekoliko ključnih koraka: prihvaćanje studentskog koda, kompilaciju ili interpretaciju programa, izvršavanje testova, usporedbu dobivenih rezultata s očekivanima te generiranje povratne informacije i ocjene.
+
+Temeljni princip automatskog vrednovanja počiva na ideji da se točnost algoritamskog rješenja može objektivno provjeriti testiranjem na unaprijed definiranim ulaznim podacima i provjerom jesu li izlazni podaci sukladni očekivanima. Ovakav pristup omogućuje brzu i pouzdanu evaluaciju osnovne ispravnosti programa, što predstavlja značajan napredak u odnosu na ručno ocjenjivanje.
+
+2.2. Prednosti i ograničenja
+
+Automatsko vrednovanje donosi brojne prednosti u obrazovnom procesu. Prije svega, omogućuje trenutnu povratnu informaciju studentima, što im omogućuje da odmah uoče greške i uče iz njih. Ovaj brzi ciklus povratne informacije ključan je za učinkovito učenje programiranja jer studenti mogu iterativno poboljšavati svoja rješenja bez čekanja na nastavnikovu evaluaciju.
+
+Dosljednost i objektivnost također su važne prednosti automatskog vrednovanja. Za razliku od ljudskih ocjenjivača, automatski sustavi primjenjuju ista pravila na sve studente, eliminirajući mogućnost subjektivnosti ili pristranosti. Nadalje, automatizacija omogućuje skalabilnost – sustav može vrednovati neograničen broj rješenja istodobno, što je posebno važno u masovnim otvorenim online kolegijima.
+
+Međutim, automatsko vrednovanje ima i svoja ograničenja. Najznačajnije je to što sustavi često evaluiraju samo funkcionalnu ispravnost koda, zanemarujući kvalitetu pisanja, stil, čitkost i eleganciju rješenja. Također, teško je automatski vrednovati kreativne ili otvorene zadatke gdje postoji više različitih pristupa problemu. Sustavi mogu biti osjetljivi na format izlaznih podataka, što može frustrirati studente čija rješenja su algoritamski ispravna, ali ne odgovaraju točno očekivanom formatu.
+
+2.3. Komponente sustava automatskog vrednovanja
+
+Svaki sustav za automatsko vrednovanje algoritamskih zadataka sastoji se od nekoliko ključnih komponenti. Sučelje za prijenos koda omogućuje studentima da učitaju svoja rješenja u sustav, obično kroz web sučelje ili integrirano razvojno okruženje. Kompilator ili interpreter procesira kod i prevodi ga u izvršni oblik, ovisno o programskom jeziku koji se koristi.
+
+Test okruženje izvršava studentski kod s kontroliranim ulaznim podacima i prikuplja izlazne podatke. Ova komponenta mora biti sigurna i izolirana kako bi spriječila zlonamjerni kod ili nehotične beskonačne petlje da utječu na sustav. Evaluator uspoređuje dobivene rezultate s referentnim rješenjima i određuje ocjenu prema unaprijed definiranim kriterijima.
+
+Modul za povratnu informaciju generira poruke koje pomažu studentima razumjeti gdje je njihovo rješenje bilo pogrešno. Kvalitetna povratna informacija ključna je za obrazovnu vrijednost sustava jer studentima omogućuje da uče iz grešaka. Konačno, administratorsko sučelje omogućuje nastavnicima da stvaraju zadatke, definiraju testne slučajeve, postavljaju kriterije ocjenjivanja i pregledavaju statistike o uspješnosti studenata.
+
+3. Virtual Programming Lab (VPL)
+
+3.1. Arhitektura i značajke VPL-a
+
+Virtual Programming Lab je moćan dodatak (plugin) za sustav za upravljanje učenjem Moodle, razvijen na Sveučilištu Las Palmas de Gran Canaria u Španjolskoj. VPL omogućuje nastavnicima stvaranje programerskih zadataka koji se automatski vrednuju unutar Moodle platforme, čime se postiže potpuna integracija s ostalim edukacijskim sadržajima i alatima.
+
+Arhitektura VPL-a temelji se na klijent-poslužitelj modelu gdje Moodle poslužitelj komunicira s posebnim izvršnim poslužiteljem koji je odgovoran za kompilaciju, izvršavanje i testiranje studentskog koda. Ova podjela omogućuje sigurnost jer se potencijalno opasan kod izvršava u izoliranom okruženju, odvojeno od glavnog poslužitelja sustava za učenje.
+
+VPL podržava brojne programske jezike, uključujući C, C++, Java, Python, PHP, JavaScript, Scheme, Prolog i mnoge druge. Ova višejezična podrška čini ga izuzetno fleksibilnim alatom prikladnim za različite kolegije i razine obrazovanja. Sustav automatski prepoznaje programski jezik na temelju ekstenzije datoteke ili može biti eksplicitno konfiguriran za određeni jezik.
+
+3.2. Postavljanje zadataka i testiranje
+
+Stvaranje zadataka u VPL-u odvija se kroz intuitivno web sučelje unutar Moodlea. Nastavnik prvo definira opis zadatka, rok za predaju i ostale osnovne parametre. Zatim specificira datoteke koje student treba predati, što može uključivati izvorni kod, pomoćne datoteke ili dokumentaciju.
+
+Ključni dio postavljanja zadatka jest definiranje skripti za vrednovanje. VPL koristi tri vrste skripti: skriptu za izvršavanje (koja omogućuje studentima da testiraju svoj kod prije predaje), skriptu za ocjenjivanje (koja izvršava automatsko vrednovanje) i skriptu za debugiranje. Nastavnici mogu koristiti predloške za standardne konfiguracije ili napisati prilagođene skripte koje koriste bash ili druge skriptne jezike.
+
+Testni slučajevi definiraju se kroz parove ulaznih i izlaznih podataka. VPL uspoređuje izlaz studentskog programa s očekivanim izlazom i dodjeljuje bodove ovisno o stupnju podudaranja. Sustav omogućuje različite načine usporedbe: točno podudaranje, zanemarivanje praznina, usporedbu s regularnim izrazima ili čak prilagođene funkcije za evaluaciju.
+
+3.3. Prednosti i nedostaci VPL-a
+
+Glavna prednost VPL-a jest njegova duboka integracija s Moodle platformom, koju koriste mnoge obrazovne ustanove diljem svijeta. Studenti pristupaju zadacima kroz poznato Moodle sučelje, a nastavnici mogu koristiti sve Moodle funkcionalnosti poput grupa, kalendara, ocjena i izvještaja. VPL također pruža ugrađeni uređivač koda s isticanjem sintakse, što studentima omogućuje pisanje i testiranje koda izravno u pregledniku bez potrebe za instalacijom dodatnog softvera.
+
+Sustav nudi fleksibilnost u konfiguraciji testnih slučajeva i kriterija ocjenjivanja, omogućujući nastavnicima da prilagode vrednovanje specifičnim potrebama svog kolegija. VPL također podržava anti-plagijat provjeru uspoređujući studentska rješenja i identificirajući moguće sličnosti.
+
+Među nedostacima VPL-a ističe se relativno složena inicijalna konfiguracija, posebno postavljanje izvršnog poslužitelja koji zahtijeva administrativne ovlasti i poznavanje sustava Linux. Dokumentacija, iako opsežna, može biti zbunjujuća za nove korisnike. Nadalje, prilagođavanje naprednih scenarija vrednovanja može zahtijevati poznavanje bash skriptiranja, što predstavlja dodatan teret za nastavnike koji nisu tehnički vješti.
+
+4. Autogradr
+
+4.1. Karakteristike Autogradr sustava
+
+Autogradr predstavlja moderan pristup automatskom vrednovanju koji naglašava jednostavnost korištenja i fleksibilnost. Razvijen kao open-source projekt, Autogradr pruža nastavnicima moćan alat za stvaranje i upravljanje programerskim zadacima s automatskim vrednovanjem. Za razliku od VPL-a koji je usko vezan uz Moodle, Autogradr može funkcionirati samostalno ili se integrirati s različitim sustavima za upravljanje učenjem.
+
+Autogradr koristi pristup temeljen na kontejnerizaciji, najčešće Docker tehnologiju, kako bi osigurao da se svako studentsko rješenje izvršava u potpuno izoliranom i predvidivom okruženju. Ovaj pristup omogućuje dosljednost vrednovanja neovisno o domaćinu na kojem se sustav izvršava i pruža dodatni sigurnosni sloj.
+
+Sustav je dizajniran s naglaskom na proširivost i modularnost. Nastavnici mogu koristiti postojeće testne okvire za različite programske jezike (poput JUnit za Javu, pytest za Python ili GoogleTest za C++) ili razviti vlastite prilagođene testove. Autogradr također omogućuje jednostavnu integraciju s alatima za verzioniranje koda poput Git-a, što studentima omogućuje korištenje profesionalnih razvojnih tijekova rada.
+
+4.2. Proces vrednovanja u Autogradru
+
+Proces vrednovanja u Autogradru započinje kada student preda svoje rješenje kroz web sučelje ili izravno putem Git repozitorija. Sustav tada stvara novi Docker kontejner s potrebnim okruženjem za izvršavanje koda, uključujući programski jezik, biblioteke i alate.
+
+Unutar kontejnera Autogradr prvo pokreće fazu pripreme koja može uključivati kompilaciju koda, instalaciju ovisnosti ili postavljanje okruženja. Nakon toga slijedi faza testiranja u kojoj se izvršavaju testni slučajevi definirani od strane nastavnika. Testovi mogu biti različitih vrsta: testovi ispravnosti koji provjeravaju točnost izlaza, testovi performansi koji mjere vremensku ili prostornu složenost, ili testovi stila koji analiziraju kvalitetu koda.
+
+Rezultati testova prikupljaju se i analiziraju, a sustav generira detaljnu povratnu informaciju koja uključuje koja su testiranja prošla, koja nisu, poruke o greškama i potencijalne savjete za poboljšanje. Konačna ocjena izračunava se na temelju unaprijed definiranih težina za svaki test, što omogućuje nastavnicima da naglase važnost određenih aspekata rješenja.
+
+4.3. Usporedba s VPL-om
+
+Pri usporedbi Autogradra i VPL-a uočavaju se značajne razlike u filozofiji i implementaciji. VPL je čvrsto integriran u Moodle ekosustav, što ga čini izvrsnim izborom za institucije koje već koriste tu platformu, dok Autogradr nudi veću fleksibilnost i može se koristiti neovisno ili integrirati s različitim sustavima.
+
+Što se tiče tehničke implementacije, Autogradr koristi kontejnerizaciju koja pruža bolju izolaciju i reproducibilnost, ali zahtijeva Docker infrastrukturu. VPL koristi tradicionalniji pristup s virtualizacijom ili chroot zatvorima, što može biti jednostavnije za implementaciju u nekim okruženjima.
+
+U pogledu korisničkog iskustva, Autogradr često pruža moderniju i intuitivniju korisničku sučelje, posebno za studente. Međutim, VPL-ov ugrađeni uređivač koda može biti praktičniji za brze izmjene i testiranja. Za nastavnike, oba sustava zahtijevaju određeno tehničko znanje, ali Autogradr općenito nudi jasniju dokumentaciju i jednostavnije postavke za česte scenarije.
+
+5. Praktična primjena i izazovi
+
+5.1. Implementacija u obrazovnom procesu
+
+Uspješna implementacija automatskog vrednovanja zahtijeva pažljivo planiranje i postupnu integraciju u postojeći obrazovni proces. Preporučuje se započeti s jednostavnim zadacima koji testiraju osnovne koncepte programiranja, kao što su petlje, uvjetno grananje ili rad s poljima. Kako studenti i nastavnici stječu iskustvo sa sustavom, može se postupno prelaziti na složenije algoritamske probleme.
+
+Važno je da automatsko vrednovanje ne zamijeni potpuno ljudsku evaluaciju i interakciju. Najbolji rezultati postižu se hibridnim pristupom gdje automatski sustavi vrednuju tehnički aspekt rješenja, dok nastavnici pregledavaju kvalitetu koda, pristup rješavanju problema i pružaju personalizirane savjete. Studenti trebaju imati mogućnost neograničenog broja pokušaja tijekom razvoja rješenja, dok finalna verzija ulazi u službenu ocjenu.
+
+Povratna informacija koju sustav pruža mora biti konstruktivna i obrazovna. Umjesto jednostavnih poruka "netočno" ili "greška", sustav bi trebao usmjeravati studente prema razumijevanju problema. To može uključivati prikazivanje ulaznih podataka na kojima je test pao, dijelova očekivanog izlaza ili savjeta o tome koji dio algoritma može biti problematičan.
+
+5.2. Sigurnost i zloupotreba
+
+Sigurnost je kritičan aspekt automatskog vrednovanja jer se izvršava proizvoljan kod pisan od strane studenata. Sustavi moraju biti dizajnirani tako da spriječe različite vrste napada: beskonačne petlje koje blokiraju resurse, pristup datotečnom sustavu izvan dozvoljenog područja, mrežne pozive koji bi mogli ugroziti poslužitelj ili pokušaje manipulacije ocjenama.
+
+Izolacija izvršavanja ključna je tehnika za postizanje sigurnosti. VPL koristi kombinaciju chroot zatvorenja i ograničenja resursa, dok Autogradr koristi Docker kontejnere koji pružaju jaču izolaciju. Dodatno, sustavi postavljaju ograničenja na vrijeme izvršavanja, korištenje memorije i procesorskih resursa kako bi spriječili resurse iscrpljivanje.
+
+Plagijat predstavlja drugi oblik zloupotrebe koji automatski sustavi moraju adresirati. Dok VPL uključuje ugrađene alate za otkrivanje sličnosti između rješenja, dodatni alati poput MOSS-a ili JPlag-a mogu se integrirati za detaljniju analizu. Važno je educirati studente o akademskoj čestitosti i jasno komunicirati politiku oko suradnje i dijeljenja koda.
+
+5.3. Budućnost automatskog vrednovanja
+
+Budućnost automatskog vrednovanja algoritamskih zadataka leži u integraciji umjetne inteligencije i naprednih tehnika analize koda. Sustavi zasnovani na strojnom učenju mogu naučiti prepoznavati obrasce u kvalitetnom kodu i pružati sofisticiraniju povratnu informaciju o stilu, učinkovitosti i best practices.
+
+Automatsko generiranje testnih slučajeva pomoću tehnika poput property-based testinga ili fuzz testinga može smanjiti teret nastavnika i otkriti rubne slučajeve koje nastavnici možda nisu predvidjeli. Inteligentni tutorski sustavi mogli bi analizirati uobičajene greške studenata i prilagođavati težinu zadataka i vrstu povratnih informacija potrebama pojedinaca.
+
+Interaktivne okoline za učenje koje kombiniraju automatsko vrednovanje s vizualizacijama izvršavanja algoritama, korak-po-korak debuggingom i prilagođenim objašnjenjima predstavljaju sljedeći korak u evoluciji obrazovnih tehnologija. Takvi sustavi mogli bi transformirati način na koji se programiranje podučava, čineći ga pristupačnijim i učinkovitijim za široku populaciju studenata.
+
+6. Zaključak
+
+Automatsko vrednovanje algoritamskih zadataka postalo je neizostavni dio suvremenoga obrazovanja u području računalnih znanosti. Sustavi poput Virtual Programming Laba i Autogradra omogućuju nastavnicima da učinkovito upravljaju velikim brojem studenata, pružajući im istovremeno trenutnu i dosljednu povratnu informaciju koja pospješuje učenje.
+
+Kroz ovaj seminar analizirali smo teorijske osnove automatskog vrednovanja, detaljno istražili dva popularna sustava te razmotrili praktične izazove njihove implementacije. VPL se pokazao kao izvrsno rješenje za institucije koje koriste Moodle, nudeći duboku integraciju i bogat skup značajki. Autogradr, s druge strane, pruža moderan pristup temeljen na kontejnerizaciji s većom fleksibilnošću i neovisnošću od platformi.
+
+Važno je razumjeti da automatsko vrednovanje nije savršeno rješenje i ne može u potpunosti zamijeniti ljudsku prosudbu i mentorstvo. Ograničenja u vrednovanju kvalitete koda, kreativnosti i razumijevanja koncepata zahtijevaju hibridni pristup gdje tehnologija podržava, ali ne zamjenjuje nastavnike. Sigurnost, pravičnost i obrazovna vrijednost moraju ostati u središtu dizajna i implementacije ovih sustava.
+
+Gledajući prema budućnosti, možemo očekivati daljnji razvoj u smjeru inteligentnijih sustava koji će koristiti umjetnu inteligenciju za pružanje personalizirane podrške svakom studentu. Automatsko vrednovanje nastavit će evoluirati, postajući sve sofisticiranije i integrirano s cjelokupnim obrazovnim iskustvom, pomažući novim generacijama studenata da razviju vještine programiranja i algoritamskog razmišljanja potrebne za uspjeh u digitalnom svijetu.
