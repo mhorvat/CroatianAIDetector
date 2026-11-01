@@ -3,6 +3,8 @@ This repository contains the complete codebase (including the application writte
 
 Conference website: https://sst-conference.org/
 
+The paper can be accessed <a href="https://www.researchgate.net/publication/417152664_Detecting_AI-Generated_Text_in_Croatian_Using_Syntactic_Semantic_and_Stylistic_Features" target="_new" rel="noopener">on this link</a>.
+
 **The developed application is available only for research and non-commercial use.**
 
 For more information and instructions on how to use the application, contact the application's creator **Ariana Dobrostal** (ariana.dobrostal@proton.me).
